@@ -1,0 +1,31 @@
+// colors
+$color-black:       #000;
+$color-blue:        #2638a5;
+$color-red:         #fb2500;
+$color-white:       #fff;
+$color-purple:      #656093;
+$color-gray:        #999;
+$color-dark-gray:   #333;
+$color-dark-blue:   #130b59;
+$color-light-gray:  #e5e5e5;
+
+// fonts
+$OpenSans:          'Open Sans', sans-serif;
+$RobotoSlab:        'Roboto Slab', sans-serif;
+$NerisLight:        'Neris Light', sans-serif;
+$NerisSemiBold:     'Neris SemiBold', sans-serif;
+$NerisBlack:        'Neris Black', sans-serif;
+
+// base
+$base-font:         $NerisLight;
+$base-font-size:    14px;
+$bsae-line-height:  1.57;
+$base-color:        $color-dark-gray;
+
+// breakpoints
+$breakpoints: (
+  'mobile': (min-width: 320px),
+  'tablet': (min-width: 768px),
+  'laptop': (min-width: 992px),
+  'desktop': (min-width: 1200px)
+);

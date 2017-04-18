@@ -6,7 +6,7 @@ const cached = require('gulp-cached');
 const prettify = require('gulp-jsbeautifier');
 const filter = require('gulp-filter');
 const rename = require('gulp-rename');
-const pugInheritance  = require('gulp-pug-inheritance');
+const pugInheritance = require('gulp-pug-inheritance');
 const changed = require('gulp-changed');
 const getData = require('jade-get-data')('app/data');
 

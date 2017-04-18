@@ -1,0 +1,46 @@
+// media queries https://www.sitepoint.com/sass-mixin-media-merging/
+@mixin media($queries) {
+  @if length($queries) == 0 {
+    @content;
+  }
+
+  @else {
+    $first-key: nth(map-keys($queries), 1);
+
+    @media ($first-key: map-get($queries, $first-key)) {
+      $queries: map-remove($queries, $first-key);
+
+      @include media($queries) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  $media: map-get($breakpoints, $breakpoint);
+
+  @if not $media {
+    @error "No query could be retrieved from `#{$breakpoint}`. " + "Please make sure it is defined in `$breakpoints` map.";
+  }
+
+  @media #{inspect($media)} {
+    @content;
+  }
+}
+
+// rem & em to px
+@function calculate-font-size($size, $unit) {
+  $remSize: $size / $base-font-size;
+
+  @return #{$remSize}#{$unit};
+}
+
+@mixin rem($size) {
+  font-size: calculate-font-size($size, 'rem');
+}
+
+@mixin em($size) {
+  font-size: calculate-font-size($size, 'em');
+}
+
