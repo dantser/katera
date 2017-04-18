@@ -1,3 +1,24 @@
+include ../button/button
+
 mixin index()
   +b.index&attributes(attributes)
-    block
+    +e.button
+      +button()._rounded Button
+
+    +e.button
+      +button()._rounded._kind_blue Button
+
+    +e.button
+      +button()._rounded._kind_red Button
+
+    +e.button
+      +button() Button
+
+    +e.button
+      +button()._kind_blue Button
+
+    +e.button
+      +button()._kind_red Button
+
+    +e.button
+      +button()._circle B
