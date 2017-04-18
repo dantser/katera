@@ -1,0 +1,22 @@
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__icon {
+    width: 20px;
+    height: 17px;
+    pointer-events: none;
+
+    * {
+      stroke: $color-red;
+    }
+  }
+
+  &__text {
+    line-height: 1;
+    padding-left: 8px;
+    color: $color-red;
+    pointer-events: none;
+  }
+}
