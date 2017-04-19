@@ -4,6 +4,7 @@ include ../logo/logo
 include ../navbar/navbar
 include ../button/button
 include ../login-btn/login-btn
+include ../burger-dropdown/burger-dropdown
 
 mixin header()
   +b('header').header&attributes(attributes)
@@ -21,3 +22,4 @@ mixin header()
           +button(true)(href='#')._kind_red.__proposal-btn Создать предложение
           //+e.search
           //  //- search
+    +burger-dropdown().__burger-dropdown

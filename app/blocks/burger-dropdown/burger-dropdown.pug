@@ -1,0 +1,7 @@
+include ../dropdown/dropdown
+include ../container/container
+
+mixin burger-dropdown()
+  +b.burger-dropdown&attributes(attributes)
+    +dropdown().js-burger-dropdown
+      +container()
