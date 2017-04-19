@@ -10,6 +10,9 @@
   @include respond-to('tablet') {
     height: 105px;
   }
+  .image-bg {
+    opacity: .5;
+  }
   &__heading {
     margin: 0;
     font-family: 'Neris SemiBold';
@@ -30,6 +33,8 @@
   }
   &__input, &__btn {
     font-family: inherit;
+    background-color: transparent;
+    border: 0;
   }
   &__section {
     display: flex;
