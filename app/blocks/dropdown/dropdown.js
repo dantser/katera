@@ -21,7 +21,6 @@ export default class Dropdown {
   }
 
   show() {
-    console.log(this.element);
     this.element.slideDown(() => {
       this.element.addClass(this.activeClass);
     });
