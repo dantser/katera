@@ -1,0 +1,11 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 1170px;
+  padding: 0 15px;
+
+  @include respond-to('mobile') {
+    width: 100%;
+    min-width: 320px;
+  }
+}
