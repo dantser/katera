@@ -1,8 +1,8 @@
 .subscribe {
-  padding: 20px 0 30px 0;
+  padding-top: 20px;
   height: 150px;
   box-sizing: border-box;
-  background: #000;
+  position: relative;
   display: block;
   &__heading {
     margin: 0;
