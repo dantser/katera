@@ -17,18 +17,19 @@ export default class Dropdown {
     }
 
     this.element = element;
-    this.activeClass = '.dropdown_active';
+    this.activeClass = 'dropdown_active';
   }
 
   show() {
+    console.log(this.element);
     this.element.slideDown(() => {
-      this.element.addClass('dropdown_active');
+      this.element.addClass(this.activeClass);
     });
   }
 
   hide() {
     this.element.slideUp(() => {
-      this.element.removeClass('dropdown_active');
+      this.element.removeClass(this.activeClass);
     });
   }
 }
