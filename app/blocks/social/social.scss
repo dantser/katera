@@ -5,12 +5,8 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: #000;
 
-  &__item,
-  &__link,
-  &__icon,
-  &__icon * {
+  &__item, &__link, &__icon, &__icon * {
     display: block;
   }
 
