@@ -15,7 +15,8 @@ mixin article-preview(data)
     +e.categories
       //- В некоторых блоках, несколько категорий, поэтому выводим все, которые относятся к данному блоку
       each category in data.categories
-        +e('a')(href=category.path).category
+        //- у многих блоков, категории имееют различный фон, эти категории нужно добавлять модификатором.
+        +e('a')(href=category.path class=category.colorModifier).category
           =category.title
 
     //- У некоторых блоков есть полупрозрачный градиент, поэтому, добавляем модификатор, если он есть.

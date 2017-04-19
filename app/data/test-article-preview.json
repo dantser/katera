@@ -1,7 +1,7 @@
 {
   "image": "assets/images/article-preview/article-1.jpg",
   "categories": [
-    { "path": "#", "title": "Мероприятия" }
+    { "path": "#", "title": "Мероприятия", "colorModifier": "article-preview__category_color_blue" }
   ],
   "overlay": true,
   "title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании Москвич-экспат рассказывает, как за полтора года он из человека, не умеющего плавать, превратился в сертифицированного шкипера прибрежного плавания",
