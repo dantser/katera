@@ -1,10 +1,11 @@
 include ../container/container
 include ../icon/icon
-include ../image/image
+include ../image-bg/image-bg
 
 mixin subscribe()
   +b.subscribe
-    +image()(src='assets/images/subscribe.jpg')
+    +e.image
+      +image()(src='assets/images/subscribe.jpg').__image
     +container()
       +e('h2').heading Подпишитесь на рассылку
       +e('form').form
