@@ -3,26 +3,47 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 20px;
   background-color: yellow;
 
-  &__item {
-    flex: 0 1 auto;
+  &__item,
+  &__link,
+  &__icon,
+  &__icon * {
     display: block;
-    height: 100%;
-  }
-
-  &__link {
-    display: block;
-    height: 100%;
   }
 
   &__icon {
-    display: block;
-    height: 100%;
+
+    &_type {
+
+      &_vk {
+        width: 22px;
+        height: 13px;
+      }
+
+      &_insta {
+        width: 29px;
+        height: 20px;
+      }
+
+      &_fb {
+        width: 11px;
+        height: 19px;
+      }
+
+      &_odnokl {
+        width: 13px;
+        height: 20px;
+      }
+
+      &_yt {
+        width: 22px;
+        height: 16px;
+      }
+    }
   }
 
-  &__icon * {
-    display: block;
+  &__icon > * {
+    fill: #fff;
   }
 }
