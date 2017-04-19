@@ -1,5 +1,8 @@
 include ../header/header
+include ../article-preview/article-preview
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
+    //- файл test-article-preview.json находится в app/data/test-article-preview.json
+    +article-preview(getData('test-article-preview'))
