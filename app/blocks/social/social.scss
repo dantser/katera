@@ -13,6 +13,11 @@
   }
 
   &__icon {
+    fill: #fff;
+
+    * {
+      fill: #fff;
+    }
 
     &_type {
 
@@ -41,9 +46,5 @@
         height: 16px;
       }
     }
-  }
-
-  &__icon > * {
-    fill: #fff;
   }
 }
