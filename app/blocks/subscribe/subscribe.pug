@@ -1,0 +1,18 @@
+include ../container/container
+include ../icon/icon
+include ../image-bg/image-bg
+
+mixin subscribe()
+  +b.subscribe
+    +e.image
+      +image-bg()(src='assets/images/subscribe.jpg').__image
+    +container()
+      +e('h2').heading Подпишитесь на рассылку
+      +e('form').form
+        +e.section
+          +e('input').input(type='text', placeholder='Введите email')
+        +e.section
+          +e('button').btn Отправить
+           +icon('subscribe').icon
+
+

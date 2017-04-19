@@ -1,0 +1,24 @@
+include ../container/container
+include ../burger/burger
+include ../navbar/navbar
+include ../button/button
+include ../login-btn/login-btn
+
+mixin header()
+  +b('header').header&attributes(attributes)
+    +container()
+      +e.banner
+        //- block banner
+    +e.container
+      +container()
+        +e.content
+          +e.burger
+            +burger()
+          //+e.logo
+          //  //- logo
+          +e.navbar
+            +navbar(getData('navbar'))
+          +login-btn().__login
+          +button(true)(href='#')._kind_red.__proposal-btn Создать предложение
+          //+e.search
+          //  //- search

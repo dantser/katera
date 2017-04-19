@@ -1,8 +1,10 @@
 extends ../layouts/default
 include ../blocks/index/index
+include ../blocks/subscribe/subscribe
 
 block head
   - var pageTitle = 'Versta Project Template'
 
 block content
   +index()
+  +subscribe()

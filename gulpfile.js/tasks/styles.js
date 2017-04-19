@@ -21,7 +21,6 @@ gulp.task('styles', () => {
       require('autoprefixer'),
       require('postcss-autoreset')({
         reset: {
-          all: 'initial',
           'font-family': 'inherit',
           'font-size': 'inherit',
         },
