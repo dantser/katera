@@ -1,3 +1,8 @@
 .index {
   display: block;
+
+  &__mywrapper {
+    display: block;
+    width: 100%;
+  }
 }

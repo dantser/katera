@@ -1,3 +1,8 @@
+include ../social/social
+
 mixin index()
   +b.index&attributes(attributes)
-    block
+    +e.mywrapper
+      +social()
+
+
