@@ -4,6 +4,7 @@
   align-items: center;
   width: 32px;
   height: 25px;
+  cursor: pointer;
 
   &_active {
 
@@ -20,6 +21,13 @@
     display: block;
     fill: $color-red;
     stroke: $color-red;
+    will-change: fill, stroke;
+    transition: fill .25s ease-in-out, stroke .25s ease-in-out;
+
+    &:hover {
+      fill: #e02303;
+      stroke: #e02303;
+    }
 
     &_type {
 
