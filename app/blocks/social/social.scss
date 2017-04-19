@@ -13,7 +13,7 @@
   }
 
   &__icon {
-
+    /*fill: #fff;*/
     &_type {
 
       &_vk {
@@ -43,7 +43,7 @@
     }
   }
 
-  &__icon > * {
+  &__icon * {
     fill: #fff;
   }
 }
