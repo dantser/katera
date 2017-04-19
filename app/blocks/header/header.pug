@@ -13,10 +13,9 @@ mixin header()
     +e.container
       +container()
         +e.content
-          +e.burger
-            +burger()
+          +burger().__burger
           +logo().__logo
-          +e.navbar
+          +e('nav').navbar
             +navbar(getData('navbar'))
           +login-btn().__login
           +button(true)(href='#')._kind_red.__proposal-btn Создать предложение
