@@ -1,8 +1,8 @@
-.logo-big {
-  all: initial;
-  cursor: pointer;
+.logo {
+  display: block;
 
-  &__img {
+  &__image {
     width: 100%;
+    height: 100%;
   }
 }

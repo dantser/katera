@@ -1,5 +1,6 @@
 include ../container/container
 include ../burger/burger
+include ../logo/logo
 include ../navbar/navbar
 include ../button/button
 include ../login-btn/login-btn
@@ -14,8 +15,7 @@ mixin header()
         +e.content
           +e.burger
             +burger()
-          //+e.logo
-          //  //- logo
+          +logo().__logo
           +e.navbar
             +navbar(getData('navbar'))
           +login-btn().__login

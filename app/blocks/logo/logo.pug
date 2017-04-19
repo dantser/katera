@@ -1,3 +1,6 @@
-mixin logo()
-  +b('a')(href='#').logo-big
-    +e.img(src="assets/images/logo.svg")
+mixin logo(big)
+  +b('a').logo(href='#')&attributes(attributes)
+    if big
+      +e('img').image(src='assets/images/logo.svg' alt='')
+    else
+      +e('img').image(src='assets/images/logo-small.svg' alt='')
