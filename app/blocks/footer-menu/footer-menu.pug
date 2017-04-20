@@ -1,11 +1,9 @@
-
+//- Аргумент - items (массив объектов)
+//- items.header - заголовок списка
+//- items.item - элемент списка
 mixin footer-menu(items)
-  // - var footerColItemsNumber = 7;
-  // - var footerItemsCounter = 0;
   +b('div').footer-menu
     each h in items
-      //- footerItemsCounter++;
-      //- if (footerItemsCounter > footerColItemsNumber)
       +e('ul').list
         +e('li').header
           +e('a')(href='#')
