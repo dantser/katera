@@ -1,12 +1,7 @@
 include ../header/header
-include ../tag-content/tag-content
-include ../tag-content/tag
+include ../container/container
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
-    .wrapper-example(style="position:relative;width: 400px;height:200px;border:1px solid;margin: 0 auto")
-      +tag-content()
-        +tag("Яхты")._blue
-        +tag("Мероприятия")._light-amber
-        +tag("Верфь")._dark-blue
+    +container()

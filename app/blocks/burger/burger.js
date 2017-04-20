@@ -5,7 +5,6 @@ export default () => {
   const burgerClass = '.js-burger';
   const activeBurgerClass = 'burger_active';
   const dropDownClass = '.js-burger-dropdown';
-  const activeDropDownClass = 'burger-dropdown_active';
 
   const burger = $(burgerClass);
   const dropdown = new Dropdown(dropDownClass);
