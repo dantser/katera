@@ -23,6 +23,13 @@
     display: inline-flex;
     justify-content: space-between;
     margin-top: 33px;
+
+    @include respond-to('mobile');
+    @include respond-to('tablet');
+
+    @include respond-to('laptop') {
+      display: none;
+    }
   }
 
   &__banner {
