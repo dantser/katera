@@ -1,5 +1,7 @@
 include ../header/header
+include ../footer-menu/footer-menu
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
+    +footer-menu(getData('footer-menu'))

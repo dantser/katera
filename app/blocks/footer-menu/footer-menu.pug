@@ -1,0 +1,16 @@
+
+mixin footer-menu(items)
+  // - var footerColItemsNumber = 7;
+  // - var footerItemsCounter = 0;
+  +b('div').footer-menu
+    each h in items
+      //- footerItemsCounter++;
+      //- if (footerItemsCounter > footerColItemsNumber)
+      +e('ul').list
+        +e('li').header
+          +e('a')(href='#')
+            != h.header
+        each item in h.item
+          +e('li').item
+            +e('a')(href='#')
+              != item
