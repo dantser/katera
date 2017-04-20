@@ -1,0 +1,40 @@
+.tag-content {
+  position: absolute;
+  top: 13px;
+  right: 0;
+
+  &__text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 0 9px 2px;
+    min-width: 100px;
+    display: block;
+    color: #fff;
+    background-color: #000;
+
+    &_blue {
+      background-color: #2635fa;
+    }
+
+    &_dark-blue {
+      background-color: #1c2384;
+    }
+
+    &_light-blue {
+      background-color: #17c2c0;
+    }
+
+    &_red {
+      background-color: #d74040;
+    }
+
+    &_light-amber {
+      background-color: #d4bf74;
+    }
+  }
+
+  &__text + &__text {
+    margin-top: 10px;
+  }
+}
