@@ -1,9 +1,13 @@
 include ../image-bg/image-bg
 
-mixin banner()
-  +b('a').banner(href='#')
-    +image-bg()(src='assets/images/banner.jpg').__image
-    //+e('img')(src='assets/images/banner-img.png').img
-    //+e('div').text
-    +e('div').overlay
+//- Ссылка - href
+//- Основной banner - image
+//- Передача модификатора '_overlay' добавит background над img пример: +banner('#', 'assets/images/banner.jpg')._overlay
+//- Передача img  по центру banner пример: +e('img')(src='assets/images/banner-img.png').content_img ( class content_img позиционирует img и накладывает прозрачность )
 
+mixin banner(href, image)
+  +b('a').banner(href=href)
+    +e('div').image&attributes(attributes)
+      +image-bg()(src=image alt='')
+    +e('div').content
+      block

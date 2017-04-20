@@ -5,24 +5,34 @@
   position: relative;
   display: block;
 
-  &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+  &__image {
     height: 100%;
-    opacity: .15;
-    z-index: 1;
+    width: 100%;
+
+    &_overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(236, 222, 213);
+      opacity: .502;
+    }
   }
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(#fff, .5);
+  &__content {
+    height: 100%;
+
+    &_img {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: -1;
+      opacity: .15;
+    }
   }
 }
