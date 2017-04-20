@@ -1,0 +1,9 @@
+include ../image-bg/image-bg
+
+mixin banner()
+  +b('a').banner(href='#')
+    +image-bg()(src='assets/images/banner.jpg').__image
+    //+e('img')(src='assets/images/banner-img.png').img
+    //+e('div').text
+    +e('div').overlay
+

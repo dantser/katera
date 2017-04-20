@@ -5,11 +5,13 @@ include ../navbar/navbar
 include ../button/button
 include ../login-btn/login-btn
 include ../burger-dropdown/burger-dropdown
+include ../banner/banner
 
 mixin header()
   +b('header').header&attributes(attributes)
     +container()
       +e.banner
+        +banner()
         //- block banner
     +e.container
       +container()
