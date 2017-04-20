@@ -15,12 +15,14 @@
 
   &__header a {
     color: $color-white;
+    font-weight: 600;
   }
 
   &__item a {
     position: relative;
     padding-left: 9px;
     color: $color-gray;
+    font-weight: 300;
 
     &::before {
       content: '';
