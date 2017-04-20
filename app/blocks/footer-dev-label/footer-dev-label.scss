@@ -1,8 +1,33 @@
-.footer-dev-label {
+.footer-dev * {
   display: block;
-  font-size: 12px;
-  line-height: (14/12)*1em;
-  font-weight: 300;
-  color: #565656;
-  padding: 15px 0;
 }
+.footer-dev {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  width: 100%;
+  background-color: yellow;
+
+  &__label {
+    font-size: 12px;
+    line-height: (14/12)*1em;
+    font-weight: 300;
+    color: #565656;
+    padding: 15px 0;
+  }
+
+  &__logo {
+    & svg {
+      width: 97px;
+      height: 13px;
+      fill: #000;
+
+      & * {
+        fill: #000;
+      }
+    }
+  }
+}
+
+
+

@@ -1,2 +1,7 @@
+include ../icon/icon
+
 mixin footer-dev-label()
-  +b('span').footer-dev-label Разработка и продвижение сайта
+  +b('div').footer-dev
+    +e('span').label Разработка и продвижение сайта
+    +e('a')(href='#').logo
+      +icon('blackidea')
