@@ -1,5 +1,6 @@
 .header {
   display: block;
+  height: 175px;
 
   &__banner {
     display: block;
@@ -39,7 +40,10 @@
   }
 
   &__burger-dropdown {
+    position: absolute;
+    top: 175px;
+    left: 0;
     width: 100%;
-    min-height: 485px;
+    height: calc(100% - 175px);
   }
 }

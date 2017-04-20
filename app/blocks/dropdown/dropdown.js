@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export default class Dropdown {
-  constructor(elementClass) {
+  constructor(elementClass, activeClass = 'dropdown_active') {
     if (typeof elementClass !== 'string') {
       throw new Error('Dropdown class should be a string');
     }
@@ -17,7 +17,7 @@ export default class Dropdown {
     }
 
     this.element = element;
-    this.activeClass = 'dropdown_active';
+    this.activeClass = activeClass;
   }
 
   show() {
