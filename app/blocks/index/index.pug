@@ -1,8 +1,10 @@
 include ../header/header
 include ../container/container
 include ../text-field/text-field
+include ../division-active/division-active
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
     +container()
+    +division-active("Форумы")._forum

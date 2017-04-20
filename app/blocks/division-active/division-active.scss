@@ -1,0 +1,50 @@
+.division-active {
+  font-family: 'Neris Black';
+  font-size: rem(20px);
+  cursor: pointer;
+  padding: 15px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    margin-right: 11px;
+    border-top: 7.5px solid transparent;
+    border-left: 12px solid red;
+    border-bottom: 7.5px solid transparent;
+  }
+
+  &_forum {
+    font-size: rem(16px);
+
+    &::before {
+      margin: 0;
+      content: '';
+      position: absolute;
+      border-left: 7.5px solid transparent;
+      border-right: 7.5px solid transparent;
+      border-top: 12px solid red;
+      border-bottom: 0;
+      top: 0;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &_arrow-right {
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: 11px;
+      border-top: 7.5px solid transparent;
+      border-right: 12px solid red;
+      border-bottom: 7.5px solid transparent;
+      border-left: 0;
+    }
+  }
+}
