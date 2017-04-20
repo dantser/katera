@@ -49,3 +49,13 @@
     local('Neris-SemiBold'),
     url('../fonts/neris-semibold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'GothamPro Light';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('GothamPro Light'),
+    local('GothamPro-Light'),
+    url('../fonts/GothamProLight.woff') format('woff');
+}
