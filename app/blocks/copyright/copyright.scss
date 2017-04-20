@@ -1,0 +1,35 @@
+.copyright {
+  color: #555;
+  width: 370px;
+  font-family: $GothamProLight;
+  font-weight: 300;
+
+  @include respond-to('mobile') {
+    width: 130px;
+  }
+
+  &__name {
+    font-size: 12px;
+    line-height: 16px;
+
+    @include respond-to('mobile') {
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+
+  &__text {
+    font-size: 11px;
+    margin: 0;
+    line-height: 14px;
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: $color-medium-gray;
+    text-decoration: underline;
+  }
+}
