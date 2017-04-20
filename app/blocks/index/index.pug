@@ -1,7 +1,9 @@
 include ../header/header
 include ../footer-menu/footer-menu
+include ../footer-dev-label/footer-dev-label
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
     +footer-menu(getData('footer-menu'))
+    +footer-dev-label()
