@@ -1,5 +1,10 @@
 include ../header/header
+include ../container/container
+include ../text-field/text-field
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
+    +container()
+      div(style='width: 262px; height:40px')
+        +text-field({ type: 'text', placeholder: 'Empty', name: 'test' }).js-test-text-field
