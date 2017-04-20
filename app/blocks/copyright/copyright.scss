@@ -1,12 +1,7 @@
 .copyright {
   color: #555;
-  width: 370px;
   font-family: $GothamProLight;
   font-weight: 300;
-
-  @include respond-to('mobile') {
-    width: 130px;
-  }
 
   &__name {
     font-size: 12px;
@@ -29,7 +24,7 @@
   }
 
   &__link {
-    color: $color-medium-gray;
+    color: #555;
     text-decoration: underline;
   }
 }
