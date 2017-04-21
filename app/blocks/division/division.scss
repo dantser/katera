@@ -2,7 +2,7 @@ $small-border: 7.5px solid transparent;
 $big-border: 12px solid $color-red;
 
 .division {
-  font-family: 'Neris Light';
+  font-family: $NerisLight;
   font-size: rem(16px);
   cursor: pointer;
   padding: 14px 26px;
@@ -11,7 +11,7 @@ $big-border: 12px solid $color-red;
   position: relative;
 
   &_active {
-    font-family: 'Neris Black';
+    font-family: $NerisBlack;
     color: $color-black;
 
     &::before {
