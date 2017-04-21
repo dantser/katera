@@ -5,7 +5,6 @@ include ../navbar/navbar
 include ../button/button
 include ../login-btn/login-btn
 include ../burger-dropdown/burger-dropdown
-include ../banner/banner
 
 mixin header()
   +b('header').header&attributes(attributes)
@@ -26,5 +25,3 @@ mixin header()
           //+e.search
           //  //- search
     +burger-dropdown().__burger-dropdown
-    +banner('', 'assets/images/banner-jack.png')
-    +banner('', 'assets/images/banner-bmw.png')
