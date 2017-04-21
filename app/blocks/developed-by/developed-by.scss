@@ -1,12 +1,12 @@
-.footer-dev * {
+.developed-by * {
   display: block;
 }
-.footer-dev {
+
+.developed-by {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
   width: 100%;
-  background-color: yellow;
 
   &__label {
     font-size: 12px;
@@ -17,18 +17,13 @@
     padding-bottom: 13px;
   }
 
-  &__logo {
-    & svg {
-      width: 97px;
-      height: 13px;
-      fill: #000;
+  &__logo > * {
+    width: 97px;
+    height: 13px;
+    fill: #666;
 
-      & * {
-        fill: #000;
-      }
+    & * {
+      fill: #666;
     }
   }
 }
-
-
-
