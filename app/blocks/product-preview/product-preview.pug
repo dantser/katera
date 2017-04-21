@@ -1,0 +1,13 @@
+//- obj.path - ссылка анкора
+//- obj.img - путь к изображению 60х60
+//- obj.info, obj.name, obj.price - характеристики, имя и цена обьекта
+
+include ../image-bg/image-bg
+
+mixin product-preview(obj)
+  +b.A(href=obj.path).product-preview
+    +e.img-wrap
+      +image-bg()(src=obj.img)
+      +e.info= obj.info
+      +e.name= obj.name
+      +e.price= obj.price

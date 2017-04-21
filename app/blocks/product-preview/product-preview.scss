@@ -1,0 +1,32 @@
+.product-preview {
+  padding: 10px 26px;
+  display: flex;
+  font-size: rem(16px);
+  font-family: $NerisLight;
+  text-decoration: inherit;
+  color: inherit;
+
+  &__img-wrap {
+    width: 60px;
+    height: 60px;
+    margin-right: 14px;
+    position: relative;
+  }
+
+  .product-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: -4px;
+    line-height: 21px;
+
+    &__info {
+      color: #666;
+      font-size: rem(12px);
+      font-style: italic;
+    }
+
+    &__name {
+      font-family: $NerisBlack;
+    }
+  }
+}
