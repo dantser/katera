@@ -5,9 +5,9 @@ include ../image-bg/image-bg
 //- Передача модификатора '_overlay' добавит background над img пример: +banner-big('#', 'assets/images/banner-big.jpg')._overlay
 //- Передача img  по центру banner пример: +e('img')(src='assets/images/banner-img.png').content_img ( class content_img позиционирует img и накладывает прозрачность )
 
-mixin banner-big(href, image)
-  +b('a').banner-big(href=href)
-    +e('div').image&attributes(attributes)
-      +image-bg()(src=image alt='')
+mixin banner-big()
+  +b('a').banner-big(href='#')
+    +e('div').image&attributes(attributes)._overlay
+      +image-bg()(src='assets/images/banner-big.jpg' alt='')
     +e('div').content
-      block
+      +e('img')(src='assets/images/banner-img.png').content_img

@@ -4,6 +4,7 @@
   margin: 0 auto;
   position: relative;
   display: block;
+  z-index:1;
 
   &__image {
     height: 100%;
@@ -22,15 +23,15 @@
 
   &__content {
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 
     &_img {
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
       z-index: -1;
       opacity: .52;
     }
