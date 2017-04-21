@@ -1,0 +1,28 @@
+include ../image-bg/image-bg
+
+//- блок скрыт в стилях display: none;
+mixin article-preview(data)
+  //- ВАЖНО, модификатор типа .article-preview_size_small и.т.д вешаются только на БЛОК
+  //- все элементы должны быть оформлены каскадом, т.е
+  //- .article-preview_size_small .article-preview__image и.т.д
+  +b('article').article-preview&attributes(attributes)
+    //- фоновое изоображение
+    //- элемент image задает позиционирование и размеры
+    +e.image
+      +image-bg()(src=data.image alt='')
+
+    //- Контейнер для категорий
+    +e.categories
+      //- В некоторых блоках, несколько категорий, поэтому выводим все, которые относятся к данному блоку
+      each category in data.categories
+        //- у многих блоков, категории имееют различный фон, эти категории нужно добавлять модификатором.
+        +e('a')(href=category.path class=category.colorModifier).category
+          =category.title
+
+    //- У некоторых блоков есть полупрозрачный градиент, поэтому, добавляем модификатор, если он есть.
+    - var overlayModifier = data.overlay ? 'article-preview__content_has_overlay' : '';
+    //- Сюда попадает все содержимое блока, т.е заголовок, описание и.т.д
+    +e.content(class=overlayModifier)
+      //- Заголовок блока, он и же и ссылка.
+      +e('a')(href=data.path).heading
+        =data.title
