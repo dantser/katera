@@ -1,6 +1,6 @@
 include ../dropdown/dropdown
 include ../container/container
-include ../burger-menu/burger-menu
+include ../vertical-menu/vertical-menu
 
 mixin burger-dropdown()
   +b.burger-dropdown.js-burger-dropdown&attributes(attributes)
@@ -8,7 +8,7 @@ mixin burger-dropdown()
       +container().burger-dropdown__content
         +e.navigation
           //- navigation - мой бургер-меню
-          +burger-menu()
+          +vertical-menu(getData('vertical-menu-full'))
         +e.banners
           +e.banner._type_1
           +e.banner._type_2

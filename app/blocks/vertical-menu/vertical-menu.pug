@@ -1,0 +1,10 @@
+//- Аргумент - массив пунктов меню
+//- vertical-menu-full - десктоп версия
+//- vertical-menu-mobile - мобильная версия
+//- attributes - модификатор шрифта
+mixin vertical-menu(menu)
+  +b('ul').vertical-menu&attributes(attributes)
+      each item in menu
+        +e('li').item
+          +e('a')(href='#')
+            != item
