@@ -1,0 +1,17 @@
+//- МОДИФИКАТОРЫ
+//- ._rounded добавляет border-radius: 3px
+//- ._has_triangle добавляет треугольник сверху блока
+
+//- Как использовать:
+//- Подключаем include ../list/list
+//- +list()
+//-   +list-item()
+//-     | Любоей другой блок/элемент/текст
+
+mixin list()
+  +b('ul').list&attributes(attributes)
+    block
+
+mixin list-item()
+  +e('li').item&attributes(attributes)
+    block

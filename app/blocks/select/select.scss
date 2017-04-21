@@ -1,3 +1,92 @@
 .select {
+  position: relative;
   display: block;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 7px 0 rgba($color-black, 0);
+  will-change: box-shadow;
+  transition: box-shadow .25s ease-in-out;
+
+  &_active {
+    box-shadow: 0 1px 7px 0 rgba($color-black, .16);
+
+    .select__list {
+      display: block !important;
+    }
+
+    .select__icon_type {
+
+      &_caret {
+        display: none;
+      }
+
+      &_close {
+        display: block;
+      }
+    }
+  }
+
+  &__control {
+    all: initial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 30px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: $color-white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: $NerisLight;
+    color: #000;
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: absolute;
+    top: center;
+    display: block;
+    pointer-events: none;
+
+    &_type_caret {
+      right: 11px;
+      width: 11px;
+      height: 6px;
+      fill: #000;
+    }
+
+    &_type_close {
+      right: 13px;
+      display: none;
+      width: 7px;
+      height: 7px;
+      fill: $color-red;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+  &__item {
+    display: block;
+    cursor: pointer;
+    will-change: color;
+    transition: color .25s ease-in-out;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
 }
