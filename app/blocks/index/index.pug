@@ -1,7 +1,10 @@
 include ../header/header
+include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
+
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
-    +yacht-preview-widget('Яхты в продаже', getData('yacht-preview'))
+    +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
+    +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
