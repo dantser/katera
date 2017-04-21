@@ -10,38 +10,108 @@
     display: block;
   }
 
+  &__link {
+
+    &_type {
+
+      &_vk > * {
+        width: 22px;
+        height: 13px;
+      }
+
+      &_insta > * {
+        width: 29px;
+        height: 20px;
+      }
+
+      &_fb > * {
+        width: 11px;
+        height: 19px;
+      }
+
+      &_odnokl > * {
+        width: 13px;
+        height: 20px;
+      }
+
+      &_yt > * {
+        width: 22px;
+        height: 16px;
+      }
+
+      &_tw > * {
+        width: 22px;
+        height: 16px;
+      }
+
+      &_go > * {
+        width: 22px;
+        height: 16px;
+      }
+    }
+  }
+
   &__icon {
     fill: #fff;
 
     * {
       fill: #fff;
     }
+  }
+
+  &_join .social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 
     &_type {
 
       &_vk {
-        width: 22px;
-        height: 13px;
-      }
+        background-color: #4873a7;
 
-      &_insta {
-        width: 29px;
-        height: 20px;
+        & > * {
+          width: 19px;
+          height: 11px;
+        }
       }
 
       &_fb {
-        width: 11px;
-        height: 19px;
+        background-color: #39569a;
+
+        & > * {
+          width: 9px;
+          height: 17px;
+        }
       }
 
       &_odnokl {
-        width: 13px;
-        height: 20px;
+        background-color: #ef8200;
+
+        & > * {
+          width: 10px;
+          height: 17px;
+        }
       }
 
-      &_yt {
-        width: 22px;
-        height: 16px;
+      &_tw {
+        background-color: #12c1ff;
+
+        & > * {
+          width: 19px;
+          height: 16px;
+        }
+      }
+
+      &_go {
+        background-color: #dc4e41;
+
+        & > * {
+          width: 21px;
+          height: 13px;
+        }
       }
     }
   }
