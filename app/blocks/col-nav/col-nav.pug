@@ -1,8 +1,8 @@
 //- Аргумент - items (массив объектов)
 //- items.header - заголовок списка
 //- items.item - элемент списка
-mixin footer-menu(items)
-  +b('div').footer-menu
+mixin col-nav(items)
+  +b('div').col-nav&attributes(attributes)
     each h in items
       +e('ul').list
         +e('li').header
