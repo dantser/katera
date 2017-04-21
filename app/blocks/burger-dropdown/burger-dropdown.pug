@@ -7,7 +7,10 @@ mixin burger-dropdown()
   +b.burger-dropdown.js-burger-dropdown&attributes(attributes)
     +dropdown()
       +container().burger-dropdown__content
+        +e.top
         +e.navigation
+          +vertical-menu(getData('vertical-menu-mobile'))._font_bold
+        +e.navigation._default_mobile
           +vertical-menu(getData('vertical-menu-full'))._font_bold
         +e.banners
           +e.banner._type_1
