@@ -1,10 +1,11 @@
 include ../header/header
 include ../footer/footer
-include ../select/select
 include ../container/container
+include ../banner-big/banner-big
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
     +container()
+      +banner-big()
   +footer()
