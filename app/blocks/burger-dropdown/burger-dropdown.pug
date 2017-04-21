@@ -1,12 +1,14 @@
 include ../dropdown/dropdown
 include ../container/container
+include ../burger-menu/burger-menu
 
 mixin burger-dropdown()
   +b.burger-dropdown.js-burger-dropdown&attributes(attributes)
     +dropdown()
       +container().burger-dropdown__content
         +e.navigation
-          //- navigation
+          //- navigation - мой бургер-меню
+          +burger-menu()
         +e.banners
           +e.banner._type_1
           +e.banner._type_2
