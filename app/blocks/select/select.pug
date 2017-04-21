@@ -1,2 +1,5 @@
-mixin select(items)
-  +b.select&attributes(attributes)
+mixin select(name, items)
+  +b.select.js-select&attributes(attributes)
+    select.control
+      each item in items
+        option(value=item.value)=item.title

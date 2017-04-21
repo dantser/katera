@@ -1,5 +1,8 @@
 include ../header/header
+include ../container/container
+include ../select/select
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
+    +select('test', [{ value: 1, title: 'Текст 1' }, { value: 2, title: 'Текст 2' }, { value: 3, title: 'Текст 3' }])
