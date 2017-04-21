@@ -8,6 +8,7 @@ mixin product-preview(obj)
   +b.A(href=obj.path).product-preview
     +e.img-wrap
       +image-bg()(src=obj.img)
+    +b.product-text
       +e.info= obj.info
       +e.name= obj.name
       +e.price= obj.price
