@@ -1,6 +1,7 @@
 include ../container/container
 include ../social/social
 include ../copyright/copyright
+include ../developed-by/developed-by
 include ../logo/logo
 include ../col-nav/col-nav
 
@@ -10,12 +11,11 @@ mixin footer()
       +e.row
         +e.col-four
           +logo('big').__logo
-          +social().__social
+          +social('vk', 'insta', 'fb', 'odnokl', 'yt').__social
         +e.col-seven._offset-1
           +col-nav(getData('footer-menu')).__col-nav
       +e.row._bottom-line
         +e.col-four
           +copyright()
         +e.col-seven._offset-1
-          //- +copyright()
-
+          +developed-by()
