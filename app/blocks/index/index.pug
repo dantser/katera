@@ -1,14 +1,7 @@
 include ../header/header
-include ../small-article-preview/small-article-preview
-include ../product-preview/product-preview
-include ../image-bg/image-bg
-include ../division/division
+include ../yacht-preview-widget/yacht-preview-widget
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
-    +small-article-preview
-      +division("Яхты в продаже")._active._arrow-left
-      - var object = getData('yacht-preview')
-      each obj in object
-        +product-preview(obj)
+    +yacht-preview-widget('Яхты в продаже', getData('yacht-preview'))

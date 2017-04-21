@@ -5,7 +5,7 @@
 include ../image-bg/image-bg
 
 mixin product-preview(obj)
-  +b.A(href=obj.path).product-preview
+  +b.A(href=obj.path).product-preview&attributes(attributes)
     +e.img-wrap
       +image-bg()(src=obj.img)
     +b.product-text
