@@ -1,0 +1,21 @@
+include ../container/container
+include ../social/social
+include ../copyright/copyright
+include ../logo/logo
+include ../col-nav/col-nav
+
+mixin footer()
+  +b('footer').footer
+    +container()
+      +e.row
+        +e.col-four
+          +logo('big').__logo
+          +social().__social
+        +e.col-seven._offset-1
+          +col-nav(getData('footer-menu')).__col-nav
+      +e.row._bottom-line
+        +e.col-four
+          +copyright()
+        +e.col-seven._offset-1
+          //- +copyright()
+

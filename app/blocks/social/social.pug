@@ -1,7 +1,7 @@
 include ../icon/icon
 
 mixin social()
-  +b('ul').social
+  +b('ul').social&attributes(attributes)
     +e('li').item
       +e('a')(href='#').link
         +icon('vkontakte').icon._type_vk
