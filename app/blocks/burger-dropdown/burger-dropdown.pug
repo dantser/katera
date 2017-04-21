@@ -2,12 +2,14 @@ include ../dropdown/dropdown
 include ../container/container
 include ../vertical-menu/vertical-menu
 include ../banner/banner
+include ../login-btn/login-btn
 
 mixin burger-dropdown()
   +b.burger-dropdown.js-burger-dropdown&attributes(attributes)
     +dropdown()
       +container().burger-dropdown__content
         +e.top
+          +login-btn().__login-btn
         +e.navigation
           +vertical-menu(getData('vertical-menu-mobile'))._font_bold
         +e.navigation._default_mobile
