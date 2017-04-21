@@ -1,6 +1,5 @@
 include ../dropdown/dropdown
 include ../container/container
-include ../banner/banner
 
 mixin burger-dropdown()
   +b.burger-dropdown.js-burger-dropdown&attributes(attributes)
@@ -10,7 +9,5 @@ mixin burger-dropdown()
           //- navigation
         +e.banners
           +e.banner._type_1
-            +banner('', 'assets/images/banner-jack.jpg')
           +e.banner._type_2
-            +banner('', 'assets/images/banner-bmw.jpg')
 

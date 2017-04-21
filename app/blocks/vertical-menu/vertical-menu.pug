@@ -1,0 +1,8 @@
+//- Аргумент - массив пунктов меню
+//- ._font_bold - жирный шрифт
+mixin vertical-menu(menu)
+  +b('ul').vertical-menu&attributes(attributes)
+      each item in menu
+        +e('li').item
+          +e('a')(href='#')
+            != item
