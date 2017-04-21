@@ -10,7 +10,7 @@ mixin burger-dropdown()
       +container().burger-dropdown__content
         +e.top
           +login-btn().__login-btn
-        +e.navigation
+        +e.navigation._show_mobile
           +vertical-menu(getData('vertical-menu-mobile'))._font_bold
         +e.navigation._default_mobile
           +vertical-menu(getData('vertical-menu-full'))._font_bold
