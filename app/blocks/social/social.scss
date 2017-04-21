@@ -38,6 +38,16 @@
         width: 22px;
         height: 16px;
       }
+
+      &_tw > * {
+        width: 22px;
+        height: 16px;
+      }
+
+      &_go > * {
+        width: 22px;
+        height: 16px;
+      }
     }
   }
 
@@ -68,10 +78,6 @@
         }
       }
 
-      &_insta {
-        background-color: orange;
-      }
-
       &_fb {
         background-color: #39569a;
 
@@ -88,10 +94,6 @@
           width: 10px;
           height: 17px;
         }
-      }
-
-      &_yt {
-        background-color: red;
       }
 
       &_tw {

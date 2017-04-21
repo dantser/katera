@@ -4,3 +4,6 @@ include ../social/social
 mixin index()
   +b.index&attributes(attributes)
     +header()
+    +e('div')(style='width: 500px; background-color: #123')
+      +social('vk', 'insta', 'fb', 'odnokl', 'yt')
+    +social('vk', 'insta', 'fb', 'odnokl', 'yt')(class='_join')
