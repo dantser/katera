@@ -1,6 +1,7 @@
 include ../header/header
 include ../main-container/main-container
 include ../banner-big/banner-big
+include ../footer/footer
 
 mixin index()
   +b.index&attributes(attributes)
@@ -8,3 +9,5 @@ mixin index()
     +container()
       +main-container().main-container_shadow
         +banner-big()
+  +footer()
+
