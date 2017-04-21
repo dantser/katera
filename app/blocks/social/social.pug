@@ -1,22 +1,9 @@
 include ../icon/icon
-//- Неявный аргумент - модификатор _join
-//- ...buttons - названия svg-иконок (пример: vk, fb) по названию как в папке icons
-//- attributes - изменить цвет заливки фона иконок
+//- attributes - модификатор _join - attributes - изменть заливку фона и размер иконок
+//- ...buttons - названия svg-иконок (пример: vk, fb) по названию из папки icons
 mixin social(...buttons)
   +b('ul').social&attributes(attributes)
     each button in buttons
       +e('li').item
         +e('a')(href='#', class='__link_type_' + button)
           +icon(button).icon
-    //- +e('li').item
-    //-   +e('a')(href='#').link._type_insta
-    //-     +icon('instagram').icon
-    //- +e('li').item
-    //-   +e('a')(href='#').link._type_fb
-    //-     +icon('facebook').icon
-    //- +e('li').item
-    //-   +e('a')(href='#').link._type_odnokl
-    //-     +icon('odnoklassniki').icon
-    //- +e('li').item
-    //-   +e('a')(href='#').link._type_yt
-    //-     +icon('youtube').icon

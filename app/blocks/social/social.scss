@@ -5,7 +5,6 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: yellow;
 
   &__item, &__link, &__icon, &__icon * {
     display: block;
@@ -49,38 +48,67 @@
       fill: #fff;
     }
   }
-/*****************************************/
-  &_join {
-    .social {
-      &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        /*background-color: blue;*/
 
-        &_type {
-          &_vk {
-            background-color: blue;
-          }
+  &_join .social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 
-          &_insta {
-            background-color: orange;
-          }
+    &_type {
 
-          &_fb {
-            background-color: cyan;
-          }
+      &_vk {
+        background-color: #4873a7;
 
-          &_odnokl {
-            background-color: red;
-          }
+        & > * {
+          width: 19px;
+          height: 11px;
+        }
+      }
 
-          &_yt {
-            background-color: darkblue;
-          }
+      &_insta {
+        background-color: orange;
+      }
+
+      &_fb {
+        background-color: #39569a;
+
+        & > * {
+          width: 9px;
+          height: 17px;
+        }
+      }
+
+      &_odnokl {
+        background-color: #ef8200;
+
+        & > * {
+          width: 10px;
+          height: 17px;
+        }
+      }
+
+      &_yt {
+        background-color: red;
+      }
+
+      &_tw {
+        background-color: #12c1ff;
+
+        & > * {
+          width: 19px;
+          height: 16px;
+        }
+      }
+
+      &_go {
+        background-color: #dc4e41;
+
+        & > * {
+          width: 21px;
+          height: 13px;
         }
       }
     }
