@@ -16,8 +16,18 @@
 
   &__navigation {
     display: block;
+    margin-top: 74px;
     margin-right: 30px;
     width: 100%;
+
+    .vertical-menu .vertical-menu__item {
+      margin-bottom: 52px;
+
+      & a {
+        font-size: rem(24px);
+        line-height: initial;
+      }
+    }
   }
 
   &__banners {
