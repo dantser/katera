@@ -1,19 +1,22 @@
 include ../icon/icon
-
-mixin social()
-  +b('ul').social
-    +e('li').item
-      +e('a')(href='#').link
-        +icon('vkontakte').icon._type_vk
-    +e('li').item
-      +e('a')(href='#').link
-        +icon('instagram').icon._type_insta
-    +e('li').item
-      +e('a')(href='#').link
-        +icon('facebook').icon._type_fb
-    +e('li').item
-      +e('a')(href='#').link
-        +icon('odnoklassniki').icon._type_odnokl
-    +e('li').item
-      +e('a')(href='#').link
-        +icon('youtube').icon._type_yt
+//- Неявный аргумент - модификатор _join
+//- ...buttons - названия svg-иконок (пример: vk, fb) по названию как в папке icons
+//- attributes - изменить цвет заливки фона иконок
+mixin social(...buttons)
+  +b('ul').social&attributes(attributes)
+    each button in buttons
+      +e('li').item
+        +e('a')(href='#', class='__link_type_' + button)
+          +icon(button).icon
+    //- +e('li').item
+    //-   +e('a')(href='#').link._type_insta
+    //-     +icon('instagram').icon
+    //- +e('li').item
+    //-   +e('a')(href='#').link._type_fb
+    //-     +icon('facebook').icon
+    //- +e('li').item
+    //-   +e('a')(href='#').link._type_odnokl
+    //-     +icon('odnoklassniki').icon
+    //- +e('li').item
+    //-   +e('a')(href='#').link._type_yt
+    //-     +icon('youtube').icon

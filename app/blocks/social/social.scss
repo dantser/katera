@@ -5,9 +5,41 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  background-color: yellow;
 
   &__item, &__link, &__icon, &__icon * {
     display: block;
+  }
+
+  &__link {
+
+    &_type {
+
+      &_vk > * {
+        width: 22px;
+        height: 13px;
+      }
+
+      &_insta > * {
+        width: 29px;
+        height: 20px;
+      }
+
+      &_fb > * {
+        width: 11px;
+        height: 19px;
+      }
+
+      &_odnokl > * {
+        width: 13px;
+        height: 20px;
+      }
+
+      &_yt > * {
+        width: 22px;
+        height: 16px;
+      }
+    }
   }
 
   &__icon {
@@ -16,32 +48,40 @@
     * {
       fill: #fff;
     }
+  }
+/*****************************************/
+  &_join {
+    .social {
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        /*background-color: blue;*/
 
-    &_type {
+        &_type {
+          &_vk {
+            background-color: blue;
+          }
 
-      &_vk {
-        width: 22px;
-        height: 13px;
-      }
+          &_insta {
+            background-color: orange;
+          }
 
-      &_insta {
-        width: 29px;
-        height: 20px;
-      }
+          &_fb {
+            background-color: cyan;
+          }
 
-      &_fb {
-        width: 11px;
-        height: 19px;
-      }
+          &_odnokl {
+            background-color: red;
+          }
 
-      &_odnokl {
-        width: 13px;
-        height: 20px;
-      }
-
-      &_yt {
-        width: 22px;
-        height: 16px;
+          &_yt {
+            background-color: darkblue;
+          }
+        }
       }
     }
   }
