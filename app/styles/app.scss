@@ -21,6 +21,12 @@ html, body {
   box-sizing: inherit;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 img {
   box-sizing: content-box;
 }
