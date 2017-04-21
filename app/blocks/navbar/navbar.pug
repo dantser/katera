@@ -1,6 +1,0 @@
-mixin navbar(links)
-  +b('ul').navbar&attributes(attributes)
-    each link in links
-      +e('li').item
-        +e('a')(href=link.path).link
-          = link.title

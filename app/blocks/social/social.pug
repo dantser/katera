@@ -1,9 +1,0 @@
-include ../icon/icon
-//- attributes - модификатор _join - attributes - изменть заливку фона и размер иконок
-//- ...buttons - названия svg-иконок (пример: vk, fb) по названию из папки icons
-mixin social(...buttons)
-  +b('ul').social&attributes(attributes)
-    each button in buttons
-      +e('li').item
-        +e('a')(href='#', class='__link_type_' + button)
-          +icon(button).icon
