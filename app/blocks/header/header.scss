@@ -30,6 +30,7 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     align-items: center;
     height: 65px;
@@ -98,6 +99,22 @@
     margin-left: 19px;
     width: 165px;
     height: 35px;
+  }
+
+  &__search-bar {
+    margin-left: 19px;
+
+    @include respond-to('mobile');
+    @include respond-to('tablet');
+
+    @include respond-to('laptop') {
+      display: none;
+    }
+  }
+
+  .search-bar_active {
+    margin: 0;
+    background-color: $color-white;
   }
 
   &__burger-dropdown {

@@ -5,6 +5,7 @@ include ../navbar/navbar
 include ../button/button
 include ../login-btn/login-btn
 include ../burger-dropdown/burger-dropdown
+include ../search-bar/search-bar
 
 mixin header()
   +b('header').header&attributes(attributes)
@@ -20,6 +21,5 @@ mixin header()
             +navbar(getData('navbar'))
           +login-btn().__login
           +button(true)(href='#')._kind_red.__proposal-btn Создать предложение
-          //+e.search
-          //  //- search
+          +search-bar().__search-bar
     +burger-dropdown().__burger-dropdown

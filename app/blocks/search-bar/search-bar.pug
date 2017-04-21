@@ -1,0 +1,10 @@
+include ../icon/icon
+
+mixin search-bar()
+  +b.search-bar.js-search-bar&attributes(attributes)
+    +e.box
+      +icon('magnifier').magnifier
+      +e('input')(type='search' name='search' placeholder='Поиск по сайту').field
+    +e.button
+      +icon('magnifier').magnifier._color_red.js-search-bar__btn_open
+      +icon('close').close.js-search-bar__btn_close
