@@ -1,6 +1,5 @@
-mixin breadcrumbs()
+mixin breadcrumbs(items)
   +b.UL.breadcrumbs&attributes(attributes)
-    +e.LI.item
-      +e.A(href="#").link Главная
-    +e.LI.item
-      +e.A.link Журнал
+    each item in items
+      +e.LI.item
+        +e.A(href="#").link=item

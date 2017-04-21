@@ -5,8 +5,6 @@
   font-weight: 300;
   font-size: 12px;
   color: $color-gray;
-  line-height: 90px;
-  text-align: center;
 
   @include respond-to('tablet') {
     display: none;
