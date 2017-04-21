@@ -3,6 +3,7 @@
   display: none;
   width: 100%;
   background-color: rgba($color-dark-blue, .95);
+  z-index: 999;
 
   &_active {
     display: block;
