@@ -5,6 +5,6 @@ mixin search-bar()
     +e.box
       +icon('magnifier').magnifier
       +e('input')(type='search' name='search' placeholder='Поиск по сайту').field
-    +e.button
-      +icon('magnifier').magnifier._color_red.js-search-bar__btn_open
-      +icon('close').close.js-search-bar__btn_close
+    +e.button.js-search-bar__button
+      +icon('magnifier').magnifier._color_red
+      +icon('close').close
