@@ -15,11 +15,13 @@ mixin header()
     +e.container
       +container()
         +e.content
-          +burger().__burger
-          +logo().__logo
-          +e('nav').navbar
-            +navbar(getData('navbar'))
-          +login-btn().__login
-          +button(true)(href='#')._kind_red.__proposal-btn Создать предложение
-          +search-bar().__search-bar
+          +e.column._left
+            +burger().__burger
+            +logo().__logo
+          +e.column._right
+            +e('nav').navbar
+              +navbar(getData('navbar'))
+            +login-btn().__login
+            +button(true)(href='#')._kind_red.__proposal-btn Создать предложение
+            +search-bar().__search-bar
     +burger-dropdown().__burger-dropdown
