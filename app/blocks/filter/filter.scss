@@ -1,10 +1,18 @@
 .filter {
+  background-color: $color-white;
+
+  @include respond-to('tablet') {
+    box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
+  }
 
   &__content {
     display: flex;
+    padding: 31px 0 30px;
 
     @include respond-to('tablet') {
       flex-direction: column;
+      padding: 15px 0 19px;
+      justify-content: space-between;
     }
   }
 
@@ -15,31 +23,62 @@
     outline: none;
   }
 
-  &__control {
-    @include respond-to('tablet') {
-      display: flex;
-    }
-  }
-
   .division {
     font-family: $NerisBlack;
     font-size: 20px;
     outline: none;
     text-decoration: none;
+    padding-left: 0;
 
-    &_arrow-left {
+    @include respond-to('tablet') {
+      font-size: 16px;
+      padding: 0;
+      padding-right: 14px;
+    }
+  }
+
+  .ui-state-active {
+
+    .division {
+      color: $color-black;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: $NerisBlack;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-top: $small-border;
+        border-left: $big-border;
+        border-bottom: $small-border;
+        transform: translateY(-50%);
+        top: 50%;
+        left: -15px;
+      }
+
       @include respond-to('tablet') {
         font-size: 16px;
+        padding: 0;
+        padding-bottom: 14px;
+        padding-right: 14px;
 
         &::before {
           border-left: $small-border;
           border-right: $small-border;
           border-top: $big-border;
-          transform: translateX(-50%);
-          top: 0;
+          transform: translateX(-100%);
+          top: -15px;
           left: 50%;
         }
       }
+    }
+  }
+
+  &__control {
+
+    @include respond-to('tablet') {
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -55,16 +94,28 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-between;
+    align-items: center;
+    padding-top: 10px;
 
     @include respond-to('tablet') {
       flex-direction: column;
+      padding-top: 0;
+      justify-content: space-between;
+      min-height: 385px;
     }
+  }
+  &__button {
+    height: 40px;
+    outline: none;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   &__item {
     width: 270px;
-    height: 60px;
+    height: 40px;
     border: 1px solid #ccc;
+    border-radius: 3px;
 
     &:nth-child(3n) {
       border: none;
@@ -102,21 +153,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 60px;
+      transform: translateY(9px);
 
       @include respond-to('tablet') {
         order: 5;
-      }
-
-      &__button {
-        width: 270px;
-        height: 40px;
-        outline: none;
-        border-radius: 3px;
-        font-size: 20px;
-        line-height: 24px;
+        transform: none;
       }
     }
-
     &_type {
       @include respond-to('tablet') {
         order: 0;
