@@ -13,68 +13,55 @@
     }
   }
 
-  ul, li {
+  &__control, &__control li {
     margin: 0;
     padding: 0;
     list-style: none;
     outline: none;
   }
 
-  .division {
-    font-family: $NerisBlack;
-    font-size: 20px;
-    outline: none;
-    text-decoration: none;
-    padding-left: 0;
-
-    @include respond-to('laptop') {
-      font-size: 16px;
-      padding: 0;
-      padding-right: 14px;
-    }
-  }
-
-  .ui-state-active {
-
-    .division {
-      color: $color-black;
-      font-size: 20px;
-      font-weight: 600;
-      font-family: $NerisBlack;
-
-      &::before {
-        content: '';
-        position: absolute;
-        border-top: $small-border;
-        border-left: $big-border;
-        border-bottom: $small-border;
-        transform: translateY(-50%);
-        top: 50%;
-        left: -15px;
-      }
-
-      @include respond-to('laptop') {
-        font-size: 16px;
-        padding: 0;
-        padding-bottom: 14px;
-        padding-right: 14px;
-
-        &::before {
-          border-left: $small-border;
-          border-right: $small-border;
-          border-top: $big-border;
-          transform: translateX(-100%);
-          top: -15px;
-          left: 50%;
-        }
-      }
-    }
-  }
-
   &__control {
+    display: block;
+    min-width: 160px;
+
     @include respond-to('laptop') {
       display: flex;
       justify-content: center;
+    }
+  }
+
+  .division_active {
+    font-family: $NerisBlack;
+    font-size: 20px;
+
+    @include respond-to('laptop') {
+      font-family: $NerisSemiBold;
+      font-size: 16px;
+      padding: 0;
+      padding-bottom: 14px;
+      padding-right: 14px;
+
+      &::before {
+        border-left: $small-border;
+        border-right: $small-border;
+        border-top: $big-border;
+        transform: translateX(-100%);
+        top: -15px;
+        left: 50%;
+      }
+    }
+  }
+
+  &__division {
+    font-family: $NerisSemiBold;
+    padding-left: 25px;
+    text-decoration: none;
+
+    @include respond-to('laptop') {
+      font-family: $NerisSemiBold;
+      font-size: 16px;
+      padding: 0;
+      padding-right: 25px;
     }
   }
 
@@ -111,8 +98,10 @@
   &__item {
     width: 270px;
     height: 40px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+
+    @include respond-to('laptop') {
+      width: 100%;
+    }
 
     &:nth-child(3n) {
       border: none;

@@ -1,0 +1,26 @@
+{
+  "yachtType": {
+    "name": "yacht-type",
+    "options": [
+      { "value": 1, "title": "Тип яхты #1" },
+      { "value": 2, "title": "Тип яхты #2" },
+      { "value": 3, "title": "Тип яхты #3" }
+    ]
+  },
+  "yachtModel": {
+    "name": "yacht-model",
+    "options": [
+      { "value": 1, "title": "Модель яхты #1" },
+      { "value": 2, "title": "Модель яхты #2" },
+      { "value": 3, "title": "Модель яхты #3" }
+    ]
+  },
+  "shipyard": {
+    "name": "shipyard",
+    "options": [
+      { "value": 1, "title": "Верфь #1" },
+      { "value": 2, "title": "Верфь #2" },
+      { "value": 3, "title": "Верфь #3" }
+    ]
+  }
+}

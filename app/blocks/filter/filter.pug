@@ -1,18 +1,24 @@
-include ../container/container
+include ../button/button
 include ../division/division
+include ../select/select
 
 mixin filter()
   +b.filter&attributes(attributes)
-    +container()
-      +e.content#filterTab
-        +e.UL.control
-          li
-            +division('Купить').A(href='#filterTabs-1')._arrow-left
-          li
-            +division('Арендовать').A(href='#filterTabs-2')._arrow-left
-        +e.FORM.items#filterTabs-1
+    +e.content#filterTab
+      +e.UL.control
+        li
+          +division('Купить').A(href='#filterTabs-1')._arrow-left._active.__division
+        li
+          +division('Арендовать').A(href='#filterTabs-2')._arrow-left.__division
+
+      - for (var i = 1; i <= 2; i++)
+        +e.FORM.items(id=`filterTabs-${i}`)
+          - var filterData = getData('filter')
+
           +e.item._type
-          +e.item._model      
+            +select(filterData.yachtType.name, filterData.yachtType.options)
+          +e.item._model
+            +select(filterData.yachtModel.name, filterData.yachtModel.options)
           +e.item._price
             +e.SPAN.price__text Цена
             +e.INPUT(type='text' placeholder='от')
@@ -23,23 +29,7 @@ mixin filter()
                 +icon('rouble').icon._type_rouble
               +icon('chevron').icon_type_chevron
           +e.item._vendor
-          +e.item._range
-          +e.item._search
-            +button()._kind_red.__button Найти
-            +e.A(href='#').link Расширенный фильтр
-        +e.FORM.items#filterTabs-2
-          +e.item._type
-          +e.item._model      
-          +e.item._price
-            +e.SPAN.price__text Цена
-            +e.INPUT(type='text' placeholder='от')
-            +e.SPAN.price__text &#8212
-            +e.INPUT(type='text' placeholder='до')
-            +e.currency
-              +e.SPAN.currency__item
-                +icon('rouble').icon._type_rouble
-              +icon('chevron').icon_type_chevron
-          +e.item._vendor
+            +select(filterData.shipyard.name, filterData.shipyard.options)
           +e.item._range
           +e.item._search
             +button()._kind_red.__button Найти

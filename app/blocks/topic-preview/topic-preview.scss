@@ -1,0 +1,18 @@
+.topic-preview {
+  // display: flex;
+  // flex-direction: column;
+
+  &__time {
+    color: #666;
+    font-size: rem(12px);
+    font-style: italic;
+    display: block;
+  }
+
+  &__link {
+    text-decoration: inherit;
+    color: inherit;
+    font-family: $NerisSemiBold;
+    display: inline-block;
+  }
+}

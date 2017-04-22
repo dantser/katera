@@ -1,11 +1,18 @@
 include ../main-container/main-container
 include ../container/container
+include ../main-slider/main-slider
 include ../banner-big/banner-big
 include ../filter/filter
+include ../topic-preview-widget/topic-preview-widget
+include ../yacht-preview-widget/yacht-preview-widget
+
 
 mixin index()
   +b.index&attributes(attributes)
-    +filter()
     +container()
       +main-container().main-container_shadow.index__main-container
+        +main-slider()
+        +filter()
+        +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
+        +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +banner-big()

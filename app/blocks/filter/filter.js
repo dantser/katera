@@ -2,15 +2,15 @@ import $ from 'jquery';
 import 'jquery-ui-bundle';
 
 export default () => {
-  $('#filterTab').tabs();
+  const DIVISION_CLASS = '.division';
+  const DIVISION_ACTIVE_CLASS = 'division_active';
 
-//  const tab = $('.ui-tabs-tab');
-//  const activeClass = 'division_active';
-//  $(tab).each(() => {
-//    if ($(this).hasClass('.ui-tabs-active')) {
-//      $(this).children().addClass(activeClass);
-//    } else {
-//      $(this).children().removeClass(activeClass);
-//    }
-//  });
+  $('#filterTab').tabs({
+    activate: (event, ui) => {
+      const { newTab, oldTab } = ui;
+
+      oldTab.find(DIVISION_CLASS).removeClass(DIVISION_ACTIVE_CLASS);
+      newTab.find(DIVISION_CLASS).addClass(DIVISION_ACTIVE_CLASS);
+    },
+  });
 };

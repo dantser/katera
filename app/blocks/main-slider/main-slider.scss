@@ -1,0 +1,78 @@
+.main-slider {
+  display: block;
+  overflow: hidden;
+  position: relative;
+
+  &__slide {
+    position: relative;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+    max-height: 600px;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    top: 25px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(153, 153, 153, 0) 0%, rgba(0, 0, 0, .34) 75%, rgba(0, 0, 0, .45) 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  &__slide-text {
+    font-size: 38px;
+    font-family: $NerisBlack;
+    color: #fff;
+    width: 50%;
+    line-height: 46px;
+
+    @include respond-to('tablet') {
+      font-size: 18px;
+      line-height: 24px;
+      width: 100%;
+    }
+  }
+
+  &__price {
+    display: block;
+
+    @include respond-to('tablet') {
+      font-family: $NerisLight;
+    }
+  }
+
+  &__swiper-pagination {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $color-white;
+      margin: 0 10px;
+      display: inline-block;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: .25s ease-in-out;
+
+      &-active {
+        border-width: 3px;
+      }
+    }
+  }
+}
