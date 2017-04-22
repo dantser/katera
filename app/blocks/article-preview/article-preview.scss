@@ -45,6 +45,7 @@
   }
 
   &:hover {
+
     .article-preview__picture {
       box-shadow: 0px 2px 2px 0px rgba(215, 64, 64, 0.2),0px 4px 4px 0px rgba(215, 64, 64, 0.2),0px 8px 8px 0px rgba(215, 64, 64, 0.2),0px 16px 16px 0px rgba(215, 64, 64, 0.2),0px 32px 32px 0px rgba(215, 64, 64, 0.2),0px 64px 64px 0px rgba(215, 64, 64, 0.2);
     }
@@ -92,9 +93,74 @@
       }
 
       &:hover {
+
         .article-preview__picture {
           box-shadow: none;
         }
+      }
+    }
+  }
+
+  &_color_blue {
+
+    &:hover {
+
+      .article-preview__picture {
+        box-shadow:
+          0px 2px 2px 0px rgba(215, 64, 64, 0.2),
+          0px 4px 4px 0px rgba(215, 64, 64, 0.2),
+          0px 8px 8px 0px rgba(215, 64, 64, 0.2),
+          0px 16px 16px 0px rgba(215, 64, 64, 0.2),
+          0px 32px 32px 0px rgba(215, 64, 64, 0.2),
+          0px 64px 64px 0px rgba(215, 64, 64, 0.2);
+      }
+    }
+  }
+
+  &_color_dark-blue {
+
+    &:hover {
+
+      .article-preview__picture {
+        box-shadow:
+          0px 2px 2px 0px rgba(12, 0, 255, 0.2),
+          0px 4px 4px 0px rgba(12, 0, 255, 0.2),
+          0px 8px 8px 0px rgba(12, 0, 255, 0.2),
+          0px 16px 16px 0px rgba(12, 0, 255, 0.2),
+          0px 32px 32px 0px rgba(12, 0, 255, 0.2),
+          0px 64px 64px 0px rgba(12, 0, 255, 0.2);
+      }
+    }
+  }
+
+  &_color_light-blue {
+
+    &:hover {
+
+      .article-preview__picture {
+        box-shadow:
+          0px 2px 2px 0px rgba(44, 36, 209, 0.2),
+          0px 4px 4px 0px rgba(44, 36, 209, 0.2),
+          0px 8px 8px 0px rgba(44, 36, 209, 0.2),
+          0px 16px 16px 0px rgba(44, 36, 209, 0.2),
+          0px 32px 32px 0px rgba(44, 36, 209, 0.2),
+          0px 64px 64px 0px rgba(44, 36, 209, 0.2);
+      }
+    }
+  }
+
+  &_color_light-amber {
+
+    &:hover {
+
+      .article-preview__picture {
+        box-shadow:
+          0px 2px 2px 0px rgba(216, 209, 28, 0.2),
+          0px 4px 4px 0px rgba(216, 209, 28, 0.2),
+          0px 8px 8px 0px rgba(216, 209, 28, 0.2),
+          0px 16px 16px 0px rgba(216, 209, 28, 0.2),
+          0px 32px 32px 0px rgba(216, 209, 28, 0.2),
+          0px 64px 64px 0px rgba(216, 209, 28, 0.2);
       }
     }
   }

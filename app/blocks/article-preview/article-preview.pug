@@ -7,8 +7,9 @@ include ../tag-content/tag-content
 //- category - категория
 //- title - заголовок
 //- path - ссылка
+//- colorModifier - модификатор цвета тени
 mixin article-preview(data)
-  +b('article').article-preview&attributes(attributes)
+  +b('article')(class='article-preview'+data.colorModifier)&attributes(attributes)
     +e('a')(href= data.path).link
     +e('div').picture
       +image-bg()(src= data.image)
