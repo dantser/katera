@@ -1,13 +1,14 @@
 .yacht-preview-widget {
   max-width: 263px;
+  padding-bottom: 20px;
 
   &__products {
     display: block;
-    padding-bottom: 40px;
+    padding: 0 26px 40px;
   }
 
   &__product {
-    padding: 10px 26px;
+    margin: 10px 0;
   }
 
   &__button {

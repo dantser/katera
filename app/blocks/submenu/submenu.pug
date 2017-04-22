@@ -5,4 +5,7 @@ mixin submenu(data)
     each item in data
       +e('li').item
         +e('a')(href=item.path).link
-          +division(item.title).__title
+          if item.active
+            +division(item.title)._active.__title
+          else
+            +division(item.title).__title

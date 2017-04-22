@@ -1,5 +1,5 @@
 [
-  { "path": "#", "title": "Все" },
+  { "path": "#", "title": "Все", "active": true },
   { "path": "#", "title": "Новинки" },
   { "path": "#", "title": "Новости" },
   { "path": "#", "title": "Яхтинг в России" },
