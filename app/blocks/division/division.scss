@@ -40,6 +40,7 @@ $big-border: 12px solid $color-red;
   }
 
   &_arrow-right {
+    padding: 14px 20px;
     font-size: rem(20px);
 
     &::before {

@@ -1,0 +1,16 @@
+//- Блок разворачивает массив обьектов с превью товаров
+//- +yacht-preview-widget("Яхты в продаже", getData('yacht-preview')) - пример
+
+include ../small-article-preview/small-article-preview
+include ../division/division
+include ../product-preview/product-preview
+
+mixin yacht-preview-widget(title, data)
+  +b.yacht-preview-widget&attributes(attributes)
+    +small-article-preview
+      +division(title)._active._arrow-left
+      +e.__products
+        each obj in data
+          +product-preview(obj).__product
+      +e.__button
+        +button(true)(href="#")._rounded._kind_red Смотреть все
