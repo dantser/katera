@@ -4,6 +4,7 @@ include ../main-slider/main-slider
 include ../banner-big/banner-big
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
+include ../sale-preview-item/sale-preview-item
 
 
 mixin index()
@@ -11,6 +12,7 @@ mixin index()
     +container()
       +main-container().main-container_shadow.index__main-container
         +main-slider()
+        +sale-preview-item
         +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
         +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +banner-big()

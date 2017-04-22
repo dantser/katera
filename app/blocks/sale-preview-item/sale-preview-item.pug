@@ -1,0 +1,10 @@
+include ../image-bg/image-bg
+
+mixin sale-preview-item()
+  +b.A(href='#').sale-preview-item&attributes(attributes)
+    +e.__img-wrap
+      +image-bg()(src='assets/images/yacht.jpg')
+    +b.sale-preview-text
+      +e.info 2006 г., 145 моточасов
+      +e.name Silver Fox SC 485
+      +e.price 1 470 000 Р

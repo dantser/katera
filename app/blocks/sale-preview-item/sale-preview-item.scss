@@ -1,0 +1,36 @@
+.sale-preview-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: inherit;
+
+  &__img-wrap {
+    position: relative;
+    width: 263px;
+    height: 215px;
+    z-index: 1;
+  }
+
+  .sale-preview-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: rem(18px);
+    margin-top: 4px;
+
+    &__info {
+      font-size: rem(13px);
+      color: $color-gray;
+    }
+
+    &__name {
+      font-family: $NerisBlack;
+      color: $color-black;
+    }
+
+    &__price {
+      color: $color-dark-blue;
+    }
+  }
+}
