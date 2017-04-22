@@ -1,0 +1,33 @@
+include ../container/container
+include ../division/division
+
+mixin filter()
+  +b.filter&attributes(attributes)
+    +container()
+      +e.UL.control
+        li
+          +e.A(href='#tabs-1').__control__item
+            +division('Купить')._active._arrow-left
+        li
+          +e.A(href='#tabs-2').__control__item
+            +division('Арендовать')._arrow-left
+      +e.content#tabs
+        +e.FORM.items._active#tabs-1
+          +e.item._type
+          +e.item._model      
+          +e.item._price
+            +e.SPAN.price__text Цена
+            +e.INPUT(type='text' placeholder='от')
+            +e.SPAN.price__text &#8212
+            +e.INPUT(type='text' placeholder='до')
+            +e.currency
+              +e.SPAN.currency__item
+                +icon('rouble').icon._type_rouble
+              +icon('chevron').icon_type_chevron
+          +e.item._vendor
+          +e.item._range
+          +e.item._search
+            +button()._kind_red.__button Найти
+            +e.A(href='#').link Расширенный фильтр
+        +e.FORM.items._active#tabs-2
+          +e.item._type 1111

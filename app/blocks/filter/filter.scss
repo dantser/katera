@@ -1,0 +1,157 @@
+.filter {
+
+  .container {
+    display: flex;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .division {
+    font-family: $NerisBlack;
+    font-size: 20px;
+
+    &_arrow-left {
+      @include respond-to('tablet') {
+        font-size: 16px;
+
+        &::before {
+          border-left: $small-border;
+          border-right: $small-border;
+          border-top: $big-border;
+          transform: translateX(-50%);
+          top: 0;
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: $color-gray;
+    font-family: $NerisLight;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: 270px;
+    height: 60px;
+    border: 1px solid #ccc;
+
+    &:nth-child(3n) {
+      border: none;
+    }
+
+    &_price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $color-black;
+      font-family: $NerisSemiBold;
+
+      @include respond-to('tablet') {
+        order: 4;
+      }
+
+      input {
+        width: 80px;
+        height: 40px;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 19px 0 14px 14px;
+        font-size: 13px;
+        font-style: italic;
+
+        &::placeholder {
+          font-family: $NerisLight;
+          font-style: italic;
+        }
+      }
+    }
+
+    &_search {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include respond-to('tablet') {
+        order: 5;
+      }
+
+      &__button {
+        width: 270px;
+        height: 40px;
+        outline: none;
+        border-radius: 3px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &_type {
+      @include respond-to('tablet') {
+        order: 0;
+      }
+    }
+
+    &_model {
+      @include respond-to('tablet') {
+        order: 2;
+      }
+    }
+
+    &_vendor {
+      @include respond-to('tablet') {
+        order: 1;
+      }
+    }
+
+    &_range {
+      @include respond-to('tablet') {
+        order: 3;
+      }
+    }
+  }
+
+  &__currency {
+    cursor: pointer;
+  }
+
+  &__icon {
+
+    &_type {
+
+      &_rouble {
+        width: 11px;
+        height: 13px;
+      }
+
+      &_chevron {
+        width: 11px;
+        height: 6px;
+        fill: $color-red;
+        stroke: $color-red;
+      }
+    }
+  }
+}
