@@ -15,6 +15,12 @@
     outline: none;
   }
 
+  &__control {
+    @include respond-to('tablet') {
+      display: flex;
+    }
+  }
+
   .division {
     font-family: $NerisBlack;
     font-size: 20px;
