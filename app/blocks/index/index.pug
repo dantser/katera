@@ -1,9 +1,11 @@
 include ../main-container/main-container
 include ../container/container
 include ../banner-big/banner-big
+include ../page-header/page-header
 
 mixin index()
   +b.index&attributes(attributes)
     +container()
+      +page-header('Каталог верфей', 'Главная', 'Каталог верфей')
       +main-container().main-container_shadow.index__main-container
         +banner-big()
