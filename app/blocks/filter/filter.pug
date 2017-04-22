@@ -1,6 +1,7 @@
 include ../button/button
 include ../division/division
 include ../select/select
+include ../text-field/text-field
 
 mixin filter()
   +b.filter&attributes(attributes)
@@ -11,19 +12,20 @@ mixin filter()
         li
           +division('Арендовать').A(href='#filterTabs-2')._arrow-left.__division
 
+      - var filterData = getData('filter')
       - for (var i = 1; i <= 2; i++)
         +e.FORM.items(id=`filterTabs-${i}`)
-          - var filterData = getData('filter')
-
           +e.item._type
             +select(filterData.yachtType.name, filterData.yachtType.options)
           +e.item._model
             +select(filterData.yachtModel.name, filterData.yachtModel.options)
           +e.item._price
             +e.SPAN.price__text Цена
-            +e.INPUT(type='text' placeholder='от')
+            +e.input
+              +text-field(filterData.priceFrom)
             +e.SPAN.price__text &#8212
-            +e.INPUT(type='text' placeholder='до')
+            +e.input
+              +text-field(filterData.priceTo)
             +e.currency
               +e.SPAN.currency__item
                 +icon('rouble').icon._type_rouble

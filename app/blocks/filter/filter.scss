@@ -88,6 +88,20 @@
     }
   }
 
+  &__input {
+    width: 80px;
+    height: 40px;
+
+    .text-field {
+      border: 1px solid #ccc;
+
+      &__control, &__placeholder {
+        font-family: $NerisLight;
+        font-size: rem(13px);
+      }
+    }
+  }
+
   &__button {
     height: 40px;
     outline: none;
@@ -116,22 +130,6 @@
 
       @include respond-to('laptop') {
         order: 4;
-      }
-
-      input {
-        width: 80px;
-        height: 40px;
-        outline: none;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        padding: 19px 0 14px 14px;
-        font-size: 13px;
-        font-style: italic;
-
-        &::placeholder {
-          font-family: $NerisLight;
-          font-style: italic;
-        }
       }
     }
 

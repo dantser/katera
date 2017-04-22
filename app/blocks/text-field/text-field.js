@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export default () => {
-  const ELEMENT_CLASS = 'js-text-field';
+  const ELEMENT_CLASS = '.js-text-field';
   const CONTROL_CLASS = '.text-field__control';
 
   const element = $(ELEMENT_CLASS);
@@ -10,9 +10,10 @@ export default () => {
     return;
   }
 
-  element.each((elIndex, el) => {
-    el.find(CONTROL_CLASS).on('change', (controlIndex, control) => {
-      control.attr('value', control.val())
+  element.each(function () { // eslint-disable-line
+    $(this).find(CONTROL_CLASS).on('input', function () { // eslint-disable-line
+      const control = $(this);
+      control.attr('value', control.val());
     });
   });
 };
