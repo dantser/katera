@@ -3,11 +3,11 @@
 
   &__products {
     display: block;
-    padding-bottom: 40px;
+    padding: 0 26px 40px;
   }
 
   &__product {
-    padding: 10px 26px;
+    margin: 10px 0;
   }
 
   &__button {
