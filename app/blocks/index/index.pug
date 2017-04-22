@@ -2,6 +2,7 @@ include ../main-container/main-container
 include ../container/container
 include ../main-slider/main-slider
 include ../banner-big/banner-big
+include ../page-header/page-header
 include ../filter/filter
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
@@ -14,6 +15,7 @@ mixin index()
   +b.index&attributes(attributes)
     +container()
       +submenu(getData('submenu'))
+      +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()
