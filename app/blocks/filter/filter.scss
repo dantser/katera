@@ -1,6 +1,6 @@
 .filter {
 
-  .container {
+  &__content {
     display: flex;
 
     @include respond-to('tablet') {
@@ -12,11 +12,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    outline: none;
   }
 
   .division {
     font-family: $NerisBlack;
     font-size: 20px;
+    outline: none;
+    text-decoration: none;
 
     &_arrow-left {
       @include respond-to('tablet') {

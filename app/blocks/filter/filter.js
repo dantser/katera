@@ -1,16 +1,11 @@
 import $ from 'jquery';
-import 'jquery-ui';
+import 'jquery-ui-bundle';
 
 export default () => {
-  const filterControl = '.filter-control .division';
-  const activeControlClass = 'division_active';
-
-  $('#tabs').tabs();
-
-  filterControl.on('click', (e) => {
-    e.preventDefault();
-    filterControl.removeClass(activeControlClass);
-    $(this).toggleClass(activeControlClass);
+  $('#filterTab').tabs();
+  $('.ui-tab').each(() => {
+    if ($(this).hasClass('.ui-tabs-active')) {
+      $('.ui-tabs-anchor').addClass('division_active');
+    }
   });
 };
-

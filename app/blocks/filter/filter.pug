@@ -4,15 +4,13 @@ include ../division/division
 mixin filter()
   +b.filter&attributes(attributes)
     +container()
-      +e.UL.control
-        li
-          +e.A(href='#tabs-1').__control__item
-            +division('Купить')._active._arrow-left
-        li
-          +e.A(href='#tabs-2').__control__item
-            +division('Арендовать')._arrow-left
-      +e.content#tabs
-        +e.FORM.items._active#tabs-1
+      +e.content#filterTab
+        +e.UL.control
+          li
+            +division('Купить').A(href='#filterTabs-1')._active._arrow-left
+          li
+            +division('Арендовать').A(href='#filterTabs-2')._arrow-left
+        +e.FORM.items#filterTabs-1
           +e.item._type
           +e.item._model      
           +e.item._price
@@ -29,5 +27,5 @@ mixin filter()
           +e.item._search
             +button()._kind_red.__button Найти
             +e.A(href='#').link Расширенный фильтр
-        +e.FORM.items._active#tabs-2
-          +e.item._type 1111
+        +e.FORM.items#filterTabs-2
+          +e.item._type 

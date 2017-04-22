@@ -49,6 +49,7 @@
     "gulp-watch": "^4.3.11",
     "jade-get-data": "^1.0.1",
     "jquery": "^3.2.1",
+    "jquery-ui-bundle": "^1.12.1",
     "normalize.css": "^6.0.0",
     "postcss-autoreset": "^1.2.1",
     "postcss-center": "^1.0.0",

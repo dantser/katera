@@ -1,9 +1,11 @@
 include ../main-container/main-container
 include ../container/container
 include ../banner-big/banner-big
+include ../filter/filter
 
 mixin index()
   +b.index&attributes(attributes)
+    +filter()
     +container()
       +main-container().main-container_shadow.index__main-container
         +banner-big()
