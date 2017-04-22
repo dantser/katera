@@ -5,4 +5,7 @@ mixin index()
   +b.index&attributes(attributes)
     +header()
     //- файл test-article-preview.json находится в app/data/test-article-preview.json
-    +article-preview(getData('test-article-preview'))
+    +e('div')(style='width: 30%; position: relative')
+      +article-preview(getData('test-article-preview'))
+      +article-preview(getData('test-article-preview'))(class='_overlay')
+

@@ -1,3 +1,102 @@
 .article-preview {
-  display: none;
+  position: relative;
+  display: block;
+  transition: box-shadow 0.25s ease-in-out;
+
+  &__link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__picture {
+    position: relative;
+    height: 213px;
+    overflow: hidden;
+  }
+
+  &__text * {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 14px 19px;
+  }
+
+  &__category {
+    display: none;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: (22/18)*1em;
+    font-weight: 900;
+    text-align: center;
+    color: $color-black;
+  }
+
+
+
+  &:hover {
+    .article-preview__picture {
+      box-shadow: 0px 2px 2px 0px rgba(215, 64, 64, 0.2),0px 4px 4px 0px rgba(215, 64, 64, 0.2),0px 8px 8px 0px rgba(215, 64, 64, 0.2),0px 16px 16px 0px rgba(215, 64, 64, 0.2),0px 32px 32px 0px rgba(215, 64, 64, 0.2),0px 64px 64px 0px rgba(215, 64, 64, 0.2);
+    }
+  }
+
+  &_overlay {
+    padding: 19px;
+
+    .article-preview {
+      transition: none;
+
+      &__picture {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &__text {
+        align-items: flex-start;
+        justify-content: flex-end;
+        height: 100%;
+        padding: 19px 15px;
+        text-align: left;
+        box-sizing: border-box;
+        background: -moz-linear-gradient(45deg, rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.66) 27%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.84) 0%,rgba(0,0,0,0.66) 27%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(45deg, rgba(0,0,0,0.84) 0%,rgba(0,0,0,0.66) 27%,rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6000000', endColorstr='#00000000',GradientType=1 );
+      }
+
+      &__category {
+        display: block;
+        font-size: 13px;
+        line-height: (24/13)*1em;
+        color: $color-white;
+      }
+
+      &__title {
+        font-size: 18px;
+        text-align: left;
+        color: $color-white;
+      }
+
+      &:hover {
+        .article-preview__picture {
+          box-shadow: none;
+        }
+      }
+    }
+  }
 }
