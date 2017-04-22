@@ -1,5 +1,6 @@
 .main-slider {
   display: block;
+  overflow: hidden;
 
   &__slide {
     position: relative;

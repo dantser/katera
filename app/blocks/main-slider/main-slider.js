@@ -1,10 +1,9 @@
 import Swiper from 'swiper';
 
 export default () => {
-  const swiper = new Swiper('.main-slider', {
-    // pagination: '.swiper-pagination',
+  // eslint-disable-next-line no-unused-vars
+  const swiper = new Swiper('.swiper-container', {
+    pagination: '.main-slider__swiper-pagination',
     paginationClickable: true,
   });
-
-  swiper();
 };
