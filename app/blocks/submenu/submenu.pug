@@ -1,0 +1,8 @@
+include ../division/division
+
+mixin submenu(data)
+  +b('ul').submenu
+    each item in data
+      +e('li').item
+        +e('a')(href=item.path).link
+          +division(item.title).__title

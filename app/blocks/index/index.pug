@@ -4,10 +4,13 @@ include ../main-slider/main-slider
 include ../banner-big/banner-big
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
+include ../submenu/submenu
 
 
 mixin index()
   +b.index&attributes(attributes)
+    +container()
+      +submenu(getData('submenu'))
     +container()
       +main-container().main-container_shadow.index__main-container
         +main-slider()
