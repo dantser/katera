@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export default () => {
-  const ELEMENT_CLASS = '.js-search-bar';
+  const ELEMENT_CLASS = '.search-bar';
   const ACTIVE_ELEMENT_CLASS = 'search-bar_active';
   const BUTTON_CLASS = '.js-search-bar__button';
 

@@ -25,6 +25,26 @@
     }
   }
 
+  &_color_blue {
+
+    .search-bar {
+
+      &__field {
+        color: $color-white;
+      }
+
+      &__magnifier {
+        display: block;
+        width: 18px;
+        height: 18px;
+
+        * {
+          stroke: $color-white;
+        }
+      }
+    }
+  }
+
   &__box {
     display: none;
     align-items: center;

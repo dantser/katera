@@ -6,14 +6,12 @@
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
-  list-style: none;
   background: $color-white;
   border: 1px solid $color-light-gray;
   border-left: 0;
   border-right: 0;
 
   &__title {
-    padding: 0;
     padding: 13px 0;
   }
 }

@@ -28,12 +28,25 @@
     @include respond-to('tablet');
 
     @include respond-to('laptop') {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
       height: 44px;
     }
+  }
+
+  &__login-btn {
+    display: block;
+  }
+
+  &__search-bar {
+    display: block;
+  }
+
+  .search-bar_active {
+    background-color: $color-dark-blue !important;
   }
 
   &__navigation {
