@@ -1,7 +1,6 @@
 .article-preview {
   position: relative;
   display: block;
-  transition: box-shadow 0.25s ease-in-out;
 
   &__link {
     display: block;
@@ -17,6 +16,7 @@
     position: relative;
     height: 213px;
     overflow: hidden;
+    transition: box-shadow 0.25s ease-in-out;
   }
 
   &__text * {
@@ -44,8 +44,6 @@
     color: $color-black;
   }
 
-
-
   &:hover {
     .article-preview__picture {
       box-shadow: 0px 2px 2px 0px rgba(215, 64, 64, 0.2),0px 4px 4px 0px rgba(215, 64, 64, 0.2),0px 8px 8px 0px rgba(215, 64, 64, 0.2),0px 16px 16px 0px rgba(215, 64, 64, 0.2),0px 32px 32px 0px rgba(215, 64, 64, 0.2),0px 64px 64px 0px rgba(215, 64, 64, 0.2);
@@ -56,7 +54,6 @@
     padding: 19px;
 
     .article-preview {
-      transition: none;
 
       &__picture {
         position: absolute;
@@ -64,6 +61,8 @@
         top: 0;
         width: 100%;
         height: 100%;
+        transition: none;
+        box-shadow: none;
       }
 
       &__text {
