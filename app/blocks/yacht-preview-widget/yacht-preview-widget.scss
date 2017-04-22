@@ -1,0 +1,22 @@
+.yacht-preview-widget {
+  max-width: 263px;
+  padding-bottom: 20px;
+
+  &__products {
+    display: block;
+    padding: 0 26px 40px;
+  }
+
+  &__product {
+    margin: 10px 0;
+  }
+
+  &__button {
+    width: 165px;
+    height: 40px;
+    bottom: -20px;
+    left: -15px;
+    position: absolute;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,11 @@
+include ../division/division
+
+mixin submenu(data)
+  +b('ul').submenu
+    each item in data
+      +e('li').item
+        +e('a')(href=item.path).link
+          if item.active
+            +division(item.title)._active.__title
+          else
+            +division(item.title).__title

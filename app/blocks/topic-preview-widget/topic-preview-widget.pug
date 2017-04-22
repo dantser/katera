@@ -1,0 +1,16 @@
+//- Блок разворачивает массив обьектов с превью тем форума
+//- +topic-preview-widget("Обсуждения в форуме", getData('topic-preview')) - пример
+
+include ../division/division
+include ../button/button
+include ../topic-preview/topic-preview
+
+mixin topic-preview-widget(title, data)
+  +b.topic-preview-widget&attributes(attributes)
+    +small-article-preview
+      +division(title)._active._arrow-right
+      +e.__topics
+        each obj in data
+          +topic-preview(obj).__topic
+      +e.__button
+        +button(true)(href="#")._rounded._kind_red Перейти в форум
