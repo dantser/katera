@@ -1,0 +1,14 @@
+//- Модификаторы
+//- ._active - разворачивает поле ввода
+//- ._color_blue - для синего фона, добавляет белый цвет текста полю и иконке поиска
+
+include ../icon/icon
+
+mixin search-bar()
+  +b.search-bar&attributes(attributes)
+    +e.box
+      +icon('magnifier').magnifier
+      +e('input')(type='search' name='search' placeholder='Поиск по сайту').field
+    +e.button.js-search-bar__button
+      +icon('magnifier').magnifier._color_red
+      +icon('close').close

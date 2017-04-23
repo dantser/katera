@@ -1,6 +1,6 @@
 include ../breadcrumbs/breadcrumbs
 
-mixin page-header(title, ...breadcrumbs)
+mixin page-header(title, breadcrumbs)
   +b.page-header
     +breadcrumbs(breadcrumbs)
     +e('h2').title= title

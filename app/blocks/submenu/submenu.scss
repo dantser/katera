@@ -1,0 +1,17 @@
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  background: $color-white;
+  border: 1px solid $color-light-gray;
+  border-left: 0;
+  border-right: 0;
+
+  &__title {
+    padding: 13px 0;
+  }
+}

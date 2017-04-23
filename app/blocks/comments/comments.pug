@@ -2,6 +2,7 @@
 //- name   --- ФИО пример: +comments('Мария Головина')
 //- answer --- Ответ на комментарий пример: +comments('ответил Марии')
 //- text   --- Текс комментария пример: +comments('Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.')
+//- модификатор comments_left добавляет padding-left
 
 mixin comments(image, name, answer, text)
   +b.comments&attributes(attributes)

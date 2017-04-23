@@ -1,0 +1,25 @@
+.topic-preview-widget {
+  max-width: 263px;
+  padding-bottom: 20px;
+
+  &__topics {
+    padding-bottom: 50px;
+  }
+
+  &__topic {
+    padding: 10px 20px;
+  }
+
+  &__topic + &__topic {
+    margin-top: 7px;
+  }
+
+  &__button {
+    width: 165px;
+    height: 40px;
+    bottom: -20px;
+    right: -15px;
+    position: absolute;
+    z-index: 1;
+  }
+}

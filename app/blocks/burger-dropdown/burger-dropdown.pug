@@ -3,6 +3,7 @@ include ../container/container
 include ../vertical-menu/vertical-menu
 include ../banner/banner
 include ../login-btn/login-btn
+include ../search-bar/search-bar
 
 mixin burger-dropdown()
   +b.burger-dropdown.js-burger-dropdown&attributes(attributes)
@@ -10,6 +11,7 @@ mixin burger-dropdown()
       +container().burger-dropdown__content
         +e.top
           +login-btn().__login-btn
+          +search-bar()._color_blue.__search-bar
         +e.navigation._show_mobile
           +vertical-menu(getData('vertical-menu-mobile'))._font_bold
         +e.navigation._default_mobile

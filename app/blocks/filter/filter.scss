@@ -1,0 +1,195 @@
+.filter {
+  background-color: $color-white;
+  box-shadow: 0 0 7px rgba(19, 11, 89, .14);
+
+  &__content {
+    display: flex;
+    padding: 31px 0 30px;
+
+    @include respond-to('laptop') {
+      flex-direction: column;
+      padding: 15px 0 19px;
+      justify-content: space-between;
+    }
+  }
+
+  &__control, &__control li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+  }
+
+  &__control {
+    display: block;
+    min-width: 160px;
+
+    @include respond-to('laptop') {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .division_active {
+    font-family: $NerisBlack;
+    font-size: 20px;
+
+    @include respond-to('laptop') {
+      font-family: $NerisSemiBold;
+      font-size: 16px;
+      padding: 0;
+      padding-bottom: 14px;
+      padding-right: 14px;
+
+      &::before {
+        border-left: $small-border;
+        border-right: $small-border;
+        border-top: $big-border;
+        transform: translateX(-100%);
+        top: -15px;
+        left: 50%;
+      }
+    }
+  }
+
+  &__division {
+    font-family: $NerisSemiBold;
+    padding-left: 25px;
+    text-decoration: none;
+
+    @include respond-to('laptop') {
+      font-family: $NerisSemiBold;
+      font-size: 16px;
+      padding: 0;
+      padding-right: 25px;
+    }
+  }
+
+  &__link {
+    color: $color-gray;
+    font-family: $NerisLight;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+
+    @include respond-to('laptop') {
+      flex-direction: column;
+      padding-top: 0;
+      justify-content: space-between;
+      min-height: 385px;
+    }
+  }
+
+  &__input {
+    width: 80px;
+    height: 40px;
+
+    .text-field {
+      border: 1px solid #ccc;
+
+      &__control, &__placeholder {
+        font-family: $NerisLight;
+        font-size: rem(13px);
+      }
+    }
+  }
+
+  &__button {
+    height: 40px;
+    outline: none;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__item {
+    width: 270px;
+    height: 40px;
+
+    @include respond-to('laptop') {
+      width: 100%;
+    }
+
+    &:nth-child(3n) {
+      border: none;
+    }
+
+    &_price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $color-black;
+      font-family: $NerisSemiBold;
+
+      @include respond-to('laptop') {
+        order: 4;
+      }
+    }
+
+    &_search {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 60px;
+      transform: translateY(9px);
+
+      @include respond-to('laptop') {
+        order: 5;
+        transform: none;
+      }
+    }
+
+    &_type {
+      @include respond-to('laptop') {
+        order: 0;
+      }
+    }
+
+    &_model {
+      @include respond-to('laptop') {
+        order: 2;
+      }
+    }
+
+    &_vendor {
+      @include respond-to('laptop') {
+        order: 1;
+      }
+    }
+
+    &_range {
+      @include respond-to('laptop') {
+        order: 3;
+      }
+    }
+  }
+
+  &__currency {
+    cursor: pointer;
+  }
+
+  &__icon {
+
+    &_type {
+
+      &_rouble {
+        width: 11px;
+        height: 13px;
+      }
+
+      &_chevron {
+        width: 11px;
+        height: 6px;
+        fill: $color-red;
+        stroke: $color-red;
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+mixin topic-preview(obj)
+  +b.topic-preview&attributes(attributes)
+    +e.SPAN.__time= obj.time
+    +e.A(href=obj.path).__link= obj.title
