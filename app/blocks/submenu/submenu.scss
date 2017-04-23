@@ -1,4 +1,6 @@
 .submenu {
+  position: relative;
+  background-color: $color-white;
 
   &__control {
     list-style: none;
@@ -13,12 +15,117 @@
     border-left: 0;
     border-right: 0;
 
-    @include respond-to('tablet') {
-      flex-flow: column wrap;
+    &_closed {
+      height: 40px;
+      width: 267px;
+      border-radius: 3px;
     }
+
+    @include respond-to('tablet') {
+      display: flex;
+      flex-direction: column;
+      width: 267px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include respond-to('tablet') {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-black;
   }
 
   &__title {
     padding: 13px 0;
+    width: 100%;
+
+    @include respond-to('tablet') {
+      padding: 0;
+
+      &::before {
+        all: initial;
+        content: 'Категория: ';
+        font-family: $NerisBlack;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__icon_type_chevron {
+    display: none;
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include respond-to('tablet') {
+      display: inline-block;
+    }
   }
 }
+//   .submenu {
+//     position: relative;
+//     height: 50px;
+//     border-radius: 3px;
+//     border: solid 1px lightgrey;
+//     background-color: #fff;
+//     color: #333;
+//     cursor: pointer;
+//     overflow: hidden;
+//     transition: .3s;
+//   }
+//
+//   .division_active {
+//     padding: 16px 31px 0 16px;
+//     cursor: pointer;
+//     transition: .2s;
+//     height: 40px;
+//     margin: 0;
+//   }
+//
+//   .arrowselect {
+//     position: absolute;
+//     right: 0;
+//     width: 21px;
+//     padding: 0 10px 0 0;
+//   }
+//
+//   .submenu__control {
+//     background: #fff;
+//     transition: .3s;
+//     width: 100%;
+//     height: 200px;
+//     overflow-y: auto;
+//     overflow-x: hidden !important;
+//     position: absolute;
+//     display: block;
+//     padding: 0;
+//     margin: 0;
+//   }
+//
+//   .submenu__control > .submenu__item {
+//     color: gray;
+//     display: block;
+//     padding: 10px;
+//     border-radius: 0;
+//     cursor: pointer;
+//   }
+//
+//   .submenu__control > .submenu__item:hover {
+//     color: #333;
+//     background: #e1e1e1;
+//     transition: .2s;
+//   }
+// }

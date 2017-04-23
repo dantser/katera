@@ -8,5 +8,6 @@ mixin submenu(data)
           +e('a')(href=item.path).link
             if item.active
               +division(item.title)._active.__title
+              +icon('chevron').icon_type_chevron
             else
               +division(item.title).__title
