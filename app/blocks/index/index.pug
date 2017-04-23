@@ -2,6 +2,8 @@ include ../main-container/main-container
 include ../container/container
 include ../banner-big/banner-big
 include ../page-header/page-header
+include ../comments/comments
+include ../comments-mark/comments-mark
 
 mixin index()
   +b.index&attributes(attributes)
@@ -9,3 +11,9 @@ mixin index()
       +page-header('Каталог верфей', 'Главная', 'Каталог верфей')
       +main-container().main-container_shadow.index__main-container
         +banner-big()
+        +comments('assets/images/comments.jpg', 'Мария Головина', '', 'Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.')
+          +comments-mark('Нравится', '1 декабря 2016г.')
+        +comments('assets/images/comments1.jpg', 'Глеб Волчик', 'ответил Марии','Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.').comments_left
+          +comments-mark('Нравится', '1 декабря 2016г.')
+        +comments('assets/images/comments.jpg', 'Мария Головина', 'ответила Глебу','Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.').comments_left
+          +comments-mark('Нравится', '1 декабря 2016г.')

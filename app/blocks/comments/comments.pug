@@ -1,0 +1,16 @@
+//- image  --- Аватар пример: +comments('assets/images/comments.jpg')
+//- name   --- ФИО пример: +comments('Мария Головина')
+//- answer --- Ответ на комментарий пример: +comments('ответил Марии')
+//- text   --- Текс комментария пример: +comments('Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.')
+
+mixin comments(image, name, answer, text)
+  +b.comments&attributes(attributes)
+    +e.left
+      +e('img')(src=image alt='').img
+    +e.right
+      +e.box
+        +e('h3').fio= name
+        +e('span').answer= answer
+      +e('p').text= text
+      block
+
