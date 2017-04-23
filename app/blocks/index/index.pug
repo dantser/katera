@@ -10,7 +10,7 @@ include ../submenu/submenu
 include ../sale-preview-item/sale-preview-item
 
 include ../text/text
-
+include ../tabs/tabs
 mixin index()
   +b.index&attributes(attributes)
     +container()
@@ -19,6 +19,7 @@ mixin index()
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()
+        +tabs('Все', 'спорт', 'Технологии', 'машины')
         +text()
           h1 Привет
           h2 Привет
