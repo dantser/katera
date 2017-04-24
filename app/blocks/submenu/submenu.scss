@@ -46,6 +46,17 @@
     color: $color-black;
   }
 
+  &_vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .division {
+      padding-left: 30px;
+      font-size: rem(20px);
+    }
+  }
+
   &__title {
     padding: 13px 0;
     width: 100%;

@@ -12,25 +12,26 @@
     min-width: 100px;
     display: block;
     color: #fff;
+    text-decoration: none;
     background-color: #000;
 
-    &_blue {
+    &_color_blue {
       background-color: #2635fa;
     }
 
-    &_dark-blue {
+    &_color_dark-blue {
       background-color: #1c2384;
     }
 
-    &_light-blue {
+    &_color_light-blue {
       background-color: #17c2c0;
     }
 
-    &_red {
+    &_color_red {
       background-color: #d74040;
     }
 
-    &_light-amber {
+    &_color_light-amber {
       background-color: #d4bf74;
     }
   }

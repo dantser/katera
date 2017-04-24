@@ -1,0 +1,28 @@
+.quote {
+  display: flex;
+  color: $color-dark-blue;
+  font-size: 30px;
+  font-family: $NerisBlack;
+  max-width: 430px;
+  line-height: 1.17;
+  padding: 28px 0 0 23px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+
+  @include respond-to('tablet') {
+    flex-direction: column;
+    font-size: 22px;
+    left: 15px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 5px;
+    left: 0;
+    width: 5px;
+    background: $color-dark-blue;
+  }
+}
