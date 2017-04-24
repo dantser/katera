@@ -1,0 +1,26 @@
+include ../image-bg/image-bg
+include ../tag-content/tag
+include ../tag-content/tag-content
+//- Аргумент - объект test-article-preview
+//- image - фоновое изображение
+//- tags - связанные ссылки
+//- category - категория
+//- title - заголовок
+//- path - ссылка
+//- colorModifier - модификатор цвета тени
+mixin article-preview(data)
+  +b('article')(class='article-preview'+data.colorModifier)&attributes(attributes)
+    +e('a')(href= data.path).link
+    +e('div').picture
+      +image-bg()(src= data.image)
+      +tag-content()
+        each tag in data.tags
+          +tag(tag.title)(href= tag.path, class= tag.colorModifier)
+    +e('div').text
+      +e('p').category= data.category
+      +e('p').title= data.title
+
+
+
+
+
