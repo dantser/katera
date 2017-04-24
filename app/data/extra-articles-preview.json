@@ -1,49 +1,49 @@
 [{
-  "name": "Личный опыт: обучение яхтингу по системе RYA
-в Великобритании",
-  "img": "assets/images/extra-article.jpg",
-  "path": "#",
-  "tag": "Путешествия"
-}, {
-  "name": "Личный опыт: обучение яхтингу по системе RYA
-в Великобритании",
-  "img": "assets/images/extra-article.jpg",
-  "path": "#",
-  "tag": "Путешествия"
-}, {
-  "name": "Личный опыт: обучение яхтингу по системе RYA
-в Великобритании",
-  "img": "assets/images/extra-article.jpg",
-  "path": "#",
-  "tag": "Путешествия"
-}, {
-  "name": "Личный опыт: обучение яхтингу по системе RYA
-в Великобритании",
-  "img": "assets/images/extra-article.jpg",
-  "path": "#",
-  "tag": "Путешествия"
-}, {
-  "name": "Личный опыт: обучение яхтингу по системе RYA
-в Великобритании",
-  "img": "assets/images/extra-article.jpg",
-  "path": "#",
-  "tag": "Путешествия"
-}, {
-  "name": "Личный опыт: обучение яхтингу по системе RYA
-в Великобритании",
-  "img": "assets/images/extra-article.jpg",
-  "path": "#",
-  "tag": "Путешествия"
-}, {
-  "name": "Личный опыт: обучение яхтингу по системе RYA
-в Великобритании",
-  "img": "assets/images/extra-article.jpg",
-  "path": "#",
-  "tag": "Путешествия"
-}, {
-  "name": "Личный опыт: обучение яхтингу по системе RYA
-в Великобритании",
-  "img": "assets/images/extra-article.jpg",
-  "path": "#",
-  "tag": "Путешествия"
-}]
+		"title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+		"img": "assets/images/extra-article.jpg",
+		"path": "#",
+		"tag": ["Путешествия"]
+	},
+	{
+		"title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+		"img": "assets/images/extra-article.jpg",
+		"path": "#",
+		"tag": ["Путешествия", "Статья"]
+	},
+	{
+		"title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+		"img": "assets/images/extra-article.jpg",
+		"path": "#",
+		"tag": ["Путешествия"]
+	},
+	{
+		"title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+		"img": "assets/images/extra-article.jpg",
+		"path": "#",
+		"tag": ["Путешествия", "Верфь"]
+	},
+	{
+		"title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+		"img": "assets/images/extra-article.jpg",
+		"path": "#",
+		"tag": ["Путешествия"]
+	},
+	{
+		"title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+		"img": "assets/images/extra-article.jpg",
+		"path": "#",
+		"tag": ["Путешествия"]
+	},
+	{
+		"title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+		"img": "assets/images/extra-article.jpg",
+		"path": "#",
+		"tag": ["Путешествия"]
+	},
+	{
+		"title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+		"img": "assets/images/extra-article.jpg",
+		"path": "#",
+		"tag": ["Путешествия", "Аренда"]
+	}
+]

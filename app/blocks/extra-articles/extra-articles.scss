@@ -1,0 +1,98 @@
+.extra-articles {
+  @include respond-to('mobile') {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__header {
+    color: $color-dark-blue;
+    font-size: 38px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond-to('mobile') {
+      flex-flow: column nowrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 262px;
+    color: $color-black;
+    text-decoration: none;
+
+    @include respond-to('tablet') {
+      margin: 0 auto;
+    }
+
+    @include respond-to('mobile') {
+
+      border: 1px solid $color-light-gray;
+      border-right: none;
+      border-left: none;
+    }
+  }
+
+  &__image {
+    height: 213px;
+    width: 100%;
+
+    @include respond-to('mobile') {
+      height: 154px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 22px 30px 50px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 900;
+    font-family: $NerisBlack;
+
+    @include respond-to('tablet') {
+      padding: 15px 0 13px;
+      font-size: 16px;
+      text-align: left;
+      line-height: 20px;
+    }
+  }
+
+  &__tags {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    color: $color-white;
+    width: 101px;
+    height: 20px;
+    padding-left: 10px;
+    background-color: #1aa4b8;
+
+    @include respond-to('mobile') {
+      font-size: 12px;
+      top: 134px;
+      left: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: 36px;
+
+      @include respond-to('mobile') {
+        display: none;
+      }
+    }
+  }
+}
