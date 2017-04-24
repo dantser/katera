@@ -7,7 +7,8 @@
 mixin comments(data)
   +b.comments
     each comment in data.comments
-      +e.item
+      - var childClass = comment.child ? 'comments__item_left' : '';
+      +e.item(class=childClass)
         +e.left
           +e('img')(src= comment.image alt='').img
         +e.right

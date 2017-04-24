@@ -8,6 +8,9 @@ include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
 include ../submenu/submenu
 include ../sale-preview-item/sale-preview-item
+include ../comments-container/comments-container
+include ../comments/comments
+include ../comments-mark/comments-mark
 
 include ../text/text
 
@@ -37,3 +40,5 @@ mixin index()
         +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
         +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +banner-big()
+        +comments-container()
+          +comments(getData('comments'))

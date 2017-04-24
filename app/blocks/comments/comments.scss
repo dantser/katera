@@ -2,7 +2,7 @@
 
   &__item {
     border-top: 1px solid #e5e5e5;
-    padding: 10px 0 0 73px;
+    padding: 10px 0 0;
     margin-top: 16px;
     display: flex;
 
@@ -10,12 +10,12 @@
       padding: 10px 0 0;
     }
 
-    &:first-child {
-      padding-left: 0;
-    }
+    &_left {
+      padding-left: 73px;
 
-    &:last-child {
-      padding-left: 0;
+      @media (max-width: 600px) {
+        padding-left: 0;
+      }
     }
   }
 
