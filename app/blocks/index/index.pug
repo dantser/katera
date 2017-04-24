@@ -2,38 +2,23 @@ include ../main-container/main-container
 include ../container/container
 include ../main-slider/main-slider
 include ../banner-big/banner-big
-include ../page-header/page-header
 include ../filter/filter
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
-include ../submenu/submenu
-include ../sale-preview-item/sale-preview-item
-
-include ../text/text
 
 mixin index()
   +b.index&attributes(attributes)
     +container()
-      +submenu(getData('submenu'))
-      +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()
-        +text()
-          h1 Привет
-          h2 Привет
-          h3 Привет
-          h4 Привет
-          h5 Привет
-          h6 Привет
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            | dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            | ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            | fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            | mollit anim id est laborum.
+        +e.sidebar
+          +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
+        +e.content
+          //- index content
+        +banner-big().__big-banner
+        +e.content
+          //- index content
+        +e.sidebar._right
+          +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
 
-        +sale-preview-item(getData('sale-preview-item'))
-        +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
-        +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
-        +banner-big()
