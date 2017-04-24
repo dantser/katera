@@ -32,6 +32,7 @@
 
   &__item {
     position: relative;
+    cursor: pointer;
 
     @include respond-to('tablet') {
       padding: 14px;

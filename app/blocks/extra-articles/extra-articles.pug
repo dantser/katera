@@ -1,0 +1,9 @@
+mixin extra-articles(title, data)
+  +b.extra-articles&attributes(attributes)
+    +e.H2.header= title
+    +e.article
+      each item in data
+        +e.A(href=item.path).item
+          +e.IMG(src=item.image).image
+          +e.H3.name= item.name
+          +e.tag= item.tag

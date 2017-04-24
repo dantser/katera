@@ -20,6 +20,7 @@ export default () => {
   const SUBMENU_CLOSED_CLASS = 'submenu__control_closed';
   const SUBMENU_CONTROL = $('.submenu__control');
   const SUBMENU_ITEM = $('.submenu__item');
+
   $(window).on('resize', () => {
     const windoWidth = $(window).width();
     if (windoWidth <= TABLET_WIDTH) {
