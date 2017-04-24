@@ -1,0 +1,22 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../video-preview/video-preview
+include ../small-article-preview/small-article-preview
+
+mixin magazine-video()
+  +b.magazine-video&attributes(attributes)
+    +container()
+      +page-header('', ['Главная', 'Журнад', 'Видео-обзоры', 'PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках'])
+      +main-container().main-container_shadow.magazine-videos__main-container
+        +e('iframe').video(src='https://www.youtube.com/embed/J-ek8drxFJA' allowfullscreen)
+
+        +e.content
+          p 123
+        +e.sidebar
+          +e.heading._size_medium Другие видео:
+          +e('ul').items
+            +e.item
+              +video-preview(getData('video-preview'))._row
+            +e.item
+              +video-preview(getData('video-preview'))._row
