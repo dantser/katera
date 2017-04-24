@@ -6,6 +6,7 @@
   }
 
   &__header {
+    font-family: $NerisSemiBold;
     color: $color-dark-blue;
     font-size: 38px;
     text-align: center;
@@ -26,6 +27,12 @@
     }
   }
 
+  &__button {
+    margin: 15px auto 0;
+    width: 165px;
+    height: 40px;
+  }
+
   &__item {
     position: relative;
     display: flex;
@@ -42,60 +49,6 @@
       border: 1px solid $color-light-gray;
       border-right: none;
       border-left: none;
-    }
-  }
-
-  &__image {
-    height: 213px;
-    width: 100%;
-
-    @include respond-to('mobile') {
-      height: 154px;
-    }
-  }
-
-  &__title {
-    margin: 0;
-    padding: 22px 30px 50px;
-    font-size: 18px;
-    text-align: center;
-    font-weight: 900;
-    font-family: $NerisBlack;
-
-    @include respond-to('tablet') {
-      padding: 15px 0 13px;
-      font-size: 16px;
-      text-align: left;
-      line-height: 20px;
-    }
-  }
-
-  &__text {
-    position: absolute;
-    right: 0;
-    top: 16px;
-    color: $color-white;
-    font-size: 13px;
-    width: 101px;
-    height: 20px;
-    padding-left: 10px;
-    background-color: #1aa4b8;
-    font-weight: 300;
-    font-family: $NerisLight;
-    text-align: left;
-
-    @include respond-to('mobile') {
-      font-size: 12px;
-      top: 134px;
-      left: 0;
-    }
-
-    &:nth-of-type(2) {
-      top: 46px;
-
-      @include respond-to('mobile') {
-        display: none;
-      }
     }
   }
 }

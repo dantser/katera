@@ -80,6 +80,7 @@ $articles-grid__margin: 30px;
   }
 
   &_4 {
+
     .articles-grid__col-1 {
       @include articles-grid__col2(1);
     }

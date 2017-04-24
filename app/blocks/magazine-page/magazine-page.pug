@@ -5,6 +5,7 @@ include ../button/button
 include ../banner/banner
 include ../text/text
 include ../sale-preview-item/sale-preview-item
+include ../extra-articles/extra-articles
 
 mixin magazine-page()
   +b.magazine-page&attributes(attributes)
@@ -116,3 +117,6 @@ mixin magazine-page()
                 +sale-preview-item(getData('sale-preview-item'))
               +e.item
                 +sale-preview-item(getData('sale-preview-item'))
+
+        +e.extra-articles
+          +extra-articles('Другие статьи')

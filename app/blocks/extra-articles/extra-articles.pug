@@ -1,12 +1,12 @@
-include ../tag-content/tag
+include ../article-preview/article-preview
+include ../button/button
 
-mixin extra-articles(title, data)
+mixin extra-articles(title)
   +b.extra-articles&attributes(attributes)
     +e.H2.header= title
     +e.article
-      each item in data
-        +e.A(href=item.path).item 
-          +e.IMG(src=item.img).image
-          +e.H3.title= item.title
-            each tag in item.tag
-              +tag(tag)
+      - for (var i = 0; i < 8; i++)
+        +e.item
+          +article-preview(getData('article-preview_title-under-img'))._title-under-img
+    +e.button
+      +button()._rounded._kind_red Показать еще
