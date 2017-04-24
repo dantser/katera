@@ -1,0 +1,68 @@
+$articles-grid__col-basic-height: 295px;
+$articles-grid__margin: 30px;
+
+@mixin article-grid__col($cells) {
+  width: calc(#{$cells}*33% - #{$articles-grid__margin}*0.5);
+
+  &_is-inline { /*является элементом верт. группы*/
+    width: 100%;
+  }
+
+  &_height-1 {
+    height: $articles-grid__col-basic-height;
+  }
+
+  &_height-2 {
+    height: $articles-grid__col-basic-height*2+$articles-grid__margin
+  }
+
+  &_height-3 {
+    height: $articles-grid__col-basic-height*3+$articles-grid__margin*2
+  }
+}
+
+.articles-grid {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+
+  &__h-group {  /*гориз. область внутри другой области*/
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: $articles-grid__margin;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_is-inline { /*является элементом гориз. группы*/
+      & > *:not(:last-child) {
+        margin-right: $articles-grid__margin;
+      }
+    }
+  }
+
+  &__v-group {  /*верт. область внутри другой области*/
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+
+    & > *:not(:last-child) {
+      margin-bottom: $articles-grid__margin;
+    }
+  }
+
+  &__col-1 {  /*верт. область - колонка 33%*/
+    @include articles-grid__col(1);
+  }
+
+  &__col-2 {  /*верт. область - колонка 66%*/
+    @include articles-grid__col(2);
+  }
+
+  &__col-3 {  /*верт. область - колонка 99%*/
+    @include articles-grid__col(3);
+  }
+}

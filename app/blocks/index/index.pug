@@ -1,11 +1,64 @@
 include ../header/header
+include ../article-preview/articles-grid
 include ../article-preview/article-preview
 
 mixin index()
   +b.index&attributes(attributes)
     +header()
     //- файл test-article-preview.json находится в app/data/test-article-preview.json
-    +e('div')(style='width: 30%; position: relative')
-      +article-preview(getData('test-article-preview'))
-      +article-preview(getData('test-article-preview'))(class='_overlay')
+    +e('div')(style='width: 70%')
+
+      +b('h1') Top grid
+
+      +articles-grid()
+
+        +e('div').h-group
+          +e('div').col-2._height-1
+            +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+          +e('div').col-1._height-1
+            +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
+        +e('div').h-group
+          +e('div').col-2._height-2
+            +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+          +e('div').col-1._height-2
+            +e('div').v-group
+              +e('div').col-1._height-1._is-inline
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+              +e('div').col-1._height-1._is-inline
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+        +e('div').h-group
+          +e('div').col-1._height-1
+            +article-preview(getData('article-preview_title-under-img'))._title-under-img
+          +e('div').col-2._height-1
+            +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
+      +b('h1') Bottom grid
+
+      +articles-grid()
+
+        +e('div').h-group
+          +e('div').col-2._height-3
+            +e('div').v-group
+              +e('div').col-2._height-2._is-inline
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+              +e('div').h-group._is-inline
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+          +e('div').col-1._height-3
+            +e('div').v-group
+              +e('div').col-1._height-1._is-inline
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+              +e('div').col-1._height-2._is-inline
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
+        +e('div').h-group
+          +e('div').col-2._height-1
+            +article-preview(getData('article-preview_title-under-img'))._title-inside-img
+          +e('div').col-1._height-1
+            +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
+
 
