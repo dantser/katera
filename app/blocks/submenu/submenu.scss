@@ -11,6 +11,17 @@
   border-left: 0;
   border-right: 0;
 
+  &_vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .division {
+      padding-left: 30px;
+      font-size: rem(20px);
+    }
+  }
+
   &__title {
     padding: 13px 0;
   }
