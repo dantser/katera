@@ -39,7 +39,6 @@
     }
 
     @include respond-to('mobile') {
-
       border: 1px solid $color-light-gray;
       border-right: none;
       border-left: none;
@@ -71,15 +70,19 @@
     }
   }
 
-  &__tags {
+  &__text {
     position: absolute;
     right: 0;
     top: 16px;
     color: $color-white;
+    font-size: 13px;
     width: 101px;
     height: 20px;
     padding-left: 10px;
     background-color: #1aa4b8;
+    font-weight: 300;
+    font-family: $NerisLight;
+    text-align: left;
 
     @include respond-to('mobile') {
       font-size: 12px;
@@ -88,7 +91,7 @@
     }
 
     &:nth-of-type(2) {
-      top: 36px;
+      top: 46px;
 
       @include respond-to('mobile') {
         display: none;

@@ -1,3 +1,5 @@
+include ../tag-content/tag
+
 mixin extra-articles(title, data)
   +b.extra-articles&attributes(attributes)
     +e.H2.header= title
@@ -6,6 +8,5 @@ mixin extra-articles(title, data)
         +e.A(href=item.path).item 
           +e.IMG(src=item.img).image
           +e.H3.title= item.title
-          +e.SPAN.tags
             each tag in item.tag
-              +e.SPAN.tag= tag
+              +tag(tag)
