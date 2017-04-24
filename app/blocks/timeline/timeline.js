@@ -17,5 +17,7 @@ export default () => {
         slidesPerView: 1,
       },
     },
+    nextButton: '.timeline__next',
+    prevButton: '.timeline__prev',
   });
 };
