@@ -6,6 +6,7 @@ include ../banner-big/banner-big
 include ../article-preview/articles-grid
 include ../article-preview/article-preview
 include ../button/button
+include ../banner/banner
 
 mixin magazine()
   +b.magazine&attributes(attributes)
@@ -14,7 +15,7 @@ mixin magazine()
       +main-container().main-container_shadow
         +submenu(getData('submenu'))
         +e.content
-          +articles-grid()
+          +articles-grid()._4
 
             +e.h-group
               +e.col-2._height-1
@@ -22,7 +23,7 @@ mixin magazine()
               +e.col-1._height-1
                 +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
               +e.col-1._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                +banner('#', 'assets/images/banner2.jpg')
 
             +e.h-group
               +e.col-2._height-2
@@ -38,11 +39,11 @@ mixin magazine()
                   +e.col-1._height-1._is-inline
                     +article-preview(getData('article-preview_title-under-img'))._title-under-img
                   +e.col-1._height-1._is-inline
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                    +banner('#', 'assets/images/banner2.jpg')
 
             +e.h-group
               +e.col-1._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                +banner('#', 'assets/images/banner2.jpg')
               +e.col-2._height-1
                 +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
               +e.col-1._height-1
@@ -50,7 +51,7 @@ mixin magazine()
 
           +banner-big().__big-banner
 
-          +articles-grid()
+          +articles-grid()._4
 
             +e.h-group
 
@@ -60,7 +61,7 @@ mixin magazine()
                     +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
                 +e.v-group
                   +e.col-1._height-1._is-inline
-                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                    +banner('#', 'assets/images/banner2.jpg')
                   +e.col-1._height-2._is-inline
                     +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
 

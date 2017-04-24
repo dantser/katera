@@ -21,6 +21,30 @@ $articles-grid__margin: 30px;
   }
 }
 
+@mixin articles-grid__col2($cells) {
+  width: calc(#{$cells} * 25% - #{$articles-grid__margin} * .5);
+
+  &_is-inline { /* является элементом верт. группы */
+    width: 100%;
+  }
+
+  &_height-1 {
+    height: $articles-grid__col-basic-height;
+  }
+
+  &_height-2 {
+    height: $articles-grid__col-basic-height*2+$articles-grid__margin;
+  }
+
+  &_height-3 {
+    height: $articles-grid__col-basic-height*3+$articles-grid__margin*2;
+  }
+
+  &_height-4 {
+    height: $articles-grid__col-basic-height*3+$articles-grid__margin*2;
+  }
+}
+
 .articles-grid {
   display: flex;
   flex-flow: column nowrap;
@@ -55,15 +79,33 @@ $articles-grid__margin: 30px;
     }
   }
 
-  &__col-1 {  /* верт. область - колонка 33% */
+  &_4 {
+    .articles-grid__col-1 {
+      @include articles-grid__col2(1);
+    }
+
+    .articles-grid__col-2 {
+      @include articles-grid__col2(2);
+    }
+
+    .articles-grid__col-3 {
+      @include articles-grid__col2(3);
+    }
+
+    .articles-grid__col-4 {
+      @include articles-grid__col2(4);
+    }
+  }
+
+  &__col-1 {  /* верт. область - колонка 25% */
     @include articles-grid__col(1);
   }
 
-  &__col-2 {  /* верт. область - колонка 66% */
+  &__col-2 {  /* верт. область - колонка 50% */
     @include articles-grid__col(2);
   }
 
-  &__col-3 {  /* верт. область - колонка 99% */
+  &__col-3 {  /* верт. область - колонка 75% */
     @include articles-grid__col(3);
   }
 }
