@@ -1,0 +1,25 @@
+.catalog-filter {
+  background-color: $color-white;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 0 30px;
+  width: 100%;
+
+  @include respond-to('laptop') {
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-between;
+    min-height: 94px;
+    align-items: center;
+  }
+
+  &__item {
+    width: 270px;
+    height: 40px;
+
+    @include respond-to('laptop') {
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+}
