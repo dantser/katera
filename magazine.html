@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Катера.RU - Главная</title>
+    <title>Катера.RU - Журнал</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
@@ -160,280 +160,69 @@
             </div>
         </div>
     </header>
-    <div class="index">
+    <div class="magazine">
         <div class="container">
-            <main class="main-container main-container_shadow index__main-container">
-                <div class="main-slider swiper-container">
-                    <div class="main-slider__swiper-pagination"></div>
-                    <div class="main-slider__wrapper swiper-wrapper">
-                        <div class="main-slider__slide swiper-slide">
-                            <div class="main-slider__overlay">
-                                <div class="main-slider__slide-text">Sunseeker 62 Predator, 2008
-                                    <span class="main-slider__price">980 000 €</span>
-                                </div>
-                            </div>
-                            <img class="main-slider__img" src="assets/images/yacht.jpg" alt="" role="presentation" />
-                        </div>
-                        <div class="main-slider__slide swiper-slide">
-                            <div class="main-slider__overlay">
-                                <div class="main-slider__slide-text">Sunseeker 62 Predator, 2008
-                                    <span class="main-slider__price">980 000 €</span>
-                                </div>
-                            </div>
-                            <img class="main-slider__img" src="assets/images/yacht.jpg" alt="" role="presentation" />
-                        </div>
-                    </div>
-                </div>
-                <div class="filter">
-                    <div class="filter__content" id="filterTab">
-                        <ul class="filter__control">
-                            <li>
-                                <li>
-                                    <a class="division division_arrow-left division_active filter__division" href="#filterTabs-1">Купить</a>
-                                </li>
-                            </li>
-                            <li>
-                                <li>
-                                    <a class="division division_arrow-left filter__division" href="#filterTabs-2">Арендовать</a>
-                                </li>
-                            </li>
-                        </ul>
-                        <form class="filter__items" id="filterTabs-1">
-                            <div class="filter__item filter__item_type">
-                                <div class="select js-select">
-                                    <select class="select__control js-select__control">
-                                        <option value="1">Тип яхты #1</option>
-                                        <option value="2">Тип яхты #2</option>
-                                        <option value="3">Тип яхты #3</option>
-                                    </select>
-                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                </div>
-                            </div>
-                            <div class="filter__item filter__item_model">
-                                <div class="select js-select">
-                                    <select class="select__control js-select__control">
-                                        <option value="1">Модель яхты #1</option>
-                                        <option value="2">Модель яхты #2</option>
-                                        <option value="3">Модель яхты #3</option>
-                                    </select>
-                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                </div>
-                            </div>
-                            <div class="filter__item filter__item_price">
-                                <span class="filter__price__text">Цена</span>
-                                <div class="filter__input">
-                                    <div class="text-field js-text-field">
-                                        <input class="text-field__control" type="text" name="price-from" value="" />
-                                        <span class="text-field__placeholder">от</span>
-                                        <div class="text-field__error-icon-wrapper">
-                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="filter__price__text">&#8212</span>
-                                <div class="filter__input">
-                                    <div class="text-field js-text-field">
-                                        <input class="text-field__control" type="text" name="price-to" value="" />
-                                        <span class="text-field__placeholder">до</span>
-                                        <div class="text-field__error-icon-wrapper">
-                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter__currency">
-                                    <span class="filter__currency__item">
-                                        <svg class="filter__icon filter__icon_type_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                    </span>
-                                    <svg class="filter__icon filter__icon_type_chevron"><use xlink:href="assets/images/icon.svg#icon_chevron"></use></svg>
-                                </div>
-                            </div>
-                            <div class="filter__item filter__item_vendor">
-                                <div class="select js-select">
-                                    <select class="select__control js-select__control">
-                                        <option value="1">Верфь #1</option>
-                                        <option value="2">Верфь #2</option>
-                                        <option value="3">Верфь #3</option>
-                                    </select>
-                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                </div>
-                            </div>
-                            <div class="filter__item filter__item_range"></div>
-                            <div class="filter__item filter__item_search">
-                                <button class="button button_kind_red filter__button">Найти</button>
-                                <a class="filter__link" href="#">Расширенный фильтр</a>
-                            </div>
-                        </form>
-                        <form class="filter__items" id="filterTabs-2">
-                            <div class="filter__item filter__item_type">
-                                <div class="select js-select">
-                                    <select class="select__control js-select__control">
-                                        <option value="1">Тип яхты #1</option>
-                                        <option value="2">Тип яхты #2</option>
-                                        <option value="3">Тип яхты #3</option>
-                                    </select>
-                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                </div>
-                            </div>
-                            <div class="filter__item filter__item_model">
-                                <div class="select js-select">
-                                    <select class="select__control js-select__control">
-                                        <option value="1">Модель яхты #1</option>
-                                        <option value="2">Модель яхты #2</option>
-                                        <option value="3">Модель яхты #3</option>
-                                    </select>
-                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                </div>
-                            </div>
-                            <div class="filter__item filter__item_price">
-                                <span class="filter__price__text">Цена</span>
-                                <div class="filter__input">
-                                    <div class="text-field js-text-field">
-                                        <input class="text-field__control" type="text" name="price-from" value="" />
-                                        <span class="text-field__placeholder">от</span>
-                                        <div class="text-field__error-icon-wrapper">
-                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="filter__price__text">&#8212</span>
-                                <div class="filter__input">
-                                    <div class="text-field js-text-field">
-                                        <input class="text-field__control" type="text" name="price-to" value="" />
-                                        <span class="text-field__placeholder">до</span>
-                                        <div class="text-field__error-icon-wrapper">
-                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter__currency">
-                                    <span class="filter__currency__item">
-                                        <svg class="filter__icon filter__icon_type_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                    </span>
-                                    <svg class="filter__icon filter__icon_type_chevron"><use xlink:href="assets/images/icon.svg#icon_chevron"></use></svg>
-                                </div>
-                            </div>
-                            <div class="filter__item filter__item_vendor">
-                                <div class="select js-select">
-                                    <select class="select__control js-select__control">
-                                        <option value="1">Верфь #1</option>
-                                        <option value="2">Верфь #2</option>
-                                        <option value="3">Верфь #3</option>
-                                    </select>
-                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                </div>
-                            </div>
-                            <div class="filter__item filter__item_range"></div>
-                            <div class="filter__item filter__item_search">
-                                <button class="button button_kind_red filter__button">Найти</button>
-                                <a class="filter__link" href="#">Расширенный фильтр</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="index__sidebar">
-                    <div class="yacht-preview-widget">
-                        <div class="small-article-preview">
-                            <span class="division division_active division_arrow-left">Яхты в продаже</span>
-                            <div class="yacht-preview-widget__products">
-                                <a class="product-preview yacht-preview-widget__product" href="#">
-                                    <span class="product-preview__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/yacht.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="product-text">
-                                        <span class="product-text__info">2008 г., 80 м</span>
-                                        <span class="product-text__name">Amel 54</span>
-                                        <span class="product-text__price">2 000 000 Р</span>
-                                    </span>
-                                </a>
-                                <a class="product-preview yacht-preview-widget__product" href="#">
-                                    <span class="product-preview__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/yacht.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="product-text">
-                                        <span class="product-text__info">2008 г., 80 м</span>
-                                        <span class="product-text__name">Art of Kinetik</span>
-                                        <span class="product-text__price">4 250 000 Р</span>
-                                    </span>
-                                </a>
-                                <a class="product-preview yacht-preview-widget__product" href="#">
-                                    <span class="product-preview__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/yacht.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="product-text">
-                                        <span class="product-text__info">2008 г., 80 м</span>
-                                        <span class="product-text__name">Amel 54</span>
-                                        <span class="product-text__price">2 000 000 Р</span>
-                                    </span>
-                                </a>
-                                <a class="product-preview yacht-preview-widget__product" href="#">
-                                    <span class="product-preview__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/yacht.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="product-text">
-                                        <span class="product-text__info">2008 г., 80 м</span>
-                                        <span class="product-text__name">Art of Kinetik</span>
-                                        <span class="product-text__price">4 250 000 Р</span>
-                                    </span>
-                                </a>
-                                <a class="product-preview yacht-preview-widget__product" href="#">
-                                    <span class="product-preview__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/yacht.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="product-text">
-                                        <span class="product-text__info">2008 г., 80 м</span>
-                                        <span class="product-text__name">Amel 54</span>
-                                        <span class="product-text__price">2 000 000 Р</span>
-                                    </span>
-                                </a>
-                                <a class="product-preview yacht-preview-widget__product" href="#">
-                                    <span class="product-preview__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/yacht.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="product-text">
-                                        <span class="product-text__info">2008 г., 80 м</span>
-                                        <span class="product-text__name">Art of Kinetik</span>
-                                        <span class="product-text__price">4 250 000 Р</span>
-                                    </span>
-                                </a>
-                                <a class="product-preview yacht-preview-widget__product" href="#">
-                                    <span class="product-preview__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/yacht.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="product-text">
-                                        <span class="product-text__info">2008 г., 80 м</span>
-                                        <span class="product-text__name">Amel 54</span>
-                                        <span class="product-text__price">2 000 000 Р</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="yacht-preview-widget__button">
-                                <a class="button button_rounded button_kind_red" href="#">Смотреть все</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="index__content">
-                    <div class="articles-grid">
+            <div class="page-header">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Журнад</a>
+                    </li>
+                </ul>
+                <h2 class="page-header__title">Журнал</h2>
+            </div>
+            <main class="main-container main-container_shadow">
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division division_active submenu__title">Все</span>
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division submenu__title">Новинки</span>
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division submenu__title">Новости</span>
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division submenu__title">Яхтинг в России</span>
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division submenu__title">Море</span>
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division submenu__title">Путешествия</span>
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division submenu__title">Активный отдых</span>
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division submenu__title">Рыбалка</span>
+                        </a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">
+                            <span class="division submenu__title">Видео-обзоры</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="magazine__content">
+                    <div class="articles-grid articles-grid_4">
                         <div class="articles-grid__h-group">
                             <div class="articles-grid__col-2 articles-grid__col-2_height-1">
                                 <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
@@ -470,6 +259,16 @@
                                         <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
                                     </div>
                                 </article>
+                            </div>
+                            <div class="articles-grid__col-1 articles-grid__col-1_height-1">
+                                <a class="banner" href="#">
+                                    <div class="banner__image">
+                                        <div class="image-bg">
+                                            <img class="image-bg__img" alt="" src="assets/images/banner2.jpg" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="banner__content"></div>
+                                </a>
                             </div>
                         </div>
                         <div class="articles-grid__h-group">
@@ -531,25 +330,49 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="articles-grid__col-1 articles-grid__col-1_height-2">
+                                <div class="articles-grid__v-group">
+                                    <div class="articles-grid__col-1 articles-grid__col-1_height-1 articles-grid__col-1_is-inline">
+                                        <article class="article-preview article-preview_color_dark-blue article-preview_title-under-img">
+                                            <a class="article-preview__link" href="#art-main"></a>
+                                            <div class="article-preview__picture">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
+                                                </div>
+                                                <div class="tag-content article-preview__tags">
+                                                    <a class="tag-content__text tag-content__text_color_blue" href="art-tag1">Мероприятия</a>
+                                                    <a class="tag-content__text tag-content__text_color_red" href="art-tag2">События</a>
+                                                </div>
+                                            </div>
+                                            <div class="article-preview__text">
+                                                <p class="article-preview__category">Яхта</p>
+                                                <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="articles-grid__col-1 articles-grid__col-1_height-1 articles-grid__col-1_is-inline">
+                                        <a class="banner" href="#">
+                                            <div class="banner__image">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/banner2.jpg" role="presentation" />
+                                                </div>
+                                            </div>
+                                            <div class="banner__content"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="articles-grid__h-group">
                             <div class="articles-grid__col-1 articles-grid__col-1_height-1">
-                                <article class="article-preview article-preview_color_dark-blue article-preview_title-under-img">
-                                    <a class="article-preview__link" href="#art-main"></a>
-                                    <div class="article-preview__picture">
+                                <a class="banner" href="#">
+                                    <div class="banner__image">
                                         <div class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
-                                        </div>
-                                        <div class="tag-content article-preview__tags">
-                                            <a class="tag-content__text tag-content__text_color_blue" href="art-tag1">Мероприятия</a>
-                                            <a class="tag-content__text tag-content__text_color_red" href="art-tag2">События</a>
+                                            <img class="image-bg__img" alt="" src="assets/images/banner2.jpg" role="presentation" />
                                         </div>
                                     </div>
-                                    <div class="article-preview__text">
-                                        <p class="article-preview__category">Яхта</p>
-                                        <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
-                                    </div>
-                                </article>
+                                    <div class="banner__content"></div>
+                                </a>
                             </div>
                             <div class="articles-grid__col-2 articles-grid__col-2_height-1">
                                 <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
@@ -569,23 +392,89 @@
                                     </div>
                                 </article>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="banner-big index__big-banner">
-                    <a class="banner" href="#">
-                        <div class="banner__image banner__image_overlay">
-                            <div class="image-bg">
-                                <img class="image-bg__img" alt="" src="assets/images/banner-big.jpg" role="presentation" />
+                            <div class="articles-grid__col-1 articles-grid__col-1_height-1">
+                                <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
+                                    <a class="article-preview__link" href="#art-main"></a>
+                                    <div class="article-preview__picture">
+                                        <div class="image-bg">
+                                            <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
+                                        </div>
+                                        <div class="tag-content article-preview__tags">
+                                            <a class="tag-content__text tag-content__text_color_blue" href="#art-tag1">Мероприятия</a>
+                                            <a class="tag-content__text tag-content__text_color_red" href="#art-tag2">События</a>
+                                        </div>
+                                    </div>
+                                    <div class="article-preview__text">
+                                        <p class="article-preview__category">Яхта</p>
+                                        <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
+                                    </div>
+                                </article>
                             </div>
                         </div>
-                        <div class="banner__content"></div>
-                    </a>
-                </div>
-                <div class="index__content">
-                    <div class="articles-grid">
+                    </div>
+                    <div class="banner-big magazine__big-banner">
+                        <a class="banner" href="#">
+                            <div class="banner__image banner__image_overlay">
+                                <div class="image-bg">
+                                    <img class="image-bg__img" alt="" src="assets/images/banner-big.jpg" role="presentation" />
+                                </div>
+                            </div>
+                            <div class="banner__content"></div>
+                        </a>
+                    </div>
+                    <div class="articles-grid articles-grid_4">
                         <div class="articles-grid__h-group">
-                            <div class="articles-grid__col-2 articles-grid__col-2_height-3">
+                            <div class="articles-grid__col-1 articles-grid__col-1_height-4">
+                                <div class="articles-grid__v-group">
+                                    <div class="articles-grid__col-1 articles-grid__col-1_height-1 articles-grid__col-1_is-inline">
+                                        <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
+                                            <a class="article-preview__link" href="#art-main"></a>
+                                            <div class="article-preview__picture">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
+                                                </div>
+                                                <div class="tag-content article-preview__tags">
+                                                    <a class="tag-content__text tag-content__text_color_blue" href="#art-tag1">Мероприятия</a>
+                                                    <a class="tag-content__text tag-content__text_color_red" href="#art-tag2">События</a>
+                                                </div>
+                                            </div>
+                                            <div class="article-preview__text">
+                                                <p class="article-preview__category">Яхта</p>
+                                                <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="articles-grid__col-1 articles-grid__col-1_height-1 articles-grid__col-1_is-inline">
+                                        <a class="banner" href="#">
+                                            <div class="banner__image">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/banner2.jpg" role="presentation" />
+                                                </div>
+                                            </div>
+                                            <div class="banner__content"></div>
+                                        </a>
+                                    </div>
+                                    <div class="articles-grid__col-1 articles-grid__col-1_height-2 articles-grid__col-1_is-inline">
+                                        <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
+                                            <a class="article-preview__link" href="#art-main"></a>
+                                            <div class="article-preview__picture">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
+                                                </div>
+                                                <div class="tag-content article-preview__tags">
+                                                    <a class="tag-content__text tag-content__text_color_blue" href="#art-tag1">Мероприятия</a>
+                                                    <a class="tag-content__text tag-content__text_color_red" href="#art-tag2">События</a>
+                                                </div>
+                                            </div>
+                                            <div class="article-preview__text">
+                                                <p class="article-preview__category">Яхта</p>
+                                                <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="articles-grid__col-2 articles-grid__col-2_height-4">
                                 <div class="articles-grid__v-group">
                                     <div class="articles-grid__col-2 articles-grid__col-2_height-2 articles-grid__col-2_is-inline">
                                         <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
@@ -639,9 +528,27 @@
                                             </div>
                                         </article>
                                     </div>
+                                    <div class="articles-grid__col-2 articles-grid__col-2_height-1 articles-grid__col-2_is-inline">
+                                        <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
+                                            <a class="article-preview__link" href="#art-main"></a>
+                                            <div class="article-preview__picture">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
+                                                </div>
+                                                <div class="tag-content article-preview__tags">
+                                                    <a class="tag-content__text tag-content__text_color_blue" href="#art-tag1">Мероприятия</a>
+                                                    <a class="tag-content__text tag-content__text_color_red" href="#art-tag2">События</a>
+                                                </div>
+                                            </div>
+                                            <div class="article-preview__text">
+                                                <p class="article-preview__category">Яхта</p>
+                                                <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
+                                            </div>
+                                        </article>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="articles-grid__col-1 articles-grid__col-1_height-3">
+                            <div class="articles-grid__col-1 articles-grid__col-1_height-4">
                                 <div class="articles-grid__v-group">
                                     <div class="articles-grid__col-1 articles-grid__col-1_height-1 articles-grid__col-1_is-inline">
                                         <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
@@ -679,89 +586,30 @@
                                             </div>
                                         </article>
                                     </div>
+                                    <div class="articles-grid__col-1 articles-grid__col-1_height-1 articles-grid__col-1_is-inline">
+                                        <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
+                                            <a class="article-preview__link" href="#art-main"></a>
+                                            <div class="article-preview__picture">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
+                                                </div>
+                                                <div class="tag-content article-preview__tags">
+                                                    <a class="tag-content__text tag-content__text_color_blue" href="#art-tag1">Мероприятия</a>
+                                                    <a class="tag-content__text tag-content__text_color_red" href="#art-tag2">События</a>
+                                                </div>
+                                            </div>
+                                            <div class="article-preview__text">
+                                                <p class="article-preview__category">Яхта</p>
+                                                <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
+                                            </div>
+                                        </article>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="articles-grid__h-group">
-                            <div class="articles-grid__col-2 articles-grid__col-2_height-1">
-                                <article class="article-preview article-preview_color_dark-blue article-preview_title-inside-img">
-                                    <a class="article-preview__link" href="#art-main"></a>
-                                    <div class="article-preview__picture">
-                                        <div class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
-                                        </div>
-                                        <div class="tag-content article-preview__tags">
-                                            <a class="tag-content__text tag-content__text_color_blue" href="art-tag1">Мероприятия</a>
-                                            <a class="tag-content__text tag-content__text_color_red" href="art-tag2">События</a>
-                                        </div>
-                                    </div>
-                                    <div class="article-preview__text">
-                                        <p class="article-preview__category">Яхта</p>
-                                        <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="articles-grid__col-1 articles-grid__col-1_height-1">
-                                <article class="article-preview article-preview_color_light-amber article-preview_title-inside-img">
-                                    <a class="article-preview__link" href="#art-main"></a>
-                                    <div class="article-preview__picture">
-                                        <div class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
-                                        </div>
-                                        <div class="tag-content article-preview__tags">
-                                            <a class="tag-content__text tag-content__text_color_blue" href="#art-tag1">Мероприятия</a>
-                                            <a class="tag-content__text tag-content__text_color_red" href="#art-tag2">События</a>
-                                        </div>
-                                    </div>
-                                    <div class="article-preview__text">
-                                        <p class="article-preview__category">Яхта</p>
-                                        <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
-                                    </div>
-                                </article>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="index__sidebar index__sidebar_right">
-                    <div class="topic-preview-widget">
-                        <div class="small-article-preview">
-                            <span class="division division_active division_arrow-right">Обсуждения в форуме</span>
-                            <div class="topic-preview-widget__topics">
-                                <div class="topic-preview topic-preview-widget__topic">
-                                    <span class="topic-preview__time">1 час 44 минуты назад</span>
-                                    <a class="topic-preview__link" href="#">Чартер лодки на Новый Год?</a>
-                                </div>
-                                <div class="topic-preview topic-preview-widget__topic">
-                                    <span class="topic-preview__time">19 часов 24 минуты назад</span>
-                                    <a class="topic-preview__link" href="#">Строительство корабля-музея &quot;Полтава&quot;</a>
-                                </div>
-                                <div class="topic-preview topic-preview-widget__topic">
-                                    <span class="topic-preview__time">1 час 44 минуты назад</span>
-                                    <a class="topic-preview__link" href="#">Чартер лодки на Новый Год?</a>
-                                </div>
-                                <div class="topic-preview topic-preview-widget__topic">
-                                    <span class="topic-preview__time">19 часов 24 минуты назад</span>
-                                    <a class="topic-preview__link" href="#">Строительство корабля-музея &quot;Полтава&quot;</a>
-                                </div>
-                                <div class="topic-preview topic-preview-widget__topic">
-                                    <span class="topic-preview__time">1 час 44 минуты назад</span>
-                                    <a class="topic-preview__link" href="#">Чартер лодки на Новый Год?</a>
-                                </div>
-                                <div class="topic-preview topic-preview-widget__topic">
-                                    <span class="topic-preview__time">19 часов 24 минуты назад</span>
-                                    <a class="topic-preview__link" href="#">Строительство корабля-музея &quot;Полтава&quot;</a>
-                                </div>
-                                <div class="topic-preview topic-preview-widget__topic">
-                                    <span class="topic-preview__time">1 час 44 минуты назад</span>
-                                    <a class="topic-preview__link" href="#">Чартер лодки на Новый Год?</a>
-                                </div>
-                            </div>
-                            <div class="topic-preview-widget__button">
-                                <a class="button button_rounded button_kind_red" href="#">Перейти в форум</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <button class="button button_rounded button_kind_red magazine__show-more">Показать еще</button>
             </main>
         </div>
     </div>
