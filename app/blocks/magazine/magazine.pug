@@ -1,0 +1,18 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../submenu/submenu
+include ../banner-big/banner-big
+include ../button/button
+
+mixin magazine()
+  +b.magazine&attributes(attributes)
+    +container()
+      +page-header('Журнал', ['Главная', 'Журнад'])
+      +main-container().main-container_shadow
+        +submenu(getData('submenu'))
+        +e.content
+          //- magazine content
+          +banner-big().__big-banner
+
+          +button()._rounded._kind_red.__show-more Показать еще
