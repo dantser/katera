@@ -1,3 +1,6 @@
+include ../header/header
+include ../article-preview/articles-grid
+include ../article-preview/article-preview
 include ../main-container/main-container
 include ../container/container
 include ../main-slider/main-slider
@@ -9,7 +12,6 @@ include ../yacht-preview-widget/yacht-preview-widget
 
 mixin index()
   +b.index&attributes(attributes)
-    +quote('Выжать из яхты максимум — это не просто добавить палубного пространства.')
     +container()
       +main-container().main-container_shadow.index__main-container
         +main-slider()
@@ -17,10 +19,56 @@ mixin index()
         +e.sidebar
           +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +e.content
-          //- index content
+          +articles-grid()
+
+            +e.h-group
+              +e.col-2._height-1
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+              +e.col-1._height-1
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
+            +e.h-group
+              +e.col-2._height-2
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+              +e.col-1._height-2
+                +e.v-group
+                  +e.col-1._height-1._is-inline
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  +e.col-1._height-1._is-inline
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+            +e.h-group
+              +e.col-1._height-1
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+              +e.col-2._height-1
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
         +banner-big().__big-banner
         +e.content
-          //- index content
+          +articles-grid()
+
+            +e.h-group
+              +e.col-2._height-3
+                +e.v-group
+                  +e.col-2._height-2._is-inline
+                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                  +e.h-group._is-inline
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+              +e.col-1._height-3
+                +e.v-group
+                  +e.col-1._height-1._is-inline
+                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                  +e.col-1._height-2._is-inline
+                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
+            +e.h-group
+              +e.col-2._height-1
+                +article-preview(getData('article-preview_title-under-img'))._title-inside-img
+              +e.col-1._height-1
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
         +e.sidebar._right
           +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
 
