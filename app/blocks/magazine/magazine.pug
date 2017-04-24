@@ -4,6 +4,8 @@ include ../page-header/page-header
 include ../submenu/submenu
 include ../banner-big/banner-big
 include ../button/button
+include ../text/text
+include ../verphe-contacts/verphe-contacts
 
 mixin magazine()
   +b.magazine&attributes(attributes)
@@ -16,3 +18,4 @@ mixin magazine()
           +banner-big().__big-banner
 
           +button()._rounded._kind_red.__show-more Показать еще
+      +verphe-contacts

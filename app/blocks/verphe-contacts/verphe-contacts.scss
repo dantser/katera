@@ -1,0 +1,127 @@
+.verphe-contacts-wrap {
+  max-width: 360px;
+  padding-bottom: 20px;
+
+  @include respond-to(tablet) {
+    max-width: 100%;
+  }
+
+  .verphe-contacts {
+    padding: 25px 25px 35px;
+    font-size: rem(16px);
+    color: $color-white;
+    font-family: $NerisLight;
+    list-style: none;
+    position: relative;
+
+    @include respond-to(tablet) {
+      padding: 55px 15px 90px;
+      font-size: rem(14px);
+    }
+
+    &__icon-close {
+      display: none;
+
+      @include respond-to(tablet) {
+        position: absolute;
+        display: block;
+        width: 18px;
+        height: 18px;
+        right: 20px;
+        top: 20px;
+        fill: $color-red;
+      }
+    }
+
+    .list__item {
+      margin: 0;
+      padding: 0 0 25px;
+
+      @include respond-to(tablet) {
+        display: flex;
+        align-items: center;
+        border: none;
+        padding: 0;
+      }
+    }
+
+    & > ul {
+      padding: 0;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    &__img-wrap {
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-white;
+      z-index: 1;
+      padding: 19px 68px 17px;
+    }
+
+    &__img {
+      width: 175px;
+      height: 75px;
+    }
+
+    &__title {
+      font-size: rem(30px);
+      margin-top: 18px;
+
+      @include respond-to(tablet) {
+        font-size: rem(20px);
+        margin-top: 45px;
+      }
+    }
+
+    &__email, &__tel {
+      display: flex;
+      margin-top: 14px;
+
+      ul {
+        padding: 0 0 0 7px;
+
+        & > li {
+          list-style: none;
+        }
+      }
+    }
+
+    &__country {
+      margin-top: 22px;
+
+      @include respond-to(tablet) {
+        display: none;
+      }
+    }
+
+    &__site {
+      color: $color-white;
+      margin-top: 13px;
+    }
+
+    .button {
+      position: absolute;
+      width: 152px;
+      height: 40px;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: -55px;
+
+      @include respond-to(tablet) {
+        position: relative;
+        width: 290px;
+        transform: none;
+        left: initial;
+        bottom: initial;
+        margin-top: 58px;
+      }
+    }
+  }
+}
