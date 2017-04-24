@@ -13,7 +13,7 @@ mixin article-preview(data)
     +e('a')(href= data.path).link
     +e('div').picture
       +image-bg()(src= data.image)
-      +tag-content()
+      +tag-content().__tags
         each tag in data.tags
           +tag(tag.title)(href= tag.path, class= tag.colorModifier)
     +e('div').text
