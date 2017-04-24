@@ -10,16 +10,34 @@
   &::before {
     position: absolute;
     content: '';
-    left: 0;
+    left: 12%;
     right: 0;
     top: 159px;
     height: 2px;
     background: $color-red;
     z-index: -1;
 
+    @include respond-to('laptop') {
+      left: 17%;
+    }
+
     @include respond-to('tablet') {
       display: none;
     }
+  }
+
+  &::after {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    right: 6px;
+    top: 145px;
+    position: absolute;
+    transform: rotate(45deg);
+    border-color: $color-red;
   }
 
   &__element {
