@@ -2,6 +2,7 @@
   max-width: 360px;
   padding-bottom: 20px;
   z-index: 10;
+  box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
 
   @include respond-to(tablet) {
     max-width: 100%;
