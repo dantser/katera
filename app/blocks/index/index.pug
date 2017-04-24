@@ -7,6 +7,7 @@ include ../filter/filter
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
 include ../submenu/submenu
+include ../video-preview/video-preview
 include ../sale-preview-item/sale-preview-item
 
 include ../text/text
@@ -14,7 +15,7 @@ include ../text/text
 mixin index()
   +b.index&attributes(attributes)
     +container()
-      +submenu(getData('submenu'))
+      +video-preview(getData('video-preview'))._col
       +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
       +main-container().main-container_shadow.index__main-container
         +main-slider()
