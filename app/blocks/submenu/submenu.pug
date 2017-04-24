@@ -1,13 +1,14 @@
 include ../division/division
 
-mixin submenu(data)
-  +b.submenu#mainTab
-    +e('ul').control
-      each item in data
-        +e('li').item
-          +e('a')(href=item.path).link
-            if item.active
-              +division(item.title)._active.__title
-              +icon('chevron').icon_type_chevron
-            else
-              +division(item.title).__title
+mixin submenu(data, isVertical)
+  - var verticalBlockModifier = isVertical ? 'submenu_vertical' : '';
+  - var verticalDivisionModifier = isVertical ? 'division_arrow-left' : '';
+
+  +b('ul')(class=verticalBlockModifier).submenu
+    each item in data
+      +e('li').item
+        +e('a')(href=item.path).link
+          if item.active
+            +division(item.title)(class=verticalDivisionModifier)._active.__title
+          else
+            +division(item.title)(class=verticalDivisionModifier).__title
