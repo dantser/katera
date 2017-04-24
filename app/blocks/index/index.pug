@@ -3,13 +3,14 @@ include ../container/container
 include ../main-slider/main-slider
 include ../banner-big/banner-big
 include ../filter/filter
-include ../quote/quote
+include ../timeline/timeline
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
 
 mixin index()
+  +container()
+    +timeline()
   +b.index&attributes(attributes)
-    +quote('Выжать из яхты максимум — это не просто добавить палубного пространства.')
     +container()
       +main-container().main-container_shadow.index__main-container
         +main-slider()

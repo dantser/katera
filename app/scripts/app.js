@@ -5,6 +5,7 @@ import searchBar from '../blocks/search-bar/search-bar';
 import mainSlider from '../blocks/main-slider/main-slider';
 import filter from '../blocks/filter/filter';
 import textField from '../blocks/text-field/text-field';
+import timeline from '../blocks/timeline/timeline';
 
 $(() => {
   burger();
@@ -13,4 +14,5 @@ $(() => {
   mainSlider();
   filter();
   textField();
+  timeline();
 });
