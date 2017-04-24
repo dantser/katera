@@ -1,9 +1,11 @@
 //- mark   --- Текст для "Отметка" пример: +comments-mark('Нравится', '')
 //- answer --- Текст для ввода даты пример: +comments-mark('', '1 декабря 2016г.')
+//-time    --- Время  пример: +comments-mark('4:36')
 
-mixin comments-mark(mark, answer)
-  +b.comments-mark
+mixin comments-mark(obj)
+  +b.comments-mark&attributes(attributes)
     +e('p').text Отметка
-    +e('span').icon_quotes= mark
+    +e('span').icon_quotes=  obj.text
     +e('p').text_dot Ответить
-    +e('span').icon_color= answer
+    +e('span').icon_color=  obj.date
+    +e('span').icon_time=  obj.time

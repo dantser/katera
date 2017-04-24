@@ -1,13 +1,20 @@
 .comments {
-  border-top: 1px solid #e5e5e5;
-  width: 100%;
-  display: flex;
-  padding: 10px 0 16px;
 
-  &_left {
-    padding-left: 73px;
+  &__item {
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 0 0 73px;
+    margin-top: 16px;
+    display: flex;
 
     @media (max-width: 600px) {
+      padding: 10px 0 0;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
       padding-left: 0;
     }
   }
@@ -34,6 +41,9 @@
 
   &__right {
     margin-left: 14px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   &__box {
@@ -80,5 +90,13 @@
     @media (max-width: 600px) {
       max-width: 100%;
     }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-family: $NerisLight;
+    color: rgb(19, 11, 89);
+    text-decoration: underline;
+    cursor: pointer;
   }
 }

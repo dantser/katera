@@ -2,16 +2,23 @@
 //- name   --- ФИО пример: +comments('Мария Головина')
 //- answer --- Ответ на комментарий пример: +comments('ответил Марии')
 //- text   --- Текс комментария пример: +comments('Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.')
-//- модификатор comments_left добавляет padding-left
+//- модификатор _left добавляет padding-left
 
-mixin comments(image, name, answer, text)
-  +b.comments&attributes(attributes)
-    +e.left
-      +e('img')(src=image alt='').img
-    +e.right
-      +e.box
-        +e('h3').fio= name
-        +e('span').answer= answer
-      +e('p').text= text
-      block
+mixin comments(data)
+  +b.comments
+    each comment in data.comments
+      +e.item
+        +e.left
+          +e('img')(src= comment.image alt='').img
+        +e.right
+          +e.box
+            +e('h4').fio=  comment.name
+            +e('span').answer=  comment.answer
+          +e('p').text=  comment.text
+          +comments-mark(comment.mark)
 
+    +e.item
+      +e.left
+        +e('img')(src= data.images alt='').img
+      +e.right
+        +e('a').link Добавить комментарий
