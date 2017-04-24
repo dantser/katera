@@ -1,5 +1,5 @@
 include ../banner/banner
 
 mixin banner-big()
-  +b.banner-big
+  +b.banner-big&attributes(attributes)
     +banner('#', src='assets/images/banner-big.jpg')._overlay

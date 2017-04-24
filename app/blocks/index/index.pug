@@ -3,9 +3,6 @@ include ../container/container
 include ../main-slider/main-slider
 include ../banner-big/banner-big
 include ../page-header/page-header
-include ../comments-container/comments-container
-include ../comments/comments
-include ../comments-mark/comments-mark
 include ../filter/filter
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
@@ -40,5 +37,3 @@ mixin index()
         +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
         +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +banner-big()
-        +comments-container()
-          +comments(getData('comments'))
