@@ -4,6 +4,10 @@
   margin-top: 30px;
   margin-bottom: 30px;
 
+  @include respond-to('mobile') {
+    margin-bottom: 0;
+  }
+
   &__content {
     display: flex;
     padding: 31px 0 30px;
