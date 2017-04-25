@@ -18,15 +18,15 @@
 
   &__duration {
     font-size: 13px;
-    line-height: (22/13)*1em;
-    font-weight: 300;
+    line-height: 18px;
+    font-family: $NerisLight;
     color: $color-gray;
   }
 
   &__title {
     font-size: 14px;
-    line-height: (22/14)*1em;
-    font-weight: 900;
+    line-height: 18px;
+    font-family: $NerisBlack;
     color: $color-black;
   }
 
