@@ -83,7 +83,7 @@
     margin-bottom: 33px;
 
     @include respond-to('tablet') {
-      padding-right: 25px;
+      padding-right: 10px;
     }
 
     h2 {
@@ -109,9 +109,17 @@
   &__share {
     padding-top: 20px;
     border-top: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+      padding-right: 10px;
+    }
   }
 
   &__tags {
     margin-bottom: 20px;
+
+    @include respond-to('tablet') {
+      padding-right: 10px;
+    }
   }
 }

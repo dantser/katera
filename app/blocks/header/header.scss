@@ -51,6 +51,9 @@
     &_right {
       flex: 1;
       margin-left: 30px;
+      @include respond-to('mobile') {
+        margin-left: 0;
+      }
     }
   }
 
@@ -110,6 +113,11 @@
     margin-left: 19px;
     width: 165px;
     height: 35px;
+
+    @include respond-to('mobile') {
+      font-size: 12px;
+      width: 137px;
+    }
   }
 
   &__search-bar {
