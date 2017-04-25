@@ -19,15 +19,14 @@ include ../navbar/navbar
 mixin index()
   +b.index&attributes(attributes)
     +container()
-      +submenu(getData('submenu'))
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()
+        +navbar(getData('navbar'))
         +e.sidebar
           +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +e.content
           +articles-grid()
-
             +e.h-group
               +e.col-2._height-1
                 +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
@@ -51,6 +50,7 @@ mixin index()
                 +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
 
         +banner-big().__big-banner
+          +e('img')(src='assets/images/banner-img.png').little
         +e.content
           +articles-grid()
 

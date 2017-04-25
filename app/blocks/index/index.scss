@@ -28,6 +28,10 @@
     margin-top: 30px;
     display: block;
     width: 847px;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
   }
 
   &__big-banner {
@@ -35,7 +39,7 @@
   }
 
   .filter {
-    @include respond-to('tablet') {
+    @include respond-to('laptop') {
       width: 100%;
     }
   }
@@ -53,7 +57,13 @@
   }
 
   .yacht-preview-widget {
-    @include respond-to('tablet') {
+    @include respond-to('laptop') {
+      display: none;
+    }
+  }
+
+  .small-article-preview {
+    @include respond-to('laptop') {
       display: none;
     }
   }
@@ -103,9 +113,17 @@
     }
   }
 
-  .branding, .branding__top {
-    @include respond-to('tablet') {
-      top: -35px;
+  .main-container {
+
+    .navbar {
+      padding: 0 15px;
+      display: none;
+      @include respond-to('mobile') {
+        display: block;
+      }
+    }
+    .navbar__item:not(:last-child) {
+      border-right: none;
     }
   }
 }
