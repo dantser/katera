@@ -9,6 +9,13 @@ $big-border: 12px solid $color-red;
   display: inline-block;
   color: $color-gray;
   position: relative;
+  opacity: 1;
+  will-change: opacity;
+  transition: opacity .25s ease-in-out;
+
+  &:hover {
+    opacity: .75;
+  }
 
   &_active {
     font-family: $NerisBlack;

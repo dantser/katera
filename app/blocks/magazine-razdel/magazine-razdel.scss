@@ -13,6 +13,17 @@
     flex-flow: row wrap;
     flex: 1;
     padding-bottom: 62px;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+
+      .article-preview {
+        height: auto;
+      }
+      .article-preview__title {
+        text-align: left;
+      }
+    }
   }
 
   &__sidebar {
@@ -26,6 +37,10 @@
     display: block;
     width: 100%;
     height: 293px;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
   }
 
   &__list {
@@ -53,6 +68,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 17px;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -66,6 +86,43 @@
     .tag-content {
       top: 16px;
     }
+
+    @include respond-to('tablet') {
+      box-sizing: border-box;
+      border-bottom: 1px solid $color-light-gray;
+
+      .tag-content__text + .tag-content__text {
+        margin-top: -20px;
+        margin-left: 109px;
+      }
+
+      .image-bg {
+        display: none;
+      }
+
+      .article-preview__picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 35px;
+      }
+
+      .article-preview__text {
+        padding: 42px 15px 6px;
+        font-family: $NerisSemiBold;
+        font-size: 15px;
+      }
+
+      .tag-content {
+        top: 13px;
+        left: 15px;
+
+        &__text {
+          width: 101px;
+        }
+      }
+    }
   }
 
   &__show-more {
@@ -76,5 +133,10 @@
 	  margin-top: -39px;
 	  z-index: 2;
     padding: 0 6px 4px 8px;
+
+    @include respond-to('tablet') {
+      margin: 26px 15px -26px;
+      padding-left: 7px;
+    }
   }
 }

@@ -13,6 +13,16 @@
   font-size: 13px;
   line-height: (30/13)*1em;
 
+  a {
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
+  }
+
+  a:hover {
+    opacity: .75;
+  }
+
   &__header a {
     color: $color-white;
     font-weight: 600;

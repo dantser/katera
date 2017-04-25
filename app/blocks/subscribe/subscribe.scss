@@ -39,7 +39,7 @@
     flex-direction: row;
   }
 
-  &__input,&__btn {
+  &__input, &__btn {
     font-family: inherit;
     background-color: transparent;
     border: 0;
@@ -92,6 +92,13 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 13px;
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
+
+    &:hover {
+      opacity: .75;
+    }
 
     @include respond-to('tablet') {
       font-size: 0;
