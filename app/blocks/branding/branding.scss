@@ -5,13 +5,6 @@
   min-height: 100%;
   background-image: linear-gradient(to bottom, #3f4e5b, #537787);
 
-  .container {
-    display: flex;
-    position: relative;
-    height: 100%;
-    z-index: 50;
-  }
-
   &__top {
     position: relative;
     top: 0;
@@ -19,7 +12,14 @@
     display: block;
     width: 100%;
 
-    &_index {
+    .container {
+      display: flex;
+      position: relative;
+      height: 100%;
+      z-index: 50;
+    }
+
+    &_index, &_magazine {
       height: 515px;
 
       @include respond-to('laptop') {
@@ -126,7 +126,7 @@
     width: 100%;
     z-index: 15;
 
-    &_index {
+    &_index, &_magazine {
       height: 150px;
 
       .branding__image {

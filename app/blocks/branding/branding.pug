@@ -26,3 +26,26 @@ mixin branding(page)
       +e.bottom._index
         +e.image
           +image-bg()(src='assets/images/branding/main-bottom.png')
+
+    if (page === 'magazine')
+      +e.top._magazine
+        +e.image
+          +image-bg()(src='assets/images/branding/main-top.png')
+
+        +container()
+
+          +e.logo
+            +image-bg()(src='assets/images/branding/logo.png')
+
+          +e.text Запомни путешествие в деталях
+
+          +e.scroll-btn
+            +icon('caret').caret
+            +icon('caret').caret
+
+      +e.content
+        block
+
+      +e.bottom._magazine
+        +e.image
+          +image-bg()(src='assets/images/branding/main-bottom.png')
