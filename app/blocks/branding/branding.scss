@@ -49,10 +49,6 @@
         &__text {
           display: none;
         }
-
-        &__logo {
-          right: 15px;
-        }
       }
     }
 
@@ -97,6 +93,10 @@
         z-index: 15;
         height: 832px;
 
+        .image-bg__img {
+          top: -220px;
+        }
+
         @include respond-to('laptop') {
           height: 100%;
 
@@ -139,7 +139,7 @@
   &__logo {
     position: absolute;
     top: 27px;
-    right: 0;
+    right: 15px;
     width: 103px;
     height: 115px;
     pointer-events: none;
