@@ -29,11 +29,18 @@
     right: 0;
     bottom: 0;
     margin: auto;
+    text-align: center;
 
     &_img {
       height: 100%;
       z-index: -1;
       opacity: .52;
     }
+  }
+
+  &__little {
+    height: 100%;
+    position: relative;
+    z-index: -1;
   }
 }

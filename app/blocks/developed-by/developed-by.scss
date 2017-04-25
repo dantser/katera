@@ -14,6 +14,10 @@
     font-weight: 300;
     color: #565656;
     padding-bottom: 13px;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
   }
 
   &__logo > * {

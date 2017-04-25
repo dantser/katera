@@ -3,6 +3,11 @@
   width: 100%;
   height: 100%;
   background: #fff;
+  margin-bottom: 150px;
+
+  @include respond-to('mobile') {
+    margin-bottom: 0;
+  }
 
   &_shadow {
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, .4);

@@ -2,7 +2,6 @@
   position: relative;
   display: block;
   width: 100%;
-  min-height: 100%;
   background-image: linear-gradient(to bottom, #3f4e5b, #537787);
 
   &__scroll-btn {
@@ -56,7 +55,7 @@
       height: 515px;
 
       @include respond-to('laptop') {
-        min-height: 625px;
+        min-height: 300px;
         height: 100vh;
       }
 
@@ -92,10 +91,6 @@
       .branding__image {
         z-index: 15;
         height: 832px;
-
-        .image-bg__img {
-          top: -220px;
-        }
 
         @include respond-to('laptop') {
           height: 100%;
@@ -163,6 +158,14 @@
     width: 100%;
     z-index: 15;
 
+    @include respond-to('mobile') {
+      display: none;
+    }
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
     &_index, &_page {
       height: 150px;
 
@@ -178,14 +181,6 @@
     position: relative;
     display: block;
     z-index: 30;
-  }
-
-  &__bottom {
-    display: block;
-
-    @include respond-to('tablet') {
-      display: none;
-    }
   }
 
   &__image {

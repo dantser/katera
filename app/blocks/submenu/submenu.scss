@@ -69,6 +69,10 @@
     }
   }
 
+  @include respond-to('laptop') {
+    display: none;
+  }
+
   &__title {
     padding: 12px 0 13px;
     width: 100%;

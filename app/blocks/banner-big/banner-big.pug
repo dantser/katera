@@ -3,3 +3,4 @@ include ../banner/banner
 mixin banner-big()
   +b.banner-big&attributes(attributes)
     +banner('#', src='assets/images/banner-big.jpg')._overlay
+      +e('img')(src='assets/images/banner-img.png').little
