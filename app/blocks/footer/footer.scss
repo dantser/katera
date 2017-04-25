@@ -1,7 +1,20 @@
 .footer {
+  position: relative;
   padding: 0 0 20px;
   background: #161616;
-  z-index: 1;
+  z-index: 50;
+
+  &__up-btn {
+    position: absolute;
+    top: -20px;
+    transform: translateY(-100%);
+    right: 33px;
+    z-index: 50;
+
+    @include respond-to('laptop') {
+      display: none;
+    }
+  }
 
   .container {
     padding: 0 15px;
