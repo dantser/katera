@@ -51,8 +51,10 @@
     &_right {
       flex: 1;
       margin-left: 30px;
-      @include respond-to('mobile') {
+
+      @include respond-to('laptop') {
         margin-left: 0;
+        justify-content: flex-end;
       }
     }
   }
@@ -114,9 +116,11 @@
     width: 165px;
     height: 35px;
 
-    @include respond-to('mobile') {
+    @include respond-to('laptop') {
+      width: auto;
+      padding: 0 10px;
+      margin: 0;
       font-size: 12px;
-      width: 137px;
     }
   }
 
