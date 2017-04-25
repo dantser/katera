@@ -88,7 +88,13 @@
     }
 
     @include respond-to('tablet') {
+      box-sizing: border-box;
       border-bottom: 1px solid $color-light-gray;
+
+      .tag-content__text + .tag-content__text {
+        margin-top: -20px;
+        margin-left: 109px;
+      }
 
       .image-bg {
         display: none;
@@ -103,10 +109,9 @@
       }
 
       .article-preview__text {
-        font-size: 16px;
-        padding-top: 42px;
-        padding-bottom: 6px;
+        padding: 42px 15px 6px;
         font-family: $NerisSemiBold;
+        font-size: 15px;
       }
 
       .tag-content {
@@ -128,5 +133,10 @@
 	  margin-top: -39px;
 	  z-index: 2;
     padding: 0 6px 4px 8px;
+
+    @include respond-to('tablet') {
+      margin: 26px 15px -26px;
+      padding-left: 7px;
+    }
   }
 }
