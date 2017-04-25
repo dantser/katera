@@ -38,11 +38,7 @@
 
         &__image {
           z-index: 15;
-          height: 832px;
-
-          .image-bg__img {
-            top: -100px;
-          }
+          height: 750px;
         }
 
         &__text {
@@ -90,7 +86,7 @@
 
       .branding__image {
         z-index: 15;
-        height: 832px;
+        height: 750px;
 
         @include respond-to('laptop') {
           height: 100%;
