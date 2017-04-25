@@ -5,8 +5,9 @@
   justify-content: space-between;
   background-color: $color-white;
   margin: 0;
-  padding: 0 20px 20px 23px;
+  padding: 0 20px 1px 23px;
   list-style: none;
+  border-bottom: 1px solid $color-light-gray;
 
   &__control {
     list-style: none;

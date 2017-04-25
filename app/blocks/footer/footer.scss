@@ -1,6 +1,11 @@
 .footer {
-  padding: 35px 0 20px;
+  padding: 0 0 20px;
   background: #161616;
+  z-index: 1;
+
+  .container {
+    padding: 0 15px;
+  }
 
   @include respond-to('tablet') {
     padding: 20px 0 15px;
@@ -8,6 +13,8 @@
 
   &__row {
     display: flex;
+    padding: 27px 0 23px;
+    margin-left: 1px;
 
     @include respond-to('tablet') {
       flex-direction: column;
@@ -53,7 +60,7 @@
   }
 
   &__logo {
-    width: 90%;
+    width: 90.7%;
     margin-top: 60px;
 
     @include respond-to('tablet') {

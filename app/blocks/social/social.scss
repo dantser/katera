@@ -10,6 +10,12 @@
     display: block;
   }
 
+  &__item {
+    @include respond-to('tablet') {
+      margin: 0 5px;
+    }
+  }
+
   &__link {
 
     &_type {
