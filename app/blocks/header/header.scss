@@ -27,6 +27,10 @@
   &__container {
     display: block;
     border-top: 1px solid $color-gray;
+
+    @include respond-to('laptop') {
+      border-top: inherit;
+    }
   }
 
   &__content {
@@ -34,11 +38,9 @@
     align-items: center;
     height: 65px;
 
-    @include respond-to('mobile');
-    @include respond-to('tablet');
-
     @include respond-to('laptop') {
       height: 100%;
+      padding: 0 0 0 15px;
     }
   }
 
@@ -51,6 +53,11 @@
     &_right {
       flex: 1;
       margin-left: 30px;
+
+      @include respond-to('laptop') {
+        justify-content: flex-end;
+        margin-left: 0;
+      }
     }
   }
 
@@ -110,6 +117,10 @@
     margin-left: 19px;
     width: 165px;
     height: 35px;
+
+    @include respond-to('laptop') {
+      margin-left: 0;
+    }
   }
 
   &__search-bar {

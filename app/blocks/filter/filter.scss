@@ -1,6 +1,8 @@
 .filter {
   background-color: $color-white;
   box-shadow: 0 0 7px rgba(19, 11, 89, .14);
+  margin-top: 30px;
+  margin-bottom: 30px;
 
   &__content {
     display: flex;
@@ -8,7 +10,7 @@
 
     @include respond-to('laptop') {
       flex-direction: column;
-      padding: 15px 0 19px;
+      padding: 15px 15px 19px;
       justify-content: space-between;
     }
   }
@@ -33,6 +35,7 @@
   .division_active {
     font-family: $NerisBlack;
     font-size: 20px;
+    outline: none;
 
     @include respond-to('laptop') {
       font-family: $NerisSemiBold;
@@ -56,6 +59,7 @@
     font-family: $NerisSemiBold;
     padding-left: 25px;
     text-decoration: none;
+    outline: none;
 
     @include respond-to('laptop') {
       font-family: $NerisSemiBold;

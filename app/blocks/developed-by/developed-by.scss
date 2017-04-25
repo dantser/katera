@@ -15,6 +15,10 @@
     color: #565656;
     padding-top: 11px;
     padding-bottom: 13px;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
   }
 
   &__logo > * {

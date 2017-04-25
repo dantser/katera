@@ -3,8 +3,10 @@
   height: 150px;
   position: relative;
   display: block;
+  z-index: 1;
 
   @include respond-to('tablet') {
+    padding: 20px 15px 0;
     height: 105px;
   }
 

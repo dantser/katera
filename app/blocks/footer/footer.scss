@@ -3,7 +3,7 @@
   background: #161616;
 
   @include respond-to('tablet') {
-    padding: 20px 0 15px;
+    padding: 20px 15px 15px;
   }
 
   &__row {
@@ -49,6 +49,8 @@
 
     @include respond-to('tablet') {
       margin: 0;
+      display: flex;
+      align-items: center;
     }
   }
 

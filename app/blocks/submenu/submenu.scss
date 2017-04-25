@@ -11,6 +11,10 @@
   border-left: 0;
   border-right: 0;
 
+  @include respond-to('laptop') {
+    display: none;
+  }
+
   &__title {
     padding: 13px 0;
   }
