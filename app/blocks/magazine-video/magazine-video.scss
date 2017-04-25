@@ -66,13 +66,15 @@
     width: 100%;
     margin-bottom: 20px;
 
+
     @include respond-to('tablet') {
       padding: 0;
     }
   }
-
-  .banner__video-banner {
+  .banner {
     height: 160px;
+    margin: 25px 0;
+    position: relative;
   }
 
   &__inner-content {
@@ -89,6 +91,7 @@
 
   &__text-block.text {
     margin-bottom: 33px;
+    display: block;
 
     @include respond-to('tablet') {
       padding-right: 10px;
