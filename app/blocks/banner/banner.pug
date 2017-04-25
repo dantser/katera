@@ -9,5 +9,7 @@ mixin banner(href, image)
   +b('a').banner(href=href)
     +e('div').image&attributes(attributes)
       +image-bg()(src=image alt='')
-    +e('div').content
-      +e('img')(src='assets/images/banner-img.png').little
+
+    if block
+      +e('div').content
+        block
