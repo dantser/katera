@@ -5,7 +5,7 @@
   justify-content: space-between;
   background-color: $color-white;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 20px 20px 23px;
   list-style: none;
 
   &__control {
@@ -69,7 +69,7 @@
   }
 
   &__title {
-    padding: 13px 0;
+    padding: 12px 0 13px;
     width: 100%;
 
     @include respond-to('tablet') {
