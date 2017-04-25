@@ -22,6 +22,7 @@ mixin index()
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()
+        +navbar(getData('navbar'))
         +e.sidebar
           +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +e.content

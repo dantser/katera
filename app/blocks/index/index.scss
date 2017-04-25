@@ -112,4 +112,18 @@
       display: none;
     }
   }
+
+  .main-container {
+
+    .navbar {
+      padding: 0 15px;
+      display: none;
+      @include respond-to('mobile') {
+        display: block;
+      }
+    }
+    .navbar__item:not(:last-child) {
+      border-right: none;
+    }
+  }
 }
