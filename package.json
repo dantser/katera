@@ -48,6 +48,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylelint": "^3.9.0",
     "gulp-svg-symbols": "^2.0.2",
+    "gulp-svgo": "^1.0.3",
     "gulp-watch": "^4.3.11",
     "jade-get-data": "^1.0.1",
     "jquery": "^3.2.1",
