@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 18px 0 33px;
+  padding: 18px 0 22px;
 
   @include respond-to('tablet') {
     padding: 24px 0 18px;
@@ -19,6 +19,7 @@
     line-height: 1.2;
     margin: 0;
     text-align: center;
+    margin-bottom: 11px;
 
     @include respond-to('tablet') {
       font-size: 22px;
