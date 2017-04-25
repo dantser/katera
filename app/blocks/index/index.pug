@@ -8,12 +8,14 @@ include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
 include ../submenu/submenu
 include ../sale-preview-item/sale-preview-item
+include ../catalog-verphe/catalog-verphe
 
 include ../text/text
 
 mixin index()
   +b.index&attributes(attributes)
     +container()
+      +catalog-verphe(getData('catalog-verphe'))
       +submenu(getData('submenu'))
       +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
       +main-container().main-container_shadow.index__main-container

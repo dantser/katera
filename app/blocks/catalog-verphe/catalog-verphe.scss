@@ -1,0 +1,89 @@
+.catalog-verphe {
+  width: 100%;
+
+  &__item {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+    padding: 5px 4px 53px;
+
+    @media (max-width: 320px) {
+      flex-flow: column nowrap;
+      padding: 0 0 26px;
+    }
+
+    &:not(:first-child) {
+      @media (max-width: 320px) {
+        display: none;
+      }
+    }
+  }
+
+  &__letter {
+    display: block;
+    width: 22.5%;
+    font-size: 50px;
+    line-height: 1em;
+    font-family: $RobotoSlab;
+    font-weight: 300;
+    color: $color-black;
+    margin-right: 18%;
+
+    @media (max-width: 320px) {
+      width: 100%;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-size: 30px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+
+  &__list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding-top: 3px;
+    column-count: 3;
+    column-gap: 20px;
+
+    @media (max-width: 320px) {
+      column-count: 1;
+      column-gap: 0;
+    }
+  }
+
+  &__company {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    white-space: nowrap;
+
+    @media (max-width: 320px) {
+      margin-top: 0;
+      margin-bottom: 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    & a {
+      display: inline-block;
+    }
+  }
+
+  &__title, &__count {
+    display: inline-block;
+    font-size: 12px;
+    line-height: em(26px);
+    font-weight: 300;
+    color: $color-black;
+
+    @media (max-width: 320px) {
+      font-size: 14px;
+      line-height: em(35px);
+    }
+  }
+
+  &__count {
+    color: $color-gray;
+  }
+}
