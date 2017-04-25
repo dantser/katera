@@ -5,6 +5,7 @@ include ../video-preview/video-preview
 include ../small-article-preview/small-article-preview
 include ../share/share
 include ../comments/comments
+include ../tag-list/tag-list
 include ../text/text
 include ../banner/banner
 include ../comments-mark/comments-mark
@@ -20,7 +21,8 @@ mixin magazine-video()
             +text().__text-block
               h2 PROyachting проведет третий этап Sochi winter Cup на новогодних праздниках
               p Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.
-            +share('vk', 'go', 'fb', 'odnokl', 'tw').__video-share
+            +tag-list( 'video1', getData('tag-list')).__taglist
+            +share('vk', 'go', 'fb', 'odnokl', 'tw').__share
           +e.inner-content
             +comments(getData('comments'))
         +e.sidebar

@@ -60,7 +60,7 @@
   }
 
   &__inner-content {
-    box-shadow: 0px 0px 7px 0px rgba(19, 11, 89, 0.14);
+    box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
     padding: 20px 25px;
     width: 100%;
     margin-bottom: 30px;
@@ -85,8 +85,12 @@
     }
   }
 
-  &__video-share {
+  &__share {
     padding-top: 20px;
     border-top: 1px solid $color-light-gray;
+  }
+
+  &__taglist {
+    margin-bottom: 20px;
   }
 }

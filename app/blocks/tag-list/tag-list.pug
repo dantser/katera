@@ -11,7 +11,7 @@
 //- Аргумент - строка video - название видео
 //- Аргумент - объект tag-list - список тегов
 mixin tag-list(video, tags)
-  +b('div').tag-list
+  +b('div').tag-list&attributes(attributes)
     +e('b').title Теги:
     +e('ul').tags
       each tag in tags[`${video}`]
