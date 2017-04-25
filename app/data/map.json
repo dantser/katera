@@ -1,8 +1,8 @@
 [
-  { "path": "/", "title": "main" },
-  { "path": "/magazine.html", "title": "magazine" },
-  { "path": "/magazine-page.html", "title": "magazine-page" },
-  { "path": "/magazine-razdel.html", "title": "magazine-razdel" },
-  { "path": "/magazine-video.html", "title": "magazine-video" },
-  { "path": "/magazine-videos.html", "title": "magazine-video" }
+  { "path": "https://verstaburo.github.io/katera", "title": "main" },
+  { "path": "https://verstaburo.github.io/katera/magazine.html", "title": "magazine" },
+  { "path": "https://verstaburo.github.io/katera/magazine-page.html", "title": "magazine-page" },
+  { "path": "https://verstaburo.github.io/katera/magazine-razdel.html", "title": "magazine-razdel" },
+  { "path": "https://verstaburo.github.io/katera/magazine-video.html", "title": "magazine-video" },
+  { "path": "https://verstaburo.github.io/katera/magazine-videos.html", "title": "magazine-video" }
 ]
