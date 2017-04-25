@@ -8,10 +8,11 @@
   }
 
   &__content {
-    margin-top: 23px;
+    margin-top: 42px;
     display: flex;
     flex-flow: row wrap;
     flex: 1;
+    padding-bottom: 62px;
   }
 
   &__sidebar {
@@ -33,6 +34,7 @@
     flex-direction: column;
     height: auto;
     overflow: hidden;
+    z-index: 1;
 
     &::after {
       content: '';
@@ -50,7 +52,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 17px;
   }
 
   &__item {
@@ -67,5 +69,7 @@
     width: auto;
     min-width: 165px;
     height: 40px;
+	  margin-top: -41px;
+	  z-index: 2;
   }
 }
