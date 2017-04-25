@@ -10,7 +10,7 @@
   &__content {
     margin-top: 23px;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     flex: 1;
 
     @include respond-to('tablet') {
@@ -66,11 +66,11 @@
     width: 100%;
     margin-bottom: 20px;
 
-
     @include respond-to('tablet') {
       padding: 0;
     }
   }
+
   .banner {
     height: 160px;
     margin: 25px 0;
