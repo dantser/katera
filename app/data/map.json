@@ -1,0 +1,8 @@
+[
+  { "path": "/", "title": "main" },
+  { "path": "/magazine.html", "title": "magazine" },
+  { "path": "/magazine-page.html", "title": "magazine-page" },
+  { "path": "/magazine-razdel.html", "title": "magazine-razdel" },
+  { "path": "/magazine-video.html", "title": "magazine-video" },
+  { "path": "/magazine-videos.html", "title": "magazine-video" }
+]

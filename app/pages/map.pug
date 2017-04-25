@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../blocks/main-container/main-container
+include ../blocks/branding/branding
+include ../blocks/submenu/submenu
+include ../blocks/container/container
+
+block head
+  - var pageTitle = 'Катера.RU'
+
+block content
+  +branding()
+    +b.magazine-page&attributes(attributes)
+      +container()
+        +main-container()(style="min-height: 100%").main-container_shadow.magazine-razdel__main-container
+          +submenu(getData('map'), true)
