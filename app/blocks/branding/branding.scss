@@ -93,10 +93,6 @@
         z-index: 15;
         height: 832px;
 
-        .image-bg__img {
-          top: -220px;
-        }
-
         @include respond-to('laptop') {
           height: 100%;
 

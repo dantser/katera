@@ -3,6 +3,10 @@
   display: block;
   flex: 1 0 auto;
 
+  @include respond-to('laptop') {
+    margin-top: 50px; // mobile header height + 15px
+  }
+
   &__main-container {
     display: flex !important; // temp
     flex-flow: row wrap;
