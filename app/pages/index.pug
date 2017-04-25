@@ -1,6 +1,7 @@
 extends ../layouts/default
 include ../blocks/branding/branding
 include ../blocks/index/index
+include ../blocks/slider-range/slider-range
 
 block head
   - var pageTitle = 'Катера.RU - Главная'
@@ -9,6 +10,7 @@ block contentVariables
   - var page = 'index';
 
 block content
+  //+slider-range().js-slider-range
   +branding('index')
     +index()
 

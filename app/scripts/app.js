@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-ui-bundle';
 import burger from '../blocks/burger/burger';
 import upBtn from '../blocks/up-btn/up-btn';
 import select from '../blocks/select/select';
@@ -9,6 +10,8 @@ import textField from '../blocks/text-field/text-field';
 import submenu from '../blocks/submenu/submenu';
 
 $(() => {
+  $('.js-slider-range').slider();
+
   burger();
   select();
   searchBar();
