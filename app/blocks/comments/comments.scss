@@ -1,4 +1,7 @@
 .comments {
+  @include respond-to('tablet') {
+    padding-right: 10px;
+  }
 
   &__item {
     border-top: 1px solid #e5e5e5;

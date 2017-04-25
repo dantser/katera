@@ -1,8 +1,15 @@
-mixin share()
+mixin share(small)
   +b('div').share&attributes(attributes)
     +e('b').title Поделиться:
     +e('div').share-wrap
-      +e('div').buttons
-        +social('vk', 'go', 'fb', 'odnokl', 'tw')._join
-      +e('div').shared
-        +e('span') 1k
+      if small
+        +e('div').buttons
+          +social('vk', 'go', 'fb', 'odnokl', 'tw')._join._small
+        +e('div').shared._small
+          +e('span') 1k
+      else
+        +e('div').buttons
+          +social('vk', 'go', 'fb', 'odnokl', 'tw')._join
+        +e('div').shared
+          +e('span') 1k
+
