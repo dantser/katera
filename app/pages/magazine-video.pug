@@ -1,9 +1,11 @@
 extends ../layouts/default
 include ../blocks/magazine-video/magazine-video
+include ../blocks/branding/branding
 
 block head
   - var pageTitle = 'Катера.RU - Журнал - Видео'
 
 block content
-  +magazine-video()
+  +branding()
+    +magazine-video()
 
