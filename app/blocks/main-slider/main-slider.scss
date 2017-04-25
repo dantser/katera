@@ -49,6 +49,10 @@
       line-height: 24px;
       width: 100%;
     }
+
+    @include respond-to('mobile') {
+      margin-right: -8px;
+    }
   }
 
   &__price {

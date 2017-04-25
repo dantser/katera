@@ -48,7 +48,7 @@
     transition: color .25s ease-in-out;
 
     @include respond-to('mobile') {
-      padding: rem(20px) 0;
+      padding: rem(15.5px) 0;
       font-size: em(18px);
       text-align: center;
     }
