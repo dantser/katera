@@ -6,12 +6,14 @@ include ../container/container
 include ../main-slider/main-slider
 include ../banner-big/banner-big
 include ../filter/filter
-include ../quote/quote
+include ../scroll-slider/scroll-slider
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
 
 mixin index()
   +b.index&attributes(attributes)
+    +container()
+      +scroll-slider()
     +container()
       +main-container().main-container_shadow.index__main-container
         +main-slider()
