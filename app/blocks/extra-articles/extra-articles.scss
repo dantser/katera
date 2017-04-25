@@ -1,0 +1,54 @@
+.extra-articles {
+  @include respond-to('mobile') {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__header {
+    font-family: $NerisSemiBold;
+    color: $color-dark-blue;
+    font-size: 38px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond-to('mobile') {
+      flex-flow: column nowrap;
+    }
+  }
+
+  &__button {
+    margin: 15px auto 0;
+    width: 165px;
+    height: 40px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 262px;
+    color: $color-black;
+    text-decoration: none;
+
+    @include respond-to('tablet') {
+      margin: 0 auto;
+    }
+
+    @include respond-to('mobile') {
+      border: 1px solid $color-light-gray;
+      border-right: none;
+      border-left: none;
+    }
+  }
+}

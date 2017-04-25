@@ -1,0 +1,7 @@
+mixin share()
+  +b('div').share
+    +e('b').title Поделиться:
+    +e('div').buttons
+      +social('vk', 'go', 'fb', 'odnokl', 'tw')._join
+    +e('div').shared
+      +e('span') 1k

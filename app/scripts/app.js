@@ -6,12 +6,14 @@ import mainSlider from '../blocks/main-slider/main-slider';
 import filter from '../blocks/filter/filter';
 import scroll from '../blocks/scroll-slider/scroll-slider';
 import textField from '../blocks/text-field/text-field';
+import submenu from '../blocks/submenu/submenu';
 
 $(() => {
   burger();
   select();
   searchBar();
   mainSlider();
+  submenu();
   filter();
   textField();
   scroll();
