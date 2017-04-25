@@ -1,9 +1,9 @@
 .footer {
-  padding: 35px 0 20px;
+  padding: 0 0 20px;
   background: #161616;
 
   @include respond-to('tablet') {
-    padding: 20px 15px 15px;
+    padding: 0 0 15px;
   }
 
   &__row {

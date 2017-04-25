@@ -14,6 +14,7 @@ include ../text/text
 include ../subscribe/subscribe
 include ../article-preview/articles-grid
 include ../article-preview/article-preview
+include ../navbar/navbar
 
 mixin index()
   +b.index&attributes(attributes)
@@ -77,4 +78,3 @@ mixin index()
 
         +e.sidebar._right
           +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
-      +subscribe()

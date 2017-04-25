@@ -3,6 +3,10 @@
   display: block;
   flex: 1 0 auto;
 
+  @include respond-to('laptop') {
+    margin-top: 35px;
+  }
+
   &__main-container {
     display: flex !important; // temp
     flex-flow: row wrap;
@@ -90,6 +94,18 @@
   .main-slider__swiper-pagination .swiper-pagination-bullet {
     @include respond-to('mobile') {
       border: 1px solid #272067;
+    }
+  }
+
+  .articles-grid {
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  .branding, .branding__top {
+    @include respond-to('tablet') {
+      top: -35px;
     }
   }
 }
