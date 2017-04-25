@@ -8,10 +8,18 @@ include ../banner-big/banner-big
 include ../filter/filter
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
+include ../submenu/submenu
+include ../sale-preview-item/sale-preview-item
+include ../text/text
+include ../subscribe/subscribe
+include ../article-preview/articles-grid
+include ../article-preview/article-preview
+include ../navbar/navbar
 
 mixin index()
   +b.index&attributes(attributes)
     +container()
+      +submenu(getData('submenu'))
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()

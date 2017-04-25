@@ -10,4 +10,4 @@ mixin banner(href, image)
     +e('div').image&attributes(attributes)
       +image-bg()(src=image alt='')
     +e('div').content
-      block
+      +e('img')(src='assets/images/banner-img.png').little
