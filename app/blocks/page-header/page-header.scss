@@ -5,14 +5,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 21px 0 27px;
+  padding: 18px 0 33px;
 
   @include respond-to('tablet') {
     padding: 24px 0 18px;
   }
 
   &__title {
-    padding: 15px 0;
+    padding: 8px 0;
     font-family: $RobotoSlab;
     font-size: 48px;
     font-weight: 400;
