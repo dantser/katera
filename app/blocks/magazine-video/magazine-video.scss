@@ -21,7 +21,7 @@
   }
 
   &__sidebar {
-    margin-top: 23px;
+    margin-top: 15px;
     width: 360px;
     margin-left: 30px;
   }
@@ -79,7 +79,7 @@
   }
 
   &__text-block.text {
-    margin-bottom: 45px;
+    margin-bottom: 33px;
 
     @include respond-to('tablet') {
       padding-right: 25px;
