@@ -2,6 +2,7 @@
   display: block;
   flex: 1 0 auto;
   background-image: linear-gradient(to bottom, #3f4e5b, #537787);
+  padding-bottom: 265px;
 
   &__main-container {
     display: flex !important;
@@ -13,6 +14,10 @@
     display: flex;
     flex-flow: row wrap;
     flex: 1;
+
+    @include respond-to('tablet') {
+     width: 100%;
+    }
   }
 
   &__sidebar {
@@ -28,6 +33,7 @@
     color: $color-black;
 
     &_size_medium {
+      margin-bottom: 20px;
       font-size: rem(18px);
     }
   }
@@ -36,6 +42,10 @@
     display: block;
     width: 100%;
     height: 600px;
+
+    @include respond-to('tablet') {
+      height: 325px;
+    }
   }
 
   &__items {
@@ -50,5 +60,57 @@
     display: block;
     padding-right: 25px;
     width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .banner__video-banner {
+    height: 160px;
+  }
+
+  &__inner-content {
+    box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+    padding: 20px 25px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include respond-to('tablet') {
+      padding-right: 0;
+    }
+  }
+
+  &__text-block.text {
+    margin-bottom: 45px;
+
+    @include respond-to('tablet') {
+      padding-right: 25px;
+    }
+
+    h2 {
+      font-size: 20px;
+      line-height: 26px;
+      font-family: $NerisBlack;
+      max-width: 420px;
+      color: $color-black;
+
+      @include respond-to('tablet') {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      max-width: 630px;
+      font-size: 14px;
+      line-height: 20px;
+      font-family: $NerisLight;
+    }
+  }
+
+  &__share {
+    padding-top: 20px;
+    border-top: 1px solid $color-light-gray;
+  }
+
+  &__tags {
+    margin-bottom: 20px;
   }
 }

@@ -1,0 +1,156 @@
+.branding {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  background-image: linear-gradient(to bottom, #3f4e5b, #537787);
+
+  .container {
+    display: flex;
+    position: relative;
+    height: 100%;
+    z-index: 50;
+  }
+
+  &__top {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+
+    &_index {
+      height: 515px;
+
+      @include respond-to('laptop') {
+        min-height: 625px;
+        height: 100vh;
+      }
+
+      .branding__scroll-btn {
+        position: absolute;
+        bottom: 30px;
+        left: center;
+        display: block;
+        width: 22px;
+        height: 22px;
+
+        .branding__caret {
+          width: 22px;
+          height: 12px;
+
+          * {
+            stroke: $color-white;
+          }
+
+          &:last-child {
+            transform: translateY(-100%);
+          }
+        }
+      }
+
+      @include respond-to('desktop') {
+
+        .branding__scroll-btn {
+          display: none;
+        }
+      }
+
+      .branding__image {
+        z-index: 15;
+        height: 832px;
+
+        @include respond-to('laptop') {
+          height: 100%;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: center;
+            display: block;
+            width: 100%;
+            height: 427px;
+            background-image: url('../images/branding/main-top-shadow.png');
+          }
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-top: auto;
+    width: 518px;
+    padding-bottom: 18px;
+    font-family: $NerisSemiBold;
+    font-size: rem(40px);
+    line-height: 1.1;
+    color: $color-white;
+    text-transform: uppercase;
+
+    @include respond-to('laptop') {
+      margin: auto 0 94px auto;
+      font-size: rem(22px);
+      font-weight: 700;
+      line-height: 1.5;
+      width: 170px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 27px;
+    right: 0;
+    width: 103px;
+    height: 115px;
+    pointer-events: none;
+
+    @include respond-to('laptop') {
+      top: initial;
+      right: initial;
+      left: 0;
+      bottom: 73px;
+      box-sizing: content-box;
+      border-left: 13px solid $color-white;
+      border-right: 13px solid $color-white;
+      border-top: 12px solid $color-white;
+      border-bottom: 12px solid $color-white;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 15;
+
+    &_index {
+      height: 150px;
+
+      .branding__image {
+        top: 100%;
+        transform: translateY(-100%);
+        height: 388px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: block;
+    z-index: 30;
+  }
+
+  &__bottom {
+    display: block;
+  }
+
+  &__image {
+    position: absolute;
+    display: block;
+    width: 100%;
+    pointer-events: none;
+  }
+}
