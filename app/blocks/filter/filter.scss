@@ -123,6 +123,31 @@
     width: 270px;
     height: 40px;
 
+    &-info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-label {
+      line-height: 1;
+      color: $color-black;
+    }
+
+    &-text {
+      font-size: rem(13px);
+      line-height: 1;
+      font-style: italic;
+      color: #666;
+
+      &:first-child::after {
+        content: '—';
+        margin: 0 4px;
+      }
+      &-block {
+        display: flex;
+      }
+    }
+
     @include respond-to('laptop') {
       width: 100%;
     }
@@ -175,6 +200,11 @@
     }
 
     &_range {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 3px;
+
       @include respond-to('laptop') {
         order: 3;
       }
