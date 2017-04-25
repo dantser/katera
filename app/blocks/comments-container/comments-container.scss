@@ -1,12 +1,6 @@
 .comments-container {
   background-color: $color-white;
-  box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
   width: 100%;
-  padding: 25px;
-
-  @media (max-width: 600px) {
-    padding: 25px 15px 10px;
-  }
 
   &__title {
     margin: 0 0 20px;

@@ -1,3 +1,4 @@
+include ../comments-container/comments-container
 //- image  --- Аватар пример: +comments('assets/images/comments.jpg')
 //- name   --- ФИО пример: +comments('Мария Головина')
 //- answer --- Ответ на комментарий пример: +comments('ответил Марии')
@@ -6,6 +7,7 @@
 
 mixin comments(data)
   +b.comments
+    +comments-container()
     each comment in data.comments
       - var childClass = comment.child ? 'comments__item_left' : '';
       +e.item(class=childClass)
