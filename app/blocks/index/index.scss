@@ -3,6 +3,10 @@
   display: block;
   flex: 1 0 auto;
 
+  @include respond-to('laptop') {
+    margin-top: 35px;
+  }
+
   &__main-container {
     display: flex !important; // temp
     flex-flow: row wrap;
@@ -28,5 +32,80 @@
 
   &__big-banner {
     margin-top: 30px;
+  }
+
+  .filter {
+    @include respond-to('tablet') {
+      width: 100%;
+    }
+  }
+
+  .sale-preview-item {
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  .topic-preview-widget {
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  .yacht-preview-widget {
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #7f7f7e;
+
+    @include respond-to('mobile') {
+      border-width: 3px !important;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: inherit;
+    opacity: 1;
+  }
+
+  .swiper-wrapper {
+    @include respond-to('mobile') {
+      margin-bottom: 50px;
+    }
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 30px;
+
+    @include respond-to('mobile') {
+      bottom: 15px;
+    }
+  }
+
+  .main-slider__swiper-pagination .swiper-pagination-bullet {
+    @include respond-to('mobile') {
+      border: 1px solid #272067;
+    }
+  }
+
+  .articles-grid {
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  .branding, .branding__top {
+    @include respond-to('tablet') {
+      top: -35px;
+    }
   }
 }
