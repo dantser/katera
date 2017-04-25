@@ -5,6 +5,13 @@
   position: relative;
   display: block;
   z-index: 1;
+  opacity: 1;
+  will-change: opacity;
+  transition: opacity .25s ease-in-out;
+
+  &:hover {
+    opacity: .75;
+  }
 
   &__image {
     height: 100%;

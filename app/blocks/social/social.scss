@@ -17,6 +17,13 @@
   }
 
   &__link {
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
+
+    &:hover {
+      opacity: .75;
+    }
 
     &_type {
 

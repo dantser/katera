@@ -4,6 +4,13 @@
   font-family: $NerisLight;
   text-decoration: inherit;
   color: inherit;
+  opacity: 1;
+  will-change: opacity;
+  transition: opacity .25s ease-in-out;
+
+  &:hover {
+    opacity: .75;
+  }
 
   &__img-wrap {
     width: 60px;
