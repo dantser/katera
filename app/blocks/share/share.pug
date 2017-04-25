@@ -1,5 +1,5 @@
 mixin share()
-  +b('div').share
+  +b('div').share&attributes(attributes)
     +e('b').title Поделиться:
     +e('div').buttons
       +social('vk', 'go', 'fb', 'odnokl', 'tw')._join
