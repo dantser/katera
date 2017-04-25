@@ -1,0 +1,24 @@
+include ../list/list
+include ../button/button
+
+
+mixin verphe-contacts()
+  .verphe-contacts-wrap
+    +list()
+      +b.verphe-contacts
+        +icon('close').__icon-close
+        +list-item().list__item
+          +e.__img-wrap
+            +e.__img(src="assets/images/azimut.png")
+          +e.SPAN.title Контакты верфи
+          +e.SPAN.tel Телефон:
+            ul
+              li +7 (495) 77-11-700
+              li +380 (98) 977 11 11
+          +e.SPAN.email E-mail:
+            ul
+              li sales@azimutyachts.com
+        +list-item().list__item
+         +e.SPAN.country Италия
+         +e.A(href="#").site www.azimutyachts.com
+         +button()._rounded._kind_red Заказать звонок

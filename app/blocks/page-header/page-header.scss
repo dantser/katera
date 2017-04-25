@@ -12,11 +12,13 @@
   }
 
   &__title {
+    padding: 15px 0;
     font-family: $RobotoSlab;
     font-size: 48px;
     font-weight: 400;
-    line-height: 1.64;
+    line-height: 1.2;
     margin: 0;
+    text-align: center;
 
     @include respond-to('tablet') {
       font-size: 22px;
