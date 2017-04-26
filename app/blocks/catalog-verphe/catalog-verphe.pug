@@ -1,0 +1,18 @@
+//- Аргумент - объект catalog-verphe
+//- data.letter - буква алфавита
+//- data.title - наименование компании
+//- data.count - количество яхт
+mixin catalog-verphe(data)
+  +b('div').catalog-verphe
+    //- each obj in data
+    //-   +e('div')
+    each obj in data
+      +e('div').item
+        +e('b').letter= obj.letter
+        +e('ul').list
+          each item in obj.data
+            +e('li').company
+              +e('a')(href='#')
+                +e('span').title= item.title
+                +e('span').count= item.count
+
