@@ -8,6 +8,7 @@ import mainSlider from '../blocks/main-slider/main-slider';
 import filter from '../blocks/filter/filter';
 import textField from '../blocks/text-field/text-field';
 import submenu from '../blocks/submenu/submenu';
+import models from '../models/models';
 
 $(() => {
   burger();
@@ -18,4 +19,5 @@ $(() => {
   filter();
   textField();
   upBtn();
+  models();
 });

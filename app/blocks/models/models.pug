@@ -1,0 +1,18 @@
+mixin models(title, data)
+  +b.models&attributes(attributes)
+      +e.H2.header= title
+      +b.swiper-container
+        +e.swiper-pagination
+        +e.wrapper.swiper-wrapper
+          each item in data
+            +e.A(href=item.path).item.swiper-slide
+              +e.image
+                +e.IMG(src=item.img)
+              +e.content
+                +e.vendor= item.vendor
+                +e.name= item.name
+                +e.price= item.price
+                +e.parameters
+                  +e.length.__param='Длина: ' + item.info.length 
+                  +e.width.__param= 'Ширина: ' + item.info.width
+                  +e.draught= 'Осадка: ' + item.info.draught
