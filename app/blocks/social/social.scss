@@ -6,7 +6,7 @@
   margin: 0;
   // width: 100%;
 
-  &__item, &__link, &__icon, &__icon * {
+  &__item, &__link, &__icon {
     display: block;
   }
 
@@ -27,37 +27,37 @@
 
     &_type {
 
-      &_vk > * {
+      &_vk .social__icon {
         width: 22px;
         height: 13px;
       }
 
-      &_insta > * {
+      &_insta .social__icon {
         width: 29px;
         height: 20px;
       }
 
-      &_fb > * {
+      &_fb .social__icon {
         width: 11px;
         height: 19px;
       }
 
-      &_odnokl > * {
+      &_odnokl .social__icon {
         width: 13px;
         height: 20px;
       }
 
-      &_yt > * {
+      &_yt .social__icon {
         width: 22px;
         height: 16px;
       }
 
-      &_tw > * {
+      &_tw .social__icon {
         width: 22px;
         height: 16px;
       }
 
-      &_go > * {
+      &_go .social__icon {
         width: 22px;
         height: 16px;
       }
@@ -65,13 +65,7 @@
   }
 
   &__icon {
-    fill: #fff;
-    stroke: #fff;
-
-    * {
-      fill: #fff;
-      stroke: #fff;
-    }
+    fill: $color-white;
   }
 
   &_join .social__link {
@@ -87,7 +81,7 @@
       &_vk {
         background-color: #4873a7;
 
-        & > * {
+         .social__icon {
           width: 19px;
           height: 11px;
         }
@@ -96,7 +90,7 @@
       &_fb {
         background-color: #39569a;
 
-        & > * {
+         .social__icon {
           width: 9px;
           height: 17px;
         }
@@ -105,7 +99,7 @@
       &_odnokl {
         background-color: #ef8200;
 
-        & > * {
+         .social__icon {
           width: 10px;
           height: 17px;
         }
@@ -114,7 +108,7 @@
       &_tw {
         background-color: #12c1ff;
 
-        & > * {
+         .social__icon {
           width: 19px;
           height: 16px;
         }
@@ -123,7 +117,7 @@
       &_go {
         background-color: #dc4e41;
 
-        & > * {
+         .social__icon {
           width: 21px;
           height: 13px;
         }
