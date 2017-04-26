@@ -5,6 +5,7 @@ include ../division/division
 include ../button/button
 include ../topic-preview/topic-preview
 include ../small-article-preview/small-article-preview
+include ../icon/icon
 
 mixin topic-preview-widget(title, data)
   +b.topic-preview-widget&attributes(attributes)
@@ -14,4 +15,6 @@ mixin topic-preview-widget(title, data)
         each obj in data
           +topic-preview(obj).__topic
       +e.__button
-        +button(true)(href="#")._rounded._kind_red Перейти в форум
+        +button(true)(href="#")._rounded._shadow._kind_red
+          | Перейти в форум
+          +icon('caret').icon._kind_caret._right
