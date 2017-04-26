@@ -5,5 +5,6 @@ export default () => {
   const swiper = new Swiper('.swiper-container', {
     pagination: '.main-slider__swiper-pagination',
     paginationClickable: true,
+    autoplay: 5000,
   });
 };
