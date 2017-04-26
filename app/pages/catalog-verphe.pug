@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/catalog-verphe-page/catalog-verphe-page
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Каталог верфей'
+
+block content
+  +branding()
+    +catalog-verphe-page()

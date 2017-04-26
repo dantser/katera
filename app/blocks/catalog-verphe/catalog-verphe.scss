@@ -4,15 +4,15 @@
   &__item {
     display: flex;
     border-top: 1px solid #e5e5e5;
-    padding: 5px 4px 53px;
+    padding: 2px 4px 53px;
 
-    @media (max-width: 320px) {
+    @media (max-width: 767px) {
       flex-flow: column nowrap;
       padding: 0 0 26px;
     }
 
     &:not(:first-child) {
-      @media (max-width: 320px) {
+      @media (max-width: 767px) {
         display: none;
       }
     }
@@ -26,9 +26,9 @@
     font-family: $RobotoSlab;
     font-weight: 300;
     color: $color-black;
-    margin-right: 18%;
+    margin-right: 6%;
 
-    @media (max-width: 320px) {
+    @media (max-width: 767px) {
       width: 100%;
       padding-top: 14px;
       padding-bottom: 14px;
@@ -46,7 +46,7 @@
     column-count: 3;
     column-gap: 20px;
 
-    @media (max-width: 320px) {
+    @media (max-width: 767px) {
       column-count: 1;
       column-gap: 0;
     }
@@ -59,7 +59,7 @@
     margin-bottom: 5px;
     white-space: nowrap;
 
-    @media (max-width: 320px) {
+    @media (max-width: 767px) {
       margin-top: 0;
       margin-bottom: 0;
       border-bottom: 1px solid #e5e5e5;
@@ -77,7 +77,7 @@
     font-weight: 300;
     color: $color-black;
 
-    @media (max-width: 320px) {
+    @media (max-width: 767px) {
       font-size: 14px;
       line-height: em(35px);
     }
