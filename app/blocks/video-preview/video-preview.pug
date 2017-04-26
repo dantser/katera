@@ -2,7 +2,7 @@
 //- _col - изображение над текстом
 //- _row - изображение слева от текста
 mixin video-preview(data)
-  +b('div').video-preview&attributes(attributes)
+  +b('a')(href='#').video-preview&attributes(attributes)
     +e('div').image
       +image-bg()(src= data.image)
     +e('div').text
