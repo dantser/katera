@@ -20,13 +20,11 @@
   &__icon {
     display: block;
     fill: $color-red;
-    stroke: $color-red;
     will-change: fill, stroke;
     transition: fill .25s ease-in-out, stroke .25s ease-in-out;
 
     &:hover {
       fill: #e02303;
-      stroke: #e02303;
     }
 
     &_type {
