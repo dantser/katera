@@ -98,8 +98,13 @@
   &__link {
     font-size: 14px;
     font-family: $NerisLight;
-    color: rgb(19, 11, 89);
+    color: $color-dark-blue;
     text-decoration: underline;
-    cursor: pointer;
+    will-change: color;
+    transition: color .25s ease-in-out;
+
+    &:hover {
+      color: $color-red;
+    }
   }
 }
