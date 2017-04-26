@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import './common/input';
+import commonInput from './common/input';
 import burger from '../blocks/burger/burger';
 import upBtn from '../blocks/up-btn/up-btn';
 import select from '../blocks/select/select';
@@ -11,6 +11,7 @@ import submenu from '../blocks/submenu/submenu';
 import models from '../blocks/models/models';
 
 $(() => {
+  commonInput();
   burger();
   select();
   searchBar();
