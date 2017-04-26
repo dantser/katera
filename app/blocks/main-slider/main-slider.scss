@@ -63,12 +63,12 @@
     }
   }
 
-  &__swiper-pagination {
+  & > &__swiper-pagination {
     position: absolute;
     z-index: 2;
     left: 0;
     right: 0;
-    bottom: 10px;
+    bottom: 35px;
     text-align: center;
 
     .swiper-pagination-bullet {
@@ -80,6 +80,7 @@
       border-radius: 100%;
       cursor: pointer;
       transition: .25s ease-in-out;
+      background: transparent;
 
       &-active {
         border-width: 3px;
