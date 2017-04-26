@@ -20,6 +20,8 @@ include ../sale-preview-item/sale-preview-item
 mixin index()
   +b.index&attributes(attributes)
     +container()
+      +submenu(getData('submenu'))
+      +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()

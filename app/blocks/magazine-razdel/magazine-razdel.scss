@@ -19,10 +19,25 @@
 
       .article-preview {
         height: auto;
-      }
 
-      .article-preview__title {
-        text-align: left;
+        &__title {
+          text-align: left;
+        }
+
+        &__picture {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 35px;
+        }
+
+        &__text {
+          padding: 42px 15px 6px;
+          font-family: $NerisSemiBold;
+          font-size: 15px;
+          align-items: flex-start;
+        }
       }
     }
   }
@@ -99,20 +114,6 @@
 
       .image-bg {
         display: none;
-      }
-
-      .article-preview__picture {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 35px;
-      }
-
-      .article-preview__text {
-        padding: 42px 15px 6px;
-        font-family: $NerisSemiBold;
-        font-size: 15px;
       }
 
       .tag-content {
