@@ -45,6 +45,10 @@
     color: #000;
     cursor: pointer;
 
+    &::-ms-expand {
+      display: none;
+    }
+
     @include respond-to('mobile') {
       margin-top: 2px;
     }
