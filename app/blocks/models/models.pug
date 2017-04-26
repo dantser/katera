@@ -1,0 +1,10 @@
+include ../sale-preview-item/sale-preview-item
+
+mixin models(title, data)
+  +b.models&attributes(attributes)
+      +e.H2.header= title
+      +b.swiper-container
+        +e.swiper-pagination
+        +e.wrapper.swiper-wrapper
+          each obj in data
+            +sale-preview-item(obj).swiper-slide

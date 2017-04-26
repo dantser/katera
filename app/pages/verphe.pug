@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/verphe/verphe
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Каталог верфей - Azimut Yachts'
+
+block content
+  +branding()
+    +verphe()

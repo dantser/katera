@@ -16,6 +16,10 @@
   transition: color .25s ease-in-out, background-color .25s ease-in-out;
   outline: none;
 
+  &_shadow {
+    box-shadow: 0 0 35px 0 rgba(19, 11, 89, .3);
+  }
+
   &_rounded {
     border-radius: rem(20px);
   }
@@ -47,6 +51,27 @@
         background-color: #e02303;
         box-shadow: 0 2px 5px 0 rgba(#090435, .3);
       }
+    }
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+
+    &_right {
+      margin-left: 15px;
+    }
+
+    &_left {
+      margin-right: 15px;
+    }
+
+    &_kind_caret {
+      margin-top: .25em;
+      width: 12px;
+      height: 7px;
+      stroke: $color-white;
+      transform: rotate(-90deg);
     }
   }
 }
