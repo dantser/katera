@@ -10,6 +10,7 @@ import textField from '../blocks/text-field/text-field';
 import submenu from '../blocks/submenu/submenu';
 import timeline from '../blocks/timeline/timeline';
 import models from '../blocks/models/models';
+import selectCurrency from '../blocks/select-currency/select-currency';
 
 $(() => {
   commonInput();
@@ -23,4 +24,5 @@ $(() => {
   upBtn();
   timeline();
   models();
+  selectCurrency();
 });

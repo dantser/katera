@@ -3,6 +3,7 @@ include ../division/division
 include ../select/select
 include ../slider-range/slider-range
 include ../text-field/text-field
+include ../select-currency/select-currency
 
 mixin filter()
   +b.filter&attributes(attributes)
@@ -29,7 +30,7 @@ mixin filter()
               +text-field(filterData.priceTo)
             +e.currency
               +e.SPAN.currency__item
-                +icon('rouble').icon._type_rouble
+                +select-currency()
               +icon('chevron').icon_type_chevron
           +e.item._vendor
             +select(filterData.shipyard.name, filterData.shipyard.options)
