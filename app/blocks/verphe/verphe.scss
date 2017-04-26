@@ -154,6 +154,7 @@
       width: auto;
     }
   }
+
   .models_verphe {
     @include respond-to('tablet') {
       order: 7;
