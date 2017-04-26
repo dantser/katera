@@ -15,19 +15,20 @@
     flex-flow: row wrap;
 
     @include respond-to('tablet') {
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
     }
   }
 
   &__text {
     padding-left: 25px;
+    position: relative;
 
     @include respond-to('tablet') {
 
       &::after {
         content: '';
         position: absolute;
-        bottom: 105px;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 116px;
@@ -74,12 +75,6 @@
     }
   }
 
-  &__banner {
-    display: block;
-    width: 100%;
-    height: 294px;
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -113,6 +108,60 @@
       min-width: 290px;
       height: 40px;
       margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    color: $color-dark-blue;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: $NerisSemiBold;
+    text-align: center;
+    margin-top: 105px;
+
+    @include respond-to('tablet') {
+      order: 4;
+      font-size: 22px;
+      margin-top: 0;
+      font-family: $NerisLight;
+      margin-bottom: 16px;
+
+      &:nth-of-type(2) {
+        order: 6;
+      }
+    }
+  }
+
+  .timeline {
+    margin: 0 15px;
+    z-index: 5;
+
+    @include respond-to('tablet') {
+      order: 5;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__button {
+    width: 165px;
+    height: 40px;
+    margin: 49px auto;
+
+    @include respond-to('tablet') {
+      order: 9;
+      margin: 0 15px 38px;
+      width: auto;
+    }
+  }
+  .models_verphe {
+    @include respond-to('tablet') {
+      order: 7;
+      padding-top: 20px;
+
+      &:nth-of-type(2) {
+        order: 8;
+      }
     }
   }
 }
