@@ -19,11 +19,8 @@ include ../navbar/navbar
 include ../sale-preview-item/sale-preview-item
 
 mixin index()
-  +container()
-    +timeline()
   +b.index&attributes(attributes)
     +container()
-      +submenu(getData('submenu'))
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()

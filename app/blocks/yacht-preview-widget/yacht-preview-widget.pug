@@ -4,6 +4,7 @@
 include ../small-article-preview/small-article-preview
 include ../division/division
 include ../product-preview/product-preview
+include ../icon/icon
 
 mixin yacht-preview-widget(title, data)
   +b.yacht-preview-widget&attributes(attributes)
@@ -13,4 +14,6 @@ mixin yacht-preview-widget(title, data)
         each obj in data
           +product-preview(obj).__product
       +e.__button
-        +button(true)(href="#")._rounded._kind_red Смотреть все
+        +button(true)(href="#")._rounded._shadow._kind_red
+          | Смотреть все
+          +icon('caret').icon._kind_caret._right
