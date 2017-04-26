@@ -13,9 +13,11 @@
     height: 100%;
     z-index: 3;
   }
+
   @include respond-to('tablet') {
 
     &_color_dark-blue:hover {
+
       .article-preview__picture {
         box-shadow: none;
       }

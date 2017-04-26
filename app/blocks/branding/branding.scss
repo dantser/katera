@@ -118,7 +118,7 @@
     text-transform: uppercase;
 
     @include respond-to('laptop') {
-      margin: auto 0 94px auto;
+      margin: auto 6px 94px auto;
       font-size: rem(22px);
       font-weight: 700;
       line-height: 1.5;

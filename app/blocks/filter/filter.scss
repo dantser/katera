@@ -14,6 +14,12 @@
 
     @include respond-to('laptop') {
       flex-direction: column;
+      padding: 15px 200px 19px;
+      justify-content: space-between;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
       padding: 15px 15px 19px;
       justify-content: space-between;
     }
@@ -117,6 +123,10 @@
     outline: none;
     font-size: 20px;
     line-height: 24px;
+
+    @include respond-to('laptop') {
+      width: 290px;
+    }
   }
 
   &__item {
@@ -143,6 +153,7 @@
         content: '—';
         margin: 0 4px;
       }
+
       &-block {
         display: flex;
       }
