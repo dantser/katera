@@ -1,5 +1,7 @@
 .models {
   width: 100%;
+  border-top: 1px solid #e5e5e5;
+  padding: 29px 0 0;
 
   &__header {
     font-size: 24px;
@@ -13,7 +15,7 @@
     line-height: 32px;
 
     @include respond-to('tablet') {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 
@@ -92,6 +94,7 @@
       width: 165px;
       height: 134px;
       z-index: 1;
+
       img {
         width: 107px;
         height: 98px;

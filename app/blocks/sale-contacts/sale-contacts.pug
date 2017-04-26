@@ -1,0 +1,29 @@
+include ../list/list
+include ../button/button
+
+mixin sale-contacts()
+  .sale-contacts-wrap
+    +list()
+      +b.sale-contacts
+        +list-item().list__item
+          +e.img-wrap
+            +e.IMG.img(src="assets/images/canados.png")
+          +e.SPAN.about Верфь:
+            b Canados (Италия)
+          +e.SPAN.about Класс:
+            b Закрытые круизные яхты с хардтопом
+        +list-item().list__item
+          +e.SPAN.price Цена по запросу
+        +list-item().list__item
+          +e.SPAN.title Контакты продавца
+          +e.SPAN.name Михаил Александрович
+          +e.SPAN.tel Телефон:
+            ul
+              li +7 (495) 77-11-700
+              li +380 (98) 977 11 11
+          +e.SPAN.email E-mail:
+            ul
+              li sales@katera.com
+          +e.A(href="#").site www.canados.com
+          +button()._rounded._kind_blue.__msg-btn  Написать сообщение
+          +button()._rounded._kind_red._shadow.__call-btn Заказать звонок
