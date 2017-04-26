@@ -1,0 +1,74 @@
+
+
+[
+  {
+    "letter": "A",
+    "data": [
+      {
+        "title": "AB Yachts",
+        "count": "7"
+      },
+      {
+        "title": "Abeking and Rasmussen",
+        "count": "2"
+      },
+      {
+        "title": "Absolute",
+        "count": "21"
+      },
+      {
+        "title": "Acico Yachts",
+        "count": "0"
+      },
+      {
+        "title": "Adagio Yachts",
+        "count": "13"
+      },
+      {
+        "title": "Admiral",
+        "count": "3"
+      },
+      {
+        "title": "CROSSED",
+        "count": "0"
+      },
+      {
+        "title": "Alloy Yachts",
+        "count": "18"
+      },
+      {
+        "title": "Amels",
+        "count": "7"
+      },
+      {
+        "title": "Arcadia Yachts",
+        "count": "7"
+      },
+      {
+        "title": "Aureus Yachts",
+        "count": "56"
+      },
+      {
+        "title": "Azimut Yachts",
+        "count": "56"
+      },
+      {
+        "title": "Azuree",
+        "count": "24"
+      }
+    ]
+  },
+  {
+    "letter": "B",
+    "data": [
+      {
+        "title": "Baglietto Yachts",
+        "count": "7"
+      },
+      {
+        "title": "Baikal Yachts Group",
+        "count": "2"
+      }
+    ]
+  }
+]
