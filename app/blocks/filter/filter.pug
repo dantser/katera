@@ -29,9 +29,7 @@ mixin filter()
             +e.input
               +text-field(filterData.priceTo)
             +e.currency
-              +e.SPAN.currency__item
-                +select-currency()
-              +icon('chevron').icon_type_chevron
+              +select-currency()
           +e.item._vendor
             +select(filterData.shipyard.name, filterData.shipyard.options)
           +e.item._range
