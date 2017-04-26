@@ -63,7 +63,7 @@
       }
     }
 
-    &__item {
+    .swiper-slide {
       text-decoration: none;
 
       @include respond-to('tablet') {
@@ -74,7 +74,7 @@
       }
     }
 
-    &__content {
+    &__text {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -87,9 +87,15 @@
       }
     }
 
-    &__image img {
-      width: 100%;
+    .sale-preview-item__img-wrap {
+      position: relative;
+      width: 165px;
       height: 134px;
+      z-index: 1;
+      img {
+        width: 107px;
+        height: 98px;
+      }
 
       @include respond-to('tablet') {
         width: 107px;
@@ -124,7 +130,7 @@
       color: $color-dark-blue;
     }
 
-    &__parameters {
+    &__params {
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
