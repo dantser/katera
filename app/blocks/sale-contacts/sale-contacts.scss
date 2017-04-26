@@ -78,8 +78,7 @@
       margin-top: 13px;
     }
 
-    &__email,
-    &__tel {
+    &__email, &__tel {
       display: flex;
       margin-top: 14px;
 
@@ -90,10 +89,6 @@
           list-style: none;
         }
       }
-    }
-
-    &__country {
-      margin-top: 22px;
     }
 
     &__site {
