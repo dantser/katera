@@ -6,6 +6,7 @@ include ../button/button
 include ../banner/banner
 include ../text/text
 include ../verphe-contacts/verphe-contacts
+include ../models/models
 
 mixin verphe()
   +b.verphe
@@ -47,3 +48,4 @@ mixin verphe()
           +e.list
             +e.item
               +verphe-contacts()
+        +models('Модельный ряд', getData('sale-preview-item-extended'))
