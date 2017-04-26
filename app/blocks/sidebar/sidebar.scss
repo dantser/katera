@@ -1,0 +1,10 @@
+.sidebar {
+  display: block;
+  width: 263px;
+  margin-right: 30px;
+
+  &_right {
+    margin-right: 0;
+    margin-left: 30px;
+  }
+}

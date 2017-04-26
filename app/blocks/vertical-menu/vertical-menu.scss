@@ -20,6 +20,13 @@
       line-height: (36px/$base-font-size)*1em;
       text-decoration: none;
       font-weight: 300;
+      opacity: 1;
+      will-change: opacity;
+      transition: opacity .25s ease-in-out;
+
+      &:hover {
+        opacity: .75;
+      }
     }
   }
 

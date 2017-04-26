@@ -1,0 +1,68 @@
+.tag-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  @include respond-to('tablet') {
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    display: block;
+    font-size: 16px;
+    line-height: (45/16)*1em;
+    font-family: $NerisBlack;
+    color: $color-black;
+    margin-right: 20px;
+
+    @include respond-to('tablet') {
+      font-size: 14px;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include respond-to('tablet') {
+      font-size: 14px;
+      min-width: 480px;
+    }
+  }
+
+  &__tag {
+    display: block;
+    margin: 0;
+    margin-right: 17px;
+    padding: 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 50px;
+  }
+
+  &__tag a {
+    display: block;
+    padding: 6px 23px;
+    font-size: $base-font-size;
+    line-height: em(24px);
+    color: $color-dark-blue;
+    text-decoration: none;
+
+    @include respond-to('tablet') {
+      font-size: 14px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

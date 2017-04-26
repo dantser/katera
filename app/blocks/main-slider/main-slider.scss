@@ -28,6 +28,13 @@
     justify-content: flex-end;
     align-items: flex-end;
     text-align: right;
+
+    @include respond-to('tablet') {
+      bottom: 66px;
+      left: 16px;
+      right: 16px;
+      top: 16px;
+    }
   }
 
   &__slide-text {
@@ -41,6 +48,10 @@
       font-size: 18px;
       line-height: 24px;
       width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      margin-right: -8px;
     }
   }
 

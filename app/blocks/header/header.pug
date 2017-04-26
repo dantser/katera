@@ -8,10 +8,14 @@ include ../burger-dropdown/burger-dropdown
 include ../search-bar/search-bar
 
 mixin header()
-  +b('header').header&attributes(attributes)
+  //- Переменная page объявлена в app/pages/index.pug,
+  //- На главной странцие, в мобильной версии, header должен находится под брендингом
+  - var headerModifier = page === 'index' ? 'header_index' : ''
+  +b('header')(class=headerModifier).header&attributes(attributes)
     +container()
       +e.banner
         +banner('#', 'assets/images/banner.jpg')._overlay
+          +e('img')(src='assets/images/banner-img.png').little
     +e.container
       +container()
         +e.content

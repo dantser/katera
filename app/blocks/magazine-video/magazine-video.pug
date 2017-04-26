@@ -1,0 +1,44 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../video-preview/video-preview
+include ../small-article-preview/small-article-preview
+include ../share/share
+include ../comments/comments
+include ../tag-list/tag-list
+include ../text/text
+include ../banner/banner
+include ../comments-mark/comments-mark
+
+mixin magazine-video()
+  +b.magazine-video&attributes(attributes)
+    +container()
+      +page-header('', ['Главная', 'Журнал', 'Видео-обзоры', 'PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках'])
+      +main-container().main-container_shadow.magazine-videos__main-container
+        +e('iframe').video(src='https://www.youtube.com/embed/J-ek8drxFJA' allowfullscreen)
+        +e.content
+          +e.inner-content
+            +text().__text-block
+              h2 PROyachting проведет третий этап Sochi winter Cup на новогодних праздниках
+              p Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.
+            +tag-list( 'video1', getData('tag-list')).__tags
+            +share('vk', 'go', 'fb', 'odnokl', 'tw', small).__share
+          +e.inner-content
+            +comments(getData('comments'))
+        +e.sidebar
+          +e.heading._size_medium Другие видео:
+          +e('ul').items
+            +e.item
+              +video-preview(getData('video-preview'))._row
+            +e.item
+              +video-preview(getData('video-preview'))._row
+          +banner('#', 'assets/images/banner3.jpg').__video-banner
+          +e('ul').items
+            +e.item
+              +video-preview(getData('video-preview'))._row
+            +e.item
+              +video-preview(getData('video-preview'))._row
+            +e.item
+              +video-preview(getData('video-preview'))._row
+            +e.item
+              +video-preview(getData('video-preview'))._row

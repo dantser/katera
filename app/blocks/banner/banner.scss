@@ -5,6 +5,13 @@
   position: relative;
   display: block;
   z-index: 1;
+  opacity: 1;
+  will-change: opacity;
+  transition: opacity .25s ease-in-out;
+
+  &:hover {
+    opacity: .75;
+  }
 
   &__image {
     height: 100%;
@@ -29,11 +36,18 @@
     right: 0;
     bottom: 0;
     margin: auto;
+    text-align: center;
 
     &_img {
       height: 100%;
       z-index: -1;
       opacity: .52;
     }
+  }
+
+  &__little {
+    height: 100%;
+    position: relative;
+    z-index: -1;
   }
 }

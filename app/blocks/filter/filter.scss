@@ -1,6 +1,12 @@
 .filter {
   background-color: $color-white;
   box-shadow: 0 0 7px rgba(19, 11, 89, .14);
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @include respond-to('mobile') {
+    margin-bottom: 0;
+  }
 
   &__content {
     display: flex;
@@ -8,7 +14,13 @@
 
     @include respond-to('laptop') {
       flex-direction: column;
-      padding: 15px 0 19px;
+      padding: 15px 200px 19px;
+      justify-content: space-between;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+      padding: 15px 15px 19px;
       justify-content: space-between;
     }
   }
@@ -33,6 +45,7 @@
   .division_active {
     font-family: $NerisBlack;
     font-size: 20px;
+    outline: none;
 
     @include respond-to('laptop') {
       font-family: $NerisSemiBold;
@@ -56,6 +69,7 @@
     font-family: $NerisSemiBold;
     padding-left: 25px;
     text-decoration: none;
+    outline: none;
 
     @include respond-to('laptop') {
       font-family: $NerisSemiBold;
@@ -98,6 +112,8 @@
       &__control, &__placeholder {
         font-family: $NerisLight;
         font-size: rem(13px);
+        font-style: italic;
+        color: #666;
       }
     }
   }
@@ -107,11 +123,41 @@
     outline: none;
     font-size: 20px;
     line-height: 24px;
+
+    @include respond-to('laptop') {
+      width: 290px;
+    }
   }
 
   &__item {
     width: 270px;
     height: 40px;
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-label {
+      line-height: 1;
+      color: $color-black;
+    }
+
+    &-text {
+      font-size: rem(13px);
+      line-height: 1;
+      font-style: italic;
+      color: #666;
+
+      &:first-child::after {
+        content: '—';
+        margin: 0 4px;
+      }
+
+      &-block {
+        display: flex;
+      }
+    }
 
     @include respond-to('laptop') {
       width: 100%;
@@ -165,6 +211,11 @@
     }
 
     &_range {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 3px;
+
       @include respond-to('laptop') {
         order: 3;
       }
@@ -189,6 +240,7 @@
         height: 6px;
         fill: $color-red;
         stroke: $color-red;
+        margin-bottom: 4px;
       }
     }
   }

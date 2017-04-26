@@ -25,8 +25,8 @@ $base-color:        $color-dark-gray;
 
 // breakpoints
 $breakpoints: (
-  'mobile': (max-width: 320px),
-  'tablet': (max-width: 768px),
-  'laptop': (max-width: 992px),
-  'desktop': (max-width: 1170px)
+  'mobile': (min-width: 320px) and (max-width: 767px),
+  'tablet': (min-width: 768px) and (max-width: 991px),
+  'laptop': (max-width: 992px) and (max-width: 1169px),
+  'desktop': (min-width: 1170px)
 );

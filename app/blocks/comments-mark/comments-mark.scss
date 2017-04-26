@@ -1,0 +1,83 @@
+.comments-mark {
+  background: #e4f6f7;
+  display: inline-flex;
+  margin-top: 12px;
+
+  @media (max-width: 600px) {
+    margin-left: -68px;
+  }
+
+  &__text {
+    font-family: $OpenSans;
+    font-size: 12px;
+    font-weight: 400;
+    color: #5a64b4;
+    margin: 0 5px 0 0;
+
+    @media (max-width: 600px) {
+      display: inline-table;
+      margin: 0 3px 0 0;
+    }
+
+    &_dot {
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        background: #8f93a1;
+        border-radius: 50%;
+        margin-bottom: 2px;
+        margin-left: 3px;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        background: #8f93a1;
+        border-radius: 50%;
+        margin-bottom: 2px;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  &__icon {
+    font-family: $OpenSans;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4165b9;
+    margin-right: 7px;
+
+    @media (max-width: 600px) {
+      margin-right: 3px;
+    }
+
+    &_quotes {
+
+      &::after {
+        content: '»';
+      }
+
+      &::before {
+        content: '«';
+      }
+    }
+
+    &_color {
+      color: #8f93a1;
+    }
+
+    &_time {
+      color: #8f93a1;
+      margin-right: 0;
+
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.magazine-video {
+  display: block;
+  flex: 1 0 auto;
+
+  &__main-container {
+    display: flex !important;
+    flex-flow: row wrap;
+  }
+
+  &__content {
+    margin-top: 23px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    @include respond-to('tablet') {
+      width: 100%;
+    }
+  }
+
+  &__sidebar {
+    margin-top: 15px;
+    width: 360px;
+    margin-left: 30px;
+
+    @include respond-to('tablet') {
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+    }
+  }
+
+  &__heading {
+    display: block;
+    font-family: $NerisBlack;
+    font-size: rem(20px);
+    color: $color-black;
+
+    &_size_medium {
+      margin-bottom: 20px;
+      font-size: rem(18px);
+    }
+  }
+
+  &__video {
+    display: block;
+    width: 100%;
+    height: 600px;
+
+    @include respond-to('tablet') {
+      height: 325px;
+    }
+  }
+
+  &__items {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    padding-right: 25px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include respond-to('tablet') {
+      padding: 0;
+    }
+  }
+
+  .banner {
+    height: 160px;
+    margin: 25px 0;
+    position: relative;
+  }
+
+  &__inner-content {
+    box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+    padding: 20px 25px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include respond-to('tablet') {
+      padding: 10px;
+      padding-right: 0;
+    }
+  }
+
+  &__text-block.text {
+    margin-bottom: 33px;
+    display: block;
+
+    @include respond-to('tablet') {
+      padding-right: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      line-height: 26px;
+      font-family: $NerisBlack;
+      max-width: 420px;
+      color: $color-black;
+
+      @include respond-to('tablet') {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      max-width: 630px;
+      font-size: 14px;
+      line-height: 20px;
+      font-family: $NerisLight;
+    }
+  }
+
+  &__share {
+    padding-top: 20px;
+    border-top: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+      padding-right: 10px;
+    }
+  }
+
+  &__tags {
+    margin-bottom: 20px;
+
+    @include respond-to('tablet') {
+      padding-right: 10px;
+    }
+  }
+}

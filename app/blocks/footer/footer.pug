@@ -3,9 +3,14 @@ include ../copyright/copyright
 include ../developed-by/developed-by
 include ../logo/logo
 include ../col-nav/col-nav
+include ../subscribe/subscribe
+include ../up-btn/up-btn
 
 mixin footer()
   +b('footer').footer
+    +e.up-btn
+      +up-btn()
+    +subscribe()
     +container()
       +e.row
         +e.col-four

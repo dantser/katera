@@ -15,7 +15,7 @@ const isDebug = process.env.NODE_ENV !== 'production';
 /* eslint-disable global-require */
 gulp.task('styles', () => {
   gulp.src('app/styles/*.scss')
-    // .pipe(plumber({errorHandler: errorHandler('Error in styles task')}))
+    .pipe(plumber({errorHandler: errorHandler('Error in styles task')}))
     .pipe(gulpIf(isDebug, sourcemaps.init()))
     .pipe(bulkSass())
     .pipe(sass())

@@ -10,7 +10,20 @@
     display: block;
   }
 
+  &__item {
+    @include respond-to('tablet') {
+      margin: 0 5px;
+    }
+  }
+
   &__link {
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
+
+    &:hover {
+      opacity: .75;
+    }
 
     &_type {
 
@@ -53,9 +66,11 @@
 
   &__icon {
     fill: #fff;
+    stroke: #fff;
 
     * {
       fill: #fff;
+      stroke: #fff;
     }
   }
 
@@ -114,5 +129,10 @@
         }
       }
     }
+  }
+
+  &_small .social__link {
+    width: 32px;
+    height: 32px;
   }
 }

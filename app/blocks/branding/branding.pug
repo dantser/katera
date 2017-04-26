@@ -1,0 +1,51 @@
+include ../image-bg/image-bg
+include ../container/container
+include ../icon/icon
+
+mixin branding(page)
+  +b.branding
+    if (page === 'index')
+      +e.top._index
+        +e.image
+          +image-bg()(src='assets/images/branding/main-top.png')
+
+        +container()
+
+          +e.logo
+            +image-bg()(src='assets/images/branding/logo.png')
+
+          +e.text Запомни путешествие в деталях
+
+          +e.scroll-btn
+            +icon('caret').caret
+            +icon('caret').caret
+
+      +e.content
+        block
+
+      +e.bottom._index
+        +e.image
+          +image-bg()(src='assets/images/branding/main-bottom.png')
+
+    else
+      +e.top._page
+        +e.image
+          +image-bg()(src='assets/images/branding/main-top.png')
+
+        +container()
+
+          +e.logo
+            +image-bg()(src='assets/images/branding/logo.png')
+
+          +e.text Запомни путешествие в деталях
+
+          +e.scroll-btn
+            +icon('caret').caret
+            +icon('caret').caret
+
+      +e.content
+        block
+
+      +e.bottom._page
+        +e.image
+          +image-bg()(src='assets/images/branding/main-bottom.png')

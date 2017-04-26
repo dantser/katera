@@ -1,0 +1,27 @@
+include ../comments-container/comments-container
+//- image  --- Аватар пример: +comments('assets/images/comments.jpg')
+//- name   --- ФИО пример: +comments('Мария Головина')
+//- answer --- Ответ на комментарий пример: +comments('ответил Марии')
+//- text   --- Текс комментария пример: +comments('Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.')
+//- модификатор _left добавляет padding-left
+
+mixin comments(data)
+  +b.comments
+    +comments-container()
+    each comment in data.comments
+      - var childClass = comment.child ? 'comments__item_left' : '';
+      +e.item(class=childClass)
+        +e.left
+          +e('img')(src= comment.image alt='').img
+        +e.right
+          +e.box
+            +e('h4').fio=  comment.name
+            +e('span').answer=  comment.answer
+          +e('p').text=  comment.text
+          +comments-mark(comment.mark)
+
+    +e.item
+      +e.left
+        +e('img')(src= data.images alt='').img
+      +e.right
+        +e('a').link Добавить комментарий

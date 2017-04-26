@@ -1,0 +1,54 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../submenu/submenu
+include ../button/button
+include ../banner/banner
+include ../article-preview/article-preview
+
+mixin magazine-razdel()
+  +b.magazine-razdel&attributes(attributes)
+    +container()
+      +page-header('Журнал', ['Главная', 'Журнал', 'Путешествия'])
+      +main-container().main-container_shadow.magazine-razdel__main-container
+        +submenu(getData('submenu'))
+        +e.content
+          +e.list
+            +e.col
+              - for (var i = 0; i < 4; i++)
+                +e.item
+                  if (i < 3)
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  else
+                    +e.banner
+                      +banner('#', 'assets/images/banner2.jpg')
+
+            +e.col
+              - for (var i = 0; i < 4; i++)
+                +e.item
+                  +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+            +e.col
+              - for (var i = 0; i < 4; i++)
+                +e.item
+                  if (i < 3)
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  else
+                    +e.banner
+                      +banner('#', 'assets/images/banner2.jpg')
+
+            +e.col
+              - for (var i = 0; i < 4; i++)
+               +e.item
+                  if (i === 0)
+                    +e.banner
+                      +banner('#', 'assets/images/banner2.jpg')
+                  else
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+            +e.col
+              - for (var i = 0; i < 4; i++)
+                +e.item
+                  +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+          +button()._rounded._kind_red.__show-more Показать еще
