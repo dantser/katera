@@ -1,0 +1,58 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../catalog-filter/catalog-filter
+include ../catalog-verphe/catalog-verphe
+include ../banner/banner
+include ../sale-preview-item/sale-preview-item
+
+mixin catalog-verphe-page()
+  +b('div').catalog-verphe-page
+    +container()
+      +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
+      +main-container()
+        +e('div').wrapper
+          +e('div').catalog
+            +catalog-filter()
+            +catalog-verphe(getData('catalog-verphe'))
+          +e('div').sale-preview
+
+            +e('div').banner
+              +banner('#', 'assets/images/banner3.jpg')
+
+            +e('div').preview._big
+              +sale-preview-item(getData('sale-preview-item'))
+
+            +e('div').preview._group
+              +e('div').preview._col
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+              +e('div').preview._col
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+
+            +e('div').banner
+              +banner('#', 'assets/images/banner3.jpg')
+
+            +e('div').preview._big
+              +sale-preview-item(getData('sale-preview-item'))
+
+            +e('div').preview._group
+              +e('div').preview._col
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+              +e('div').preview._col
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))

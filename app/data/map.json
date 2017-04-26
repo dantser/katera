@@ -4,5 +4,7 @@
   { "path": "https://verstaburo.github.io/katera/magazine-page.html", "title": "magazine-page" },
   { "path": "https://verstaburo.github.io/katera/magazine-razdel.html", "title": "magazine-razdel" },
   { "path": "https://verstaburo.github.io/katera/magazine-video.html", "title": "magazine-video" },
-  { "path": "https://verstaburo.github.io/katera/magazine-videos.html", "title": "magazine-video" }
+  { "path": "https://verstaburo.github.io/katera/magazine-videos.html", "title": "magazine-video" },
+  { "path": "https://verstaburo.github.io/katera/verphe.html", "title": "verphe-page" },
+  { "path": "https://verstaburo.github.io/katera/catalog-verphe.html", "title": "catalog-verphe" }
 ]
