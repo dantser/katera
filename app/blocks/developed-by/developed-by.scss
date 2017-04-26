@@ -20,7 +20,7 @@
     }
   }
 
-  &__logo > * {
+  &__icon {
     width: 97px;
     height: 13px;
     fill: #666;
@@ -30,10 +30,6 @@
 
     &:hover {
       opacity: .75;
-    }
-
-    & * {
-      fill: #666;
     }
   }
 }

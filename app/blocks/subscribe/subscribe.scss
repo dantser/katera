@@ -114,9 +114,6 @@
     pointer-events: none;
     margin-left: 9px;
     transform: translate(7px, 3px);
-
-    * {
-      stroke: $color-white;
-    }
+    stroke: $color-white;
   }
 }

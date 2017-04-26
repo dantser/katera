@@ -1,6 +1,7 @@
 include ../../node_modules/bemto.pug/bemto
 include ../blocks/header/header
 include ../blocks/footer/footer
+include ../blocks/up-btn/up-btn
 
 doctype html
 html(lang='ru')
@@ -9,5 +10,6 @@ html(lang='ru')
     block contentVariables
     +header()
     block content
+    +up-btn()
     +footer()
     script(src='assets/scripts/app.min.js')

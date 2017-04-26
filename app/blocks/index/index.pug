@@ -1,4 +1,4 @@
-include ../header/header
+include ../page-header/page-header
 include ../article-preview/articles-grid
 include ../article-preview/article-preview
 include ../main-container/main-container
@@ -16,12 +16,14 @@ include ../subscribe/subscribe
 include ../article-preview/articles-grid
 include ../article-preview/article-preview
 include ../navbar/navbar
+include ../sale-preview-item/sale-preview-item
 
 mixin index()
   +container()
     +timeline()
   +b.index&attributes(attributes)
     +container()
+      +submenu(getData('submenu'))
       +main-container().main-container_shadow.index__main-container
         +main-slider()
         +filter()

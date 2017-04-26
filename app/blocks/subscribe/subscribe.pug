@@ -9,7 +9,7 @@ mixin subscribe()
       +e('h2').heading Подпишитесь на рассылку
       +e('form').form
         +e.section
-          +e('input').input(type='text', placeholder='Введите email')
+          +e('input').input(type='text' name='email' placeholder='Введите email')
         +e.section
           +e('button').btn Отправить
            +icon('subscribe').icon

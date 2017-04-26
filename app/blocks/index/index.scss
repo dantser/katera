@@ -4,7 +4,7 @@
   flex: 1 0 auto;
 
   @include respond-to('laptop') {
-    margin-top: 50px; // mobile header height + 15px
+    margin-top: 35px; // mobile header height
   }
 
   &__main-container {
@@ -41,6 +41,47 @@
   .filter {
     @include respond-to('laptop') {
       width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      margin-top: 0;
+    }
+
+    &__control {
+      @include respond-to('mobile') {
+        justify-content: space-around;
+        padding: 0 38px;
+      }
+
+      @include respond-to('laptop') {
+        justify-content: space-around;
+        padding: 0 38px;
+      }
+    }
+
+    &__division {
+      font-size: 16px;
+      font-weight: 700;
+      font-family: $NerisSemiBold;
+
+      @include respond-to('laptop') {
+        padding-right: 0;
+      }
+    }
+
+    .division_active {
+      font-size: 16px;
+      font-weight: 900;
+      font-family: $NerisBlack;
+    }
+
+    .division_active {
+
+      &::before {
+        @include respond-to('laptop') {
+          left: 61%;
+        }
+      }
     }
   }
 
@@ -85,7 +126,7 @@
 
   .swiper-wrapper {
     @include respond-to('mobile') {
-      margin-bottom: 50px;
+      margin-bottom: 52px;
     }
   }
 

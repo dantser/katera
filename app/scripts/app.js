@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import commonInput from './common/input';
 import burger from '../blocks/burger/burger';
 import upBtn from '../blocks/up-btn/up-btn';
 import select from '../blocks/select/select';
@@ -8,8 +9,10 @@ import filter from '../blocks/filter/filter';
 import textField from '../blocks/text-field/text-field';
 import submenu from '../blocks/submenu/submenu';
 import timeline from '../blocks/timeline/timeline';
+import models from '../blocks/models/models';
 
 $(() => {
+  commonInput();
   burger();
   select();
   searchBar();
@@ -19,4 +22,5 @@ $(() => {
   textField();
   upBtn();
   timeline();
+  models();
 });

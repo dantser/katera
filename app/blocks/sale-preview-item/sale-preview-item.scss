@@ -11,26 +11,39 @@
     z-index: 1;
   }
 
-  .sale-preview-text {
+  &__text {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     font-size: rem(18px);
     margin-top: 4px;
+  }
 
-    &__info {
-      font-size: rem(13px);
-      color: $color-gray;
-    }
+  &__info {
+    font-size: rem(13px);
+    color: $color-gray;
+  }
 
-    &__name {
-      font-family: $NerisBlack;
-      color: $color-black;
-    }
+  &__name {
+    font-family: $NerisBlack;
+    color: $color-black;
+  }
 
-    &__price {
-      color: $color-dark-blue;
-    }
+  &__price {
+    color: $color-dark-blue;
+  }
+
+  &__params {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__param {
+    display: block;
+    text-align: center;
+    color: $color-gray;
   }
 }

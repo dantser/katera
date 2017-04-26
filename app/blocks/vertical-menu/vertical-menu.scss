@@ -13,20 +13,20 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
 
-    & a {
-      color: $color-white;
-      font-size: $base-font-size;
-      line-height: (36px/$base-font-size)*1em;
-      text-decoration: none;
-      font-weight: 300;
-      opacity: 1;
-      will-change: opacity;
-      transition: opacity .25s ease-in-out;
+  &__link {
+    color: $color-white;
+    font-size: $base-font-size;
+    line-height: (36px/$base-font-size)*1em;
+    text-decoration: none;
+    font-weight: 300;
+    opacity: 1;
+    will-change: color;
+    transition: color .25s ease-in-out;
 
-      &:hover {
-        opacity: .75;
-      }
+    &:hover {
+      color: $color-red;
     }
   }
 
@@ -37,12 +37,12 @@
 
       &__item {
         margin-bottom: 0;
+      }
 
-        & a {
-          font-size: 24px;
-          line-height: (90px/24px)*1em;
-          font-weight: 600;
-        }
+      &__link {
+        font-size: 24px;
+        line-height: (90px/24px)*1em;
+        font-weight: 600;
       }
     }
   }
