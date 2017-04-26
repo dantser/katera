@@ -42,10 +42,10 @@
   }
 
   &__buttons {
-    margin-right: 8px;
+    margin-right: 10px;
 
-    & > * {
-      width: 232px;
+    & > ul {
+      width: 190px;
     }
   }
 
@@ -69,6 +69,20 @@
     &_small {
       width: 32px;
       height: 32px;
+    }
+  }
+
+  &_bigger-title {
+
+    .share__title {
+      font-family: $NerisLight;
+      font-size: rem(24px);
+      font-weight: 400;
+      margin-right: 8px;
+
+      @include respond-to('tablet') {
+        font-size: rem(20px);
+      }
     }
   }
 }
