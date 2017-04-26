@@ -15,11 +15,14 @@ include ../subscribe/subscribe
 include ../article-preview/articles-grid
 include ../article-preview/article-preview
 include ../navbar/navbar
+include ../sale-preview-item/sale-preview-item
 
 mixin index()
   +b.index&attributes(attributes)
     +container()
       +main-container().main-container_shadow.index__main-container
+        div(style="width: 300px; margin: 100px")
+          +sale-preview-item(getData('sale-preview-item-extended'))
         +main-slider()
         +filter()
         +navbar(getData('navbar'))
