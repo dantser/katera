@@ -4,7 +4,12 @@ mixin sale-preview-item(obj)
   +b.A(href=obj.path).sale-preview-item&attributes(attributes)
     +e.__img-wrap
       +image-bg()(src=obj.img)
-    +b.sale-preview-text
+    +e.text
       +e.info= obj.info
       +e.name= obj.name
       +e.price= obj.price
+
+    if (obj.params)
+      +e('ul').params
+        each param in obj.params
+          +e('li').param= `${param.name}: ${param.value}`
