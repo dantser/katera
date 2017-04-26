@@ -6,6 +6,7 @@ include ../container/container
 include ../main-slider/main-slider
 include ../banner-big/banner-big
 include ../filter/filter
+include ../timeline/timeline
 include ../topic-preview-widget/topic-preview-widget
 include ../yacht-preview-widget/yacht-preview-widget
 include ../submenu/submenu
@@ -17,6 +18,8 @@ include ../article-preview/article-preview
 include ../navbar/navbar
 
 mixin index()
+  +container()
+    +timeline()
   +b.index&attributes(attributes)
     +container()
       +main-container().main-container_shadow.index__main-container

@@ -7,6 +7,7 @@ import mainSlider from '../blocks/main-slider/main-slider';
 import filter from '../blocks/filter/filter';
 import textField from '../blocks/text-field/text-field';
 import submenu from '../blocks/submenu/submenu';
+import timeline from '../blocks/timeline/timeline';
 
 $(() => {
   burger();
@@ -17,4 +18,5 @@ $(() => {
   filter();
   textField();
   upBtn();
+  timeline();
 });
