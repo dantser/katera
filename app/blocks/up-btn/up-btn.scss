@@ -20,9 +20,6 @@
     width: 25px;
     height: 13px;
     transform: rotate(180deg);
-
-    * {
-      stroke: $color-white;
-    }
+    stroke: $color-white
   }
 }

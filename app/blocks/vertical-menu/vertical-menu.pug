@@ -4,5 +4,5 @@ mixin vertical-menu(menu)
   +b('ul').vertical-menu&attributes(attributes)
       each item in menu
         +e('li').item
-          +e('a')(href='#')
+          +e('a')(href='#').link
             != item

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import './common/input';
 import burger from '../blocks/burger/burger';
 import upBtn from '../blocks/up-btn/up-btn';
 import select from '../blocks/select/select';

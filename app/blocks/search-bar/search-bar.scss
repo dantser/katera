@@ -37,11 +37,8 @@
         display: block;
         width: 18px;
         height: 18px;
-
-        * {
-          stroke: #fb2500;
-          fill-opacity: 0;
-        }
+        stroke: #fb2500;
+        fill-opacity: 0;
       }
     }
   }
@@ -76,13 +73,10 @@
     display: block;
     width: 18px;
     height: 18px;
+    stroke: $color-dark-blue;
+    fill: transparent;
 
-    * {
-      stroke: $color-dark-blue;
-      fill: $color-white;
-    }
-
-    &_color_red * {
+    &_color_red {
       stroke: $color-red;
     }
   }

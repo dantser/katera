@@ -8,10 +8,7 @@
     width: 20px;
     height: 17px;
     pointer-events: none;
-
-    * {
-      stroke: $color-red;
-    }
+    stroke: $color-red;
   }
 
   &__text {

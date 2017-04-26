@@ -23,6 +23,14 @@
       { "value": 3, "title": "Верфь #3" }
     ]
   },
+  "origin": {
+    "name": "origin",
+    "options": [
+      { "value": 1, "title": "Страна #1" },
+      { "value": 2, "title": "Страна #2" },
+      { "value": 3, "title": "Страна #3" }
+    ]
+  },
   "priceFrom": {
     "name": "price-from",
     "type": "text",
