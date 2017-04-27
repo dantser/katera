@@ -142,11 +142,6 @@
 
     &__size {
       margin-right: 29px;
-
-      @include respond-to('tablet') {
-        //float: none;
-        //margin-right: 0;
-      }
     }
 
     &__size-medium {
