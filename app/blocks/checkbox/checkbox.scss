@@ -4,6 +4,25 @@
   height: 20px;
   cursor: pointer;
 
+  &_switcher, &_circle {
+
+    .checkbox {
+
+      &__box {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #ccc;
+        border: 0;
+      }
+
+      &__control:checked + .checkbox__box {
+        box-shadow: 0 3px 10px 0 rgba(251, 37, 0, .6);
+        border: 0;
+      }
+    }
+  }
+
   &_switcher {
     display: flex;
     align-items: center;
@@ -15,18 +34,11 @@
     .checkbox {
 
       &__box {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background-color: #ccc;
-        border: 0;
         transform: translate3d(2px, 0, 0);
       }
 
       &__control:checked + .checkbox__box {
         transform: translate3d(40px, 0, 0);
-        box-shadow: 0 3px 10px 0 rgba(251, 37, 0, .6);
-        border: 0;
       }
     }
   }
