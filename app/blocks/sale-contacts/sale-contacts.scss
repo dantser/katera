@@ -22,6 +22,18 @@
       font-size: rem(14px);
     }
 
+    &__info-row {
+      font-size: rem(14px);
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-bottom: 25px;
+
+      @include respond-to(tablet) {
+        display: none;
+      }
+    }
+
     &__icon-close {
       display: none;
 
@@ -33,6 +45,12 @@
         right: 20px;
         top: 20px;
         fill: $color-red;
+      }
+    }
+
+    &__borderless {
+      @include respond-to(tablet) {
+        border: none;
       }
     }
 
@@ -109,6 +127,10 @@
       color: $color-red;
       font-family: $NerisSemiBold;
       padding: 11px 0;
+
+      @include respond-to(tablet) {
+        display: none;
+      }
     }
 
     &__title {

@@ -1,0 +1,34 @@
+include ../list/list
+include ../button/button
+include ../icon/icon
+
+mixin sale-contacts-offer()
+  .sale-contacts-wrap
+    +list()
+      +b.sale-contacts
+        +icon('close').__icon-close
+        +list-item().list__item.__borderless
+          +e.info-row
+            SPAN 2016
+              br
+              |год
+            SPAN 180
+              br
+              |моточасов
+            SPAN Россия,
+              br
+              |Новороссийск
+        +list-item().list__item.__borderless
+          +e.SPAN.price 3 000 000 $
+        +list-item().list__item
+          +e.SPAN.title Контакты продавца
+          +e.SPAN.name Михаил Александрович
+          +e.SPAN.tel Телефон:
+            ul
+              li +7 (495) 77-11-700
+              li +380 (98) 977 11 11
+          +e.SPAN.email E-mail:
+            ul
+              li sales@katera.com
+          +button()._rounded._kind_blue.__msg-btn  Написать сообщение
+          +button()._rounded._kind_red._shadow.__call-btn Заказать звонок
