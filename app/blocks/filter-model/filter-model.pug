@@ -1,0 +1,33 @@
+include ../button/button
+include ../division/division
+include ../select/select
+include ../slider-range/slider-range
+include ../text-field/text-field
+
+mixin filter-model()
+  +b.filter-model&attributes(attributes)
+  
+    - var filterData = getData('filter')
+      +e.item._vendor
+        +select(filterData.shipyard.name, filterData.shipyard.options)
+      +e.item._range
+        +e.item-info
+          +e.item-label Длина
+          +e.item-text-block
+            +e.item-text.js-filter-length-min
+            +e.item-text.js-filter-length-max
+        +slider-range().js-filter-slider-range
+      +e.item._price
+        +e.SPAN.price__text Цена
+        +e.input
+          +text-field(filterData.priceFrom)
+        +e.SPAN.price__text &#8212
+        +e.input
+          +text-field(filterData.priceTo)
+        +e.currency
+          +e.SPAN.currency__item
+            +icon('rouble').icon._type_rouble
+          +icon('chevron').icon_type_chevron
+      +e.item._search
+        +button()._kind_red.__button Найти
+        +e.A(href='#').link Расширенный фильтр
