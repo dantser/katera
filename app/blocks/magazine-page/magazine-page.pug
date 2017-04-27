@@ -6,13 +6,17 @@ include ../banner/banner
 include ../text/text
 include ../sale-preview-item/sale-preview-item
 include ../extra-articles/extra-articles
+include ../tag-list/tag-list
+include ../share/share
+include ../comments/comments
+include ../comments-mark/comments-mark
 
 mixin magazine-page()
   +b.magazine-page&attributes(attributes)
     +container()
       +page-header('PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках', ['Главная', 'Журнад', 'Путешествия', 'PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках'])
       +main-container().main-container_shadow.magazine-razdel__main-container
-        +e.content
+        +e.content.magazine2__content-one
           +text().__text
             +e.block
               +e('span;').size._big Т
@@ -110,13 +114,29 @@ mixin magazine-page()
         +e.sidebar
           +e.list
             - for (var i = 0; i < 2; i++)
-              +e.item
-                +e.banner
-                  +banner('#', 'assets/images/banner2.jpg')
-              +e.item
-                +sale-preview-item(getData('sale-preview-item'))
-              +e.item
-                +sale-preview-item(getData('sale-preview-item'))
+            +e.item
+              +e.banner
+                +banner('#', 'assets/images/banner2.jpg')
+            +e.item
+              +sale-preview-item(getData('sale-preview-item'))
+            +e.item
+              +sale-preview-item(getData('sale-preview-item'))
+            +e.item
+              +e.banner
+                +banner('#', 'assets/images/banner2.jpg')
+            +e.item
+              +sale-preview-item(getData('sale-preview-item'))
+
+        +e.box-bg
+          +image-bg()(src='assets/images/magazine/magazine2-1.jpg')
+
+        +e.content-two.content-three
+          +text()
+          +e.inner-content
+            +tag-list( 'video1', getData('tag-list')).__tags
+            +share('vk', 'go', 'fb', 'odnokl', 'tw', small).__share
+          +e.inner-content
+            +comments(getData('comments'))
 
         +e.extra-articles
           +extra-articles('Другие статьи')
