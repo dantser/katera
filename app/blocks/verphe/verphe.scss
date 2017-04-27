@@ -13,7 +13,6 @@
   &__main-container {
     display: flex !important;
     flex-flow: row wrap;
-    margin-bottom: 162px;
 
     @include respond-to('tablet') {
       flex-flow: column nowrap;
@@ -160,7 +159,7 @@
   }
 
   .timeline {
-    margin: 26px 25px 10px -40px;
+    margin: 26px 25px 15px 0;
     z-index: 5;
     width: 100%;
 
@@ -181,15 +180,9 @@
       width: auto;
     }
   }
-
   .models_sport {
     padding-bottom: 31px;
     border-bottom: 1px solid $color-light-gray;
-
-    @include respond-to('tablet') {
-        border-bottom: none;
-        padding-bottom: 8px;
-    }
 
     .models__header {
       margin-top: 4px;
@@ -212,10 +205,6 @@
 
       &__swiper-pagination {
         display: none;
-      }
-
-      @include respond-to('tablet') {
-        height: auto;
       }
     }
 

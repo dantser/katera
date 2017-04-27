@@ -1,4 +1,5 @@
-.magazine2 {
+.magazine2,
+.magazine-page {
   display: block;
   flex: 1 0 auto;
 
@@ -27,12 +28,6 @@
       &__img {
         height: 100%;
       }
-    }
-  }
-
-  .main-container {
-    @include respond-to('tablet') {
-      margin-bottom: 0;
     }
   }
 
@@ -219,6 +214,20 @@
     }
   }
 
+  .content-three {
+    width: calc(100% - 290px);
+    padding-left: 97px;
+
+    @include respond-to('tablet') {
+      width: 100%;
+      padding-left: 0;
+
+      .text {
+        padding: 0 15px;
+      }
+    }
+  }
+
   &__big-banner {
     margin: 30px 0;
   }
@@ -304,7 +313,7 @@
         margin: 0 auto;
 
         .tag-list__tag {
-          margin: 0 10px;
+          margin-right: 0;
         }
       }
 
@@ -315,10 +324,10 @@
         flex-direction: column;
 
         .tag-list__tag {
-          margin: 0 0 20px;
+          margin-bottom: 20px;
 
           &:last-child {
-            margin: 0;
+            margin-bottom: 0;
           }
         }
       }
@@ -326,7 +335,7 @@
   }
 
   &__tags {
-    padding-bottom: 20px;
+    padding-bottom: 18px;
   }
 
   &__share {
@@ -374,7 +383,7 @@
     padding-bottom: 63px;
     margin-top: 7px;
 
-    @include respond-to('tablet') {
+    @include respond-to('mobile') {
       padding-bottom: 29px;
       padding-left: 0;
       padding-right: 0;
@@ -387,7 +396,7 @@
       box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
       border-radius: 1.42857rem;
 
-      @include respond-to('tablet') {
+      @include respond-to('mobile') {
         width: 290px;
         margin: 27px auto 0;
       }
