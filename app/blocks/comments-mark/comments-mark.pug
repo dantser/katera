@@ -4,8 +4,8 @@
 
 mixin comments-mark(obj)
   +b.comments-mark&attributes(attributes)
-    +e('p').text Отметка
-    +e('span').icon_quotes=  obj.text
-    +e('p').text_dot Ответить
+    +e('a')(href='#').text Отметка
+      +e('span').icon_quotes=  obj.text
+    +e('a')(href='#').text_dot Ответить
     +e('span').icon_color=  obj.date
     +e('span').icon_time=  obj.time

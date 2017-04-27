@@ -1,0 +1,75 @@
+.select-currency {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &_active {
+
+    .select-currency {
+
+      &__icon_kind_caret {
+        transform: rotate(180deg);
+      }
+
+      &__select {
+        display: block;
+      }
+    }
+  }
+
+  &__icon {
+
+    &_kind_rouble {
+      width: 11px;
+      height: 13px;
+    }
+
+    &_kind_usd {
+      width: 11px;
+      height: 13px;
+    }
+
+    &_kind_caret {
+      width: 11px;
+      height: 6px;
+      stroke: $color-red;
+      will-change: transform;
+      transition: transform .25s ease-in-out;
+    }
+  }
+
+  &__selected {
+    margin-right: 6px;
+  }
+
+  &__select {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    list-style: none;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .35);
+    z-index: 200;
+    background-color: $color-white;
+    border-radius: 3px;
+  }
+
+  &__option {
+    display: block;
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
+
+    &:hover {
+      opacity: .75;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
