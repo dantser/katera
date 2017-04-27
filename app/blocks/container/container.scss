@@ -4,6 +4,10 @@
   width: 1170px;
   padding: 0 15px;
 
+  @include respond-to('large-desktop') {
+    width: 1560px;
+  }
+
   @include respond-to('desktop') {
     width: 1170px;
   }
