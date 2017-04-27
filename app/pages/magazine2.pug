@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/magazine2/magazine2
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Журнал - Видео'
+
+block content
+  +branding()
+    +magazine2()

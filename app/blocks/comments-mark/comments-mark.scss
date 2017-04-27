@@ -8,11 +8,19 @@
   }
 
   &__text {
+    all: initial;
+    cursor: pointer;
     font-family: $OpenSans;
     font-size: 12px;
     font-weight: 400;
     color: #5a64b4;
     margin: 0 5px 0 0;
+    will-change: color;
+    transition: color .25s ease-in-out;
+
+    &:hover, &:hover * {
+      color: $color-dark-blue;
+    }
 
     @media (max-width: 600px) {
       display: inline-table;
@@ -57,6 +65,8 @@
     }
 
     &_quotes {
+      will-change: color;
+      transition: color .25s ease-in-out;
 
       &::after {
         content: '»';
