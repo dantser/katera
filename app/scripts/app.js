@@ -12,6 +12,7 @@ import timeline from '../blocks/timeline/timeline';
 import models from '../blocks/models/models';
 import selectCurrency from '../blocks/select-currency/select-currency';
 import counter from '../blocks/counter/counter';
+import modal from '../blocks/modal/modal';
 
 $(() => {
   commonInput();
@@ -27,4 +28,5 @@ $(() => {
   models();
   selectCurrency();
   counter();
+  modal();
 });

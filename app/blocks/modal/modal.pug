@@ -1,0 +1,22 @@
+include ../icon/icon
+
+//- Аргументы
+//- heading - заголовок попапа
+
+//- Модификаторы
+//- ._active - показывает попап
+
+//- Для вызова попапа, нужно добавить любой элемент с классом .js-open-modal и дата атрибутом data-target-modal="#id" с ид попапа
+//- по клику на этот элемент - будет окрыт попап
+
+mixin modal(heading)
+  +b.modal&attributes(attributes)
+    +e.wrapper
+      +e.header
+        +icon('close').close
+
+        if heading
+          +e('h2').heading= heading
+
+      +e.body
+        block
