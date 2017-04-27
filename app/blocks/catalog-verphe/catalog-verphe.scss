@@ -64,10 +64,11 @@
       margin-bottom: 0;
       border-bottom: 1px solid #e5e5e5;
     }
+  }
 
-    & a {
-      display: inline-block;
-    }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
   }
 
   &__title, &__count {
