@@ -30,6 +30,12 @@
     }
   }
 
+  .main-container {
+    @include respond-to('tablet') {
+      margin-bottom: 0;
+    }
+  }
+
   &__main-container {
     display: flex !important;
     flex-flow: row wrap;
@@ -298,7 +304,7 @@
         margin: 0 auto;
 
         .tag-list__tag {
-          margin-right: 0;
+          margin: 0 10px;
         }
       }
 
@@ -309,10 +315,10 @@
         flex-direction: column;
 
         .tag-list__tag {
-          margin-bottom: 20px;
+          margin: 0 0 20px;
 
           &:last-child {
-            margin-bottom: 0;
+            margin: 0;
           }
         }
       }
@@ -320,7 +326,7 @@
   }
 
   &__tags {
-    padding-bottom: 18px;
+    padding-bottom: 20px;
   }
 
   &__share {
