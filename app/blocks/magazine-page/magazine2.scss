@@ -163,10 +163,25 @@
   }
 
   &__content {
+    position: relative;
     margin-top: 18px;
     display: flex;
     flex-flow: row wrap;
     flex: 1;
+    //width: 100%;
+    //height: auto;
+    //overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background-image: linear-gradient(rgba($color-white, 0) 0%, rgba($color-white, .56) 30%, $color-white 100%);
+      z-index: 5;
+    }
 
     @include respond-to('tablet') {
       padding: 0 15px;
@@ -177,8 +192,15 @@
     }
   }
 
+  &__content-one {
+
+    &::after {
+      display: none;
+    }
+  }
+
   &__content-two {
-    width: calc(100% - 293px);
+    width: calc(100% - 393px);
     padding-left: 97px;
 
     @include respond-to('tablet') {
@@ -189,6 +211,10 @@
         padding: 0 15px;
       }
     }
+  }
+
+  &__big-banner {
+    margin: 30px 0;
   }
 
   &__banner {
@@ -230,6 +256,19 @@
     display: block;
     width: 263px;
     margin-bottom: 30px;
+
+    .sale-preview-item {
+      height: 300px;
+
+      &__img-wrap {
+        height: 213px;
+      }
+    }
+  }
+
+  &__show-more-wrapper {
+    width: 100%;
+    padding-bottom: 41px;
   }
 
   &__show-more {
@@ -290,14 +329,63 @@
   }
 
   &__extra-articles {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 150px;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background-image: linear-gradient(rgba($color-white, 0) 0%, rgba($color-white, .56) 30%, $color-white 100%);
+      z-index: 5;
+    }
+
     @include respond-to('tablet') {
       width: 100%;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .extra-articles__article {
+
+    .extra-articles__item {
+      @include respond-to('tablet') {
+
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: 1px solid $color-light-gray;
+        }
+      }
     }
   }
 
   .extra-articles {
     padding-bottom: 63px;
     margin-top: 7px;
+
+    @include respond-to('mobile') {
+      padding-bottom: 29px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 0;
+    }
+
+    &__button {
+      position: relative;
+      z-index: 6;
+      box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
+      border-radius: 1.42857rem;
+
+      @include respond-to('mobile') {
+        width: 290px;
+        margin: 27px auto 0;
+      }
+    }
 
     &__header {
       font-family: $NerisSemiBold;
@@ -306,6 +394,11 @@
       font-size: 38px;
       text-align: center;
       display: block;
+
+      @include respond-to('mobile') {
+        margin-top: 0;
+        margin-bottom: 17px;
+      }
     }
 
     &__item {
@@ -316,6 +409,8 @@
         display: block;
         flex-basis: inherit;
         border-top: 1px solid $color-light-gray;
+        padding-left: 15px;
+        padding-right: 15px;
       }
 
       .article-preview__picture {
@@ -344,6 +439,8 @@
       .article-preview__text {
         display: block;
         padding: 5px 0 11px;
+        font-family: $NerisBlack;
+        font-weight: 900;
       }
 
       .article-preview__picture {

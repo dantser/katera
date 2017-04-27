@@ -12,7 +12,7 @@ mixin catalog-verphe(data)
         +e('ul').list
           each item in obj.data
             +e('li').company
-              +e('a')(href='#')
+              +e('a')(href='#').link
                 +e('span').title= item.title
                 +e('span').count= item.count
 

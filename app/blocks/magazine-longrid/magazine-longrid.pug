@@ -1,0 +1,44 @@
+include ../main-container/main-container
+include ../container/container
+include ../text/text
+include ../quote/quote
+include ../page-header/page-header
+include ../share/share
+include ../comments/comments
+include ../article-preview/article-preview
+include ../comments-mark/comments-mark
+include ../tag-list/tag-list
+include ../extra-articles/extra-articles
+
+mixin magazine-longrid()
+  +b.magazine-longrid&attributes(attributes)
+    +container()
+      +page-header('PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках', ['Главная', 'Журнал', 'Видео-обзоры', 'PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках'])
+      +e.banner
+        +banner('#', 'assets/images/lngrd-banner.jpg')
+      +e.wrap
+        +e.row
+          +e.text
+            +e('span') Т
+            p.bit-letter ретий этап серии регат Sochi Winter Cup 2016–2017 состоится с 6 по 8 января. По результатам двух этапов лидирует команда «Правый галс» во главе со шкипером Сергеем Авдониным.
+            p Принимет регату Имеретинский яхтенный порт с современной олимпийской инфраструктурой, новыми отелями и спортивными комплексами. Гонки будут проходить на монотипах GP 26. Концепция регаты — доступные по ценам гонки и профессиональная организация. Регата рассчитана как на опытных яхтсменов, которым важно поддерживать спортивную форму круглый год, так и на новичков, которые только знакомятся с парусом. Вступить в борьбу участники могут на любом из этапов серии. В пакет участника регаты Sochi Winter Cup входят три дня гонок на морской акватории.
+          +e.text-banner
+            +banner('#', 'assets/images/longrd-text-img.jpg')
+        +e.row
+          +e.description
+            p Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую тематику.
+      +e.banner._box-shadow._quote
+        +quote()._white._bottom Выжать из яхты максимум — это не просто добавить палубного пространства.
+        +banner('#', 'assets/images/lngrd-banner2.jpg')
+      +e.content
+        +e.inner-content
+          +tag-list( 'video1', getData('tag-list')).__tags
+          +share('vk', 'go', 'fb', 'odnokl', 'tw', small).__share
+        +e.inner-content._comments
+          +comments(getData('comments'))
+        +extra-articles('Другие статьи')
+        +e.banner-bottom
+          +banner('#', 'assets/images/banner.jpg')._overlay
+            +e('img')(src='assets/images/banner-img.png').little
+
+

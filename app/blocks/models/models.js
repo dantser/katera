@@ -17,4 +17,18 @@ export default () => {
       },
     },
   });
+// eslint-disable-next-line no-unused-vars
+  const swiperModelSport = new Swiper('.models_sport .swiper-container', {
+    // pagination: '.models_sport .swiper-container__swiper-pagination',
+    paginationClickable: true,
+    spaceBetween: 1,
+    slidesPerView: 4,
+    // Responsive breakpoints
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+    },
+  });
 };
