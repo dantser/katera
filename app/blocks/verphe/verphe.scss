@@ -13,6 +13,7 @@
   &__main-container {
     display: flex !important;
     flex-flow: row wrap;
+    margin-bottom: 162px;
 
     @include respond-to('tablet') {
       flex-flow: column nowrap;
@@ -184,6 +185,11 @@
   .models_sport {
     padding-bottom: 31px;
     border-bottom: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+        border-bottom: none;
+        padding-bottom: 8px;
+    }
 
     .models__header {
       margin-top: 4px;
