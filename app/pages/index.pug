@@ -2,7 +2,6 @@ extends ../layouts/default
 include ../blocks/branding/branding
 include ../blocks/index/index
 include ../blocks/slider-range/slider-range
-include ../blocks/checkbox/checkbox
 
 block head
   - var pageTitle = 'Катера.RU - Главная'
@@ -11,10 +10,6 @@ block contentVariables
   - var page = 'index';
 
 block content
-  div(style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #fff; z-index: 9999; padding: 50px 0")
-    +container()
-      +checkbox()
-      +checkbox()._switcher
   +branding('index')
     +index()
 
