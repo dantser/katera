@@ -9,6 +9,7 @@
   position: absolute;
   top: 0;
   left: 30px;
+  z-index: 2;
 
   @include respond-to('tablet') {
     flex-direction: column;
@@ -24,5 +25,25 @@
     left: 0;
     width: 5px;
     background: $color-dark-blue;
+  }
+
+  &_bottom {
+    top: auto;
+    bottom: 0;
+  }
+
+  &_white {
+    color: $color-white;
+    padding: 0 0 28px 23px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 5px;
+      left: 0;
+      width: 5px;
+      background: $color-white;
+    }
   }
 }
