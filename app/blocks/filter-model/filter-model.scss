@@ -1,0 +1,147 @@
+.filter-model {
+  background-color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px 15px;
+  width: 100%;
+  margin-bottom: 50px;
+
+  @include respond-to('laptop') {
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-between;
+    min-height: 94px;
+    align-items: center;
+  }
+
+  &__input {
+    width: 80px;
+    height: 40px;
+
+    .text-field {
+      border: 1px solid #ccc;
+
+      &__control, &__placeholder {
+        font-family: $NerisLight;
+        font-size: rem(13px);
+        font-style: italic;
+        color: #666;
+      }
+    }
+  }
+
+  &__item {
+    width: 270px;
+    height: 40px;
+
+    @include respond-to('laptop') {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-label {
+      line-height: 1;
+      color: $color-black;
+    }
+
+
+    &-text {
+      font-size: rem(13px);
+      line-height: 1;
+      font-style: italic;
+      color: #666;
+
+      &:first-child::after {
+        content: '—';
+        margin: 0 4px;
+      }
+
+      &-block {
+        display: flex;
+      }
+    }
+
+    &_search {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 60px;
+      max-width: 206px;
+
+      @include respond-to('laptop') {
+        order: 5;
+        transform: none;
+      }
+    }
+
+    &_price {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: $color-black;
+      font-family: $NerisSemiBold;
+
+      @include respond-to('laptop') {
+        order: 4;
+      }
+    }
+
+    &_range {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 3px;
+
+      @include respond-to('laptop') {
+        order: 3;
+      }
+    }
+  }
+
+  &__button {
+    height: 40px;
+    outline: none;
+    font-size: 20px;
+    line-height: 24px;
+    width: 205px;
+
+    @include respond-to('laptop') {
+      width: 290px;
+    }
+  }
+
+  &__link {
+    color: $color-gray;
+    font-family: $NerisLight;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &__currency {
+    cursor: pointer;
+  }
+
+  &__icon {
+
+    &_type {
+
+      &_rouble {
+        width: 11px;
+        height: 13px;
+      }
+
+      &_chevron {
+        width: 11px;
+        height: 6px;
+        fill: $color-red;
+        stroke: $color-red;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
