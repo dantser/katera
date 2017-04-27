@@ -25,6 +25,7 @@
 
       &__control:checked + .checkbox__box {
         transform: translate3d(40px, 0, 0);
+        box-shadow: 0 3px 10px 0 rgba(251, 37, 0, .6);
         border: 0;
       }
     }
