@@ -19,6 +19,18 @@
     }
   }
 
+  &__box-bg {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: block;
+
+    .image-bg {
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
   &__text {
     padding-left: 25px;
     position: relative;
@@ -41,11 +53,16 @@
       font-family: $NerisSemiBold;
       line-height: 20px;
       font-size: 14px;
+      margin: 20px 0 0;
+
+      &:last-child {
+        margin-top: 0;
+      }
     }
   }
 
   &__content {
-    margin-top: 41px;
+    margin-top: 30px;
     display: flex;
     flex-flow: row wrap;
     flex: 1;
@@ -64,15 +81,18 @@
   }
 
   &__sidebar {
-    margin-top: 30px;
-    margin-left: 130px;
     display: block;
     width: 360px;
+    margin: 30px 0 -6px 130px;
 
     @include respond-to('tablet') {
       order: 1;
       margin: 0 auto;
     }
+  }
+
+  &-contacts {
+    padding-bottom: 41px !important;
   }
 
   &__list {
@@ -118,7 +138,12 @@
     font-weight: 600;
     font-family: $NerisSemiBold;
     text-align: center;
-    margin-top: 105px;
+    margin-top: 65px;
+    margin-bottom: 24px;
+
+    &:nth-of-type(2) {
+      margin: 59px 0 22px;
+    }
 
     @include respond-to('tablet') {
       order: 4;
@@ -134,8 +159,9 @@
   }
 
   .timeline {
-    margin: 0 15px;
+    margin: 26px 25px 15px 0;
     z-index: 5;
+    width: 100%;
 
     @include respond-to('tablet') {
       order: 5;
@@ -146,7 +172,7 @@
   &__button {
     width: 165px;
     height: 40px;
-    margin: 49px auto;
+    margin: 47px auto 51px;
 
     @include respond-to('tablet') {
       order: 9;
@@ -154,15 +180,36 @@
       width: auto;
     }
   }
+  .models_sport {
+    padding-bottom: 31px;
+    border-bottom: 1px solid $color-light-gray;
 
-  .models_verphe {
-    @include respond-to('tablet') {
-      order: 7;
-      padding-top: 20px;
+    .models__header {
+      margin-top: 4px;
+      font-size: 24px;
+    }
 
-      &:nth-of-type(2) {
-        order: 8;
+    .sale-preview-item__text {
+      margin-top: 2px;
+    }
+
+    .swiper-container {
+      height: 290px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+
+      &__wrapper {
+        width: 100% !important;
       }
+
+      &__swiper-pagination {
+        display: none;
+      }
+    }
+
+    .swiper-slide {
+      height: auto;
     }
   }
 }
