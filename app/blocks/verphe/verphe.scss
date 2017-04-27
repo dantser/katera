@@ -159,7 +159,7 @@
   }
 
   .timeline {
-    margin: 26px 25px 15px 0;
+    margin: 26px 25px 10px -40px;
     z-index: 5;
     width: 100%;
 
@@ -206,6 +206,10 @@
 
       &__swiper-pagination {
         display: none;
+      }
+
+      @include respond-to('tablet') {
+        height: auto;
       }
     }
 
