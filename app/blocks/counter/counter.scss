@@ -1,0 +1,54 @@
+.counter {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &__control {
+    all: initial;
+    padding: 0 12px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-family: $NerisSemiBold;
+    font-size: rem(16px);
+    color: $color-black;
+    text-align: center;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover > .counter__icon {
+      fill: darken($color-red, 10%);
+    }
+
+    &_kind_minus {
+      padding-right: 12px;
+    }
+
+    &_kind_plus {
+      padding-left: 12px;
+    }
+  }
+
+  &__icon {
+    width: 12px;
+    fill: $color-red;
+    cursor: pointer;
+    will-change: fill;
+    transition: fill .25s ease-in-out;
+    pointer-events: none;
+
+    &_kind_minus {
+      height: 2px;
+    }
+
+    &_kind_plus {
+      height: 12px;
+    }
+  }
+}
