@@ -84,6 +84,13 @@
         }
       }
 
+      @include respond-to('large-desktop') {
+
+        .branding__scroll-btn {
+          display: none;
+        }
+      }
+
       .branding__image {
         z-index: 15;
         height: 750px;
