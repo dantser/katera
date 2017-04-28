@@ -41,6 +41,12 @@
     position: relative;
 
     @include respond-to('tablet') {
+      padding-right: 22px;
+
+      p:nth-child(3),
+      p:nth-child(4) {
+        display: none;
+      }
 
       &::after {
         content: '';
