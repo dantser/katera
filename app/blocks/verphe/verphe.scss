@@ -186,6 +186,11 @@
     padding-bottom: 42px;
     border-bottom: 1px solid $color-light-gray;
 
+    @include respond-to('tablet') {
+      border-bottom: none;
+      padding-bottom: 8px;
+    }
+
     .models__header {
       margin-top: 4px;
       font-size: 24px;

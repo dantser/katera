@@ -10,6 +10,14 @@ export default () => {
     spaceBetween: 30,
     // Responsive breakpoints
     breakpoints: {
+      1170: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
       768: {
         slidesPerView: 1,
         slidesPerColumn: 8,
@@ -25,6 +33,10 @@ export default () => {
     spaceBetween: 30,
     // Responsive breakpoints
     breakpoints: {
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
       768: {
         slidesPerView: 1,
         spaceBetween: 15,
