@@ -1,0 +1,55 @@
+.share-calendar {
+  font-size: rem(13px);
+
+  &__link {
+    text-decoration: inherit;
+    color: $color-black;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+
+      .share-calendar__text {
+        border-bottom: 1px solid $color-dark-gray;
+      }
+    }
+  }
+
+  &__text {
+    border-bottom: 1px solid $color-light-gray;
+    line-height: 18px;
+    transition: border-color .25s ease-in-out;
+    display: inline-block;
+  }
+
+  &__share-icon {
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+
+    svg {
+      height: 100%;
+      width: 100%;
+      display: block;
+      fill: $color-white;
+    }
+
+    &_g-share {
+      background-color: #72c1fa;
+    }
+
+    &_ya-share > svg {
+      fill: $color-red;
+    }
+
+    &_win-share {
+      background-color: $color-black;
+    }
+  }
+}
