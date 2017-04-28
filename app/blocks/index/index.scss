@@ -3,7 +3,11 @@
   display: block;
   flex: 1 0 auto;
 
-  @include respond-to('laptop') {
+  @include respond-to('tablet') {
+    margin-top: 35px; // mobile header height
+  }
+
+  @include respond-to('mobile') {
     margin-top: 35px; // mobile header height
   }
 
@@ -27,11 +31,7 @@
   &__content {
     margin-top: 30px;
     display: block;
-    width: 847px;
-
-    @include respond-to('tablet') {
-      display: none;
-    }
+    flex: 1;
   }
 
   &__big-banner {
@@ -43,26 +43,8 @@
     width: 100%;
   }
 
-  .sale-preview-item {
-    @include respond-to('tablet') {
-      display: none;
-    }
-  }
-
-  .topic-preview-widget {
-    @include respond-to('tablet') {
-      display: none;
-    }
-  }
-
-  .yacht-preview-widget {
-    @include respond-to('laptop') {
-      display: none;
-    }
-  }
-
   .small-article-preview {
-    @include respond-to('laptop') {
+    @include respond-to('mobile') {
       display: none;
     }
   }

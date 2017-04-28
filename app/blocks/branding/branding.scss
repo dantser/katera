@@ -26,7 +26,7 @@
       position: absolute;
       height: 0;
 
-      @include respond-to('laptop') {
+      @include respond-to('tablet') {
         display: none;
       }
 
@@ -50,7 +50,12 @@
     &_index {
       height: 515px;
 
-      @include respond-to('laptop') {
+      @include respond-to('tablet') {
+        min-height: 300px;
+        height: 100vh;
+      }
+
+      @include respond-to('mobile') {
         min-height: 300px;
         height: 100vh;
       }
@@ -77,16 +82,17 @@
         }
       }
 
-      @include respond-to('desktop') {
+      .branding__scroll-btn {
 
-        .branding__scroll-btn {
+        @include respond-to('desktop') {
           display: none;
         }
-      }
 
-      @include respond-to('large-desktop') {
+        @include respond-to('large-desktop') {
+          display: none;
+        }
 
-        .branding__scroll-btn {
+        @include respond-to('laptop') {
           display: none;
         }
       }
@@ -95,7 +101,22 @@
         z-index: 15;
         height: 750px;
 
-        @include respond-to('laptop') {
+        @include respond-to('tablet') {
+          height: 100%;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: center;
+            display: block;
+            width: 100%;
+            height: 427px;
+            background-image: url('../images/branding/main-top-shadow.png');
+          }
+        }
+
+        @include respond-to('mobile') {
           height: 100%;
 
           &::after {
@@ -124,7 +145,7 @@
     color: $color-white;
     text-transform: uppercase;
 
-    @include respond-to('laptop') {
+    @include respond-to('mobile') {
       margin: auto 6px 94px auto;
       font-size: rem(22px);
       font-weight: 700;
@@ -142,7 +163,7 @@
     height: 115px;
     pointer-events: none;
 
-    @include respond-to('laptop') {
+    @include respond-to('mobile') {
       top: initial;
       right: initial;
       left: 0;
