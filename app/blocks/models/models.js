@@ -16,11 +16,12 @@ export default () => {
       },
       992: {
         slidesPerView: 2,
-        spaceBetween: 16,
+        spaceBetween: 15,
       },
       768: {
         slidesPerView: 1,
         slidesPerColumn: 8,
+        spaceBetween: 14,
       },
     },
   });
