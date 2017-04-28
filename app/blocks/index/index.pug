@@ -17,6 +17,7 @@ include ../subscribe/subscribe
 include ../article-preview/articles-grid
 include ../article-preview/article-preview
 include ../navbar/navbar
+include ../yacht-slider/yacht-slider
 include ../sale-preview-item/sale-preview-item
 
 mixin index()
@@ -24,7 +25,7 @@ mixin index()
     +container()
       +main-container().main-container_shadow.index__main-container
         +main-slider()
-        +filter()
+        +filter().__filter
         +navbar(getData('navbar'))
         +e.sidebar
           +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))

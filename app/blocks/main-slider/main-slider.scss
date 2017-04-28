@@ -86,5 +86,12 @@
         border-width: 3px;
       }
     }
+
+    &_shop-slider-pagination {
+
+      .swiper-pagination-bullet {
+        border-color: $color-dark-blue;
+      }
+    }
   }
 }

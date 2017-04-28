@@ -4,8 +4,9 @@
   box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
   padding-bottom: 20px;
 
-  @include respond-to(tablet) {
-    display: none;
+  @include respond-to(mobile) {
+    width: 100%;
+    padding-bottom: 0;
   }
 
   .sale-contacts {
@@ -16,9 +17,58 @@
     list-style: none;
     position: relative;
 
+    @include respond-to(tablet) {
+      padding: 55px 20px 80px;
+      font-size: rem(14px);
+    }
+
+    &__info-row {
+      font-size: rem(14px);
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-bottom: 25px;
+
+      @include respond-to(tablet) {
+        display: none;
+      }
+    }
+
+    &__icon-close {
+      display: none;
+
+      @include respond-to(mobile) {
+        position: absolute;
+        display: block;
+        width: 18px;
+        height: 18px;
+        right: 20px;
+        top: 20px;
+        fill: $color-red;
+      }
+    }
+
+    &__borderless {
+      @include respond-to(tablet) {
+        border: none;
+      }
+    }
+
     .list__item {
       margin: 0;
       padding: 0;
+
+      &:nth-child(2) {
+        @include respond-to(mobile) {
+          display: none;
+        }
+      }
+
+      @include respond-to(tablet) {
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
     }
 
     & > ul {
@@ -32,24 +82,36 @@
     }
 
     &__img-wrap {
-      display: flex;
-      align-items: center;
-      width: 147px;
-      height: 50px;
+      box-sizing: border-box;
       border-radius: 3px;
       background-color: $color-white;
       z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 167px;
+      height: 60px;
       padding: 5px 10px;
+
+      @include respond-to(mobile) {
+        margin-bottom: 12px;
+      }
     }
 
     &__img {
       max-width: 100%;
+      max-height: 100%;
     }
 
     &__about {
       font-size: rem(14px);
       margin-top: 15px;
       line-height: 14px;
+
+      @include respond-to(mobile) {
+        margin-top: 6px;
+        text-align: center;
+      }
 
       &:last-child {
         padding-bottom: 20px;
@@ -65,17 +127,30 @@
       color: $color-red;
       font-family: $NerisSemiBold;
       padding: 11px 0;
+
+      @include respond-to(tablet) {
+        display: none;
+      }
     }
 
     &__title {
       font-size: rem(30px);
       margin-top: 11px;
+
+      @include respond-to(tablet) {
+        font-size: rem(20px);
+      }
     }
 
     &__name {
       font-family: $NerisSemiBold;
       font-size: rem(18px);
       margin-top: 13px;
+
+      @include respond-to(mobile) {
+        font-size: rem(16px);
+        margin-top: 8px;
+      }
     }
 
     &__email, &__tel {
@@ -94,22 +169,38 @@
     &__site {
       color: $color-white;
       margin-top: 13px;
+      transition: color .25s ease-in-out;
+
+      &:hover {
+        color: $color-red;
+      }
     }
 
     &__msg-btn {
-      width: 300px;
+      box-sizing: border-box;
+      width: 100%;
       height: 40px;
       border: 1px solid $color-white;
-      margin: 23px 0 9px;
+      margin: 23px 0 13px;
+
+      @include respond-to(tablet) {
+        max-width: 290px;
+        margin: 43px 0 4px;
+      }
     }
 
     &__call-btn {
+      box-sizing: border-box;
       position: absolute;
-      width: 152px;
+      max-width: 165px;
       height: 40px;
       transform: translateX(-50%);
       left: 50%;
       bottom: -55px;
+
+      @include respond-to(tablet) {
+        max-width: 290px;
+      }
     }
   }
 }

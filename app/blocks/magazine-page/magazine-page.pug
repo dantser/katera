@@ -6,13 +6,17 @@ include ../banner/banner
 include ../text/text
 include ../sale-preview-item/sale-preview-item
 include ../extra-articles/extra-articles
+include ../tag-list/tag-list
+include ../share/share
+include ../comments/comments
+include ../comments-mark/comments-mark
 
 mixin magazine-page()
   +b.magazine-page&attributes(attributes)
     +container()
       +page-header('PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках', ['Главная', 'Журнад', 'Путешествия', 'PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках'])
       +main-container().main-container_shadow.magazine-razdel__main-container
-        +e.content
+        +e.content.magazine2__content-one
           +text().__text
             +e.block
               +e('span;').size._big Т
@@ -28,6 +32,10 @@ mixin magazine-page()
               | гонки и профессиональная организация. Регата рассчитана как на опытных яхтсменов, которым важно
               | поддерживать спортивную форму круглый год, так и на новичков, которые только знакомятся с парусом.
               | Вступить в борьбу участники могут на любом из этапов серии.
+
+            +e.banner
+              +banner('#', 'assets/images/banner2.jpg')
+
             p
               | В пакет участника регаты Sochi Winter Cup входят три дня гонок на морской акватории,
               | семинары и мастер-классы по парусному спорту, ежедневные совместные ужины, а также проживание в
@@ -37,7 +45,7 @@ mixin magazine-page()
 
             div.block
               +e('span;').size._medium Выжать из яхты максимум — <br>это не просто добавить палубного пространства.
-              p
+              p.block-text
                 | Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших
                 | в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них
                 | есть наколка на морскую тематику. Благотворительная организация Sail Training International
@@ -49,8 +57,6 @@ mixin magazine-page()
               | Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на
               | морскую тематику. Благотворительная организация Sail Training International составила список своих любимых
               | морских татуировок и их значений. Список разбит на четыре блока.
-
-            p
               | В первом блоке перечислены татуировки, служащие для обозначения морских достижений.
               | Экстравагантные игрушки — другой очевидный индикатор статуса в море. Теперь, когда вертолеты и бассейны
               | на борту принимаются как нечто само собой разумеющееся, бой перешел на новые территории.
@@ -68,8 +74,6 @@ mixin magazine-page()
               | Выжать из яхты максимум — это не просто добавить палубного пространства. Владельцы судов учатся тому,
               | как выжать больше из имеющихся ресурсов. Они превращают свои вертолетные площадки в поля для игры в
               | сквош днем и кинотеатры под открытым небом ночью.
-
-            p
               | Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море.
               | Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка
               | на морскую тематику. Благотворительная организация Sail Training International составила список своих
@@ -94,7 +98,6 @@ mixin magazine-page()
               | море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть
               | наколка на морскую тематику. Благотворительная организация Sail Training International составила
               | список своих любимых морских татуировок и их значений. Список разбит на четыре блока.
-            p
               | В первом блоке перечислены татуировки, служащие для обозначения морских достижений. Экстравагантные
               | игрушки — другой очевидный индикатор статуса в море. Теперь, когда вертолеты и бассейны на борту п
               | ринимаются как нечто само собой разумеющееся, бой перешел на новые территории. Последний писк моды —
@@ -110,13 +113,26 @@ mixin magazine-page()
         +e.sidebar
           +e.list
             - for (var i = 0; i < 2; i++)
-              +e.item
-                +e.banner
-                  +banner('#', 'assets/images/banner2.jpg')
-              +e.item
-                +sale-preview-item(getData('sale-preview-item'))
-              +e.item
-                +sale-preview-item(getData('sale-preview-item'))
+            +e.item
+              +e.banner
+                +banner('#', 'assets/images/banner2.jpg')
+            +e.item
+              +sale-preview-item(getData('sale-preview-item'))
+            +e.item
+              +sale-preview-item(getData('sale-preview-item'))
+            +e.item
+              +e.banner
+                +banner('#', 'assets/images/banner2.jpg')
+            +e.item
+              +sale-preview-item(getData('sale-preview-item'))
+
+        +e.content-two.content-three
+          +text()
+          +e.inner-content
+            +tag-list( 'video1', getData('tag-list')).__tags
+            +share('vk', 'go', 'fb', 'odnokl', 'tw', small).__share
+          +e.inner-content
+            +comments(getData('comments'))
 
         +e.extra-articles
           +extra-articles('Другие статьи')

@@ -4,10 +4,8 @@ include ../icon/icon
 //- data.name - имя чекбокса
 //- data.value - значение чекбокса
 //- data.checked - состояние checked чекбокса
-
 //- Размеры чекбокса фиксированные, если будет необходимость менять размеры, нужно добавлять модификаторы
 //- _sm, _big и.т.д
-
 mixin radio(data)
   +b('label').radio&attributes(attributes)
     - var params = data || {}

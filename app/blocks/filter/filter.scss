@@ -1,29 +1,10 @@
 .filter {
+  display: flex;
+  justify-content: center;
   background-color: $color-white;
   box-shadow: 0 0 7px rgba(19, 11, 89, .14);
-  margin-top: 30px;
-  margin-bottom: 30px;
-
-  @include respond-to('mobile') {
-    margin-bottom: 0;
-  }
-
-  &__content {
-    display: flex;
-    padding: 31px 0 30px;
-
-    @include respond-to('laptop') {
-      flex-direction: column;
-      padding: 15px 200px 19px;
-      justify-content: space-between;
-    }
-
-    @include respond-to('mobile') {
-      flex-direction: column;
-      padding: 15px 15px 19px;
-      justify-content: space-between;
-    }
-  }
+  padding-top: 20px;
+  padding-bottom: 10px;
 
   &__control, &__control li {
     margin: 0;
@@ -47,22 +28,22 @@
     font-size: 20px;
     outline: none;
 
-    @include respond-to('laptop') {
-      font-family: $NerisSemiBold;
-      font-size: 16px;
-      padding: 0;
-      padding-bottom: 14px;
-      padding-right: 14px;
-
-      &::before {
-        border-left: $small-border;
-        border-right: $small-border;
-        border-top: $big-border;
-        transform: translateX(-100%);
-        top: -15px;
-        left: 50%;
-      }
-    }
+    //@include respond-to('laptop') {
+    //  font-family: $NerisSemiBold;
+    //  font-size: 16px;
+    //  padding: 0;
+    //  padding-bottom: 14px;
+    //  padding-right: 14px;
+    //
+    //  &::before {
+    //    border-left: $small-border;
+    //    border-right: $small-border;
+    //    border-top: $big-border;
+    //    transform: translateX(-100%);
+    //    top: -15px;
+    //    left: 50%;
+    //  }
+    //}
   }
 
   &__division {
@@ -79,168 +60,90 @@
     }
   }
 
-  &__link {
-    color: $color-gray;
-    font-family: $NerisLight;
-    font-size: 12px;
-    font-weight: 300;
-  }
-
-  &__items {
+  &__content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-
-    @include respond-to('laptop') {
-      flex-direction: column;
-      padding-top: 0;
-      justify-content: space-between;
-      min-height: 385px;
-    }
-  }
-
-  &__input {
-    width: 80px;
-    height: 40px;
-
-    .text-field {
-      border: 1px solid #ccc;
-
-      &__control, &__placeholder {
-        font-family: $NerisLight;
-        font-size: rem(13px);
-        font-style: italic;
-        color: #666;
-      }
-    }
-  }
-
-  &__button {
-    height: 40px;
-    outline: none;
-    font-size: 20px;
-    line-height: 24px;
-
-    @include respond-to('laptop') {
-      width: 290px;
-    }
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-right: 25px;
+    flex: 1;
   }
 
   &__item {
-    width: 270px;
+    display: flex;
     height: 40px;
+    margin-bottom: 20px;
+
+    @include respond-to('large-desktop') {
+      width: 400px;
+    }
+
+    @include respond-to('desktop') {
+      width: 270px;
+    }
+
+    @include respond-to('laptop') {
+      width: calc(50% - 30px);
+    }
+  }
+
+  &__label {
+    font-family: $NerisLight;
+    font-size: rem(14px);
+    color: $color-black;
+  }
+
+  &__price {
+    display: flex;
+
+    .filter__label {
+      margin: auto 12px auto 0;
+    }
+
+    &-item {
+      display: flex;
+      width: 80px;
+      font-size: rem(13px);
+      font-style: italic;
+      color: #666;
+    }
+
+    &-sep {
+      display: block;
+      margin: auto 10px;
+      width: 10px;
+      height: 1px;
+      background-color: $color-black;
+    }
+  }
+
+  &__select-currency {
+    margin: auto 0 auto 12px;
+  }
+
+  &__length {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    &-slider {
+      margin-top: auto;
+      width: 100%;
+    }
 
     &-info {
       display: flex;
-      justify-content: space-between;
-    }
-
-    &-label {
-      line-height: 1;
-      color: $color-black;
     }
 
     &-text {
       font-size: rem(13px);
-      line-height: 1;
       font-style: italic;
       color: #666;
 
       &:first-child::after {
         content: '—';
-        margin: 0 4px;
-      }
-
-      &-block {
-        display: flex;
-      }
-    }
-
-    @include respond-to('laptop') {
-      width: 100%;
-    }
-
-    &:nth-child(3n) {
-      border: none;
-    }
-
-    &_price {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: $color-black;
-      font-family: $NerisSemiBold;
-
-      @include respond-to('laptop') {
-        order: 4;
-      }
-    }
-
-    &_search {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 60px;
-      transform: translateY(9px);
-
-      @include respond-to('laptop') {
-        order: 5;
-        transform: none;
-      }
-    }
-
-    &_type {
-      @include respond-to('laptop') {
-        order: 0;
-      }
-    }
-
-    &_model {
-      @include respond-to('laptop') {
-        order: 2;
-      }
-    }
-
-    &_vendor {
-      @include respond-to('laptop') {
-        order: 1;
-      }
-    }
-
-    &_range {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding-bottom: 3px;
-
-      @include respond-to('laptop') {
-        order: 3;
-      }
-    }
-  }
-
-  &__currency {
-    display: block;
-  }
-
-  &__icon {
-
-    &_type {
-
-      &_rouble {
-        width: 11px;
-        height: 13px;
-      }
-
-      &_chevron {
-        width: 11px;
-        height: 6px;
-        fill: $color-red;
-        stroke: $color-red;
-        margin-bottom: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
       }
     }
   }

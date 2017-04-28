@@ -7,11 +7,12 @@ include ../icon/icon
 
 //- Модификаторы
 //- _switcher, делает из чекбокса, свитчер
+//- _circle, делает чекбокс круглым (как в свитчере), только не без передвижений
 
 //- Размеры чекбокса фиксированные, если будет необходимость менять размеры, нужно добавлять модификаторы
 //- _sm, _big и.т.д
-
 mixin checkbox(data)
+
   +b('label').checkbox&attributes(attributes)
     - var params = data || {}
     - var name = params.name || ''

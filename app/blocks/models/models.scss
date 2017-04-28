@@ -11,11 +11,12 @@
     color: $color-black;
     margin-bottom: 5px;
     font-weight: 300;
+    width: 350px;
     line-height: 32px;
-    max-width: 355px;
 
     @include respond-to('tablet') {
       font-size: 20px;
+      margin-bottom: 14px;
     }
   }
 
@@ -30,7 +31,7 @@
     padding-bottom: 95px;
 
     @include respond-to('tablet') {
-      padding-bottom: 37px;
+      padding-bottom: 32px;
     }
 
     &__wrapper {
@@ -80,6 +81,10 @@
   .sale-preview-item {
     margin-top: 22px !important;
 
+    @include respond-to('tablet') {
+      margin-top: 4px !important;
+    }
+
     &__img-wrap {
       position: relative;
       width: 165px;
@@ -93,7 +98,7 @@
 
       @include respond-to('tablet') {
         width: 107px;
-        height: 98px;
+        height: 93px;
         margin-right: 12px;
         margin-bottom: 0;
       }
@@ -109,6 +114,7 @@
 
       @include respond-to('tablet') {
         max-width: 172px;
+        margin-top: 0;
         align-items: flex-start;
       }
     }
@@ -124,6 +130,10 @@
       }
     }
 
+    &_info {
+      font-size: 13px;
+    }
+
     &__price {
       font-size: 16px;
       color: $color-dark-blue;
@@ -132,18 +142,18 @@
     &__params {
       font-size: 12px;
       line-height: 18px;
-
-      @include respond-to('tablet') {
-        flex-direction: row;
-        justify-content: flex-start;
-      }
     }
 
     &__param {
       @include respond-to('tablet') {
+        float: left;
 
         &::after {
           content: ',\00a0';
+        }
+
+        &:last-child::after {
+          content: '';
         }
       }
     }
