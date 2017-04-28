@@ -7,7 +7,8 @@ include ../button/button
 include ../text/text
 include ../models/models
 include ../image-bg/image-bg
-include ../yacht-preview-widget/yacht-preview-widget
+include ../yacht-slider/yacht-slider
+include ../select/select
 
 mixin catalog-yacht-1()
   +b.catalog-yacht-1
@@ -22,7 +23,20 @@ mixin catalog-yacht-1()
             | Изучая различные виды яхт, вы скорее всего обратите внимание на 
             | крейсерские яхты со средиземноморским кокпитом, которые
             | запоминаются своими формами, элегантностью и, в то же время, красотой.
-          +text().title
-            h2 Модельный ряд
+        +text().H2.__header  Модельный ряд
         +filter-model()._catalog
-        +yacht-preview-widget('Крейсерские яхты со средиземноморским кокпитом', getData('sale-preview-item-extended'))._verphe
+        +e.sort
+          +e.found 
+            | Найдено 
+            +e.SPAN.sort__output 125
+            |  моделей
+          +e.price Сортировать
+            - var filterData = getData('filter')
+              +select(filterData.priceSort.name, filterData.priceSort.options).
+        +models('', getData('sale-preview-item-extended'))._catalog
+        +button()._rounded._kind_red.__button Показать еще
+        +text().H2.__header Похожие категории
+        +yacht-slider()
+        +text().H2.__header Статьи по теме
+        +b.none
+        +button(true)(href='#')._rounded._kind_red.__button.__link Перейти в журнал

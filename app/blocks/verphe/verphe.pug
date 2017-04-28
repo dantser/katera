@@ -51,11 +51,9 @@ mixin verphe()
           +e.list
             +e.item
               +verphe-contacts()
-        +text()
-          +e.H2.title История верфи
+        +e.H2.title История верфи
         +timeline().__timeline
-        +text()
-          +e.H2.title Модельный ряд
+        +e.H2.title Модельный ряд
         +models('Крейсерские яхты со средиземноморским кокпитом', getData('sale-preview-item-extended'))._verphe._cruiser
         +models('Спортивные швертботы', getData('sale-preview-item-short'))._verphe._sport
         +button(true)(href='#')._rounded._kind_red.__button Каталог верфей

@@ -3,6 +3,7 @@ include ../division/division
 include ../select/select
 include ../slider-range/slider-range
 include ../text-field/text-field
+include ../select-currency/select-currency
 
 mixin filter-model()
   +b.filter-model&attributes(attributes)
@@ -25,9 +26,7 @@ mixin filter-model()
         +e.input
           +text-field(filterData.priceTo)
         +e.currency
-          +e.SPAN.currency__item
-            +icon('rouble').icon._type_rouble
-          +icon('chevron').icon_type_chevron
+          +select-currency()
       +e.item._search
         +button()._kind_red.__button Найти
         +e.A(href='#').link Расширенный фильтр
