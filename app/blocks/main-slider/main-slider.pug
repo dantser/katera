@@ -1,19 +1,33 @@
-mixin main-slider()
-  +b.main-slider.swiper-container
-    +e.swiper-pagination
-    +e.wrapper.swiper-wrapper
-      +e.slide.swiper-slide
-        +e.overlay
-          +e.slide-text Sunseeker 62 Predator, 2008
-            +e('span').price 980 000 €
-        +e('img').img(src='assets/images/yacht.jpg')
-      +e.slide.swiper-slide
-        +e.overlay
-          +e.slide-text Sunseeker 62 Predator, 2008
-            +e('span').price 980 000 €
-        +e('img').img(src='assets/images/yacht.jpg')
-      +e.slide.swiper-slide
-        +e.overlay
-          +e.slide-text Sunseeker 62 Predator, 2008
-            +e('span').price 980 000 €
-        +e('img').img(src='assets/images/yacht.jpg')
+//- shopSlider - слайдер на странице SHOP 1
+
+mixin main-slider(shopSlider)
+
+  if shopSlider
+    +b.main-slider.swiper-container
+      +e.swiper-pagination
+      +e.wrapper.swiper-wrapper
+        +e.slide.swiper-slide
+          +e.overlay
+            +e.slide-text Sunseeker 62 Predator, 2008
+              +e('span').price 980 000 €
+          +e('img').img(src='assets/images/yacht.jpg')
+        +e.slide.swiper-slide
+          +e.overlay
+            +e.slide-text Sunseeker 62 Predator, 2008
+              +e('span').price 980 000 €
+          +e('img').img(src='assets/images/yacht.jpg')
+        +e.slide.swiper-slide
+          +e.overlay
+            +e.slide-text Sunseeker 62 Predator, 2008
+              +e('span').price 980 000 €
+          +e('img').img(src='assets/images/yacht.jpg')
+  else
+    +b.main-slider.swiper-container._shop-slider
+      +e.swiper-pagination._shop-slider-pagination
+      +e.wrapper.swiper-wrapper
+        +e.slide.swiper-slide
+          +e('img').img(src='assets/images/shop-slide.jpg')
+        +e.slide.swiper-slide
+          +e('img').img(src='assets/images/shop-slide.jpg')
+        +e.slide.swiper-slide
+          +e('img').img(src='assets/images/shop-slide.jpg')
