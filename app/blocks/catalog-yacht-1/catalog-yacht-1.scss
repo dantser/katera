@@ -57,11 +57,20 @@
     line-height: 24px;
     align-items: center;
 
+      width: auto;
+    }
+
     .select {
       width: 165px;
       height: 30px;
       margin-left: 15px;
       font-size: 14px;
+
+      &__control {
+        padding-left: 11px;
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
 
     &__output {
@@ -71,6 +80,10 @@
 
   &__price {
     display: flex;
+  }
+
+  &__found {
+    align-self: flex-end;
   }
 
   &__header {
