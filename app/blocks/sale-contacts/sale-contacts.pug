@@ -1,21 +1,40 @@
+//- +sale-contacts(true) для страницы SALE yacht page-catalog
+//- +sale-contacts() для страницы SALE yacht page-sale
+
 include ../list/list
 include ../button/button
+include ../icon/icon
 
-mixin sale-contacts()
+mixin sale-contacts(catalog)
   .sale-contacts-wrap
     +list()
       +b.sale-contacts
+        +icon('close').__icon-close
         +list-item().list__item
-          +e.img-wrap
-            +e.IMG.img(src="assets/images/canados.png")
-          +e.SPAN.about Верфь:
-            b Canados (Италия)
-          +e.SPAN.about Класс:
-            b Закрытые круизные яхты с хардтопом
+          if catalog
+            +e.img-wrap
+              +e.IMG.img(src="assets/images/canados.png")
+            +e.SPAN.about Верфь:
+              b Canados (Италия)
+            +e.SPAN.about Класс:
+              b Закрытые круизные яхты с хардтопом
+          else
+            +e.img-wrap
+              +e.IMG.img(src="assets/images/moreman.png")
+            +e.SPAN.about Магазин:
+              b Мореман
+            +e.SPAN.about Местоположение:
+              b Новороссийск
         +list-item().list__item
-          +e.SPAN.price Цена по запросу
+          if catalog
+            +e.SPAN.price Цена по запросу
+          else
+            +e.SPAN.price 3 000 000 $
         +list-item().list__item
-          +e.SPAN.title Контакты продавца
+          if catalog
+            +e.SPAN.title Контакты продавца
+          else
+            +e.SPAN.title Контактное лицо
           +e.SPAN.name Михаил Александрович
           +e.SPAN.tel Телефон:
             ul

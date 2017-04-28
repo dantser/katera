@@ -1,10 +1,10 @@
 .verphe-contacts-wrap {
-  max-width: 360px;
+  width: 360px;
   z-index: 10;
   box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
 
   @include respond-to(tablet) {
-    max-width: 100%;
+    width: 100%;
   }
 
   .verphe-contacts {
