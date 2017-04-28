@@ -96,6 +96,44 @@ $articles-grid__margin: 30px;
     .articles-grid__col-4 {
       @include articles-grid__col2(4);
     }
+
+    @media (max-width: 320px) {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      .articles-grid__h-group,
+      .articles-grid__v-group {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+
+      .articles-grid__col-1,
+      .articles-grid__col-2,
+      .articles-grid__col-3 {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 0;
+
+        &_height-1,
+        &_height-2,
+        &_height-3,
+        &_is-inline {
+          width: 100%;
+          height: auto;
+          margin-bottom: 0;
+        }
+
+        & .article-preview {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
   }
 
   &__col-1 {  /* верт. область - колонка 25% */
@@ -108,5 +146,42 @@ $articles-grid__margin: 30px;
 
   &__col-3 {  /* верт. область - колонка 75% */
     @include articles-grid__col(3);
+  }
+
+  @media (max-width: 320px) {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    &__h-group,
+    &__v-group {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    &__col-1,
+    &__col-2,
+    &__col-3 {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 0;
+
+      &_height-1,
+      &_height-2,
+      &_height-3,
+      &_is-inline {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    & .article-preview {
+      margin-bottom: 10px;
+    }
   }
 }
