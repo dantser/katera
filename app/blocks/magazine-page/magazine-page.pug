@@ -10,7 +10,6 @@ include ../tag-list/tag-list
 include ../share/share
 include ../comments/comments
 include ../comments-mark/comments-mark
-include ../sailor-mail/sailor-mail
 
 mixin magazine-page()
   +b.magazine-page&attributes(attributes)
@@ -134,12 +133,6 @@ mixin magazine-page()
             +share('vk', 'go', 'fb', 'odnokl', 'tw', small).__share
           +e.inner-content
             +comments(getData('comments'))
-
-          +sailor-mail(getData('sailor-mail'))._background
-          +sailor-mail(getData('sailor-mail'))._border
-          +sailor-mail(getData('sailor-mail'))._background
-          +sailor-mail(getData('sailor-mail'))._border
-          +sailor-mail(getData('sailor-mail'))._background
 
         +e.extra-articles
           +extra-articles('Другие статьи')
