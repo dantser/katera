@@ -16,6 +16,7 @@
 
     @include respond-to('tablet') {
       font-size: 20px;
+      margin-bottom: 14px;
     }
   }
 
@@ -30,7 +31,7 @@
     padding-bottom: 95px;
 
     @include respond-to('tablet') {
-      padding-bottom: 37px;
+      padding-bottom: 32px;
     }
 
     &__wrapper {
@@ -81,7 +82,7 @@
     margin-top: 22px !important;
 
     @include respond-to('tablet') {
-      margin-top: 0 !important;
+      margin-top: 4px !important;
     }
 
     &__img-wrap {
@@ -129,6 +130,10 @@
       }
     }
 
+    &_info {
+      font-size: 13px;
+    }
+
     &__price {
       font-size: 16px;
       color: $color-dark-blue;
@@ -140,12 +145,15 @@
     }
 
     &__param {
-
       @include respond-to('tablet') {
-      float: left;
+        float: left;
 
         &::after {
           content: ',\00a0';
+        }
+
+        &:last-child::after {
+          content: '';
         }
       }
     }
