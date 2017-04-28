@@ -1,0 +1,16 @@
+include ../icon/icon
+
+mixin share-calendar()
+  +b.share-calendar&attributes(attributes)
+      +e.A(href='#').link
+        +e.share-icon._g-share
+          +icon('g-share')
+        +e.text В календарь
+      +e.A(href='#').link
+        +e.share-icon._ya-share
+          +icon('ya-share')
+        +e.text Напомнить
+      +e.A(href='#').link
+        +e.share-icon._win-share
+          +icon('win-share')
+        +e.text В календарь
