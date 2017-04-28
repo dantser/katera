@@ -39,13 +39,7 @@
   }
 
   .filter {
-    @include respond-to('laptop') {
-      width: 100%;
-    }
-
-    @include respond-to('mobile') {
-      margin-top: 0;
-    }
+    width: 100%;
   }
 
   .sale-preview-item {
