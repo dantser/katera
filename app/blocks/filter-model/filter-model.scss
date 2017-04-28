@@ -85,6 +85,7 @@
       justify-content: space-around;
       color: $color-black;
       font-family: $NerisSemiBold;
+      width: 270px;
 
       @include respond-to('laptop') {
         order: 4;
