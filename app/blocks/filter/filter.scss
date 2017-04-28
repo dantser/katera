@@ -6,6 +6,14 @@
   padding-top: 20px;
   padding-bottom: 10px;
 
+  @include respond-to('tablet') {
+    flex-direction: column;
+  }
+
+  @include respond-to('mobile') {
+    flex-direction: column;
+  }
+
   &__control, &__control li {
     margin: 0;
     padding: 0;
@@ -15,11 +23,17 @@
 
   &__control {
     display: block;
-    min-width: 160px;
+    min-width: 180px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
       display: flex;
       justify-content: center;
+    }
+
+    @include respond-to('mobile') {
+      display: flex;
+      justify-content: center;
+      margin: 0;
     }
   }
 
@@ -28,22 +42,39 @@
     font-size: 20px;
     outline: none;
 
-    //@include respond-to('laptop') {
-    //  font-family: $NerisSemiBold;
-    //  font-size: 16px;
-    //  padding: 0;
-    //  padding-bottom: 14px;
-    //  padding-right: 14px;
-    //
-    //  &::before {
-    //    border-left: $small-border;
-    //    border-right: $small-border;
-    //    border-top: $big-border;
-    //    transform: translateX(-100%);
-    //    top: -15px;
-    //    left: 50%;
-    //  }
-    //}
+    @include respond-to('tablet') {
+      font-family: $NerisSemiBold;
+      font-size: 16px;
+      padding: 0;
+      padding-bottom: 14px;
+      padding-right: 14px;
+
+      &::before {
+        border-left: $small-border;
+        border-right: $small-border;
+        border-top: $big-border;
+        transform: translateX(-100%);
+        top: -15px;
+        left: 50%;
+      }
+    }
+
+    @include respond-to('mobile') {
+      font-family: $NerisSemiBold;
+      font-size: 16px;
+      padding: 0;
+      padding-bottom: 14px;
+      padding-right: 14px;
+
+      &::before {
+        border-left: $small-border;
+        border-right: $small-border;
+        border-top: $big-border;
+        transform: translateX(-100%);
+        top: -15px;
+        left: 50%;
+      }
+    }
   }
 
   &__division {
@@ -52,7 +83,14 @@
     text-decoration: none;
     outline: none;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      font-family: $NerisSemiBold;
+      font-size: 16px;
+      padding: 0;
+      padding-right: 25px;
+    }
+
+    @include respond-to('mobile') {
       font-family: $NerisSemiBold;
       font-size: 16px;
       padding: 0;
@@ -64,8 +102,16 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding-right: 25px;
+    padding: 0 25px;
     flex: 1;
+
+    @include respond-to('tablet') {
+      padding: 0 15px;
+    }
+
+    @include respond-to('mobile') {
+      padding: 0 15px;
+    }
   }
 
   &__item {
@@ -73,16 +119,29 @@
     height: 40px;
     margin-bottom: 20px;
 
+    &_switcher {
+      justify-content: space-between;
+      align-items: center;
+    }
+
     @include respond-to('large-desktop') {
-      width: 400px;
+      width: calc(33% - 30px);
     }
 
     @include respond-to('desktop') {
-      width: 270px;
+      width: calc(33% - 30px);
     }
 
     @include respond-to('laptop') {
       width: calc(50% - 30px);
+    }
+
+    @include respond-to('tablet') {
+      width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
     }
   }
 
@@ -94,6 +153,15 @@
 
   &__price {
     display: flex;
+    width: 100%;
+
+    @include respond-to('tablet') {
+      width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
 
     .filter__label {
       margin: auto 12px auto 0;
@@ -101,7 +169,7 @@
 
     &-item {
       display: flex;
-      width: 80px;
+      width: 100%;
       font-size: rem(13px);
       font-style: italic;
       color: #666;
@@ -113,6 +181,7 @@
       width: 10px;
       height: 1px;
       background-color: $color-black;
+      flex-shrink: 0;
     }
   }
 
@@ -146,5 +215,41 @@
         padding-right: 4px;
       }
     }
+  }
+
+  &__search-btn {
+    font-size: rem(20px);
+  }
+
+  &__extended-link {
+    margin-top: -10px;
+    margin-left: auto;
+    color: $color-gray;
+    will-change: color;
+    transition: color .25s ease-in-out;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+
+  &__extended {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    &-wrapper {
+      display: none;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    font-family: $NerisSemiBold;
+    font-size: rem(20px);
+    color: $color-dark-gray;
+    margin-bottom: 20px;
   }
 }

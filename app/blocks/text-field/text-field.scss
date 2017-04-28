@@ -7,6 +7,7 @@
   background-color: $color-white;
   border-radius: 3px;
   border: 1px solid $color-gray;
+  overflow: hidden;
 
   &_has_error {
     border-color: $color-red;
@@ -51,6 +52,7 @@
     padding: 0 12px;
     opacity: 1;
     color: $color-dark-gray;
+    white-space: nowrap;
   }
 
   &__error-icon {

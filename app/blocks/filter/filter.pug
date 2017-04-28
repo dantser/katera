@@ -4,46 +4,94 @@ include ../select/select
 include ../slider-range/slider-range
 include ../text-field/text-field
 include ../select-currency/select-currency
+include ../checkbox/checkbox
 
-mixin filter()
-  +b.filter&attributes(attributes)
+mixin filter(data)
+  - var filterData = getData('filter')
+
+  +b.filter#filterTab&attributes(attributes)
     +e.UL.control
       li
         +division('Купить').A(href='#filterTabs-1')._arrow-left._active.__division
       li
         +division('Арендовать').A(href='#filterTabs-2')._arrow-left.__division
 
-    - var filterData = getData('filter')
+    - for (var i = 1; i <= 2; i++)
+      +e('form')(id=`filterTabs-${i}`).content
+        +e.item
+          +select(filterData.yachtType.name, filterData.yachtType.options)
+        +e.item
+          +select(filterData.yachtModel.name, filterData.yachtModel.options)
+        +e.item
+          +e.price
+            +e.label Цена
+            +e.price-item
+              +text-field(filterData.priceFrom)
+            +e.price-sep
+            +e.price-item
+              +text-field(filterData.priceTo)
+          +e.select-currency
+            +select-currency()
+        +e.item
+          +select(filterData.shipyard.name, filterData.shipyard.options)
 
-    +e('form').content
-      +e.item
-        +select(filterData.yachtType.name, filterData.yachtType.options)
-      +e.item
-        +select(filterData.yachtModel.name, filterData.yachtModel.options)
-      +e.item
-        +e.price
-          +e.label Цена
-          +e.price-item
-            +text-field(filterData.priceFrom)
-          +e.price-sep
-          +e.price-item
-            +text-field(filterData.priceTo)
-        +e.select-currency
-          +select-currency()
-      +e.item
-        +select(filterData.shipyard.name, filterData.shipyard.options)
+        +e.item
+          +e.length
+            +e.label Длина
+            +e.length-info
+              +e.length-text.js-filter-length-min
+              +e.length-text.js-filter-length-max
 
-      +e.item
-        +e.length
-          +e.label Длина
-          +e.length-info
-            +e.length-text.js-filter-length-min
-            +e.length-text.js-filter-length-max
+            +e.length-slider
+              +slider-range().js-filter-slider-range
 
-          +e.length-slider
-            +slider-range().js-filter-slider-range
+        +e.item
+          +button()._kind_red.__search-btn Найти
 
-      +e.item
-        +button()._kind_red Найти
+        +e('a')(href='#').extended-link Расширенный фильтр
 
-      //+e.extended Расширенный фильтр
+        +e.extended-wrapper
+          +e.extended
+            +e.title Дополнительные параметры
+
+            +e.item
+              +select(filterData.purpose.name, filterData.purpose.options)
+
+            +e.item
+              +select(filterData.typeOfShell.name, filterData.typeOfShell.options)
+
+            +e.item
+              +select(filterData.bodyMaterial.name, filterData.bodyMaterial.options)
+
+            +e.item
+              +select(filterData.typeOfTooling.name, filterData.typeOfTooling.options)
+
+            +e.item
+              +select(filterData.control.name, filterData.control.options)
+
+            +e.item._switcher
+              +e.label Вспомогательный двигатель
+              +checkbox(filterData.pilotEngine)._switcher
+
+            +e.item
+              +select(filterData.type.name, filterData.type.options)
+
+            +e.item
+              +text-field(filterData.draft1)
+
+            +e.item
+              +text-field(filterData.draft2)
+
+            +e.item
+              +text-field(filterData.fuelStock)
+
+            +e.item
+              +text-field(filterData.waterSupply)
+
+            +e.item._switcher
+              +e.label Наличие камбуза
+              +checkbox(filterData.galley)._switcher
+
+            +e.item._switcher
+              +e.label Наличие санузла
+              +checkbox(filterData.bathroom)._switcher
