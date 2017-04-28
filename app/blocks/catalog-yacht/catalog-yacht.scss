@@ -14,7 +14,7 @@
   }
 
   &__element-wrap {
-    max-width: 360px;
+    max-width: 31.5%;
     width: auto;
     text-align: center;
     text-decoration: none;
@@ -28,8 +28,8 @@
     display: block;
 
     img {
-      max-width: auto;
-      height: 213px;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }
