@@ -5,7 +5,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__inner {
@@ -14,15 +14,24 @@
   }
 
   &__element-wrap {
-    width: 31%;
+    max-width: 360px;
+    width: auto;
     text-align: center;
     text-decoration: none;
     margin-bottom: 25px;
   }
 
   &__img {
-    max-width: 100%;
-    height: auto;
+    height: 213px;
+    overflow: hidden;
+    width: auto;
+    display: block;
+
+    img {
+      max-width: auto;
+      height: 213px;
+      object-fit: cover;
+    }
   }
 
   &__description {
@@ -30,14 +39,14 @@
     font-size: 18px;
     line-height: 22px;
     font-family: $NerisBlack;
-    margin-top: 5px;
+    margin-top: 8px;
   }
 
   &__subdesc {
     font-family: $NerisLight;
     color: $color-gray;
     font-size: 13px;
-    margin-top: 5px;
+    margin-top: 4px;
   }
 
   &__li {
@@ -113,5 +122,6 @@
     min-width: 165px;
     height: 40px;
     margin-bottom: 50px;
+    margin-top: 19px;
   }
 }
