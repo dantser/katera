@@ -44,4 +44,22 @@ export default () => {
       },
     },
   });
+// eslint-disable-next-line no-unused-vars
+  const swiperModelsCatalog = new Swiper('.models_catalog .swiper-container', {
+    slidesPerView: 6,
+    slidesPerColumn: 3,
+    spaceBetween: 30,
+    // Responsive breakpoints
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 14,
+        slidesPerColumn: 4,
+      },
+    },
+  });
 };
