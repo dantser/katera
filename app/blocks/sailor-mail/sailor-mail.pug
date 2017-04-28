@@ -1,0 +1,15 @@
+//- модификатор _background добавляет фон картинке пример: +sailor-mail(getData('sailor-mail'))._background
+//- модификатор _border добавляет border картинке пример: +sailor-mail(getData('sailor-mail'))._border
+
+
+include ../image-bg/image-bg
+
+mixin sailor-mail(obj)
+  +b.sailor-mail
+    +e('a').link(href=obj.link)&attributes(attributes)
+      +e('img')(src=obj.image alt='').img
+    +b.sailor-mail-box
+      +e('p').city= obj.city
+      +e('h4').title= obj.title
+      +e('p').text= obj.text
+      +e('p').proposal= obj.proposal

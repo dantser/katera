@@ -3,6 +3,7 @@
   box-shadow: 0 0 7px rgba(19, 11, 89, .14);
   margin-top: 30px;
   margin-bottom: 30px;
+
   @include respond-to('mobile') {
     margin-bottom: 0;
   }

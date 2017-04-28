@@ -140,9 +140,8 @@
     }
 
     &__param {
-
       @include respond-to('tablet') {
-      float: left;
+        float: left;
 
         &::after {
           content: ',\00a0';
