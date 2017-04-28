@@ -30,6 +30,10 @@
       height: 100%;
       z-index: 1;
     }
+
+    @include respond-to('tablet') {
+      height: 200px;
+    }
   }
 
   &__text {
