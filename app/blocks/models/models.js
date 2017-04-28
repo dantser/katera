@@ -16,11 +16,12 @@ export default () => {
       },
       992: {
         slidesPerView: 2,
-        spaceBetween: 16,
+        spaceBetween: 15,
       },
       768: {
         slidesPerView: 1,
         slidesPerColumn: 8,
+        spaceBetween: 14,
       },
     },
   });
@@ -29,6 +30,24 @@ export default () => {
     pagination: '.models_sport .swiper-container__swiper-pagination',
     paginationClickable: true,
     slidesPerView: 4,
+    spaceBetween: 30,
+    // Responsive breakpoints
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 14,
+        slidesPerColumn: 4,
+      },
+    },
+  });
+// eslint-disable-next-line no-unused-vars
+  const swiperModelsCatalog = new Swiper('.models_catalog .swiper-container', {
+    slidesPerView: 6,
+    slidesPerColumn: 3,
     spaceBetween: 30,
     // Responsive breakpoints
     breakpoints: {

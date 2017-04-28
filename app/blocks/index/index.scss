@@ -12,13 +12,9 @@
     flex-flow: row wrap;
   }
 
-  &__filter {
-    margin-top: 30px;
-    width: 100%;
-  }
-
   &__sidebar {
-    margin: 30px 30px 30px 0;
+    margin-top: 30px;
+    margin-right: 30px;
     display: block;
     width: 263px;
 
@@ -29,13 +25,17 @@
   }
 
   &__content {
-    margin: 30px 0;
+    margin-top: 30px;
     display: block;
-    flex: 1;
+    width: 847px;
 
     @include respond-to('tablet') {
       display: none;
     }
+  }
+
+  &__big-banner {
+    margin-top: 30px;
   }
 
   .filter {

@@ -31,6 +31,13 @@
       { "value": 3, "title": "Страна #3" }
     ]
   },
+  "priceSort": {
+    "name": "price-sort",
+    "options": [
+      { "value": 1, "title": "Сначала дешевые" },
+      { "value": 2, "title": "Сначала дорогие" }
+    ]
+  },
   "priceFrom": {
     "name": "price-from",
     "type": "text",
