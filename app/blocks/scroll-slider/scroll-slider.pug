@@ -1,0 +1,19 @@
+include ../image-bg/image-bg
+//- Аргумент - объект scroll-slider
+//- data.name - наименование
+//- data.path - путь изображения
+mixin scroll-slider(data)
+  +b('div').scroll-slider
+
+    +b('div').swiper-container.scroll-slider__gallery-top
+      +b('ul').swiper-wrapper
+        each image in data.path
+          +b('li').swiper-slide.scroll-slider__image
+            +image-bg()(src= image)
+
+    +b('div').swiper-container.scroll-slider__gallery-thumbs
+      +b('ul').swiper-wrapper
+        each thumb in data.path
+          +b('li').swiper-slide.scroll-slider__thumb
+            +image-bg()(src= thumb)
+      +b('div').swiper-scrollbar.scroll-slider__scrollbar
