@@ -193,7 +193,7 @@
     @include respond-to('tablet') {
       border-bottom: none;
       padding-bottom: 0;
-      margin-bottom: 49px;
+      margin-bottom: 38px;
     }
 
     .models__header {
@@ -203,7 +203,7 @@
       @include respond-to('tablet') {
         font-size: 20px;
         margin-top: 0;
-        margin-bottom: 14px;
+        margin-bottom: 11px;
       }
     }
 
