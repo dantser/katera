@@ -57,6 +57,7 @@
     line-height: 24px;
     align-items: center;
 
+    @include respond-to('tablet') {
       width: auto;
     }
 
