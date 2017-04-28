@@ -7,38 +7,43 @@ include ../select-currency/select-currency
 
 mixin filter()
   +b.filter&attributes(attributes)
-    +e.content#filterTab
-      +e.UL.control
-        li
-          +division('Купить').A(href='#filterTabs-1')._arrow-left._active.__division
-        li
-          +division('Арендовать').A(href='#filterTabs-2')._arrow-left.__division
+    +e.UL.control
+      li
+        +division('Купить').A(href='#filterTabs-1')._arrow-left._active.__division
+      li
+        +division('Арендовать').A(href='#filterTabs-2')._arrow-left.__division
 
-      - var filterData = getData('filter')
-      - for (var i = 1; i <= 2; i++)
-        +e.FORM.items(id=`filterTabs-${i}`)
-          +e.item._type
-            +select(filterData.yachtType.name, filterData.yachtType.options)
-          +e.item._model
-            +select(filterData.yachtModel.name, filterData.yachtModel.options)
-          +e.item._price
-            +e.SPAN.price__text Цена
-            +e.input
-              +text-field(filterData.priceFrom)
-            +e.SPAN.price__text &#8212
-            +e.input
-              +text-field(filterData.priceTo)
-            +e.currency
-              +select-currency()
-          +e.item._vendor
-            +select(filterData.shipyard.name, filterData.shipyard.options)
-          +e.item._range
-            +e.item-info
-              +e.item-label Длина
-              +e.item-text-block
-                +e.item-text.js-filter-length-min
-                +e.item-text.js-filter-length-max
+    - var filterData = getData('filter')
+
+    +e('form').content
+      +e.item
+        +select(filterData.yachtType.name, filterData.yachtType.options)
+      +e.item
+        +select(filterData.yachtModel.name, filterData.yachtModel.options)
+      +e.item
+        +e.price
+          +e.label Цена
+          +e.price-item
+            +text-field(filterData.priceFrom)
+          +e.price-sep
+          +e.price-item
+            +text-field(filterData.priceTo)
+        +e.select-currency
+          +select-currency()
+      +e.item
+        +select(filterData.shipyard.name, filterData.shipyard.options)
+
+      +e.item
+        +e.length
+          +e.label Длина
+          +e.length-info
+            +e.length-text.js-filter-length-min
+            +e.length-text.js-filter-length-max
+
+          +e.length-slider
             +slider-range().js-filter-slider-range
-          +e.item._search
-            +button()._kind_red.__button Найти
-            +e.A(href='#').link Расширенный фильтр
+
+      +e.item
+        +button()._kind_red Найти
+
+      //+e.extended Расширенный фильтр
