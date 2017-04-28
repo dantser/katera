@@ -80,6 +80,10 @@
   .sale-preview-item {
     margin-top: 22px !important;
 
+    @include respond-to('tablet') {
+      margin-top: 0 !important;
+    }
+
     &__img-wrap {
       position: relative;
       width: 165px;
@@ -93,7 +97,7 @@
 
       @include respond-to('tablet') {
         width: 107px;
-        height: 98px;
+        height: 93px;
         margin-right: 12px;
         margin-bottom: 0;
       }
@@ -109,6 +113,8 @@
 
       @include respond-to('tablet') {
         max-width: 172px;
+        margin-top: 0;
+        align-items: flex-start;
       }
     }
 
@@ -134,6 +140,7 @@
     }
 
     &__param {
+
       @include respond-to('tablet') {
       float: left;
 

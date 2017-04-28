@@ -21,7 +21,7 @@ export default () => {
       768: {
         slidesPerView: 1,
         slidesPerColumn: 8,
-        spaceBetween: 15,
+        spaceBetween: 14,
       },
     },
   });
@@ -39,7 +39,8 @@ export default () => {
       },
       768: {
         slidesPerView: 1,
-        spaceBetween: 15,
+        spaceBetween: 14,
+        slidesPerColumn: 4,
       },
     },
   });
