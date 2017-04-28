@@ -1,0 +1,62 @@
+include ../page-header/page-header
+include ../main-container/main-container
+include ../container/container
+include ../button/button
+
+mixin catalog-yacht()
+  +container()
+    +page-header('Каталог яхт', ['Главная', 'Каталог яхт'])
+    +main-container().main-container_shadow
+      +b.catalog-yacht&attributes(attributes)
+        +e.tabs
+          +e('ul').header
+            +e('li').li
+              +e('a').link(href="#motor")
+                +icon('motor').icon._motor
+                +e.link-desc Моторные
+            +e('li').li
+              +e('a').link(href="#sailing")
+                +icon('sailing').icon._sailing
+                +e.link-desc Парусные
+            +e('li').li
+              +e('a').link(href="#rowing")
+                +icon('rowing').icon._rowing
+                +e.link-desc Гребные
+          +e.content
+            +e.inner#motor
+               +e.row
+                +e('a')(href="#").element-wrap
+                  +e('img').img(src='assets/images/yacht.jpg')
+                  +e('div').description Крейсерские яхты со средиземным кокпитом
+                  +e('div').subdesc Самый популярный и массовый класс для любителей путешествовать на парусных яхтах
+                  +e('div').subdesc 129 моделей
+                +e('a')(href="#").element-wrap
+                  +e('img').img(src='assets/images/yacht.jpg')
+                  +e('div').description Крейсерские яхты со средиземным кокпитом
+                  +e('div').subdesc Самый популярный и массовый класс для любителей путешествовать на парусных яхтах
+                  +e('div').subdesc 129 моделей
+                +e('a')(href="#").element-wrap
+                  +e('img').img(src='assets/images/yacht.jpg')
+                  +e('div').description Крейсерские яхты со средиземным кокпитом
+                  +e('div').subdesc Самый популярный и массовый класс для любителей путешествовать на парусных яхтах
+                  +e('div').subdesc 129 моделей
+               +e.row
+                +e('a')(href="#").element-wrap
+                  +e('img').img(src='assets/images/yacht.jpg')
+                  +e('div').description Крейсерские яхты со средиземным кокпитом
+                  +e('div').subdesc Самый популярный и массовый класс для любителей путешествовать на парусных яхтах
+                  +e('div').subdesc 129 моделей
+                +e('a')(href="#").element-wrap
+                  +e('img').img(src='assets/images/yacht.jpg')
+                  +e('div').description Крейсерские яхты со средиземным кокпитом
+                  +e('div').subdesc Самый популярный и массовый класс для любителей путешествовать на парусных яхтах
+                  +e('div').subdesc 129 моделей
+                +e('a')(href="#").element-wrap
+                  +e('img').img(src='assets/images/yacht.jpg')
+                  +e('div').description Крейсерские яхты со средиземным кокпитом
+                  +e('div').subdesc Самый популярный и массовый класс для любителей путешествовать на парусных яхтах
+                  +e('div').subdesc 129 моделей
+            +e.inner#sailing test2
+            +e.inner#rowing test3
+      +button()._rounded._kind_red.catalog-yacht__show-more Показать еще
+

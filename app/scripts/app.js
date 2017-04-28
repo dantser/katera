@@ -13,6 +13,7 @@ import models from '../blocks/models/models';
 import selectCurrency from '../blocks/select-currency/select-currency';
 import counter from '../blocks/counter/counter';
 import modal from '../blocks/modal/modal';
+import catalogYacht from '../blocks/catalog-yacht/catalog-yacht';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 
 $(() => {
@@ -31,4 +32,5 @@ $(() => {
   counter();
   modal();
   yachtSlider();
+  catalogYacht();
 });
