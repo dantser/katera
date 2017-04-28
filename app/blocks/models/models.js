@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 
 export default () => {
 // eslint-disable-next-line no-unused-vars
-  const swiperModel = new Swiper('.models .swiper-container', {
+  const swiperModel = new Swiper('.models_cruiser .swiper-container', {
     pagination: '.swiper-container__swiper-pagination',
     slidesPerView: 6,
     slidesPerColumn: 2,
@@ -19,10 +19,10 @@ export default () => {
   });
 // eslint-disable-next-line no-unused-vars
   const swiperModelSport = new Swiper('.models_sport .swiper-container', {
-    // pagination: '.models_sport .swiper-container__swiper-pagination',
+    pagination: '.models_sport .swiper-container__swiper-pagination',
     paginationClickable: true,
-    spaceBetween: 1,
     slidesPerView: 4,
+    spaceBetween: 30,
     // Responsive breakpoints
     breakpoints: {
       768: {
