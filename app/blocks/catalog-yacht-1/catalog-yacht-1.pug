@@ -1,0 +1,28 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../banner/banner
+include ../filter-model/filter-model
+include ../button/button
+include ../text/text
+include ../models/models
+include ../image-bg/image-bg
+include ../yacht-preview-widget/yacht-preview-widget
+
+mixin catalog-yacht-1()
+  +b.catalog-yacht-1
+    +container()
+      +page-header('Крейсерские яхты со средиземноморским кокпитом', ['Главная', 'Каталог яхт', 'Крейсерские яхты со средиземноморским кокпитом'])
+      +banner()
+      +main-container().main-container_shadow.verphe__main-container
+        +e.box-bg
+          +image-bg()(src='assets/images/cruiser.jpg')
+        +e.content
+          +text().__text
+            | Изучая различные виды яхт, вы скорее всего обратите внимание на 
+            | крейсерские яхты со средиземноморским кокпитом, которые
+            | запоминаются своими формами, элегантностью и, в то же время, красотой.
+          +text().title
+            h2 Модельный ряд
+        +filter-model()._catalog
+        +yacht-preview-widget('Крейсерские яхты со средиземноморским кокпитом', getData('sale-preview-item-extended'))._verphe

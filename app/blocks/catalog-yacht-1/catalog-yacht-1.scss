@@ -1,0 +1,20 @@
+.catalog-yacht-1 {
+
+
+
+  &__box-bg {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: block;
+
+    .image-bg {
+      height: 100%;
+      z-index: 1;
+    }
+
+    @include respond-to('tablet') {
+      height: 200px;
+    }
+  }
+}
