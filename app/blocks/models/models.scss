@@ -109,7 +109,6 @@
 
       @include respond-to('tablet') {
         max-width: 172px;
-        align-items: flex-start;
       }
     }
 
@@ -132,15 +131,11 @@
     &__params {
       font-size: 12px;
       line-height: 18px;
-
-      @include respond-to('tablet') {
-        flex-direction: row;
-        justify-content: flex-start;
-      }
     }
 
     &__param {
       @include respond-to('tablet') {
+      float: left;
 
         &::after {
           content: ',\00a0';

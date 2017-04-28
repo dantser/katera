@@ -13,6 +13,7 @@
   &__main-container {
     display: flex !important;
     flex-flow: row wrap;
+    margin-bottom: 162px;
 
     @include respond-to('tablet') {
       flex-flow: column nowrap;
@@ -182,8 +183,13 @@
   }
 
   .models_sport {
-    padding-bottom: 31px;
+    padding-bottom: 42px;
     border-bottom: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+      border-bottom: none;
+      padding-bottom: 8px;
+    }
 
     .models__header {
       margin-top: 4px;
@@ -195,14 +201,8 @@
     }
 
     .swiper-container {
-      height: 290px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-
-      &__wrapper {
-        width: 100% !important;
-      }
+      width: 750px;
+      padding-bottom: 0;
 
       &__swiper-pagination {
         display: none;
