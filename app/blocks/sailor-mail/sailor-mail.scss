@@ -1,27 +1,15 @@
 .sailor-mail {
   width: 100%;
-  height: 150px;
+  height: 100%;
   display: flex;
-  margin: 20px 0;
+  flex-direction: column;
 
   * {
     margin: 0;
     padding: 0;
   }
 
-  &__link {
-    box-sizing: border-box;
-    width: 263px;
-    height: 100%;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    transition: all .2s ease-in-out;
-    box-shadow: -1px -1px -1px rgba(0, 0, 0, 1);
-
-    &:hover {
-      box-shadow: 3px 5px 3px rgba(0, 0, 0, .5);
-    }
+  .link {
 
     &_background {
       background: $color-dark-gray;
@@ -32,12 +20,66 @@
     }
   }
 
-  &__img {
-    width: 263px;
-  }
+  .sailor-mail-box {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin: 15px 0;
 
-  &-box {
-    padding: 10px 0 10px 30px;
+    @include respond-to('mobile') {
+      height: 60px;
+      margin: 8px 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__link {
+      box-sizing: border-box;
+      width: 263px;
+      height: 100%;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      transition: all .2s ease-in-out;
+      box-shadow: -1px -1px -1px rgba(0, 0, 0, 1);
+
+      @include respond-to('mobile') {
+        width: 107px;
+        padding: 0 10px;
+      }
+
+      &:hover {
+        box-shadow: 3px 5px 4px rgba(0, 0, 0, .3);
+
+        @include respond-to('mobile') {
+          box-shadow: 2px 3px 2px rgba(0, 0, 0, .3);
+        }
+      }
+    }
+
+    &__img {
+      width: 223px;
+
+      @include respond-to('mobile') {
+        width: 87px;
+      }
+    }
+
+    &__description {
+      padding: 10px 30px;
+
+      @include respond-to('mobile') {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
 
     &__city {
       font-family: $NerisLight;
@@ -46,6 +88,10 @@
       line-height: .8;
       color: $color-gray;
       margin-bottom: 5px;
+
+      @include respond-to('mobile') {
+        display: none;
+      }
     }
 
     &__title {
@@ -55,6 +101,14 @@
       letter-spacing: 1px;
       color: $color-black;
       margin-bottom: 4px;
+
+      @include respond-to('mobile') {
+        margin-bottom: 0;
+        letter-spacing: inherit;
+        font-size: 14px;
+        order: 2;
+        line-height: 1.3;
+      }
     }
 
     &__text {
@@ -62,6 +116,12 @@
       font-weight: 300;
       color: #666;
       line-height: 1.3;
+
+      @include respond-to('mobile') {
+        display: none;
+        order: 1;
+        line-height: 1.2;
+      }
     }
 
     &__proposal {
@@ -69,6 +129,10 @@
       font-weight: 300;
       color: $color-red;
       margin-top: 10px;
+
+      @include respond-to('mobile') {
+        margin-top: 0;
+      }
     }
   }
 }
