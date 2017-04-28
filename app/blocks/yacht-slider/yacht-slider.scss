@@ -1,0 +1,60 @@
+.yacht-slider {
+  position: relative;
+  z-index: 2;
+
+  &__slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__slide-wrap {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    color: $color-black;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: $NerisBlack;
+    margin-top: 5px;
+  }
+
+  &__subdesc {
+    font-family: $NerisLight;
+    color: $color-gray;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  & > &__swiper-pagination {
+    margin-top: 25px;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $color-dark-blue;
+      margin: 0 10px;
+      display: inline-block;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: .25s ease-in-out;
+      background: transparent;
+
+      &-active {
+        border-width: 3px;
+      }
+    }
+  }
+}

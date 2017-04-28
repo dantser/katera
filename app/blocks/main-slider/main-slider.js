@@ -6,5 +6,6 @@ export default () => {
     pagination: '.main-slider__swiper-pagination',
     paginationClickable: true,
     autoplay: 5000,
+    initialSlide: 1,
   });
 };
