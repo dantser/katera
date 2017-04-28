@@ -9,7 +9,7 @@
   }
 
   @include respond-to('desktop') {
-    //width: 1170px;
+    width: 1170px;
   }
 
   @include respond-to('laptop') {
