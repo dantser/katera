@@ -1,0 +1,15 @@
+include ../button/button
+include ../division/division
+include ../select/select
+include ../icon/icon
+
+mixin filter-shop()
+  +b.filter-shop&attributes(attributes)
+  
+    - var filterData = getData('filter')
+      +e.item._vendor
+        +select(filterData.shipyard.name, filterData.shipyard.options)
+      +e.item._search-field
+        +icon('magnifier').magnifier
+        +e('input')(type='search' name='search' placeholder='Поиск по предложениям магазина').field
+      +button()._kind_red.__button Найти

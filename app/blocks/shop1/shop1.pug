@@ -2,7 +2,9 @@ include ../page-header/page-header
 include ../container/container
 include ../main-container/main-container
 include ../banner/banner
+include ../main-slider/main-slider
 include ../submenu/submenu
+include ../filter-shop/filter-shop
 include ../button/button
 include ../text/text
 include ../models/models
@@ -15,4 +17,6 @@ mixin shop1()
     +container()
       +page-header('UltraBoats', ['Главная', 'Магазины', 'UltraBoats'])
       +main-container().main-container_shadow.magazine-razdel__main-container
+        +main-slider(true)
         +submenu(getData('submenu-short')).shop1__submenu
+        +filter-shop()
