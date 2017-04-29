@@ -5,15 +5,15 @@ include ../image-bg/image-bg
 mixin scroll-slider(data)
   +b('div').scroll-slider
 
-    +b('div').swiper-container.scroll-slider__gallery-top
-      +b('ul').swiper-wrapper
+    +e('div').gallery-top.swiper-container
+      +e('ul').wrapper.swiper-wrapper
         each image in data.path
-          +b('li').swiper-slide.scroll-slider__image
+          +e('li').image.swiper-slide
             +image-bg()(src= image)
 
-    +b('div').swiper-container.scroll-slider__gallery-thumbs
-      +b('ul').swiper-wrapper
+    +b('div').gallery-thumbs.swiper-container
+      +e('ul').wrapper.swiper-wrapper
         each thumb in data.path
-          +b('li').swiper-slide.scroll-slider__thumb
+          +e('li').thumb.swiper-slide
             +image-bg()(src= thumb)
-      +b('div').swiper-scrollbar.scroll-slider__scrollbar
+      +e('div').scrollbar.swiper-scrollbar
