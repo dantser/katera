@@ -1,35 +1,86 @@
 .scroll-slider {
-  background: yellow;
+  position: relative;
 
-  &__image {
-    display: block;
-    width: 100%;
-    height: 300px;
-  }
+  &_gallery-top {
 
-/*  &__wrapper {
+    .scroll-slider {
 
-    display: flex;
-    padding: 0;
-    margin: 0;
-    overflow-x: scroll;
-  }*/
+      &__wrapper {
+        -webkit-margin-before: 0;
+        -webkit-padding-start: 0;
+        -webkit-margin-after: 0;
+      }
 
-  &__thumb {
-    position: relative;
-    flex: none;
-    width: 130px;
-    height: 69px;
-    list-style: none;
-    box-sizing: border-box; /*убрать бордер*/
-    border: 1px solid;
+      &__image {
+        display: block;
+        width: 100%;
+        height: 473px;
+      }
 
-    & .image-bg {
-      z-index: 0;
+      &__pagination {
+        position: relative;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        z-index: 2;
+        text-align: center;
+        bottom: 0;
+
+        @media (min-width: 767px) {
+          display: none;
+        }
+
+        .swiper-pagination-bullet {
+          width: 10px;
+          height: 10px;
+          border: 1px solid $color-dark-blue;
+          margin: 0 21px;
+          display: inline-block;
+          border-radius: 100%;
+          cursor: pointer;
+          transition: .25s ease-in-out;
+          background: transparent;
+
+          &-active {
+            border-width: 3px;
+          }
+        }
+      }
     }
   }
+
+  &_gallery-thumbs {
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+
+    .scroll-slider {
+
+      &__wrapper {
+        -webkit-margin-before: 0;
+        -webkit-padding-start: 0;
+      }
+
+      &__image {
+        position: relative;
+        flex: none;
+        width: 98px;
+        height: 69px;
+        list-style: none;
+
+        & .image-bg {
+          z-index: 0;
+        }
+      }
+
+      &__scrollbar {
+        .swiper-scrollbar-drag {
+          background-color: $color-blue;
+        }
+      }
+    }
+
+  }
 }
 
-.scroll-slider__scrollbar {
-    /*background: blue;*/
-}
+
