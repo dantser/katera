@@ -7,9 +7,17 @@
   margin-bottom: 28px;
   box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
 
-  @include respond-to('laptop') {
+  @include respond-to('tablet') {
     flex-direction: column;
-    padding: 0;
+    padding: 0 15px;
+    justify-content: space-between;
+    min-height: 94px;
+    align-items: center;
+  }
+
+  @include respond-to('mobile') {
+    flex-direction: column;
+    padding: 0 15px;
     justify-content: space-between;
     min-height: 94px;
     align-items: center;
@@ -34,10 +42,14 @@
   &__item {
     width: 238px;
     height: 40px;
+    margin-bottom: 27px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
       width: 100%;
-      padding: 0 15px;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
     }
 
     &-info {
@@ -73,7 +85,12 @@
       min-height: 60px;
       max-width: 206px;
 
-      @include respond-to('laptop') {
+      @include respond-to('tablet') {
+        order: 5;
+        transform: none;
+      }
+
+      @include respond-to('mobile') {
         order: 5;
         transform: none;
       }
@@ -87,7 +104,11 @@
       font-family: $NerisSemiBold;
       width: 270px;
 
-      @include respond-to('laptop') {
+      @include respond-to('tablet') {
+        order: 4;
+      }
+
+      @include respond-to('mobile') {
         order: 4;
       }
     }
@@ -98,7 +119,11 @@
       justify-content: space-between;
       padding-bottom: 3px;
 
-      @include respond-to('laptop') {
+      @include respond-to('tablet') {
+        order: 3;
+      }
+
+      @include respond-to('mobile') {
         order: 3;
       }
     }
@@ -111,7 +136,11 @@
     line-height: 24px;
     width: 205px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      width: 290px;
+    }
+
+    @include respond-to('mobile') {
       width: 290px;
     }
   }

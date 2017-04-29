@@ -46,6 +46,10 @@
     @include respond-to('tablet') {
       height: 200px;
     }
+
+    @include respond-to('mobile') {
+      height: 200px;
+    }
   }
 
   &__sort {
@@ -59,6 +63,11 @@
 
     @include respond-to('tablet') {
       width: auto;
+      margin-bottom: 21px;
+    }
+
+    @include respond-to('tablet') {
+      margin-bottom: 21px;
     }
 
     .select {
@@ -79,12 +88,30 @@
     }
   }
 
+  &__filter__label {
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
   &__price {
     display: flex;
   }
 
   &__found {
     align-self: flex-end;
+
+    @include respond-to('tablet') {
+      align-self: center;
+    }
+
+    @include respond-to('mobile') {
+      align-self: center;
+    }
   }
 
   &__header {
@@ -104,6 +131,10 @@
     @include respond-to('tablet') {
       display: none;
     }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 
   &__button {
@@ -115,8 +146,12 @@
 
     @include respond-to('tablet') {
       // order: 9;
-      margin: 0 15px 50px;
-      width: auto;
+      margin: 29px auto 50px;
+    }
+
+    @include respond-to('mobile') {
+      // order: 9;
+      margin: 29px auto 50px;
     }
   }
 

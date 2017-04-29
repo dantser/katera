@@ -27,10 +27,11 @@ mixin catalog-yacht-1()
         +filter-model()._catalog
         +e.sort
           +e.found 
-            | Найдено 
-            +e.SPAN.sort__output 125
-            |  моделей
-          +e.price Сортировать
+            +e('span').filter__label Найдено 
+            +e('span').sort__output 125
+            +e('span') моделей
+          +e.price 
+            +e('span').filter__label Сортировать
             - var filterData = getData('filter')
               +select(filterData.priceSort.name, filterData.priceSort.options).
         +models('', getData('sale-preview-item-extended'))._catalog
