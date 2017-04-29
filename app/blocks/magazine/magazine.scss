@@ -2,6 +2,10 @@
   display: block;
   flex: 1 0 auto;
 
+  &__main-container {
+    padding-bottom: 30px;
+  }
+
   &__content {
     position: relative;
     margin-top: 44px;
