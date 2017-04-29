@@ -4,6 +4,15 @@
   right: 0;
   z-index: 1;
 
+  @include respond-to('mobile') {
+    display: flex;
+    flex-wrap: wrap;
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: 0;
+  }
+
   &__text {
     font-size: 13px;
     font-weight: 300;
@@ -14,6 +23,11 @@
     color: #fff;
     text-decoration: none;
     background-color: #000;
+
+    @include respond-to('mobile') {
+      margin-right: 5px;
+      font-size: 12px;
+    }
 
     &_color_blue {
       background-color: #2635fa;
@@ -38,5 +52,10 @@
 
   &__text + &__text {
     margin-top: 10px;
+
+    @include respond-to('mobile') {
+      margin-top: 0;
+      font-size: 12px;
+    }
   }
 }
