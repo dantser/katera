@@ -17,6 +17,10 @@
     @include respond-to('tablet') {
       font-size: 20px;
     }
+
+    @include respond-to('mobile') {
+      font-size: 20px;
+    }
   }
 
   .swiper-container {
@@ -30,6 +34,10 @@
     padding-bottom: 95px;
 
     @include respond-to('tablet') {
+      padding-bottom: 37px;
+    }
+
+    @include respond-to('mobile') {
       padding-bottom: 37px;
     }
 
@@ -63,12 +71,23 @@
       @include respond-to('tablet') {
         display: none;
       }
+
+      @include respond-to('mobile') {
+        display: none;
+      }
     }
 
     .swiper-slide {
       text-decoration: none;
 
       @include respond-to('tablet') {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include respond-to('mobile') {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -81,6 +100,10 @@
     margin-top: 22px !important;
 
     @include respond-to('tablet') {
+      margin-top: 0 !important;
+    }
+
+    @include respond-to('mobile') {
       margin-top: 0 !important;
     }
 
@@ -101,6 +124,13 @@
         margin-right: 12px;
         margin-bottom: 0;
       }
+
+      @include respond-to('mobile') {
+        width: 107px;
+        height: 93px;
+        margin-right: 12px;
+        margin-bottom: 0;
+      }
     }
 
     &__text {
@@ -116,6 +146,12 @@
         margin-top: 0;
         align-items: flex-start;
       }
+
+      @include respond-to('mobile') {
+        max-width: 172px;
+        margin-top: 0;
+        align-items: flex-start;
+      }
     }
 
     &__name {
@@ -124,6 +160,11 @@
       color: $color-black;
 
       @include respond-to('tablet') {
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      @include respond-to('mobile') {
         font-size: 15px;
         line-height: 22px;
       }
@@ -147,6 +188,14 @@
           content: ',\00a0';
         }
       }
+
+      @include respond-to('mobile') {
+        float: left;
+
+        &::after {
+          content: ',\00a0';
+        }
+      }
     }
   }
 
@@ -158,6 +207,14 @@
     }
 
     @include respond-to('tablet') {
+      order: 7;
+
+      &:nth-of-type(2) {
+        order: 8;
+      }
+    }
+
+    @include respond-to('mobile') {
       order: 7;
 
       &:nth-of-type(2) {

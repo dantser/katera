@@ -2,17 +2,33 @@
   background-color: $color-white;
   display: flex;
   justify-content: space-between;
-  padding: 20px 25px 10px;
+  padding: 20px 25px 13px;
   width: 100%;
   margin-bottom: 28px;
   box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
 
-  @include respond-to('laptop') {
+  @include respond-to('tablet') {
+    padding: 18px 15px 16px;
+    margin-bottom: 12px;
     flex-direction: column;
-    padding: 0;
     justify-content: space-between;
     min-height: 94px;
     align-items: center;
+    box-shadow: none;
+    border-top: 1px solid $color-light-gray;
+    border-bottom: 1px solid $color-light-gray;
+  }
+
+  @include respond-to('mobile') {
+    padding: 18px 15px 16px;
+    margin-bottom: 12px;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 94px;
+    align-items: center;
+    box-shadow: none;
+    border-top: 1px solid $color-light-gray;
+    border-bottom: 1px solid $color-light-gray;
   }
 
   &__input {
@@ -35,9 +51,15 @@
     width: 238px;
     height: 40px;
 
-    @include respond-to('laptop') {
+
+    @include respond-to('tablet') {
       width: 100%;
-      padding: 0 15px;
+      margin-bottom: 27px;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+      margin-bottom: 27px;
     }
 
     &-info {
@@ -73,9 +95,16 @@
       min-height: 60px;
       max-width: 206px;
 
-      @include respond-to('laptop') {
+      @include respond-to('tablet') {
         order: 5;
         transform: none;
+        margin-bottom: 0;
+      }
+
+      @include respond-to('mobile') {
+        order: 5;
+        transform: none;
+        margin-bottom: 0;
       }
     }
 
@@ -87,7 +116,11 @@
       font-family: $NerisSemiBold;
       width: 270px;
 
-      @include respond-to('laptop') {
+      @include respond-to('tablet') {
+        order: 4;
+      }
+
+      @include respond-to('mobile') {
         order: 4;
       }
     }
@@ -98,7 +131,11 @@
       justify-content: space-between;
       padding-bottom: 3px;
 
-      @include respond-to('laptop') {
+      @include respond-to('tablet') {
+        order: 3;
+      }
+
+      @include respond-to('mobile') {
         order: 3;
       }
     }
@@ -111,7 +148,11 @@
     line-height: 24px;
     width: 205px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      width: 290px;
+    }
+
+    @include respond-to('mobile') {
       width: 290px;
     }
   }

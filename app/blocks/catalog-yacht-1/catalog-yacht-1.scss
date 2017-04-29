@@ -14,6 +14,18 @@
     text-align: center;
     margin: 21px 104px 0 106px;
     line-height: 34px;
+
+    @include respond-to('tablet') {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 22px 20px 34px;
+    }
+
+    @include respond-to('mobile') {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 22px 20px 34px;
+    }
   }
 
   .swiper-container {
@@ -46,6 +58,10 @@
     @include respond-to('tablet') {
       height: 200px;
     }
+
+    @include respond-to('mobile') {
+      height: 200px;
+    }
   }
 
   &__sort {
@@ -59,6 +75,12 @@
 
     @include respond-to('tablet') {
       width: auto;
+      margin: 0 15px 21px;
+    }
+
+    @include respond-to('mobile') {
+      width: auto;
+      margin: 0 15px 21px;
     }
 
     .select {
@@ -79,12 +101,30 @@
     }
   }
 
+  &__filter__label {
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
   &__price {
     display: flex;
   }
 
   &__found {
     align-self: flex-end;
+
+    @include respond-to('tablet') {
+      align-self: center;
+    }
+
+    @include respond-to('mobile') {
+      align-self: center;
+    }
   }
 
   &__header {
@@ -104,6 +144,10 @@
     @include respond-to('tablet') {
       display: none;
     }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 
   &__button {
@@ -115,7 +159,13 @@
 
     @include respond-to('tablet') {
       // order: 9;
-      margin: 0 15px 50px;
+      margin: 29px 15px 50px;
+      width: auto;
+    }
+
+    @include respond-to('mobile') {
+      // order: 9;
+      margin: 29px 15px 50px;
       width: auto;
     }
   }
