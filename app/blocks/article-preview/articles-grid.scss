@@ -134,7 +134,7 @@ $articles-grid__margin: 30px;
       @include articles-grid__col2(4);
     }
 
-    @media (max-width: 320px) {
+    @include respond-to('mobile') {
       display: block;
       width: 100%;
       height: auto;
@@ -197,7 +197,7 @@ $articles-grid__margin: 30px;
     @include articles-grid__col(3);
   }
 
-  @media (max-width: 320px) {
+  @include respond-to('mobile') {
     display: block;
     width: 100%;
     height: auto;
