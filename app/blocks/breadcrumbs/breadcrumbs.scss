@@ -10,6 +10,10 @@
     display: none;
   }
 
+  @include respond-to('mobile') {
+    display: none;
+  }
+
   &__item {
     display: inline-block;
     vertical-align: middle;

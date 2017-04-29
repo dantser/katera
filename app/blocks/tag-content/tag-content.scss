@@ -4,7 +4,7 @@
   right: 0;
   z-index: 1;
 
-  @media (max-width: 320px) {
+  @include respond-to('mobile') {
     display: flex;
     flex-wrap: wrap;
     top: auto;
@@ -24,7 +24,7 @@
     text-decoration: none;
     background-color: #000;
 
-    @media (max-width: 320px) {
+    @include respond-to('mobile') {
       margin-right: 5px;
       font-size: 12px;
     }
@@ -53,7 +53,7 @@
   &__text + &__text {
     margin-top: 10px;
 
-    @media (max-width: 320px) {
+    @include respond-to('mobile') {
       margin-top: 0;
       font-size: 12px;
     }
