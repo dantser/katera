@@ -12,7 +12,7 @@ mixin magazine()
   +b.magazine&attributes(attributes)
     +container()
       +page-header('Журнал', ['Главная', 'Журнал'])
-      +main-container().main-container_shadow
+      +main-container().main-container_shadow.magazine__main-container
         +submenu(getData('submenu'))
         +e.content
           +articles-grid()._4
