@@ -1,0 +1,60 @@
+include ../checkbox/checkbox
+include ../radio/radio
+include ../button/button
+include ../text-field/text-field
+
+mixin buy-magazine-form(tag)
+  - var data = getData('magazine-popup-form');
+  +b(tag).buy-magazine-form
+    +e('fieldset').fieldset
+      +e.row._inverse
+        +e('span').label= data.printed.label
+        +e.field
+          +checkbox(data.printed)._switcher
+      +e.row
+        +e('span').label= data.city.label
+        +e.field
+          +e.text-field
+            +text-field(data.city)
+      +e.row
+        +e('span').label= data.city.label
+        +e.field
+          +e.text-field
+            +text-field(data.city)
+      +e.row._half
+        +e('span').label= data.house.label
+        +e.field
+          +e.text-field
+            +text-field(data.house)
+      +e.row._half
+        +e('span').label= data.apartmentNumber.label
+        +e.field
+          +e.text-field
+            +text-field(data.apartmentNumber)
+      +e.row._half
+        +e('span').label= data.postcode.label
+        +e.field
+          +e.text-field
+            +text-field(data.postcode)
+
+    +e('fieldset').fieldset
+      +e.row._inverse
+        +e('span').label=data.electronic.label
+        +e.field
+          +checkbox(data.electronic)._switcher
+
+      +e.row
+        +e('span').label= data.email.label
+        +e.field
+          +e.text-field
+            +text-field(data.email)
+
+    +e('fieldset').fieldset
+      each payment in data.payment
+        +e.row._inverse._reset
+          +e('span').label= payment.label
+          +e.field
+            +radio(payment)
+
+    +e('fieldset').fieldset
+      +button()(type='submit')._kind_red._rounded._shadow.__button Оплатить

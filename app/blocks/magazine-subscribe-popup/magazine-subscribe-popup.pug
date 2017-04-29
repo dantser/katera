@@ -1,0 +1,31 @@
+include ../modal/modal
+include ../icon/icon
+include ../buy-magazine-form/buy-magazine-form
+
+mixin magazine-subscribe-popup()
+  +modal('Оформление подписки')#magazine-subscribe-popup
+    +b('form').magazine-subscribe-popup
+      +e.types
+        +e('label').type
+          +e('input')(type='radio' name='subscribe-type' value='1' checked='true').control
+          +e.box
+            +icon('subscribe-type-default').icon._default
+            +e.info
+              +e.text._period 3 месяца
+              +e.text._price 800 Р
+        +e('label').type
+          +e('input')(type='radio' name='subscribe-type' value='2').control
+          +e.box
+            +icon('subscribe-type-express').icon._express
+            +e.info
+              +e.text._period 6 месяцец
+              +e.text._price 1300 Р
+        +e('label').type
+          +e('input')(type='radio' name='subscribe-type' value='3').control
+          +e.box
+            +icon('subscribe-type-turbo').icon._turbo
+            +e.info
+              +e.text._period 12 месяцев
+              +e.text._price 2550 Р
+      +e.buy-magazine-form
+        +buy-magazine-form()
