@@ -7,7 +7,15 @@
   margin-bottom: 28px;
   box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
 
-  @include respond-to('laptop') {
+  @include respond-to('tablet') {
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-between;
+    min-height: 94px;
+    align-items: center;
+  }
+
+  @include respond-to('mobile') {
     flex-direction: column;
     padding: 0;
     justify-content: space-between;
@@ -35,9 +43,24 @@
     width: 238px;
     height: 40px;
 
-    @include respond-to('laptop') {
+    @include respond-to('large-desktop') {
+      width: calc(33% - 30px);
+    }
+
+    @include respond-to('desktop') {
       width: 100%;
-      padding: 0 15px;
+    }
+
+    @include respond-to('laptop') {
+      width: calc(50% - 30px);
+    }
+
+    @include respond-to('tablet') {
+      width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
     }
 
     &-info {
