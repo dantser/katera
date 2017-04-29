@@ -3,23 +3,39 @@
   top: 0;
   left: 0;
   display: none;
-  width: 100vw;
-  height: 100vh;
+  padding: 185px 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba($color-dark-blue, .9);
   z-index: 999;
 
+  @include respond-to('tablet') {
+    padding: 75px 15px;
+  }
+
+  @include respond-to('mobile') {
+    padding: 25px 0;
+  }
+
   &_active {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__wrapper {
-    position: absolute;
-    top: center;
-    left: center;
     width: 945px;
-    max-height: 80vh;
+    max-height: 100%;
     background-color: $color-white;
     overflow-y: auto;
+
+    @include respond-to('tablet') {
+      width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
   }
 
   &__header {

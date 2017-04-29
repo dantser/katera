@@ -16,7 +16,6 @@ import modal from '../blocks/modal/modal';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 
 $(() => {
-  commonInput();
   burger();
   select();
   searchBar();
@@ -31,4 +30,5 @@ $(() => {
   counter();
   modal();
   yachtSlider();
+  commonInput();
 });
