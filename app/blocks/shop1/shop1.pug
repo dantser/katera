@@ -1,0 +1,18 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../banner/banner
+include ../submenu/submenu
+include ../button/button
+include ../text/text
+include ../models/models
+include ../image-bg/image-bg
+include ../yacht-slider/yacht-slider
+include ../select/select
+
+mixin shop1()
+  +b.shop1&attributes(attributes)
+    +container()
+      +page-header('UltraBoats', ['Главная', 'Магазины', 'UltraBoats'])
+      +main-container().main-container_shadow.magazine-razdel__main-container
+        +submenu(getData('submenu-short'))
