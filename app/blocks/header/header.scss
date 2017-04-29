@@ -4,12 +4,23 @@
   height: 175px;
   background-color: $color-white;
 
-  @include respond-to('laptop') {
+  @include respond-to('tablet') {
+    height: 35px;
+  }
+
+  @include respond-to('mobile') {
     height: 35px;
   }
 
   &_index {
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      position: absolute;
+      top: 100vh;
+      left: 0;
+      z-index: 200;
+    }
+
+    @include respond-to('mobile') {
       position: absolute;
       top: 100vh;
       left: 0;
@@ -23,7 +34,11 @@
     width: 100%;
     height: 90px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
       display: none;
     }
   }
@@ -38,7 +53,11 @@
     align-items: center;
     height: 65px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      height: 100%;
+    }
+
+    @include respond-to('mobile') {
       height: 100%;
     }
   }
@@ -53,11 +72,24 @@
       padding-left: 15px;
     }
 
+    @include respond-to('mobile') {
+      padding-left: 15px;
+    }
+
     &_right {
       flex: 1;
       margin-left: 30px;
 
       @include respond-to('laptop') {
+        margin-left: 15px;
+      }
+
+      @include respond-to('tablet') {
+        margin-left: 0;
+        justify-content: flex-end;
+      }
+
+      @include respond-to('mobile') {
         margin-left: 0;
         justify-content: flex-end;
       }
@@ -68,7 +100,12 @@
     width: 32px;
     height: 25px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      width: 26px;
+      height: 19px;
+    }
+
+    @include respond-to('mobile') {
       width: 26px;
       height: 19px;
     }
@@ -85,13 +122,29 @@
       width: 76px;
       height: 15px;
     }
+
+    @include respond-to('tablet') {
+      margin-left: 15px;
+      width: 76px;
+      height: 15px;
+    }
+
+    @include respond-to('mobile') {
+      margin-left: 15px;
+      width: 76px;
+      height: 15px;
+    }
   }
 
   &__navbar {
     display: block;
     margin: 0 auto;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
       display: none;
     }
   }
@@ -99,7 +152,11 @@
   &__login {
     display: block;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
       display: none;
     }
   }
@@ -109,7 +166,14 @@
     width: 165px;
     height: 35px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      width: auto;
+      padding: 0 10px;
+      margin: 0;
+      font-size: 12px;
+    }
+
+    @include respond-to('mobile') {
       width: auto;
       padding: 0 10px;
       margin: 0;
@@ -120,7 +184,11 @@
   &__search-bar {
     margin-left: 19px;
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
       display: none;
     }
   }
@@ -137,9 +205,15 @@
     width: 100%;
     height: calc(100vh - 175px);
 
-    @include respond-to('laptop') {
+    @include respond-to('tablet') {
       top: 35px;
-      min-height: calc(100% - 35px);
+      height: 100%;
+      min-height: 1000px; // temp
+    }
+
+    @include respond-to('mobile') {
+      top: 35px;
+      min-height: 1000px;  // temp
     }
   }
 }
