@@ -3,7 +3,11 @@
   display: block;
   flex: 1 0 auto;
 
-  @include respond-to('laptop') {
+  @include respond-to('tablet') {
+    margin-top: 35px; // mobile header height
+  }
+
+  @include respond-to('mobile') {
     margin-top: 35px; // mobile header height
   }
 
@@ -27,84 +31,20 @@
   &__content {
     margin-top: 30px;
     display: block;
-    width: 847px;
-
-    @include respond-to('tablet') {
-      display: none;
-    }
+    flex: 1;
   }
 
   &__big-banner {
     margin-top: 30px;
   }
 
-  .filter {
-    @include respond-to('laptop') {
-      width: 100%;
-    }
-
-    @include respond-to('mobile') {
-      margin-top: 0;
-    }
-
-    &__control {
-      @include respond-to('mobile') {
-        justify-content: space-around;
-        padding: 0 38px;
-      }
-
-      @include respond-to('laptop') {
-        justify-content: space-around;
-        padding: 0 38px;
-      }
-    }
-
-    &__division {
-      font-size: 16px;
-      font-weight: 700;
-      font-family: $NerisSemiBold;
-
-      @include respond-to('laptop') {
-        padding-right: 0;
-      }
-    }
-
-    .division_active {
-      font-size: 16px;
-      font-weight: 900;
-      font-family: $NerisBlack;
-    }
-
-    .division_active {
-
-      &::before {
-        @include respond-to('laptop') {
-          left: 61%;
-        }
-      }
-    }
-  }
-
-  .sale-preview-item {
-    @include respond-to('tablet') {
-      display: none;
-    }
-  }
-
-  .topic-preview-widget {
-    @include respond-to('tablet') {
-      display: none;
-    }
-  }
-
-  .yacht-preview-widget {
-    @include respond-to('laptop') {
-      display: none;
-    }
+  &__filter {
+    margin-top: 30px;
+    width: 100%;
   }
 
   .small-article-preview {
-    @include respond-to('laptop') {
+    @include respond-to('mobile') {
       display: none;
     }
   }

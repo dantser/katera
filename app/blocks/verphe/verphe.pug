@@ -3,7 +3,6 @@ include ../container/container
 include ../main-container/main-container
 include ../banner/banner
 include ../button/button
-include ../banner/banner
 include ../text/text
 include ../verphe-contacts/verphe-contacts
 include ../timeline/timeline
@@ -55,6 +54,6 @@ mixin verphe()
         +e.H2.title История верфи
         +timeline().__timeline
         +e.H2.title Модельный ряд
-        +models('Крейсерские яхты со средиземноморским кокпитом', getData('sale-preview-item-extended'))._verphe
+        +models('Крейсерские яхты со средиземноморским кокпитом', getData('sale-preview-item-extended'))._verphe._cruiser
         +models('Спортивные швертботы', getData('sale-preview-item-short'))._verphe._sport
         +button(true)(href='#')._rounded._kind_red.__button Каталог верфей

@@ -31,6 +31,13 @@
       { "value": 3, "title": "Страна #3" }
     ]
   },
+  "priceSort": {
+    "name": "price-sort",
+    "options": [
+      { "value": 1, "title": "Сначала дешевые" },
+      { "value": 2, "title": "Сначала дорогие" }
+    ]
+  },
   "priceFrom": {
     "name": "price-from",
     "type": "text",
@@ -50,5 +57,93 @@
       "value": "200",
       "defaultValue": "45"
     }
+  },
+  "purpose": {
+    "name": "purpose",
+    "options": [
+      { "value": 1, "title": "Назначение судна #1" },
+      { "value": 2, "title": "Назначение судна #2" },
+      { "value": 3, "title": "Назначение судна #3" }
+    ]
+  },
+  "typeOfShell": {
+    "name": "type-of-shell",
+    "options": [
+      { "value": 1, "title": "Тип корпуса #1" },
+      { "value": 2, "title": "Тип корпуса #2" },
+      { "value": 3, "title": "Тип корпуса #3" }
+    ]
+  },
+  "bodyMaterial": {
+    "name": "body-material",
+    "options": [
+      { "value": 1, "title": "Материал корпуса #1" },
+      { "value": 2, "title": "Материал корпуса #2" },
+      { "value": 3, "title": "Материал корпуса #3" }
+    ]
+  },
+  "typeOfTooling": {
+    "name": "type-of-tooling",
+    "options": [
+      { "value": 1, "title": "Тип оснастки #1" },
+      { "value": 2, "title": "Тип оснастки #2" },
+      { "value": 3, "title": "Тип оснастки #3" }
+    ]
+  },
+  "control": {
+    "name": "control",
+    "options": [
+      { "value": 1, "title": "Управление #1" },
+      { "value": 2, "title": "Управление #2" },
+      { "value": 3, "title": "Управление #3" }
+    ]
+  },
+  "pilotEngine": {
+    "name": "pilot-engine",
+    "value": 1,
+    "checked": false
+  },
+  "type": {
+    "name": "type",
+    "options": [
+      { "value": 1, "title": "Тип #1" },
+      { "value": 2, "title": "Тип #2" },
+      { "value": 3, "title": "Тип #3" }
+    ]
+  },
+  "draft1": {
+    "name": "draft1",
+    "type": "text",
+    "placeholder": "Осадка фальшкилем или швертом не более"
+  },
+  "draft2": {
+    "name": "draft2",
+    "type": "text",
+    "placeholder": "Осадка корпусом не более"
+  },
+  "mastHeight": {
+    "name": "mast-height",
+    "type": "text",
+    "placeholder": "Высота мачты не более"
+  },
+  "fuelStock": {
+    "name": "fuel-stock",
+    "type": "text",
+    "placeholder": "Запас топлива не менее"
+  },
+  "waterSupply": {
+    "name": "water-supply",
+    "type": "text",
+    "placeholder": "Запас воды не менее"
+  },
+  "galley": {
+    "name": "galley",
+    "value": 1,
+    "checked": false
+  },
+  "bathroom": {
+    "name": "bathroom",
+    "value": 1,
+    "checked": false
   }
 }

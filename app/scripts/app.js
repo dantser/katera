@@ -14,6 +14,7 @@ import selectCurrency from '../blocks/select-currency/select-currency';
 import counter from '../blocks/counter/counter';
 import modal from '../blocks/modal/modal';
 import scrollSlider from '../blocks/scroll-slider/scroll-slider';
+import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 
 $(() => {
   commonInput();
@@ -31,4 +32,5 @@ $(() => {
   counter();
   modal();
   scrollSlider();
+  yachtSlider();
 });

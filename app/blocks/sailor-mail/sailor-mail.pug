@@ -1,0 +1,15 @@
+//- Все данные находятся в sailor-mail.json пример: +sailor-mail(getData('sailor-mail'))
+
+mixin sailor-mail(data)
+  +b.sailor-mail
+    each block in data.blocks
+      - var backgroundClass = block.background ? 'link_background' : '';
+      - var borderClass = block.border ? 'link_border' : '';
+      +b.sailor-mail-box
+        +e('a').link(class=backgroundClass, class=borderClass)(href= block.link)
+          +e('img')(src= block.image alt='').img
+        +e.description
+          +e('p').city= block.city
+          +e('h4').title= block.title
+          +e('p').text= block.text
+          +e('p').proposal= block.proposal

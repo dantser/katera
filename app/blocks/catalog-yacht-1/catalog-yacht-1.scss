@@ -1,0 +1,133 @@
+.catalog-yacht-1 {
+
+  .main-container {
+    margin-bottom: 140px;
+  }
+
+  .page-header {
+    padding-bottom: 4px;
+  }
+
+  &__text {
+    color: $color-black;
+    font-size: 24px;
+    text-align: center;
+    margin: 21px 104px 0 106px;
+    line-height: 34px;
+  }
+
+  .swiper-container {
+    padding-bottom: 0 !important;
+  }
+
+  .models {
+
+    &_catalog {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    &__header {
+      display: none;
+    }
+  }
+
+  &__box-bg {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: block;
+
+    .image-bg {
+      height: 100%;
+      z-index: 1;
+    }
+
+    @include respond-to('tablet') {
+      height: 200px;
+    }
+  }
+
+  &__sort {
+    width: 100%;
+    margin: 0 25px -2px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $NerisSemiBold;
+    line-height: 24px;
+    align-items: center;
+
+    @include respond-to('tablet') {
+      width: auto;
+    }
+
+    .select {
+      width: 165px;
+      height: 30px;
+      margin-left: 15px;
+      font-size: 14px;
+
+      &__control {
+        padding-left: 11px;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    &__output {
+      color: $color-red;
+    }
+  }
+
+  &__price {
+    display: flex;
+  }
+
+  &__found {
+    align-self: flex-end;
+  }
+
+  &__header {
+    width: 100%;
+    color: $color-dark-blue;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: $NerisSemiBold;
+    text-align: center;
+    margin-top: 81px;
+    margin-bottom: 22px;
+
+    &:nth-of-type(2) {
+      margin: 72px 0 22px;
+    }
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  &__button {
+    width: 165px;
+    height: 40px;
+    margin: 58px auto 0;
+    box-shadow: 0 0 35px rgba(9, 4, 53, 0.3);
+    padding-right: 4px;
+
+    @include respond-to('tablet') {
+      // order: 9;
+      margin: 0 15px 50px;
+      width: auto;
+    }
+  }
+
+  &__link {
+    margin: 58px auto 49px;
+    padding: 0 5px 0 7px;
+  }
+
+  .none {
+    width: 100%;
+    height: 936px;
+    background-color: $color-light-gray;
+  }
+}

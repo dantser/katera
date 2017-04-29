@@ -13,6 +13,7 @@
   &__main-container {
     display: flex !important;
     flex-flow: row wrap;
+    margin-bottom: 162px;
 
     @include respond-to('tablet') {
       flex-flow: column nowrap;
@@ -176,18 +177,30 @@
 
     @include respond-to('tablet') {
       order: 9;
-      margin: 0 15px 38px;
+      margin: 0 15px 50px;
       width: auto;
     }
   }
 
   .models_sport {
-    padding-bottom: 31px;
+    padding-bottom: 42px;
     border-bottom: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 49px;
+    }
 
     .models__header {
       margin-top: 4px;
       font-size: 24px;
+
+      @include respond-to('tablet') {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 14px;
+      }
     }
 
     .sale-preview-item__text {
@@ -195,13 +208,11 @@
     }
 
     .swiper-container {
-      height: 290px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+      width: 750px;
+      padding-bottom: 0;
 
-      &__wrapper {
-        width: 100% !important;
+      @include respond-to('tablet') {
+        width: 100%;
       }
 
       &__swiper-pagination {

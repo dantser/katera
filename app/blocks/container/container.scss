@@ -1,7 +1,6 @@
 .container {
   display: block;
   margin: 0 auto;
-  width: 1170px;
   padding: 0 15px;
 
   @include respond-to('large-desktop') {
@@ -19,11 +18,11 @@
 
   @include respond-to('tablet') {
     width: 100%;
-    padding: 0;
   }
 
   @include respond-to('mobile') {
     width: 100%;
+    min-width: 320px;
     padding: 0;
   }
 }

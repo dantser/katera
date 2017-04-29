@@ -2,9 +2,10 @@
   background-color: $color-white;
   display: flex;
   justify-content: space-between;
-  padding: 20px 25px 15px;
+  padding: 20px 25px 10px;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 28px;
+  box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
 
   @include respond-to('laptop') {
     flex-direction: column;
@@ -31,7 +32,7 @@
   }
 
   &__item {
-    width: 270px;
+    width: 238px;
     height: 40px;
 
     @include respond-to('laptop') {
@@ -84,6 +85,7 @@
       justify-content: space-around;
       color: $color-black;
       font-family: $NerisSemiBold;
+      width: 270px;
 
       @include respond-to('laptop') {
         order: 4;

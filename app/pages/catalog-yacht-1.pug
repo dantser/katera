@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/catalog-yacht-1/catalog-yacht-1
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Каталог яхт - Крейсеры'
+
+block content
+  +branding()
+    +catalog-yacht-1()

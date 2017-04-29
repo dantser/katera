@@ -9,11 +9,26 @@
     display: block;
   }
 
+  @include respond-to('tablet') {
+    display: block;
+  }
+
   &__item {
     display: block;
     padding: 0 rem(20px);
 
     @include respond-to('mobile') {
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border-right: 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-gray;
+      }
+    }
+
+    @include respond-to('tablet') {
       align-items: center;
       justify-content: center;
       padding: 0;
@@ -47,7 +62,18 @@
     cursor: pointer;
     transition: color .25s ease-in-out;
 
+    @include respond-to('laptop') {
+      font-size: rem(14px);
+      text-align: center;
+    }
+
     @include respond-to('mobile') {
+      padding: rem(15.5px) 0;
+      font-size: em(18px);
+      text-align: center;
+    }
+
+    @include respond-to('tablet') {
       padding: rem(15.5px) 0;
       font-size: em(18px);
       text-align: center;

@@ -9,7 +9,7 @@ mixin sale-preview-item(obj)
       +e.name= obj.name
       +e.price= obj.price
 
-    if (obj.params)
-      +e('ul').params
-        each param in obj.params
-          +e('li').param= `${param.name}: ${param.value}`
+      if (obj.params)
+        +e('ul').params
+          each param in obj.params
+            +e('li').param= `${param.name}: ${param.value}`
