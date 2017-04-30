@@ -1,0 +1,64 @@
+{
+  "printed": {
+    "name": "printed",
+    "value": "1",
+    "checked": true,
+    "label": "Получить печатную версию"
+  },
+  "city": {
+    "type": "text",
+    "name": "city",
+    "value": "Набережные челны",
+    "label": "Город"
+  },
+  "street": {
+    "type": "text",
+    "name": "street",
+    "value": "Ул. Лизы Чайкиной",
+    "label": "Улица"
+  },
+  "house": {
+    "type": "text",
+    "name": "house",
+    "value": "5/1",
+    "label": "Дом, корп."
+  },
+  "apartmentNumber": {
+    "type": "text",
+    "name": "apartment-number",
+    "value": "125",
+    "label": "Квартира"
+  },
+  "postcode": {
+    "type": "text",
+    "name": "postcode",
+    "value": "125080",
+    "label": "Индекс"
+  },
+  "electronic": {
+    "name": "electronic",
+    "value": "1",
+    "checked": true,
+    "label": "Получить электронную версию на email"
+  },
+  "email": {
+    "type": "text",
+    "name": "email",
+    "value": "kapitan_179@mail.ru",
+    "label": "Email"
+  },
+  "payment": [
+    {
+      "name": "payment",
+      "value": "1",
+      "checked": true,
+      "label": "Оплата онлайн"
+    },
+    {
+      "name": "payment",
+      "value": "2",
+      "checked": true,
+      "label": "Сформировать счет"
+    }
+  ]
+}

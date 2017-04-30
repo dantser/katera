@@ -9,7 +9,7 @@
     width: 100%;
     height: 100%;
 
-    @media (max-width: 320px) {
+    @include respond-to('mobile') {
       padding: 0;
     }
   }
@@ -24,7 +24,7 @@
     z-index: 3;
   }
 
-  @media (max-width: 320px) {
+  @include respond-to('mobile') {
     border-bottom: 1px solid $color-gray;
   }
 
@@ -45,7 +45,7 @@
       z-index: 1;
 
       &__img {
-        @media (max-width: 320px) {
+        @include respond-to('mobile') {
           top: 60%;
           transform: scale(1.5);
         }
@@ -76,7 +76,7 @@
 
   &_title-under-img {
 
-    @media (max-width: 320px) {
+    @include respond-to('mobile') {
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -88,7 +88,7 @@
         height: 213px;
         overflow: hidden;
 
-        @media (max-width: 320px) {
+        @include respond-to('mobile') {
           height: 154px;
 
           &:before {
@@ -108,7 +108,7 @@
         padding: 6px 19px 22px;
         align-items: center;
 
-        @media (max-width: 320px) {
+        @include respond-to('mobile') {
           padding-bottom: 6px;
           padding-left: 0;
         }
@@ -124,7 +124,7 @@
         text-align: center;
         color: $color-black;
 
-        @media (max-width: 320px) {
+        @include respond-to('mobile') {
           text-align: left;
           font-size: 16px;
         }
@@ -134,7 +134,7 @@
 
   &_title-inside-img {
 
-    @media (max-width: 320px) {
+    @include respond-to('mobile') {
       padding-left: 15px;
       padding-right: 15px;
       padding-bottom: 10px;
@@ -145,7 +145,7 @@
       &__wrapper {
         padding: 19px;
 
-        @media (max-width: 320px) {
+        @include respond-to('mobile') {
           padding: 0;
         }
       }
@@ -167,7 +167,7 @@
         box-sizing: border-box;
         background: linear-gradient(45deg, rgba(0, 0, 0, .84) 0%, rgba(0, 0, 0, .66) 27%, rgba(0, 0, 0, 0) 100%);
 
-        @media (max-width: 320px) {
+        @include respond-to('mobile') {
           padding-bottom: 30px;
         }
       }
@@ -178,7 +178,7 @@
         line-height: (24/13)*1em;
         color: $color-white;
 
-        @media (max-width: 320px) {
+        @include respond-to('mobile') {
           display: none;
         }
       }
@@ -189,7 +189,7 @@
         text-align: left;
         color: $color-white;
 
-        @media (max-width: 320px) {
+        @include respond-to('mobile') {
           text-align: left;
           font-size: 16px;
         }

@@ -19,14 +19,14 @@ mixin filter-model()
             +e.item-text.js-filter-length-max
         +slider-range().js-filter-slider-range
       +e.item._price
-        +e.SPAN.price__text Цена
+        +e('span').price__text Цена
         +e.input
           +text-field(filterData.priceFrom)
-        +e.SPAN.price__text &#8212
+        +e('span').price__text &#8212
         +e.input
           +text-field(filterData.priceTo)
         +e.currency
           +select-currency()
       +e.item._search
         +button()._kind_red.__button Найти
-        +e.A(href='#').link Расширенный фильтр
+        +e('a')(href='#').link Расширенный фильтр
