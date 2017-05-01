@@ -1,135 +1,135 @@
 import $ from 'jquery';
 
-/**
- * Initialize List
- * @param data {array} - Array of object [{ value: '1', title: 'title' }]
- * @param listClass {string}
- * @param itemClass {string}
- * @returns {*|jQuery|HTMLElement}
- */
-function initializeList(data, listClass, itemClass) {
-  const list = document.createElement('ul');
-  list.className = listClass;
-
-  for (const item of data) { // eslint-disable-line no-restricted-syntax
-    const listItem = document.createElement('li');
-    listItem.className = itemClass;
-    listItem.dataset.value = item.value;
-    listItem.innerText = item.title;
-
-    list.appendChild(listItem);
-  }
-
-  return $(list);
-}
-
-/**
- * @param control {*|jQuery|HTMLElement}
- * @returns {Array} - Array of object [{ value: '1', title: 'title' }]
- */
-function serveDataFromControl(control) {
-  const data = [];
-
-  control.find('option').each(function () { // eslint-disable-line func-names
-    const el = $(this);
-    const optionData = {
-      value: el.prop('value'),
-      title: el.text(),
-    };
-
-    data.push(optionData);
-  });
-
-  return data;
-}
-
-/**
- * Mark select as active
- *
- * @param selectElement {*|jQuery|HTMLElement}
- * @param listElement {*|jQuery|HTMLElement}
- * @param activeSelectClass {string}
- */
-function activate(selectElement, listElement, activeSelectClass) {
-  listElement.slideDown(() => {
-    selectElement.addClass(activeSelectClass);
+function activate(select, list, activeClass) {
+  list.slideDown(() => {
+    select.addClass(activeClass);
   });
 }
 
-/**
- * Deactivate element
- *
- * @param selectElement {*|jQuery|HTMLElement}
- * @param listElement {*|jQuery|HTMLElement}
- * @param activeSelectClass {string}
- */
-function deactivate(selectElement, listElement, activeSelectClass) {
-  listElement.slideUp(() => {
-    selectElement.removeClass(activeSelectClass);
+function deactivate(select, list, activeClass) {
+  list.slideUp(() => {
+    select.removeClass(activeClass);
   });
+}
+
+function updateText(textElement, data, allSelectedText = null) {
+  const text = allSelectedText || data.map(item => item.title).join(', ');
+  textElement.text(text);
+}
+
+function generateList(select, data) {
+  const ul = document.createElement('ul');
+  ul.className = 'list list_rounded list_has_triangle select__list';
+
+  data.forEach((item) => {
+    const li = document.createElement('li');
+    li.className = 'list__item select__item';
+    li.innerText = item.title;
+    ul.appendChild(li);
+  });
+
+  select.append(ul);
 }
 
 export default () => {
-  const ELEMENT_CLASS = '.js-select';
-  const ELEMENT_ACTIVE_CLASS = 'select_active';
-  const CONTROL_CLASS = '.js-select__control';
-  const LIST_CLASS = 'list list_rounded list_has_triangle select__list';
-  const LIST_ITEM_CLASS = 'list__item select__item';
+  const SELECT_CLASS = '.select';
+  const SELECT_ACTIVE_CLASS = 'select_active';
+  const TEXT_CLASS = '.select__text';
+  const LABEL_CLASS = '.select__label';
+  const SELECT_DATA_ALL_SELECTED = 'all-selected';
+  let selectedData = [];
 
-  const elements = $(ELEMENT_CLASS);
+  const selectElements = $(SELECT_CLASS);
 
-  if (!elements) {
+  if (!selectElements) {
     return;
   }
 
-  elements
-    .find(CONTROL_CLASS)
-    .each(function () { // eslint-disable-line func-names
-      const el = $(this);
-      const data = serveDataFromControl(el);
-      const list = initializeList(data, LIST_CLASS, LIST_ITEM_CLASS);
+  selectElements.each(function () { // eslint-disable-line func-names
+    const select = $(this);
 
-      list.appendTo(el.parent());
-    });
+    if (!select.data(SELECT_DATA_ALL_SELECTED)) {
+      const control = select.find('select');
+      const options = Array.from(control.children());
 
-  // handle click on select element
-  elements.on('mousedown click', CONTROL_CLASS, (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+      const optionsData = options.map((option) => {
+        const el = $(option);
 
-    const control = $(e.target);
-    const list = control.parent().find('ul');
-    const select = control.parent();
+        return ({ value: el.val(), title: el.text() });
+      });
 
-    if (select.hasClass(ELEMENT_ACTIVE_CLASS)) {
-      deactivate(select, list, ELEMENT_ACTIVE_CLASS);
-    } else {
-      activate(select, list, ELEMENT_ACTIVE_CLASS);
+      generateList(select, optionsData);
+
+      const textElement = control.parent().find(TEXT_CLASS);
+      const selectedOption = $(control.children()[control[0].selectedIndex]);
+      const data = [{ value: selectedOption.val(), title: selectedOption.text() }];
+
+      updateText(textElement, data);
     }
   });
 
-  // handle click on LI element
-  elements.on('click', 'li', (e) => {
+  selectElements.on('click', 'li', (e) => {
+    const el = $(e.target);
+    const selected = el.index();
+    const control = el.parents(SELECT_CLASS).find('select');
+
+    if (control.length === 0) {
+      return;
+    }
+
     e.preventDefault();
     e.stopPropagation();
 
-    const el = $(e.target);
-    const selected = el.index();
-    const control = el.parents(ELEMENT_CLASS).find(CONTROL_CLASS);
-
-    deactivate(control.parent(), el.parent(), ELEMENT_ACTIVE_CLASS);
+    deactivate(control.parent(), el.parent(), SELECT_ACTIVE_CLASS);
 
     control.children().eq(selected).prop('selected', true);
     control.trigger('change');
   });
 
-  // handle click outside of select
-  $(document).on('click', () => {
-    elements.each(function () { // eslint-disable-line func-names
-      const select = $(this);
-      const list = select.find('ul');
+  selectElements.find('select').on('change', function () { // eslint-disable-line func-names
+    const control = $(this);
+    const textElement = control.parent().find(TEXT_CLASS);
+    const selectedOption = $(control.children()[control[0].selectedIndex]);
+    const data = [{ value: selectedOption.val(), title: selectedOption.text() }];
 
-      deactivate(select, list, ELEMENT_ACTIVE_CLASS);
-    });
+    updateText(textElement, data);
+  });
+
+  // handle show list (custom dropdown)
+  selectElements.on('click', (e) => {
+    const select = $(e.target);
+
+    if (!select.hasClass(SELECT_CLASS.slice(1))) {
+      return;
+    }
+
+    const list = select.find('ul');
+
+    const toggleData = [select, list, SELECT_ACTIVE_CLASS];
+
+    if (!select.hasClass(SELECT_ACTIVE_CLASS)) {
+      activate(...toggleData);
+    } else {
+      deactivate(...toggleData);
+    }
+  });
+
+  selectElements.find('input[type="checkbox"]').on('change', (e) => {
+    const el = $(e.target);
+    const li = el.parents('li');
+
+    if (el.prop('checked')) {
+      const title = li.find(LABEL_CLASS).text();
+      selectedData.push({ value: el.val(), title });
+    } else {
+      selectedData = selectedData.filter(item => item.value !== el.val());
+    }
+
+    const select = el.parents(SELECT_CLASS);
+    const textElement = select.find(TEXT_CLASS);
+
+    // eslint-disable-next-line max-len
+    const allSelected = li.parent().children().length === selectedData.length ? select.data(SELECT_DATA_ALL_SELECTED) : null;
+    updateText(textElement, selectedData, allSelected);
   });
 };
