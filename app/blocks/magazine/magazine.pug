@@ -15,74 +15,72 @@ mixin magazine()
       +main-container().main-container_shadow.magazine__main-container
         +submenu(getData('submenu'))
         +e.content
-          +articles-grid()._4
 
-            +e.h-group
-              +e.col-2._height-1
+          +articles-grid()
+            .stroke
+              .col.col_six
                 +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-1
+              .col.col_three
                 +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-1
-                +banner('#', 'assets/images/banner2.jpg')
-
-            +e.h-group
-              +e.col-2._height-2
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-2
-                +e.v-group
-                  +e.col-1._height-1._is-inline
+              .col.col_three
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+            .stroke
+              .col.col_six
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img._tall
+              .col.col_six
+                .stroke
+                  .col.col_six
                     +article-preview(getData('article-preview_title-under-img'))._title-under-img
-                  +e.col-1._height-1._is-inline
+                  .col.col_six
                     +article-preview(getData('article-preview_title-under-img'))._title-under-img
-              +e.col-1._height-2
-                +e.v-group
-                  +e.col-1._height-1._is-inline
+                .stroke
+                  .col.col_six
                     +article-preview(getData('article-preview_title-under-img'))._title-under-img
-                  +e.col-1._height-1._is-inline
-                    +banner('#', 'assets/images/banner2.jpg')
-
-            +e.h-group
-              +e.col-1._height-1
-                +banner('#', 'assets/images/banner2.jpg')
-              +e.col-2._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-
-          +banner-big().__big-banner
-
-          +articles-grid()._4
-
-            +e.h-group
-              +e.col-2._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-1
-                +banner('#', 'assets/images/banner2.jpg')
-
-            +e.h-group
-              +e.col-2._height-2
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-2
-                +e.v-group
-                  +e.col-1._height-1._is-inline
+                  .col.col_six
                     +article-preview(getData('article-preview_title-under-img'))._title-under-img
-                  +e.col-1._height-1._is-inline
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
-              +e.col-1._height-2
-                +e.v-group
-                  +e.col-1._height-1._is-inline
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
-                  +e.col-1._height-1._is-inline
-                    +banner('#', 'assets/images/banner2.jpg')
+            .stroke
+              .col.col_three
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+              .col.col_six
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+              .col.col_three
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
 
-            +e.h-group
-              +e.col-1._height-1
-                +banner('#', 'assets/images/banner2.jpg')
-              +e.col-2._height-1
+
+          +articles-grid()
+            .stroke
+              .col.col_twelve
+                +banner-big().__big-banner
+                  +e('img')(src='assets/images/banner-img.png').little
+
+          +articles-grid()
+            .stroke
+              .col.col_six
                 +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-1
+              .col.col_three
                 +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+              .col.col_three
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+            .stroke
+              .col.col_six
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img._tall
+              .col.col_six
+                .stroke
+                  .col.col_six
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  .col.col_six
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                .stroke
+                  .col.col_six
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  .col.col_six
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+            .stroke
+              .col.col_three
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+              .col.col_six
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+              .col.col_three
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
 
         +button()._rounded._kind_red.__show-more Показать еще
