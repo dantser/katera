@@ -1,12 +1,11 @@
 .filter-shop {
-  position: relative;
   background-color: $color-white;
   display: flex;
   justify-content: space-between;
   padding: 20px 0 13px;
   width: 100%;
   margin-bottom: 28px;
-  
+
   @include respond-to('tablet') {
     padding: 18px 15px 16px;
     margin-bottom: 12px;
@@ -15,7 +14,6 @@
     min-height: 94px;
     align-items: center;
     box-shadow: none;
-    border-top: 1px solid $color-light-gray;
     border-bottom: 1px solid $color-light-gray;
   }
 
@@ -27,7 +25,6 @@
     min-height: 94px;
     align-items: center;
     box-shadow: none;
-    border-top: 1px solid $color-light-gray;
     border-bottom: 1px solid $color-light-gray;
   }
 
@@ -80,9 +77,21 @@
     &_search-field {
       display: flex;
       align-items: center;
-      min-width: 458px;
+      flex-basis: 458px;
       border: 1px solid #cccccc;
       border-radius: 3px;
+
+      @include respond-to('tablet') {
+        width: 100%;
+        margin-bottom: 27px;
+        flex-basis: auto;
+      }
+
+      @include respond-to('mobile') {
+        width: 100%;
+        margin-bottom: 27px;
+        flex-basis: auto;
+      }
     }
 
     &_search {
@@ -105,12 +114,29 @@
 
     &_vendor {
       width: 263px;
+
+      @include respond-to('tablet') {
+        display: none;
+      }
+
+      @include respond-to('mobile') {
+        display: none;
+      }
     }
   }
 
   &__button {
     width: 165px;
     font-size: 20px;
+    height: 40px;
+
+    @include respond-to('tablet') {
+      width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
   }
 
   &__magnifier {
@@ -120,5 +146,20 @@
     stroke: $color-gray;
     fill: transparent;
     margin-left: 12px;
+  }
+
+  &__extended-link {
+    display: none;
+    color: $color-gray;
+    font-size: 12px;
+    margin-top: 13px;
+
+    @include respond-to('tablet') {
+      display: block;
+    }
+
+    @include respond-to('mobile') {
+      display: block;
+    }
   }
 }

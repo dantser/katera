@@ -35,6 +35,14 @@
       overflow: hidden;
       margin: 0 auto;
     }
+
+    @include respond-to('mobile') {
+      display: flex;
+      flex-direction: column;
+      width: 267px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
   }
 
   &__item {
@@ -42,6 +50,12 @@
     cursor: pointer;
 
     @include respond-to('tablet') {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    @include respond-to('mobile') {
       padding: 14px;
       border: 1px solid #ccc;
       border-radius: 3px;
@@ -87,6 +101,17 @@
         font-size: 14px;
       }
     }
+
+    @include respond-to('mobile') {
+      padding: 0;
+
+      &::before {
+        all: initial;
+        content: 'Категория: ';
+        font-family: $NerisBlack;
+        font-size: 14px;
+      }
+    }
   }
 
   &__icon_type_chevron {
@@ -99,6 +124,10 @@
     transform: translateY(-50%);
 
     @include respond-to('tablet') {
+      display: inline-block;
+    }
+
+    @include respond-to('mobile') {
       display: inline-block;
     }
   }

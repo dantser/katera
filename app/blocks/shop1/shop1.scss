@@ -1,11 +1,231 @@
 .shop1 {
 
+  .main-slider {
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
+  .page-header {
+    margin-bottom: 117px;
+    background-color: $color-white;
+
+    @include respond-to('tablet') {
+      margin-bottom: 0;
+    }
+
+    @include respond-to('mobile') {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: none;
+    width: 100%;
+    padding: 12px 0;
+    border: 1px solid $color-light-gray;
+    border-left-style: none;
+    border-right-style: none;
+    justify-content: center;
+    margin-bottom: 14px;
+
+    a {
+      color: red;
+      text-decoration: none;
+      margin: 0 auto;
+    }
+
+    @include respond-to('tablet') {
+      display: flex;
+    }
+    @include respond-to('mobile') {
+      display: flex;
+    }
+  }
+
   .submenu {
     justify-content: space-between;
     padding: 0 326px;
+
+    @include respond-to('tablet') {
+      padding: 0;
+      margin: 0 15px;
+    }
+
+    @include respond-to('mobile') {
+      padding: 0;
+      margin: 0 15px;
+    }
   }
-  
+
   .filter-shop {
     margin: 0 97px;
+
+    @include respond-to('tablet') {
+      padding: 15px;
+      margin: 0;
+    }
+
+    @include respond-to('mobile') {
+      padding: 15px;
+      margin: 0;
+    }
+  }
+
+
+  &__sort {
+    width: 100%;
+    margin: 0 97px -2px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $color-light-gray;
+    font-family: $NerisSemiBold;
+    line-height: 24px;
+    align-items: center;
+
+    @include respond-to('tablet') {
+      margin: 0 15px 21px;
+      border-top: none;
+      padding-top: 17px;
+    }
+
+    @include respond-to('mobile') {
+      margin: 0 15px 21px;
+      padding-top: 17px;
+      border-top: none;
+    }
+
+    .select {
+      width: 165px;
+      height: 30px;
+      margin-left: 15px;
+      font-size: 14px;
+
+      &__control {
+        padding-left: 11px;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    &__output {
+      color: $color-red;
+    }
+  }
+
+  &__filter__label {
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
+  &__price {
+    display: flex;
+  }
+
+  &__found {
+    align-self: flex-end;
+
+    @include respond-to('tablet') {
+      align-self: center;
+    }
+
+    @include respond-to('mobile') {
+      align-self: center;
+    }
+  }
+
+  .shop-grid {
+    margin: 0 97px;
+    padding-bottom: 0;
+
+    @include respond-to('tablet') {
+      margin: 0 15px;
+    }
+
+    @include respond-to('mobile') {
+      margin: 0 15px;
+    }
+
+    .sale-preview-item {
+      margin-right: 30px;
+      margin-top: 40px;
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(n+21) {
+        display: none;
+      }
+
+      &__params {
+        display: none;
+      }
+
+      @include respond-to('tablet') {
+        margin-top: 0 !important;
+      }
+
+      @include respond-to('mobile') {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  &__show-more {
+    margin: 10px auto 0;
+    width: auto;
+    min-width: 165px;
+    height: 40px;
+    margin: 30px auto 44px;
+    z-index: 2;
+    padding: 0 6px 4px 8px;
+
+    @include respond-to('tablet') {
+      width: 100%;
+      padding-left: 7px;
+    }
+
+    @include respond-to('tablet') {
+      width: 100%;
+      padding-left: 7px;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 15;
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    &_index, &_page {
+      height: 150px;
+
+      .branding__image {
+        top: 100%;
+        transform: translateY(-100%);
+        height: 388px;
+      }
+    }
   }
 }
