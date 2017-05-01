@@ -1,0 +1,156 @@
+.magazine-subscribe-popup {
+  display: block;
+  padding-bottom: 50px;
+
+  &__types {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 97.5px;
+    margin-bottom: 62px;
+
+    @include respond-to('tablet') {
+      padding: 0;
+      justify-content: space-around;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+      padding: 0 15px;
+    }
+  }
+
+  &__type {
+    display: block;
+    cursor: pointer;
+
+    @include respond-to('mobile') {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__control {
+    display: none;
+
+    &:checked + .magazine-subscribe-popup {
+
+      &__box {
+        box-shadow: 0 10px 20px 0 rgba(181, 53, 31, .3);
+
+        .magazine-subscribe-popup {
+
+          &__icon {
+            fill: $color-red;
+          }
+
+          &__text_period {
+            color: $color-black;
+          }
+
+          &__text_price {
+            color: $color-red;
+          }
+        }
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    width: 230px;
+    min-height: 175px;
+    box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+    will-change: box-shadow;
+    transition: box-shadow .25s ease-in-out;
+
+    @include respond-to('tablet') {
+      width: 200px;
+      min-height: 145px;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 0;
+      padding: 15px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px 0 rgba(19, 11, 89, .14);
+    }
+  }
+
+  &__info {
+    display: block;
+    margin-top: auto;
+  }
+
+  &__text {
+    display: block;
+    font-size: rem(18px);
+    color: $color-dark-blue;
+    text-align: center;
+    line-height: (28 / 18) * 1;
+    will-change: color;
+    transition: color .25s ease-in-out;
+
+    &_period {
+      font-family: $NerisSemiBold;
+    }
+
+    &_price {
+      font-family: $NerisBlack;
+    }
+  }
+
+  &__icon {
+    margin: auto;
+    fill: $color-dark-blue;
+    will-change: fill;
+    transition: fill .25s ease-in-out;
+
+    @include respond-to('mobile') {
+      margin: 0;
+    }
+
+    &_default {
+      width: 72px;
+      height: 34px;
+    }
+
+    &_express {
+      width: 60px;
+      height: 60px;
+    }
+
+    &_turbo {
+      width: 93px;
+      height: 34px;
+    }
+  }
+
+  &__buy-magazine-form {
+    width: 555px;
+    margin: 0 auto;
+
+    .buy-magazine-form__fieldset:first-of-type {
+      margin: 0;
+      border: 0;
+      padding: 0;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
