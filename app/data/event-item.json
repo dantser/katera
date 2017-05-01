@@ -1,0 +1,52 @@
+{
+  "blocks": [
+    {
+      "link": "#",
+      "image": "assets/images/event/event1.jpg",
+      "title": "Яхтинг в России",
+      "text": "PROyachting проведет третий этап. Конференция любителей яхт.",
+      "number": "06",
+      "month": "января"
+    },
+    {
+      "link": "#",
+      "image": "assets/images/event/event2.jpg",
+      "title": "Море",
+      "text": "PROyachting проведет третий этап. Конференция любителей яхт.",
+      "number": "18",
+      "month": "января"
+    },
+    {
+      "link": "#",
+      "image": "assets/images/event/event3.jpg",
+      "title": "Путешествия",
+      "text": "PROyachting проведет третий этап. Конференция любителей яхт.",
+      "number": "20",
+      "month": "февраля"
+    },
+    {
+      "link": "#",
+      "image": "assets/images/event/event4.jpg",
+      "title": "Активный отдых",
+      "text": "PROyachting проведет третий этап. Конференция любителей яхт.",
+      "number": "03",
+      "month": "марта"
+    },
+    {
+      "link": "#",
+      "image": "assets/images/event/event5.jpg",
+      "title": "Рыбалка",
+      "text": "PROyachting проведет третий этап. Конференция любителей яхт.",
+      "number": "16",
+      "month": "апреля"
+    },
+    {
+      "link": "#",
+      "image": "assets/images/event/event6.jpg",
+      "title": "Яхтинг в России",
+      "text": "PROyachting проведет третий этап. Конференция любителей яхт.",
+      "number": "17",
+      "month": "апреля"
+    }
+  ]
+}

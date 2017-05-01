@@ -1,0 +1,17 @@
+include ../image-bg/image-bg
+
+//- Все данные находятся в event-item.json пример: +event-item(getData('event-item'))
+
+mixin event-item(data)
+  +b.event-item
+    each block in data.blocks
+      +b.event-item-box
+        +e('a').link(href= block.link)
+          +image-bg()(src= block.image alt='')
+        +e.description
+          +e('p').title= block.title
+          +e('h3').text= block.text
+        +e.date
+          +e('p').number= block.number
+          +e('span').month= block.month
+
