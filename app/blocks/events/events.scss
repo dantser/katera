@@ -1,0 +1,24 @@
+.events {
+
+  &__main-container.main-container {
+    margin-bottom: 0;
+  }
+
+  &__banner-bottom {
+    display: block;
+    width: 100%;
+    height: 90px;
+
+    @include respond-to('laptop') {
+      display: none;
+    }
+  }
+
+  &__submenu.submenu {
+    background-color: $color-dark-blue;
+
+    span {
+      color: $color-white;
+    }
+  }
+}

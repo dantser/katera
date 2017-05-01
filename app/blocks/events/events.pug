@@ -1,0 +1,14 @@
+include ../main-container/main-container
+include ../container/container
+include ../submenu/submenu
+include ../page-header/page-header
+
+mixin events()
+  +b.events&attributes(attributes)
+    +container()
+      +page-header('Мероприятия', ['Главная', 'Мероприятия'])
+      +main-container().events__main-container
+        +submenu(getData('submenu')).__submenu
+        +e.banner-bottom
+          +banner('#', 'assets/images/banner.jpg')._overlay
+            +e('img')(src='assets/images/banner-img.png').little
