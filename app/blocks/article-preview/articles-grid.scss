@@ -1,249 +1,77 @@
-$articles-grid__col-basic-height: 295px;
-$articles-grid__margin: 30px;
+.grid {
+  padding: 0px 0;
+  margin: 0px 0;
+  float: left;
 
-@mixin articles-grid__col($cells) {
-  width: calc(#{$cells} * 33% - #{$articles-grid__margin} * .5);
-
-  @media (max-width: 991px) {
-    width: calc(50% - #{$articles-grid__margin} * .5);
-  }
-
-  &_is-inline { /* является элементом верт. группы */
-    width: 100%;
-
-    @media (max-width: 991px) {
-      width: 100%;
-    }
-  }
-
-  &_height-1 {
-    height: $articles-grid__col-basic-height;
-  }
-
-  &_height-2 {
-    height: $articles-grid__col-basic-height*2+$articles-grid__margin;
-  }
-
-  &_height-3 {
-    height: $articles-grid__col-basic-height*3+$articles-grid__margin*2;
+  &:not(:first-of-type) {
+    padding-top:30px;
   }
 }
 
-@mixin articles-grid__col2($cells) {
-  width: calc(#{$cells} * 25% - #{$articles-grid__margin} * .5);
+.stroke {
+  display: flex;
+  margin:-30px -15px 0;
+  min-width: 100%;
+  flex-grow: 1;
+  flex-wrap: wrap;
 
-/*  &:nth-child(3n) {
-    @media (max-width: 991px) {
-      width: 100%;
-    }
-  }*/
+  &:not(:first-of-type) {
+    padding-top: 30px;
+  }
+}
 
-/*  &:not(:nth-child(3n)) {
-    @media (max-width: 991px) {
-      width: calc(50% - #{$articles-grid__margin} * .5);
-    }
-  }*/
+.col {
+  padding: 30px 15px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 
-  @media (max-width: 1169px) {
-    width: calc(33% - #{$articles-grid__margin} * .5);
+  &_three {
+    width: (3/12)*100%;
   }
 
-  &_is-inline { /* является элементом верт. группы */
-    width: 100%;
+  &_six {
+    width: (6/12)*100%;
 
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &_nine {
+    width: (9/12)*100%;
+  }
+
+  &_two-three {
+    width: (2/3)*100%;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &_one-three {
+    width: (1/3)*100%;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &_twelve {
+    width: 100%;
+  }
+
+  &_tablet {
     @media (max-width: 1169px) {
       width: 100%;
     }
+  }
 
-/*    @media (max-width: 991px) {
+  &_mobile {
+    @media (max-width: 767px) {
       width: 100%;
-    }*/
-  }
-
-  &_height-1 {
-    height: $articles-grid__col-basic-height;
-  }
-
-  &_height-2 {
-    height: $articles-grid__col-basic-height*2+$articles-grid__margin;
-
-  }
-
-  &_height-3 {
-    height: $articles-grid__col-basic-height*3+$articles-grid__margin*2;
-  }
-
-  &_height-4 {
-    height: $articles-grid__col-basic-height*4+$articles-grid__margin*3;
-  }
-}
-
-.articles-grid {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-
-  &__h-group {  /* гориз. область внутри другой области */
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin-bottom: $articles-grid__margin;
-
-    @media (max-width: 991px) {
-      flex-flow: row wrap;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &_is-inline { /* является элементом гориз. группы */
-
-      & > *:not(:last-child) {
-        margin-right: $articles-grid__margin;
-      }
-    }
-  }
-
-  &__v-group {  /* верт. область внутри другой области */
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-
-    & > *:not(:last-child) {
-      margin-bottom: $articles-grid__margin;
-    }
-  }
-
-  &_4 {
-
-    .articles-grid__col-1 {
-      @include articles-grid__col2(1);
-    }
-
-    .articles-grid__col-2 {
-      @include articles-grid__col2(2);
-    }
-
-    .articles-grid__col-3 {
-      @include articles-grid__col2(3);
-    }
-
-    .articles-grid__col-4 {
-      @include articles-grid__col2(4);
-    }
-
-    @include respond-to('mobile') {
-      display: block;
-      width: 100%;
-      height: auto;
-
-      .articles-grid__h-group,
-      .articles-grid__v-group {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 0;
-      }
-
-      .articles-grid__col-1,
-      .articles-grid__col-2,
-      .articles-grid__col-3 {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 0;
-
-        &_height-1,
-        &_height-2,
-        &_height-3,
-        &_is-inline {
-          width: 100%;
-          height: auto;
-          margin-bottom: 0;
-
-          @media (max-width: 1169px) {
-            width: auto;
-          }
-        }
-
-        & .article-preview,
-        & .banner {
-          margin-bottom: 10px;
-        }
-      }
-    }
-
-    & .article-preview,
-    & .banner {
-
-      @media (max-width: 1169px) {
-        margin-right: $articles-grid__margin;
-      }
-    }
-  }
-
-  &__col-1 {  /* верт. область - колонка 25% */
-    @include articles-grid__col(1);
-  }
-
-  &__col-2 {  /* верт. область - колонка 50% */
-    @include articles-grid__col(2);
-  }
-
-  &__col-3 {  /* верт. область - колонка 75% */
-    @include articles-grid__col(3);
-  }
-
-  @include respond-to('mobile') {
-    display: block;
-    width: 100%;
-    height: auto;
-
-    &__h-group,
-    &__v-group {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin-right: 0;
-      margin-bottom: 0;
-    }
-
-    &__col-1,
-    &__col-2,
-    &__col-3 {
-      width: 100%;
-      height: auto;
-      margin-right: 0;
-      margin-bottom: 0;
-
-      &_height-1,
-      &_height-2,
-      &_height-3,
-      &_is-inline {
-        width: 100%;
-        height: auto;
-        margin-bottom: 0;
-
-        @media (max-width: 991px) {
-          width: auto;
-        }
-      }
-    }
-
-    & .article-preview,
-    & .banner {
-      margin-bottom: 10px;
-    }
-  }
-
-  & .article-preview,
-  & .banner {
-
-    @media (max-width: 991px) {
-      margin-right: $articles-grid__margin;
     }
   }
 }

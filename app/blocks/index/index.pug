@@ -27,58 +27,74 @@ mixin index()
         +main-slider()
         +filter().__filter
         +navbar(getData('navbar'))
-        +e.sidebar
-          +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
+        //- +e.sidebar
+        //-   +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +e.content
-          +articles-grid()
-            +e.h-group
-              +e.col-2._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+          //- ---------------------------------------------------------------------------
+          .grid
+            .stroke
 
-            +e.h-group
-              +e.col-2._height-2
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-              +e.col-1._height-2
-                +e.v-group
-                  +e.col-1._height-1._is-inline
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
-                  +e.col-1._height-1._is-inline
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+              .col.col_three.col_tablet
+                +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
 
-            +e.h-group
-              +e.col-1._height-1
-                +article-preview(getData('article-preview_title-under-img'))._title-under-img
-              +e.col-2._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-
-        +banner-big().__big-banner
-          +e('img')(src='assets/images/banner-img.png').little
-        +e.content
-          +articles-grid()
-
-            +e.h-group
-              +e.col-2._height-3
-                +e.v-group
-                  +e.col-2._height-2._is-inline
+              .col.col_nine.col_tablet
+                .stroke
+                  .col.col_two-three
                     +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-                  +e.h-group._is-inline
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
-
-              +e.col-1._height-3
-                +e.v-group
-                  +e.col-1._height-1._is-inline
-                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
-                  +e.col-1._height-2._is-inline
+                  .col.col_one-three
                     +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
 
-            +e.h-group
-              +e.col-2._height-1
-                +article-preview(getData('article-preview_title-under-img'))._title-inside-img
-              +e.col-1._height-1
-                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                .stroke
+                  .col.col_two-three
+                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                  .col.col_one-three
+                    .stroke
+                      .col.col_twelve
+                        +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                    .stroke
+                      .col.col_twelve
+                        +article-preview(getData('article-preview_title-under-img'))._title-under-img
 
-        +e.sidebar._right
-          +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
+                .stroke
+                  .col.col_one-three
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  .col.col_two-three
+                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+
+          .grid
+            .stroke
+              .col.col_twelve
+                +banner-big().__big-banner
+                  +e('img')(src='assets/images/banner-img.png').little
+
+          .grid
+            .stroke
+              .col.col_nine.col_tablet
+                .stroke
+                  .col.col_two-three
+                    .stroke
+                      .col.col_twelve
+                        +article-preview(getData('article-preview_title-inside-img'))._title-inside-img._tall
+                    .stroke
+                      .col.col_six
+                        +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                      .col.col_six
+                        +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+                  .col.col_one-three
+                    .stroke
+                      .col.col_twelve
+                        +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                    .stroke
+                      .col.col_twelve
+                        +article-preview(getData('article-preview_title-inside-img'))._title-inside-img._tall
+
+                .stroke
+                  .col.col_two-three
+                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                  .col.col_one-three
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+
+              .col.col_three.col_tablet
+                +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
+
