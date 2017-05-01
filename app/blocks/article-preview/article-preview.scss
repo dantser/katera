@@ -74,6 +74,10 @@
     font-weight: 900;
   }
 
+  &_tall {
+    min-height: 500px;
+  }
+
   &_title-under-img {
 
     @include respond-to('mobile') {
@@ -141,6 +145,7 @@
     }
 
     .article-preview {
+      min-height: 290px;
 
       &__wrapper {
         padding: 19px;

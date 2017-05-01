@@ -9,6 +9,8 @@ include ../models/models
 include ../image-bg/image-bg
 include ../yacht-slider/yacht-slider
 include ../select/select
+include ../article-preview/articles-grid
+include ../article-preview/article-preview
 
 mixin catalog-yacht-1()
   +b.catalog-yacht-1
@@ -20,17 +22,17 @@ mixin catalog-yacht-1()
           +image-bg()(src='assets/images/cruiser.jpg')
         +e.content
           +text().__text
-            | Изучая различные виды яхт, вы скорее всего обратите внимание на 
+            | Изучая различные виды яхт, вы скорее всего обратите внимание на
             | крейсерские яхты со средиземноморским кокпитом, которые
             | запоминаются своими формами, элегантностью и, в то же время, красотой.
         +text().H2.__header  Модельный ряд
         +filter-model()._catalog
         +e.sort
-          +e.found 
-            +e('span').filter__label Найдено 
+          +e.found
+            +e('span').filter__label Найдено
             +e('span').sort__output 125
             +e('span') моделей
-          +e.price 
+          +e.price
             +e('span').filter__label Сортировать
             - var filterData = getData('filter')
               +select(filterData.priceSort.name, filterData.priceSort.options).
@@ -39,5 +41,31 @@ mixin catalog-yacht-1()
         +text().H2.__header Похожие категории
         +yacht-slider()
         +text().H2.__header Статьи по теме
-        +b.none
+
+        +articles-grid()
+          .grid
+            .stroke
+              .col.col_three
+                +article-preview(getData('article-preview_title-under-img'))._title-under-img
+              .col.col_six
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+              .col.col_three
+                +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+            .stroke
+              .col.col_six
+                .stroke
+                  .col.col_six
+                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
+                  .col.col_six
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                .stroke
+                  .col.col_six
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  .col.col_six
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+              .col.col_six
+                .stroke
+                  .col.col_twelve
+                    +article-preview(getData('article-preview_title-inside-img'))._title-inside-img._tall
+
         +button(true)(href='#')._rounded._kind_red.__button.__link Перейти в журнал
