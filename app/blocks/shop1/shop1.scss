@@ -1,7 +1,6 @@
 .shop1 {
 
   .main-slider {
-
     @include respond-to('tablet') {
       display: none;
     }
@@ -43,6 +42,7 @@
     @include respond-to('tablet') {
       display: flex;
     }
+
     @include respond-to('mobile') {
       display: flex;
     }
@@ -50,7 +50,7 @@
 
   .submenu {
     justify-content: space-between;
-    padding: 0 326px;
+    padding: 0 326px 1px;
 
     @include respond-to('tablet') {
       padding: 0;
@@ -64,7 +64,7 @@
   }
 
   .filter-shop {
-    margin: 0 97px;
+    margin: 0 97px 0 99px;
 
     @include respond-to('tablet') {
       padding: 15px;
@@ -77,10 +77,13 @@
     }
   }
 
+  &__filter__label {
+    align-self: center;
+  }
 
   &__sort {
     width: 100%;
-    margin: 0 97px -2px;
+    margin: 0 97px 20px 99px;
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -119,36 +122,18 @@
     }
   }
 
-  &__filter__label {
-
-    @include respond-to('tablet') {
-      display: none;
-    }
-
-    @include respond-to('mobile') {
-      display: none;
-    }
-  }
-
   &__price {
     display: flex;
   }
 
-  &__found {
-    align-self: flex-end;
-
-    @include respond-to('tablet') {
-      align-self: center;
-    }
-
-    @include respond-to('mobile') {
-      align-self: center;
-    }
-  }
 
   .shop-grid {
-    margin: 0 97px;
+    margin: 0 97px ;
     padding-bottom: 0;
+
+    &__wrapper {
+      justify-content: center;
+    }
 
     @include respond-to('tablet') {
       margin: 0 15px;
@@ -160,7 +145,7 @@
 
     .sale-preview-item {
       margin-right: 30px;
-      margin-top: 40px;
+      margin-bottom: 34px;
 
       &:nth-child(5n) {
         margin-right: 0;
@@ -174,31 +159,59 @@
         display: none;
       }
 
+      @include respond-to('large-desktop') {
+
+        &:nth-child(5n) {
+          margin-right: 30px;
+        }
+
+        &:nth-child(7n) {
+          margin-right: 0;
+        }
+      }
+
       @include respond-to('tablet') {
-        margin-top: 0 !important;
+        margin-top: 15px !important;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+
+        &__params {
+          display: block;
+        }
       }
 
       @include respond-to('mobile') {
-        margin-top: 0 !important;
+        margin-top: 15px !important;
+        flex-flow: row nowrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+
+        &__params {
+          display: block;
+        }
       }
     }
   }
 
   &__show-more {
-    margin: 10px auto 0;
     width: auto;
     min-width: 165px;
     height: 40px;
-    margin: 30px auto 44px;
+    margin: -10px auto 44px;
     z-index: 2;
     padding: 0 6px 4px 8px;
 
     @include respond-to('tablet') {
-      width: 100%;
+      margin: 29px auto;
       padding-left: 7px;
     }
 
-    @include respond-to('tablet') {
+    @include respond-to('mobile') {
+      margin: 29px 15px;
       width: 100%;
       padding-left: 7px;
     }
