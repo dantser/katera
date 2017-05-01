@@ -79,6 +79,14 @@
 
   &__filter__label {
     align-self: center;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 
   &__sort {
@@ -154,6 +162,9 @@
       &:nth-child(n+21) {
         display: none;
       }
+      &__name {
+        line-height: 19px;
+      }
 
       &__params {
         display: none;
@@ -171,11 +182,10 @@
       }
 
       @include respond-to('tablet') {
-        margin-top: 15px !important;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        margin-right: 0;
+        margin: 0;
 
         &__params {
           display: block;
@@ -183,15 +193,18 @@
       }
 
       @include respond-to('mobile') {
-        margin-top: 15px !important;
         flex-flow: row nowrap;
         width: 100%;
         justify-content: center;
         align-items: center;
-        margin-right: 0;
+        margin: 9px 0 0 !important;
 
         &__params {
           display: block;
+        }
+
+        &:nth-child(n+9) {
+          display: none;
         }
       }
     }
@@ -211,7 +224,7 @@
     }
 
     @include respond-to('mobile') {
-      margin: 29px 15px;
+      margin: 21px 15px 29px;
       width: 100%;
       padding-left: 7px;
     }
