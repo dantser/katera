@@ -1,0 +1,61 @@
+.proposal-actions {
+  display: flex;
+  flex-flow: row wrap;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    color: $color-white;
+    line-height: (22/14)*1;
+
+    &_center {
+      text-align: center;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding-bottom: 2px;
+    margin-left: 15px;
+    font-family: $NerisSemiBold;
+    font-size: rem(14px);
+    color: $color-dark-blue;
+    text-decoration: none;
+    will-change: color;
+    transition: color .25s ease-in-out;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    margin-bottom: 18px;
+  }
+
+  &__list {
+    width: 263px;
+    padding: 24px 26px 19px;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  &__list-item {
+    display: block;
+    padding: 0;
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+    }
+
+    &:not(:first-child) {
+      padding-top: 20px;
+    }
+  }
+}
