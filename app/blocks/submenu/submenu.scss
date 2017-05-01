@@ -49,6 +49,7 @@
   }
 
   &__link {
+    display: flex;
     text-decoration: none;
     color: $color-black;
   }
