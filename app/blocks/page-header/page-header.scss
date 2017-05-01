@@ -11,6 +11,10 @@
     padding: 10px 0 6px;
   }
 
+  @include respond-to('mobile') {
+    padding: 10px 0 6px;
+  }
+
   &__title {
     padding: 8px 0;
     font-family: $RobotoSlab;
@@ -22,6 +26,10 @@
     margin-bottom: 11px;
 
     @include respond-to('tablet') {
+      font-size: 22px;
+    }
+
+    @include respond-to('mobile') {
       font-size: 22px;
     }
   }
