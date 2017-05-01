@@ -16,8 +16,10 @@ import modal from '../blocks/modal/modal';
 import scrollSlider from '../blocks/scroll-slider/scroll-slider';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 import hint from '../blocks/hint/hint';
+import index from '../blocks/index/index';
 
 $(() => {
+  index();
   burger();
   select();
   searchBar();
