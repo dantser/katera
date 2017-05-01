@@ -1,8 +1,16 @@
 .select {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
   width: 100%;
   height: 100%;
+  background-color: $color-white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
   box-shadow: 0 1px 7px 0 rgba($color-black, 0);
   will-change: box-shadow;
   transition: box-shadow .25s ease-in-out;
@@ -26,37 +34,24 @@
     }
   }
 
-  &__control {
-    all: initial;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    padding-left: 12px;
-    padding-right: 30px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: $color-white;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  &__text {
     font-family: $NerisLight;
     color: #000;
-    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+  }
 
-    &::-ms-expand {
-      display: none;
-    }
+  &__label {
+    margin-left: 15px;
+  }
 
-    @include respond-to('mobile') {
-      margin-top: 2px;
-    }
+  &__control {
+    display: none;
   }
 
   &__icon {
-    position: absolute;
-    top: center;
     display: block;
     pointer-events: none;
 
@@ -88,13 +83,23 @@
   }
 
   &__item {
-    display: block;
-    cursor: pointer;
-    will-change: color;
-    transition: color .25s ease-in-out;
 
-    &:hover {
-      color: $color-red;
+    &_multiple {
+      padding: 0;
+      margin: 0;
+
+      & > label {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+        will-change: color;
+        transition: color .25s ease-in-out;
+
+        &:hover {
+          color: $color-red;
+        }
+      }
     }
   }
 }
