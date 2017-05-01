@@ -1,0 +1,17 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../submenu/submenu
+include ../button/button
+
+mixin search()
+  +b.search&attributes(attributes)
+    +container()
+      +page-header('Найдено 215 материалов', ['Главная', 'Поиск'])
+      +main-container().main-container_shadow.magazine__main-container
+        +submenu(getData('submenu-search'))
+        +e.items
+          - for (var i = 0; i < 8; i++)
+            +e.item
+
+        +button()._rounded._kind_red._shadow.__show-more Показать еще

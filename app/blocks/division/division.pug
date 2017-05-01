@@ -2,5 +2,8 @@
 //- _active
 //- _arrow-left
 //- _arrow-right
-mixin division(text)
-  +b.SPAN.division&attributes(attributes)= text
+mixin division(text, subtext)
+  +b.SPAN.division&attributes(attributes)
+    =text
+    if subtext
+      +e('span').subtext= subtext
