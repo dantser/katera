@@ -1,0 +1,14 @@
+include ../modal/modal
+include ../image-bg/image-bg
+include ../buy-magazine-form/buy-magazine-form
+
+mixin magazine-popup()
+  +modal('Купить журнал “Капитан клуб”')#magazine-popup
+    +b.magazine-popup
+      +e.magazine
+        +e.image
+          +image-bg()(src='assets/images/magazine-captain.jpg' alt='')
+        +e.info
+          +e('span').text 263 номер
+          +e('span').text сентябрь - октябрь 2016
+      +buy-magazine-form('form')

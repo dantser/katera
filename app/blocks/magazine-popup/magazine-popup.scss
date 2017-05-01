@@ -1,0 +1,40 @@
+.magazine-popup {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 555px;
+
+  @include respond-to('mobile') {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__magazine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    width: 142px;
+    height: 175px;
+    z-index: 1;
+  }
+
+  &__info {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__text {
+    display: block;
+    font-family: $NerisLight;
+    font-size: rem(14px);
+    line-height: 20/14;
+    color: $color-gray;
+  }
+}
