@@ -17,6 +17,12 @@ $big-border: 12px solid $color-red;
     opacity: .75;
   }
 
+  &__subtext {
+    margin-left: 6px;
+    font-family: $NerisLight;
+    color: $color-gray
+  }
+
   &_active {
     font-family: $NerisBlack;
     color: $color-black;

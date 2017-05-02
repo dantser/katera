@@ -5,7 +5,7 @@
   padding: 20px 25px 13px;
   width: 100%;
   margin-bottom: 28px;
-  box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
+  box-shadow: 0 0 7px rgba(19, 11, 89, .14);
 
   @include respond-to('tablet') {
     padding: 18px 15px 16px;
@@ -50,7 +50,6 @@
   &__item {
     width: 238px;
     height: 40px;
-
 
     @include respond-to('tablet') {
       width: 100%;

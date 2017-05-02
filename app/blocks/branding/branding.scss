@@ -83,7 +83,6 @@
       }
 
       .branding__scroll-btn {
-
         @include respond-to('desktop') {
           display: none;
         }

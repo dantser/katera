@@ -154,7 +154,7 @@
     width: 165px;
     height: 40px;
     margin: 58px auto 0;
-    box-shadow: 0 0 35px rgba(9, 4, 53, 0.3);
+    box-shadow: 0 0 35px rgba(9, 4, 53, .3);
     padding-right: 4px;
 
     @include respond-to('tablet') {

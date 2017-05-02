@@ -1,0 +1,33 @@
+.search {
+  display: block;
+
+  .submenu {
+    justify-content: space-around;
+  }
+
+  &__items {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding-left: 210px;
+    padding-right: 292px;
+  }
+
+  &__item {
+    display: block;
+    // placeholder begin
+    background-color: #e5e5e5;
+    min-height: 134px;
+    // placeholder end
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__show-more {
+    margin: 60px auto;
+    width: 165px;
+    height: 40px;
+  }
+}
