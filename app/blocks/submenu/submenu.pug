@@ -9,6 +9,6 @@ mixin submenu(data, isVertical)
       +e('li').item
         +e('a')(href=item.path).link
           if item.active
-            +division(item.title)(class=verticalDivisionModifier)._active.__title
+            +division(item.title, item.subtitle)(class=verticalDivisionModifier)._active.__title
           else
-            +division(item.title)(class=verticalDivisionModifier).__title
+            +division(item.title, item.subtitle)(class=verticalDivisionModifier).__title

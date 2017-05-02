@@ -1,0 +1,34 @@
+.shop-tab2 {
+
+  &__text-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    h4 {
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 9px 0 !important;
+      color: $color-black;
+    }
+  }
+
+  .models {
+    padding: 0;
+
+    .swiper-container {
+      padding-bottom: 65px;
+
+      &__swiper-pagination {
+        bottom: 25px;
+      }
+    }
+
+    img {
+      width: 263px;
+      height: 170px;
+    }
+  }
+}

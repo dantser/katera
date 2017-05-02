@@ -1,0 +1,181 @@
+.event-item {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #16123a;
+
+  @include respond-to('tablet') {
+    flex-direction: column;
+    background: $color-white;
+  }
+
+  @include respond-to('mobile') {
+    flex-direction: column;
+    background: $color-white;
+  }
+
+  &-box {
+    width: 390px;
+    text-align: center;
+    position: relative;
+    margin: 0 49px;
+    cursor: pointer;
+
+    @include respond-to('tablet') {
+      width: 290px;
+      margin: 10px auto;
+
+      &:first-child {
+        margin: 0 auto 10px;
+      }
+
+      &:last-child {
+        margin: 10px auto 0;
+      }
+    }
+
+    @include respond-to('mobile') {
+      width: 290px;
+      margin: 10px auto;
+
+      &:first-child {
+        margin: 0 auto 10px;
+      }
+
+      &:last-child {
+        margin: 10px auto 0;
+      }
+    }
+
+    &:hover .event-item-box__link {
+      opacity: .7;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    &__link {
+      width: 390px;
+      height: 220px;
+      position: relative;
+      display: block;
+      opacity: 1;
+      transition: opacity .2s ease-in-out;
+
+      @include respond-to('tablet') {
+        width: 290px;
+        height: 164px;
+      }
+
+      @include respond-to('mobile') {
+        width: 290px;
+        height: 164px;
+      }
+
+      .image-bg {
+        z-index: inherit;
+
+        &__img {
+          height: 100%;
+        }
+      }
+    }
+
+    &__title {
+      font-family: $NerisLight;
+      font-weight: 300;
+      font-size: 13px;
+      margin-top: 5px;
+      color: $color-light-gray;
+    }
+
+    &__text {
+      font-family: $NerisBlack;
+      font-weight: 900;
+      font-size: 19px;
+      margin-top: 5px;
+      line-height: 1.38;
+      letter-spacing: .5px;
+      color: $color-white;
+
+      @include respond-to('tablet') {
+        color: $color-black;
+        font-size: 16px;
+        margin-top: 0;
+        line-height: 1.2;
+        letter-spacing: inherit;
+      }
+
+      @include respond-to('mobile') {
+        color: $color-black;
+        font-size: 16px;
+        margin-top: 0;
+        line-height: 1.2;
+        letter-spacing: inherit;
+      }
+    }
+
+    &__date {
+      width: 135px;
+      position: absolute;
+      top: -43px;
+      left: -69px;
+      text-shadow: 0 10px 27px rgba(0, 0, 0, .7);
+
+      @include respond-to('tablet') {
+        width: 77px;
+        top: 0;
+        left: 0;
+      }
+
+      @include respond-to('mobile') {
+        width: 77px;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &__number {
+      font-family: $NerisBlack;
+      font-weight: 900;
+      font-size: 107px;
+      line-height: 1;
+      color: $color-white;
+
+      @include respond-to('tablet') {
+        font-size: 49px;
+      }
+
+      @include respond-to('mobile') {
+        font-size: 49px;
+      }
+    }
+
+    &__month {
+      font-family: $NerisLight;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 1;
+      color: $color-white;
+
+      @include respond-to('tablet') {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      @include respond-to('mobile') {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+    }
+  }
+}

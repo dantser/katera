@@ -1,0 +1,6 @@
+[
+  { "path": "#", "title": "Все", "subtitle": "215", "active": true },
+  { "path": "#", "title": "Журнал", "subtitle": "84" },
+  { "path": "#", "title": "Предложения", "subtitle": "116" },
+  { "path": "#", "title": "Форум", "subtitle": "15" }
+]
