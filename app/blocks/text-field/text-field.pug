@@ -1,8 +1,12 @@
-//- ИНФОРМАЦИЯ ОБ ИСПОЛЬЗОВАНИИ ТЕКСТОВОГО ПОЛЯ В ./text-field.md
 include ../icon/icon
 
+//- Аргументы
+//- data Объект (поля, type, name, value)
+//- Модификаторы
+//- ._has_error - Добавляет ошибку
+//- ._required - Добавляет красную звездочку placeholder'у
 mixin text-field(data)
-  +b.text-field.js-text-field&attributes(attributes)
+  +b.text-field&attributes(attributes)
     +e('input')(type=data.type || 'text' name=data.name value=data.value || '').control
     +e('span').placeholder
       = data.placeholder

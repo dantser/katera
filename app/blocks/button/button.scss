@@ -72,6 +72,18 @@
       height: 7px;
       stroke: $color-white;
       transform: rotate(-90deg);
+
+      &-down {
+        transform: rotate(0);
+      }
+
+      &-up {
+        transform: rotate(180deg);
+      }
+    }
+
+    &_stroke_blue {
+      stroke: $color-dark-blue;
     }
   }
 }

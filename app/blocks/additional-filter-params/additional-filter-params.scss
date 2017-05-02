@@ -43,6 +43,15 @@
     align-items: center;
     width: 240px;
     margin-bottom: 20px;
+
+    @include respond-to('tablet') {
+      width: calc(33% - 30px);
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+      justify-content: flex-start;
+    }
   }
 
   &__label {
@@ -61,6 +70,22 @@
 
   &__reset {
     align-self: flex-end;
-    transform: translateY(-50%);
+    transform: translateY(50%);
+  }
+
+  &__roll-up {
+    width: 165px;
+    height: 40px;
+    margin-left: auto;
+  }
+
+  &__search {
+    margin-left: 76px;
+    width: 240px;
+    height: 40px;
+
+    .button {
+      font-size: rem(20px);
+    }
   }
 }

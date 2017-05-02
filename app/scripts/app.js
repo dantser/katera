@@ -15,13 +15,11 @@ import counter from '../blocks/counter/counter';
 import modal from '../blocks/modal/modal';
 import scrollSlider from '../blocks/scroll-slider/scroll-slider';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
-<<<<<<< HEAD
 import hint from '../blocks/hint/hint';
 import index from '../blocks/index/index';
 import map from './common/map';
-=======
 import eventsSlider from '../blocks/events/events';
->>>>>>> events
+import additionalFilterParams from '../blocks/additional-filter-params/additional-filter-params';
 
 $(() => {
   index();
@@ -41,9 +39,9 @@ $(() => {
   scrollSlider();
   yachtSlider();
   commonInput();
-<<<<<<< HEAD
   hint();
-
+  eventsSlider();
+  additionalFilterParams();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {
@@ -151,7 +149,4 @@ $(() => {
       ],
     });
   });
-=======
-  eventsSlider();
->>>>>>> events
 });
