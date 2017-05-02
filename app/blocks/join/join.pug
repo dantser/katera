@@ -2,9 +2,88 @@ include ../main-container/main-container
 include ../container/container
 include ../page-header/page-header
 include ../radio/radio
+include ../checkbox/checkbox
+include ../text-field/text-field
+include ../share/share
 
 mixin join()
   +b.join&attributes(attributes)
     +container()
       +page-header('Регистрация', ['Главная', 'Регистрация'])
       +main-container().main-container_shadow.magazine__main-container
+        .forms
+          .form.form-one#join-1
+            +e('fieldset').fieldset.fieldset-one
+              +e('p').entrance Уже зарегистрированы?
+                +e('a href="#"').entrance-link Вход
+              .form__row
+                .left
+                  +radio({name: 'selection', value: '1', checked: 'checked'})
+                  +e('span').label Частное лицо
+                .right
+                  +radio({name: 'selection', value: '2'})
+                  +e('span').label Компания
+            +e('fieldset').fieldset.fieldset-two
+              .form__row
+                +e('span').label Имя
+                +text-field({name: 'name', type: 'text'})
+              .form__row
+                +e('span').label E-mail
+                +text-field({name: 'email', type: 'email'})
+              .form__row
+                +e('span').label Телефон
+                +text-field({name: 'tel', type: 'tel'})
+              .form__row
+                +e('span').label Пароль
+                +text-field({name: 'password', type: 'password'})
+              .form__row.form__row-switch
+                +checkbox()._switcher
+                +e('p').text Я согласен с условиями
+                  +e('span').text_color-red пользовательского соглашения
+
+              +button()(type='submit')._kind_red._rounded._shadow.__button Зарегистрироваться
+
+              +e('p').entrance Уже зарегистрированы?
+                +e('a href="#"').entrance-link Вход
+
+              +e('p').or или
+
+              +share('vk', 'odnokl', 'tw', 'go', 'fb')
+
+
+          .form.form-two#join-2
+            +e('fieldset').fieldset.fieldset-one
+              +e('p').entrance Уже зарегистрированы?
+                +e('a href="#"').entrance-link Вход
+              .form__row
+                .left
+                  +radio({name: 'selection', value: '1'})
+                  +e('span').label Частное лицо
+                .right
+                  +radio({name: 'selection', value: '2'})
+                  +e('span').label Компания
+            +e('fieldset').fieldset.fieldset-two
+              .form__row
+                +e('span').label Название компании
+                +text-field({name: 'name', type: 'text'})
+              .form__row
+                +e('span').label Контактное лицо
+                +text-field({name: 'contact', type: 'text'})
+              .form__row
+                +e('span').label E-mail
+                +text-field({name: 'email', type: 'email'})
+              .form__row
+                +e('span').label Телефон
+                +text-field({name: 'tel', type: 'tel'})
+              .form__row
+                +e('span').label Пароль
+                +text-field({name: 'password', type: 'password'})
+              .form__row.form__row-switch
+                +checkbox()._switcher
+                +e('p').text Я согласен с условиями
+                  +e('span').text_color-red пользовательского соглашения
+
+              +button()(type='submit')._kind_red._rounded._shadow.__button Зарегистрироваться
+
+              +e('p').entrance Уже зарегистрированы?
+                +e('a href="#"').entrance-link Вход
