@@ -134,9 +134,8 @@
     display: flex;
   }
 
-
   .shop-grid {
-    margin: 0 97px ;
+    margin: 0 97px;
     padding-bottom: 0;
 
     &__wrapper {
@@ -162,6 +161,7 @@
       &:nth-child(n+21) {
         display: none;
       }
+
       &__name {
         line-height: 19px;
       }
