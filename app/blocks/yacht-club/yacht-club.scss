@@ -1,0 +1,40 @@
+.yacht-club {
+  display: block;
+  flex: 1 0 auto;
+
+  .page-header {
+    background-color: $color-white;
+  }
+
+  &__main-container {
+    display: flex !important;
+    flex-flow: row wrap;
+  }
+
+  &__box-bg {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: block;
+
+    .image-bg {
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    color: $color-dark-blue;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: $NerisSemiBold;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 24px;
+
+    &:nth-of-type(2) {
+      margin: 59px 0 22px;
+    }
+  }
+}

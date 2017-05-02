@@ -1,0 +1,9 @@
+include ../icon/icon
+
+mixin price-list-dnld(href)
+  +b.price-list-dnld
+    +e('a')(href= href).link
+      +icon(pdf).icon
+      +e.text
+        +e('span').title Скачать прайс-лист
+        +e('span').params 1.13 МБ .PDF (Adobe Acrobat Reader)

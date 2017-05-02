@@ -1,0 +1,19 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../button/button
+include ../submenu/submenu
+include ../image-bg/image-bg
+include ../services/services
+
+mixin yacht-club()
+  +b.yacht-club
+    +container()
+      +page-header('Яхт-клуб Grand Marine', ['Главная', 'Яхт клубы', 'Яхт-клуб Grand Marine'])
+      +main-container().yacht-club__main-container
+        +e.box-bg
+          +image-bg()(src='assets/images/yacht-club/yacht-club-banner.png')
+        +submenu(getData('submenu-club'))
+        +e.H2.title Услуги
+        +services()
+        +button()._rounded._kind_red.__show-more Показать еще

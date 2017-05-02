@@ -44,7 +44,6 @@
     }
   }
 
-
   &__field {
     all: initial;
     display: flex;
@@ -63,7 +62,6 @@
     min-width: 165px;
     height: 40px;
 
-
     @include respond-to('tablet') {
       width: 100%;
       margin-bottom: 27px;
@@ -78,7 +76,7 @@
       display: flex;
       align-items: center;
       flex-basis: 458px;
-      border: 1px solid #cccccc;
+      border: 1px solid #ccc;
       border-radius: 3px;
 
       @include respond-to('tablet') {

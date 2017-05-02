@@ -1,0 +1,26 @@
+.price-list-dnld {
+
+  &__link {
+    display: flex;
+    text-decoration: none;
+  }
+
+  &__icon {
+    margin-right: 13px;
+    stroke: $color-red;
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__title {
+    color: $color-red;
+  }
+
+  &__params {
+    color: $color-gray;
+    font-style: 12px;
+  }
+}
