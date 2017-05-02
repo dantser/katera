@@ -4,10 +4,12 @@
     display: flex;
     text-decoration: none;
     justify-content: center;
+    align-items: center;
   }
 
   &__icon {
     margin-right: 13px;
+    fill: $color-red;
     stroke: $color-red;
     width: 29px;
     height: 31px;
