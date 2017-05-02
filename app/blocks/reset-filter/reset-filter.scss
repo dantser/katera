@@ -1,0 +1,51 @@
+.reset-filter {
+  all: initial;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+
+    .reset-filter {
+
+      &__text {
+        color: $color-red;
+      }
+
+      &__circle {
+        border-color: darken($color-red, 10%);
+      }
+
+      &__icon {
+        fill: darken($color-red, 10%);
+      }
+    }
+  }
+
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $color-red;
+    border-radius: 50%;
+    will-change: border-color;
+    transition: border-color .25s ease-in-out;
+  }
+
+  &__icon {
+    width: 8px;
+    height: 8px;
+    fill: $color-red;
+    will-change: fill;
+    transition: fill .25s ease-in-out;
+  }
+
+  &__text {
+    margin-left: 13px;
+    color: $color-gray;
+    will-change: color;
+    transition: color .25s ease-in-out;
+  }
+}

@@ -19,8 +19,11 @@ include ../checkbox/checkbox
 //- +select('test', [{ value: 1, title: 'Текст 1' }, { value: 2, title: 'Текст 2' }], 'текст')
 //- 'текст' - это текст, который будет выведен в случае выбора ВСЕХ чекбоксов
 
-mixin default-select(name, items)
+mixin default-select(name, items, label)
   +b.select&attributes(attributes)
+
+    if label
+      +e.label=label
 
     +e.text
 
@@ -41,13 +44,13 @@ mixin multiple-select(name, items, allSelected)
         +list-item().select__item_multiple
           label
             +checkbox({ name, value: item.value })
-            span.select__label= item.title
+            span.select__list-label= item.title
 
     +icon('caret').__icon._type_caret
     +icon('close').__icon._type_close
 
-mixin select(name, items, allSelected)
+mixin select(name, items, allSelected, label)
   if allSelected
     +multiple-select(name, items, allSelected)&attributes(attributes)
   else
-    +default-select(name, items)&attributes(attributes)
+    +default-select(name, items, label)&attributes(attributes)

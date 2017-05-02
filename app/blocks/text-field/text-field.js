@@ -10,11 +10,9 @@ export default () => {
     return;
   }
 
-  element.each(function () { // eslint-disable-line
-    $(this).find(CONTROL_CLASS).on('input', function () { // eslint-disable-line
-      const control = $(this);
-      control.attr('value', control.val());
-    });
+  element.find(CONTROL_CLASS).on('input', function () { // eslint-disable-line
+    const el = $(this);
+    el.attr('value', el.val());
   });
 };
 
