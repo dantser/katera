@@ -1,0 +1,85 @@
+.events {
+
+  &__main-container.main-container {
+    margin-bottom: 0;
+  }
+
+  &__banner-bottom {
+    display: block;
+    width: 100%;
+    padding: 30px;
+
+    & .banner {
+      height: 90px;
+    }
+
+    @include respond-to('laptop') {
+      display: none;
+    }
+  }
+
+  &__inset-banner {
+    height: 90px;
+  }
+
+  &__submenu.submenu {
+    background-color: $color-dark-blue;
+    border-bottom-color: $color-purple;
+
+    @include respond-to('laptop') {
+      display: none;
+    }
+
+    span {
+      color: $color-white;
+    }
+  }
+
+  &__slider {
+    background-color: $color-dark-blue;
+    padding: 95px 0 130px;
+  }
+
+  &__slide-inner {
+    width: 390px;
+    text-align: center;
+  }
+
+  &__category {
+    font-family: $NerisLight;
+    color: $color-light-gray;
+    font-size: 13px;
+    line-height: 26px;
+  }
+
+  &__name {
+    font-family: $NerisBlack;
+    color: $color-white;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &__slide {
+    width: 420px;
+    padding: 20px 0 0 68px;
+    position: relative;
+  }
+
+  &__date {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    color: $color-white;
+    font-size: 107px;
+    font-family: $NerisBlack;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 0px 10px 27px rgba(0, 0, 0, 0.7);
+
+    span {
+      font-size: 24px;
+      font-family: $NerisLight;
+      display: block;
+    }
+  }
+}
