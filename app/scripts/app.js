@@ -38,7 +38,7 @@ $(() => {
   yachtSlider();
   commonInput();
   hint();
-  
+
   map.then((googleMaps) => {
     new googleMaps.Map(document.getElementById('map'), {
       zoom: 8,
