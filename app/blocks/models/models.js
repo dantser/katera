@@ -45,6 +45,23 @@ export default () => {
     },
   });
 // eslint-disable-next-line no-unused-vars
+  const swiperModelYacht = new Swiper('.models_yacht .swiper-container', {
+    pagination: '.models_yacht .swiper-container__swiper-pagination',
+    paginationClickable: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    // Responsive breakpoints
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 1,
+      },
+    },
+  });
+// eslint-disable-next-line no-unused-vars
   const swiperModelsCatalog = new Swiper('.models_catalog .swiper-container', {
     slidesPerView: 6,
     slidesPerColumn: 3,

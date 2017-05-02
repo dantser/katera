@@ -4,7 +4,7 @@ mixin models(title, data)
   +b.models&attributes(attributes)
       +e.H3.header= title
       +b.swiper-container
-        +e.swiper-pagination
         +e.wrapper.swiper-wrapper
           each obj in data
             +sale-preview-item(obj).swiper-slide
+        +e.swiper-pagination

@@ -2,24 +2,71 @@ include ../page-header/page-header
 include ../container/container
 include ../main-container/main-container
 include ../scroll-slider/scroll-slider
-include ../sale-preview-item/sale-preview-item
 include ../sale-contacts/sale-contacts
 include ../share/share
+include ../button/button
 include ../models/models
-
 
 mixin yacht-sale-page()
   +b.yacht-sale-page
     +container()
       +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
       +main-container()
-        +e('div').slider
+        +e('div').intro
           +scroll-slider(getData('scroll-slider'))
           +sale-contacts(true)
-          +e('div') ОПИСАНИЕ
-          +e('div') ПОЖАЛОВАТЬСЯ
-          +share('small')
-          +e('div') Дата публикации, просмотров
-          +models('Без заголовка', getData('sale-preview-item-short-2'))._verphe._cruiser
+
+        +e('div').info
+
+          +e('div').technical
+            +e('h3').technical-title Технические характеристики
+            +e('ul').technical-list
+              +e('li').item
+                +e('span').item-name Тип судна:
+                +e('span').item-text Круизная (крейсерская) яхта
+              +e('li').item
+                +e('span').item-name Тип киля:
+                +e('span').item-text Длинный киль
+              +e('li').item
+                +e('span').item-name Число спальных мест:
+                +e('span').item-text 6
+
+          +e('div').description
+            +e('h3').description-title Описание
+            +e('div').description-wrapper
+              +e('p').description-text
+                | Лодка в стандартной комплектации, возможны дополнительные опции. <br/>
+                | DOMINATOR 800 - Произведение искусства <br/>
+                | Вы можете кастомизировать данную модель лодки вплоть до мельчайших деталей, превратив её в по-настоящему вашу яхту.
+              +e('p').description-text
+                | С самого начала акцент был сделан на максимально полное использование пространства: ни один квадратный дюйм не должен пропадать впустую, ведь, как известно, лишнего места на яхте никогда не бывает. Благодаря такому подходу Sealine и поныне удерживает пальму первенства по нестандартности методов «раздвигания пространства» и повышению качества жизни на борту. Любой уголок или ниша используются для рундуков, шкафов, оборудования, а трансформируемая мебель (это действительно фирменный стиль верфи!) часто позволяет получить по два-три и больше вариантов компоновки кокпита, салона, кают или флайбриджа.
+              +e('p').description-text
+                | Один из главных ресурсов увеличения обитаемого пространства — минимизация моторного отсека, и здесь опыта у Sealine тоже более чем достаточно. Первые 20 лет существования верфи все лодки оснащались исключительно угловыми колонками, что значительно упрощало задачу компоновки моторного отсека и позволяло сделать его весьма компактным. Что касается вспомогательного оборудования, то его часто размещают в других частях лодки — под пайолами и даже кроватями. В результате объем жилого пространства на яхтах Sealine, как правило, бьет рекорды в классе.
+
+        +e('div').social
+          +e('div').complain
+            +button(true)._rounded
+              | Пожаловаться
+          +e('div').button-wrapper
+            +share('small')._bigger-title
+          +e('div').adds
+            +e('span').adds-text Дата публикации: 28 января 2017
+            +e('span').adds-text Просмотров: 128
+
+        +e('div').more
+          +e('h2').more-title Другие предложения магазина
+
+          +models('', getData('sale-preview-item-short'))._yacht
+
+          +e('div').more-button
+            +button(true)._kind_red._rounded._shadow
+              | Перейти в магазин
+          +e('div').goto
+            +e('div').prev-button Предыдущее
+              +icon('rarr').icon
+            +e('div').next-button Следующее
+          +e('div').show-contacts-button
+            +button(true)._kind_red
+              | Перейти в магазин
 
 
