@@ -5,6 +5,7 @@ include ../slider-range/slider-range
 include ../text-field/text-field
 include ../select-currency/select-currency
 include ../checkbox/checkbox
+include ../additional-filter-params/additional-filter-params
 
 mixin filter(data)
   - var filterData = getData('filter')
@@ -51,47 +52,4 @@ mixin filter(data)
         +e('a')(href='#').extended-link Расширенный фильтр
 
         +e.extended-wrapper
-          +e.extended
-            +e.title Дополнительные параметры
-
-            +e.item
-              +select(filterData.purpose.name, filterData.purpose.options)
-
-            +e.item
-              +select(filterData.typeOfShell.name, filterData.typeOfShell.options)
-
-            +e.item
-              +select(filterData.bodyMaterial.name, filterData.bodyMaterial.options)
-
-            +e.item
-              +select(filterData.typeOfTooling.name, filterData.typeOfTooling.options)
-
-            +e.item
-              +select(filterData.control.name, filterData.control.options)
-
-            +e.item._switcher
-              +e.label Вспомогательный двигатель
-              +checkbox(filterData.pilotEngine)._switcher
-
-            +e.item
-              +select(filterData.type.name, filterData.type.options)
-
-            +e.item
-              +text-field(filterData.draft1)
-
-            +e.item
-              +text-field(filterData.draft2)
-
-            +e.item
-              +text-field(filterData.fuelStock)
-
-            +e.item
-              +text-field(filterData.waterSupply)
-
-            +e.item._switcher
-              +e.label Наличие камбуза
-              +checkbox(filterData.galley)._switcher
-
-            +e.item._switcher
-              +e.label Наличие санузла
-              +checkbox(filterData.bathroom)._switcher
+          +additional-filter-params()

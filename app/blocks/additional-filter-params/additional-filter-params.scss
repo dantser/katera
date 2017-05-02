@@ -54,6 +54,11 @@
     }
   }
 
+  &__buttons {
+    display: flex;
+    width: 100%;
+  }
+
   &__label {
     display: inline-block;
     padding-right: 10px;
@@ -76,11 +81,11 @@
   &__roll-up {
     width: 165px;
     height: 40px;
-    margin-left: auto;
+    margin: 0 auto;
+    transform: translateX(50%);
   }
 
   &__search {
-    margin-left: 76px;
     width: 240px;
     height: 40px;
 

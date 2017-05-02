@@ -19,6 +19,7 @@ import hint from '../blocks/hint/hint';
 import index from '../blocks/index/index';
 import map from './common/map';
 import eventsSlider from '../blocks/events/events';
+import resetFilter from '../blocks/reset-filter/reset-filter';
 import additionalFilterParams from '../blocks/additional-filter-params/additional-filter-params';
 
 $(() => {
@@ -42,6 +43,7 @@ $(() => {
   hint();
   eventsSlider();
   additionalFilterParams();
+  resetFilter();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {
