@@ -1,0 +1,34 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../yacht-clubs-item/yacht-clubs-item
+include ../submenu/submenu
+include ../catalog-filter/catalog-filter
+include ../button/button
+
+mixin yacht-clubs()
+  +b('div').yacht-clubs
+    +container()
+      +page-header('Яхт-клубы', ['Главная', 'Яхт-клубы'])
+      +main-container()
+        +submenu(getData('city'))
+        +e('div').wrapper
+          +catalog-filter()
+          +e('div').yacht-clubs-row
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+          +e('div').yacht-clubs-row
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+          +e('div').yacht-clubs-row
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+          +e('div').yacht-clubs-row
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+            +yacht-clubs-item(getData('yacht-clubs-item'))
+
+        +button()._rounded._kind_red.__show-more Показать еще

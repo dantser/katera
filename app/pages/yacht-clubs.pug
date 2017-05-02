@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/yacht-clubs/yacht-clubs
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Яхт-клубы'
+
+block content
+  +branding()
+    +yacht-clubs()
