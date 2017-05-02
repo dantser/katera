@@ -10,7 +10,6 @@
     "deploy": "cross-env NODE_ENV=production gulp deploy"
   },
   "dependencies": {
-    "aurelia-framework": "^1.1.2",
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
@@ -28,8 +27,6 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-import": "^2.2.0",
     "expose-loader": "^0.7.3",
-    "google-maps-api": "^2.0.1",
-    "googleapis": "^19.0.0",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.0",
     "gulp-changed": "^2.0.0",
@@ -57,6 +54,7 @@
     "jquery": "^3.2.1",
     "jquery-ui-bundle": "^1.12.1",
     "jquery.inputmask": "^3.3.4",
+    "load-google-maps-api": "0.0.3",
     "normalize.css": "^6.0.0",
     "postcss-autoreset": "^1.2.1",
     "postcss-center": "^1.0.0",
