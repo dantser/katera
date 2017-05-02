@@ -1,0 +1,35 @@
+.services {
+
+  &__items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 340px;
+    text-align: center;
+  }
+
+  &__icon {
+    width: 109px;
+    height: 97px;
+    margin-bottom: 19px;
+    align-self: center;
+  }
+
+  &__title {
+    font-family: $NerisBlack;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-black;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: #666;
+    margin-bottom: 29px;
+  }
+}
