@@ -6,6 +6,7 @@ export default () => {
   el.find('.additional-filter-params__roll-up').on('click', (e) => {
     e.preventDefault();
 
-    el.slideUp();
+    el.parents('form').removeClass('filter_extended');
+    el.parent().slideUp();
   });
 };
