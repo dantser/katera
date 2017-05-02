@@ -14,6 +14,7 @@ include ../select/select
 include ../shop-grid/shop-grid
 include ../banner/banner
 include ../image-bg/image-bg
+include ../shop2-page/shop2-page
 
 mixin shop1()
   +b.shop1&attributes(attributes)
@@ -23,7 +24,7 @@ mixin shop1()
         +e.link 
           +e('a')(href='#') Информация о магазине
         +main-slider(true)
-        +submenu(getData('submenu-short')).shop1__submenu
+        +submenu(getData('submenu-short'))#tabs.shop1__submenu
         +filter-shop()
         +e.sort
           +e.found  
@@ -35,3 +36,4 @@ mixin shop1()
               +select(filterData.priceSort.name, filterData.priceSort.options)
         +shop-grid(getData('sale-preview-item-extended')).shop1__grid
         +button()._rounded._kind_red.__show-more Показать еще
+        +shop2-page()
