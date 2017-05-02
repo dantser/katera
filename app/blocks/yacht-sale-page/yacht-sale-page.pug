@@ -1,0 +1,13 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../scroll-slider/scroll-slider
+include ../sale-contacts/sale-contacts
+include ../share/share
+
+mixin yacht-sale-page()
+  +b.yacht-sale-page
+    +container()
+      +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
+      +main-container()
+        +e('div').wrapper HELLO YACHT
