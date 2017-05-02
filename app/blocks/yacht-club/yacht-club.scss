@@ -21,20 +21,30 @@
       height: 100%;
       z-index: 1;
     }
+
+    .image-bg_shadow {
+      opacity: 0.7;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
   &__title {
-    width: 100%;
     color: $color-dark-blue;
     font-size: 38px;
     font-weight: 600;
     font-family: $NerisSemiBold;
     text-align: center;
-    margin-top: 65px;
-    margin-bottom: 24px;
+    margin: 65px auto 80px;
 
     &:nth-of-type(2) {
-      margin: 59px 0 22px;
+      margin: 59px auto 22px;
     }
   }
 }

@@ -10,9 +10,11 @@ mixin yacht-club()
   +b.yacht-club
     +container()
       +page-header('Яхт-клуб Grand Marine', ['Главная', 'Яхт клубы', 'Яхт-клуб Grand Marine'])
-      +main-container().yacht-club__main-container
+      +main-container().yacht-club__main-containerr
         +e.box-bg
           +image-bg()(src='assets/images/yacht-club/yacht-club-banner.png')
+          +image-bg()(src='assets/images/yacht-club/banner-shadow.png')._shadow
+          +e('img')(src='assets/images/yacht-club/grand-marine-logo.png').__logo
         +submenu(getData('submenu-club'))
         +e.H2.title Услуги
         +services()

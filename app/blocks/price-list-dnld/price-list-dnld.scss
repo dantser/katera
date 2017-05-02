@@ -3,16 +3,20 @@
   &__link {
     display: flex;
     text-decoration: none;
+    justify-content: center;
   }
 
   &__icon {
     margin-right: 13px;
     stroke: $color-red;
+    width: 29px;
+    height: 31px;
   }
 
   &__text {
     display: flex;
     flex-flow: column nowrap;
+    text-align: left;
   }
 
   &__title {
@@ -21,6 +25,6 @@
 
   &__params {
     color: $color-gray;
-    font-style: 12px;
+    font-size: 12px;
   }
 }
