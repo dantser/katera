@@ -1,0 +1,117 @@
+.shop-grid {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 95px;
+
+  @include respond-to('tablet') {
+    padding-bottom: 37px;
+  }
+
+  @include respond-to('mobile') {
+    padding-bottom: 37px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .sale-preview-item {
+    width: auto;
+
+    &__img-wrap {
+      position: relative;
+      width: 165px;
+      height: 134px;
+      z-index: 1;
+
+      img {
+        width: 107px;
+        height: 98px;
+      }
+
+      @include respond-to('tablet') {
+        width: 107px;
+        height: 93px;
+        margin-right: 12px;
+        margin-bottom: 0;
+      }
+
+      @include respond-to('mobile') {
+        width: 107px;
+        height: 93px;
+        margin-right: 12px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $color-gray;
+      font-size: 12px;
+      margin-top: 4px;
+
+      @include respond-to('tablet') {
+        max-width: 172px;
+        margin-top: 0;
+        align-items: flex-start;
+      }
+
+      @include respond-to('mobile') {
+        max-width: 172px;
+        margin-top: 0;
+        align-items: flex-start;
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+      font-family: $NerisBlack;
+      color: $color-black;
+
+      @include respond-to('tablet') {
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      @include respond-to('mobile') {
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
+
+    &__price {
+      font-size: 16px;
+      color: $color-dark-blue;
+    }
+
+    &__params {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__param {
+      @include respond-to('tablet') {
+        float: left;
+
+        &::after {
+          content: ',\00a0';
+        }
+      }
+
+      @include respond-to('mobile') {
+        float: left;
+
+        &::after {
+          content: ',\00a0';
+        }
+      }
+    }
+  }
+}

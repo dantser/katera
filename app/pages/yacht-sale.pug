@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/yacht-sale-page/yacht-sale-page
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Каталог яхт'
+
+block content
+  +branding()
+    +yacht-sale-page()
