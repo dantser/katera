@@ -1,0 +1,25 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../scroll-slider/scroll-slider
+include ../sale-preview-item/sale-preview-item
+include ../sale-contacts/sale-contacts
+include ../share/share
+include ../models/models
+
+
+mixin yacht-sale-page()
+  +b.yacht-sale-page
+    +container()
+      +page-header('Каталог верфей', ['Главная', 'Каталог верфей'])
+      +main-container()
+        +e('div').slider
+          +scroll-slider(getData('scroll-slider'))
+          +sale-contacts(true)
+          +e('div') ОПИСАНИЕ
+          +e('div') ПОЖАЛОВАТЬСЯ
+          +share('small')
+          +e('div') Дата публикации, просмотров
+          +models('Без заголовка', getData('sale-preview-item-short-2'))._verphe._cruiser
+
+
