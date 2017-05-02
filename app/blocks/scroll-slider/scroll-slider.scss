@@ -63,6 +63,7 @@
       &__wrapper {
         -webkit-margin-before: 0;
         -webkit-padding-start: 0;
+        -webkit-margin-after: 9px;
       }
 
       &__image {
@@ -96,6 +97,7 @@
       }
 
       &__scrollbar {
+        width: 68.4%;
         .swiper-scrollbar-drag {
           background-color: $color-blue;
         }
