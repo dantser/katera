@@ -4,7 +4,7 @@ mixin submenu(data, isVertical)
   - var verticalBlockModifier = isVertical ? 'submenu_vertical' : '';
   - var verticalDivisionModifier = isVertical ? 'division_arrow-left' : '';
 
-  +b('ul')(class=verticalBlockModifier).submenu
+  +b('ul')(class=verticalBlockModifier).submenu&attributes(attributes)
     each item in data
       +e('li').item
         +e('a')(href=item.path).link

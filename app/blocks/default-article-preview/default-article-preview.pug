@@ -1,0 +1,23 @@
+include ../image-bg/image-bg
+include ../tag-content/tag
+include ../tag-content/tag-content
+//- Аргумент - объект
+//- image - фоновое изображение
+//- tags - связанные ссылки
+//- title - заголовок
+//- path - ссылка
+//- description - описание
+
+mixin default-article-preview(data)
+  +b('article').default-article-preview&attributes(attributes)
+    +e('a')(href=data.path).picture
+      +image-bg()(src= data.image)
+
+    +e('div').text
+        +tag-content()._inline.__tags
+
+          each tag in data.tags
+            +tag(tag.title)(href= tag.path, class= tag.colorModifier)
+
+        +e('span').heading= data.title
+        +e('p').description= data.description

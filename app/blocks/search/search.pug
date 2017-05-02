@@ -3,15 +3,24 @@ include ../container/container
 include ../page-header/page-header
 include ../submenu/submenu
 include ../button/button
+include ../sale-preview-item/sale-preview-item
+include ../default-article-preview/default-article-preview
+include ../big-forum-post-preview/big-forum-post-preview
 
 mixin search()
   +b.search&attributes(attributes)
     +container()
       +page-header('Найдено 215 материалов', ['Главная', 'Поиск'])
       +main-container().main-container_shadow.magazine__main-container
-        +submenu(getData('submenu-search'))
+        +submenu(getData('submenu-search'))._default
         +e.items
-          - for (var i = 0; i < 8; i++)
+          - for (var i = 0; i < 2; i++)
             +e.item
-
+              +default-article-preview(getData('article-preview-search'))
+            +e.item
+              +sale-preview-item(getData('sale-preview-item-extended')[0])._image_left
+            +e.item
+              +default-article-preview(getData('article-preview-search'))
+            +e.item
+              +big-forum-post-preview(getData('big-forum-post-preview'))
         +button()._rounded._kind_red._shadow.__show-more Показать еще
