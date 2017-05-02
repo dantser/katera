@@ -103,7 +103,33 @@
         }
       }
     }
+  }
 
+  &_info {
+    display: none;
+
+    @include respond-to('mobile') {
+      display: block;
+      text-align: center;
+
+      .scroll-slider {
+
+        &__name,
+        &__price,
+        &__option {
+          display: block;
+          color: $color-black;
+        }
+
+        &__name {
+          color: $color-red;
+        }
+
+        &__option {
+          color: $color-gray;
+        }
+      }
+    }
   }
 }
 

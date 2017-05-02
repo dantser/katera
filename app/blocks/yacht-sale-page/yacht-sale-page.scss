@@ -67,6 +67,21 @@
 
   &__description-wrapper {
     padding-left: 4px;
+
+    @include respond-to('mobile') {
+      height: 80px;
+      overflow: hidden;
+      padding-left: 0;
+    }
+  }
+
+  &__description-more {
+    display: none;
+
+    @include respond-to('mobile') {
+      display: block;
+      color: $color-red;
+    }
   }
 
   &__technical-list {
@@ -113,6 +128,16 @@
 
     @include respond-to('mobile') {
       flex-direction: column;
+      border-bottom: none;
+    }
+  }
+
+  & hr {
+    @include respond-to('mobile') {
+      display: block;
+      width: 100%;
+      order: 4;
+      border-top: 1px solid $color-gray;
     }
   }
 
@@ -197,9 +222,54 @@
     display: none;
 
     @include respond-to('mobile') {
-      display: none; /**/
+      display: flex;
+      justify-content: space-between;
     }
   }
+
+  &__prev-button,
+  &__next-button {
+    text-decoration: none;
+    color: $color-red;
+  }
+
+  &__prev-button {
+    margin-left: 5px;
+  }
+
+  &__next-button {
+    margin-right: 5px;
+  }
+
+  &__prev {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__next {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__prev-icon,
+  &__next-icon {
+
+    & > * {
+      stroke: $color-red;
+    }
+
+    width: 30px;
+    height: 20px;
+    display: block;
+    stroke: $color-white;
+  }
+
 
   &__show-contacts-button {
     display: none;
@@ -229,6 +299,7 @@
     }
 
     &_yacht {
+      border-bottom: 1px solid $color-gray;
 
       .sale-preview-item {
         margin-top: 0 !important;

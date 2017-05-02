@@ -16,3 +16,9 @@ mixin scroll-slider(data)
         +e('li').image.swiper-slide
           +image-bg()(src= image)
     +e('div').scrollbar.swiper-scrollbar
+
+  +b('div').scroll-slider._info
+    +e('b').name= data.name
+    +e('span').price= data.price
+    +e('span').options= data.options
+
