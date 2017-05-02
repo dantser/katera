@@ -1,0 +1,120 @@
+//-  Разметка страницы account-profile
+include ../button/button
+include ../page-header/page-header
+include ../checkbox/checkbox
+include ../account-navigation/account-navigation
+include ../text-field/text-field
+include ../social/social
+
+mixin account-profile()
+  +b.account-profile&attributes(attributes)
+    +container()
+      +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+      +e.grid-container
+        +e.col-nav
+          +account-navigation(getData('account-navigation'))
+        +e.col-page
+          +b.input-group
+            +text()
+              h3 Контактная информация
+            -
+              var contactInfo = [
+              {
+                label: 'Имя',
+                id:'account-name',
+                type: 'text'
+              },{
+                label: 'Номер телефона',
+                id:'account-phone',
+                type: 'tel'
+              },{
+                label: 'Email',
+                id:'account-email',
+                type: 'email'
+              },{
+                label: 'Cайт',
+                id:'account-site',
+                type: 'text'
+              }]
+            each obj in contactInfo
+              +e.item
+                label(for=obj.id)= obj.label
+                +e.input-wrap
+                  +text-field({type: obj.type})(id=obj.id)
+          +b.social-group
+            +text()
+              h3 Социальные сети
+            +e.wrap
+              -
+                var socialItems = [
+                {
+                  icon: 'tw',
+                  text: 'Twitter',
+                  checked: true
+                },{
+                  icon: 'fb',
+                  text: 'Facebook',
+                  checked: true
+                },{
+                  icon: 'vk',
+                  text: 'Вконтакте',
+                  checked: false
+                },{
+                  icon: 'go',
+                  text: 'Google',
+                  checked: true
+                },{
+                  icon: 'odnokl',
+                  text: 'Одноклассники',
+                  checked: true
+                },{
+                  icon: 'insta',
+                  text: 'Instagram',
+                  checked: false
+                }]
+              each obj in socialItems
+                +e.item
+                  +social(obj.icon)._join._small
+                  span= obj.text
+                  +checkbox(obj)._switcher
+          +b.subscribe-group
+            +text()
+              h3 Управление подпиской
+              p Отметьте сообщения, которые вы хотите получать по электронной почте.
+            +e.wrap
+              +e.item
+                +checkbox({checked: true})._switcher
+                span Новости сайта
+              +e.item
+                +checkbox({checked: true})._switcher
+                span Уведомления
+              +e.item
+                +checkbox({checked: false})._switcher
+                span Напоминания
+          +b.input-group.change-password-group
+            +text()
+              h3 Смена пароля
+              p Введите свой текущий пароль, новый пароль, и повторите ввод нового пароля,
+                |  </br>чтобы исключить возможность опечатки.
+            +e.wrap
+            -
+              var changePass = [
+              {
+                label: 'Текущий пароль',
+                id:'current-password',
+                type: 'password'
+              },{
+                label: 'Новый пароль',
+                id:'new-password',
+                type: 'password'
+              },{
+                label: 'Повторите пароль',
+                id:'repeat-password',
+                type: 'password'
+              }]
+            each obj in changePass
+              +e.item
+                label(for=obj.id)= obj.label
+                +e.input-wrap
+                  +text-field({type: obj.type})(id=obj.id)
+          +button()._kind_red.save-changes-btn Сохранить изменения
