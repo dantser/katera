@@ -1,0 +1,119 @@
+.account-navigation {
+  padding-bottom: 20px;
+  flex-grow: 1;
+
+  @include respond-to('mobile') {
+    width: 100%;
+  }
+
+  @include respond-to('tablet') {
+    width: 100%;
+  }
+
+  .list {
+    box-sizing: border-box;
+
+    &__item {
+      padding: 22px 0;
+      margin: 0;
+      position: relative;
+
+      &_show-pc {
+        @include respond-to('tablet') {
+          display: none;
+        }
+
+        @include respond-to('mobile') {
+          display: none;
+        }
+      }
+
+      .button {
+        height: 40px;
+        width: 195px;
+        position: absolute;
+        transform: translateX(-50%);
+        bottom: -20px;
+        left: 50%;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      text-decoration: inherit;
+
+      .division {
+        padding: 0 7px 0 26px;
+        color: $color-white;
+        font-size: rem(18px);
+        transition: color .25s ease-in-out;
+
+        &_active {
+          font-family: $NerisLight;
+          color: $color-red;
+        }
+
+        &:hover {
+          color: $color-red;
+          opacity: 1;
+        }
+      }
+
+      .count {
+        font-family: $NerisBlack;
+        font-size: rem(18px);
+        color: $color-red;
+      }
+    }
+  }
+
+  .text {
+    padding: 0 25px;
+
+    @include respond-to('mobile') {
+      text-align: center;
+    }
+
+    @include respond-to('tablet') {
+      text-align: center;
+    }
+
+    &__name {
+      font-size: rem(26px);
+      color: $color-white;
+
+      @include respond-to('mobile') {
+        font-size: rem(17px);
+      }
+    }
+
+    &__offers {
+      @include respond-to('mobile') {
+        display: none;
+      }
+    }
+
+    &__time, &__tariff {
+      @include respond-to('mobile') {
+        display: inline-block;
+        font-size: rem(12px);
+      }
+    }
+
+    p {
+      margin: 0;
+      font-family: $NerisLight;
+      color: $color-light-gray;
+
+      @include respond-to('mobile') {
+        font-size: rem(12px);
+      }
+    }
+
+    &__tariff {
+      margin-top: 12px;
+      font-family: $NerisSemiBold;
+      color: $color-red;
+    }
+  }
+}

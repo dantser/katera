@@ -1,0 +1,29 @@
+//- Сайдбар с навигацией для страниц account
+//- Берет данные с json и проверяет какой из элементов активный,
+//- показывает количество сообщений
+
+include ../list/list
+include ../button/button
+include ../division/division
+include ../text/text
+
+mixin account-navigation(data)
+  .account-navigation&attributes(attributes)
+    +list()
+      +list-item()
+        +text()
+          +e.H2.name Alex-kapitan_179
+          +e.P.offers 28 предложений
+          +e.H5.tariff Тариф “Старшина”
+          +e.P.time действует до 30.08.2017
+      each obj in data
+        +list-item()._show-pc
+          +e.A(href=obj.path).link
+            if (obj.active)
+              +division(obj.name)._active._arrow-left
+            else
+              +division(obj.name)
+            if (obj.count)
+              span.count= obj.count
+      +list-item()._show-pc
+        +button(true)(href='#')._rounded._kind_red._shadow Создать предложение
