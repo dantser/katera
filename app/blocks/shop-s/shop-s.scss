@@ -1,0 +1,196 @@
+.shop-s {
+
+  &__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 39px;
+
+    @include respond-to('tablet') {
+      flex-flow: column nowrap;
+      padding: 0 15px 35px;
+    }
+
+    @include respond-to('mobile') {
+      flex-flow: column nowrap;
+      padding: 0 15px 35px;
+    }
+  }
+  //wrapper
+
+  .page-header {
+    @include respond-to('tablet') {
+      background: $color-white;
+    }
+
+    @include respond-to('mobile') {
+      background: $color-white;
+    }
+  }
+
+  .catalog-filter {
+    padding-left: 25px;
+
+    @include respond-to('laptop') {
+      flex-direction: row;
+    }
+
+    @include respond-to('tablet') {
+      flex-direction: row;
+      padding-left: 0;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+      padding: 0 0 30px;
+    }
+
+    &__item {
+      padding: 0;
+      width: 262px;
+
+      @include respond-to('mobile') {
+        flex-direction: column;
+        width: 100%;
+
+        &:first-child {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .select {
+      width: 100%;
+    }
+  }
+  //catalog-filter
+
+  &__catalog {
+    width: calc(100% - 390px);
+    margin-right: 30px;
+
+    @include respond-to('tablet') {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  //catalog
+
+  .sailor-mail {
+    height: inherit;
+  }
+
+  .button {
+    width: 165px;
+    height: 40px;
+    box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
+    margin: 55px auto 0;
+
+    @include respond-to('mobile') {
+      width: 290px;
+      margin: 36px auto 0;
+    }
+  }
+  //button
+
+  &__shop-s-preview {
+    width: 360px;
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+  //shop-s-preview
+
+  &__banner {
+    height: 161px;
+    margin-bottom: 29px;
+
+    &:not(:first-child) {
+      @include respond-to('tablet') {
+        display: none;
+      }
+    }
+  }
+  //banner
+
+  &__preview {
+    width: 100%;
+
+    &_big {
+      margin-bottom: 24px;
+
+      & .sale-preview-item__img-wrap {
+        height: 417px;
+
+        @include respond-to('tablet') {
+          height: 208px;
+        }
+      }
+    }
+
+    &_group {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include respond-to('tablet') {
+        display: none;
+      }
+    }
+
+    &_col {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &_small {
+      margin-bottom: 22px;
+
+      & .sale-preview-item__img-wrap {
+        height: 134px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+  //preview
+
+  .sale-preview-item__img-wrap {
+    opacity: 1;
+    transition: all .25s ease-in-out;
+  }
+
+  .sale-preview-item {
+    cursor: pointer;
+
+    &:hover .sale-preview-item__img-wrap {
+      opacity: .75;
+    }
+  }
+}

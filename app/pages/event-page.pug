@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/event-page/event-page
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU'
+
+block content
+  +branding()
+    +event-page()

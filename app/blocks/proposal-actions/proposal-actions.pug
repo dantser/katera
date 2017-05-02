@@ -1,0 +1,23 @@
+include ../hint/hint
+include ../list/list
+include ../button/button
+
+mixin proposal-actions()
+  +b('ul').proposal-actions&attributes(attributes)
+    - var items = ['Выделить', 'Поднять в ТОПе', 'Сделать VIP', 'Верификация', 'Быстрая продажа', 'Завершить'];
+
+    each item in items
+      +e('li').item
+        - var test = item == 'Выделить' ? 'hint_active' : ''
+        +hint()(class=test).__item
+          +list()._has_triangle.proposal-actions__list
+            +list-item().proposal-actions__list-item
+              .proposal-actions__text
+                | Отличная возможность выделить свое предложение среди других.
+                | В результате поиска ваше объявление будет привлекать больше внимания,
+                | что позволит увеличить скорость продажи в разы
+            +list-item().__list-item
+              +button(true)._rounded._kind_red.proposal-actions__button Подключить 780 Р
+              .proposal-actions__text.proposal-actions__text_center Услуга действует 30 дней
+
+        +e('a')(href='#').link= item

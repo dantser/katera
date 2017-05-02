@@ -27,17 +27,12 @@ mixin index()
         +main-slider()
         +filter().__filter
         +navbar(getData('navbar'))
-        //- +e.sidebar
-        //-   +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
+        +e.sidebar
+          +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
         +e.content
-          //- ---------------------------------------------------------------------------
           .grid
             .stroke
-
-              .col.col_three.col_tablet
-                +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
-
-              .col.col_nine.col_tablet
+              .col.col_twelve.col_tablet
                 .stroke
                   .col.col_two-three
                     +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
@@ -61,15 +56,13 @@ mixin index()
                   .col.col_two-three
                     +article-preview(getData('article-preview_title-inside-img'))._title-inside-img
 
-          .grid
-            .stroke
-              .col.col_twelve
-                +banner-big().__big-banner
-                  +e('img')(src='assets/images/banner-img.png').little
+        +banner-big().__big-banner
+          +e('img')(src='assets/images/banner-img.png').little
 
+        +e.content
           .grid
             .stroke
-              .col.col_nine.col_tablet
+              .col.col_twelve.col_tablet
                 .stroke
                   .col.col_two-three
                     .stroke
@@ -95,6 +88,6 @@ mixin index()
                   .col.col_one-three
                     +article-preview(getData('article-preview_title-under-img'))._title-under-img
 
-              .col.col_three.col_tablet
-                +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
+        +e.sidebar._right
+          +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
 

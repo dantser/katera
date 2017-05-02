@@ -1,0 +1,10 @@
+{
+  "image": "assets/images/article-preview/article-1.jpg",
+  "tags": [
+    { "path": "#art-tag1", "title": "Аренда", "colorModifier": "_color_red" },
+    { "path": "#art-tag2", "title": "Мероприятия", "colorModifier": "_color_blue" }
+  ],
+  "title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
+  "path": "#art-main",
+  "description": "Его называют первым модульным судном, адаптирующимся к волнам (Wave Adaptive Modular Vessel — WAM-V). Благодаря особому строению корпуса «Протей» скользит по гребню волны, а не режет его."
+}

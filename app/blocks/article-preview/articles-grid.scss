@@ -1,16 +1,16 @@
 .grid {
-  padding: 0px 0;
-  margin: 0px 0;
+  padding: 0;
+  margin: 0;
   float: left;
 
   &:not(:first-of-type) {
-    padding-top:30px;
+    padding-top: 30px;
   }
 }
 
 .stroke {
   display: flex;
-  margin:-30px -15px 0;
+  margin: -30px -15px 0;
   min-width: 100%;
   flex-grow: 1;
   flex-wrap: wrap;

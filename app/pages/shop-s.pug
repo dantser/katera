@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/shop-s/shop-s
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Магазины'
+
+block content
+  +branding()
+    +shop-s()
