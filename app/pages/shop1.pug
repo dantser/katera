@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../blocks/branding/branding
+include ../blocks/shop1/shop1
+
+block head
+  - var pageTitle = 'Катера.RU - Магазины - UltraBoats'
+
+block content
+  +branding()
+    +shop1()

@@ -140,5 +140,10 @@
       margin: 26px 15px -26px;
       padding-left: 7px;
     }
+
+    @include respond-to('mobile') {
+      margin: 26px 15px -26px;
+      padding-left: 7px;
+    }
   }
 }
