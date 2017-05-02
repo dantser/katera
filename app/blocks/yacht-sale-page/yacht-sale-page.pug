@@ -56,10 +56,17 @@ mixin yacht-sale-page()
         +e('div').more
           +e('h2').more-title Другие предложения магазина
 
-          +models('Крейсерские яхты со средиземноморским кокпитом', getData('sale-preview-item-short'))._verphe._cruiser
+          +models('', getData('sale-preview-item-short'))._yacht
 
           +e('div').more-button
             +button(true)._kind_red._rounded._shadow
+              | Перейти в магазин
+          +e('div').goto
+            +e('div').prev-button Предыдущее
+              +icon('rarr').icon
+            +e('div').next-button Следующее
+          +e('div').show-contacts-button
+            +button(true)._kind_red
               | Перейти в магазин
 
 
