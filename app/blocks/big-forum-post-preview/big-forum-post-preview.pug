@@ -1,0 +1,20 @@
+include ../image-bg/image-bg
+
+//- Аргумент - объект
+//- title - заголовок
+//- path - ссылка
+//- date - строка даты 24.09.2016
+//- answers - кол-во ответов
+//- views - кол-во просмотров
+
+mixin big-forum-post-preview(data)
+  +b('a')(href=data.path).big-forum-post-preview&attributes(attributes)
+    +e.picture
+      +image-bg()(src='assets/images/search-forum-image.jpg')
+
+    +e('div').text
+      +e('span').date= data.date
+      +e('span').heading= data.title
+      +e('ul').info
+        +e.item <b>#{data.answers}</b> ответов
+        +e.item <b>#{data.views}</b> ответов

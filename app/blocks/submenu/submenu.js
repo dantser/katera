@@ -23,6 +23,11 @@ export default () => {
 
   $(window).on('resize', () => {
     const windoWidth = $(window).width();
+
+    if (SUBMENU_TITLE.parents('.submenu').hasClass('submenu_default')) {
+      return;
+    }
+
     if (windoWidth <= TABLET_WIDTH) {
       SUBMENU_TITLE.removeClass('division');
       SUBMENU_CONTROL.addClass(SUBMENU_CLOSED_CLASS);

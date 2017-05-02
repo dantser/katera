@@ -1,6 +1,7 @@
 {
-  "img": "assets/images/banner.jpg",
+  "img": "assets/images/sale-preview.jpg",
   "info": "2006 г., 145 моточасов",
   "name": "Silver Fox SC 485",
-  "price": "1 470 000 Р"
+  "price": "1 470 000 Р",
+  "path": "#"
 }

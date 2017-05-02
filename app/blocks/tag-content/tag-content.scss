@@ -4,6 +4,24 @@
   right: 0;
   z-index: 1;
 
+  &_inline {
+    position: static;
+    display: flex;
+
+    .tag-content__text {
+      margin: 0 10px 0 0;
+      min-width: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .tag-content__text + .tag-content__text {
+      margin-top: 0;
+    }
+  }
+
   @include respond-to('mobile') {
     display: flex;
     flex-wrap: wrap;
@@ -23,6 +41,12 @@
     color: #fff;
     text-decoration: none;
     background-color: #000;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
+
+    &:hover {
+      opacity: .75;
+    }
 
     @include respond-to('mobile') {
       margin-right: 5px;
