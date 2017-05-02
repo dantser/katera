@@ -7,8 +7,7 @@
   }
 
   &__main-container {
-    display: flex !important;
-    flex-flow: row wrap;
+    margin-bottom: 30px;
   }
 
   &__box-bg {
@@ -23,7 +22,23 @@
     }
 
     .image-bg_shadow {
-      opacity: 0.7;
+      opacity: .7;
+    }
+  }
+  &__submenu {
+    position: relative;
+
+    .yacht-club__name {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30px;
+      z-index: 1;
+      font-size: 24px;
+    }
+
+    .submenu {
+      padding-left: 400px;
     }
   }
 
@@ -41,10 +56,69 @@
     font-weight: 600;
     font-family: $NerisSemiBold;
     text-align: center;
-    margin: 65px auto 80px;
+    margin: 42px auto 80px;
+
+    &_white {
+      color: $color-white;
+    }
 
     &:nth-of-type(2) {
-      margin: 59px auto 22px;
+      margin: 75px auto 49px;
+    }
+
+    &:nth-of-type(3) {
+      margin: 75px auto 49px;
+    }
+
+    &:nth-of-type(4) {
+      margin: 75px auto 51px;
+    }
+  }
+
+  &__gallery {
+
+    .yacht-club__box-bg {
+      margin-bottom: 30px;
+      height: 500px;
+    }
+  }
+
+  .contacts {
+
+    &__table {
+      display: table;
+      margin: 0 auto;
+      border-spacing: 13px;
+      margin-bottom: 24px;
+    }
+
+    &__item {
+      display: table-row;
+      font-size: 16px;
+    }
+
+    &__title, &__descr {
+      display: table-cell;
+    }
+
+    &__title {
+      color: $color-gray;
+      text-align: right;
+    }
+
+    &__descr {
+      font-family: $NerisBlack;
+    }
+  }
+
+  &__banner-bottom {
+    display: block;
+    width: 100%;
+    height: 90px;
+    margin-top: 35px;
+
+    @include respond-to('laptop') {
+      display: none;
     }
   }
 }
