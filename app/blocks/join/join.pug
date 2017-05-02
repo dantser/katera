@@ -1,0 +1,10 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../radio/radio
+
+mixin join()
+  +b.join&attributes(attributes)
+    +container()
+      +page-header('Регистрация', ['Главная', 'Регистрация'])
+      +main-container().main-container_shadow.magazine__main-container
