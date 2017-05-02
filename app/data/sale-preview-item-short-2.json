@@ -1,0 +1,43 @@
+[
+  {
+  "img": "assets/images/banner.jpg",
+  "info": "Azimut Yachts",
+  "name": "Silver Fox SC 485",
+  "price": "1 470 000 Р",
+  "params": [
+    { "name": "Длина", "value": "0, 33 м" },
+    { "name": "Ширина", "value": "3, 02 м" },
+    { "name": "Осадка", "value": "1, 07 м" }
+  ]
+}, {
+  "img": "assets/images/banner.jpg",
+  "info": "Azimut Yachts",
+  "name": "Silver Fox SC 485",
+  "price": "1 470 000 Р",
+  "params": [
+    { "name": "Длина", "value": "0, 33 м" },
+    { "name": "Ширина", "value": "3, 02 м" },
+    { "name": "Осадка", "value": "1, 07 м" }
+  ]
+}, {
+  "img": "assets/images/banner.jpg",
+  "info": "Azimut Yachts",
+  "name": "Silver Fox SC 485",
+  "price": "1 470 000 Р",
+  "params": [
+    { "name": "Длина", "value": "0, 33 м" },
+    { "name": "Ширина", "value": "3, 02 м" },
+    { "name": "Осадка", "value": "1, 07 м" }
+  ]
+}, {
+  "img": "assets/images/banner.jpg",
+  "info": "Azimut Yachts",
+  "name": "Silver Fox SC 485",
+  "price": "1 470 000 Р",
+  "params": [
+    { "name": "Длина", "value": "0, 33 м" },
+    { "name": "Ширина", "value": "3, 02 м" },
+    { "name": "Осадка", "value": "1, 07 м" }
+  ]
+}
+]
