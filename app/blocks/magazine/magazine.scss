@@ -6,6 +6,53 @@
     padding-bottom: 30px;
   }
 
+  @media (min-width: 768px) {
+
+  }
+
+  &__select-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__select-dots {
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-color: $color-red;
+    margin-left: 18px;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $color-red;
+      /*z-index: 1;*/
+    }
+
+    &::before {
+      top: -12px;
+    }
+
+    &::after {
+      bottom: -12px;
+    }
+  }
+
   &__content {
     position: relative;
     margin-top: 44px;
