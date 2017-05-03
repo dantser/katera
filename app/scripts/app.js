@@ -17,6 +17,7 @@ import scrollSlider from '../blocks/scroll-slider/scroll-slider';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 import hint from '../blocks/hint/hint';
 import index from '../blocks/index/index';
+import magazineLongrid from '../blocks/magazine-longrid/magazine-longrid';
 import map from './common/map';
 import eventsSlider from '../blocks/events/events';
 import filterModel from '../blocks/filter-model/filter-model';
@@ -46,6 +47,7 @@ $(() => {
   additionalFilterParams();
   resetFilter();
   filterModel();
+  magazineLongrid();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

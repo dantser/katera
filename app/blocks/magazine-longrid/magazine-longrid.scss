@@ -6,7 +6,9 @@
 
     &_quote {
       height: 660px;
+    }
 
+    &_box-shadow {
       &::before {
         content: '';
         position: absolute;
@@ -34,13 +36,16 @@
   }
 
   &__text {
-    padding-right: 15px;
-    margin: 0 auto;
     font-family: $NerisLight;
     color: $color-white;
     font-size: 16px;
-    width: 50%;
     position: relative;
+
+    &_content-text {
+      width: 50%;
+      padding-right: 15px;
+      margin: 0 auto;
+    }
 
     p {
       line-height: 22px;
@@ -56,6 +61,15 @@
       font-size: 115px;
       line-height: 1;
       font-family: $RobotoSlab;
+    }
+
+    &_slide-text {
+      margin-left: 100px;
+
+      span {
+        top: -10px;
+        left: 0;
+      }
     }
   }
 
@@ -137,5 +151,49 @@
 
   & .extra-articles__button {
     display: none;
+  }
+
+  &__slider {
+    padding: 115px 0 120px;
+    background: $color-dark-blue;
+
+    &_white {
+      background: $color-white;
+    }
+  }
+
+  &__slide {
+    width: 457px;
+    height: 420px;
+    padding:  0 15px;
+  }
+
+  &__slide-text {
+    color: $color-white;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__text-container {
+    padding: 45px 210px 20px;
+    background: $color-white;
+
+    .heading {
+      font-family: $NerisLight;
+      text-align: center;
+      font-size: 24px;
+      padding: 30px 0;
+      font-weight: normal;
+      border-top: 1px solid $color-light-gray;
+      border-bottom: 1px solid $color-light-gray;
+      margin-bottom: 40px;
+      line-height: 30px;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 22px;
+    }
   }
 }
