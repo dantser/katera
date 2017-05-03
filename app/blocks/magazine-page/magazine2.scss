@@ -400,6 +400,19 @@
         }
       }
     }
+
+    .tag-list {
+      @include respond-to('mobile') {
+        flex-direction: column;
+      }
+
+      &__title {
+        @include respond-to('mobile') {
+          margin-right: 0;
+          font-size: 14px;
+        }
+      }
+    }
   }//inner-content
 
   &__tags {
@@ -409,6 +422,18 @@
   &__share {
     border-top: 1px solid $color-light-gray;
     padding-top: 18px;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+
+    .share__title {
+      @include respond-to('mobile') {
+        font-size: 14px;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &__extra-articles {
@@ -541,8 +566,15 @@
       }
 
       .article-preview {
+
+        @include respond-to('tablet') {
+          border-bottom: none;
+          min-height: inherit;
+        }
+
         @include respond-to('mobile') {
           border-bottom: none;
+          min-height: inherit;
         }
       }
 
