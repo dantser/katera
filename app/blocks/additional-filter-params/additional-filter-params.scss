@@ -41,12 +41,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 240px;
+    width: calc(33% - 30px);
     margin-bottom: 20px;
-
-    @include respond-to('tablet') {
-      width: calc(33% - 30px);
-    }
 
     @include respond-to('mobile') {
       width: 100%;
@@ -82,12 +78,14 @@
     width: 165px;
     height: 40px;
     margin: 0 auto;
-    transform: translateX(50%);
+    transform: translateX(75%);
+    box-sizing: border-box;
   }
 
   &__search {
     width: 240px;
     height: 40px;
+    box-sizing: border-box;
 
     .button {
       font-size: rem(20px);

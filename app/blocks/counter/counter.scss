@@ -7,8 +7,9 @@
     all: initial;
     padding: 0 12px;
     display: block;
-    width: 100%;
+    min-width: 0;
     height: 100%;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 15px;
     font-family: $NerisSemiBold;
@@ -21,6 +22,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    flex-shrink: 0;
 
     &:hover > .counter__icon {
       fill: darken($color-red, 10%);
