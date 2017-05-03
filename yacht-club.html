@@ -187,7 +187,7 @@
             </div>
             <main class="main-container yacht-club__main-container">
                 <div class="yacht-club__submenu">
-                    <span class="yacht-club__name">Grand Marine</span>
+                    <span class="yacht-club__club">Grand Marine</span>
                     <ul class="submenu">
                         <li class="submenu__item">
                             <a class="submenu__link" href="#">
@@ -211,7 +211,9 @@
                         </li>
                     </ul>
                 </div>
-                <h2 class="yacht-club__title">Услуги</h2>
+                <h2 class="yacht-club__title jqcontrol">Услуги
+                    <svg class="yacht-club__icon yacht-club__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                </h2>
                 <div class="services">
                     <div class="services__items">
                         <div class="services__item">
@@ -300,26 +302,90 @@
                         </div>
                     </div>
                 </div>
-                <h2 class="yacht-club__title yacht-club__title_white">Мероприятия</h2>
-                <h2 class="yacht-club__title">Галерея</h2>
-                <div class="yacht-club__gallery">
-                    <div class="yacht-club__box-bg">
-                        <div class="image-bg">
-                            <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-1.jpg" role="presentation" />
+                <div class="yacht-club__slider swiper-container">
+                    <h2 class="yacht-club__title yacht-club__title_events jqcontrol-events title">Мероприятия
+                        <svg class="yacht-club__icon yacht-club__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                    </h2>
+                    <div class="yacht-club__wrapper swiper-wrapper">
+                        <div class="yacht-club__slide swiper-slide">
+                            <div class="yacht-club__date">06
+                                <span>января</span>
+                            </div>
+                            <div class="yacht-club__slide-inner">
+                                <img class="yacht-club__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
+                                <div class="yacht-club__category">Яхтинг в россии</div>
+                                <div class="yacht-club__name">PROyachting проведет третий этап. Конференция любителей яхт.</div>
+                            </div>
+                        </div>
+                        <div class="yacht-club__slide swiper-slide">
+                            <div class="yacht-club__date">06
+                                <span>января</span>
+                            </div>
+                            <div class="yacht-club__slide-inner">
+                                <img class="yacht-club__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
+                                <div class="yacht-club__category">Яхтинг в россии</div>
+                                <div class="yacht-club__name">PROyachting проведет третий этап. Конференция любителей яхт.</div>
+                            </div>
+                        </div>
+                        <div class="yacht-club__slide swiper-slide">
+                            <div class="yacht-club__date">06
+                                <span>января</span>
+                            </div>
+                            <div class="yacht-club__slide-inner">
+                                <img class="yacht-club__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
+                                <div class="yacht-club__category">Яхтинг в россии</div>
+                                <div class="yacht-club__name">PROyachting проведет третий этап. Конференция любителей яхт.</div>
+                            </div>
+                        </div>
+                        <div class="yacht-club__slide swiper-slide">
+                            <div class="yacht-club__date">06
+                                <span>января</span>
+                            </div>
+                            <div class="yacht-club__slide-inner">
+                                <img class="yacht-club__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
+                                <div class="yacht-club__category">Яхтинг в россии</div>
+                                <div class="yacht-club__name">PROyachting проведет третий этап. Конференция любителей яхт.</div>
+                            </div>
+                        </div>
+                        <div class="yacht-club__slide swiper-slide">
+                            <div class="yacht-club__date">06
+                                <span>января</span>
+                            </div>
+                            <div class="yacht-club__slide-inner">
+                                <img class="yacht-club__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
+                                <div class="yacht-club__category">Яхтинг в россии</div>
+                                <div class="yacht-club__name">PROyachting проведет третий этап. Конференция любителей яхт.</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="yacht-club__box-bg">
-                        <div class="image-bg">
-                            <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-2.jpg" role="presentation" />
-                        </div>
-                    </div>
-                    <div class="yacht-club__box-bg">
-                        <div class="image-bg">
-                            <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-3.jpg" role="presentation" />
-                        </div>
-                    </div>
+                    <div class="yacht-club__events__swiper-pagination"></div>
                 </div>
-                <h2 class="yacht-club__title">Контакты</h2>
+                <h2 class="yacht-club__title yacht-club__title_gallery jqcontrol">Галерея
+                    <svg class="yacht-club__icon yacht-club__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                </h2>
+                <div class="yacht-club__gallery swiper-container">
+                    <div class="yacht-club__gallery-slider swiper-wrapper">
+                        <div class="yacht-club__box-bg swiper-slide">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-1.jpg" role="presentation" />
+                            </div>
+                        </div>
+                        <div class="yacht-club__box-bg swiper-slide">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-2.jpg" role="presentation" />
+                            </div>
+                        </div>
+                        <div class="yacht-club__box-bg swiper-slide">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-3.jpg" role="presentation" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="yacht-club__swiper-pagination"></div>
+                </div>
+                <h2 class="yacht-club__title yacht-club__title_contacts jqcontrol">Контакты
+                    <svg class="yacht-club__icon yacht-club__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                </h2>
                 <div class="contacts">
                     <div class="contacts__table">
                         <div class="contacts__item">

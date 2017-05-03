@@ -198,53 +198,67 @@
                         <h2 class="page-header__title">Журнал</h2>
                     </div>
                     <main class="main-container main-container_shadow magazine-videos__main-container">
-                        <ul class="submenu">
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division division_active submenu__title">Все</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Новинки</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Новости</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Яхтинг в России</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Море</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Путешествия</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Активный отдых</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Рыбалка</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Видео-обзоры</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="magazine-videos__select-wrapper">
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division division_active submenu__title">Все</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Новинки</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Новости</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Яхтинг в России</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Море</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Путешествия</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Активный отдых</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Рыбалка</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Видео-обзоры</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="select">
+                                <div class="select__label">Категория</div>
+                                <div class="select__text"></div>
+                                <select class="select__control">
+                                    <option value="1">Все</option>
+                                    <option value="2">Путешествия</option>
+                                    <option value="3">Видео-обзоры</option>
+                                </select>
+                                <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <div class="magazine-videos__select-dots"></div>
+                        </div>
                         <div class="magazine-videos__content">
                             <div class="magazine-videos__list">
                                 <div class="magazine-videos__col">

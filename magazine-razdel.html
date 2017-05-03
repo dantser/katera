@@ -198,53 +198,67 @@
                         <h2 class="page-header__title">Журнал</h2>
                     </div>
                     <main class="main-container main-container_shadow magazine-razdel__main-container">
-                        <ul class="submenu">
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division division_active submenu__title">Все</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Новинки</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Новости</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Яхтинг в России</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Море</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Путешествия</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Активный отдых</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Рыбалка</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Видео-обзоры</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="magazine-razdel__select-wrapper">
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division division_active submenu__title">Все</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Новинки</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Новости</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Яхтинг в России</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Море</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Путешествия</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Активный отдых</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Рыбалка</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">
+                                        <span class="division submenu__title">Видео-обзоры</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="select">
+                                <div class="select__label">Категория</div>
+                                <div class="select__text"></div>
+                                <select class="select__control">
+                                    <option value="1">Все</option>
+                                    <option value="2">Путешествия</option>
+                                    <option value="3">Видео-обзоры</option>
+                                </select>
+                                <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <div class="magazine-razdel__select-dots"></div>
+                        </div>
                         <div class="magazine-razdel__content">
                             <div class="magazine-razdel__list">
                                 <div class="magazine-razdel__col">
@@ -475,7 +489,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="magazine-razdel__col">
+                                <div class="magazine-razdel__col magazine-razdel__col_revert">
                                     <div class="magazine-razdel__item">
                                         <div class="magazine-razdel__banner">
                                             <a class="banner" href="#">
@@ -610,24 +624,15 @@
                                         </article>
                                     </div>
                                     <div class="magazine-razdel__item">
-                                        <article class="article-preview article-preview_color_dark-blue article-preview_title-under-img">
-                                            <div class="article-preview__wrapper">
-                                                <a class="article-preview__link" href="#art-main"></a>
-                                                <div class="article-preview__picture">
+                                        <div class="magazine-razdel__banner">
+                                            <a class="banner" href="#">
+                                                <div class="banner__image">
                                                     <div class="image-bg">
-                                                        <img class="image-bg__img" alt="" src="assets/images/article-preview/article-1.jpg" role="presentation" />
-                                                    </div>
-                                                    <div class="tag-content article-preview__tags">
-                                                        <a class="tag-content__text tag-content__text_color_blue" href="art-tag1">Мероприятия</a>
-                                                        <a class="tag-content__text tag-content__text_color_red" href="art-tag2">События</a>
+                                                        <img class="image-bg__img" alt="" src="assets/images/banner2.jpg" role="presentation" />
                                                     </div>
                                                 </div>
-                                                <div class="article-preview__text">
-                                                    <p class="article-preview__category">Яхта</p>
-                                                    <p class="article-preview__title">Личный опыт: обучение яхтингу по системе RYA в Великобритании</p>
-                                                </div>
-                                            </div>
-                                        </article>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
