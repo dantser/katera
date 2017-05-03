@@ -9,59 +9,64 @@ mixin additional-filter-params()
     +e('legend').heading Дополнительные атрибуты
 
     +e.fields
-      +e.item
-        +e.field._type_select
-          +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Назначение')
-      +e.item
-        +e.field._type_switcher
-          +checkbox({name: 'item2', value: '1'})._switcher
-        +e('span').label._right Вспомогательный двигатель
-      +e.item
-        +e('span').label Запас топлива не менее
-        +e.field._type_text-field
-          +text-field({type: 'text', name: 'item3', placeholder: 'л'})._placeholder_right
-      +e.item
-        +e.field._type_select
-          +select('item4', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Тип корпуса')
-      +e.item
-        +e.field._type_select
-          +select('item5', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}])
-      +e.item
-        +e('span').label Запас воды не менее
-        +e.field._type_text-field
-          +text-field({type: 'text', name: 'item6', placeholder: 'л'})._placeholder_right
-      +e.item
-        +e.field._type_select
-          +select('item7', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Материал корпуса')
-      +e.item
-        +e('span').label Осадка фальшкилем или швертом не более
-        +e.field._type_text-field
-          +text-field({type: 'text', name: 'item8', placeholder: 'м'})._placeholder_right
-      +e.item
-        +e.field._type_switcher
-          +checkbox({name: 'item9', value: '1'})._switcher
-        +e('span').label._right Наличие камбуза
-      +e.item
-        +e.field._type_select
-          +select('item10', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Тип оснастки')
-      +e.item
-        +e('span').label Осадка корпусом не более
-        +e.field._type_text-field
-          +text-field({type: 'text', name: 'item11', placeholder: 'м'})._placeholder_right
-      +e.item
-        +e.field._type_switcher
-          +checkbox({name: 'item12', value: '1'})._switcher
-        +e('span').label._right Наличие санузла
-      +e.item
-        +e.field._type_select
-          +select('item13', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Управление')
-      +e.item
-        +e('span').label Высота мачты не более
-        +e.field._type_text-field
-          +text-field({type: 'text', name: 'item11', placeholder: 'м'})._placeholder_right
-      +e.item
-        +e.reset
-          +reset-filter()
+      +e.col
+        +e.item
+          +e.field._type_select
+            +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Назначение')
+        +e.item
+          +e.field._type_select
+            +select('item4', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Тип корпуса')
+        +e.item
+          +e.field._type_select
+            +select('item7', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Материал корпуса')
+        +e.item
+          +e.field._type_select
+            +select('item10', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Тип оснастки')
+        +e.item
+          +e.field._type_select
+            +select('item13', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Управление')
+
+      +e.col
+        +e.item
+          +e.field._type_switcher
+            +checkbox({name: 'item2', value: '1'})._switcher
+          +e('span').label._right Вспомогательный двигатель
+        +e.item
+          +e.field._type_select
+            +select('item5', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}])
+        +e.item
+          +e('span').label Осадка фальшкилем или швертом не более
+          +e.field._type_text-field
+            +text-field({type: 'text', name: 'item8', placeholder: 'м'})._placeholder_right
+        +e.item
+          +e('span').label Осадка корпусом не более
+          +e.field._type_text-field
+            +text-field({type: 'text', name: 'item11', placeholder: 'м'})._placeholder_right
+        +e.item
+          +e('span').label Высота мачты не более
+          +e.field._type_text-field
+            +text-field({type: 'text', name: 'item11', placeholder: 'м'})._placeholder_right
+
+      +e.col
+        +e.item
+          +e('span').label Запас топлива не менее
+          +e.field._type_text-field
+            +text-field({type: 'text', name: 'item3', placeholder: 'л'})._placeholder_right
+        +e.item
+          +e('span').label Запас воды не менее
+          +e.field._type_text-field
+            +text-field({type: 'text', name: 'item6', placeholder: 'л'})._placeholder_right
+        +e.item
+          +e.field._type_switcher
+            +checkbox({name: 'item9', value: '1'})._switcher
+          +e('span').label._right Наличие камбуза
+        +e.item
+          +e.field._type_switcher
+            +checkbox({name: 'item12', value: '1'})._switcher
+          +e('span').label._right Наличие санузла
+        +e.item
+          +e.reset
+            +reset-filter()
 
     +e.buttons
       +e.roll-up

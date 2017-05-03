@@ -4,7 +4,6 @@ include ../select/select
 include ../slider-range/slider-range
 include ../text-field/text-field
 include ../select-currency/select-currency
-include ../additional-filter-params/additional-filter-params
 
 mixin filter-model()
   +b('form').filter-model&attributes(attributes)
@@ -32,6 +31,3 @@ mixin filter-model()
       +e.item._search
         +button()._kind_red.__button Найти
         +e('a')(href='#').link Расширенный фильтр
-
-    +e.extended-wrapper
-      +additional-filter-params()

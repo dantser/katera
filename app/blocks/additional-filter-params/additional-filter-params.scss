@@ -11,10 +11,22 @@
 
   &__fields {
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
     margin-top: 25px;
     width: 100%;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    display: block;
+    width: calc(33% - 30px);
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
   }
 
   &__field {
@@ -29,6 +41,10 @@
     &_type_text-field {
       width: 80px;
       height: 40px;
+
+      @include respond-to('mobile') {
+        width: 120px;
+      }
     }
 
     &_type_switcher {
@@ -41,17 +57,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 240px;
     margin-bottom: 20px;
-
-    @include respond-to('tablet') {
-      width: calc(33% - 30px);
-    }
-
-    @include respond-to('mobile') {
-      width: 100%;
-      justify-content: flex-start;
-    }
+    min-height: 40px;
   }
 
   &__buttons {
@@ -76,18 +83,37 @@
   &__reset {
     align-self: flex-end;
     transform: translateY(50%);
+
+    @include respond-to('mobile') {
+      display: flex;
+      justify-content: center;
+      padding-top: 15px;
+      width: 100%;
+      border-top: 1px solid #e5e5e5;
+      transform: translateY(0);
+    }
   }
 
   &__roll-up {
     width: 165px;
     height: 40px;
     margin: 0 auto;
-    transform: translateX(50%);
+    transform: translateX(75%);
+    box-sizing: border-box;
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 
   &__search {
-    width: 240px;
+    width: calc(33% - 30px);
     height: 40px;
+    box-sizing: border-box;
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
 
     .button {
       font-size: rem(20px);

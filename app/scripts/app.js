@@ -23,6 +23,7 @@ import eventsSlider from '../blocks/events/events';
 import eventPage from '../blocks/event-page/event-page';
 import filterModel from '../blocks/filter-model/filter-model';
 import resetFilter from '../blocks/reset-filter/reset-filter';
+import filterSale from '../blocks/filter-sale/filter-sale';
 import additionalFilterParams from '../blocks/additional-filter-params/additional-filter-params';
 import magazineRazdel from '../blocks/magazine-razdel/magazine-razdel';
 
@@ -47,6 +48,7 @@ $(() => {
   truncate();
   eventsSlider();
   additionalFilterParams();
+  filterSale();
   resetFilter();
   filterModel();
   magazineLongrid();

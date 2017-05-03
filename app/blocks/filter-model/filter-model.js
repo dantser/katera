@@ -26,14 +26,4 @@ export default () => {
 
   lengthSliderTextMin.text(`${lengthRangleSlider.slider('values', 0)} м`);
   lengthSliderTextMax.text(`${lengthRangleSlider.slider('values', 1)} м`);
-
-  const extendedLink = filter.find('.filter-model__link');
-  const extendedBlock = filter.find('.filter-model__extended-wrapper');
-
-  extendedLink.on('click', (e) => {
-    e.preventDefault();
-
-    filter.addClass('filter_extended');
-    extendedBlock.slideDown();
-  });
 };

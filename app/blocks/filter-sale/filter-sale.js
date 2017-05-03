@@ -1,3 +1,4 @@
+/* eslint-disable */
 import $ from 'jquery';
 import 'jquery-ui-bundle';
 
@@ -5,17 +6,17 @@ export default () => {
   const DIVISION_CLASS = '.division';
   const DIVISION_ACTIVE_CLASS = 'division_active';
 
-  const filter = $('#filterTab');
+  const filter = $('.filter-sale');
 
   if (!filter) {
     return;
   }
 
   // slider range
-  const lengthSliderTextMin = $('.js-filter-length-min');
-  const lengthSliderTextMax = $('.js-filter-length-max');
+  const lengthSliderTextMin = $('.js-filter-sale-length-min');
+  const lengthSliderTextMax = $('.js-filter-sale-length-max');
 
-  const lengthRangleSlider = $('.js-filter-slider-range');
+  const lengthRangleSlider = $('.js-filter-sale-length-slider');
 
   lengthRangleSlider.slider({
     min: 0,
@@ -38,5 +39,15 @@ export default () => {
       oldTab.find(DIVISION_CLASS).removeClass(DIVISION_ACTIVE_CLASS);
       newTab.find(DIVISION_CLASS).addClass(DIVISION_ACTIVE_CLASS);
     },
+  });
+
+  filter.find('.filter-sale__roll-down').on('click', (e) => {
+    e.preventDefault();
+
+    const form = $(e.target).parents('form');
+    const extendedBlock = form.find('.filter-sale__extended-wrapper');
+
+    form.addClass('filter_extended');
+    extendedBlock.slideDown();
   });
 };
