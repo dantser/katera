@@ -2,10 +2,10 @@ include ../image-bg/image-bg
 
 //- Все данные находятся в event-item.json пример: +event-item(getData('event-item'))
 
-mixin event-item(data)
-  +b.event-item
+mixin event-item(data, slider)
+  +b.event-item&attributes(attributes)
     each block in data.blocks
-      +b.event-item-box
+      +b.event-item-box.swiper-slide
         +e('a').link(href= block.link)
           +image-bg()(src= block.image alt='')
         +e.description
@@ -14,4 +14,3 @@ mixin event-item(data)
         +e.date
           +e('p').number= block.number
           +e('span').month= block.month
-
