@@ -5,6 +5,10 @@
     &__field_type_search-btn, &__field_type_reset-filter, &__roll-down {
       opacity: 0;
       pointer-events: none;
+
+      @include respond-to('mobile') {
+        display: none;
+      }
     }
   }
 }
@@ -12,6 +16,12 @@
 .filter-sale {
   display: block;
   width: 100%;
+  padding: 0 25px;
+  box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+
+  @include respond-to('mobile') {
+    box-shadow: none;
+  }
 
   &__nav {
     display: flex;
@@ -23,6 +33,10 @@
 
     li:not(:last-child) {
       margin-right: 100px;
+
+      @include respond-to('mobile') {
+        margin-right: 30px;
+      }
     }
   }
 
@@ -31,6 +45,10 @@
     padding-left: 0;
     padding-right: 0;
     font-size: rem(20px);
+
+    @include respond-to('mobile') {
+      font-size: rem(16px);
+    }
   }
 
   &__tab {
@@ -45,17 +63,25 @@
     opacity: 1;
     will-change: opacity;
     transition: opacity .25s ease-in-out;
+    transform: translateY(50%);
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #e5e5e5;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
   }
 
   &__col {
     display: block;
     width: calc(33% - 30px);
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
   }
 
   &__row {
@@ -183,6 +209,8 @@
   &__extended-wrapper {
     display: none;
     margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
     transform: translateY(-40px);
   }
 }

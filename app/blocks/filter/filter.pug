@@ -5,7 +5,6 @@ include ../slider-range/slider-range
 include ../text-field/text-field
 include ../select-currency/select-currency
 include ../checkbox/checkbox
-include ../additional-filter-params/additional-filter-params
 
 mixin filter(data)
   - var filterData = getData('filter')
@@ -50,6 +49,3 @@ mixin filter(data)
           +button()._kind_red.__search-btn Найти
 
         +e('a')(href='#').extended-link Расширенный фильтр
-
-        +e.extended-wrapper
-          +additional-filter-params()

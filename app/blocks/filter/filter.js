@@ -39,16 +39,4 @@ export default () => {
       newTab.find(DIVISION_CLASS).addClass(DIVISION_ACTIVE_CLASS);
     },
   });
-
-  const extendedLink = filter.find('.filter__extended-link');
-
-  extendedLink.on('click', (e) => {
-    e.preventDefault();
-
-    const form = $(e.target).parents('form');
-    const extendedBlock = form.find('.filter__extended-wrapper');
-
-    form.addClass('filter_extended');
-    extendedBlock.slideDown();
-  });
 };
