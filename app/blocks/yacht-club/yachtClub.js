@@ -30,6 +30,7 @@ export default () => {
   const elements = $(control);
   const controlServises = '.jqcontrol-events';
   const elementsServises = $(controlServises);
+  const BORDER_CLASS = 'yacht-club__title_border';
 
   elements.each(function () { // eslint-disable-line
     const el = $(this);
@@ -37,6 +38,7 @@ export default () => {
     el.on('click', (e) => {
       e.preventDefault();
       el.next().slideToggle();
+      el.toggleClass(BORDER_CLASS);
     });
   });
 
@@ -46,6 +48,7 @@ export default () => {
     el.on('click', (e) => {
       e.preventDefault();
       el.siblings().slideToggle();
+      el.toggleClass(BORDER_CLASS);
     });
   });
 };
