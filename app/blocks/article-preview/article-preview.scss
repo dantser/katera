@@ -83,6 +83,7 @@
     @include respond-to('mobile') {
       padding-left: 15px;
       padding-right: 15px;
+      min-height: 0;
     }
 
     .article-preview {

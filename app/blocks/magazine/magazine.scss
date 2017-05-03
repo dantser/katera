@@ -4,6 +4,10 @@
 
   &__main-container {
     padding-bottom: 30px;
+
+    @include respond-to(mobile) {
+      padding-top: 15px
+    }
   }
 
   @media (min-width: 768px) {
