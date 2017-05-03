@@ -1,4 +1,4 @@
-.join {
+.login {
 
   .page-header {
     @include respond-to('tablet') {
@@ -44,7 +44,7 @@
 
     .form {
 
-      .join {
+      .login {
 
         &__fieldset {
           padding: 0;
@@ -105,7 +105,7 @@
         justify-content: space-between;
         margin-bottom: 20px;
 
-        .join__label {
+        .login__label {
           font-size: 16px;
           font-family: $NerisLight;
           font-weight: 300;
@@ -117,28 +117,10 @@
           width: 262px;
           border: 1px solid #ccc;
         }
-
-        .left {
-          display: flex;
-          align-items: center;
-
-          .radio__box {
-            margin-right: 9px;
-          }
-        }
-
-        .right {
-          display: flex;
-          align-items: center;
-
-          .radio__box {
-            margin-right: 9px;
-          }
-        }
       }
       //row
 
-      .join__text {
+      .login__text {
         width: 262px;
         margin: 0;
         line-height: 1.1;
@@ -195,6 +177,8 @@
     .form-one {
 
       .fieldset-one {
+        border: none;
+        margin: 0;
         border-bottom: 1px solid $color-light-gray;
 
         .form__row {
@@ -202,10 +186,10 @@
           margin-bottom: 0;
         }
 
-        .join__entrance {
+        .login__entrance {
           display: none;
           margin-top: 0;
-          border-bottom: 1px solid #e5e5e5;
+          //border-bottom: 1px solid #e5e5e5;
           padding: 15px 0;
 
           @include respond-to('mobile') {
@@ -217,13 +201,16 @@
       }
 
       .fieldset-two {
+        border: none;
         padding: 45px 0 0;
+        margin: 0;
 
         .form__row {
           @include respond-to('mobile') {
             flex-direction: column;
+            align-items: flex-start;
 
-            .join__label {
+            .login__label {
               width: 100%;
               text-align: left;
               margin-bottom: 3px;
@@ -235,96 +222,28 @@
           }
         }
 
-        .form__row-switch {
-          flex-direction: row !important;
-
-          .join__text {
-            width: 200px !important;
-          }
-        }
-
-        .join__entrance {
+        .login__entrance {
           @include respond-to('mobile') {
             display: none;
           }
         }
 
-        .join__label {
+        .entrance-link_margin {
+          margin-left: 98px;
+          margin-top: -18px;
+
+          @include respond-to('mobile') {
+            margin-left: 0;
+          }
+        }
+
+        .login__label {
           width: 98px;
         }
       }
     }
     //form-one
-
-    .form-two {
-
-      .fieldset-one {
-        border-bottom: 1px solid $color-light-gray;
-
-        .form__row {
-          padding: 27px 0;
-          margin-bottom: 0;
-        }
-
-        .join__entrance {
-          display: none;
-          margin-top: 0;
-          border-bottom: 1px solid #e5e5e5;
-          padding: 15px 0;
-
-          @include respond-to('mobile') {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-      }
-
-      .fieldset-two {
-        padding: 45px 0 0;
-
-        .form__row {
-          @include respond-to('mobile') {
-            flex-direction: column;
-
-            .join__label {
-              width: 100%;
-              text-align: left;
-              margin-bottom: 3px;
-            }
-
-            .text-field {
-              width: 100%;
-            }
-          }
-        }
-
-        .form__row-switch {
-          flex-direction: row !important;
-
-          .join__text {
-            width: 200px !important;
-          }
-        }
-
-        .join__entrance {
-          @include respond-to('mobile') {
-            display: none;
-          }
-        }
-
-        .join__label {
-          width: 98px;
-          line-height: 1.1;
-        }
-      }
-    }
-    //form-two
   }
-
-  #join-1 {
-    display: none;
-  }
+  //forms
 }
-
 //join
