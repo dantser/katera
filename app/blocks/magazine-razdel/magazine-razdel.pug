@@ -5,13 +5,17 @@ include ../submenu/submenu
 include ../button/button
 include ../banner/banner
 include ../article-preview/article-preview
+include ../select/select
 
 mixin magazine-razdel()
   +b.magazine-razdel&attributes(attributes)
     +container()
       +page-header('Журнал', ['Главная', 'Журнал', 'Путешествия'])
       +main-container().main-container_shadow.magazine-razdel__main-container
-        +submenu(getData('submenu'))
+        +submenu(getData('submenu'))._default
+        +e('div').select-wrapper
+         +select('item10', [{value: '1', title: 'Путешествия'}, {value: '2', title: 'Видео-обзоры'}, {value: '3', title: 'Все'}], null, 'Категория')
+         +e('div').select-dots
         +e.content
           +e.list
             +e.col
