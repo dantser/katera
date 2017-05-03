@@ -16,6 +16,7 @@ import modal from '../blocks/modal/modal';
 import scrollSlider from '../blocks/scroll-slider/scroll-slider';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 import hint from '../blocks/hint/hint';
+import truncate from '../blocks/yacht-sale-page/yacht-sale-page';
 
 $(() => {
   burger();
@@ -35,4 +36,5 @@ $(() => {
   yachtSlider();
   commonInput();
   hint();
+  truncate();
 });
