@@ -11,6 +11,11 @@
       font-size: 11px;
       line-height: 14px;
     }
+
+    @include respond-to('mobile') {
+      font-size: 11px;
+      line-height: 14px;
+    }
   }
 
   &__text {
@@ -19,6 +24,10 @@
     line-height: 14px;
 
     @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
       display: none;
     }
   }
