@@ -14,7 +14,7 @@ mixin magazine()
     +container()
       +page-header('Журнал', ['Главная', 'Журнал'])
       +main-container().main-container_shadow.magazine__main-container
-        +submenu(getData('submenu'))
+        +submenu(getData('submenu'))._default
         +e('div').select-wrapper
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
           +e('div').select-dots

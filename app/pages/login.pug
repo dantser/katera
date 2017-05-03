@@ -1,0 +1,11 @@
+extends ../layouts/default
+include ../blocks/login/login
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Вход'
+
+block content
+  +branding()
+    +login()
+
