@@ -104,4 +104,40 @@
       }
     }
   }
+
+  &_info {
+    display: none;
+
+    @include respond-to('mobile') {
+      display: block;
+      text-align: center;
+
+      .scroll-slider {
+
+        &__name,
+        &__price,
+        &__option {
+          display: block;
+        }
+
+        &__name {
+          font-size: 22px;
+          line-height: (30/22)*1em;
+          color: $color-black;
+        }
+
+        &__price {
+          font-size: 20px;
+          line-height: (30/20)*1em;
+          color: $color-red;
+        }
+
+        &__option {
+          font-size: 12px;
+          line-height: (30/12)*1em;
+          color: $color-gray;
+        }
+      }
+    }
+  }
 }

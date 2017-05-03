@@ -16,6 +16,7 @@ import modal from '../blocks/modal/modal';
 import scrollSlider from '../blocks/scroll-slider/scroll-slider';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 import hint from '../blocks/hint/hint';
+import truncate from '../blocks/yacht-sale-page/yacht-sale-page';
 import index from '../blocks/index/index';
 import magazineLongrid from '../blocks/magazine-longrid/magazine-longrid';
 import map from './common/map';
@@ -43,6 +44,7 @@ $(() => {
   yachtSlider();
   commonInput();
   hint();
+  truncate();
   eventsSlider();
   additionalFilterParams();
   resetFilter();
