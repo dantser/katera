@@ -1,3 +1,127 @@
 .event-page {
   display: block;
+
+  &__banner {
+    height: 400px;
+  }
+
+  &__content {
+    background: $color-white;
+    padding: 30px;
+  }
+
+  &__inner-content {
+    box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+    padding: 20px 25px;
+    width: 100%;
+    margin-left: 100px;
+    max-width: 750px;
+    margin-bottom: 30px;
+    background: $color-white;
+    overflow: hidden;
+
+    &_comments {
+      height: 100%;
+    }
+
+    @include respond-to('tablet') {
+      padding: 10px;
+      padding-right: 0;
+    }
+  }
+
+  &__share {
+    padding-top: 20px;
+    border-top: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+      padding-right: 10px;
+    }
+  }
+
+  &__tags {
+    margin-bottom: 20px;
+
+    @include respond-to('tablet') {
+      padding-right: 10px;
+    }
+  }
+
+  &__white {
+    background: $color-white;
+
+    .event-item-box__text {
+      color: $color-black;
+    }
+
+    .event-item-box {
+      width: 330px;
+      margin: 0;
+    }
+
+    .event-item-box__date {
+      top: 0;
+      left: 0;
+      width: auto;
+    }
+
+    .event-item-box__link {
+      width: 310px;
+      height: 175px;
+      margin-top: 40px;
+      margin-left: 20px;
+    }
+
+    .event-item-box__number {
+      font-size: 85px;
+    }
+  }
+
+  &__slider-head {
+    font-weight: 700;
+    color: #130b59;
+    font-size: 38px;
+    text-align: center;
+    display: block;
+  }
+
+  &__sidebar {
+    margin-top: 42px;
+    margin-left: 30px;
+    margin-right: 97px;
+    display: block;
+    width: 263px;
+    height: 100%;
+  }
+
+  .sale-preview-item__img-wrap {
+    height: 215px;
+    margin-top: 30px;
+  }
+
+  &__text-content {
+    position: relative;
+    margin-top: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+  }
+
+  &__text-inner {
+    display: block !important;
+    padding: 0 100px;
+
+    & p {
+      line-height: 20px;
+      font-size: 14px;
+      margin: 10px 0 !important;
+    }
+  }
+
+  &__content-wrap {
+    display: flex;
+    flex-flow: row wrap;
+  }
 }

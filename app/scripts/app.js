@@ -7,7 +7,6 @@ import searchBar from '../blocks/search-bar/search-bar';
 import mainSlider from '../blocks/main-slider/main-slider';
 import filter from '../blocks/filter/filter';
 import textField from '../blocks/text-field/text-field';
-import submenu from '../blocks/submenu/submenu';
 import timeline from '../blocks/timeline/timeline';
 import models from '../blocks/models/models';
 import selectCurrency from '../blocks/select-currency/select-currency';
@@ -21,6 +20,7 @@ import index from '../blocks/index/index';
 import magazineLongrid from '../blocks/magazine-longrid/magazine-longrid';
 import map from './common/map';
 import eventsSlider from '../blocks/events/events';
+import eventPage from '../blocks/event-page/event-page';
 import filterModel from '../blocks/filter-model/filter-model';
 import resetFilter from '../blocks/reset-filter/reset-filter';
 import additionalFilterParams from '../blocks/additional-filter-params/additional-filter-params';
@@ -32,7 +32,6 @@ $(() => {
   select();
   searchBar();
   mainSlider();
-  submenu();
   filter();
   textField();
   upBtn();
@@ -51,8 +50,8 @@ $(() => {
   resetFilter();
   filterModel();
   magazineLongrid();
+  eventPage();
   magazineRazdel();
-
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

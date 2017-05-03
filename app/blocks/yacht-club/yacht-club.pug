@@ -18,20 +18,64 @@ mixin yacht-club()
         +e('img')(src='assets/images/yacht-club/grand-marine-logo.png').__logo
       +main-container().yacht-club__main-container
         +e.submenu
-          +e('span').name Grand Marine
+          +e('span').club Grand Marine
           +submenu(getData('submenu-club'))
-        +e.H2.title Услуги
+        +e.H2.title.jqcontrol Услуги
+          +icon('caret').icon._kind_caret
         +services()
-        +e.H2.title_white Мероприятия
-        +e.H2.title Галерея
-        +e.gallery
-          +e.box-bg
-            +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
-          +e.box-bg
-            +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
-          +e.box-bg
-            +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
-        +e.H2.title Контакты
+        +e.slider.swiper-container
+          +e.H2.title_events.jqcontrol-events.title Мероприятия
+            +icon('caret').icon._kind_caret
+          +e.wrapper.swiper-wrapper
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+          +e.events__swiper-pagination
+        +e.H2.title_gallery.jqcontrol Галерея
+          +icon('caret').icon._kind_caret
+        +e.gallery.swiper-container
+          +e.__gallery-slider.swiper-wrapper
+            +e.box-bg.swiper-slide
+              +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
+            +e.box-bg.swiper-slide
+              +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
+            +e.box-bg.swiper-slide
+              +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
+          +e.swiper-pagination
+        +e.H2.title_contacts.jqcontrol Контакты
+          +icon('caret').icon._kind_caret
         +b.contacts
           +e.table
             +e.item
