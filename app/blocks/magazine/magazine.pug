@@ -7,6 +7,7 @@ include ../article-preview/articles-grid
 include ../article-preview/article-preview
 include ../button/button
 include ../banner/banner
+include ../select/select
 
 mixin magazine()
   +b.magazine&attributes(attributes)
@@ -14,6 +15,10 @@ mixin magazine()
       +page-header('Журнал', ['Главная', 'Журнал'])
       +main-container().main-container_shadow.magazine__main-container
         +submenu(getData('submenu'))
+        +e('div').select-wrapper
+          +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
+          +e('div').select-dots
+
         +e.content
 
           +articles-grid()
