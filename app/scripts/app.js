@@ -22,7 +22,7 @@ import eventsSlider from '../blocks/events/events';
 import filterModel from '../blocks/filter-model/filter-model';
 import resetFilter from '../blocks/reset-filter/reset-filter';
 import additionalFilterParams from '../blocks/additional-filter-params/additional-filter-params';
-import yachtScrollSlider from '../blocks/yacht-club/yacht-club';
+import yachtClub from '../blocks/yacht-club/yachtClub';
 
 $(() => {
   index();
@@ -47,7 +47,7 @@ $(() => {
   additionalFilterParams();
   resetFilter();
   filterModel();
-  yachtScrollSlider();
+  yachtClub();
 
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
