@@ -7,7 +7,17 @@
   background-color: $color-white;
   border-radius: 3px;
   border: 1px solid #e5e5e5;
-  overflow: hidden;
+
+  &_placeholder_right {
+
+    .text-field__placeholder {
+      font-family: $NerisLight;
+      font-style: italic;
+      margin-left: auto;
+      color: #666;
+      font-size: rem(13px);
+    }
+  }
 
   &_has_error {
     border-color: $color-red;

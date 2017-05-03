@@ -41,11 +41,14 @@ export default () => {
   });
 
   const extendedLink = filter.find('.filter__extended-link');
-  const extendedBlock = filter.find('.filter__extended-wrapper');
 
   extendedLink.on('click', (e) => {
     e.preventDefault();
 
-    extendedBlock.slideToggle();
+    const form = $(e.target).parents('form');
+    const extendedBlock = form.find('.filter__extended-wrapper');
+
+    form.addClass('filter_extended');
+    extendedBlock.slideDown();
   });
 };

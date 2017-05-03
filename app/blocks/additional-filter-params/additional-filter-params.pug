@@ -19,7 +19,7 @@ mixin additional-filter-params()
       +e.item
         +e('span').label Запас топлива не менее
         +e.field._type_text-field
-          +text-field({type: 'text', name: 'item3'})
+          +text-field({type: 'text', name: 'item3', placeholder: 'л'})._placeholder_right
       +e.item
         +e.field._type_select
           +select('item4', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Тип корпуса')
@@ -29,14 +29,14 @@ mixin additional-filter-params()
       +e.item
         +e('span').label Запас воды не менее
         +e.field._type_text-field
-          +text-field({type: 'text', name: 'item6'})
+          +text-field({type: 'text', name: 'item6', placeholder: 'л'})._placeholder_right
       +e.item
         +e.field._type_select
           +select('item7', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Материал корпуса')
       +e.item
         +e('span').label Осадка фальшкилем или швертом не более
         +e.field._type_text-field
-          +text-field({type: 'text', name: 'item8'})
+          +text-field({type: 'text', name: 'item8', placeholder: 'м'})._placeholder_right
       +e.item
         +e.field._type_switcher
           +checkbox({name: 'item9', value: '1'})._switcher
@@ -47,17 +47,27 @@ mixin additional-filter-params()
       +e.item
         +e('span').label Осадка корпусом не более
         +e.field._type_text-field
-          +text-field({type: 'text', name: 'item11'})
+          +text-field({type: 'text', name: 'item11', placeholder: 'м'})._placeholder_right
       +e.item
         +e.field._type_switcher
           +checkbox({name: 'item12', value: '1'})._switcher
         +e('span').label._right Наличие санузла
       +e.item
         +e.field._type_select
-          +select('item10', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Тип оснастки')
+          +select('item13', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Управление')
       +e.item
-        +e('span').label Осадка корпусом не более
+        +e('span').label Высота мачты не более
         +e.field._type_text-field
+          +text-field({type: 'text', name: 'item11', placeholder: 'м'})._placeholder_right
       +e.item
         +e.reset
           +reset-filter()
+
+    +e.buttons
+      +e.roll-up
+        +button()._rounded
+          | Свернуть
+          +icon('caret').icon._kind_caret._kind_caret-up._stroke_blue._right
+
+      +e.search
+        +button()(type='submit')._kind_red Найти

@@ -4,20 +4,22 @@ include ../select/select
 include ../slider-range/slider-range
 include ../text-field/text-field
 include ../select-currency/select-currency
+include ../additional-filter-params/additional-filter-params
 
 mixin filter-model()
-  +b.filter-model&attributes(attributes)
-  
+  +b('form').filter-model&attributes(attributes)
+
     - var filterData = getData('filter')
+    +e.items
       +e.item._vendor
         +select(filterData.shipyard.name, filterData.shipyard.options)
       +e.item._range
         +e.item-info
           +e.item-label Длина
           +e.item-text-block
-            +e.item-text.js-filter-length-min
-            +e.item-text.js-filter-length-max
-        +slider-range().js-filter-slider-range
+            +e.item-text.js-filter-model-length-min
+            +e.item-text.js-filter-model-length-max
+        +slider-range().js-filter-model-slider-range
       +e.item._price
         +e('span').price__text Цена
         +e.input
@@ -30,3 +32,6 @@ mixin filter-model()
       +e.item._search
         +button()._kind_red.__button Найти
         +e('a')(href='#').link Расширенный фильтр
+
+    +e.extended-wrapper
+      +additional-filter-params()
