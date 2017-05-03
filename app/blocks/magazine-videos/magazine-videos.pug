@@ -19,11 +19,11 @@ mixin magazine-videos()
           +e('div').select-dots
         +e.content
           +e.videos-col
-            - for (i=0; i<4; i++)
+            - for (i=0; i<15; i++)
               +video-preview(getData('video-preview'))._col
             +button()._rounded._kind_red.__show-more Показать еще
           +e.sidebar
             +small-article-preview
               +submenu(getData('videos-filter'), true)
-          +e.banner
-            +banner('#', 'assets/images/banner2.jpg')
+            +e.banner
+              +banner('#', 'assets/images/banner2.jpg')
