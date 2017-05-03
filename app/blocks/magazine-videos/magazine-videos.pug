@@ -14,17 +14,12 @@ mixin magazine-videos()
       +main-container().main-container_shadow.magazine-videos__main-container
         +submenu(getData('submenu'))
         +e.content
-          +e.list
-            - for (var i = 0; i < 5; i++)
-                +e.col
-                  - for (var j = 0; j < 3; j++)
-                    +e.item
-                      +video-preview(getData('video-preview'))._col
-        +button()._rounded._kind_red.__show-more Показать еще
-
-        +e.sidebar
-          +small-article-preview
-            +submenu(getData('videos-filter'), true)
-
+          +e.videos-col
+            - for (i=0; i<4; i++)
+              +video-preview(getData('video-preview'))._col
+            +button()._rounded._kind_red.__show-more Показать еще
+          +e.sidebar
+            +small-article-preview
+              +submenu(getData('videos-filter'), true)
           +e.banner
             +banner('#', 'assets/images/banner2.jpg')
