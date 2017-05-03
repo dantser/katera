@@ -48,6 +48,14 @@
     margin-top: 30px;
     display: block;
     flex: 1;
+
+    @include respond-to('tablet') {
+      flex-basis: 100%;
+    }
+
+    @include respond-to('mobile') {
+      flex-basis: 100%;
+    }
   }
 
   &__big-banner {
