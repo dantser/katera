@@ -1,0 +1,7 @@
+include ../icon/icon
+
+mixin reset-filter()
+  +b('button')(type='reset').reset-filter&attributes(attributes)
+    +e.circle
+      +icon('close').icon
+    +e('span').text Сбросить фильры

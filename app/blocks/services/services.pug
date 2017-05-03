@@ -1,0 +1,15 @@
+include ../icon/icon
+include ../price-list-dnld/price-list-dnld
+
+//- Данные в services.json 
+
+mixin services()
+  - var data = getData('services');
+  +b.services
+    +e.items
+      each item in data
+        +e.item
+          +icon(item.img).__icon
+          +e.__title= item.title
+          +e.__text= item.text
+          +price-list-dnld(item.link).__download

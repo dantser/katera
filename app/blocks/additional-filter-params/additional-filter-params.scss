@@ -1,0 +1,96 @@
+.additional-filter-params {
+  all: initial;
+  display: block;
+  width: 100%;
+
+  &__heading {
+    font-family: $NerisBlack;
+    font-size: rem(18px);
+    color: $color-black;
+  }
+
+  &__fields {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  &__field {
+    display: flex;
+    flex-shrink: 0;
+
+    &_type_select {
+      width: 100%;
+      height: 40px;
+    }
+
+    &_type_text-field {
+      width: 80px;
+      height: 40px;
+    }
+
+    &_type_switcher {
+      width: 68px;
+      height: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    margin-bottom: 20px;
+
+    @include respond-to('tablet') {
+      width: calc(33% - 30px);
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+  }
+
+  &__label {
+    display: inline-block;
+    padding-right: 10px;
+    font-size: rem(14px);
+    font-family: $NerisLight;
+    color: $color-black;
+    line-height: (16/14)*1;
+
+    &_right {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  &__reset {
+    align-self: flex-end;
+    transform: translateY(50%);
+  }
+
+  &__roll-up {
+    width: 165px;
+    height: 40px;
+    margin: 0 auto;
+    transform: translateX(50%);
+  }
+
+  &__search {
+    width: 240px;
+    height: 40px;
+
+    .button {
+      font-size: rem(20px);
+    }
+  }
+}

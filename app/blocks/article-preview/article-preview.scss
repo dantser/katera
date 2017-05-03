@@ -3,6 +3,7 @@
   display: block;
   width: 100%;
   height: 100%;
+  min-height: 290px;
 
   &__wrapper {
     position: relative;
@@ -79,7 +80,6 @@
   }
 
   &_title-under-img {
-
     @include respond-to('mobile') {
       padding-left: 15px;
       padding-right: 15px;
@@ -95,8 +95,8 @@
         @include respond-to('mobile') {
           height: 154px;
 
-          &:before {
-            content: "";
+          &::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
@@ -137,7 +137,6 @@
   }
 
   &_title-inside-img {
-
     @include respond-to('mobile') {
       padding-left: 15px;
       padding-right: 15px;

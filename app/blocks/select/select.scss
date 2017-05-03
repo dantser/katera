@@ -41,9 +41,21 @@
     overflow: hidden;
     text-overflow: ellipsis;
     pointer-events: none;
+    margin-right: auto;
   }
 
   &__label {
+    font-family: $NerisBlack;
+    font-size: rem(14px);
+    color: $color-black;
+
+    &::after {
+      content: ':';
+      margin-right: 3px;
+    }
+  }
+
+  &__list-label {
     margin-left: 15px;
   }
 
@@ -83,6 +95,11 @@
   }
 
   &__item {
+    cursor: pointer;
+
+    &:hover {
+      color: $color-red;
+    }
 
     &_multiple {
       padding: 0;
@@ -95,10 +112,6 @@
         cursor: pointer;
         will-change: color;
         transition: color .25s ease-in-out;
-
-        &:hover {
-          color: $color-red;
-        }
       }
     }
   }

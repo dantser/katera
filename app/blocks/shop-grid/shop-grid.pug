@@ -1,0 +1,7 @@
+include ../sale-preview-item/sale-preview-item
+
+mixin shop-grid(obj)
+  +b.shop-grid
+    +e.wrapper
+      each item in obj
+        +sale-preview-item(item)

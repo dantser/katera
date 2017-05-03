@@ -1,3 +1,17 @@
+.filter_extended {
+
+  .filter {
+
+    &__extended-link {
+      opacity: 0;
+    }
+
+    &__search-btn {
+      opacity: 0;
+    }
+  }
+}
+
 .filter {
   display: flex;
   justify-content: center;
@@ -220,37 +234,26 @@
 
   &__search-btn {
     font-size: rem(20px);
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
   }
 
   &__extended-link {
     margin-top: -10px;
     margin-left: auto;
     color: $color-gray;
-    will-change: color;
-    transition: color .25s ease-in-out;
+    opacity: 1;
+    will-change: color, opacity;
+    transition: color .25s ease-in-out, opacity .25s ease-in-out;
 
     &:hover {
       color: $color-red;
     }
   }
 
-  &__extended {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  &__extended-wrapper {
+    display: none;
     width: 100%;
-
-    &-wrapper {
-      display: none;
-      width: 100%;
-    }
-  }
-
-  &__title {
-    width: 100%;
-    font-family: $NerisSemiBold;
-    font-size: rem(20px);
-    color: $color-dark-gray;
-    margin-bottom: 20px;
   }
 }

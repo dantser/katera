@@ -1,17 +1,27 @@
+.filter_extended {
+
+  .filter-model {
+
+    &__button {
+      opacity: 0;
+    }
+
+    &__link {
+      opacity: 0;
+    }
+  }
+}
+
 .filter-model {
   background-color: $color-white;
-  display: flex;
-  justify-content: space-between;
   padding: 20px 25px 13px;
   width: 100%;
   margin-bottom: 28px;
-  box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
+  box-shadow: 0 0 7px rgba(19, 11, 89, .14);
 
   @include respond-to('tablet') {
     padding: 18px 15px 16px;
     margin-bottom: 12px;
-    flex-direction: column;
-    justify-content: space-between;
     min-height: 94px;
     align-items: center;
     box-shadow: none;
@@ -22,13 +32,26 @@
   @include respond-to('mobile') {
     padding: 18px 15px 16px;
     margin-bottom: 12px;
-    flex-direction: column;
-    justify-content: space-between;
     min-height: 94px;
     align-items: center;
     box-shadow: none;
     border-top: 1px solid $color-light-gray;
     border-bottom: 1px solid $color-light-gray;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 
   &__input {
@@ -50,7 +73,6 @@
   &__item {
     width: 238px;
     height: 40px;
-
 
     @include respond-to('tablet') {
       width: 100%;
@@ -147,6 +169,9 @@
     font-size: 20px;
     line-height: 24px;
     width: 205px;
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
 
     @include respond-to('tablet') {
       width: 290px;
@@ -162,6 +187,9 @@
     font-family: $NerisLight;
     font-size: 12px;
     font-weight: 300;
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity .25s ease-in-out;
   }
 
   &__currency {
@@ -184,6 +212,21 @@
         stroke: $color-red;
         margin-bottom: 4px;
       }
+    }
+  }
+
+  &__extended-wrapper {
+    display: none;
+  }
+
+  .additional-filter-params__item {
+
+    @include respond-to('desktop') {
+      width: calc(33.33% - 30px);
+    }
+
+    @include respond-to('large-desktop') {
+      width: calc(33.33% - 30px);
     }
   }
 }

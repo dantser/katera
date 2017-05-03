@@ -1,0 +1,54 @@
+.search {
+  display: block;
+
+  .submenu {
+    justify-content: space-around;
+  }
+
+  &__items {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding-left: 210px;
+    padding-right: 285px;
+
+    @include respond-to('laptop') {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    @include respond-to('tablet') {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include respond-to('mobile') {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__item {
+    display: block;
+    min-height: 134px;
+
+    @include respond-to('mobile') {
+      min-height: 93px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__show-more {
+    margin: 60px auto;
+    width: 165px;
+    height: 40px;
+
+    @include respond-to('mobile') {
+      margin: 50px auto 20px;
+      width: 290px;
+    }
+  }
+}

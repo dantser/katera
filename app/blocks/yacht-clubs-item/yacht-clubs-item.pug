@@ -1,0 +1,12 @@
+//- Все данные находятся в yacht-clubs-item.json пример: +sailor-mail(getData('yacht-clubs-item'))
+include ../image-bg/image-bg
+
+mixin yacht-clubs-item(data)
+  +b.yacht-clubs-item
+    +e('a').link(href= data.link)
+      +image-bg()(src=data.image_bg alt='')
+      +e('img')(src= data.image alt='').img
+    +e.description
+      +e('p').city= data.city
+      +e('h4').title= data.title
+      +e('p').text= data.text

@@ -104,7 +104,7 @@
       font-size: 19px;
       margin-top: 5px;
       line-height: 1.38;
-      letter-spacing: 0.5px;
+      letter-spacing: .5px;
       color: $color-white;
 
       @include respond-to('tablet') {

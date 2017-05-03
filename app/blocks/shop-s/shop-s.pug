@@ -1,0 +1,57 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../catalog-filter/catalog-filter
+include ../sailor-mail/sailor-mail
+include ../banner/banner
+include ../button/button
+include ../sale-preview-item/sale-preview-item
+
+mixin shop-s()
+  +b('div').shop-s
+    +container()
+      +page-header('Магазины', ['Главная', 'Магазины'])
+      +main-container()
+        +e('div').wrapper
+          +e('div').catalog
+            +catalog-filter()
+            +sailor-mail(getData('sailor-mail'))
+            +button()._rounded._kind_red.__show-more Показать еще
+
+          +e('div').shop-s-preview
+
+            +e('div').banner
+              +banner('#', 'assets/images/banner3.jpg')
+
+            +e('div').preview._big
+              +sale-preview-item(getData('sale-preview-item'))
+
+            +e('div').preview._group
+              +e('div').preview._col
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+              +e('div').preview._col
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+
+            +e('div').banner
+              +banner('#', 'assets/images/banner3.jpg')
+
+            +e('div').preview._big
+              +sale-preview-item(getData('sale-preview-item'))
+
+            +e('div').preview._group
+              +e('div').preview._col
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+              +e('div').preview._col
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
+                +e('div').preview._small
+                  +sale-preview-item(getData('sale-preview-item'))
