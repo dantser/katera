@@ -71,10 +71,16 @@
     display: flex;
     flex-flow: row wrap;
     flex: 1;
-    padding-bottom: 62px;
+    padding-bottom: 60px;
+
+    @include respond-to('tablet') {
+      margin-top: 5px;
+      margin-bottom: 38px;
+    }
 
     @include respond-to('mobile') {
       flex-direction: column;
+      margin-bottom: 38px;
 
       .article-preview {
         height: auto;
@@ -92,7 +98,7 @@
         }
 
         &__text {
-          padding: 42px 15px 6px;
+          padding: 42px 15px 10px 0;
           font-family: $NerisSemiBold;
           font-size: 15px;
           align-items: flex-start;
@@ -133,7 +139,7 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -11px;
       left: 0;
       width: 100%;
       height: 250px;
@@ -149,9 +155,11 @@
     margin-bottom: 17px;
 
     @include respond-to('tablet') {
-      &:has(> magazine-razdel__banner) {
-        display: none;
-        margin-right: 0;
+
+      &_revert {
+        .magazine-razdel__item:first-child {
+          display: none;
+        }
       }
     }
 
@@ -181,11 +189,13 @@
 
     @include respond-to('mobile') {
       box-sizing: border-box;
-      border-bottom: 1px solid $color-light-gray;
 
-      .tag-content__text + .tag-content__text {
-        margin-top: -20px;
-        margin-left: 109px;
+      .article-preview {
+        min-height: 100%;
+
+        &__picture::before {
+          display: none;
+        }
       }
 
       .image-bg {
@@ -194,28 +204,22 @@
 
       .tag-content {
         top: 13px;
-        left: 15px;
 
         &__text {
           width: 101px;
+          margin-right: 8px;
         }
       }
     }
   }
 
   &__show-more {
-    margin: 10px auto 0;
+    margin: -36px auto 0;
     width: auto;
     min-width: 165px;
     height: 40px;
-    margin-top: -39px;
     z-index: 2;
     padding: 0 6px 4px 8px;
-
-    @include respond-to('tablet') {
-      margin: 26px 15px -26px;
-      padding-left: 7px;
-    }
 
     @include respond-to('mobile') {
       margin: 26px 15px -26px;

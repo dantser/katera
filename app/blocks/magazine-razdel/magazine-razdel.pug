@@ -41,7 +41,7 @@ mixin magazine-razdel()
                     +e.banner
                       +banner('#', 'assets/images/banner2.jpg')
 
-            +e.col
+            +e.col_revert
               - for (var i = 0; i < 4; i++)
                +e.item
                   if (i === 0)
@@ -53,6 +53,10 @@ mixin magazine-razdel()
             +e.col
               - for (var i = 0; i < 4; i++)
                 +e.item
-                  +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  if (i < 3)
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  else
+                    +e.banner
+                      +banner('#', 'assets/images/banner2.jpg')
 
           +button()._rounded._kind_red.__show-more Показать еще

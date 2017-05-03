@@ -5,6 +5,16 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
+    @include respond-to('tablet') {
+      flex-flow: column wrap;
+      margin: 0 15px;
+    }
+
+    @include respond-to('mobile') {
+      flex-flow: column wrap;
+      margin: 0 15px;
+    }
   }
 
   &__item {
@@ -13,6 +23,18 @@
     flex-basis: 340px;
     text-align: center;
     margin-bottom: 75px;
+
+    @include respond-to('tablet') {
+      flex-basis: 160px;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    @include respond-to('mobile') {
+      flex-basis: 160px;
+      margin-bottom: 28px;
+      text-align: left;
+    }
   }
 
   &__icon {
@@ -20,6 +42,14 @@
     height: 97px;
     margin-bottom: 19px;
     align-self: center;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 
   &__title {
@@ -28,10 +58,30 @@
     line-height: 24px;
     color: $color-black;
     margin-bottom: 10px;
+
+    @include respond-to('tablet') {
+      font-size: 16px;
+      margin-bottom: 5px;
+      line-height: 20px;
+    }
+
+    @include respond-to('mobile') {
+      font-size: 16px;
+      margin-bottom: 5px;
+      line-height: 20px;
+    }
   }
 
   &__text {
     color: #666;
     margin-bottom: 29px;
+
+    @include respond-to('tablet') {
+      margin-bottom: 10px;
+    }
+
+    @include respond-to('mobile') {
+      margin-bottom: 10px;
+    }
   }
 }
