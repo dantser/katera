@@ -1,0 +1,43 @@
+.mobile-slide-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  will-change: transform;
+  transition: transform .25s linear;
+  z-index: 9999;
+
+  &_active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 16px;
+    stroke: $color-red;
+    transform: rotate(180deg);
+  }
+
+  &__text {
+    color: $color-red;
+    margin-left: 15px;
+  }
+
+  &__content {
+    display: block;
+  }
+}

@@ -26,6 +26,7 @@ import resetFilter from '../blocks/reset-filter/reset-filter';
 import filterSale from '../blocks/filter-sale/filter-sale';
 import additionalFilterParams from '../blocks/additional-filter-params/additional-filter-params';
 import magazineRazdel from '../blocks/magazine-razdel/magazine-razdel';
+import mobileSlidePopup from '../blocks/mobile-slide-popup/mobile-slide-popup';
 
 $(() => {
   index();
@@ -54,6 +55,7 @@ $(() => {
   magazineLongrid();
   eventPage();
   magazineRazdel();
+  mobileSlidePopup();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {
