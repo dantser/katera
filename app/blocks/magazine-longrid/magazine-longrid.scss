@@ -28,11 +28,19 @@
     padding: 35px 190px;
     display: flex;
     flex-direction: column;
+
+    @include respond-to('mobile') {
+      padding: 10px;
+    }
   }
 
   &__row {
     display: flex;
     flex-direction: row;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
   }
 
   &__text {
@@ -45,6 +53,11 @@
       width: 50%;
       padding-right: 15px;
       margin: 0 auto;
+
+      @include respond-to('mobile') {
+        padding: 0;
+        width: 100%;
+      }
     }
 
     p {
@@ -66,6 +79,10 @@
     &_slide-text {
       margin-left: 100px;
 
+      @include respond-to('mobile') {
+        margin-left: 0;
+      }
+
       span {
         top: -10px;
         left: 0;
@@ -77,6 +94,11 @@
     padding-left: 15px;
     height: 415px;
     width: 50%;
+
+    @include respond-to('mobile') {
+      padding: 0;
+      width: 100%;
+    }
   }
 
   &__description {
@@ -109,6 +131,7 @@
     max-width: 750px;
     margin-bottom: 30px;
     background: $color-white;
+    overflow: hidden;
 
     &_comments {
       height: 100%;
@@ -157,6 +180,10 @@
     padding: 115px 0 120px;
     background: $color-dark-blue;
 
+    @include respond-to('mobile') {
+      padding: 15px 0;
+    }
+
     &_white {
       background: $color-white;
     }
@@ -178,6 +205,10 @@
   &__text-container {
     padding: 45px 210px 20px;
     background: $color-white;
+
+    @include respond-to('mobile') {
+      padding: 15px 0;
+    }
 
     .heading {
       font-family: $NerisLight;
