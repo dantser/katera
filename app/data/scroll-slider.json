@@ -1,5 +1,7 @@
 {
   "name": "Wajer 55",
+  "price": "3 000 000 $",
+  "options": "2016 год | 180 часов | Россия, Новороссийск",
   "path":  [
     "assets/images/scroll-slider/min0.jpg",
     "assets/images/scroll-slider/min1.jpg",
@@ -24,4 +26,5 @@
     "assets/images/scroll-slider/min7.jpg",
     "assets/images/scroll-slider/min0.jpg"
   ]
+
 }

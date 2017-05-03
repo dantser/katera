@@ -27,6 +27,8 @@
 
     @include respond-to('mobile') {
       flex-direction: column;
+      padding-left: 15px;
+      padding-right: 15px;
       padding-bottom: 0px;
       border-bottom: none;
     }
@@ -41,6 +43,8 @@
     }
   }
 
+  &
+
   &__description {
     width: 57.6%;
 
@@ -48,6 +52,7 @@
       width: 100%;
       border-top: 1px solid $color-gray;
       border-bottom: 1px solid $color-gray;
+      padding-bottom: 19px;
     }
   }
 
@@ -59,14 +64,46 @@
     line-height: 1em;
     color: $color-black;
     margin-bottom: 24px;
+
+    @include respond-to('mobile') {
+      font-size: 16px;
+      line-height: (20/16)*1em;
+    }
+  }
+
+  &__technical-title {
+    @include respond-to('mobile') {
+      margin-bottom: 22px;
+    }
   }
 
   &__description-title {
     margin-bottom: 18px;
+
+    @include respond-to('mobile') {
+      margin-bottom: 7px;
+    }
   }
 
   &__description-wrapper {
     padding-left: 4px;
+
+    @include respond-to('mobile') {
+      height: 289px;
+      overflow: hidden;
+      padding-left: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__description-more {
+    display: none;
+
+    @include respond-to('mobile') {
+      display: block;
+      color: $color-red;
+      text-decoration: none;
+    }
   }
 
   &__technical-list {
@@ -78,12 +115,20 @@
   &__item {
     display: flex;
     justify-content: space-between;
+
+    @include respond-to('mobile') {
+      margin-bottom: 33px;
+    }
   }
 
   &__item-name,
   &__item-text {
     font-size: 14px;
     line-height: (34/14)*1em;
+
+    @include respond-to('mobile') {
+      line-height: (16/14)*1em;
+    }
   }
 
   &__item-name {
@@ -103,23 +148,49 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    @include respond-to('mobile') {
+      margin-top: 0;
+    }
   }
 
   &__social {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 24px 25px;
     border-bottom: 1px solid $color-gray;
 
     @include respond-to('mobile') {
       flex-direction: column;
+      border-bottom: none;
+      padding: 17px 15px;
+    }
+  }
+
+  &__hr {
+    display: none;
+
+    @include respond-to('mobile') {
+      display: block;
+      width: 100%;
+      order: 4;
+      border-top: 1px solid $color-gray;
     }
   }
 
   &__complain {
     .button {
+      padding-top: 8px;
+      padding-bottom: 8px;
       padding-left: 37px;
       padding-right: 37px;
+
+      @include respond-to('mobile') {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+      }
     }
 
     @include respond-to('mobile') {
@@ -135,13 +206,18 @@
       justify-content: center;
       order: 2;
       margin-left: 0;
-      margin-bottom: 10px;
+      margin-bottom: 21px;
     }
 
     .share {
       @include respond-to('mobile') {
         flex-wrap: wrap;
         justify-content: center;
+      }
+
+      &__title {
+        font-size: 20px;
+        line-height: (24/20)*1em;
       }
     }
   }
@@ -150,6 +226,7 @@
     @include respond-to('mobile') {
       margin-bottom: 10px;
       text-align: center;
+      padding-bottom: 18px;
       order: 1;
     }
   }
@@ -162,6 +239,11 @@
   &__more {
     padding-top: 35px;
     padding-bottom: 52px;
+
+    @include respond-to('mobile') {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__more-title {
@@ -169,6 +251,13 @@
     text-align: center;
     line-height: 1em;
     color: $color-dark-blue;
+
+    @include respond-to('mobile') {
+      font-size: 22px;
+      line-height: (24/22)*1em;
+      margin: 0;
+      margin-bottom: 17px;
+    }
   }
 
   .models__header {
@@ -187,6 +276,15 @@
     }
   }
 
+  &__show-contacts-button {
+    .button {
+      font-size: 18px;
+      line-height: 1em;
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+  }
+
   &__more-button {
     @include respond-to('mobile') {
       display: none;
@@ -197,9 +295,56 @@
     display: none;
 
     @include respond-to('mobile') {
-      display: none; /**/
+      display: flex;
+      justify-content: space-between;
+      padding-top: 6px;
+      margin-bottom: 12px;
     }
   }
+
+  &__prev-button,
+  &__next-button {
+    text-decoration: none;
+    color: $color-red;
+  }
+
+  &__prev-button {
+    margin-left: 5px;
+  }
+
+  &__next-button {
+    margin-right: 5px;
+  }
+
+  &__prev {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__next {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__prev-icon,
+  &__next-icon {
+
+    & > * {
+      stroke: $color-red;
+    }
+
+    width: 30px;
+    height: 20px;
+    display: block;
+    stroke: $color-white;
+  }
+
 
   &__show-contacts-button {
     display: none;
@@ -230,6 +375,10 @@
 
     &_yacht {
 
+        @include respond-to('mobile') {
+          border-bottom: 1px solid $color-gray;
+        }
+
       .sale-preview-item {
         margin-top: 0 !important;
 
@@ -239,10 +388,11 @@
 
         &__img-wrap {
           width: 100%;
-          height: 213px;
+          /*height: 213px;*/
 
           @include respond-to('mobile') {
             margin-right: 0 !important;
+            height: 236px;
           }
         }
 
