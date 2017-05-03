@@ -24,6 +24,18 @@
       }
     }
 
+    @include respond-to('mobile') {
+      display: none !important;
+    }
+
+    @include respond-to('tablet') {
+      display: none !important;
+    }
+
+    @include respond-to('tablet') {
+      display: flex !important;
+    }
+
     .division_active::before {
       content: '';
       position: absolute;
