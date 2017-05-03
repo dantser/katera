@@ -12,10 +12,10 @@ mixin magazine-razdel()
     +container()
       +page-header('Журнал', ['Главная', 'Журнал', 'Путешествия'])
       +main-container().main-container_shadow.magazine-razdel__main-container
-        +submenu(getData('submenu'))._default
         +e('div').select-wrapper
-         +select('item10', [{value: '1', title: 'Путешествия'}, {value: '2', title: 'Видео-обзоры'}, {value: '3', title: 'Все'}], null, 'Категория')
-         +e('div').select-dots
+          +submenu(getData('submenu'))
+          +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
+          +e('div').select-dots
         +e.content
           +e.list
             +e.col

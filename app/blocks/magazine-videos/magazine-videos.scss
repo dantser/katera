@@ -7,6 +7,65 @@
     flex-flow: row wrap;
   }
 
+  &__select-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include respond-to('mobile') {
+      height: 40px;
+    }
+
+    .submenu {
+      @include respond-to('mobile') {
+        display: none;
+      }
+    }
+
+    .select {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__select-dots {
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-color: $color-red;
+    margin-left: 18px;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $color-red;
+      /*z-index: 1;*/
+    }
+
+    &::before {
+      top: -12px;
+    }
+
+    &::after {
+      bottom: -12px;
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   &__content {
     position: relative;
     margin-top: 32px;
