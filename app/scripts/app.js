@@ -7,7 +7,6 @@ import searchBar from '../blocks/search-bar/search-bar';
 import mainSlider from '../blocks/main-slider/main-slider';
 import filter from '../blocks/filter/filter';
 import textField from '../blocks/text-field/text-field';
-import submenu from '../blocks/submenu/submenu';
 import timeline from '../blocks/timeline/timeline';
 import models from '../blocks/models/models';
 import selectCurrency from '../blocks/select-currency/select-currency';
@@ -16,6 +15,7 @@ import modal from '../blocks/modal/modal';
 import scrollSlider from '../blocks/scroll-slider/scroll-slider';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 import hint from '../blocks/hint/hint';
+import truncate from '../blocks/yacht-sale-page/yacht-sale-page';
 import index from '../blocks/index/index';
 import magazineLongrid from '../blocks/magazine-longrid/magazine-longrid';
 import map from './common/map';
@@ -24,6 +24,7 @@ import eventPage from '../blocks/event-page/event-page';
 import filterModel from '../blocks/filter-model/filter-model';
 import resetFilter from '../blocks/reset-filter/reset-filter';
 import additionalFilterParams from '../blocks/additional-filter-params/additional-filter-params';
+import magazineRazdel from '../blocks/magazine-razdel/magazine-razdel';
 
 $(() => {
   index();
@@ -31,7 +32,6 @@ $(() => {
   select();
   searchBar();
   mainSlider();
-  submenu();
   filter();
   textField();
   upBtn();
@@ -44,12 +44,14 @@ $(() => {
   yachtSlider();
   commonInput();
   hint();
+  truncate();
   eventsSlider();
   additionalFilterParams();
   resetFilter();
   filterModel();
   magazineLongrid();
   eventPage();
+  magazineRazdel();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

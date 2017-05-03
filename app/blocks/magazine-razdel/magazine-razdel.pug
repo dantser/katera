@@ -5,13 +5,17 @@ include ../submenu/submenu
 include ../button/button
 include ../banner/banner
 include ../article-preview/article-preview
+include ../select/select
 
 mixin magazine-razdel()
   +b.magazine-razdel&attributes(attributes)
     +container()
       +page-header('Журнал', ['Главная', 'Журнал', 'Путешествия'])
       +main-container().main-container_shadow.magazine-razdel__main-container
-        +submenu(getData('submenu'))
+        +e('div').select-wrapper
+          +submenu(getData('submenu'))
+          +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
+          +e('div').select-dots
         +e.content
           +e.list
             +e.col
@@ -37,7 +41,7 @@ mixin magazine-razdel()
                     +e.banner
                       +banner('#', 'assets/images/banner2.jpg')
 
-            +e.col
+            +e.col_revert
               - for (var i = 0; i < 4; i++)
                +e.item
                   if (i === 0)
@@ -49,6 +53,10 @@ mixin magazine-razdel()
             +e.col
               - for (var i = 0; i < 4; i++)
                 +e.item
-                  +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  if (i < 3)
+                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  else
+                    +e.banner
+                      +banner('#', 'assets/images/banner2.jpg')
 
           +button()._rounded._kind_red.__show-more Показать еще

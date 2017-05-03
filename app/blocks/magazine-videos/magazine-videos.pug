@@ -6,13 +6,17 @@ include ../video-preview/video-preview
 include ../button/button
 include ../banner/banner
 include ../small-article-preview/small-article-preview
+include ../select/select
 
 mixin magazine-videos()
   +b.magazine-videos&attributes(attributes)
     +container()
       +page-header('Журнал', ['Главная', 'Журнад', 'Видео-обзоры'])
       +main-container().main-container_shadow.magazine-videos__main-container
-        +submenu(getData('submenu'))
+        +e('div').select-wrapper
+          +submenu(getData('submenu'))
+          +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
+          +e('div').select-dots
         +e.content
           +e.list
             - for (var i = 0; i < 5; i++)

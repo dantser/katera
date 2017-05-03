@@ -1,0 +1,34 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../text-field/text-field
+include ../share/share
+
+mixin login()
+  +b.login&attributes(attributes)
+    +container()
+      +page-header('Вход', ['Главная', 'Вход'])
+      +main-container().main-container_shadow.magazine__main-container
+        .forms
+          .form.form-one#join-1
+            +e('fieldset').fieldset.fieldset-one
+              +e('p').entrance Ещё не зарегистрированы?
+                +e('a href="#"').entrance-link Регистрация
+            +e('fieldset').fieldset.fieldset-two
+              .form__row
+                +e('span').label E-mail
+                +text-field({name: 'email', type: 'email'})
+              .form__row
+                +e('span').label Пароль
+                +text-field({name: 'password', type: 'password'})
+              .form__row
+                +e('a href="#"').entrance-link.entrance-link_margin Забыли пароль?
+
+              +button()(type='submit')._kind_red._rounded._shadow.__button Войти
+
+              +e('p').entrance Ещё не зарегистрированы?
+                +e('a href="#"').entrance-link Регистрация
+
+              +e('p').or или
+
+              +share('vk', 'odnokl', 'tw', 'go', 'fb')
