@@ -4,6 +4,11 @@ include ../checkbox/checkbox
 include ../account-navigation/account-navigation
 include ../text-field/text-field
 include ../social/social
+include ../tarif/tarif
+include ../icon/icon
+include ../text/text
+include ../submenu/submenu
+include ../sale-preview-item/sale-preview-item
 
 mixin account-sale1()
   +b.account-sale1&attributes(attributes)
@@ -13,3 +18,43 @@ mixin account-sale1()
         +e.col-nav
           +account-navigation(getData('account-navigation'))
         +e.col-page
+          +e.tarif-group
+            +text()
+              h3 Тарифы
+              p
+                | Вы можете бесплатно разместить одно объявление в месяц. Для того, чтобы на сайте было 
+                | размещено более одного объявления одновременно, вы можете воспользоваться наиболее
+                | выгодным для Вас пакетом услуг:
+            - for (var i = 0; i < 6; i++)
+              +tarif()
+            +button()._rounded Свернуть блок
+              +icon('caret').icon._kind_caret._kind_caret-up._stroke_blue
+          +e.propose-group
+            +text()
+                h3.sale-preview-item__header Мои предложения
+            +submenu(getData('submenu-account'))
+            +e.items
+              - for (var i = 0; i < 3; i++)
+                +e.item
+                  +sale-preview-item(getData('sale-preview-item-extended')[0])._image_left
+                  +e.propose
+                    +e.propose__column
+                      +e.propose__item
+                        +icon('questions-circular').icon_question
+                        span Выделить
+                      +e.propose__item
+                        +icon('questions-circular').icon_question
+                        span Сделать VIP
+                      +e.propose__item
+                        +icon('questions-circular').icon_question
+                        span Поднять в ТОПе
+                    +e.propose__column
+                      +e.propose__item
+                        +icon('questions-circular').icon_question
+                        span Быстрая продажа
+                      +e.propose__item
+                        +icon('questions-circular').icon_question
+                        span Верификация
+                      +e.propose__item
+                        +icon('questions-circular').icon_question
+                        span Завершить

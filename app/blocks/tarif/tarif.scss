@@ -1,0 +1,90 @@
+.tarif {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
+  padding: 10px 28px;
+
+  &__icon {
+    width: 96px;
+    height: 46px;
+  }
+
+  &__descr {
+    flex-basis: 190px;
+
+    &__title {
+      color: $color-red;
+      font-size: 22px;
+      font-family: $NerisBlack;
+      line-height: 30px;
+      margin-bottom: 14px;
+    }
+
+    &__text {
+      color: $color-dark-blue;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+
+  &__pros {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-right: 45px;
+
+    &__item {
+      color: $color-gray;
+      line-height: 40px;
+      span {
+        padding-left: 9px;
+      }
+
+      &_active {
+        color: $color-dark-blue;
+        font-family: $NerisBlack;
+
+        .tarif__pros__icon {
+          fill: $color-red;
+          stroke: $color-red;
+        }
+      }
+    }
+
+    &__icon {
+      width: 13px;
+      height: 9px;
+    }
+  }
+
+  &__buy {
+    color: $color-red;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: center;
+    position: relative;
+    margin-top: 16px;
+
+    &__months {
+      font-size: 16px;
+      align-self: flex-end;
+      padding-right: 13px;
+    }
+
+    &__price {
+      font-size: 24px;
+      font-family: $NerisBlack;
+      margin-bottom: 48px;
+      align-self: flex-end;
+    }
+  }
+
+  .button {
+    position: absolute;
+    bottom: 0;
+    width: 165px;
+    height: 40px;
+  }
+}

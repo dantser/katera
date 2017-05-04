@@ -35,7 +35,6 @@
   &__col-page {
     padding-left: 15px;
     flex-grow: 1;
-    margin-top: -11px;
 
     @include respond-to('tablet') {
       padding-right: 15px;
@@ -46,11 +45,80 @@
     }
 
     .text {
+      margin-bottom: 13px;
 
       p {
-        font-family: $NerisLight;
         color: $color-black;
+        line-height: 22px;
+        font-family: $Neris !important;
       }
     }
+  }
+
+  &__tarif-group {
+    margin-bottom: 54px;
+  }
+
+  .tarif {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+
+  .button {
+    width: 165px;
+    height: 40px;
+
+    &__icon {
+      margin-left: 8px;
+    }
+  }
+
+  .submenu {
+    border-bottom: 1px solid $color-light-gray;
+    padding: 0 20px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid $color-light-gray;
+  }
+
+  .sale-preview-item {
+    width: 341px;
+    margin-right: 26px;
+  }
+
+  &__propose {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+    color: $color-dark-blue;
+    font-family: $NerisSemiBold;
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &__item {
+      display: flex;
+      margin-bottom: 22px;
+      align-items: center;
+    }
+  }
+
+  &__icon_question {
+    width: 21px;
+    height: 21px;
+    stroke: $color-gray;
+    fill: $color-gray;
+    margin-right: 9px;
   }
 }
