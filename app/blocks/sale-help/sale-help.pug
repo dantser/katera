@@ -1,0 +1,21 @@
+include ../list/list
+include ../button/button
+
+mixin sale-help()
+  +b.sale-help
+    +e('div').wrapper
+      +e('h3').title Продаете яхты или катера?
+      +e('hr').hr
+      +e('div').content
+        +e('p').text
+          | Для быстрой продажи, воспользуйтесь возможностями нашего ресурса:
+        +list()
+          +list-item()
+            a(href='#').sale-help__link Бесплатная публикация&nbsp;
+            | одного объявления
+          +list-item()
+            a(href='#').sale-help__link VIP объявление&nbsp;
+            | для привлечения внимания к вашему объявлению
+    +e('div').button
+      +button(true)._kind_red._rounded._shadow Создать предложение
+

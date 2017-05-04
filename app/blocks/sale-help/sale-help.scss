@@ -1,0 +1,63 @@
+.sale-help {
+  width: 100%;
+  height: 330px;
+  background-color: $color-dark-blue;
+  color: $color-white;
+
+  &__wrapper {
+    padding: 19px 26px;
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: em(24px);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__hr {
+    display: block;
+    width: 100%;
+    border-top: 1px solid $color-gray;
+    opacity: 0.15;
+  }
+
+  &__content {
+    padding: 30px 0;
+    line-height: em(20px);
+
+    .list__item {
+      margin: 0;
+      border: none;
+      list-style: disc outside none;
+      font-family: "Neris Light";
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__link {
+    color: $color-white;
+    line-height: em(20px);
+    font-family: "Neris Light";
+  }
+
+  &__button {
+    text-align: right;
+    margin-right: -13px;
+    transform: translateY(50%);
+  }
+
+  .button {
+    display: inline-block;
+    width: auto;
+    padding: 12px 13px;
+    line-height: em(24px);
+  }
+}

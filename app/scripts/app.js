@@ -29,6 +29,7 @@ import additionalFilterParams from '../blocks/additional-filter-params/additiona
 import magazineRazdel from '../blocks/magazine-razdel/magazine-razdel';
 import mobileSlidePopup from '../blocks/mobile-slide-popup/mobile-slide-popup';
 import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
+import customSlider from '../blocks/custom-slider/custom-slider';
 import filterEngines from '../blocks/filter-engines/filter-engines';
 import filterRest from '../blocks/filter-rest/filter-rest';
 import accountSale from '../blocks/account-sale12/accountSale';
@@ -62,6 +63,7 @@ $(() => {
   magazineRazdel();
   mobileSlidePopup();
   dottedDropdown();
+  customSlider();
   catalogYacht();
   filterEngines();
   filterRest();
@@ -173,5 +175,4 @@ $(() => {
       ],
     });
   });
-  catalogYacht();
 });

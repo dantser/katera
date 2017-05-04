@@ -1,0 +1,100 @@
+.sale12-page {
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 93px;
+
+    .filter-sale {
+      width: 72.2%;
+      margin-left: 2.2%;
+    }
+
+    .sale-help {
+      width: 23%;
+      height: 100%;
+      margin-left: 2.6%;
+    }
+  }
+
+  &__title {
+    font-size: 38px;
+    text-align: center;
+    line-height: 1em;
+    color: $color-dark-blue;
+
+    @include respond-to('mobile') {
+      font-size: 22px;
+      line-height: (24/22)*1em;
+      margin: 0;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__special {
+    margin-bottom: 93px;
+
+    .models__header {
+      display: none;
+    }
+
+    .models {
+      padding-top: 0;
+      border-top: none;
+
+      .swiper-container {
+        padding-bottom: 0;
+
+        .swiper-slide {
+          flex-direction: column;
+        }
+
+        &__swiper-pagination {
+          display: block;
+          position: relative;
+          bottom: 0;
+        }
+      }
+
+      .swiper-wrapper {
+        margin-bottom: 38px;
+      }
+
+      &_yacht {
+
+          @include respond-to('mobile') {
+            border-bottom: 1px solid $color-gray;
+          }
+
+        .sale-preview-item {
+          margin-top: 0 !important;
+
+          @include respond-to('mobile') {
+            margin-right: 0 !important;
+          }
+
+          &__img-wrap {
+            width: 100%;
+            height: 213px;
+
+            @include respond-to('mobile') {
+              margin-right: 0 !important;
+              height: 236px;
+            }
+          }
+
+          &__text {
+            @include respond-to('mobile') {
+              align-items: center;
+            }
+          }
+
+          &__params {
+            @include respond-to('mobile') {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
