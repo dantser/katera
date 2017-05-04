@@ -19,7 +19,7 @@
 
   &__col-nav {
     padding-right: 15px;
-    flex: 0 0 33%;
+    flex: 0 0 375px;
 
     @include respond-to('tablet') {
       flex: none;
@@ -59,10 +59,24 @@
 
     .text {
       margin-bottom: 16px;
+
+      @include respond-to('mobile') {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        @include respond-to('mobile') {
+          font-size: rem(20px);
+        }
+      }
     }
 
     label {
       font-size: rem(16px);
+
+      @include respond-to('mobile') {
+        font-size: rem(14px);
+      }
     }
 
     &__item {
@@ -75,6 +89,7 @@
         flex-direction: column;
         align-items: flex-start;
         max-width: 400px;
+        padding: 9px 0;
       }
     }
 
@@ -82,6 +97,11 @@
       height: 40px;
       width: 360px;
       margin-right: 195px;
+
+      @include respond-to('large-desktop') {
+        margin-right: 48%;
+        width: 400px;
+      }
 
       @include respond-to('tablet') {
         margin-right: 80px;
@@ -98,10 +118,23 @@
     border-top: 1px solid $color-light-gray;
     padding: 20px 0 28px;
 
+    @include respond-to('mobile') {
+      padding: 15px 0 12px;
+    }
+
+    .text {
+
+      h3 {
+        @include respond-to('mobile') {
+          font-size: rem(20px);
+        }
+      }
+    }
+
     &__wrap {
       display: flex;
       flex-wrap: wrap;
-      padding: 30px 105px 0 0;
+      padding: 30px 97px 0 0;
       justify-content: space-between;
 
       @include respond-to('tablet') {
@@ -112,13 +145,14 @@
         flex-direction: column;
         padding: 0;
         max-width: 400px;
+        margin-top: 20px;
       }
     }
 
     &__item {
       display: flex;
       align-items: center;
-      width: 256px;
+      width: 263px;
       margin-bottom: 15px;
 
       @include respond-to('mobile') {
@@ -144,10 +178,25 @@
     border-top: 1px solid $color-light-gray;
     font-size: rem(16px);
 
+    @include respond-to('mobile') {
+      padding: 17px 0 8px;
+    }
+
     .text {
+
+      h3 {
+        @include respond-to('mobile') {
+          font-size: rem(20px);
+        }
+      }
 
       p {
         margin: 7px 0 0;
+
+        @include respond-to('mobile') {
+          line-height: 1.5;
+          margin: 10px 0 0;
+        }
       }
     }
 
@@ -168,10 +217,18 @@
 
   .change-password-group {
     padding: 36px 0;
-    border-bottom: 1px solid $color-light-gray;
+    border-top: 1px solid $color-light-gray;
+
+    @include respond-to('mobile') {
+      padding: 15px 0;
+    }
 
     .text {
       margin-bottom: 23px;
+
+      @include respond-to('mobile') {
+        margin-bottom: 20px;
+      }
 
       p {
         line-height: 18px;
@@ -181,9 +238,15 @@
   }
 
   .save-changes-btn {
-    width: 263px;
+    max-width: 263px;
     height: 40px;
     font-size: rem(20px);
     margin: 49px 0 69px;
+    padding-bottom: 6px;
+
+    @include respond-to('mobile') {
+      margin: 4px 0 0;
+      max-width: 320px;
+    }
   }
 }
