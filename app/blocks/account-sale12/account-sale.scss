@@ -1,0 +1,56 @@
+.account-sale1 {
+
+  .page-header {
+    border-top: 1px solid $color-light-gray;
+  }
+
+  &__grid-container {
+    color: $color-black;
+    display: flex;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__col-nav {
+    padding-right: 15px;
+    flex: 0 0 33%;
+
+    @include respond-to('tablet') {
+      flex: none;
+      padding: 0;
+    }
+
+    @include respond-to('mobile') {
+      flex: none;
+      padding: 0;
+    }
+  }
+
+  &__col-page {
+    padding-left: 15px;
+    flex-grow: 1;
+    margin-top: -11px;
+
+    @include respond-to('tablet') {
+      padding-right: 15px;
+    }
+
+    @include respond-to('mobile') {
+      padding-right: 15px;
+    }
+
+    .text {
+
+      p {
+        font-family: $NerisLight;
+        color: $color-black;
+      }
+    }
+  }
+}

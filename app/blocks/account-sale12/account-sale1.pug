@@ -1,0 +1,13 @@
+include ../button/button
+include ../page-header/page-header
+include ../checkbox/checkbox
+include ../account-navigation/account-navigation
+include ../text-field/text-field
+include ../social/social
+
+    +container()
+      +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+      +e.grid-container
+        +e.col-nav
+          +account-navigation(getData('account-navigation'))
+        +e.col-page
