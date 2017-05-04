@@ -1,0 +1,194 @@
+.filter-rest {
+  display: block;
+  width: 100%;
+  padding: 0 25px 18px;
+  box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+
+  &_default .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  &_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 0 6px;
+    z-index: 999;
+    background-color: $color-white;
+
+    .container {
+      display: flex;
+    }
+
+    .filter-rest {
+      display: block;
+
+      &__header {
+        height: 40px;
+        border: 0;
+        margin-right: 45px;
+      }
+
+      &__content {
+        margin-top: 0;
+        flex: 1;
+      }
+
+      &__heading {
+        display: none;
+      }
+
+      &__buttons {
+
+        @include respond-to('desktop') {
+          width: 263px;
+        }
+
+        @include respond-to('large-desktop') {
+          width: 263px;
+        }
+
+      }
+
+      &__field_type_reset-filter {
+        display: none;
+      }
+
+      &__link {
+        display: block;
+      }
+    }
+  }
+
+  @include respond-to('mobile') {
+    box-shadow: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 57px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__heading {
+    font-family: $NerisBlack;
+    font-size: rem(18px);
+    color: $color-black;
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
+  &__city {
+    display: flex;
+
+    &-label {
+      margin-right: 10px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__field {
+
+    &_type_select {
+      width: 28%;
+      height: 40px;
+
+      @include respond-to('mobile') {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    &_type_text-field-small {
+      width: 80px;
+      height: 40px;
+
+      @include respond-to('mobile') {
+        width: 100%;
+      }
+    }
+
+    &_type_select-currency {
+      margin-left: 27px;
+    }
+
+    &_type_reset-filter {
+      display: block;
+      margin-top: 11px;
+    }
+
+    &_type_search-btn {
+      display: block;
+      width: 100%;
+      height: 40px;
+
+      .button {
+        font-size: rem(20px);
+      }
+    }
+  }
+
+  &__separator {
+    display: block;
+    margin: auto 10px;
+    width: 10px;
+    height: 1px;
+    background-color: $color-black;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    display: block;
+    margin-right: 19px;
+  }
+
+  &__buttons {
+    display: block;
+    width: 20%;
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    @include respond-to('mobile') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    display: none;
+    margin-top: 5px;
+    width: 100%;
+    font-size: rem(12px);
+    color: $color-gray;
+    text-decoration: underline;
+    text-align: center;
+    will-change: color;
+    transition: color .25s ease-in-out;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+}
