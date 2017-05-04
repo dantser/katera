@@ -2,6 +2,17 @@
   display: inline-block;
   position: relative;
 
+  &_content_right {
+
+    .dotted-dropdown__content {
+      right: 0;
+    }
+  }
+
+  &_content_left {
+    left: 0;
+  }
+
   &_active {
 
     .dotted-dropdown {
@@ -39,7 +50,6 @@
   &__content {
     position: absolute;
     top: 100%;
-    right: 0;
     display: none;
     padding-top: 10px;
     width: 200px;
