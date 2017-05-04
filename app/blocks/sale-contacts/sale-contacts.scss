@@ -4,7 +4,12 @@
   box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
   padding-bottom: 20px;
 
-  @include respond-to(mobile) {
+  @include respond-to('tablet') {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  @include respond-to('mobile') {
     width: 100%;
     padding-bottom: 0;
   }
@@ -17,7 +22,12 @@
     list-style: none;
     position: relative;
 
-    @include respond-to(tablet) {
+    @include respond-to('tablet') {
+      padding: 55px 20px 80px;
+      font-size: rem(14px);
+    }
+
+    @include respond-to('mobile') {
       padding: 55px 20px 80px;
       font-size: rem(14px);
     }
@@ -29,27 +39,39 @@
       text-align: center;
       margin-bottom: 25px;
 
-      @include respond-to(tablet) {
+      @include respond-to('tablet') {
+        display: none;
+      }
+
+      @include respond-to('mobile') {
         display: none;
       }
     }
 
     &__icon-close {
       display: none;
+      width: 18px;
+      height: 18px;
+      right: 20px;
+      top: 20px;
+      fill: $color-red;
+      position: absolute;
 
-      @include respond-to(mobile) {
-        position: absolute;
+      @include respond-to('tablet') {
         display: block;
-        width: 18px;
-        height: 18px;
-        right: 20px;
-        top: 20px;
-        fill: $color-red;
+      }
+
+      @include respond-to('mobile') {
+        display: block;
       }
     }
 
     &__borderless {
-      @include respond-to(tablet) {
+      @include respond-to('tablet') {
+        border: none;
+      }
+
+      @include respond-to('mobile') {
         border: none;
       }
     }
@@ -57,14 +79,21 @@
     .list__item {
       margin: 0;
       padding: 0;
+      font-family: $NerisLight;
 
       &:nth-child(2) {
-        @include respond-to(mobile) {
+        @include respond-to('mobile') {
           display: none;
         }
       }
 
-      @include respond-to(tablet) {
+      @include respond-to('tablet') {
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
+
+      @include respond-to('mobile') {
         display: flex;
         align-items: center;
         padding: 0;
@@ -93,7 +122,11 @@
       height: 60px;
       padding: 5px 10px;
 
-      @include respond-to(mobile) {
+      @include respond-to('tablet') {
+        margin-bottom: 12px;
+      }
+
+      @include respond-to('mobile') {
         margin-bottom: 12px;
       }
     }
@@ -108,7 +141,12 @@
       margin-top: 15px;
       line-height: 14px;
 
-      @include respond-to(mobile) {
+      @include respond-to('tablet') {
+        margin-top: 6px;
+        text-align: center;
+      }
+
+      @include respond-to('mobile') {
         margin-top: 6px;
         text-align: center;
       }
@@ -128,7 +166,11 @@
       font-family: $NerisSemiBold;
       padding: 11px 0;
 
-      @include respond-to(tablet) {
+      @include respond-to('tablet') {
+        display: none;
+      }
+
+      @include respond-to('mobile') {
         display: none;
       }
     }
@@ -137,7 +179,11 @@
       font-size: rem(30px);
       margin-top: 11px;
 
-      @include respond-to(tablet) {
+      @include respond-to('tablet') {
+        font-size: rem(20px);
+      }
+
+      @include respond-to('mobile') {
         font-size: rem(20px);
       }
     }
@@ -147,7 +193,7 @@
       font-size: rem(18px);
       margin-top: 13px;
 
-      @include respond-to(mobile) {
+      @include respond-to('mobile') {
         font-size: rem(16px);
         margin-top: 8px;
       }
@@ -183,7 +229,12 @@
       border: 1px solid $color-white;
       margin: 23px 0 13px;
 
-      @include respond-to(tablet) {
+      @include respond-to('tablet') {
+        max-width: 290px;
+        margin: 43px 0 4px;
+      }
+
+      @include respond-to('mobile') {
         max-width: 290px;
         margin: 43px 0 4px;
       }
@@ -198,7 +249,11 @@
       left: 50%;
       bottom: -55px;
 
-      @include respond-to(tablet) {
+      @include respond-to('tablet') {
+        max-width: 290px;
+      }
+
+      @include respond-to('mobile') {
         max-width: 290px;
       }
     }

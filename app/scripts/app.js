@@ -13,6 +13,7 @@ import selectCurrency from '../blocks/select-currency/select-currency';
 import counter from '../blocks/counter/counter';
 import modal from '../blocks/modal/modal';
 import scrollSlider from '../blocks/scroll-slider/scroll-slider';
+import catalogYacht from '../blocks/catalog-yacht/catalog-yacht';
 import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 import hint from '../blocks/hint/hint';
 import truncate from '../blocks/yacht-sale-page/yacht-sale-page';
@@ -58,6 +59,7 @@ $(() => {
   magazineRazdel();
   mobileSlidePopup();
   dottedDropdown();
+  catalogYacht();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {
@@ -165,4 +167,5 @@ $(() => {
       ],
     });
   });
+  catalogYacht();
 });
