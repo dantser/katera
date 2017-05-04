@@ -1,0 +1,183 @@
+.account-subscription {
+
+  .page-header {
+    border-top: 1px solid $color-light-gray;
+  }
+
+  &__grid-container {
+    color: $color-black;
+    display: flex;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__col-nav {
+    padding-right: 15px;
+    flex: 0 0 33%;
+
+    @include respond-to('tablet') {
+      flex: none;
+      padding: 0;
+    }
+
+    @include respond-to('mobile') {
+      flex: none;
+      padding: 0;
+    }
+  }
+
+  &__col-page {
+    padding-left: 15px;
+    padding-bottom: 80px;
+    padding-top: 10px;
+    flex-grow: 1;
+
+    @include respond-to('tablet') {
+      padding-right: 15px;
+    }
+
+    @include respond-to('mobile') {
+      padding-right: 15px;
+    }
+  }
+
+  &__link-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    stroke: $color-red;
+    width: 24px;
+    height: 16px;
+    position: absolute;
+    left: -38px;
+    top: 6px;
+    transition: all .25s ease-in-out;
+
+    &:hover .account-subscription__link {
+      color: rgba($color-red, .7);
+    }
+  }
+
+  &__link {
+    color: $color-red;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: $NerisLight;
+    font-weight: 300;
+    margin-left: 38px;
+    position: relative;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+      color: rgba($color-red, .7);
+    }
+
+    &:hover .account-subscription__icon {
+      stroke: rgba($color-red, .7);
+    }
+  }
+
+  &__journal {
+    display: flex;
+    margin-top: 20px;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    min-width: 263px;
+    min-height: 320px;
+    position: relative;
+  }
+
+  &__description {
+    padding-left: 30px;
+
+    @include respond-to('mobile') {
+      padding-left: 0;
+      text-align: center;
+    }
+
+    .button {
+      width: 263px;
+      height: 40px;
+
+      @include respond-to('mobile') {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &_kind_blue {
+        margin-top: 39px;
+      }
+
+      &_kind_red {
+        margin-top: 44px;
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+  &__description-title {
+    margin: 0;
+    font-size: 24px;
+    line-height: .5;
+
+    @include respond-to('mobile') {
+      margin-top: 20px;
+    }
+  }
+
+  &__description-number {
+    margin: 0;
+    font-size: 14px;
+    color: $color-gray;
+    margin-top: 12px;
+  }
+
+  .text {
+
+    &__text-box {
+      display: flex;
+      flex-direction: column;
+      margin: 8px 0 10px;
+
+      &:first-child {
+        margin: 23px 0 0;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-family: $NerisBlack;
+        font-weight: 900;
+        color: $color-black;
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        font-family: $NerisLight;
+        font-weight: 300;
+        color: $color-black;
+        cursor: pointer;
+        margin: 0;
+        transition: all .25s ease-in-out;
+
+        &:hover {
+          color: $color-gray;
+        }
+      }
+    }
+  }
+}
