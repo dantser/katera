@@ -45,18 +45,21 @@
     }
 
     .text {
-      margin-bottom: 13px;
+      margin: -11px 0 23px;
 
       p {
         color: $color-black;
         line-height: 22px;
-        font-family: $Neris !important;
+        font-size: 16px;
+        font-family: $NerisLight;
+        padding-right: 90px;
+        margin-top: 7px;
       }
     }
   }
 
   &__tarif-group {
-    margin-bottom: 54px;
+    margin-bottom: 0;
   }
 
   .tarif {
@@ -76,9 +79,21 @@
     }
   }
 
+  .button-slide {
+    margin-bottom: 54px;
+  }
+
+  &__propose-group {
+    margin-bottom: 71px;
+  }
+
   .submenu {
     border-bottom: 1px solid $color-light-gray;
-    padding: 0 20px;
+    padding: 0 21px 0 20px;
+
+    &__title {
+      padding: 19px 0 21px;
+    }
   }
 
   &__item {
@@ -91,6 +106,18 @@
   .sale-preview-item {
     width: 341px;
     margin-right: 26px;
+
+    &__img-wrap {
+      margin-right: 15px !important;
+    }
+
+    &__header {
+      margin-bottom: 9px;
+    }
+
+    &__name, &__price {
+      font-size: 16px;
+    }
   }
 
   &__propose {
@@ -100,6 +127,8 @@
     justify-content: space-around;
     color: $color-dark-blue;
     font-family: $NerisSemiBold;
+    margin: 0 -6px 0 -5px;
+    padding-top: 1px;
 
     &__column {
       display: flex;
@@ -120,5 +149,9 @@
     stroke: $color-gray;
     fill: $color-gray;
     margin-right: 9px;
+
+    &:hover {
+      fill: $color-red;
+    }
   }
 }

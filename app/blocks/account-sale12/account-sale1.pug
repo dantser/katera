@@ -27,8 +27,8 @@ mixin account-sale1()
                 | выгодным для Вас пакетом услуг:
             - for (var i = 0; i < 6; i++)
               +tarif()
-            +button()._rounded Свернуть блок
-              +icon('caret').icon._kind_caret._kind_caret-up._stroke_blue
+          +button()._rounded.button-slide Свернуть блок
+            +icon('caret').icon._kind_caret._kind_caret-up._stroke_blue
           +e.propose-group
             +text()
                 h3.sale-preview-item__header Мои предложения
@@ -40,7 +40,7 @@ mixin account-sale1()
                   +e.propose
                     +e.propose__column
                       +e.propose__item
-                        +icon('questions-circular').icon_question
+                        +icon('questions-circular').icon_question.
                         span Выделить
                       +e.propose__item
                         +icon('questions-circular').icon_question
