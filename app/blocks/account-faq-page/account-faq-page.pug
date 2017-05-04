@@ -13,6 +13,6 @@ mixin account-faq-page()
       +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
       +e.grid-container
         +e.col-nav
-          +account-navigation(getData('account-navigation'), getData('account-mobNav'))
+          +account-navigation(getData('account-navigation'))
         +e.col-page
           +account-faq()
