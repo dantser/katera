@@ -12,6 +12,10 @@
     "title": "catalog-yacht-1.html"
   },
   {
+    "path": "https://verstaburo.github.io/katera/catalog-yacht.html",
+    "title": "catalog-yacht.html"
+  },
+  {
     "path": "https://verstaburo.github.io/katera/event-page.html",
     "title": "event-page.html"
   },
@@ -90,5 +94,11 @@
   {
     "path": "https://verstaburo.github.io/katera/sale.html",
     "title": "sale12.html"
+    "path": "https://verstaburo.github.io/katera/catalog-yacht.html",
+    "title": "catalog-yacht.html"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-faq.html",
+    "title": "account-faq.html"
   }
 ]
