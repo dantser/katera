@@ -1,0 +1,46 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../button/button
+include ../banner/banner
+include ../select/select
+include ../yacht-preview-widget/yacht-preview-widget
+include ../filter-rest/filter-rest
+include ../sale-help/sale-help
+include ../sale-preview-item/sale-preview-item
+
+mixin sale-raznoe()
+  +b.sale-raznoe&attributes(attributes)
+    +container()
+      +page-header('Разное', ['Главная', 'Предложения'])
+      +main-container().main-container_shadow.sale-raznoe__main-container
+        +e.content
+          +filter-rest()
+          +e.result
+            +e.sort-filter
+              +e.output
+                +e.output-label Найдено
+                +e.output-count 240
+              +e.sort
+                +e('span').sort-label Сортировать
+                +e.sort-select
+                  +select('sort', [{value: '1', title: 'Сначала дешевые'}, {value: '2', title: 'Сначала дорогие'}])
+            +e.items
+              - for (var i = 0; i < 28; i++)
+                +e.item
+                  +sale-preview-item(getData('sale-preview-item'))
+          +button()._rounded._kind_red.__show-more Показать еще
+
+        +e.sidebar
+          +e.sale-help
+            //- todo add sale-help block
+          +e.sidebar-list
+            +e.sidebar-list-item
+              +e.banner
+                +banner('#', 'assets/images/banner2.jpg')
+            +e.sidebar-list-item
+              +sale-preview-item(getData('sale-preview-item'))
+            +e.sidebar-list-item
+              +sale-preview-item(getData('sale-preview-item'))
+          +e.yacht-preview-widget
+            +yacht-preview-widget("Топ-10 яхт в продаже", getData('yacht-preview'), true)
