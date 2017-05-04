@@ -124,4 +124,29 @@
     display: flex;
     flex-flow: row wrap;
   }
+
+  &__props {
+    margin: 0;
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+
+    h3 {
+      font-size: 22px;
+      margin: 0;
+      color: $color-black;
+      font-family: $NerisBlack;
+    }
+
+    p {
+      margin: 0;
+      margin-top: 20px;
+      font-size: 16px;
+      font-family: $NerisLight;
+    }
+  }
+
+  .text div {
+    display: block;
+  }
 }
