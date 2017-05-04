@@ -1,0 +1,137 @@
+.account-faq {
+  padding-top: 11px;
+  padding-bottom: 50px;
+  &__item {
+    padding: 17px 0 21px;
+    border-top: 1px solid #e5e5e5;
+    &:last-child {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    &.active {
+      .account-faq__item-details {
+        height: auto;
+      }
+      .account-faq__item-showbutton {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 1px #fb2500;
+        &:before {
+          background-color: #fb2500;
+        }
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  &__item-heading {
+    font-size: 20px;
+    position: relative;
+    margin: 0;
+  }
+  &__item-showbutton {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 1000px;
+    background-color: #fb2500;
+    box-shadow: 0px 3px 10px 0px rgba(251, 37, 0, 0.6);
+    cursor: pointer;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 10px;
+      height: 2px;
+      background-color: #fff;
+    }
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+  &__item-details {
+    height: 0;
+    overflow: hidden;
+  }
+  &__item-text {
+    margin: 0;
+    margin-top: 20px;
+    line-height: 1.45em;
+    & + .account-faq__item-text {
+      margin-top: 14px;
+    }
+  }
+  &__form {
+    margin-top: 53px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    padding: 10px 195px;
+    ::-webkit-input-placeholder {color:#fff}
+    ::-moz-placeholder {color:#fff}
+    :-ms-input-placeholder {color:#fff}
+    :-moz-placeholder {color:#fff}
+  }
+  &__form-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      min-width: 100%;
+      min-height: 100%;
+      width: 0;
+      object-fit: cover;
+    }
+  }
+  &__form-heading {
+    font-size: 38px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  &__form-input,
+  &__form-textarea {
+    font-family: Neris Light,sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    margin-top: 34px;
+    line-height: 33px;
+    &:focus {
+      outline: 0;
+    }
+  }
+  &__form-textarea {
+    resize: none;
+    line-height: 1em;
+    margin-top: 41px;
+    height: 29px;
+  }
+  &__form-button {
+    width: auto !important;
+    margin: 52px auto -30px;
+    padding: 11px 50px;
+  }
+}

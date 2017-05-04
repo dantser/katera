@@ -1,6 +1,8 @@
 .list {
-  all: initial;
   display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   width: 100%;
   height: 100%;
   background-color: $color-dark-blue;
@@ -30,7 +32,6 @@
   }
 
   &__item {
-    all: initial;
     display: block;
     padding: 15px 0;
     margin: 0 15px;
