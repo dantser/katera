@@ -1,0 +1,11 @@
+include ../modal/modal
+
+mixin account-propose-popup()
+  +modal()#account-propose-popup
+    +b.account-propose-popup
+      +e.info
+        | Отличная возможность выделить свое предложение среди других.
+        | В результате поиска ваше объявление будет привлекать больше
+        | внимания, что позволит увеличить скорость продажи в разы
+      +button()._rounded._kind_red Подключить 780 Р
+      +e.days Услуга действует 30 дней
