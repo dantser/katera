@@ -1,6 +1,10 @@
 include ../list/list
 
-mixin dotted-dropdown
+// - Модификаторы
+//- ._active - показывает контент
+//- ._content_left - контент слева (left: 0)
+//- ._content_right - контент справа (right: 0)
+mixin dotted-dropdown()
   +b.dotted-dropdown&attributes(attributes)
     +e.button
       +e.dot
