@@ -1,27 +1,41 @@
-//- include ../sale-preview-item/sale-preview-item
+include ../sale-preview-item/sale-preview-item
 
 mixin custom-slider(data)
+
+  //- - const mqMobile = window.matchMedia('(max-width: 767px)');
+  //- - const mqTablet = window.matchMedia('(max-width: 991px)');
+  //- - const mqLaptop = window.matchMedia('(max-width: 1169px)');
+
+  //- if mqMobile.matches
+  //-   - var slidesPerView = 1;
+  //- else if mqTablet.matches
+  //-   - var slidesPerView = 3;
+  //- else if mqLaptop.matches
+  //-   - var slidesPerView = 6;
+  //- else
+  //-   - var slidesPerView = 9;
+
+  - var slidesPerView = 9;
   - var slides = data.length;
-  - var misc = slides / 9;
-  - var groups = (slides - misc) / 9;
+  - var misc = slides / slidesPerView;
+  - var groups = (slides - misc) / slidesPerView;
 
   +b('div').custom-slider.swiper-container
     +e.wrapper.swiper-wrapper
-      - for (var i=0; i<5; i++)
+
+      if (slidesPerView == 1)
         +e('div').slide.swiper-slide
-          +e('div').big
-            +sale-preview-item(data[0])
-          +e('div').group
-            - for (var i=1; i<9; i++)
+        - for (var i=0; i<slides; i++)
+            +e('div').big
               +sale-preview-item(data[i])
+      else
+        - for (var i=0; i<groups; i++)
+          +e('div').slide.swiper-slide
+            +e('div').big
+              +sale-preview-item(data[i*slidesPerView])
+
+            +e('div').group
+              - for (var j=i*slidesPerView+1; j<(i*slidesPerView+slidesPerView); j++)
+                +sale-preview-item(data[j])
 
     +e('div').pagination.swiper-pagination
-
-
-
-       //- - for (var i=0; i<groups; i++)
-       //-  +e('div').slide.swiper-slide Slide
-       //-    +e('div').big
-       //-    +e('div').group
-       //-    - for (var i=0; i<8; i++)
-       //-      +e('div').small
