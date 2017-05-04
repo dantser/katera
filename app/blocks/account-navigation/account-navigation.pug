@@ -1,13 +1,13 @@
 //- Сайдбар с навигацией для страниц account
-//- Берет данные с json и проверяет какой из элементов активный,
-//- показывает количество сообщений
+//- nav - json с навигацией для laptop и выше
+//- mobNav - json с навигацией для планшетов и мобильных
 
 include ../list/list
 include ../button/button
 include ../division/division
 include ../text/text
 
-mixin account-navigation(data)
+mixin account-navigation(nav, mobNav)
   .account-navigation&attributes(attributes)
     +list()
       +list-item()
@@ -16,7 +16,18 @@ mixin account-navigation(data)
           +e.P.offers 28 предложений
           +e.H5.tariff Тариф “Старшина”
           +e.P.time действует до 30.08.2017
-      each obj in data
+      +list-item()._hide-pc
+        +e.icon-wrap
+          each obj in mobNav
+            if obj.active
+              +e.A(href="#").icon-nav._active
+                +icon(obj.icon)
+                +e.nav-text= obj.title
+            else
+              +e.A(href="#").icon-nav
+                +icon(obj.icon)
+                +e.nav-text= obj.title
+      each obj in nav
         +list-item()._show-pc
           +e.A(href=obj.path).link
             if (obj.active)

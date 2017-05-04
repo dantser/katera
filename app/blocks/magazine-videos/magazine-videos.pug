@@ -14,7 +14,7 @@ mixin magazine-videos()
       +page-header('Журнал', ['Главная', 'Журнад', 'Видео-обзоры'])
       +main-container().main-container_shadow.magazine-videos__main-container
         +e('div').select-wrapper
-          +submenu(getData('submenu'))
+          +submenu(getData('submenu-magazine-videos'))
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
           +e('div').select-dots
         +e.content

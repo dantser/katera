@@ -1,4 +1,5 @@
 .button {
+  padding-bottom: .25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +68,7 @@
     }
 
     &_kind_caret {
-      margin-top: .25em;
+      margin-top: .2em;
       width: 12px;
       height: 7px;
       stroke: $color-white;
