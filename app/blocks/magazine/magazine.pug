@@ -8,6 +8,7 @@ include ../article-preview/article-preview
 include ../button/button
 include ../banner/banner
 include ../select/select
+include ../dotted-dropdown/dotted-dropdown
 
 mixin magazine()
   +b.magazine&attributes(attributes)
@@ -17,7 +18,7 @@ mixin magazine()
         +e('div').select-wrapper
           +submenu(getData('submenu'))
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
-          +e('div').select-dots
+          +dotted-dropdown()._content_right
         +e.content
           +articles-grid()
             .stroke
