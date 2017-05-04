@@ -1,0 +1,52 @@
+.dotted-dropdown {
+  display: inline-block;
+  position: relative;
+
+  &_active {
+
+    .dotted-dropdown {
+
+      &__dot {
+        background-color: $color-red;
+      }
+
+      &__content {
+        display: block;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    cursor: pointer;
+  }
+
+  &__dot {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    will-change: background-color;
+    transition: background-color .25s ease-in-out;
+    pointer-events: none;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    padding-top: 10px;
+    width: 200px;
+    z-index: 9998;
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
+  }
+}
