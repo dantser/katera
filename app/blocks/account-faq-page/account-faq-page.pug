@@ -1,0 +1,18 @@
+//-  Разметка страницы account-faq
+include ../button/button
+include ../page-header/page-header
+include ../checkbox/checkbox
+include ../account-navigation/account-navigation
+include ../text-field/text-field
+include ../social/social
+include ../account-faq/account-faq
+
+mixin account-faq-page()
+  +b.account-profile&attributes(attributes)
+    +container()
+      +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+      +e.grid-container
+        +e.col-nav
+          +account-navigation(getData('account-navigation'))
+        +e.col-page
+          +account-faq()
