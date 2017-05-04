@@ -49,12 +49,8 @@ mixin magazine()
               .col.col_three
                 +article-preview(getData('article-preview_title-under-img'))._title-under-img
 
-
-          +articles-grid().articles__tablet-hide
-            .stroke
-              .col.col_twelve
-                +banner-big().__big-banner
-                  +e('img')(src='assets/images/banner-img.png').little
+          +banner-big().__big-banner
+            +e('img')(src='assets/images/banner-img.png').little
 
           +articles-grid()
             .stroke
