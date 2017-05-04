@@ -2,17 +2,17 @@ import $ from 'jquery';
 import 'jquery-ui-bundle';
 
 export default () => {
-  const filter = $('.filter-rest');
+  const filter = $('.filter-engines');
 
   if (!filter) {
     return;
   }
 
   // slider range (power)
-  const powerSliderTextMin = $('.js-filter-rest-power-min');
-  const powerSliderTextMax = $('.js-filter-rest-power-max');
+  const powerSliderTextMin = $('.js-filter-engines-power-min');
+  const powerSliderTextMax = $('.js-filter-engines-power-max');
 
-  const powerRangleSlider = $('.js-filter-rest-power-slider');
+  const powerRangleSlider = $('.js-filter-engines-power-slider');
 
   powerRangleSlider.slider({
     min: 0,
@@ -29,10 +29,10 @@ export default () => {
   powerSliderTextMax.text(`${powerRangleSlider.slider('values', 1)} л.с.`);
 
   // slider range (weight)
-  const weightSliderTextMin = $('.js-filter-rest-weight-min');
-  const weightSliderTextMax = $('.js-filter-rest-weight-max');
+  const weightSliderTextMin = $('.js-filter-engines-weight-min');
+  const weightSliderTextMax = $('.js-filter-engines-weight-max');
 
-  const weightRangleSlider = $('.js-filter-rest-weight-slider');
+  const weightRangleSlider = $('.js-filter-engines-weight-slider');
 
   weightRangleSlider.slider({
     min: 0,

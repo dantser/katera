@@ -6,8 +6,8 @@ include ../slider-range/slider-range
 include ../reset-filter/reset-filter
 include ../button/button
 
-mixin filter-rest()
-  +b('form').filter-rest&attributes(attributes)
+mixin filter-engines()
+  +b('form').filter-engines&attributes(attributes)
     +e.header
       +e('span').heading Поиск сопутствующих товаров
       +e.city
@@ -61,18 +61,18 @@ mixin filter-rest()
           +e.row
             +e.label Можность
             +e.range-info
-              +e('span').range-info-text.js-filter-rest-power-min
-              +e('span').range-info-text.js-filter-rest-power-max
+              +e('span').range-info-text.js-filter-engines-power-min
+              +e('span').range-info-text.js-filter-engines-power-max
           +e.field._type_range
-            +slider-range().js-filter-rest-power-slider
+            +slider-range().js-filter-engines-power-slider
         +e.item._col
           +e.row
             +e.label Вес
             +e.range-info
-              +e('span').range-info-text.js-filter-rest-weight-min
-              +e('span').range-info-text.js-filter-rest-weight-max
+              +e('span').range-info-text.js-filter-engines-weight-min
+              +e('span').range-info-text.js-filter-engines-weight-max
           +e.field._type_range
-            +slider-range().js-filter-rest-weight-slider
+            +slider-range().js-filter-engines-weight-slider
 
         +e.item._col._reset_margin
           +e('span').label._margin_bottom Цена

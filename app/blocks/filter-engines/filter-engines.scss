@@ -1,4 +1,4 @@
-.filter-rest {
+.filter-engines {
   display: block;
   width: 100%;
   padding: 0 25px;
@@ -20,6 +20,10 @@
     font-family: $NerisBlack;
     font-size: rem(18px);
     color: $color-black;
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 
   &__city {
@@ -89,7 +93,7 @@
       height: 40px;
       cursor: pointer;
 
-      .filter-rest__label {
+      .filter-engines__label {
         margin-left: 9px;
       }
     }

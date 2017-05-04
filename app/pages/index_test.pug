@@ -1,7 +1,7 @@
 extends ../layouts/default
 include ../blocks/branding/branding
 include ../blocks/index/index
-include ../blocks/filter-rest/filter-rest
+include ../blocks/filter-engines/filter-engines
 
 block head
   - var pageTitle = 'Катера.RU - Главная'
@@ -12,6 +12,6 @@ block contentVariables
 block content
   div(style="width: 100vw; height: 100vh; background-color: #fff; position: fixed; top: 0; left: 0; z-index: 9999; padding: 50px 0;")
     +container()
-      +filter-rest()
+      +filter-engines()
   +branding('index')
     +index()
