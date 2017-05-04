@@ -5,6 +5,8 @@ include ../account-navigation/account-navigation
 include ../text-field/text-field
 include ../social/social
 
+mixin account-sale1()
+  +b.account-sale1&attributes(attributes)
     +container()
       +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
       +e.grid-container
