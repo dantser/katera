@@ -12,7 +12,7 @@ mixin account-profile()
       +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
       +e.grid-container
         +e.col-nav
-          +account-navigation(getData('account-navigation'))
+          +account-navigation(getData('account-navigation'), getData('account-mobNav'))
         +e.col-page
           +b.input-group
             +text()

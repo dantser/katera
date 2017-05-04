@@ -1,0 +1,14 @@
+[{
+  "path": "#",
+  "title": "Предложения",
+  "icon": "acc-sale"
+}, {
+  "path": "#",
+  "title": "Профиль",
+  "icon": "acc-prof",
+  "active": true
+}, {
+  "path": "#",
+  "title": "Сообщения",
+  "icon": "acc-msg"
+}]
