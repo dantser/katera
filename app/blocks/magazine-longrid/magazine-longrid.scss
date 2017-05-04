@@ -4,6 +4,14 @@
     height: 550px;
     position: relative;
 
+    a {
+      cursor: default;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
     &_quote {
       height: 660px;
     }
@@ -121,6 +129,11 @@
   &__content {
     background: $color-white;
     padding: 30px;
+
+    @include respond-to('mobile') {
+      padding: 0;
+      padding-right: 0;
+    }
   }
 
   &__inner-content {
@@ -137,7 +150,7 @@
       height: 100%;
     }
 
-    @include respond-to('tablet') {
+    @include respond-to('mobile') {
       padding: 10px;
       padding-right: 0;
     }
@@ -154,6 +167,7 @@
 
   &__tags {
     margin-bottom: 20px;
+    overflow: hidden;
 
     @include respond-to('tablet') {
       padding-right: 10px;
