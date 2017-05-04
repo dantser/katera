@@ -7,7 +7,7 @@ include ../button/button
 include ../division/division
 include ../text/text
 
-mixin account-navigation(nav, mobNav)
+mixin account-navigation(data)
   .account-navigation&attributes(attributes)
     +list()
       +list-item()
@@ -18,7 +18,7 @@ mixin account-navigation(nav, mobNav)
           +e.P.time действует до 30.08.2017
       +list-item()._hide-pc
         +e.icon-wrap
-          each obj in mobNav
+          each obj in data.mobile
             if obj.active
               +e.A(href="#").icon-nav._active
                 +icon(obj.icon)
@@ -27,7 +27,7 @@ mixin account-navigation(nav, mobNav)
               +e.A(href="#").icon-nav
                 +icon(obj.icon)
                 +e.nav-text= obj.title
-      each obj in nav
+      each obj in data.default
         +list-item()._show-pc
           +e.A(href=obj.path).link
             if (obj.active)
