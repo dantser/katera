@@ -1,0 +1,26 @@
+include ../page-header/page-header
+include ../container/container
+include ../main-container/main-container
+include ../filter-sale/filter-sale
+include ../sale-help/sale-help
+include ../list/list
+include ../models/models
+include ../custom-slider/custom-slider
+
+mixin sale12-page()
+  +b.sale12-page
+    +container()
+      +page-header('Предложения', ['Главная', 'Предложения'])
+      +main-container()
+        +e('div').filter
+          +filter-sale()
+          +sale-help()
+        +e('div').special
+          +e('h2').title Спец. предложения
+          +models('', getData('sale-preview-item-short'))._yacht
+        +e('div').intake
+          +e('h2').title Новые поступления
+          +custom-slider(getData('sale-preview-item-extended'))
+
+
+

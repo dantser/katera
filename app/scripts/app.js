@@ -28,6 +28,7 @@ import additionalFilterParams from '../blocks/additional-filter-params/additiona
 import magazineRazdel from '../blocks/magazine-razdel/magazine-razdel';
 import mobileSlidePopup from '../blocks/mobile-slide-popup/mobile-slide-popup';
 import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
+import customSlider from '../blocks/custom-slider/custom-slider';
 
 $(() => {
   index();
@@ -58,6 +59,7 @@ $(() => {
   magazineRazdel();
   mobileSlidePopup();
   dottedDropdown();
+  customSlider();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

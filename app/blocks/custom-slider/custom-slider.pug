@@ -1,0 +1,27 @@
+//- include ../sale-preview-item/sale-preview-item
+
+mixin custom-slider(data)
+  - var slides = data.length;
+  - var misc = slides / 9;
+  - var groups = (slides - misc) / 9;
+
+  +b('div').custom-slider.swiper-container
+    +e.wrapper.swiper-wrapper
+      - for (var i=0; i<5; i++)
+        +e('div').slide.swiper-slide
+          +e('div').big
+            +sale-preview-item(data[0])
+          +e('div').group
+            - for (var i=1; i<9; i++)
+              +sale-preview-item(data[i])
+
+    +e('div').pagination.swiper-pagination
+
+
+
+       //- - for (var i=0; i<groups; i++)
+       //-  +e('div').slide.swiper-slide Slide
+       //-    +e('div').big
+       //-    +e('div').group
+       //-    - for (var i=0; i<8; i++)
+       //-      +e('div').small
