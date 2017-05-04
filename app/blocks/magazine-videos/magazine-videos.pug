@@ -18,17 +18,12 @@ mixin magazine-videos()
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
           +e('div').select-dots
         +e.content
-          +e.list
-            - for (var i = 0; i < 5; i++)
-                +e.col
-                  - for (var j = 0; j < 3; j++)
-                    +e.item
-                      +video-preview(getData('video-preview'))._col
-        +button()._rounded._kind_red.__show-more Показать еще
-
-        +e.sidebar
-          +small-article-preview
-            +submenu(getData('videos-filter'), true)
-
-          +e.banner
-            +banner('#', 'assets/images/banner2.jpg')
+          +e.videos-col
+            - for (i=0; i<15; i++)
+              +video-preview(getData('video-preview'))._col
+            +button()._rounded._kind_red.__show-more Показать еще
+          +e.sidebar
+            +small-article-preview
+              +submenu(getData('videos-filter'), true)
+            +e.banner
+              +banner('#', 'assets/images/banner2.jpg')

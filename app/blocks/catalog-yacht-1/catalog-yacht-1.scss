@@ -28,8 +28,22 @@
     }
   }
 
-  .swiper-container {
-    padding-bottom: 0 !important;
+  .yacht-slider {
+    padding-bottom: 23px;
+
+    img {
+      height: 213px;
+    }
+
+    &__description {
+      margin-top: 4px;
+      line-height: 24px;
+    }
+
+    &__subdesc {
+      margin-top: 4px;
+      line-height: 18px;
+    }
   }
 
   .models {
@@ -37,6 +51,10 @@
     &_catalog {
       border-top: none;
       padding-top: 0;
+
+      .swiper-container {
+        padding-bottom: 56px;
+      }
     }
 
     &__header {
@@ -141,6 +159,10 @@
       margin: 72px 0 22px;
     }
 
+    &:nth-of-type(3) {
+      margin: 63px 0 22px;
+    }
+
     @include respond-to('tablet') {
       display: none;
     }
@@ -150,10 +172,14 @@
     }
   }
 
+  .articles-grid {
+    margin-top: 0;
+  }
+
   &__button {
     width: 165px;
     height: 40px;
-    margin: 58px auto 0;
+    margin: 0 auto;
     box-shadow: 0 0 35px rgba(9, 4, 53, .3);
     padding-right: 4px;
 

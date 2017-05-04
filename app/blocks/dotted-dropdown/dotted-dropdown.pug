@@ -1,0 +1,13 @@
+include ../list/list
+
+mixin dotted-dropdown
+  +b.dotted-dropdown&attributes(attributes)
+    +e.button
+      +e.dot
+      +e.dot
+      +e.dot
+    +e.content
+      +list
+        +list-item Test #1
+        +list-item Test #2
+        +list-item Test #3

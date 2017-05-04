@@ -23,8 +23,11 @@ import eventsSlider from '../blocks/events/events';
 import eventPage from '../blocks/event-page/event-page';
 import filterModel from '../blocks/filter-model/filter-model';
 import resetFilter from '../blocks/reset-filter/reset-filter';
+import filterSale from '../blocks/filter-sale/filter-sale';
 import additionalFilterParams from '../blocks/additional-filter-params/additional-filter-params';
 import magazineRazdel from '../blocks/magazine-razdel/magazine-razdel';
+import mobileSlidePopup from '../blocks/mobile-slide-popup/mobile-slide-popup';
+import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
 
 $(() => {
   index();
@@ -47,11 +50,14 @@ $(() => {
   truncate();
   eventsSlider();
   additionalFilterParams();
+  filterSale();
   resetFilter();
   filterModel();
   magazineLongrid();
   eventPage();
   magazineRazdel();
+  mobileSlidePopup();
+  dottedDropdown();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

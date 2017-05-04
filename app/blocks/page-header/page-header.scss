@@ -13,6 +13,7 @@
 
   @include respond-to('mobile') {
     padding: 10px 0 6px;
+    background-color: $color-white;
   }
 
   &__title {

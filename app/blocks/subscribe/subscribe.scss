@@ -10,6 +10,11 @@
     height: 105px;
   }
 
+  @include respond-to('mobile') {
+    padding: 20px 15px 0;
+    height: 105px;
+  }
+
   &__image {
     opacity: .5;
     position: absolute;
@@ -82,6 +87,10 @@
     @include respond-to('tablet') {
       font-size: 20px;
     }
+
+    @include respond-to('mobile') {
+      font-size: 20px;
+    }
   }
 
   &__btn {
@@ -101,6 +110,12 @@
     }
 
     @include respond-to('tablet') {
+      font-size: 0;
+      align-items: center;
+      margin: 0;
+    }
+
+    @include respond-to('mobile') {
       font-size: 0;
       align-items: center;
       margin: 0;

@@ -1,0 +1,13 @@
+include ../icon/icon
+//- Для использования данного блока
+//- Необходимо добавить ему ID, +mobile-slide-popup()#my-unique-id
+//- Добавить элемент на страницу, который будет вызывать этот элемент с атриботом data-target-modal и классом .js-mobile-slide-popup
+//- .my-element(data-target-modal='#my-unique-id').js-mobile-slide-popup Text
+
+mixin mobile-slide-popup()
+  +b.mobile-slide-popup&attributes(attributes)
+    +e.back
+      +icon('subscribe').icon
+      +e('span').text Назад
+    +e.content
+      block

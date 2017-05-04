@@ -4,6 +4,10 @@
 
   &__main-container {
     padding-bottom: 30px;
+
+    @include respond-to(mobile) {
+      padding-top: 15px
+    }
   }
 
   &__select-wrapper {
@@ -88,6 +92,7 @@
 
   &__big-banner {
     margin: 30px 0;
+    margin-bottom: 0;
   }
 
   &__show-more-wrapper {

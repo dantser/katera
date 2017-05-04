@@ -1,3 +1,23 @@
+.articles-grid:not(:first-of-type) { margin-top: 30px; }
+
+.articles__tablet-hide {
+  @include respond-to(tablet) {
+    display: none;
+  }
+
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
+
+.articles-grid {
+  .col_three {
+    @include respond-to(mobile) {
+      width: 100%;
+    }
+  }
+}
+
 .grid {
   padding: 0;
   margin: 0;
