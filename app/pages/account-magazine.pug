@@ -1,0 +1,8 @@
+extends ../layouts/default
+include ../blocks/account-magazine/account-magazine
+
+block head
+  - var pageTitle = 'Катера.RU - Личный кабинет'
+
+block content
+  +account-magazine()

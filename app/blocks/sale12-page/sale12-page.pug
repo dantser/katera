@@ -16,9 +16,9 @@ mixin sale12-page()
       +main-container()
         +e('div').filter
 
-          +filter-sale()
+          +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
           +mobile-slide-popup()#filter-sale-mobile
-            +filter-sale()
+            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
           +filter(getData('filter'))
           +button()(data-target-modal='#filter-sale-mobile').__show-filter-btn.js-mobile-slide-popup Фильтр
 

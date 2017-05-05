@@ -8,6 +8,10 @@
   border-radius: 3px;
   border: 1px solid #e5e5e5;
 
+  &_dashed {
+    border: 2px dashed #e5e5e5;
+  }
+
   &_placeholder_right {
 
     .text-field__placeholder {

@@ -1,13 +1,34 @@
 .tarif {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
-  padding: 24px 28px 24px 40px;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
+    padding: 24px 28px 24px 40px;
+
+    @include respond-to('tablet') {
+      flex-flow: column nowrap;
+      padding: 21px 23px 26px;
+    }
+
+    @include respond-to('mobile') {
+      flex-flow: column nowrap;
+      padding: 21px 23px 26px;
+    }
+  }
 
   &__icon {
     width: 96px;
     height: 46px;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 
   &__descr {
@@ -27,8 +48,50 @@
       font-size: 16px;
       line-height: 20px;
     }
+
+    @include respond-to('tablet') {
+      flex-basis: auto;
+      text-align: center;
+      transform: none;
+      order: 1;
+      padding: 0 40px 12px;
+      border-bottom: 1px solid $color-light-gray;
+    }
+
+    @include respond-to('mobile') {
+      flex-basis: auto;
+      text-align: center;
+      transform: none;
+      order: 1;
+      padding: 0 40px 12px;
+      border-bottom: 1px solid $color-light-gray;
+    }
   }
 
+  &__hideShow {
+    display: none;
+    fill: $color-black;
+    stroke: $color-black;
+    width: 11px;
+    height: 6px;
+    cursor: pointer;
+
+    @include respond-to('tablet') {
+      display: block;
+      order: 4;
+    }
+
+    @include respond-to('mobile') {
+      display: block;
+      order: 4;
+    }
+
+    &_opened {
+      fill: $color-red;
+      stroke: $color-red;
+      transform: rotate(180deg);
+    }
+  }
 
   &__pros {
     display: flex;
@@ -63,6 +126,22 @@
       width: 13px;
       height: 9px;
     }
+
+    @include respond-to('tablet') {
+      transform: none;
+      order: 3;
+      margin: 0;
+      padding-bottom: 79px;
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      transform: none;
+      order: 3;
+      margin: 0;
+      padding-bottom: 79px;
+      display: none;
+    }
   }
 
   &__buy {
@@ -78,6 +157,14 @@
       font-size: 16px;
       align-self: flex-end;
       padding-right: 13px;
+
+      @include respond-to('tablet') {
+        align-self: center;
+      }
+
+      @include respond-to('mobile') {
+        align-self: center;
+      }
     }
 
     &__price {
@@ -85,13 +172,47 @@
       font-family: $NerisBlack;
       margin-bottom: 50px;
       align-self: flex-end;
+
+      @include respond-to('tablet') {
+        margin-bottom: 0;
+        align-self: center;
+      }
+
+      @include respond-to('mobile') {
+        margin-bottom: 0;
+        align-self: center;
+      }
+    }
+
+    @include respond-to('tablet') {
+      transform: none;
+      order: 2;
+      align-self: center;
+      margin-bottom: 23px;
+    }
+
+    @include respond-to('mobile') {
+      transform: none;
+      order: 2;
+      align-self: center;
+      margin-bottom: 23px;
     }
   }
 
-  .button {
+  .tarif__button {
     position: absolute;
     bottom: 0;
     width: 165px;
     height: 40px;
+
+    @include respond-to('tablet') {
+      bottom: -223px;
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      bottom: -223px;
+      display: none;
+    }
   }
 }
