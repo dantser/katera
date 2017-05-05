@@ -31,7 +31,7 @@ import mobileSlidePopup from '../blocks/mobile-slide-popup/mobile-slide-popup';
 import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
 import filterEngines from '../blocks/filter-engines/filter-engines';
 import filterRest from '../blocks/filter-rest/filter-rest';
-import accountSale from '../blocks/account-sale12/accountSale';
+import accountSale from '../blocks/account-sale12/account-sale';
 
 $(() => {
   index();

@@ -2,9 +2,9 @@ import $ from 'jquery';
 
 export default () => {
   const CONTROL = $('.button-slide');
-  // if (!CONTROL) {
-  //   return;
-  // }
+  if (!CONTROL) {
+    return;
+  }
 // Сворачивание тарифов
   CONTROL.on('click', (e) => {
     e.preventDefault();
