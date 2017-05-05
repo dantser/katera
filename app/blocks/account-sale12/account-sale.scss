@@ -1,7 +1,42 @@
-.account-sale1 {
+.account-sale1, .account-sale2 {
 
   .page-header {
     border-top: 1px solid $color-light-gray;
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
+  &__previous {
+    display: none;
+    color: $color-red;
+    border-bottom: 1px solid $color-light-gray;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 19px;
+    font-family: $NerisSemiBold;
+    cursor: pointer;
+
+    @include respond-to('tablet') {
+      display: flex;
+    }
+
+    @include respond-to('mobile') {
+      display: flex;
+    }
+
+    span {
+      padding-left: 14px;
+      font-size: 16px;
+    }
+  }
+
+  &__prev {
+    width: 24px;
+    height: 16px;
+    fill: $color-red;
+    stroke: $color-red;
   }
 
   &__grid-container {
@@ -55,6 +90,22 @@
         padding-right: 90px;
         margin-top: 7px;
       }
+
+      @include respond-to('tablet') {
+        margin: 0 0 29px;
+
+        p {
+          padding-right: 0;
+        }
+      }
+
+      @include respond-to('mobile') {
+        margin: 0 0 29px;
+
+        p {
+          padding-right: 0;
+        }
+      }
     }
   }
 
@@ -81,6 +132,14 @@
 
   .button-slide {
     margin-bottom: 54px;
+
+    @include respond-to('tablet') {
+      width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
   }
 
   &__propose-group {
@@ -94,6 +153,15 @@
     &__title {
       padding: 19px 0 21px;
     }
+
+    @include respond-to('tablet') {
+      font-size: 14px;
+    }
+
+    @include respond-to('mobile') {
+      overflow: hidden;
+      font-size: 14px;
+    }
   }
 
   &__item {
@@ -101,6 +169,16 @@
     justify-content: space-between;
     padding: 20px 0;
     border-bottom: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+      flex-flow: column nowrap;
+      padding: 5px 0 0;
+    }
+
+    @include respond-to('mobile') {
+      flex-flow: column nowrap;
+      padding: 5px 0 0;
+    }
   }
 
   .sale-preview-item {
@@ -109,6 +187,16 @@
 
     &__img-wrap {
       margin-right: 15px !important;
+
+      @include respond-to('tablet') {
+        width: 130px;
+        height: 105px;
+      }
+
+      @include respond-to('mobile') {
+        width: 130px !important;
+        height: 105px !important;
+      }
     }
 
     &__header {
@@ -117,6 +205,30 @@
 
     &__name, &__price {
       font-size: 16px;
+    }
+
+    @include respond-to('tablet') {
+      margin: 0 auto 18px;
+
+      &__params {
+        display: block;
+      }
+
+      &__param::after {
+        content: '';
+      }
+    }
+
+    @include respond-to('mobile') {
+      margin-bottom: 18px;
+
+      &__params {
+        display: block;
+      }
+
+      &__param::after {
+        content: '';
+      }
     }
   }
 
@@ -141,6 +253,15 @@
       margin-bottom: 22px;
       align-items: center;
     }
+
+    @include respond-to('tablet') {
+      margin: 0;
+    }
+
+    @include respond-to('mobile') {
+      justify-content: space-between;
+      margin: 0;
+    }
   }
 
   &__icon_question {
@@ -152,6 +273,47 @@
 
     &:hover {
       fill: $color-red;
+    }
+  }
+}
+
+.account-sale2 {
+
+  &__previous {
+    display: none !important;
+  }
+
+  &__tarif-group .text, &__propose-group .text {
+    display: none;
+  }
+
+  .tarif {
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
+  .button-slide {
+
+    @include respond-to('tablet') {
+      width: 100%;
+      border-color: $color-red;
+      color: $color-red;
+      margin-bottom: 15px;
+      font-family: $NerisSemiBold;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+      border-color: $color-red;
+      color: $color-red;
+      margin-bottom: 15px;
+      font-family: $NerisSemiBold;
     }
   }
 }
