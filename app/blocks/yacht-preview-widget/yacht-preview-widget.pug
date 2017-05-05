@@ -6,10 +6,12 @@ include ../division/division
 include ../product-preview/product-preview
 include ../icon/icon
 
-mixin yacht-preview-widget(title, data)
+mixin yacht-preview-widget(title, data, arrowRight)
+  - var divisionModifier = arrowRight ? '_arrow-right' : '_arrow-left';
+
   +b.yacht-preview-widget&attributes(attributes)
     +small-article-preview
-      +division(title)._active._arrow-left
+      +division(title)(class=divisionModifier)._active
       +e.__products
         each obj in data
           +product-preview(obj).__product

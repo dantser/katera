@@ -36,14 +36,13 @@
       }
 
       &__list {
-        width: initial;
         left: initial;
         right: 0;
+        width: initial;
       }
 
       &__item {
         display: block;
-        white-space: nowrap;
       }
     }
 
@@ -91,6 +90,7 @@
     text-overflow: ellipsis;
     pointer-events: none;
     margin-right: auto;
+    padding-right: 10px;
   }
 
   &__label {
@@ -140,10 +140,12 @@
     margin-top: 9px;
     height: auto;
     z-index: 999;
+    width: 100%;
   }
 
   &__item {
     cursor: pointer;
+    white-space: nowrap;
 
     &:hover {
       color: $color-red;
