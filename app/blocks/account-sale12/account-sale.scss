@@ -94,6 +94,15 @@
     &__title {
       padding: 19px 0 21px;
     }
+
+    @include respond-to('tablet') {
+      font-size: 14px;
+    }
+
+    @include respond-to('mobile') {
+      overflow: hidden;
+      font-size: 14px;
+    }
   }
 
   &__item {
@@ -101,6 +110,16 @@
     justify-content: space-between;
     padding: 20px 0;
     border-bottom: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+      flex-flow: column nowrap;
+      padding: 5px 0 0;
+    }
+
+    @include respond-to('mobile') {
+      flex-flow: column nowrap;
+      padding: 5px 0 0;
+    }
   }
 
   .sale-preview-item {
@@ -109,6 +128,16 @@
 
     &__img-wrap {
       margin-right: 15px !important;
+
+      @include respond-to('tablet') {
+        width: 130px;
+        height: 105px;
+      }
+
+      @include respond-to('mobile') {
+        width: 130px !important;
+        height: 105px !important;
+      }
     }
 
     &__header {
@@ -117,6 +146,30 @@
 
     &__name, &__price {
       font-size: 16px;
+    }
+
+    @include respond-to('tablet') {
+      margin: 0 auto 18px;
+
+      &__params {
+        display: block;
+      }
+
+      &__param::after {
+        content: '';
+      }
+    }
+
+    @include respond-to('mobile') {
+      margin-bottom: 18px;
+
+      &__params {
+        display: block;
+      }
+
+      &__param::after {
+        content: '';
+      }
     }
   }
 
@@ -140,6 +193,15 @@
       display: flex;
       margin-bottom: 22px;
       align-items: center;
+    }
+
+    @include respond-to('tablet') {
+      margin: 0;
+    }
+
+    @include respond-to('mobile') {
+      justify-content: space-between;
+      margin: 0;
     }
   }
 

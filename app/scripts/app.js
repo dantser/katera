@@ -34,6 +34,7 @@ import filterEngines from '../blocks/filter-engines/filter-engines';
 import filterRest from '../blocks/filter-rest/filter-rest';
 import accountSale from '../blocks/account-sale12/accountSale';
 import yachtClub from '../blocks/yacht-club/yachtClub';
+import tarif from '../blocks/tarif/tarif';
 
 $(() => {
   index();
@@ -70,6 +71,7 @@ $(() => {
   filterRest();
   yachtClub();
   accountSale();
+  tarif();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

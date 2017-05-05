@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import Swiper from 'swiper';
 
 export default () => {
   const CONTROL = $('.button-slide');
@@ -13,5 +14,13 @@ export default () => {
     SLIDE_EL.slideToggle();
     // CONTROL.text(TEXT === 'Свернуть блок' ? 'Развернуть блок' : 'Свернуть блок');
     $('html, body').animate({ scrollTop: 0 }, 600, 'swing');
+  });
+
+// eslint-disable-next-line no-unused-vars
+  const swiper = new Swiper('.account-sale .submenu', {
+    slidesPerView: 2,
+    paginationClickable: true,
+    spaceBetween: 30,
+    freeMode: true,
   });
 };
