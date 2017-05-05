@@ -33,6 +33,7 @@ import customSlider from '../blocks/custom-slider/custom-slider';
 import filterEngines from '../blocks/filter-engines/filter-engines';
 import filterRest from '../blocks/filter-rest/filter-rest';
 import accountSale from '../blocks/account-sale12/accountSale';
+import yachtClub from '../blocks/yacht-club/yachtClub';
 
 $(() => {
   index();
@@ -67,6 +68,7 @@ $(() => {
   catalogYacht();
   filterEngines();
   filterRest();
+  yachtClub();
   accountSale();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
