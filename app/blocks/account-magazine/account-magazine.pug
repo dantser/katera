@@ -1,0 +1,66 @@
+include ../button/button
+include ../page-header/page-header
+include ../account-navigation/account-navigation
+include ../submenu/submenu
+
+mixin account-magazine()
+  +b.account-magazine&attributes(attributes)
+    +container()
+      +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+      +e.grid-container
+        +e.col-nav
+          +account-navigation(getData('account-navigation'))
+        +e.col-page
+          +e.wrap
+            +e.element
+              +e.element-box
+                +e('img').box-img(src="assets/images/account/journal.jpg")
+                +e.desc-box
+                  +e.box-name Журнал “Катера и яхты”
+                  +e.box-date 263 номер, сентябрь - октябрь 2016
+                  +e('h4') Описание:
+                  +e('p') Arctic Commuter 25: тестовое путешествие с отступлениями • Алексей Даняев. Mercury 115 Pro XS FourStroke CT: характер не скроешь! • Владислав Подолинский. Выставки: Все флаги едут в гости к нам! Бот-шоу в Генуе • Андрей Великанов. Yamaha ищет резервы • А. Д. Рыболовный трезубец • Фарит Валиуллов. Winboat – необщий путь к успеху, естовое путешествие с отступлениями • Алексей Даняев. Mercury 115 Pro XS FourStroke CT: характер не скроешь! • Владислав Подолинский. Выставки: Все флаги едут в гости к нам! Бот-шоу в Генуе Андрей Великанов. Yamaha ищет резервы. В гостях у корабелов Голландии, Андрей Великанов.
+              +e.buttons
+                +button()._kind_blue._left._rounded._shadow
+                  span Купить номер
+                  b 525 Р
+                +button()._kind_red._right._rounded._shadow
+                  span Оформить подписку
+            +e.element
+              +e.element-box
+                +e('img').box-img(src="assets/images/account/journal.jpg")
+                +e.desc-box
+                  +e.box-name Журнал “Катера и яхты”
+                  +e.box-date 263 номер, сентябрь - октябрь 2016
+                  +e('h4') Описание:
+                  +e('p') Arctic Commuter 25: тестовое путешествие с отступлениями • Алексей Даняев. Mercury 115 Pro XS FourStroke CT: характер не скроешь! • Владислав Подолинский. Выставки: Все флаги едут в гости к нам! Бот-шоу в Генуе • Андрей Великанов. Yamaha ищет резервы • А. Д. Рыболовный трезубец • Фарит Валиуллов. Winboat – необщий путь к успеху, естовое путешествие с отступлениями • Алексей Даняев. Mercury 115 Pro XS FourStroke CT: характер не скроешь! • Владислав Подолинский. Выставки: Все флаги едут в гости к нам! Бот-шоу в Генуе Андрей Великанов. Yamaha ищет резервы. В гостях у корабелов Голландии, Андрей Великанов.
+              +e.buttons
+                +button()._kind_blue._left._rounded._shadow
+                  span Купить номер
+                  b 525 Р
+                +button()._kind_red-border._right._rounded
+                  span Подписка оформлена до
+                  b 12.17
+
+            +e.archive
+              +e('h3').archive-heading Архив журналов
+              +submenu(getData('account-archive'))
+              +e.journal-wrap
+                +e.journal-box
+                  +e.journal-number №5.2016
+                  +e('img').journal-img(src="assets/images/account/journal.jpg")
+                  +button()._kind_red._rounded._shadow
+                    span Купить
+                    b 525 Р
+                +e.journal-box
+                  +e.journal-number №5.2016
+                  +e('img').journal-img(src="assets/images/account/journal.jpg")
+                  +button()._kind_red._rounded._shadow
+                    span Купить
+                    b 525 Р
+                +e.journal-box
+                  +e.journal-number №5.2016
+                  +e('img').journal-img(src="assets/images/account/journal.jpg")
+                  +button()._kind_red-border._rounded
+                    span Скачать
+                    b PDF

@@ -53,6 +53,16 @@
         box-shadow: 0 2px 5px 0 rgba(#090435, .3);
       }
     }
+
+    &_red-border {
+      background-color: transparent;
+      color: $color-red;
+      border: 1px solid $color-red;
+
+      &:hover {
+        box-shadow: 0 2px 5px 0 rgba(#090435, .3);
+      }
+    }
   }
 
   &__icon {
