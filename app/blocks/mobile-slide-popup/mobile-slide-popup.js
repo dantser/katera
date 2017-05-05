@@ -22,15 +22,17 @@ export default () => {
       return;
     }
 
-    el.show(0, () => el.addClass(ACTIVE_MODAL_CLASS));
-  };
+    el.show(0, () => {
+      const body = $('html, body');
 
-  const transitionEnd = (e) => {
-    const el = $(e.target);
+      el.addClass(ACTIVE_MODAL_CLASS);
+      el.data('scroll-top', body.scrollTop());
 
-    el
-      .css({ display: 'none' })
-      .off('transitionend');
+      el.on('transitionend', () => {
+        body.animate({ scrollTop: 0 }, 500, 'swing');
+        el.off('transitionend');
+      });
+    });
   };
 
   const hide = (el) => {
@@ -40,7 +42,12 @@ export default () => {
 
     el
       .removeClass(ACTIVE_MODAL_CLASS)
-      .on('transitionend', transitionEnd);
+      .on('transitionend', () => {
+        el
+          .css({ display: 'none' })
+          .off('transitionend');
+        $('html, body').animate({ scrollTop: +el.data('scroll-top') || 0 }, 500, 'swing');
+      });
   };
 
   // init

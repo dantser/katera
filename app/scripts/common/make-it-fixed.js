@@ -10,7 +10,7 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
   const ELEMENT_CLASS = `.${normalizeClassName(blockClass)}`;
   const filter = $(ELEMENT_CLASS);
 
-  if (!filter) {
+  if (!filter || filter.length === 0) {
     return;
   }
 
