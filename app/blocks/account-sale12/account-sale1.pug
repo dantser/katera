@@ -18,6 +18,9 @@ mixin account-sale1()
         +e.col-nav
           +account-navigation(getData('account-navigation'))
         +e.col-page
+          +e('a').previous
+            +icon('arrow-prev').__prev
+            span Назад
           +e.tarif-group
             +text()
               h3 Тарифы

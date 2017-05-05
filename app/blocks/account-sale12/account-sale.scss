@@ -4,6 +4,38 @@
     border-top: 1px solid $color-light-gray;
   }
 
+
+  &__previous {
+    display: none;
+    color: $color-red;
+    border-bottom: 1px solid $color-light-gray;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 19px;
+    font-family: $NerisSemiBold;
+    cursor: pointer;
+
+    @include respond-to('tablet') {
+      display: flex;
+    }
+
+    @include respond-to('mobile') {
+      display: flex;
+    }
+
+    span {
+      padding-left: 14px;
+      font-size: 16px;
+    }
+  }
+
+  &__prev {
+    width: 24px;
+    height: 16px;
+    fill: $color-red;
+    stroke: $color-red;
+  }
+
   &__grid-container {
     color: $color-black;
     display: flex;
