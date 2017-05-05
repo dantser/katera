@@ -1,0 +1,92 @@
+include ../button/button
+include ../page-header/page-header
+include ../account-navigation/account-navigation
+include ../image-bg/image-bg
+include ../icon/icon
+
+
+
+mixin account-shop1()
+  +b.account-shop1&attributes(attributes)
+    +container()
+      +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+      +e.grid-container
+        +e.col-nav
+          +account-navigation(getData('account-navigation'))
+        +e.col-page
+          +e.box
+            +e.img
+              +image-bg()(src="assets/images/account/shop1.png" alt='')
+              +e.img-text Магазин на katera.ru
+            +e('h3').title Помогает наладить канал продаж
+            +e('p').text.text_padding Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in rhoncus ex, sed interdum sapien. Nam vel hendrerit neque. Aenean congue metus mi, sed pulvinar eros vestibulum sed. Nam condimentum, leo vitae pretium euismod, sapien mauris egestas odio, quis lacinia metus lacus vel urna. Suspendisse placer
+            +button()._kind_red._rounded._shadow Создать магазин
+
+          +e.box
+            +e('h3').title Преимущества
+            +e.row
+              +e.left
+                +e.left-img
+                  +icon('ac-shop1').icon.icon1
+                +e.left-box
+                  +e('h4').left-title Персональная страница
+                  +e('p').left-text Страница с вашими объявлениями и возможностью редактирования
+              +e.right
+                +e.right-img
+                  +icon('ac-shop2').icon.icon2
+                +e.right-box
+                  +e('h4').right-title Создание полной информации о компании
+                  +e('p').right-text Редактирование реквизитов, контактной информации, телефонов и электронной почты
+            +e.row
+              +e.left
+                +e.left-img
+                  +icon('ac-shop3').icon.icon3
+                +e.left-box
+                  +e('h4').left-title Выделенная круглосуточная поддержка
+                  +e('p').left-text Консультации и ответы на вопросы об услугах сервиса по электронной почте
+              +e.right
+                +e.right-img
+                  +icon('ac-shop4').icon.icon4
+                +e.right-box
+                  +e('h4').right-title Оформление
+                  +e('p').right-text Персональный дизайн страницы компании и объявлений в поиске
+          +e.box
+            +e.img1
+              +image-bg()(src="assets/images/account/shop1-1.jpg" alt='')
+              +e.img1-text
+                +e('h3').title Мобильная версия
+                +e('p').text Lorem ipsum dolor sit amet, consecelit. Donec in rhoncus ex, sed interdum sapien. Nam vel hendrerit neque. Aenean congue metus mi, sed pulvinar eros vestibulum sed. Nam condimentum, leo vitae pretium euismod,
+
+          +e.box
+            +e('h3').title Отзывы
+            +b.main-slider.swiper-container._shop-slider
+
+              +e.swiper-pagination._shop-slider-pagination
+              +e.wrapper.swiper-wrapper
+                +e.slide.swiper-slide
+                  +e('img').image(src='assets/images/account/shop-slider.jpg')
+                  +e('h3').name Мария Васильева
+                  +e('p').city Санкт-Петербург, Azimut Yachts
+                  +e('p').text Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры. Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры.
+                +e.slide.swiper-slide
+                  +e('img').image(src='assets/images/account/shop-slider.jpg')
+                  +e('h3').name Мария Васильева
+                  +e('p').city Санкт-Петербург, Azimut Yachts
+                  +e('p').text Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры. Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры.
+                +e.slide.swiper-slide
+                  +e('img').image(src='assets/images/account/shop-slider.jpg')
+                  +e('h3').name Мария Васильева
+                  +e('p').city Санкт-Петербург, Azimut Yachts
+                  +e('p').text Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры. Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры.
+                +e.slide.swiper-slide
+                  +e('img').image(src='assets/images/account/shop-slider.jpg')
+                  +e('h3').name Мария Васильева
+                  +e('p').city Санкт-Петербург, Azimut Yachts
+                  +e('p').text Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры. Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры.
+                +e.slide.swiper-slide
+                  +e('img').image(src='assets/images/account/shop-slider.jpg')
+                  +e('h3').name Мария Васильева
+                  +e('p').city Санкт-Петербург, Azimut Yachts
+                  +e('p').text Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры. Для нас важно, что это крупнейшая площадка для продаж не только в автомобильном сегменте, что создает большой трафик и является конкурентным преимуществом. Мы не раз убеждались в том, что это продающий ресурс. Из дополнительных функций используем автозагрузку, очень удобно, что она бесплатна, а также баннеры.
+            +button()._kind_red._rounded._shadow Создать магазин
+

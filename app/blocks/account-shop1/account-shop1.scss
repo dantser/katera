@@ -1,0 +1,311 @@
+.account-shop1 {
+
+  .page-header {
+    border-top: 1px solid $color-light-gray;
+  }
+
+  &__grid-container {
+    color: $color-black;
+    display: flex;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__col-nav {
+    padding-right: 15px;
+    flex: 0 0 33%;
+
+    @include respond-to('tablet') {
+      flex: none;
+      padding: 0;
+    }
+
+    @include respond-to('mobile') {
+      flex: none;
+      padding: 0;
+    }
+  }
+
+  &__col-page {
+    padding-left: 15px;
+    padding-bottom: 80px;
+    width: calc(67%);
+    //flex-grow: 1;
+
+    * {
+      margin: 0;
+    }
+
+    @include respond-to('tablet') {
+      width: 100%;
+      padding-left: 0;
+      padding-bottom: 0;
+      //padding-right: 15px;
+    }
+
+    @include respond-to('mobile') {
+      width: 100%;
+      padding-right: 15px;
+      padding-bottom: 0;
+      //padding-right: 15px;
+    }
+  }
+
+  .image-bg {
+    z-index: inherit;
+  }
+
+  .image-bg__img {
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 370px;
+    position: relative;
+    background: #130b59;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      //z-index: -1;
+      background-image: -moz-linear-gradient( 45deg, rgb(251,37,0) 0%, rgb(253,146,128) 20%, rgb(255,255,255) 48%, rgb(137,133,172) 80%, rgb(19,11,89) 100%);
+      background-image: -webkit-linear-gradient( 45deg, rgb(251,37,0) 0%, rgb(253,146,128) 20%, rgb(255,255,255) 48%, rgb(137,133,172) 80%, rgb(19,11,89) 100%);
+      background-image: linear-gradient( 45deg, rgb(251,37,0) 0%, rgb(253,146,128) 20%, rgb(255,255,255) 48%, rgb(137,133,172) 80%, rgb(19,11,89) 100%);
+      opacity: .3;
+    }
+  }
+
+  &__img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    font-family: $NerisLight;
+    font-weight: 300;
+    font-size: 60px;
+    color: $color-white;
+    width: 100%;
+    transform: translate(-50%, -50%);
+
+    @include respond-to('mobile') {
+      font-size: 32px;
+      line-height: 1;
+    }
+  }
+
+  &__img1 {
+    width: 100%;
+    height: 520px;
+    position: relative;
+    margin-bottom: 75px;
+  }
+
+  &__img1-text {
+    position: absolute;
+    padding: 0 25px 60px;
+    width: 280px;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+
+    .account-shop1__title {
+      font-family: $NerisLight;
+      font-size: 32px;
+      font-weight: 300;
+      color: $color-white;
+      margin-top: 0;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .account-shop1__text {
+      font-family: $NerisLight;
+      font-size: 16px;
+      font-weight: 300;
+      color: $color-white;
+    }
+  }
+
+  &__box {
+    text-align: center;
+    width: 100%;
+
+    .button {
+      width: 165px;
+      height: 40px;
+      margin: 44px auto 80px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    margin-top: 30px;
+    font-family: $NerisLight;
+    font-weight: 300;
+    color: $color-black;
+    font-size: 32px;
+  }
+
+  .text_padding {
+    padding: 0 40px;
+    margin-top: 10px;
+    text-align: justify;
+
+    @include respond-to('mobile') {
+      padding: 0;
+      //padding-right: 15px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin: 47px 0 80px;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    width: 68px;
+    fill: #130b59;
+  }
+
+  .icon1 {
+    height: 78px;
+  }
+
+  .icon2 {
+    height: 75px;
+  }
+
+  .icon3 {
+    width: 82px;
+    height: 82px;
+    margin-left: -14px;
+
+    @include respond-to('mobile') {
+      margin-left: 0;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  .icon4 {
+    height: 68px;
+  }
+
+  &__left {
+    display: flex;
+    width: 50%;
+
+    @include respond-to('mobile') {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__left-box {
+    text-align: left;
+    margin-left: 30px;
+  }
+
+  &__left-title {
+    font-family: $NerisSemiBold;
+    font-size: 20px;
+    color: $color-black;
+    line-height: .7;
+    margin-bottom: 10px;
+  }
+
+  &__left-text {
+    font-family: $NerisLight;
+    font-size: 16px;
+    color: $color-black;
+    line-height: 1.2;
+  }
+
+  &__right {
+    display: flex;
+    width: 50%;
+    margin-left: 30px;
+
+    @include respond-to('mobile') {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__right-box {
+    text-align: left;
+    margin-left: 30px;
+  }
+
+  &__right-title {
+    font-family: $NerisSemiBold;
+    font-size: 20px;
+    color: $color-black;
+    line-height: .7;
+    margin-bottom: 10px;
+  }
+
+  &__right-text {
+    font-family: $NerisLight;
+    font-size: 16px;
+    color: $color-black;
+    line-height: 1.2;
+  }
+
+  .main-slider {
+
+    .main-slider__slide {
+      width: 100%;
+      padding: 40px 0 50px;
+    }
+
+    .main-slider__image {
+      border-radius: 50%;
+    }
+
+    &__name {
+      font-family: $NerisSemiBold;
+      font-size: 20px;
+      color: $color-black;
+      margin-top: 20px;
+    }
+
+    &__city {
+      font-family: $NerisLight;
+      font-weight: 300;
+      font-size: 16px;
+      color: $color-gray;
+      margin-bottom: 25px;
+    }
+
+    &__text {
+      font-family: $NerisLight;
+      font-weight: 300;
+      font-size: 16px;
+      color: $color-black;
+    }
+
+    .main-slider__swiper-pagination {
+      bottom: 0;
+    }
+  }
+}
