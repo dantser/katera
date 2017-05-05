@@ -10,8 +10,8 @@ include ../text/text
 include ../submenu/submenu
 include ../sale-preview-item/sale-preview-item
 
-mixin account-sale1()
-  +b.account-sale1&attributes(attributes)
+mixin account-sale2()
+  +b.account-sale2&attributes(attributes)
     +container()
       +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
       +e.grid-container
@@ -30,9 +30,8 @@ mixin account-sale1()
                 | выгодным для Вас пакетом услуг:
             - for (var i = 0; i < 6; i++)
               +tarif()
-          +button()._rounded.button-slide 
-            span Свернуть блок
-            +icon('caret').icon._kind_caret._kind_caret-up._stroke_blue
+          +button()._rounded.button-slide
+            span Тарифы
           +e.propose-group
             +text()
                 h3.sale-preview-item__header Мои предложения
