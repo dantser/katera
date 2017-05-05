@@ -2,17 +2,26 @@
   &__filter {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 93px;
+    margin-bottom: 48px;
 
     .filter-sale {
       width: 72.2%;
       margin-left: 2.2%;
+
+      @media (max-width: 991px) {
+        width: 100%;
+        margin-left: 0;
+      }
     }
 
     .sale-help {
       width: 23%;
       height: 100%;
       margin-left: 2.6%;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
   }
 
@@ -31,7 +40,7 @@
   }
 
   &__special {
-    margin-bottom: 93px;
+    margin-bottom: 55px;
 
     .models__header {
       display: none;
@@ -61,10 +70,6 @@
 
       &_yacht {
 
-          @include respond-to('mobile') {
-            border-bottom: 1px solid $color-gray;
-          }
-
         .sale-preview-item {
           margin-top: 0 !important;
 
@@ -83,13 +88,11 @@
           }
 
           &__text {
-            @include respond-to('mobile') {
-              align-items: center;
-            }
+            align-items: center;
           }
 
           &__params {
-            @include respond-to('mobile') {
+            @media (max-width: 991px) {
               display: none;
             }
           }
