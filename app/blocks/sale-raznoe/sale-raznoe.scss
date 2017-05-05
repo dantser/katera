@@ -51,8 +51,6 @@
 
   &__sale-help {
     width: 100%;
-    height: 330px;
-    background-color: $color-dark-blue;
   }
 
   &__banner {
@@ -71,6 +69,18 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 25px;
+    width: 100%;
+
+    &_fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0 15px;
+      height: 60px;
+      background-color: #fff;
+      box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+      z-index: 999;
+    }
 
     @include respond-to('tablet') {
       padding-right: 25px;
@@ -103,6 +113,10 @@
     &-label {
       display: block;
       margin-right: 16px;
+
+      @include respond-to('mobile') {
+        display: none;
+      }
     }
 
     &-select {
@@ -121,6 +135,7 @@
 
     @include respond-to('mobile') {
       margin-right: 0;
+      padding: 0 15px;
     }
   }
 
@@ -158,6 +173,41 @@
     }
 
     .sale-preview-item {
+
+      @include respond-to('mobile') {
+        flex-direction: row;
+
+        &__img-wrap {
+          margin-right: 30px;
+          width: 165px;
+          height: 134px;
+
+          @include respond-to('mobile') {
+            width: 107px;
+            height: 93px;
+            margin-right: 15px;
+          }
+        }
+
+        &__text {
+          text-align: left;
+        }
+
+        &__param {
+          text-align: left;
+          font-size: rem(12px);
+
+          @include respond-to('mobile') {
+            &:not(:last-child) {
+              padding-right: 5px;
+            }
+
+            &::after {
+              content: ',';
+            }
+          }
+        }
+      }
 
       &__img-wrap {
         height: 134px;

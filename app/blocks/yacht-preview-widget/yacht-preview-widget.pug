@@ -6,8 +6,9 @@ include ../division/division
 include ../product-preview/product-preview
 include ../icon/icon
 
-mixin yacht-preview-widget(title, data, arrowRight)
-  - var divisionModifier = arrowRight ? '_arrow-right' : '_arrow-left';
+mixin yacht-preview-widget(title, data, alignRight)
+  - var divisionModifier = alignRight ? '_arrow-right' : '_arrow-left';
+  - var btnModifier = alignRight ? '__button_right' : '__button';
 
   +b.yacht-preview-widget&attributes(attributes)
     +small-article-preview
@@ -15,7 +16,7 @@ mixin yacht-preview-widget(title, data, arrowRight)
       +e.__products
         each obj in data
           +product-preview(obj).__product
-      +e.__button
+      +e(class=btnModifier)
         +button(true)(href="#")._rounded._shadow._kind_red
           | Смотреть все
           +icon('caret').icon._kind_caret._right

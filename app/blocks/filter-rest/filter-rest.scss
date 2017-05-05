@@ -1,13 +1,17 @@
 .filter-rest {
   display: block;
   width: 100%;
-  padding: 0 25px 18px;
   box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
 
   &_default .container {
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 25px 18px;
+
+    @include respond-to('mobile') {
+      padding: 0 15px 15px;
+      flex-direction: column;
+    }
   }
 
   &_fixed {
@@ -20,6 +24,11 @@
 
     .container {
       display: flex;
+
+      @include respond-to('mobile') {
+        padding: 0 15px 15px;
+        flex-direction: column;
+      }
     }
 
     .filter-rest {

@@ -26,14 +26,14 @@ mixin sale-raznoe()
                 +e.sort-select
                   +select('sort', [{value: '1', title: 'Сначала дешевые'}, {value: '2', title: 'Сначала дорогие'}])
             +e.items
-              - for (var i = 0; i < 28; i++)
+              - for (var i = 0; i < 32; i++)
                 +e.item
                   +sale-preview-item(getData('sale-preview-item'))
-          +button()._rounded._kind_red.__show-more Показать еще
+          +button()._shadow._rounded._kind_red.__show-more Показать еще
 
         +e.sidebar
           +e.sale-help
-            //- todo add sale-help block
+            +sale-help()
           +e.sidebar-list
             +e.sidebar-list-item
               +e.banner
