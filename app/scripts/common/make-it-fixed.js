@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import 'jquery-ui-bundle';
 
-export default (blockClass, defaultStateClass, fixedStateClass) => {
+// eslint-disable-next-line max-len
+export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakpoint = null) => {
   // eslint-disable-next-line no-confusing-arrow
   const normalizeClassName = cn => cn.slice(0, 1) === '.' ? cn.slice(1) : cn;
   const DEFAULT_STATE_CLASS = normalizeClassName(defaultStateClass);
@@ -20,9 +21,17 @@ export default (blockClass, defaultStateClass, fixedStateClass) => {
     filter.data('offset-top', filterOffsetTop);
   }
 
-  $(window).on('scroll', () => {
+  const w = $(window);
+
+  w.on('scroll', () => {
     const documentScrollTop = $(document).scrollTop();
-    const hasToBeFixed = filterOffsetTop && documentScrollTop >= filterOffsetTop;
+    const hasToBeFixed = (
+      filterOffsetTop &&
+      documentScrollTop >= filterOffsetTop &&
+      w.width() >= stopFixingBreakpoint
+    );
+
+    console.log(hasToBeFixed);
 
     if (hasToBeFixed && !filter.hasClass(FIXED_STATE_CLASS)) {
       filter.slideUp(() => {
