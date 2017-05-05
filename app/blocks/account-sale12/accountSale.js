@@ -9,10 +9,12 @@ export default () => {
 // Сворачивание тарифов
   CONTROL.on('click', (e) => {
     e.preventDefault();
+    const BTN = $(this);
     const SLIDE_EL = $('.tarif');
-    // const TEXT = CONTROL.text();
+    const TEXT = BTN.find('span').text();
+    console.log(TEXT);
     SLIDE_EL.slideToggle();
-    // CONTROL.text(TEXT === 'Свернуть блок' ? 'Развернуть блок' : 'Свернуть блок');
+    TEXT(TEXT === 'Свернуть блок' ? 'Свернуть блок' : 'Развернуть блок');
     $('html, body').animate({ scrollTop: 0 }, 600, 'swing');
   });
 

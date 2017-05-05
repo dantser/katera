@@ -71,6 +71,7 @@
     stroke: $color-black;
     width: 11px;
     height: 6px;
+    cursor: pointer;
 
     @include respond-to('tablet') {
       display: block;
@@ -80,6 +81,12 @@
     @include respond-to('mobile') {
       display: block;
       order: 4;
+    }
+
+    &_closed {
+      fill: $color-red;
+      stroke: $color-red;
+      transform: rotate(180deg);
     }
   }
 
@@ -199,6 +206,10 @@
 
     @include respond-to('mobile') {
       bottom: -223px;
+    }
+
+    &_hide {
+      display: none;
     }
   }
 }
