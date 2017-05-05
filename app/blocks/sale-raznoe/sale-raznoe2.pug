@@ -5,21 +5,21 @@ include ../button/button
 include ../banner/banner
 include ../select/select
 include ../yacht-preview-widget/yacht-preview-widget
-include ../filter-rest/filter-rest
+include ../filter-engines/filter-engines
 include ../sale-help/sale-help
 include ../mobile-slide-popup/mobile-slide-popup
 include ../sale-preview-item/sale-preview-item
 
-mixin sale-raznoe()
+mixin sale-raznoe2()
   +b.sale-raznoe&attributes(attributes)
     +container()
       +page-header('Разное', ['Главная', 'Предложения'])
       +main-container().main-container_shadow.sale-raznoe__main-container
         +e.content
           +e.filter
-            +filter-rest()
-          +mobile-slide-popup()#filter-rest
-            +filter-rest()
+            +filter-engines()
+          +mobile-slide-popup()#filter-engines
+            +filter-engines()
           +e.result
             +e.sort-filter
               +e.output
@@ -49,4 +49,4 @@ mixin sale-raznoe()
           +e.yacht-preview-widget
             +yacht-preview-widget("Топ-10 яхт в продаже", getData('yacht-preview'), true)
 
-        +button()(data-target-modal='#filter-rest')._kind_red.__show-filter-btn.js-mobile-slide-popup Фильтр
+        +button()(data-target-modal='#filter-engines')._kind_red.__show-filter-btn.js-mobile-slide-popup Фильтр

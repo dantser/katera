@@ -15,5 +15,9 @@
     @include respond-to('mobile') {
       box-shadow: none;
     }
+
+    @include respond-to('tablet') {
+      box-shadow: none;
+    }
   }
 }

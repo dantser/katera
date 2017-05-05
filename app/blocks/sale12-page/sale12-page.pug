@@ -6,6 +6,8 @@ include ../sale-help/sale-help
 include ../list/list
 include ../models/models
 include ../custom-slider/custom-slider
+include ../mobile-slide-popup/mobile-slide-popup
+include ../filter/filter
 
 mixin sale12-page()
   +b.sale12-page
@@ -13,7 +15,13 @@ mixin sale12-page()
       +page-header('Предложения', ['Главная', 'Предложения'])
       +main-container()
         +e('div').filter
+
           +filter-sale()
+          +mobile-slide-popup()#filter-sale-mobile
+            +filter-sale()
+          +filter(getData('filter'))
+          +button()(data-target-modal='#filter-sale-mobile').__show-filter-btn.js-mobile-slide-popup Фильтр
+
           +sale-help()
         +e('div').special
           +e('h2').title Спец. предложения
