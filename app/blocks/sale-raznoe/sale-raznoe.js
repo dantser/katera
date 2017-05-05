@@ -1,5 +1,3 @@
-/* eslint-disable */
-import $ from 'jquery';
 import makeItFixed from '../../scripts/common/make-it-fixed';
 
 export default () => {
