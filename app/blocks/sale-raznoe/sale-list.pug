@@ -1,0 +1,52 @@
+include ../main-container/main-container
+include ../container/container
+include ../page-header/page-header
+include ../button/button
+include ../banner/banner
+include ../select/select
+include ../yacht-preview-widget/yacht-preview-widget
+include ../filter-sale/filter-sale
+include ../sale-help/sale-help
+include ../mobile-slide-popup/mobile-slide-popup
+include ../sale-preview-item/sale-preview-item
+
+mixin sale-list()
+  +b.sale-raznoe&attributes(attributes)
+    +container()
+      +page-header('Предложения', ['Главная', 'Предложения'])
+      +main-container().main-container_shadow.sale-raznoe__main-container
+        +e.content
+          +e.filter
+            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
+          +mobile-slide-popup()#filter-sale
+            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
+          +e.result
+            +e.sort-filter
+              +e.output
+                +e.output-label Найдено
+                +e.output-count 240
+              +e.sort
+                +e('span').sort-label Сортировать
+                +e.sort-select
+                  +select('sort', [{value: '1', title: 'Сначала дешевые'}, {value: '2', title: 'Сначала дорогие'}])
+            +e.items
+              - for (var i = 0; i < 32; i++)
+                +e.item
+                  +sale-preview-item(getData('sale-preview-item'))
+          +button()._shadow._rounded._kind_red.__show-more Показать еще
+
+        +e.sidebar
+          +e.sale-help
+            +sale-help()
+          +e.sidebar-list
+            +e.sidebar-list-item
+              +e.banner
+                +banner('#', 'assets/images/banner2.jpg')
+            +e.sidebar-list-item
+              +sale-preview-item(getData('sale-preview-item'))
+            +e.sidebar-list-item
+              +sale-preview-item(getData('sale-preview-item'))
+          +e.yacht-preview-widget
+            +yacht-preview-widget("Топ-10 яхт в продаже", getData('yacht-preview'), true)
+
+        +button()(data-target-modal='#filter-sale')._kind_red.__show-filter-btn.js-mobile-slide-popup Фильтр
