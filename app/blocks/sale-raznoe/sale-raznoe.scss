@@ -69,6 +69,18 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 25px;
+    width: 100%;
+
+    &_fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0 15px;
+      height: 60px;
+      background-color: #fff;
+      box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+      z-index: 999;
+    }
 
     @include respond-to('tablet') {
       padding-right: 25px;

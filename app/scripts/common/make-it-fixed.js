@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'jquery-ui-bundle';
 
 // eslint-disable-next-line max-len
-export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakpoint = null) => {
+export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakpoint = null, startFixingBreakpoint = 99999) => {
   // eslint-disable-next-line no-confusing-arrow
   const normalizeClassName = cn => cn.slice(0, 1) === '.' ? cn.slice(1) : cn;
   const DEFAULT_STATE_CLASS = normalizeClassName(defaultStateClass);
@@ -28,10 +28,9 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
     const hasToBeFixed = (
       filterOffsetTop &&
       documentScrollTop >= filterOffsetTop &&
-      w.width() >= stopFixingBreakpoint
+      w.width() >= stopFixingBreakpoint &&
+      w.width() <= startFixingBreakpoint
     );
-
-    console.log(hasToBeFixed);
 
     if (hasToBeFixed && !filter.hasClass(FIXED_STATE_CLASS)) {
       filter.slideUp(() => {
