@@ -9,6 +9,7 @@
 
   @include respond-to('tablet') {
     padding: 10px 0 6px;
+    background-color: $color-white;
   }
 
   @include respond-to('mobile') {
