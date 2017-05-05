@@ -2,7 +2,19 @@
   display: block;
   padding-bottom: 50px;
 
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .account-navigation {
+    flex: none;
+    width: 31.5%;
+  }
+
   &__form {
+    flex: none;
     width: 65.8%;
     background-color: yellow;
   }
@@ -10,6 +22,10 @@
   &__section {
     width: 555px;
     background-color: green;
+
+    &_tariffs {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -42,7 +58,7 @@
   &__types {
     display: flex;
     justify-content: space-between;
-    padding: 0 97.5px;
+    /*padding: 0 97.5px;*/
     margin-bottom: 62px;
 
     @include respond-to('tablet') {
@@ -59,6 +75,7 @@
   &__type {
     display: block;
     cursor: pointer;
+    width: 31%;
 
     @include respond-to('mobile') {
       width: 100%;
@@ -72,12 +89,12 @@
   &__control {
     display: none;
 
-    &:checked + .magazine-subscribe-popup {
+    &:checked + .account-shop-2-page {
 
       &__box {
         box-shadow: 0 10px 20px 0 rgba(181, 53, 31, .3);
 
-        .magazine-subscribe-popup {
+        .account-shop-2-page {
 
           &__icon {
             fill: $color-red;
@@ -96,17 +113,25 @@
   }
 
   &__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
     padding: 15px;
-    width: 230px;
-    min-height: 175px;
     box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
     will-change: box-shadow;
     transition: box-shadow .25s ease-in-out;
 
-    @include respond-to('tablet') {
+    &:hover {
+      box-shadow: 0 0 20px 0 rgba(19, 11, 89, .14);
+    }
+  }
+
+  &__box-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*width: 230px;*/
+    min-height: 175px;
+
+/*    @include respond-to('tablet') {
       width: 200px;
       min-height: 145px;
     }
@@ -118,11 +143,7 @@
       align-items: center;
       min-height: 0;
       padding: 15px;
-    }
-
-    &:hover {
-      box-shadow: 0 0 20px 0 rgba(19, 11, 89, .14);
-    }
+    }*/
   }
 
   &__info {
@@ -147,6 +168,32 @@
       font-family: $NerisBlack;
     }
   }
+
+  &__icon {
+    margin: auto;
+    fill: $color-dark-blue;
+    will-change: fill;
+    transition: fill .25s ease-in-out;
+
+    @include respond-to('mobile') {
+      margin: 0;
+    }
+
+    &_default {
+      width: 72px;
+      height: 34px;
+    }
+
+    &_express {
+      width: 60px;
+      height: 60px;
+    }
+
+    &_turbo {
+      width: 93px;
+      height: 34px;
+    }
+  }
 /*****************************/
 
   &__options {
@@ -156,17 +203,15 @@
   }
 
   &__option {
+    display: block;
     padding: 0;
     padding-left: 10px;
     line-height: 1em;
     color: $color-gray;
 
     &_active {
+      position: relative;
       color: $color-black;
-
-      &:before {
-
-      }
     }
   }
 }

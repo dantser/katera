@@ -7,6 +7,7 @@ include ../list/list
 include ../text-field/text-field
 include ../select/select
 include ../button/button
+include ../upload-btn/upload-btn
 
 //- Оформить блоком list
 mixin account-shop-2-page()
@@ -14,6 +15,8 @@ mixin account-shop-2-page()
     +container()
       +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
       +main-container()
+
+      +e('div').wrapper
 
         +account-navigation(getData('account-navigation'))
 
@@ -62,57 +65,60 @@ mixin account-shop-2-page()
               +e('div').input
                 +text-field({type: 'text', name: 'site', value: ''})
 
-
-          +e('section').types
+          +e('section').section._tariffs
             +e('h3').title Тарифы
+            +e('div').types
 
-            +e('label').type
-              +e('input')(type='radio' name='subscribe-type' value='1' checked='true').control
-              +e.box
-                +icon('subscribe-type-default').icon._default
-                +e.info
-                  +e.text._period 3 месяца
-                  +e.text._price 800 Р
-              +e('ul').options
-                +e('li').option._active Персональная страница
-                +e('li').option Мультиплатформа
-                +e('li').option Создание полной информации о компании
-                +e('li').option Автозагрузка объявлений
-                +e('li').option Личный менеджер
-                +e('li').option Оформление страницы компании и обхявлений в поиске
-                +e('li').option Выделенная круглосуточная поддержка
+              +e('label').type
+                +e('input')(type='radio' name='subscribe-type' value='1' checked='true').control
+                +e('div').box
+                  +e('div').box-title
+                    +icon('subscribe-type-default').icon._default
+                    +e.info
+                      +e.text._period 3 месяца
+                      +e.text._price 800 Р
+                  +e('ul').options
+                    +e('li').option._active Персональная страница
+                    +e('li').option Мультиплатформа
+                    +e('li').option Создание полной информации о компании
+                    +e('li').option Автозагрузка объявлений
+                    +e('li').option Личный менеджер
+                    +e('li').option Оформление страницы компании и обхявлений в поиске
+                    +e('li').option Выделенная круглосуточная поддержка
 
-            +e('label').type
-              +e('input')(type='radio' name='subscribe-type' value='2').control
-              +e.box
-                +icon('subscribe-type-express').icon._express
-                +e.info
-                  +e.text._period 6 месяцец
-                  +e.text._price 1300 Р
-              +e('ul').options
-                +e('li').option._active Персональная страница
-                +e('li').option._active Мультиплатформа
-                +e('li').option._active Создание полной информации о компании
-                +e('li').option._active Автозагрузка объявлений
-                +e('li').option._active Личный менеджер
-                +e('li').option._active Оформление страницы компании и обхявлений в поиске
-                +e('li').option Выделенная круглосуточная поддержка
+              +e('label').type
+                +e('input')(type='radio' name='subscribe-type' value='2').control
+                +e('div').box
+                  +e('div').box-title
+                    +icon('subscribe-type-express').icon._express
+                    +e.info
+                      +e.text._period 6 месяцец
+                      +e.text._price 1300 Р
+                  +e('ul').options
+                    +e('li').option._active Персональная страница
+                    +e('li').option._active Мультиплатформа
+                    +e('li').option._active Создание полной информации о компании
+                    +e('li').option._active Автозагрузка объявлений
+                    +e('li').option._active Личный менеджер
+                    +e('li').option._active Оформление страницы компании и обхявлений в поиске
+                    +e('li').option Выделенная круглосуточная поддержка
 
-            +e('label').type
-              +e('input')(type='radio' name='subscribe-type' value='3').control
-              +e.box
-                +icon('subscribe-type-turbo').icon._turbo
-                +e.info
-                  +e.text._period 12 месяцев
-                  +e.text._price 2550 Р
-              +e('ul').options
-                +e('li').option._active Персональная страница
-                +e('li').option._active Мультиплатформа
-                +e('li').option._active Создание полной информации о компании
-                +e('li').option._active Автозагрузка объявлений
-                +e('li').option._active Личный менеджер
-                +e('li').option._active Оформление страницы компании и обхявлений в поиске
-                +e('li').option._active Выделенная круглосуточная поддержка
+              +e('label').type
+                +e('input')(type='radio' name='subscribe-type' value='3').control
+                +e('div').box
+                  +e('div').box-title
+                    +icon('subscribe-type-turbo').icon._turbo
+                    +e.info
+                      +e.text._period 12 месяцев
+                      +e.text._price 2550 Р
+                  +e('ul').options
+                    +e('li').option._active Персональная страница
+                    +e('li').option._active Мультиплатформа
+                    +e('li').option._active Создание полной информации о компании
+                    +e('li').option._active Автозагрузка объявлений
+                    +e('li').option._active Личный менеджер
+                    +e('li').option._active Оформление страницы компании и обхявлений в поиске
+                    +e('li').option._active Выделенная круглосуточная поддержка
 
           +e('section').section._design
             +e('h3').title Оформление
