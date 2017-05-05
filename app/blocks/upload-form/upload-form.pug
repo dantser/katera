@@ -1,0 +1,11 @@
+include ../upload-btn/upload-btn
+
+mixin upload-form(label, supText)
+  +b.upload-form&attributes(attributes)
+    if (label)
+      +e.SPAN.label= label
+    +e.field
+      +text-field({type:"text"})._dashed
+      +upload-btn()
+      if (supText)
+        +e.SPAN.sup-text= supText
