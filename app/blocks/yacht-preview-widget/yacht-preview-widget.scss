@@ -19,5 +19,10 @@
     left: -15px;
     position: absolute;
     z-index: 1;
+
+    &_right {
+      left: initial;
+      right: -15px;
+    }
   }
 }
