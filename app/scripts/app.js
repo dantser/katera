@@ -32,12 +32,8 @@ import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
 import customSlider from '../blocks/custom-slider/custom-slider';
 import filterEngines from '../blocks/filter-engines/filter-engines';
 import filterRest from '../blocks/filter-rest/filter-rest';
-<<<<<<< HEAD
-import accountSale from '../blocks/account-sale12/account-sale';
-=======
 import accountSale from '../blocks/account-sale12/accountSale';
 import yachtClub from '../blocks/yacht-club/yachtClub';
->>>>>>> refs/remotes/origin/master
 
 $(() => {
   index();
