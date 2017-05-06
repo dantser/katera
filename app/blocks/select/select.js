@@ -1,13 +1,13 @@
 import $ from 'jquery';
 
 function activate(select, list, activeClass) {
-  list.slideDown(() => {
+  list.fadeIn(() => {
     select.addClass(activeClass);
   });
 }
 
 function deactivate(select, list, activeClass) {
-  list.slideUp(() => {
+  list.fadeOut(() => {
     select.removeClass(activeClass);
   });
 }
@@ -35,7 +35,7 @@ export default () => {
   const SELECT_CLASS = '.select';
   const SELECT_ACTIVE_CLASS = 'select_active';
   const TEXT_CLASS = '.select__text';
-  const LABEL_CLASS = '.select__label';
+  const LABEL_CLASS = '.select__list-label';
   const SELECT_DATA_ALL_SELECTED = 'all-selected';
   let selectedData = [];
 
@@ -68,6 +68,15 @@ export default () => {
     }
   });
 
+  const deactivateAll = () => {
+    selectElements.each(function () { // eslint-disable-line func-names
+      const el = $(this);
+      const list = el.find('ul');
+
+      deactivate(el, list, SELECT_ACTIVE_CLASS);
+    });
+  };
+
   selectElements.on('click', 'li', (e) => {
     const el = $(e.target);
     const selected = el.index();
@@ -98,10 +107,13 @@ export default () => {
   // handle show list (custom dropdown)
   selectElements.on('click', (e) => {
     const select = $(e.target);
+    e.stopPropagation();
 
     if (!select.hasClass(SELECT_CLASS.slice(1))) {
       return;
     }
+
+    deactivateAll();
 
     const list = select.find('ul');
 
@@ -131,5 +143,9 @@ export default () => {
     // eslint-disable-next-line max-len
     const allSelected = li.parent().children().length === selectedData.length ? select.data(SELECT_DATA_ALL_SELECTED) : null;
     updateText(textElement, selectedData, allSelected);
+  });
+
+  $(document).on('click', () => {
+    deactivateAll();
   });
 };

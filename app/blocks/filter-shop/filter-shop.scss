@@ -72,6 +72,10 @@
       margin-bottom: 27px;
     }
 
+    @include respond-to('large-desktop') {
+      width: calc(27% - 30px);
+    }
+
     &_search-field {
       display: flex;
       align-items: center;
@@ -88,6 +92,11 @@
       @include respond-to('mobile') {
         width: 100%;
         margin-bottom: 16px;
+        flex-basis: auto;
+      }
+
+      @include respond-to('large-desktop') {
+        width: calc(56% - 30px);
         flex-basis: auto;
       }
     }
@@ -135,6 +144,10 @@
 
     @include respond-to('mobile') {
       width: 100%;
+    }
+
+    @include respond-to('large-desktop') {
+      width: calc(15% - 30px);
     }
   }
 
