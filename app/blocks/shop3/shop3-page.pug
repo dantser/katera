@@ -1,0 +1,28 @@
+//- Таб "Контакты" для shop-page
+include ../map/map
+
+mixin shop3-page()
+  +b.shop-tab3&attributes(attributes)
+    +e.contacts
+      +e.phone
+        +e.row
+          +e.col-1 Телефон:
+          +e.col-2 +7 (925) 726-75-75,  +7 (902) 652-67-77
+      +e.work
+        +e.row
+          +e.col-1 Режим работы:
+          +e.col-2 Работаем по будням с 9 -19:00
+      +e.adress
+        +e.row
+          +e.col-1 Адрес:
+          +e.col-2 г. Волгоград, ул. Автотранспортная, 5 ул. Качалова 39а
+      +e.mail
+        +e.row
+          +e.col-1 Электронная почта:
+          +e.col-2 yaht@yandex.com
+      +e.site
+        +e.row
+          +e.col-1 Сайт:
+          +e.col-2
+            a(href="gu-yaht.com") gu-yaht.com
+    +map()
