@@ -8,7 +8,8 @@ mixin filter-shop()
   
     - var filterData = getData('filter')
       +e.item._vendor
-        +select(filterData.shipyard.name, filterData.shipyard.options)
+        +select('i', filterData.category.name, filterData.category.options, 'Все категории')
+          +e.text Все категории
       +e.item._search-field
         +icon('magnifier').magnifier
         +e('input')(type='search' name='search' placeholder='Поиск по предложениям магазина').field
