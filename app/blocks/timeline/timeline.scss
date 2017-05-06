@@ -1,18 +1,13 @@
 .timeline {
   display: block;
   position: relative;
-  // margin: 50px 0 100px;
-  //
-  // @include respond-to('tablet') {
-  //   margin: 25px 0 60px;
-  // }
 
   &::before {
     position: absolute;
     content: '';
     left: 12%;
     right: 0;
-    top: 174px;
+    top: 159px;
     height: 2px;
     background: $color-red;
     z-index: -1;
@@ -85,7 +80,7 @@
     border: 6px solid $color-red;
     border-radius: 100%;
     margin-top: 1px;
-    transition: all .25s ease-in-out;
+    transition: all .45s ease-in;
 
     @include respond-to('tablet') {
       width: 232px;
@@ -117,6 +112,7 @@
     text-align: center;
     margin-top: 40px;
     bottom: 0;
+    position: absolute;
 
     @include respond-to('tablet') {
       display: none;
@@ -130,7 +126,7 @@
       display: inline-block;
       border-radius: 100%;
       cursor: pointer;
-      transition: .25s ease-in-out;
+      transition: .45s ease-in;
       background: $color-white;
 
       &-active {
