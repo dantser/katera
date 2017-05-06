@@ -1,0 +1,246 @@
+include ../page-header/page-header
+include ../account-navigation/account-navigation
+include ../checkbox/checkbox
+include ../radio/radio
+include ../division/division
+include ../select/select
+include ../text-field/text-field
+include ../text/text
+include ../select-currency/select-currency
+include ../upload-form/upload-form
+include ../magazine-subscribe-popup/magazine-subscribe-popup
+include ../hint/hint
+include ../list/list
+include ../button/button
+
+mixin account-sale3()
+ +b.account-sale3&attributes(attributes)
+  +container()
+    +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+    +e.grid-container
+      +e.col-nav
+        +account-navigation(getData('account-navigation'))
+      +e.col-page
+        +e.H2.text-center Создать предложение
+        +b.user-info
+          h2 Контактная информация
+          +e.wrap
+            +e.col
+              +e.item
+                +e.SPAN.text Имя
+                +e.SPAN.value Валентин Семенович
+              +e.item
+                +e.SPAN.text Номер телефона
+                +e.SPAN.value +7 (756) 345-62-18
+              +e.item
+                +e.SPAN.text Email
+                +e.SPAN.value kapitan@mail.com
+              +e.item
+                +e.SPAN.text Сайт
+                +e.SPAN.value -
+            +e.col
+              +e.switcher
+                span Разрешить сообщения
+                +checkbox({checked:true})._switcher
+        h2 Выберите категорию и тип объявления
+        +e.radio-wrap
+          span Тип предложения:
+          +e.radio
+            +radio({checked:true})
+            span Продам
+          +e.radio
+            +radio()
+            span Сдам
+        +b.category-filter
+          - for (i=0;i<4;i++)
+            +e.col
+              +e.header
+                +division('Category')
+              +e.items
+                +division('Active-item')._active._arrow-left
+                - for (j=0;j<8;j++)
+                  +division('Item')
+        +b.input-group
+          h2 Местоположение
+          +e.item
+            +e.SPAN.label Страна
+            +e.input-wrap
+              +select('test', [{ value: 1, title: 'Испания' }, { value: 2, title: 'Италия' }])
+          +e.item
+            +e.SPAN.label Город
+            +e.input-wrap
+              +text-field({type:'text'})
+        +b.input-group
+          h2 Параметры
+          +e.item
+            +e.SPAN.label Год выпуска
+            +e.input-wrap
+              +text-field({type:'text'})
+          +e.item
+            +e.SPAN.label Тип лодки
+            +e.input-wrap
+              +e.radio
+                +radio({checked:true})
+                span Новая
+              +e.radio
+                +radio()
+                span Б/У
+          +e.item
+            +e.SPAN.label Количество моточасов
+            +e.input-wrap
+              +text-field({type:'number'})
+          +e.item
+            +e.SPAN.label Длина
+            +e.input-wrap
+              +text-field({type:'number'})
+              +e.SPAN.after-text м
+          +e.item
+            +e.SPAN.label Осадка фальшкилем или швертом
+            +e.input-wrap
+              +text-field({type:'number'})
+              +e.SPAN.after-text м
+          +e.item
+            +e.SPAN.label Осадка корпусом
+            +e.input-wrap
+              +text-field({type:'number'})
+              +e.SPAN.after-text м
+          +e.item
+            +e.SPAN.label Высота мачты
+            +e.input-wrap
+              +text-field({type:'number'})
+              +e.SPAN.after-text м
+          -
+            var selects = ['Основное назначение', 'Тип корпуса', 'Материал основного корпуса',
+              'Тип парусного вооружения', 'Тип парусной оснастки']
+          each item in selects
+            +e.item
+              +e.SPAN.label= item
+              +e.input-wrap
+                +select('test', [{ value: 1, title: 'Значение 1' }, { value: 2, title: 'Значение 2' }])
+        +b.input-group
+          h2 Дополнительные характеристики
+          +text().__subheader
+            h5 Пассажировместимость
+          +e.item
+            +e.SPAN.label Компоновка
+            +e.input-wrap
+              +select('test', [{ value: 1, title: 'Значение 1' }, { value: 2, title: 'Значение 2' }])
+          +e.item
+            +e.SPAN.label Паспортная пассажировместимость
+            +e.input-wrap
+              +text-field({type:'number'})
+              +e.SPAN.after-text чел.
+          +e.item
+            +e.SPAN.label._big Количество стационарных  спальных мест
+            +e.input-wrap._small
+              +text-field({type:'number'})
+          +e.item
+            +e.SPAN.label._big Кол-во дополнительно трансформируемых спальных мест
+            +e.input-wrap._small
+              +text-field({type:'number'})
+          +text().__subheader
+            h5 Другое
+          +e.item._row
+            +checkbox()._switcher
+            span Наличие вспомогательного двигателя или двигателей
+          +e.item._disabled
+            +e.SPAN.label._big Тип привода вспомогательного двигателя
+            +e.input-wrap._small
+              +select('test', [{ value: 1, title: 'Значение 1' }, { value: 2, title: 'Значение 2' }])
+          +e.item
+            +e.SPAN.label Управление
+            +e.input-wrap
+              +select('test', [{ value: 1, title: 'Значение 1' }, { value: 2, title: 'Значение 2' }])
+          +e.item
+            +e.SPAN.label._medium Стационарный запас топлива
+            +e.input-wrap._medium
+              +text-field({type:'number'})
+              +e.SPAN.after-text л
+          +e.item
+            +e.SPAN.label._medium Стационарный запас воды
+            +e.input-wrap._medium
+              +text-field({type:'number'})
+              +e.SPAN.after-text л
+          +e.item._row
+            +checkbox({checked: true})._switcher
+            span Наличие стационарного камбуза
+          +e.item._row
+            +checkbox({checked: true})._switcher
+            span Наличие стационарного санузла
+        +b.input-group
+          +e.item._start
+            +e.SPAN.label Описание
+            +e.input-wrap._tall
+              +e.TEXTAREA.msg-field
+          +e.item
+            +e.SPAN.label Цена
+            +e.input-wrap
+              +text-field({type:'text'})
+              +select-currency()
+          +e.item
+            +upload-form('Добавить фотографии', 'Вы можете прикрепить не более 20 фотографий').__upload
+          +e.item
+            +upload-form('Добавить видео', 'Формат видео: MP4, AVI, QuickTime').__upload
+        +b.speedup
+          h2 Ускорить продажу
+          +b('form').magazine-subscribe-popup
+            +e.types
+              +e('label').type
+                +e('input')(type='radio' name='subscribe-type' value='1' checked='true').control
+                +e.box
+                  +icon('subscribe-type-default').icon._default
+                  +e.info
+                    +e.text._period Обычная продажа
+                    +e.text._price 0 Р
+              +e('label').type
+                +e('input')(type='radio' name='subscribe-type' value='2').control
+                +e.box
+                  +icon('subscribe-type-express').icon._express
+                  +e.info
+                    +e.text._period Экспресс продажа
+                    +e.text._price 1300 Р
+              +e('label').type
+                +e('input')(type='radio' name='subscribe-type' value='3').control
+                +e.box
+                  +icon('subscribe-type-turbo').icon._turbo
+                  +e.info
+                    +e.text._period Турбо продажа
+                    +e.text._price 2550 Р
+          p Вы можете разместить предложение на Katera.ru бесплатно, но дополнительные услуги помогут вам продать  быстрее.
+          +b.pricing
+            +e.item-sale
+              +checkbox({checked: true})._switcher
+              +hint()
+                +list()
+                  +list-item()
+                    +text()
+                      p Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы
+                  +list-item()
+                    +e.SPAN.offer Услуга действует 30 дней
+              +e.SPAN.hint-text Поднятие в ТОП
+              +e.SPAN.price._active 1090 Р
+            +e.item-sale
+              +checkbox()._switcher
+              +hint()
+                +list()
+                  +list-item()
+                    +text()
+                      p Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы
+                  +list-item()
+                    +e.SPAN.offer Услуга действует 30 дней
+              +e.SPAN.hint-text Спецпредложение
+              +e.SPAN.price 550 Р
+            +e.item-sale
+              +checkbox()._switcher
+              +hint()
+                +list()
+                  +list-item()
+                    +text()
+                      p Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы
+                  +list-item()
+                    +e.SPAN.offer Услуга действует 30 дней
+              +e.SPAN.hint-text Выделение цветом
+              +e.SPAN.price 200 Р
+          +b.btn-wrap
+            +button()._kind_red Разместить предложение 1090 Р
+            +e.SPAN.sub-btn Предложение будет размещено на 30 дней
