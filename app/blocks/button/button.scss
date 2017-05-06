@@ -63,6 +63,16 @@
         box-shadow: 0 2px 5px 0 rgba(#090435, .3);
       }
     }
+
+    &_blue-border {
+      background-color: transparent;
+      color: $color-dark-blue;
+      border: 1px solid $color-dark-blue;
+
+      &:hover {
+        box-shadow: 0 2px 5px 0 rgba(#090435, .3);
+      }
+    }
   }
 
   &__icon {

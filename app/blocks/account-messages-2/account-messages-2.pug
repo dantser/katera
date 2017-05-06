@@ -1,0 +1,43 @@
+include ../button/button
+include ../page-header/page-header
+include ../account-navigation/account-navigation
+include ../submenu/submenu
+include ../upload-btn/upload-btn
+include ../text-field/text-field
+include ../upload-form/upload-form
+include ../sale-preview-item/sale-preview-item
+
+mixin account-messages-2()
+  +b.account-messages-2&attributes(attributes)
+    +container()
+      +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+      +e.grid-container
+        +e.col-nav
+          +account-navigation(getData('account-navigation'))
+        +e.col-page
+          +e.heading
+            +e('a')(href="#").back
+              +icon('arrow-prev').icon.__back-icon
+              +e('span') Назад
+            +button()._rounded._kind_blue-border._right Спам
+            +button()._rounded._kind_blue-border._right Удалить
+          +e.chat-props
+            +e.companion
+              +e.companion-name Михаил Владиславович
+              +e.companion-date Был в 9:07, 20.02.2017
+            +sale-preview-item(getData('sale-preview-item-extended')[0])._image_right
+          +e.msg-wrap
+            +e.msg
+              +e.msg-date Михаил Владиславович, 1 8.02.2017 21:00
+              +e.msg-box Заинтерисовало Ваше предложение. Возможен ли тогр или обмена на моторную лодку серии 13456, 2004 года выпаска? Или на совершенно новый катер 4555, 1997 года выпуска
+            +e.msg._right
+              +e.msg-date 18.02.2017 23:13
+              +e.msg-box Добрый день, Михайил!<br>Можно поподробнее о характеристиках моторной лодки
+            +e.msg._right
+              +e.msg-date 18.02.2017 23:34
+              +e.msg-box Очень выгодное предложение! ))
+            +e.status Просмотрено
+            +e('textarea').msg-field
+            +e.msg-props
+              +upload-form().__upload-file
+              +button()._rounded._kind_red._shadow Отправить
