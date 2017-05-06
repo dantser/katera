@@ -17,6 +17,7 @@
     }
 
     &_box-shadow {
+
       &::before {
         content: '';
         position: absolute;
@@ -72,7 +73,7 @@
       line-height: 22px;
       margin: 10px 0;
 
-      &.bit-letter {
+      .bit-letter {
         padding-left: 100px;
       }
     }
@@ -206,7 +207,7 @@
   &__slide {
     width: 457px;
     height: 420px;
-    padding:  0 15px;
+    padding: 0 15px;
   }
 
   &__slide-text {
@@ -229,7 +230,7 @@
       text-align: center;
       font-size: 24px;
       padding: 30px 0;
-      font-weight: normal;
+      font-weight: 300;
       border-top: 1px solid $color-light-gray;
       border-bottom: 1px solid $color-light-gray;
       margin-bottom: 40px;

@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 7px rgba(19, 11, 89, 0.14);
+    box-shadow: 0 0 7px rgba(19, 11, 89, .14);
     padding: 24px 28px 24px 40px;
 
     @include respond-to('tablet') {

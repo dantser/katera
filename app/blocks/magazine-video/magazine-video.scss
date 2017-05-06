@@ -29,7 +29,6 @@
     margin-bottom: 30px;
 
     @include respond-to('tablet') {
-      width: 100%;
       margin: 0;
       padding: 10px;
       width: 360px;

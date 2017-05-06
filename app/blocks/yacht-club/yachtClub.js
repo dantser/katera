@@ -22,7 +22,6 @@ export default () => {
   const WINDOW = $(window);
   const WRAPPER_CLASS = 'swiper-wrapper';
   function resize() {
-    console.log(WINDOW.width());
     if (WINDOW.width() < 992) {
       // eslint-disable-next-line no-unused-vars
       const yachtGallerySlider = new Swiper('.yacht-club__gallery', {

@@ -102,8 +102,6 @@
   &__text-content {
     position: relative;
     margin-top: 18px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-flow: row wrap;
     flex: 1;
@@ -126,7 +124,7 @@
   }
 
   &__props {
-    margin: 50px 0 0 0 !important;
+    margin: 50px 0 0 !important;
     display: block;
     width: 100%;
 

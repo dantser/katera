@@ -50,7 +50,6 @@
       }
 
       &__buttons {
-
         @include respond-to('desktop') {
           width: 263px;
         }
@@ -58,7 +57,6 @@
         @include respond-to('large-desktop') {
           width: 263px;
         }
-
       }
 
       &__field_type_reset-filter {
