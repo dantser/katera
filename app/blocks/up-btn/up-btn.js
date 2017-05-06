@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export default () => {
-  const ELEMENT_CLASS = '.js-up-btn';
+  const ELEMENT_CLASS = '.up-btn';
   const SHOW_ELEMENT_AT = 200;
 
   const btn = $(ELEMENT_CLASS);
@@ -10,15 +10,32 @@ export default () => {
     return;
   }
 
-  btn.hide();
+  const branding = $('.branding');
+  const pageHasBranding = branding && branding.length > 0;
 
-  $(window).on('scroll', function (e) { // eslint-disable-line
-    const offset = $(document).scrollTop();
+  if (!pageHasBranding) {
+    btn.addClass('up-btn_dark');
+  }
 
-    if (offset > SHOW_ELEMENT_AT) {
-      btn.show('slow');
+  const footer = $('.footer');
+  const w = $(window);
+
+  w.on('scroll', function (e) { // eslint-disable-line
+    const scrollTop = w.scrollTop();
+    // eslint-disable-next-line
+    const stickToFooter = scrollTop + w.height() - footer.offset().top;
+
+    if (stickToFooter >= 0) {
+      // eslint-disable-next-line
+      btn.css({ bottom: `${stickToFooter + 20}px` });
     } else {
-      btn.hide('slow');
+      btn.css({ bottom: '20px' });
+    }
+
+    if (scrollTop > SHOW_ELEMENT_AT) {
+      btn.fadeIn();
+    } else {
+      btn.fadeOut();
     }
   });
 

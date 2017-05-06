@@ -1,0 +1,9 @@
+{
+  "msg": {
+    "name": "message",
+    "options": [
+      { "value": 1, "title": "Все сообщения" },
+      { "value": 2, "title": "Не прочитанные" }
+    ]
+  }
+}

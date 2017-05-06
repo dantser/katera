@@ -3,9 +3,7 @@
   right: 20px;
   bottom: 20px;
   z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
   width: 50px;
   height: 50px;
   border: 1px solid $color-white;
@@ -18,6 +16,18 @@
 
   &:hover {
     background-color: rgba($color-white, .5);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_dark .up-btn__caret {
+    stroke: $color-dark-blue;
   }
 
   &__caret {
