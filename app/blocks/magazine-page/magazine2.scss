@@ -16,6 +16,10 @@
     width: 100%;
     display: block;
 
+    @include respond-to('large-desktop') {
+      height: 600px;
+    }
+
     @include respond-to('tablet') {
       height: 200px;
     }
@@ -32,7 +36,8 @@
         height: 100%;
       }
     }
-  }//__box-bg
+  }
+  //__box-bg
 
   &__main-container {
     display: flex !important;
@@ -42,6 +47,11 @@
   &__text {
     padding-left: 97px;
 
+    @include respond-to('large-desktop') {
+      width: 70%;
+      margin: 0 auto;
+    }
+
     @include respond-to('tablet') {
       padding-left: 0;
     }
@@ -50,7 +60,8 @@
       padding-left: 15px;
       padding-right: 15px;
     }
-  }//__text
+  }
+  //__text
 
   .text__size_medium {
     max-width: 262px;
@@ -68,7 +79,8 @@
       display: block;
       max-width: 100%;
     }
-  }//text__size_medium
+  }
+  //text__size_medium
 
   .text {
     @include respond-to('tablet') {
@@ -195,7 +207,8 @@
     @include respond-to('mobile') {
       width: 100%;
     }
-  }//block-text
+  }
+  //block-text
 
   &__content {
     position: relative;
@@ -235,6 +248,11 @@
     width: calc(100% - 393px);
     padding-left: 97px;
 
+    @include respond-to('large-desktop') {
+      width: 70%;
+      margin: 0 auto;
+    }
+
     @include respond-to('laptop') {
       width: 100%;
       padding-right: 97px;
@@ -263,7 +281,8 @@
         padding: 0 15px;
       }
     }
-  }//content-two
+  }
+  //content-two
 
   .content-three {
     width: calc(100% - 293px);
@@ -286,7 +305,8 @@
         padding: 0 15px;
       }
     }
-  }//content-three
+  }
+  //content-three
 
   &__big-banner {
     margin: 30px 0;
@@ -413,7 +433,8 @@
         }
       }
     }
-  }//inner-content
+  }
+  //inner-content
 
   &__tags {
     padding-bottom: 18px;
@@ -465,11 +486,29 @@
         display: none;
       }
     }
-  }//__extra-articles
+  }
+  //__extra-articles
 
   .extra-articles__article {
+    @include respond-to('large-desktop') {
+      justify-content: center;
+    }
+
+    @include respond-to('laptop') {
+      justify-content: center;
+    }
 
     .extra-articles__item {
+      @include respond-to('large-desktop') {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      @include respond-to('laptop') {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
       @include respond-to('tablet') {
 
         &:last-child {
@@ -486,7 +525,8 @@
         }
       }
     }
-  }//.extra-articles__item
+  }
+  //.extra-articles__item
 
   .extra-articles {
     padding-bottom: 63px;
@@ -619,7 +659,8 @@
             width: 100px;
           }
         }
-      } //tag-content
+      }
+      //tag-content
 
       .article-preview__tags {
         @include respond-to('mobile') {
