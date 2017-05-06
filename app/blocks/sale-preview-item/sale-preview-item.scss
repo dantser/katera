@@ -44,6 +44,47 @@
     }
   }
 
+  &_image_right {
+    flex-direction: row;
+
+    .sale-preview-item {
+
+      &__img-wrap {
+        margin-left: 20px;
+        height: 80px;
+        width: 100px;
+        order: 1;
+
+        @include respond-to('mobile') {
+          width: 107px;
+          height: 93px;
+          margin-left: 15px;
+        }
+      }
+
+      &__text {
+        text-align: right;
+        order: 0;
+      }
+
+      &__param {
+        text-align: right;
+        font-size: rem(12px);
+
+        @include respond-to('mobile') {
+
+          &:not(:last-child) {
+            padding-left: 5px;
+          }
+
+          &::after {
+            content: ',';
+          }
+        }
+      }
+    }
+  }
+
   &__img-wrap {
     position: relative;
     width: 100%;

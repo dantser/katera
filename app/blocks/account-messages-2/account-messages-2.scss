@@ -1,0 +1,219 @@
+.account-messages-2 {
+
+  .page-header {
+    border-top: 1px solid $color-light-gray;
+  }
+
+  &__grid-container {
+    color: $color-black;
+    display: flex;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__col-nav {
+    padding-right: 15px;
+    flex: 0 0 375px;
+
+    @include respond-to('tablet') {
+      flex: none;
+      padding: 0;
+    }
+
+    @include respond-to('mobile') {
+      flex: none;
+      padding: 0;
+    }
+  }
+
+  &__col-page {
+    padding-left: 15px;
+    flex-grow: 1;
+    margin-top: -11px;
+
+    @include respond-to('tablet') {
+      padding-right: 15px;
+    }
+
+    @include respond-to('mobile') {
+      padding-right: 15px;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+    margin-top: 11px;
+    border-bottom: 1px solid  $color-light-gray;
+
+    .button {
+      width: 165px;
+      height: 40px;
+      margin-left: 30px;
+    }
+  }
+
+  &__back-icon {
+    width: 26px;
+    height: 16px;
+    display: flex;
+    margin-right: 10px;
+
+    * {
+      stroke: $color-red;
+      fill: $color-red;
+    }
+  }
+
+  &__back {
+    align-items: center;
+    color: $color-red;
+    line-height: 36px;
+    display: inline-flex;
+    margin-right: auto;
+    transition: all .25 ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__chat-props {
+    padding: 20px 0;
+    border-bottom: 1px solid  $color-light-gray;
+    display: flex;
+  }
+
+  &__companion {
+    display: inline-flex;
+    flex-direction: column;
+    flex: 1;
+    align-self: center;
+  }
+
+  &__companion-name {
+    font-size: 18px;
+    font-family: $NerisSemiBold;
+    line-height: 26px;
+  }
+
+  &__companion-date {
+    font-size: 14px;
+    color: $color-medium-gray;
+    line-height: 26px;
+  }
+
+  .sale-preview-item {
+    flex: 1;
+
+    &__params {
+      display: none;
+    }
+
+    &__info {
+      font-size: 13px;
+    }
+
+    &__name, &__price {
+      font-size: 16px;
+    }
+  }
+
+  &__msg-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__msg-date {
+    font-size: 14px;
+    color: $color-medium-gray;
+    margin-bottom: 25px;
+  }
+
+  &__msg-box {
+    line-height: 22px;
+    font-size: 14px;
+    padding: 25px 20px;
+    background: #f2f2f2;
+    margin-bottom: 25px;
+    max-width: 60%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      border: 10px solid transparent;
+      border-bottom: 10px solid #f2f2f2;
+    }
+  }
+
+  &__msg {
+    width: 100%;
+
+    &_right {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+
+      .account-messages-2__msg-box {
+        background: #e5e9f8;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -20px;
+          left: auto;
+          right: 20px;
+          border: 10px solid transparent;
+          border-bottom: 10px solid #e5e9f8;
+        }
+      }
+    }
+  }
+
+  &__status {
+    font-size: 14px;
+    text-align: right;
+    color: $color-gray;
+    margin-top: -15px;
+    margin-bottom: 45px;
+  }
+
+  &__msg-field {
+    resize: none;
+    height: 80px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 17px;
+    padding: 10px;
+    font-family: $NerisLight;
+    font-size: 14px;
+  }
+
+  &__msg-props {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .button {
+      width: 165px;
+      height: 40px;
+    }
+  }
+
+  &__upload-file {
+    width: 50% !important;
+  }
+}
