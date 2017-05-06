@@ -55,10 +55,10 @@
       }
 
       &:hover {
-        box-shadow: 3px 5px 4px rgba(0, 0, 0, .3);
+        box-shadow: 0 4px 10px rgba(0,0,0,.3);
 
         @include respond-to('mobile') {
-          box-shadow: 2px 3px 2px rgba(0, 0, 0, .3);
+          box-shadow: 0 3px 4px rgba(0,0,0,.3);
         }
       }
     }
