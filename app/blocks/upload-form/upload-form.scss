@@ -1,0 +1,45 @@
+.upload-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  padding-bottom: 24px;
+  justify-content: space-between;
+
+  @include respond-to('mobile') {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 35px;
+  }
+
+  &__label {
+    font-size: 1rem;
+    flex: 0 0 195px;
+
+    @include respond-to('mobile') {
+      flex-basis: auto;
+    }
+  }
+
+  &__field {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__sup-text {
+    position: absolute;
+    bottom: -20px;
+    color: $color-gray;
+    font-size: rem(12px);
+
+    @include respond-to('mobile') {
+      bottom: -35px;
+    }
+  }
+
+  .text-field {
+    margin-right: 30px;
+  }
+}

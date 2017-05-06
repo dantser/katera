@@ -1,114 +1,154 @@
 [
   {
+    "path": "https://verstaburo.github.io/katera/account-faq.html",
+    "title": "account-faq"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-magazine.html",
+    "title": "account-magazine"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-profile-jur.html",
+    "title": "account-profile-jur"
+  },
+  {
     "path": "https://verstaburo.github.io/katera/account-profile.html",
-    "title": "account-profile.html"
+    "title": "account-profile"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-sale1.html",
+    "title": "account-sale1"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-sale2.html",
+    "title": "account-sale2"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-subscription.html",
+    "title": "account-subscription"
   },
   {
     "path": "https://verstaburo.github.io/katera/catalog-verphe.html",
-    "title": "catalog-verphe.html"
+    "title": "catalog-verphe"
   },
   {
     "path": "https://verstaburo.github.io/katera/catalog-yacht-1.html",
-    "title": "catalog-yacht-1.html"
+    "title": "catalog-yacht-1"
   },
   {
     "path": "https://verstaburo.github.io/katera/catalog-yacht.html",
-    "title": "catalog-yacht.html"
+    "title": "catalog-yacht"
   },
   {
     "path": "https://verstaburo.github.io/katera/event-page.html",
-    "title": "event-page.html"
+    "title": "event-page"
   },
   {
     "path": "https://verstaburo.github.io/katera/events.html",
-    "title": "events.html"
+    "title": "events"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/forgot-password.html",
+    "title": "forgot-password"
   },
   {
     "path": "https://verstaburo.github.io/katera/index.html",
-    "title": "index.html"
+    "title": "index"
   },
   {
     "path": "https://verstaburo.github.io/katera/join.html",
-    "title": "join.html"
+    "title": "join"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/login.html",
+    "title": "login"
   },
   {
     "path": "https://verstaburo.github.io/katera/magazine-longrid.html",
-    "title": "magazine-longrid.html"
+    "title": "magazine-longrid"
   },
   {
     "path": "https://verstaburo.github.io/katera/magazine-page.html",
-    "title": "magazine-page.html"
+    "title": "magazine-page"
   },
   {
     "path": "https://verstaburo.github.io/katera/magazine-razdel.html",
-    "title": "magazine-razdel.html"
+    "title": "magazine-razdel"
   },
   {
     "path": "https://verstaburo.github.io/katera/magazine-video.html",
-    "title": "magazine-video.html"
+    "title": "magazine-video"
   },
   {
     "path": "https://verstaburo.github.io/katera/magazine-videos.html",
-    "title": "magazine-videos.html"
+    "title": "magazine-videos"
   },
   {
     "path": "https://verstaburo.github.io/katera/magazine.html",
-    "title": "magazine.html"
+    "title": "magazine"
   },
   {
     "path": "https://verstaburo.github.io/katera/magazine2.html",
-    "title": "magazine2.html"
+    "title": "magazine2"
   },
   {
     "path": "https://verstaburo.github.io/katera/map.html",
-    "title": "map.html"
+    "title": "map"
   },
   {
-    "path": "https://verstaburo.github.io/katera/search.html",
-    "title": "search.html"
+    "path": "https://verstaburo.github.io/katera/sale-list.html",
+    "title": "sale-list"
   },
   {
-    "path": "https://verstaburo.github.io/katera/shop-s.html",
-    "title": "shop-s.html"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/shop1.html",
-    "title": "shop1.html"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/verphe.html",
-    "title": "verphe.html"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/yacht-club.html",
-    "title": "yacht-club.html"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/yacht-clubs.html",
-    "title": "yacht-clubs.html"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/yacht-sale.html",
-    "title": "yacht-sale.html"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/sale12.html",
-    "title": "sale12.html"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/catalog-yacht.html",
-    "title": "catalog-yacht.html"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/account-faq.html",
-    "title": "account-faq.html"
+    "path": "https://verstaburo.github.io/katera/sale-list2.html",
+    "title": "sale-list2"
   },
   {
     "path": "https://verstaburo.github.io/katera/sale-raznoe.html",
-    "title": "sale-raznoe.html"
+    "title": "sale-raznoe"
   },
   {
     "path": "https://verstaburo.github.io/katera/sale-raznoe2.html",
-    "title": "sale-raznoe2.html"
+    "title": "sale-raznoe2"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/sale12.html",
+    "title": "sale12"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/search.html",
+    "title": "search"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/shop-s.html",
+    "title": "shop-s"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/shop1.html",
+    "title": "shop1"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/verphe.html",
+    "title": "verphe"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/yacht-club.html",
+    "title": "yacht-club"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/yacht-clubs.html",
+    "title": "yacht-clubs"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/yacht-sale.html",
+    "title": "yacht-sale"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-shop1.html",
+    "title": "account-shop1"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-subscription.html",
+    "title": "account-subscription"
   }
 ]

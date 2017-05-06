@@ -1,0 +1,106 @@
+include ../button/button
+include ../page-header/page-header
+include ../checkbox/checkbox
+include ../container/container
+include ../text-field/text-field
+include ../account-navigation/account-navigation
+include ../upload-form/upload-form
+
+mixin account-profile-jur()
+  +b.account-profile.account-profile-jur&attributes(attributes)
+    +container()
+      +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+      +e.grid-container
+        +e.col-nav
+          +account-navigation(getData('account-navigation'))
+        +e.col-page
+          +b.input-group
+            +text()
+              h3 Сведения об организации
+            -
+              var contactInfo=[
+                {label:"Название компании на русском языке",name:"jur",type:"text"},
+                {label:"Свидетельство о внесении в Единый государственный реестр юр. лиц (дата, №, кем  выдано)",name:"jur",type:"text"},
+                {label:"ОГРН",name:"jur",type:"number"},
+                {label:"ИНН",name:"jur",type:"number"},
+                {label:"КПП",name:"jur",type:"number"},
+                {label:"ОКПО",name:"jur",type:"number"},
+                {label:"Расчетный счет -№",name:"jur",type:"number"},
+                {label:"Корреспондентский счет-№",name:"jur",type:"number"},
+                {label:"Код БИК",name:"jur",type:"number"},
+                {label:"Наименование и адрес обслуживающего банка",name:"jur",type:"text"}]
+            each obj in contactInfo
+              +e.item
+                label= obj.label
+                +e.input-wrap
+                  +text-field(obj)
+          +b.input-group._border-top._padded
+            +text()
+              h3 Адресные данные:
+            -
+              var contactInfo=[
+                {label:"Юридический адрес",name:"jur",type:"text"},
+                {label:"Фактический адрес",name:"jur",type:"text"},
+                {label:"Телефон",name:"jur",type:"tel"},
+                {label:"Email",name:"jur",type:"email"}]
+            each obj in contactInfo
+              +e.item
+                label= obj.label
+                +e.input-wrap
+                  +text-field(obj)
+          +b.input-group._border-top._padded
+            +text()
+              h3 Сведения о руководителе, от имени которого заключается договор:
+            -
+              var contactInfo=[
+                {label:"ФИО",name:"jur",type:"text"},
+                {label:"Должность",name:"jur",type:"text"},
+                {label:"На основании чего действует",name:"jur",type:"tel"}]
+            each obj in contactInfo
+              +e.item
+                label= obj.label
+                +e.input-wrap
+                  +text-field(obj)
+            +e.item
+              +upload-form('Добавить файл', 'Если необходимо, прикрепите подтверждающие документы')
+          +b.subscribe-group
+            +text()
+              h3 Управление подпиской
+              p Отметьте сообщения, которые вы хотите получать по электронной почте.
+            +e.wrap
+              +e.item
+                +checkbox({checked: true})._switcher
+                span Новости сайта
+              +e.item
+                +checkbox({checked: true})._switcher
+                span Уведомления
+              +e.item
+                +checkbox({checked: false})._switcher
+                span Напоминания
+          +b.input-group.change-password-group
+            +text()
+              h3 Смена пароля
+              p Введите свой текущий пароль, новый пароль, и повторите ввод нового пароля,
+                |  </br>чтобы исключить возможность опечатки.
+            +e.wrap
+            -
+              var changePass = [
+              {
+                label: 'Текущий пароль',
+                name:'current-password',
+                type: 'password'
+              },{
+                label: 'Новый пароль',
+                name:'new-password',
+                type: 'password'
+              },{
+                label: 'Повторите пароль',
+                name:'repeat-password',
+                type: 'password'
+              }]
+            each obj in changePass
+              +e.item
+                label= obj.label
+                +e.input-wrap
+                  +text-field(obj)
+          +button()._kind_red.save-changes-btn Сохранить изменения

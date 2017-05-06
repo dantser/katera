@@ -1,15 +1,15 @@
 import $ from 'jquery';
 import 'jquery-ui-bundle';
+import makeItFixed from '../../scripts/common/make-it-fixed';
 
 export default () => {
-  const DIVISION_CLASS = '.division';
-  const DIVISION_ACTIVE_CLASS = 'division_active';
-
   const filter = $('.filter-sale');
 
   if (!filter) {
     return;
   }
+
+  makeItFixed('filter-sale', 'filter-sale_default', 'filter-sale_fixed', 991);
 
   // slider range
   const lengthSliderTextMin = $('.js-filter-sale-length-min');
@@ -30,15 +30,6 @@ export default () => {
 
   lengthSliderTextMin.text(`${lengthRangleSlider.slider('values', 0)} м`);
   lengthSliderTextMax.text(`${lengthRangleSlider.slider('values', 1)} м`);
-
-  filter.tabs({
-    activate: (event, ui) => {
-      const { newTab, oldTab } = ui;
-
-      oldTab.find(DIVISION_CLASS).removeClass(DIVISION_ACTIVE_CLASS);
-      newTab.find(DIVISION_CLASS).addClass(DIVISION_ACTIVE_CLASS);
-    },
-  });
 
   filter.find('.filter-sale__roll-down').on('click', (e) => {
     e.preventDefault();

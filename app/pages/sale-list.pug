@@ -1,0 +1,11 @@
+extends ../layouts/default
+include ../blocks/sale-raznoe/sale-list
+include ../blocks/branding/branding
+
+block head
+  - var pageTitle = 'Катера.RU - Предложения'
+
+block content
+  +branding()
+    +sale-list()
+

@@ -21,26 +21,26 @@ mixin account-profile()
               var contactInfo = [
               {
                 label: 'Имя',
-                id:'account-name',
+                name:'account-name',
                 type: 'text'
               },{
                 label: 'Номер телефона',
-                id:'account-phone',
+                name:'account-phone',
                 type: 'tel'
               },{
                 label: 'Email',
-                id:'account-email',
+                name:'account-email',
                 type: 'email'
               },{
                 label: 'Cайт',
-                id:'account-site',
+                name:'account-site',
                 type: 'text'
               }]
             each obj in contactInfo
               +e.item
-                label(for=obj.id)= obj.label
+                label= obj.label
                 +e.input-wrap
-                  +text-field({type: obj.type})(id=obj.id)
+                  +text-field(obj)
           +b.social-group
             +text()
               h3 Социальные сети
@@ -101,20 +101,20 @@ mixin account-profile()
               var changePass = [
               {
                 label: 'Текущий пароль',
-                id:'current-password',
+                name:'current-password',
                 type: 'password'
               },{
                 label: 'Новый пароль',
-                id:'new-password',
+                name:'new-password',
                 type: 'password'
               },{
                 label: 'Повторите пароль',
-                id:'repeat-password',
+                name:'repeat-password',
                 type: 'password'
               }]
             each obj in changePass
               +e.item
-                label(for=obj.id)= obj.label
+                label= obj.label
                 +e.input-wrap
-                  +text-field({type: obj.type})(id=obj.id)
+                  +text-field(obj)
           +button()._kind_red.save-changes-btn Сохранить изменения

@@ -1,0 +1,8 @@
+extends ../layouts/default
+include ../blocks/account-profile-jur/account-profile-jur
+
+block head
+  - var pageTitle = 'Катера.RU - Личный кабинет'
+
+block content
+  +account-profile-jur()
