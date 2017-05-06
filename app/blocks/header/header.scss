@@ -4,6 +4,10 @@
   height: 175px;
   background-color: $color-white;
 
+  @include respond-to('laptop') {
+    padding: 0 15px;
+  }
+
   @include respond-to('tablet') {
     height: 35px;
   }
