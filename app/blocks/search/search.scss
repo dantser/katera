@@ -1,8 +1,34 @@
 .search {
   display: block;
 
-  .submenu {
-    justify-content: space-around;
+  &__submenu {
+    padding-left: 210px;
+    padding-right: 285px;
+    border-bottom: 1px solid #e5e5e5;
+
+    .submenu {
+      border: 0;
+    }
+
+    @include respond-to('large-desktop') {
+      padding-left: 320px;
+      padding-right: 427.5px;
+    }
+
+    @include respond-to('laptop') {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    @include respond-to('tablet') {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include respond-to('mobile') {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   &__items {
@@ -11,6 +37,11 @@
     margin-top: 25px;
     padding-left: 210px;
     padding-right: 285px;
+
+    @include respond-to('large-desktop') {
+      padding-left: 320px;
+      padding-right: 427.5px;
+    }
 
     @include respond-to('laptop') {
       padding-left: 100px;

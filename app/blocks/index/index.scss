@@ -54,7 +54,7 @@
     }
 
     @include respond-to('mobile') {
-      flex-basis: 100%;
+      display: none;
     }
   }
 

@@ -5,8 +5,9 @@ export default () => {
   const SHOW_ELEMENT_AT = 200;
 
   const btn = $(ELEMENT_CLASS);
+  const w = $(window);
 
-  if (!btn) {
+  if (!btn || w.width() <= 991) {
     return;
   }
 
@@ -18,7 +19,6 @@ export default () => {
   }
 
   const footer = $('.footer');
-  const w = $(window);
 
   w.on('scroll', function (e) { // eslint-disable-line
     const scrollTop = w.scrollTop();
