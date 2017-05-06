@@ -11,6 +11,7 @@
 }
 
 .articles-grid {
+
   .col_three {
     @include respond-to(mobile) {
       width: 100%;

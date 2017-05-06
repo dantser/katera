@@ -566,7 +566,6 @@
       }
 
       .article-preview {
-
         @include respond-to('tablet') {
           border-bottom: none;
           min-height: inherit;
