@@ -84,6 +84,10 @@
       margin-bottom: 27px;
     }
 
+    @include respond-to('large-desktop') {
+      width: calc(25% - 40px);
+    }
+
     &-info {
       display: flex;
       justify-content: space-between;
