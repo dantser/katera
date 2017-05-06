@@ -53,11 +53,23 @@
   &__li {
     flex-grow: 1;
     text-align: center;
+    position: relative;
 
     &:focus {
       outline: 0;
       box-shadow: none;
     }
+  }
+
+  &__count {
+    font-size: 80px;
+    color: $color-white;
+    text-shadow: 0 10px 20px rgba(153, 153, 153, .3);
+    font-family: $NerisBlack;
+    position: absolute;
+    left: 30px;
+    line-height: .7;
+    top: 0;
   }
 
   &__link {
@@ -85,6 +97,10 @@
   }
 
   .ui-state-active {
+
+    .catalog-yacht__count {
+      text-shadow: 0 10px 20px rgba(181, 53, 31, .3);
+    }
 
     .catalog-yacht__link {
 

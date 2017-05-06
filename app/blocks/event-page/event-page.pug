@@ -50,6 +50,7 @@ mixin event-page()
           +e.inner-content._comments
             +comments(getData('comments'))
           +e('h2').slider-head Другие мероприятия
-          +e.slider._white.swiper-container
-            +event-item(getData('event-item')).__white.wrapper.swiper-wrapper
+        +e.slider._white.swiper-container
+          +event-item(getData('event-item')).__white.wrapper.swiper-wrapper
+          +e.swiper-pagination._shop-slider-pagination
 

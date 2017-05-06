@@ -1,0 +1,8 @@
+extends ../layouts/default
+include ../blocks/account-messages-1/account-messages-1
+
+block head
+  - var pageTitle = 'Катера.RU - Личный кабинет'
+
+block content
+  +account-messages-1()
