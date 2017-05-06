@@ -25,6 +25,7 @@
   &__submenu.submenu {
     background-color: $color-dark-blue;
     border-bottom-color: $color-purple;
+    padding: 0 25px;
 
     @include respond-to('laptop') {
       display: none;
@@ -74,7 +75,7 @@
     font-family: $NerisBlack;
     line-height: 1.2;
     text-align: center;
-    text-shadow: 0px 10px 27px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 10px 27px rgba(0, 0, 0, .7);
 
     span {
       font-size: 24px;

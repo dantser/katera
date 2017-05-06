@@ -83,7 +83,7 @@
       line-height: 50px;
       color: $color-black;
       font-size: 24px;
-      font-weight: normal;
+      font-weight: 300;
       margin: 0;
     }
 
@@ -107,12 +107,12 @@
       justify-content: space-around;
 
       &_kind_red-border {
-       justify-content: center;
+        justify-content: center;
 
-       span {
-        display: inline-flex;
-        margin-right: 4px;
-       }
+        span {
+          display: inline-flex;
+          margin-right: 4px;
+        }
       }
     }
   }
@@ -155,7 +155,7 @@
     }
   }
 
-  &__journal-img{
+  &__journal-img {
     max-width: 100%;
     height: auto;
     display: block;

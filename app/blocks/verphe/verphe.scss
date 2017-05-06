@@ -128,10 +128,6 @@
     }
   }
 
-  &-contacts {
-    padding-bottom: 41px !important;
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -254,8 +250,7 @@
     }
   }
 
-  .models_sport,
-  .models_yacht {
+  .models_sport, .models_yacht {
     padding-bottom: 42px;
     border-bottom: 1px solid $color-light-gray;
 

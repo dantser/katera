@@ -220,7 +220,6 @@
   }
 
   .additional-filter-params__item {
-
     @include respond-to('desktop') {
       width: calc(33.33% - 30px);
     }

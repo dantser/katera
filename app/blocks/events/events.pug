@@ -8,7 +8,7 @@ mixin events()
     +container()
       +page-header('Мероприятия', ['Главная', 'Мероприятия'])
       +main-container().events__main-container
-        +submenu(getData('submenu')).__submenu
+        +submenu(getData('events')).__submenu
         +e.slider.swiper-container
           +e.swiper-pagination._shop-slider-pagination
           +e.wrapper.swiper-wrapper

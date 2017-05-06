@@ -6,9 +6,7 @@
     .scroll-slider {
 
       &__wrapper {
-        -webkit-margin-before: 0;
-        -webkit-padding-start: 0;
-        -webkit-margin-after: 0;
+        margin: 0;
       }
 
       &__image {
@@ -59,12 +57,6 @@
 
     .scroll-slider {
 
-      &__wrapper {
-        -webkit-margin-before: 0;
-        -webkit-padding-start: 0;
-        -webkit-margin-after: 9px;
-      }
-
       &__image {
         position: relative;
         flex: none;
@@ -114,9 +106,7 @@
 
       .scroll-slider {
 
-        &__name,
-        &__price,
-        &__option {
+        &__name, &__price, &__option {
           display: block;
         }
 
