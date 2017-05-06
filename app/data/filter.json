@@ -145,5 +145,14 @@
     "name": "bathroom",
     "value": 1,
     "checked": false
+  },
+  "category": {
+    "name": "category",
+    "options": [
+      { "value": 1, "title": "Аксессуары" },
+      { "value": 2, "title": "Гидроциклы" },
+      { "value": 3, "title": "Катера" },
+      { "value": 4, "title": "Запчасти" }
+    ]
   }
 }

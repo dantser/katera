@@ -13,18 +13,20 @@ mixin sale-contacts(catalog)
         +list-item().list__item
           if catalog
             +e.img-wrap
-              +e.IMG.img(src="assets/images/canados.png")
+              a(href="#")
+                +e.IMG.img(src="assets/images/canados.png")
             +e.SPAN.about Верфь:
-              b Canados (Италия)
+              a(href="#") Canados (Италия)
             +e.SPAN.about Класс:
-              b Закрытые круизные яхты с хардтопом
+              a(href="#") Закрытые круизные яхты с хардтопом
           else
             +e.img-wrap
-              +e.IMG.img(src="assets/images/moreman.png")
+              a(href="#")
+                +e.IMG.img(src="assets/images/moreman.png")
             +e.SPAN.about Магазин:
-              b Мореман
+              a(href="#") Мореман
             +e.SPAN.about Местоположение:
-              b Новороссийск
+              a(href="#") Новороссийск
         +list-item().list__item
           if catalog
             +e.SPAN.price Цена по запросу

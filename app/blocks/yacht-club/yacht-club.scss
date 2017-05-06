@@ -50,6 +50,7 @@
 
     .submenu {
       padding-left: 400px;
+      padding-right: 30px;
     }
 
     @include respond-to('tablet') {
@@ -58,6 +59,28 @@
 
     @include respond-to('mobile') {
       display: none;
+    }
+
+    &_fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+      z-index: 999;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 15px;
+
+      .submenu {
+        border: none;
+        padding: 0 250px;
+
+        @include respond-to('large-desktop') {
+          padding-right: 400px;
+        }
+      }
     }
   }
 
