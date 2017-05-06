@@ -12,7 +12,8 @@ mixin search()
     +container()
       +page-header('Найдено 215 материалов', ['Главная', 'Поиск'])
       +main-container().main-container_shadow.magazine__main-container
-        +submenu(getData('submenu-search'))._default
+        +e.submenu
+          +submenu(getData('submenu-search'))
         +e.items
           - for (var i = 0; i < 2; i++)
             +e.item
