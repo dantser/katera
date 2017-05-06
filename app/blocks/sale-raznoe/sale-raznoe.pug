@@ -47,6 +47,6 @@ mixin sale-raznoe()
             +e.sidebar-list-item
               +sale-preview-item(getData('sale-preview-item'))
           +e.yacht-preview-widget
-            +yacht-preview-widget("Топ-10 яхт в продаже", getData('yacht-preview'), true)
+            +yacht-preview-widget("Топ-10 яхт в продаже", getData('yacht-preview'), true, true)
 
         +button()(data-target-modal='#filter-rest')._kind_red.__show-filter-btn.js-mobile-slide-popup Фильтр

@@ -202,10 +202,6 @@
       margin-right: 0;
     }
 
-    &:hover {
-      box-shadow: 0 0 25px 0 rgba(19, 11, 89, .14);
-    }
-
     .sale-preview-item {
       @include respond-to('mobile') {
         flex-direction: row;

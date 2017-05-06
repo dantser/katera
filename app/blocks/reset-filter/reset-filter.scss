@@ -44,6 +44,8 @@
 
   &__text {
     margin-left: 13px;
+    font-family: $NerisLight;
+    font-size: rem(14px);
     color: $color-gray;
     will-change: color;
     transition: color .25s ease-in-out;

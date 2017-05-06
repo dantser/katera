@@ -1,11 +1,18 @@
 .yacht-preview-widget {
   max-width: 263px;
-  padding-bottom: 20px;
+
+  &_has_btn {
+    padding-bottom: 20px;
+
+    .yacht-preview-widget__products {
+      padding-bottom: 40px;
+    }
+  }
 
   &__products {
     display: flex;
     flex-direction: column;
-    padding: 0 26px 40px;
+    padding: 0 26px 10px;
   }
 
   &__product {
