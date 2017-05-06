@@ -7,9 +7,10 @@ include ../list/list
 include ../text-field/text-field
 include ../select/select
 include ../button/button
-include ../upload-btn/upload-btn
+include ../upload-form/upload-form
 
 //- Оформить блоком list
+//- подключить svg маркеры
 mixin account-shop-2-page()
   +b.account-shop-2-page
     +container()
@@ -22,127 +23,120 @@ mixin account-shop-2-page()
 
         +e('form')(name='createMagazine' action='#').form
 
-          +e('section').section._create
-            +e('h3').title Создать магазин
-            +e('div').field
-              +e('span').caption Название
-              +e('div').input
-                +text-field({type: 'text', name: 'name', value: ''})
-            +e('div').field
-              +e('span').caption Раздел
-              +e('div').input
-                +select('section', [{ value: 1, title: 'Раздел 1' }, { value: 2, title: 'Раздел 2' }])
+          +list()._form
 
-          +e('section').section._about
-            +e('h3').title О компании
-            +e('div').field
-              +e('textarea')(name='description').textarea
-            +e('div').field
-              +e('span').caption Добавить фотографии
-              +e('div').input
-                | Блок Прикрепить Олега
-            +e('div').field
-              +e('span').caption Добавить видео
-              +e('div').input
-                | Блок Прикрепить Олега
+            +list-item()._create
+              h3.title Создать магазин
+              .field
+                span.caption Название
+                .input
+                  +text-field({type: 'text', name: 'name', value: ''})
+              .field
+                span.caption Раздел
+                .input
+                  +select('section', [{ value: 1, title: 'Раздел 1' }, { value: 2, title: 'Раздел 2' }])
 
-          +e('section').section._contacts
-            +e('h3').title Контакты
-            +e('div').field
-              +e('span').caption Адрес
-              +e('div').input
-                +text-field({type: 'text', name: 'address', value: ''})
-            +e('div').field
-              +e('span').caption Телефон
-              +e('div').input
-                +text-field({type: 'text', name: 'phone', value: ''})
-            +e('div').field
-              +e('span').caption Email
-              +e('div').input
-                +text-field({type: 'text', name: 'email', value: ''})
-            +e('div').field
-              +e('span').caption Сайт
-              +e('div').input
-                +text-field({type: 'text', name: 'site', value: ''})
+            +list-item()._about
+              h3.title О компании
+              .field
+                textarea(name='description').textarea
+              .field
+                +upload-form('Добавить фотографию', 'Вы можете прикрепить не более 20 фотогрфий')
+              .field
+                +upload-form('Добавить видео', 'Формат видео: MP4, AVI, QuickTime')
 
-          +e('section').section._tariffs
-            +e('h3').title Тарифы
-            +e('div').types
+            +list-item().contacts
+              h3.title Контакты
+              .field
+                span.caption Адрес
+                .input
+                  +text-field({type: 'text', name: 'address', value: ''})
+              .field
+                span.caption Телефон
+                .input
+                  +text-field({type: 'text', name: 'phone', value: ''})
+              .field
+                span.caption Email
+                .input
+                  +text-field({type: 'text', name: 'email', value: ''})
+              .field
+                span.caption Сайт
+                .input
+                  +text-field({type: 'text', name: 'site', value: ''})
 
-              +e('label').type
-                +e('input')(type='radio' name='subscribe-type' value='1' checked='true').control
-                +e('div').box
-                  +e('div').box-title
-                    +icon('subscribe-type-default').icon._default
-                    +e.info
-                      +e.text._period 3 месяца
-                      +e.text._price 800 Р
-                  +e('ul').options
-                    +e('li').option._active Персональная страница
-                    +e('li').option Мультиплатформа
-                    +e('li').option Создание полной информации о компании
-                    +e('li').option Автозагрузка объявлений
-                    +e('li').option Личный менеджер
-                    +e('li').option Оформление страницы компании и обхявлений в поиске
-                    +e('li').option Выделенная круглосуточная поддержка
+            +list-item()._tariffs
+              h3.title Тарифы
+              .types
 
-              +e('label').type
-                +e('input')(type='radio' name='subscribe-type' value='2').control
-                +e('div').box
-                  +e('div').box-title
-                    +icon('subscribe-type-express').icon._express
-                    +e.info
-                      +e.text._period 6 месяцец
-                      +e.text._price 1300 Р
-                  +e('ul').options
-                    +e('li').option._active Персональная страница
-                    +e('li').option._active Мультиплатформа
-                    +e('li').option._active Создание полной информации о компании
-                    +e('li').option._active Автозагрузка объявлений
-                    +e('li').option._active Личный менеджер
-                    +e('li').option._active Оформление страницы компании и обхявлений в поиске
-                    +e('li').option Выделенная круглосуточная поддержка
+                label.type
+                  input(type='radio' name='subscribe-type' value='1' checked='true').control
+                  .box
+                    .box-title
+                      +icon('subscribe-type-default').icon.icon_default
+                      .info
+                        .text.text_period 3 месяца
+                        .text.text_price 800 Р
+                    ul.options
+                      li.option.option_active Персональная страница
+                      li.option Мультиплатформа
+                      li.option Создание полной информации о компании
+                      li.option Автозагрузка объявлений
+                      li.option Личный менеджер
+                      li.option Оформление страницы компании и обхявлений в поиске
+                      li.option Выделенная круглосуточная поддержка
 
-              +e('label').type
-                +e('input')(type='radio' name='subscribe-type' value='3').control
-                +e('div').box
-                  +e('div').box-title
-                    +icon('subscribe-type-turbo').icon._turbo
-                    +e.info
-                      +e.text._period 12 месяцев
-                      +e.text._price 2550 Р
-                  +e('ul').options
-                    +e('li').option._active Персональная страница
-                    +e('li').option._active Мультиплатформа
-                    +e('li').option._active Создание полной информации о компании
-                    +e('li').option._active Автозагрузка объявлений
-                    +e('li').option._active Личный менеджер
-                    +e('li').option._active Оформление страницы компании и обхявлений в поиске
-                    +e('li').option._active Выделенная круглосуточная поддержка
+                label.type
+                  input(type='radio' name='subscribe-type' value='2').control
+                  .box
+                    .box-title
+                      +icon('subscribe-type-express').icon.icon_express
+                      .info
+                        .text.text_period 6 месяцец
+                        .text.text_price 1300 Р
+                    ul.options
+                      li.option.option_active Персональная страница
+                      li.option.option_active Мультиплатформа
+                      li.option.option_active Создание полной информации о компании
+                      li.option.option_active Автозагрузка объявлений
+                      li.option.option_active Личный менеджер
+                      li.option.option_active Оформление страницы компании и обхявлений в поиске
+                      li.option Выделенная круглосуточная поддержка
 
-          +e('section').section._design
-            +e('h3').title Оформление
-            +e('div').download
-              | Блок Скачать пример
-            +e('div').field
-              +e('span').caption Header
-              +e('div').input
-                | Блок Прикрепить Олега
-            +e('div').field
-              +e('span').caption Backround image
-              +e('div').input
-                | Блок Прикрепить Олега
-            +e('div').field
-              +e('span').caption Pattern
-              +e('div').input
-                | Блок Прикрепить Олега
-            +e('div').field
-              +e('span').caption Фото для слайдера
-              +e('div').input
-                | Блок Прикрепить Олега
+                label.type
+                  input(type='radio' name='subscribe-type' value='3').control
+                  .box
+                    .box-title
+                      +icon('subscribe-type-turbo').icon.icon_turbo
+                      .info
+                        .text.text_period 12 месяцев
+                        .text.text_price 2550 Р
+                    ul.options
+                      li.option.option_active Персональная страница
+                      li.option.option_active Мультиплатформа
+                      li.option.option_active Создание полной информации о компании
+                      li.option.option_active Автозагрузка объявлений
+                      li.option.option_active Личный менеджер
+                      li.option.option_active Оформление страницы компании и обхявлений в поиске
+                      li.option.option_active Выделенная круглосуточная поддержка
 
-          +e('section').submit
-            +button()
-              | Создать магазин 1090 Р
-            +e('span').note
-              | Магазин будет размещен на 60 дней
+            +list-item()._disign
+              h3.title Оформление
+              .download
+                .zip
+                  +icon('zip')
+                span.ex Скачать пример
+                span.note 10 МБ, файл с разметкой и примером оформления
+              .field
+                +upload-form('Header')
+              .field
+                +upload-form('Background image')
+              .field
+                +upload-form('Pattern')
+              .field
+                +upload-form('Фото для слайдера', 'Вы можете прикрепить не более 20 фотогрфий')
+
+            +list-item()._submit
+              +button(true)._kind_red
+                | Создать магазин 1090 Р
+              span.note
+                | Магазин будет размещен на 60 дней
