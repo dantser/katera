@@ -72,7 +72,7 @@
       justify-content: space-between;
       margin-bottom: 62px;
 
-      @include respond-to('tablet') {
+/*      @include respond-to('tablet') {
         padding: 0;
         justify-content: space-around;
       }
@@ -80,7 +80,7 @@
       @include respond-to('mobile') {
         flex-direction: column;
         padding: 0 15px;
-      }
+      }*/
     }
 
     .type {
@@ -88,36 +88,34 @@
       cursor: pointer;
       width: 31%;
 
-      @include respond-to('mobile') {
+/*      @include respond-to('mobile') {
         width: 100%;
 
         &:not(:last-child) {
           margin-bottom: 20px;
         }
-      }
+      }*/
     }
 
     .control {
       display: none;
 
-      &:checked + .account-shop-2-page {
+      &:checked {
 
-        .box {
+        & + .box {
+
           box-shadow: 0 10px 20px 0 rgba(181, 53, 31, .3);
 
-          .account-shop-2-page {
+          .icon {
+            fill: $color-red;
+          }
 
-            .icon {
-              fill: $color-red;
-            }
+          .text_period {
+            color: $color-black;
+          }
 
-            .text_period {
-              color: $color-black;
-            }
-
-            .text_price {
-              color: $color-red;
-            }
+          .text_price {
+            color: $color-red;
           }
         }
       }
@@ -185,9 +183,9 @@
       will-change: fill;
       transition: fill .25s ease-in-out;
 
-      @include respond-to('mobile') {
+/*      @include respond-to('mobile') {
         margin: 0;
-      }
+      }*/
 
       &_default {
         width: 72px;
@@ -214,15 +212,30 @@
 
     .option {
       display: block;
+      position: relative;
       padding: 0;
-      padding-left: 10px;
+      padding-left: 23px;
       line-height: 1em;
       color: $color-gray;
 
       &_active {
         position: relative;
         color: $color-black;
+
+        .mark {
+          display: block;
+        }
       }
+    }
+
+    .mark {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      stroke: $color-red;
     }
 
     .download {
