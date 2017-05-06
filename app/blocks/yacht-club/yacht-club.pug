@@ -24,7 +24,8 @@ mixin yacht-club()
           +icon('caret').icon._kind_caret
         +services()
         +e.slider.swiper-container
-          +e.H2.title_events.jqcontrol-events.title Мероприятия
+          +e.H2.title_events.jqcontrol-events.title 
+            span Мероприятия
             +icon('caret').icon._kind_caret
           +e.wrapper.swiper-wrapper
             +e.slide.swiper-slide
@@ -66,13 +67,16 @@ mixin yacht-club()
         +e.H2.title_gallery.jqcontrol Галерея
           +icon('caret').icon._kind_caret
         +e.gallery.swiper-container
-          +e.__gallery-slider.swiper-wrapper
+          +e.__gallery-slider
             +e.box-bg.swiper-slide
-              +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
+              a(href='assets/images/yacht-club/gallery-1.jpg')
+                +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
             +e.box-bg.swiper-slide
-              +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
+              a(href='assets/images/yacht-club/gallery-1.jpg')
+                +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
             +e.box-bg.swiper-slide
-              +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
+              a(href='assets/images/yacht-club/gallery-1.jpg')
+                +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
           +e.swiper-pagination
         +e.H2.title_contacts.jqcontrol Контакты
           +icon('caret').icon._kind_caret

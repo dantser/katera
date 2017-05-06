@@ -171,18 +171,24 @@
     background-color: $color-dark-blue;
     padding: 75px 0 120px 38px;
 
+    span {
+      margin-left: 15px;
+    }
+
     @include respond-to('tablet') {
       background-color: $color-white;
       padding: 0;
-      margin: 0 15px;
       padding-bottom: 34px;
     }
 
     @include respond-to('mobile') {
       background-color: $color-white;
       padding: 0;
-      margin: 0 15px;
       padding-bottom: 34px;
+    }
+
+    &_closed {
+      padding-bottom: 0 !important;
     }
   }
 
