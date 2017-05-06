@@ -24,16 +24,18 @@ mixin shop1()
         +e.link 
           +e('a')(href='#') Информация о магазине
         +main-slider(true)
-        +submenu(getData('submenu-short'))#tabs.shop1__submenu
-        +filter-shop()
-        +e.sort
-          +e.found  
-            +e('span').sort__output 126
-            +e('span') предложений
-          +e.price 
-            +e('span').filter__label Сортировать
-            - var filterData = getData('filter')
-              +select(filterData.priceSort.name, filterData.priceSort.options)
-        +shop-grid(getData('sale-preview-item-extended')).shop1__grid
-        +button()._rounded._kind_red.__show-more Показать еще
-        +shop2-page()
+        +e.tabs#shopTabs
+          +submenu(getData('submenu-shop')).shop1__submenu
+          +e#shop-1
+            +filter-shop()
+            +e.sort
+              +e.found  
+                +e('span').sort__output 126
+                +e('span') предложений
+              +e.price 
+                +e('span').filter__label Сортировать
+                - var filterData = getData('filter')
+                  +select(filterData.priceSort.name, filterData.priceSort.options)
+            +shop-grid(getData('sale-preview-item-extended')).shop1__grid
+            +button()._rounded._kind_red.__show-more Показать еще
+          +shop2-page()#shop-2

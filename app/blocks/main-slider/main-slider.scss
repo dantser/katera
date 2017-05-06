@@ -80,7 +80,8 @@
       border-radius: 100%;
       cursor: pointer;
       transition: .25s ease-in-out;
-      background: transparent;
+      background: $color-white;
+      opacity: 1;
 
       &-active {
         border-width: 3px;
@@ -88,6 +89,7 @@
     }
 
     &_shop-slider-pagination {
+      bottom: 5px;
 
       .swiper-pagination-bullet {
         border-color: $color-dark-blue;
