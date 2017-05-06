@@ -7,16 +7,28 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
   }
 
   .account-navigation {
     flex: none;
     width: 31.5%;
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
 
   &__form {
     flex: none;
     width: 65.8%;
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
 
     & > .list_form {
       background-color: $color-white;
@@ -28,9 +40,60 @@
         margin: 0;
         color: $color-black;
         background-color: $color-white;
+        padding-bottom: 24px;
+        padding-top: 39px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba($color-gray, .15);
+        }
+
+        &:first-child {
+          padding-top: 0
+        }
+
+        @media (max-width: 991px) {
+          margin: 0 auto;
+        }
+
+        @include respond-to('mobile') {
+          width: 100%;
+        }
+
+        &_offers {
+          .title {
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba($color-gray, .15);
+          }
+        }
 
         &_tariffs {
           width: 100%;
+
+          @include respond-to('tablet') {
+            width: 555px;
+          }
+
+          @include respond-to('mobile') {
+            width: 100%;
+          }
+
+          .button-slide {
+            width: 165px;
+            height: 40px;
+            margin-bottom: 54px;
+
+            @include respond-to('tablet') {
+              width: 100%;
+            }
+
+            @include respond-to('mobile') {
+              width: 100%;
+            }
+
+            .button__icon {
+              margin-left: 8px;
+            }
+          }
         }
       }
     }
@@ -38,11 +101,21 @@
     .title {
       font-size: 24px;
       line-height: 1em;
+      margin: 0;
+      margin-bottom: 13px;
+    }
+
+    .description {
+      display: block;
+      margin: 0;
+      line-height: 24px;
+      margin-bottom: 30px;
     }
 
     .field {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 23px;
 
       &.results {
         flex-direction: column;
@@ -51,14 +124,51 @@
     }
 
     .input {
+      position: relative;
       height: 38px;
 
-      .text-field {
+      .text {
+        height: 100%;
         width: 360px;
+        outline: none;
+        border-radius: 3px;
+        font-size: 14px;
+        text-align: left;
+        border: 1px solid $color-gray;
+        padding-left: 40px;
+
+        @include respond-to('mobile') {
+          width: 100%;
+        }
       }
     }
 
+    .offers-text {
+      position: relative;
+
+      .magnifier {
+        position: absolute;
+        display: block;
+        top: calc(50% - 9.5px);;
+        left: 10px;
+        width: 19px;
+        height: 18px;
+        stroke: $color-gray;
+        fill: $color-white;
+      }
+    }
+
+    .sortby-status {
+
+    }
+
     .sortby-params {
+      border-bottom: 1px solid rgba($color-gray, .15);
+
+      .count .value {
+        color: $color-red;
+        font-weight: 900;
+      }
 
       .sort {
         display: flex;
@@ -67,6 +177,11 @@
         .caption {
           margin-right: 15px;
         }
+
+        .select {
+          width: 165px;
+          height: 30px;
+        }
       }
     }
 
@@ -74,6 +189,19 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+
+      @include respond-to('mobile') {
+        flex-direction: column;
+      }
+
+      .offers-text {
+
+      }
+
+      .button {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
     }
 
     .types {
@@ -81,7 +209,7 @@
       justify-content: space-between;
       margin-bottom: 62px;
 
-/*      @include respond-to('tablet') {
+      @include respond-to('tablet') {
         padding: 0;
         justify-content: space-around;
       }
@@ -89,7 +217,7 @@
       @include respond-to('mobile') {
         flex-direction: column;
         padding: 0 15px;
-      }*/
+      }
     }
 
     .type {
@@ -98,18 +226,19 @@
       cursor: pointer;
       width: 31%;
 
-/*      @include respond-to('mobile') {
+      @include respond-to('mobile') {
         width: 100%;
 
         &:not(:last-child) {
           margin-bottom: 20px;
         }
-      }*/
+      }
     }
 
     .box {
+      position: relative;
       width: 100%;
-      padding: 15px;
+      padding: 27px;
       box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
       will-change: box-shadow;
       transition: box-shadow .25s ease-in-out;
@@ -131,6 +260,19 @@
         }
 
         /*box-shadow: 0 0 20px 0 rgba(19, 11, 89, .14);*/
+
+        .button {
+          display: block;
+        }
+      }
+
+      .button {
+        display: none;
+        position: absolute;
+        width: 165px;
+        height: 40px;
+        transform: translate(-50%);
+        left: 50%;
       }
     }
 
@@ -138,10 +280,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-height: 175px;
+      min-height: 125px;
+      margin-bottom: 42px;
 
-  /*    @include respond-to('tablet') {
-        width: 200px;
+      @include respond-to('tablet') {
         min-height: 145px;
       }
 
@@ -152,7 +294,7 @@
         align-items: center;
         min-height: 0;
         padding: 15px;
-      }*/
+      }
     }
 
     .info {
@@ -184,9 +326,9 @@
       will-change: fill;
       transition: fill .25s ease-in-out;
 
-/*      @include respond-to('mobile') {
+      @include respond-to('mobile') {
         margin: 0;
-      }*/
+      }
 
       &_default {
         width: 72px;
@@ -208,6 +350,8 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      font-size: 14px;
+      line-height: em(22px);
     }
 
     .option {
@@ -215,8 +359,9 @@
       position: relative;
       padding: 0;
       padding-left: 23px;
-      line-height: 1em;
+      line-height: 1.4em;
       color: $color-gray;
+      margin-bottom: 30px;
 
       &_active {
         position: relative;
@@ -231,7 +376,7 @@
     .mark {
       display: none;
       position: absolute;
-      top: 0;
+      top: 3px;
       left: 0;
       width: 1em;
       height: 1em;
@@ -246,9 +391,42 @@
       & .result-item {
         display: flex;
         justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba($color-gray, .15);
+
+        @include respond-to('mobile') {
+          flex-direction: column;
+        }
+
+        & .preview {
+          & .sale-preview-item {
+            &__params {
+              @include respond-to('mobile') {
+                display: none;
+              }
+            }
+
+            &__img-wrap {
+              @include respond-to('mobile') {
+                width: 48%;
+                height: 200px;
+              }
+            }
+          }
+        }
 
         & .actions {
           width: 53.4%;
+
+          @include respond-to('mobile') {
+            width: auto;
+          }
+
+          & .proposal-actions {
+            @include respond-to('mobile') {
+              padding: 0;
+            }
+          }
         }
       }
     }

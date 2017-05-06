@@ -26,88 +26,101 @@ mixin account-shop-3-page()
             +list()._form
 
               +list-item()._tariffs
-                  h3.title Тарифы
-                  .types
+                h3.title Тарифы
+                p.description
+                  | Описание работы, приобретение и продление тарифов. Для того, чтобы на сайте было размещено более одного объявления одновременно, вы можете воспользоваться наиболее выгодным для Вас пакетом услуг.
+                .types
 
-                    a(href='#').type
-                      .box
-                        .box-title
-                          +icon('subscribe-type-default').icon.icon_default
-                          .info
-                            .text.text_period 3 месяца
-                            .text.text_price 800 Р
-                        ul.options
-                          li.option.option_active Персональная страница
-                            +icon('mark', true).mark
-                          li.option Мультиплатформа
-                            +icon('mark', true).mark
-                          li.option Создание полной информации о компании
-                            +icon('mark', true).mark
-                          li.option Автозагрузка объявлений
-                            +icon('mark', true).mark
-                          li.option Личный менеджер
-                            +icon('mark', true).mark
-                          li.option Оформление страницы компании и обхявлений в поиске
-                            +icon('mark', true).mark
-                          li.option Выделенная круглосуточная поддержка
-                            +icon('mark', true).mark
+                  a(href='#').type
+                    .box
+                      .box-title
+                        +icon('subscribe-type-default').icon.icon_default
+                        .info
+                          .text.text_period 3 месяца
+                          .text.text_price 800 Р
+                      ul.options
+                        li.option.option_active Персональная страница для объявлений
+                          +icon('mark', true).mark
+                        li.option Мультиплатформа
+                          +icon('mark', true).mark
+                        li.option Создание полной информации о компании
+                          +icon('mark', true).mark
+                        li.option Автозагрузка объявлений
+                          +icon('mark', true).mark
+                        li.option Личный менеджер
+                          +icon('mark', true).mark
+                        li.option Оформление страницы компании и обхявлений в поиске
+                          +icon('mark', true).mark
+                        li.option Выделенная круглосуточная поддержка
+                          +icon('mark', true).mark
+                      +button()._rounded._kind_red._shadow
+                        | Купить
 
-                    a(href='#').type
-                      .box
-                        .box-title
-                          +icon('subscribe-type-express').icon.icon_express
-                          .info
-                            .text.text_period 6 месяцец
-                            .text.text_price 1300 Р
-                        ul.options
-                          li.option.option_active Персональная страница
-                            +icon('mark', true).mark
-                          li.option.option_active Мультиплатформа
-                            +icon('mark', true).mark
-                          li.option.option_active Создание полной информации о компании
-                            +icon('mark', true).mark
-                          li.option.option_active Автозагрузка объявлений
-                            +icon('mark', true).mark
-                          li.option.option_active Личный менеджер
-                            +icon('mark', true).mark
-                          li.option.option_active Оформление страницы компании и обхявлений в поиске
-                            +icon('mark', true).mark
-                          li.option Выделенная круглосуточная поддержка
-                            +icon('mark', true).mark
+                  a(href='#').type
+                    .box
+                      .box-title
+                        +icon('subscribe-type-express').icon.icon_express
+                        .info
+                          .text.text_period 6 месяцец
+                          .text.text_price 1300 Р
+                      ul.options
+                        li.option.option_active Персональная страница для объявлений
+                          +icon('mark', true).mark
+                        li.option.option_active Мультиплатформа
+                          +icon('mark', true).mark
+                        li.option.option_active Создание полной информации о компании
+                          +icon('mark', true).mark
+                        li.option.option_active Автозагрузка объявлений
+                          +icon('mark', true).mark
+                        li.option.option_active Личный менеджер
+                          +icon('mark', true).mark
+                        li.option.option_active Оформление страницы компании и обхявлений в поиске
+                          +icon('mark', true).mark
+                        li.option Выделенная круглосуточная поддержка
+                          +icon('mark', true).mark
+                      +button()._rounded._kind_red._shadow
+                        | Купить
 
-                    a(href='#').type
-                      .box
-                        .box-title
-                          +icon('subscribe-type-turbo').icon.icon_turbo
-                          .info
-                            .text.text_period 12 месяцев
-                            .text.text_price 2550 Р
-                        ul.options
-                          li.option.option_active Персональная страница
-                            +icon('mark', true).mark
-                          li.option.option_active Мультиплатформа
-                            +icon('mark', true).mark
-                          li.option.option_active Создание полной информации о компании
-                            +icon('mark', true).mark
-                          li.option.option_active Автозагрузка объявлений
-                            +icon('mark', true).mark
-                          li.option.option_active Личный менеджер
-                            +icon('mark', true).mark
-                          li.option.option_active Оформление страницы компании и обхявлений в поиске
-                            +icon('mark', true).mark
-                          li.option.option_active Выделенная круглосуточная поддержка
-                            +icon('mark', true).mark
+                  a(href='#').type
+                    .box
+                      .box-title
+                        +icon('subscribe-type-turbo').icon.icon_turbo
+                        .info
+                          .text.text_period 12 месяцев
+                          .text.text_price 2550 Р
+                      ul.options
+                        li.option.option_active Персональная страница для объявлений
+                          +icon('mark', true).mark
+                        li.option.option_active Мультиплатформа
+                          +icon('mark', true).mark
+                        li.option.option_active Создание полной информации о компании
+                          +icon('mark', true).mark
+                        li.option.option_active Автозагрузка объявлений
+                          +icon('mark', true).mark
+                        li.option.option_active Личный менеджер
+                          +icon('mark', true).mark
+                        li.option.option_active Оформление страницы компании и обхявлений в поиске
+                          +icon('mark', true).mark
+                        li.option.option_active Выделенная круглосуточная поддержка
+                          +icon('mark', true).mark
+                      +button()._rounded._kind_red._shadow
+                        | Купить
+                +button()._rounded.button-slide
+                  span Свернуть блок
+                  +icon('caret').icon._kind_caret._kind_caret-up._stroke_blue
+
 
               +list-item()._offers
                 h3.title Мои предложения
 
                 .field
                   form(name='offers_filter' action='#').offers-filter
-                    .input
+                    .input.offers-select
                       +select('category', [{ value: 1, title: 'Все категории' }, { value: 2, title: 'Категория 1' }, { value: 3, title: 'Категория 2' }])
-                    .input
-                      +text-field({type: 'text', name: 'offers_search', value: ''})
-                    .input
+                    .input.offers-text
+                      input(type='text' placeholder='Поиск по предложениям магазина').text
+                      +icon('magnifier', true).magnifier
+                    .input.offers-button
                       +button(true)._kind_red
                         | Показать
 
@@ -117,7 +130,7 @@ mixin account-shop-3-page()
                 .field.sortby-params
                   p.count
                     span.value 126
-                    | предложений
+                    | &nbsp;предложений
                   .sort
                     span.caption Сортировать
                     +select('sortby', [{ value: 1, title: 'по дате' }, { value: 2, title: 'по наименованию' }, { value: 3, title: 'по цене' }])
