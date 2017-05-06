@@ -12,7 +12,7 @@
   }
 
   .verphe-contacts {
-    padding: 25px 25px 35px;
+    padding: 25px 25px 41px;
     font-size: rem(16px);
     color: $color-white;
     font-family: $NerisLight;
@@ -147,8 +147,7 @@
       position: absolute;
       width: 152px;
       height: 40px;
-      transform: translateX(-50%);
-      left: 50%;
+      left: 65%;
       bottom: -55px;
 
       @include respond-to('tablet') {

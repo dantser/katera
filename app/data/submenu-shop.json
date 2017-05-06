@@ -1,5 +1,5 @@
 [
   { "path": "#shop-1", "title": "Предложения", "active": true },
   { "path": "#shop-2", "title": "О компании" },
-  { "path": "#", "title": "Контакты" }
+  { "path": "#shop-3", "title": "Контакты" }
 ]
