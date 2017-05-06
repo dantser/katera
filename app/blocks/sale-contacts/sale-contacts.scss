@@ -2,7 +2,6 @@
   width: 360px;
   z-index: 10;
   box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
-  padding-bottom: 20px;
 
   @include respond-to('tablet') {
     width: 100%;
@@ -155,7 +154,9 @@
         padding-bottom: 20px;
       }
 
-      b {
+      a {
+        text-decoration: none;
+        color: $color-white;
         font-family: $NerisSemiBold;
       }
     }
@@ -228,6 +229,10 @@
       height: 40px;
       border: 1px solid $color-white;
       margin: 23px 0 13px;
+
+      &:hover {
+        border: none;
+      }
 
       @include respond-to('tablet') {
         max-width: 290px;

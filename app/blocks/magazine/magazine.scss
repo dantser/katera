@@ -17,6 +17,7 @@
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    border-bottom: 1px solid $color-light-gray;
 
     @include respond-to('mobile') {
       height: 40px;
@@ -80,5 +81,9 @@
     width: auto;
     min-width: 165px;
     height: 40px;
+  }
+
+  .submenu {
+    border: none;
   }
 }

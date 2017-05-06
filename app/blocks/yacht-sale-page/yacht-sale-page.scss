@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     padding: 38px 25px 49px;
-    border-bottom: 1px solid $color-gray;
+    border-bottom: 1px solid $color-light-gray;
 
     @include respond-to('mobile') {
       flex-direction: column;
@@ -150,7 +150,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 25px;
-    border-bottom: 1px solid $color-gray;
+    border-bottom: 1px solid $color-light-gray;
 
     @include respond-to('mobile') {
       flex-direction: column;

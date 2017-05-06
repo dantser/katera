@@ -15,7 +15,6 @@ export default () => {
     slideToClickedSlide: true,
     scrollbarDraggable: true,
     scrollbar: '.scroll-slider__scrollbar',
-    centeredSlides: true,
     scrollbarHide: false,
   });
   galleryTop.params.control = galleryThumbs;
