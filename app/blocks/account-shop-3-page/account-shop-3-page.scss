@@ -1,0 +1,256 @@
+.account-shop-3-page {
+  display: block;
+  padding-bottom: 50px;
+  background-color: $color-white;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .account-navigation {
+    flex: none;
+    width: 31.5%;
+  }
+
+  &__form {
+    flex: none;
+    width: 65.8%;
+
+    & > .list_form {
+      background-color: $color-white;
+      box-shadow: none;
+
+      & > .list__item {
+        width: 100%;
+        font-size: 16px;
+        margin: 0;
+        color: $color-black;
+        background-color: $color-white;
+
+        &_tariffs {
+          width: 100%;
+        }
+      }
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 1em;
+    }
+
+    .field {
+      display: flex;
+      justify-content: space-between;
+
+      &.results {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+
+    .input {
+      height: 38px;
+
+      .text-field {
+        width: 360px;
+      }
+    }
+
+    .sortby-params {
+
+      .sort {
+        display: flex;
+        justify-content: space-between;
+
+        .caption {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .offers-filter {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .types {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 62px;
+
+/*      @include respond-to('tablet') {
+        padding: 0;
+        justify-content: space-around;
+      }
+
+      @include respond-to('mobile') {
+        flex-direction: column;
+        padding: 0 15px;
+      }*/
+    }
+
+    .type {
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+      width: 31%;
+
+/*      @include respond-to('mobile') {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }*/
+    }
+
+    .box {
+      width: 100%;
+      padding: 15px;
+      box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+      will-change: box-shadow;
+      transition: box-shadow .25s ease-in-out;
+
+      &:hover {
+
+        box-shadow: 0 10px 20px 0 rgba(181, 53, 31, .3);
+
+        .icon {
+          fill: $color-red;
+        }
+
+        .text_period {
+          color: $color-black;
+        }
+
+        .text_price {
+          color: $color-red;
+        }
+
+        /*box-shadow: 0 0 20px 0 rgba(19, 11, 89, .14);*/
+      }
+    }
+
+    .box-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 175px;
+
+  /*    @include respond-to('tablet') {
+        width: 200px;
+        min-height: 145px;
+      }
+
+      @include respond-to('mobile') {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 0;
+        padding: 15px;
+      }*/
+    }
+
+    .info {
+      display: block;
+      margin-top: auto;
+    }
+
+    .text {
+      display: block;
+      font-size: rem(18px);
+      color: $color-dark-blue;
+      text-align: center;
+      line-height: (28 / 18) * 1;
+      will-change: color;
+      transition: color .25s ease-in-out;
+
+      &_period {
+        font-family: $NerisSemiBold;
+      }
+
+      &_price {
+        font-family: $NerisBlack;
+      }
+    }
+
+    .icon {
+      margin: auto;
+      fill: $color-dark-blue;
+      will-change: fill;
+      transition: fill .25s ease-in-out;
+
+/*      @include respond-to('mobile') {
+        margin: 0;
+      }*/
+
+      &_default {
+        width: 72px;
+        height: 34px;
+      }
+
+      &_express {
+        width: 60px;
+        height: 60px;
+      }
+
+      &_turbo {
+        width: 93px;
+        height: 34px;
+      }
+    }
+
+    .options {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .option {
+      display: block;
+      position: relative;
+      padding: 0;
+      padding-left: 23px;
+      line-height: 1em;
+      color: $color-gray;
+
+      &_active {
+        position: relative;
+        color: $color-black;
+
+        .mark {
+          display: block;
+        }
+      }
+    }
+
+    .mark {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      stroke: $color-red;
+    }
+
+    .result {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      & .result-item {
+        display: flex;
+        justify-content: space-between;
+
+        & .actions {
+          width: 53.4%;
+        }
+      }
+    }
+  }
+}
