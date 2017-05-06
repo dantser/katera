@@ -72,10 +72,11 @@
     p {
       line-height: 22px;
       margin: 10px 0;
+    }
 
-      .bit-letter {
-        padding-left: 100px;
-      }
+    .big-letter {
+      padding-left: 100px;
+      min-height: 90px;
     }
 
     span {
