@@ -6,6 +6,12 @@
   padding-bottom: 24px;
   justify-content: space-between;
 
+  @include respond-to('tablet') {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 35px;
+  }
+
   @include respond-to('mobile') {
     flex-direction: column;
     align-items: flex-start;
@@ -15,6 +21,10 @@
   &__label {
     font-size: 1rem;
     flex: 0 0 195px;
+
+    @include respond-to('tablet') {
+      flex-basis: auto;
+    }
 
     @include respond-to('mobile') {
       flex-basis: auto;
