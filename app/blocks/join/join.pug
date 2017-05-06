@@ -18,11 +18,13 @@ mixin join()
                 +e('a href="#"').entrance-link Вход
               .form__row
                 .left
-                  +radio({name: 'selection', value: '1', checked: 'checked'})
-                  +e('span').label Частное лицо
+                  +e('label')
+                    +radio({name: 'selection', value: '1', checked: 'checked'})
+                    +e('span').label Частное лицо
                 .right
-                  +radio({name: 'selection', value: '2'})
-                  +e('span').label Компания
+                  +e('label')
+                    +radio({name: 'selection', value: '2'})
+                    +e('span').label Компания
             +e('fieldset').fieldset.fieldset-two
               .form__row
                 +e('span').label Имя
@@ -57,11 +59,13 @@ mixin join()
                 +e('a href="#"').entrance-link Вход
               .form__row
                 .left
-                  +radio({name: 'selection', value: '1'})
-                  +e('span').label Частное лицо
+                  +e('label')
+                    +radio({name: 'selection', value: '1', checked: 'checked'})
+                    +e('span').label Частное лицо
                 .right
-                  +radio({name: 'selection', value: '2'})
-                  +e('span').label Компания
+                  +e('label')
+                    +radio({name: 'selection', value: '2'})
+                    +e('span').label Компания
             +e('fieldset').fieldset.fieldset-two
               .form__row
                 +e('span').label Название компании
