@@ -1,0 +1,75 @@
+include ../button/button
+include ../page-header/page-header
+include ../account-navigation/account-navigation
+include ../submenu/submenu
+include ../checkbox/checkbox
+include ../upload-btn/upload-btn
+include ../text-field/text-field
+include ../select/select
+include ../upload-form/upload-form
+include ../sale-preview-item/sale-preview-item
+
+mixin account-messages-1()
+  +b.account-messages-1&attributes(attributes)
+    +container()
+      +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
+      +e.grid-container
+        +e.col-nav
+          +account-navigation(getData('account-navigation'))
+        +e.col-page
+          +e.heading
+            +checkbox({checked: false})._circle.__checkbox
+            +button()._rounded._kind_blue-border._right Спам
+            +button()._rounded._kind_blue-border._right Удалить
+            +e.messages
+              +e('span') Показать
+              - var msg = getData('account-message')
+                +select(msg.msg.name, msg.msg.options).
+          +e.message-container
+            +checkbox({checked: false})._circle.__checkbox
+            +e.message-content
+              +e.message-name Михаил Владиславович
+              +e.message-heading Silver Fox SC 485, 1470000 Р
+              +e.message-text Заинтерисовало Ваше предложение. Возможен ли тогр или обмена на моторную лодку серии 13456, 2004 года выпаска? Или на совершенно новый катер 4555
+            +e.message-props
+              +e.message-date 18.02.2017 21:00
+              +e.message-request
+                +e('a')(href="#").request
+                  +e('span') Ответить
+                  +icon('arrow-next').icon.__request-icon
+          +e.message-container
+            +checkbox({checked: true})._circle.__checkbox
+            +e.message-content
+              +e.message-name Михаил Владиславович
+              +e.message-heading Silver Fox SC 485, 1470000 Р
+              +e.message-text Заинтерисовало Ваше предложение. Возможен ли тогр или обмена на моторную лодку серии 13456, 2004 года выпаска? Или на совершенно новый катер 4555
+            +e.message-props
+              +e.message-date 18.02.2017 21:00
+              +e.message-request
+                +e('a')(href="#").request
+                  +e('span') Ответить
+                  +icon('arrow-next').icon.__request-icon
+          +e.message-container
+            +checkbox({checked: true})._circle.__checkbox
+            +e.message-content
+              +e.message-name Михаил Владиславович
+              +e.message-heading Silver Fox SC 485, 1470000 Р
+              +e.message-text Заинтерисовало Ваше предложение. Возможен ли тогр или обмена на моторную лодку серии 13456, 2004 года выпаска? Или на совершенно новый катер 4555
+            +e.message-props
+              +e.message-date 18.02.2017 21:00
+              +e.message-request
+                +e('a')(href="#").request
+                  +e('span') Ответить
+                  +icon('arrow-next').icon.__request-icon
+          +e.message-container
+            +checkbox({checked: false})._circle.__checkbox
+            +e.message-content
+              +e.message-name Михаил Владиславович
+              +e.message-heading Silver Fox SC 485, 1470000 Р
+              +e.message-text Заинтерисовало Ваше предложение. Возможен ли тогр или обмена на моторную лодку серии 13456, 2004 года выпаска? Или на совершенно новый катер 4555
+            +e.message-props
+              +e.message-date 18.02.2017 21:00
+              +e.message-request
+                +e('a')(href="#").request
+                  +e('span') Ответить
+                  +icon('arrow-next').icon.__request-icon
