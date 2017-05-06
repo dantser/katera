@@ -174,12 +174,15 @@
   }
 
   &__item {
-    flex: 1 0 auto;
     margin-right: 60px;
     margin-bottom: 40px;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     will-change: box-shadow;
     transition: box-shadow .25s ease-in-out;
+
+    &:last-child {
+      margin-right: auto;
+    }
 
     @include respond-to('large-desktop') {
       flex-basis: calc(20% - 60px);
