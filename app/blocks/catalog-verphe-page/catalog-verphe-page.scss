@@ -55,6 +55,8 @@
 
       & .sale-preview-item__img-wrap {
         height: 417px;
+        opacity: 1;
+        transition: all .25s ease-in-out;
 
         @media (max-width: 767px) {
           height: 208px;
@@ -91,6 +93,8 @@
 
       & .sale-preview-item__img-wrap {
         height: 134px;
+        opacity: 1;
+        transition: all .25s ease-in-out;
       }
 
       &:last-child {
@@ -101,5 +105,9 @@
     @media (max-width: 320px) {
       display: none;
     }
+  }
+
+  .sale-preview-item:hover .sale-preview-item__img-wrap {
+    opacity: .75;
   }
 }
