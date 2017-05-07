@@ -14,6 +14,13 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
     return;
   }
 
+  const tempFixedElement = $(`.${FIXED_STATE_CLASS}`);
+  const alreadyInitialized = tempFixedElement && tempFixedElement.length > 0;
+
+  if (alreadyInitialized) {
+    return;
+  }
+
   const fixedBlock = defaultBlock
     .clone(true, true)
     .hide()
