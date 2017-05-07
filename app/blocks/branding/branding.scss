@@ -16,6 +16,14 @@
     width: 100%;
     height: 100vh;
 
+    @include respond-to('mobile') {
+      position: relative;
+    }
+
+    @include respond-to('tablet') {
+      position: relative;
+    }
+
     .container {
       display: flex;
       position: relative;
@@ -72,26 +80,11 @@
         }
       }
 
-      .branding__scroll-btn {
-        @include respond-to('desktop') {
-          display: none;
-        }
-
-        @include respond-to('large-desktop') {
-          display: none;
-        }
-
-        @include respond-to('laptop') {
-          display: none;
-        }
-      }
-
       .branding__image {
         z-index: 15;
-        height: 750px;
+        height: 100vh;
 
         @include respond-to('tablet') {
-          height: 100%;
 
           &::after {
             content: '';
@@ -106,7 +99,6 @@
         }
 
         @include respond-to('mobile') {
-          height: 100%;
 
           &::after {
             content: '';
@@ -143,6 +135,15 @@
       width: 170px;
       padding-bottom: 0;
     }
+
+    @include respond-to('tablet') {
+      margin: auto 6px 94px auto;
+      font-size: rem(22px);
+      font-weight: 700;
+      line-height: 1.5;
+      width: 170px;
+      padding-bottom: 0;
+    }
   }
 
   &__logo {
@@ -154,6 +155,18 @@
     pointer-events: none;
 
     @include respond-to('mobile') {
+      top: initial;
+      right: initial;
+      left: 0;
+      bottom: 73px;
+      box-sizing: content-box;
+      border-left: 13px solid $color-white;
+      border-right: 13px solid $color-white;
+      border-top: 12px solid $color-white;
+      border-bottom: 12px solid $color-white;
+    }
+
+    @include respond-to('tablet') {
       top: initial;
       right: initial;
       left: 0;

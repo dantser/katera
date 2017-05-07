@@ -34,6 +34,13 @@
       right: 16px;
       top: 16px;
     }
+
+    @include respond-to('mobile') {
+      bottom: 66px;
+      left: 16px;
+      right: 16px;
+      top: 16px;
+    }
   }
 
   &__slide-text {
@@ -50,7 +57,9 @@
     }
 
     @include respond-to('mobile') {
-      margin-right: -8px;
+      font-size: 18px;
+      line-height: 24px;
+      width: 100%;
     }
   }
 

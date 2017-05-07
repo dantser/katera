@@ -12,7 +12,7 @@ export default () => {
   const header = $('.header');
   const w = $(window);
 
-  if (header.length > 0) {
+  if (header.length > 0 && w.width() > 991) {
     const nextBrandingTopHeight = w.height() - header.outerHeight();
 
     brandingTop.css({ height: `${nextBrandingTopHeight}px`});
