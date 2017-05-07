@@ -9,4 +9,6 @@ export default () => {
     991,
   ];
   makeItFixed(...sortFilterFixedParams);
+  makeItFixed('js-filter-sale', 'filter-sale_default', 'filter-sale_fixed', 991);
+  makeItFixed('js-filter-rest', 'filter-rest_default', 'filter-rest_fixed', 991);
 };

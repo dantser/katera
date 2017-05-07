@@ -16,7 +16,7 @@ mixin sale12-page()
       +main-container()
         +e('div').filter
 
-          +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
+          +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}]).js-filter-sale
           +mobile-slide-popup()#filter-sale-mobile
             +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
           +filter(getData('filter'))

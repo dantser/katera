@@ -22,6 +22,11 @@
     background-color: $color-blue;
     box-shadow: 0 1px 5px 0 rgba(#090435, .45);
     color: #fff;
+    border: 0;
+
+    .button__icon_stroke_blue {
+      stroke: #fff;
+    }
   }
 
   &_shadow {
@@ -112,6 +117,8 @@
 
     &_stroke_blue {
       stroke: $color-dark-blue;
+      will-change: stroke;
+      transition: stroke .25s ease-in-out;
     }
   }
 }

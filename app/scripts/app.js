@@ -31,13 +31,14 @@ import mobileSlidePopup from '../blocks/mobile-slide-popup/mobile-slide-popup';
 import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
 import customSlider from '../blocks/custom-slider/custom-slider';
 import filterEngines from '../blocks/filter-engines/filter-engines';
-import filterRest from '../blocks/filter-rest/filter-rest';
 import accountSale from '../blocks/account-sale12/accountSale';
 import accountShop from '../blocks/account-shop-3-page/account-shop-3-page';
 import yachtClub from '../blocks/yacht-club/yachtClub';
 import tarif from '../blocks/tarif/tarif';
 import shop1 from '../blocks/shop1/shop1';
 import accountNavigation from '../blocks/account-navigation/account-navigation';
+import saleRaznoe from '../blocks/sale-raznoe/sale-raznoe';
+import sale12Page from '../blocks/sale12-page/sale12-page';
 
 $(() => {
   index();
@@ -71,13 +72,14 @@ $(() => {
   customSlider();
   catalogYacht();
   filterEngines();
-  filterRest();
   yachtClub();
   accountSale();
   accountShop();
   tarif();
   shop1();
   accountNavigation();
+  saleRaznoe();
+  sale12Page();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {
