@@ -159,10 +159,6 @@
       }
     }
 
-    .sortby-status {
-
-    }
-
     .sortby-params {
       border-bottom: 1px solid rgba($color-gray, .15);
 
@@ -393,16 +389,16 @@
         }
 
         & .preview {
-          & .sale-preview-item {
-            &__params {
 
+          & .sale-preview-item {
+
+            &__params {
               @include respond-to('mobile') {
                 display: none;
               }
             }
 
             &__img-wrap {
-
               @include respond-to('mobile') {
                 width: 48%;
                 height: 200px;
