@@ -18,6 +18,10 @@
     width: 100%;
     display: block;
 
+    @include respond-to('large-desktop') {
+      height: 540px;
+    }
+
     .image-bg {
       height: 100%;
       z-index: 1;
@@ -318,6 +322,10 @@
     .yacht-club__box-bg {
       margin-bottom: 30px;
       height: 500px;
+
+      @include respond-to('large-desktop') {
+        height: 671px;
+      }
 
       @include respond-to('tablet') {
         height: 164px;
