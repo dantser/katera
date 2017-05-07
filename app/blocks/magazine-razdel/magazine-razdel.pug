@@ -17,12 +17,13 @@ mixin magazine-razdel()
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
           +e('div').select-dots
         +e.content
+          - var data = getData('article-preview_title-under-img_magazine-razdel');
           +e.list
             +e.col
               - for (var i = 0; i < 4; i++)
                 +e.item
                   if (i < 3)
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                    +article-preview(data.row135[i])._title-under-img
                   else
                     +e.banner
                       +banner('#', 'assets/images/banner2.jpg')
@@ -30,13 +31,13 @@ mixin magazine-razdel()
             +e.col
               - for (var i = 0; i < 4; i++)
                 +e.item
-                  +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                  +article-preview(data.row2[i])._title-under-img
 
             +e.col
               - for (var i = 0; i < 4; i++)
                 +e.item
                   if (i < 3)
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                    +article-preview(data.row135[i])._title-under-img
                   else
                     +e.banner
                       +banner('#', 'assets/images/banner2.jpg')
@@ -48,13 +49,13 @@ mixin magazine-razdel()
                     +e.banner
                       +banner('#', 'assets/images/banner2.jpg')
                   else
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                    +article-preview(data.row4[i-1])._title-under-img
 
             +e.col
               - for (var i = 0; i < 4; i++)
                 +e.item
                   if (i < 3)
-                    +article-preview(getData('article-preview_title-under-img'))._title-under-img
+                    +article-preview(data.row135[i])._title-under-img
                   else
                     +e.banner
                       +banner('#', 'assets/images/banner2.jpg')
