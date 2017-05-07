@@ -38,6 +38,7 @@ import yachtClub from '../blocks/yacht-club/yachtClub';
 import tarif from '../blocks/tarif/tarif';
 import shop1 from '../blocks/shop1/shop1';
 import accountFaq from '../blocks/account-faq/accountFaq';
+import accountNavigation from '../blocks/account-navigation/account-navigation';
 
 $(() => {
   index();
@@ -78,6 +79,7 @@ $(() => {
   accountShop();
   tarif();
   shop1();
+  accountNavigation();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {
