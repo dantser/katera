@@ -23,7 +23,7 @@
 
   @include respond-to('mobile') {
     width: 100%;
-    min-width: 320px;
+    max-width: 320px;
     padding: 0;
   }
 }
