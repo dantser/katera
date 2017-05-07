@@ -243,6 +243,8 @@
     font-size: rem(20px);
     margin: 49px 0 69px;
     padding-bottom: 6px;
+    font-family: $NerisLight;
+    font-weight: 400;
 
     @include respond-to('mobile') {
       margin: 4px 0 0;
