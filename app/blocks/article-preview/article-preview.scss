@@ -206,7 +206,7 @@
     }
   }
 
-  &_color_blue:hover {
+  &_color_red:hover {
 
     .article-preview__picture {
       box-shadow:
@@ -223,12 +223,12 @@
 
     .article-preview__picture {
       box-shadow:
-        0 2px 2px 0 rgba(12, 0, 255, .2),
-        0 4px 4px 0 rgba(12, 0, 255, .2),
-        0 8px 8px 0 rgba(12, 0, 255, .2),
-        0 16px 16px 0 rgba(12, 0, 255, .2),
-        0 32px 32px 0 rgba(12, 0, 255, .2),
-        0 64px 64px 0 rgba(12, 0, 255, .2);
+        0 2px 2px 0 rgba(19, 11, 89, .2),
+        0 4px 4px 0 rgba(19, 11, 89, .2),
+        0 8px 8px 0 rgba(19, 11, 89, .2),
+        0 16px 16px 0 rgba(19, 11, 89, .2),
+        0 32px 32px 0 rgba(19, 11, 89, .2),
+        0 64px 64px 0 rgba(19, 11, 89, .2);
     }
   }
 
@@ -236,12 +236,12 @@
 
     .article-preview__picture {
       box-shadow:
-        0 2px 2px 0 rgba(44, 36, 209, .2),
-        0 4px 4px 0 rgba(44, 36, 209, .2),
-        0 8px 8px 0 rgba(44, 36, 209, .2),
-        0 16px 16px 0 rgba(44, 36, 209, .2),
-        0 32px 32px 0 rgba(44, 36, 209, .2),
-        0 64px 64px 0 rgba(44, 36, 209, .2);
+        0 2px 2px 0 rgba(95, 81, 225, .2),
+        0 4px 4px 0 rgba(95, 81, 225, .2),
+        0 8px 8px 0 rgba(95, 81, 225, .2),
+        0 16px 16px 0 rgba(95, 81, 225, .2),
+        0 32px 32px 0 rgba(95, 81, 225, .2),
+        0 64px 64px 0 rgba(95, 81, 225, .2);
     }
   }
 
@@ -255,6 +255,19 @@
         0 16px 16px 0 rgba(216, 209, 28, .2),
         0 32px 32px 0 rgba(216, 209, 28, .2),
         0 64px 64px 0 rgba(216, 209, 28, .2);
+    }
+  }
+
+  &_color_blue:hover {
+
+    .article-preview__picture {
+      box-shadow:
+        0px 2px 2px 0px rgba(0, 0, 255, .2),
+        0px 4px 4px 0px rgba(0, 0, 255, .2),
+        0px 8px 8px 0px rgba(0, 0, 255, .2),
+        0px 16px 16px 0px rgba(0, 0, 255, .2),
+        0px 32px 32px 0px rgba(0, 0, 255, .2),
+        0px 64px 64px 0px rgba(0, 0, 255, .2);
     }
   }
 }

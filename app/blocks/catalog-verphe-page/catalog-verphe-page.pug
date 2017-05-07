@@ -14,7 +14,15 @@ mixin catalog-verphe-page()
         +e('div').wrapper
           +e('div').catalog
             +catalog-filter()
+
+            - var catalog = getData('catalog-verphe');
+            +e('ul').alphabet
+              each item in catalog
+                +e('li').letter
+                  +e('a')(href='#').letter-link= item.letter
+
             +catalog-verphe(getData('catalog-verphe'))
+
           +e('div').sale-preview
 
             +e('div').banner
