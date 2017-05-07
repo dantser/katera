@@ -17,7 +17,9 @@ mixin sale12-page()
         +e('div').filter
 
           +e('div').filter-wrapper
-            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
+            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}]).js-filter-sale
+
+          +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
 
           +mobile-slide-popup()#filter-sale-mobile
             +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])

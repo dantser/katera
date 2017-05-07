@@ -17,7 +17,7 @@ mixin sale-list()
       +main-container().main-container_shadow.sale-raznoe__main-container
         +e.content
           +e.filter
-            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
+            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}]).js-filter-sale
           +mobile-slide-popup()#filter-sale
             +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
           +e.result

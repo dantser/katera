@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import 'jquery-ui-bundle';
-import makeItFixed from '../../scripts/common/make-it-fixed';
 
 export default () => {
   const filter = $('.filter-sale');
@@ -8,8 +7,6 @@ export default () => {
   if (!filter) {
     return;
   }
-
-  makeItFixed('filter-sale', 'filter-sale_default', 'filter-sale_fixed', 991);
 
   // slider range
   const lengthSliderTextMin = $('.js-filter-sale-length-min');

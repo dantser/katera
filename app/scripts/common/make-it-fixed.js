@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import 'jquery-ui-bundle';
+import { throttle } from 'throttle-debounce';
 
 // eslint-disable-next-line max-len
 export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakpoint = null, startFixingBreakpoint = 99999) => {
@@ -8,46 +8,34 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
   const DEFAULT_STATE_CLASS = normalizeClassName(defaultStateClass);
   const FIXED_STATE_CLASS = normalizeClassName(fixedStateClass);
   const ELEMENT_CLASS = `.${normalizeClassName(blockClass)}`;
-  const filter = $(ELEMENT_CLASS);
+  const defaultBlock = $(ELEMENT_CLASS);
 
-  if (!filter || filter.length === 0) {
+  if (!defaultBlock || defaultBlock.length === 0) {
     return;
   }
 
-  let filterOffsetTop = null;
-
-  if (!filter.data('offset-top')) {
-    filterOffsetTop = filter.offset().top;
-    filter.data('offset-top', filterOffsetTop);
-  }
+  const fixedBlock = defaultBlock
+    .clone(true, true)
+    .hide()
+    .removeClass(DEFAULT_STATE_CLASS)
+    .addClass(FIXED_STATE_CLASS)
+    .insertAfter(defaultBlock);
 
   const w = $(window);
 
-  w.on('scroll', () => {
+  w.on('scroll', throttle(200, () => {
     const documentScrollTop = $(document).scrollTop();
+    const defaultBlockOffset = defaultBlock.offset().top + defaultBlock.outerHeight();
     const hasToBeFixed = (
-      filterOffsetTop &&
-      documentScrollTop >= filterOffsetTop &&
+      documentScrollTop >= defaultBlockOffset &&
       w.width() >= stopFixingBreakpoint &&
       w.width() <= startFixingBreakpoint
     );
 
-    if (hasToBeFixed && !filter.hasClass(FIXED_STATE_CLASS)) {
-      filter.slideUp(() => {
-        filter
-          .removeClass(DEFAULT_STATE_CLASS)
-          .addClass(FIXED_STATE_CLASS)
-          .slideDown();
-      });
+    if (hasToBeFixed) {
+      fixedBlock.fadeIn();
+    } else {
+      fixedBlock.fadeOut();
     }
-
-    if (!hasToBeFixed && filter.hasClass(FIXED_STATE_CLASS)) {
-      filter.slideUp(() => {
-        filter
-          .removeClass(FIXED_STATE_CLASS)
-          .addClass(DEFAULT_STATE_CLASS)
-          .slideDown();
-      });
-    }
-  });
+  }));
 };
