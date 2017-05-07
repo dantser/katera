@@ -6,6 +6,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 18px 0 22px;
+  border-top: 1px solid #e5e5e5;
 
   @include respond-to('tablet') {
     padding: 10px 0 6px;
