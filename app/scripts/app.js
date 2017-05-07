@@ -40,6 +40,7 @@ import accountFaq from '../blocks/account-faq/accountFaq';
 import accountNavigation from '../blocks/account-navigation/account-navigation';
 import saleRaznoe from '../blocks/sale-raznoe/sale-raznoe';
 import sale12Page from '../blocks/sale12-page/sale12-page';
+import branding from '../blocks/branding/branding';
 
 $(() => {
   index();
@@ -82,6 +83,7 @@ $(() => {
   accountNavigation();
   saleRaznoe();
   sale12Page();
+  branding();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

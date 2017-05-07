@@ -3,6 +3,15 @@ import 'sticky-kit/dist/sticky-kit';
 
 /* eslint-disable */
 export default () => {
+
+  const mainSlider = $('.index__main-slider');
+  const header = $('.header');
+
+  if (mainSlider && mainSlider.length > 0 && header && header.length > 0) {
+    const nextMainSliderHeight = $(window).height() - header.outerHeight();
+    mainSlider.css({ height: `${nextMainSliderHeight}px`});
+  }
+
   $('.yacht-preview-widget').stick_in_parent({
     offset_top: 30,
   });
