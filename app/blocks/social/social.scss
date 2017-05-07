@@ -11,13 +11,6 @@
   }
 
   &__link {
-    opacity: 1;
-    will-change: opacity;
-    transition: opacity .25s ease-in-out;
-
-    &:hover {
-      opacity: .75;
-    }
 
     &_type {
 
@@ -59,7 +52,17 @@
   }
 
   &__icon {
+    will-change: fill;
+    transition: fill .25s ease-in-out;
     fill: $color-white;
+
+    &:hover {
+      fill: $color-red;
+    }
+  }
+
+  &_join .social__icon:hover {
+    fill: #fff;
   }
 
   &_join .social__link {

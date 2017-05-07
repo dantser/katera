@@ -14,13 +14,16 @@
   line-height: (30/13)*1em;
 
   a {
-    opacity: 1;
-    will-change: opacity;
-    transition: opacity .25s ease-in-out;
+    will-change: color;
+    transition: color .25s ease-in-out;
   }
 
   a:hover {
-    opacity: .75;
+    color: $color-red;
+
+    &::before {
+      background-color: $color-red;
+    }
   }
 
   &__header a {
@@ -46,6 +49,8 @@
       height: 4px;
       border-radius: 50%;
       background-color: $color-gray;
+      will-change: background-color;
+      transition: background-color .25s ease-in-out;
     }
   }
 

@@ -4,11 +4,27 @@
   text-decoration: none;
   cursor: pointer;
 
+  &:hover {
+
+    .login-btn {
+
+      &__icon {
+        stroke: #e02303;
+      }
+
+      &__text {
+        color: #e02303;
+      }
+    }
+  }
+
   &__icon {
     width: 20px;
     height: 17px;
     pointer-events: none;
     stroke: $color-red;
+    will-change: stroke;
+    transition: stroke .25s ease-in-out;
   }
 
   &__text {
@@ -16,5 +32,7 @@
     padding-left: 8px;
     color: $color-red;
     pointer-events: none;
+    will-change: color;
+    transition: color .25s ease-in-out;
   }
 }

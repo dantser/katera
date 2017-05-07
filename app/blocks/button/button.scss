@@ -13,9 +13,16 @@
   color: $color-dark-blue;
   text-decoration: none;
   cursor: pointer;
-  will-change: color, background-color;
-  transition: color .25s ease-in-out, background-color .25s ease-in-out;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  will-change: color, background-color, box-shadow;
+  transition: color .25s ease-in-out, background-color .25s ease-in-out, box-shadow .25s ease-in-out;
   outline: none;
+
+  &:hover {
+    background-color: $color-blue;
+    box-shadow: 0 1px 5px 0 rgba(#090435, .45);
+    color: #fff;
+  }
 
   &_shadow {
     box-shadow: 0 0 35px 0 rgba(19, 11, 89, .3);
