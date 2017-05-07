@@ -1,7 +1,10 @@
 .sale-contacts-wrap {
   width: 360px;
   z-index: 10;
-  box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
+
+  & > .list {
+    box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
+  }
 
   @include respond-to('tablet') {
     width: 100%;
