@@ -113,6 +113,10 @@
       z-index: 5;
     }
 
+    @include respond-to('large-desktop') {
+      justify-content: flex-start;
+    }
+
     @include respond-to('laptop') {
       justify-content: space-around;
     }
@@ -169,6 +173,7 @@
 
       @include respond-to('large-desktop') {
         padding: 0;
+        margin-right: 20px;
       }
     }
   }

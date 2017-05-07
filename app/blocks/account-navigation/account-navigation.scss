@@ -14,6 +14,8 @@
   .list {
     box-sizing: border-box;
     padding-bottom: 6px;
+    padding-left: 25px;
+    padding-right: 25px;
 
     @include respond-to('mobile') {
       padding-bottom: 0;
@@ -186,5 +188,9 @@
       font-family: $NerisSemiBold;
       color: $color-red;
     }
+  }
+
+  .division_arrow-left::before {
+    left: -25px;
   }
 }

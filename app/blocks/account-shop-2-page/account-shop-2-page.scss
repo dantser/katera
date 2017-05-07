@@ -1,0 +1,357 @@
+.account-shop-2-page {
+  display: block;
+  padding-bottom: 50px;
+  background-color: $color-white;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+
+  .account-navigation {
+    flex: none;
+    width: 31.5%;
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+
+  &__form {
+    flex: none;
+    width: 65.8%;
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+
+    .list_form {
+      background-color: $color-white;
+      box-shadow: none;
+
+      .list__item {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 24px;
+        padding-top: 39px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba($color-gray, .15);
+        }
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &_submit {
+          width: 360px;
+          text-align: center;
+
+          @include respond-to('mobile') {
+            width: 100%;
+          }
+
+          .button {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 20px;
+          }
+        }
+
+        .item-wrapper {
+          width: 555px;
+          font-size: 16px;
+          margin: 0;
+          color: $color-black;
+          background-color: $color-white;
+
+          &:first-child {
+            padding-top: 0;
+          }
+
+          @media (max-width: 991px) {
+            margin: 0 auto;
+          }
+
+          @include respond-to('mobile') {
+            width: 100%;
+          }
+
+          &_full {
+            width: 100%;
+
+            @include respond-to('tablet') {
+              width: 555px;
+            }
+
+            @include respond-to('mobile') {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 1em;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    .field {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 23px;
+
+      @include respond-to('mobile') {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .caption {
+      max-width: 165px;
+      font-size: 16px;
+      line-height: 1em;
+    }
+
+    .input {
+      width: 360px;
+      height: 38px;
+
+      @include respond-to('mobile') {
+        width: 100%;
+      }
+    }
+
+    .textarea {
+      width: 100%;
+      height: 180px;
+    }
+
+    .types {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 62px;
+
+      @include respond-to('tablet') {
+        padding: 0;
+        justify-content: space-around;
+      }
+
+      @include respond-to('mobile') {
+        flex-direction: column;
+        padding: 0 15px;
+      }
+    }
+
+    .type {
+      display: block;
+      cursor: pointer;
+      width: 31%;
+
+      @include respond-to('mobile') {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .control {
+      display: none;
+
+      &:checked {
+
+        & + .box {
+          box-shadow: 0 10px 20px 0 rgba(181, 53, 31, .3);
+
+          .icon {
+            fill: $color-red;
+          }
+
+          .text_period {
+            color: $color-black;
+          }
+
+          .text_price {
+            color: $color-red;
+          }
+        }
+      }
+    }
+
+    .box {
+      width: 100%;
+      padding: 27px;
+      box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
+      will-change: box-shadow;
+      transition: box-shadow .25s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 20px 0 rgba(19, 11, 89, .14);
+      }
+    }
+
+    .box-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 125px;
+      margin-bottom: 42px;
+
+      @include respond-to('tablet') {
+        min-height: 145px;
+      }
+
+      @include respond-to('mobile') {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 0;
+        padding: 15px;
+      }
+    }
+
+    .info {
+      display: block;
+      margin-top: auto;
+    }
+
+    .text {
+      display: block;
+      font-size: rem(18px);
+      color: $color-dark-blue;
+      text-align: center;
+      line-height: (28 / 18) * 1;
+      will-change: color;
+      transition: color .25s ease-in-out;
+
+      &_period {
+        font-family: $NerisSemiBold;
+      }
+
+      &_price {
+        font-family: $NerisBlack;
+      }
+    }
+
+    .icon {
+      margin: auto;
+      fill: $color-dark-blue;
+      will-change: fill;
+      transition: fill .25s ease-in-out;
+
+      @include respond-to('mobile') {
+        margin: 0;
+      }
+
+      &_default {
+        width: 72px;
+        height: 34px;
+      }
+
+      &_express {
+        width: 60px;
+        height: 60px;
+      }
+
+      &_turbo {
+        width: 93px;
+        height: 34px;
+      }
+    }
+
+    .options {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+      line-height: em(22px);
+    }
+
+    .option {
+      display: block;
+      position: relative;
+      padding: 0;
+      padding-left: 23px;
+      line-height: 1.4em;
+      color: $color-gray;
+      margin-bottom: 30px;
+
+      &_active {
+        position: relative;
+        color: $color-black;
+
+        .mark {
+          display: block;
+        }
+      }
+    }
+
+    .mark {
+      display: none;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      stroke: $color-red;
+    }
+
+    .download {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+      height: 50px;
+
+      @include respond-to('mobile') {
+        flex-wrap: nowrap;
+        height: auto;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .zip {
+      width: 50px;
+      height: 100%;
+      margin-right: 10px;
+
+      @include respond-to('mobile') {
+        height: 50px;
+      }
+
+      & svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $color-red;
+
+        & > * {
+          display: block;
+          fill: $color-red;
+        }
+      }
+    }
+
+    .ex {
+      color: $color-red;
+    }
+
+    .note {
+      color: $color-gray;
+    }
+  }
+}

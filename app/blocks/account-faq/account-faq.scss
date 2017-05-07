@@ -72,6 +72,10 @@
   &__item-details {
     height: 0;
     overflow: hidden;
+
+    @include respond-to('large-desktop') {
+      max-width: 850px;
+    }
   }
 
   &__item-text {
@@ -137,6 +141,10 @@
     margin-top: 34px;
     line-height: 33px;
 
+    @include respond-to('large-desktop') {
+      max-width: 450px;
+    }
+
     &:focus {
       outline: 0;
     }
@@ -150,8 +158,8 @@
   }
 
   &__form-button {
-    width: auto !important;
+    width: 165px !important;
+    height: 40px !important;
     margin: 52px auto -30px;
-    padding: 11px 50px;
   }
 }
