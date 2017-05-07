@@ -65,6 +65,9 @@
                             <span class="login-btn__text">Вход</span>
                         </a>
                         <a class="button button_kind_red header__proposal-btn" href="#">Создать предложение</a>
+                        <a class="button button_kind_red header__plus-btn" href="#">Предложение
+                            <svg class="button__icon-plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                        </a>
                         <div class="search-bar header__search-bar">
                             <div class="search-bar__box">
                                 <svg class="search-bar__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
@@ -136,6 +139,12 @@
                             </li>
                         </ul>
                     </div>
+                    <a class="burger-dropdown__question" href="#">
+                        <div class="burger-dropdown__question-wrapper">
+                            <span class="burger-dropdown__label">Задать вопрос</span>
+                            <svg class="burger-dropdown__icon"><use xlink:href="assets/images/icon.svg#icon_questions-circular"></use></svg>
+                        </div>
+                    </a>
                     <div class="burger-dropdown__banners">
                         <div class="burger-dropdown__banner burger-dropdown__banner_type_1">
                             <a class="banner" href="">
@@ -215,583 +224,711 @@
                                 </div>
                             </div>
                         </div>
-                        <ul class="submenu shop1__submenu" id="tabs">
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division division_active submenu__title">Предложения</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">О компании</span>
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a class="submenu__link" href="#">
-                                    <span class="division submenu__title">Контакты</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="filter-shop">
-                            <div class="filter-shop__item filter-shop__item_vendor">
-                                <div class="select">
-                                    <div class="select__text"></div>
-                                    <select class="select__control">
-                                        <option value="1">Верфь #1</option>
-                                        <option value="2">Верфь #2</option>
-                                        <option value="3">Верфь #3</option>
-                                    </select>
-                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                        <div class="shop1__tabs" id="shopTabs">
+                            <ul class="submenu shop1__submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#shop-1">
+                                        <span class="division division_active submenu__title">Предложения</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#shop-2">
+                                        <span class="division submenu__title">О компании</span>
+                                    </a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#shop-3">
+                                        <span class="division submenu__title">Контакты</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="shop-1">
+                                <div class="filter-shop">
+                                    <div class="filter-shop__item filter-shop__item_vendor">
+                                        <div class="select" data-all-selected='[{"value":1,"title":"Аксессуары"},{"value":2,"title":"Гидроциклы"},{"value":3,"title":"Катера"},{"value":4,"title":"Запчасти"}]'>
+                                            <div class="select__text"></div>
+                                            <ul class="list list_has_triangle select__list">
+                                                <li class="list__item select__item select__item_multiple">
+                                                    <label>
+                                                        <label class="checkbox">
+                                                            <input class="checkbox__control" type="checkbox" name="i" value="" />
+                                                            <span class="checkbox__box">
+                                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                        <span class="select__list-label"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="list__item select__item select__item_multiple">
+                                                    <label>
+                                                        <label class="checkbox">
+                                                            <input class="checkbox__control" type="checkbox" name="i" value="" />
+                                                            <span class="checkbox__box">
+                                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                        <span class="select__list-label"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="list__item select__item select__item_multiple">
+                                                    <label>
+                                                        <label class="checkbox">
+                                                            <input class="checkbox__control" type="checkbox" name="i" value="" />
+                                                            <span class="checkbox__box">
+                                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                        <span class="select__list-label"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="list__item select__item select__item_multiple">
+                                                    <label>
+                                                        <label class="checkbox">
+                                                            <input class="checkbox__control" type="checkbox" name="i" value="" />
+                                                            <span class="checkbox__box">
+                                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                        <span class="select__list-label"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="list__item select__item select__item_multiple">
+                                                    <label>
+                                                        <label class="checkbox">
+                                                            <input class="checkbox__control" type="checkbox" name="i" value="" />
+                                                            <span class="checkbox__box">
+                                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                        <span class="select__list-label"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="list__item select__item select__item_multiple">
+                                                    <label>
+                                                        <label class="checkbox">
+                                                            <input class="checkbox__control" type="checkbox" name="i" value="" />
+                                                            <span class="checkbox__box">
+                                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                        <span class="select__list-label"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="list__item select__item select__item_multiple">
+                                                    <label>
+                                                        <label class="checkbox">
+                                                            <input class="checkbox__control" type="checkbox" name="i" value="" />
+                                                            <span class="checkbox__box">
+                                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                        <span class="select__list-label"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="list__item select__item select__item_multiple">
+                                                    <label>
+                                                        <label class="checkbox">
+                                                            <input class="checkbox__control" type="checkbox" name="i" value="" />
+                                                            <span class="checkbox__box">
+                                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                        <span class="select__list-label"></span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                        </div>
+                                    </div>
+                                    <div class="filter-shop__item filter-shop__item_search-field">
+                                        <svg class="filter-shop__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
+                                        <input class="filter-shop__field" type="search" name="search" placeholder="Поиск по предложениям магазина" />
+                                    </div>
+                                    <button class="button button_kind_red filter-shop__button filter-shop__item">Найти</button>
+                                    <a class="filter-shop__extended-link" href="#">Расширенный фильтр</a>
                                 </div>
-                            </div>
-                            <div class="filter-shop__item filter-shop__item_search-field">
-                                <svg class="filter-shop__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
-                                <input class="filter-shop__field" type="search" name="search" placeholder="Поиск по предложениям магазина" />
-                            </div>
-                            <button class="button button_kind_red filter-shop__button">Найти</button>
-                            <a class="filter-shop__extended-link" href="#">Расширенный фильтр</a>
-                        </div>
-                        <div class="shop1__sort">
-                            <div class="shop1__found">
-                                <span class="shop1__sort__output">126</span>
-                                <span>предложений</span>
-                            </div>
-                            <div class="shop1__price">
-                                <span class="shop1__filter__label">Сортировать</span>
-                                <div class="select">
-                                    <div class="select__text"></div>
-                                    <select class="select__control">
-                                        <option value="1">Сначала дешевые</option>
-                                        <option value="2">Сначала дорогие</option>
-                                    </select>
-                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                <div class="shop1__sort">
+                                    <div class="shop1__found">
+                                        <span class="shop1__sort__output">126</span>
+                                        <span>предложений</span>
+                                    </div>
+                                    <div class="shop1__price">
+                                        <span class="shop1__filter__label">Сортировать</span>
+                                        <div class="select">
+                                            <div class="select__text"></div>
+                                            <select class="select__control">
+                                                <option value="1">Сначала дешевые</option>
+                                                <option value="2">Сначала дорогие</option>
+                                            </select>
+                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="shop-grid">
-                            <div class="shop-grid__wrapper">
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                                <a class="sale-preview-item" href="#">
-                                    <span class="sale-preview-item__img-wrap">
-                                        <span class="image-bg">
-                                            <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
-                                        </span>
-                                    </span>
-                                    <span class="sale-preview-item__text">
-                                        <span class="sale-preview-item__info">Azimut Yachts</span>
-                                        <span class="sale-preview-item__name">Silver Fox SC 485</span>
-                                        <span class="sale-preview-item__price">1 470 000 Р</span>
-                                        <ul class="sale-preview-item__params">
-                                            <li class="sale-preview-item__param">Длина: 0.33 м</li>
-                                            <li class="sale-preview-item__param">Ширина: 3.02 м</li>
-                                            <li class="sale-preview-item__param">Осадка: 1.07 м</li>
-                                        </ul>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        <button class="button button_rounded button_kind_red shop1__show-more">Показать еще</button>
-                        <div class="shop-tab2">
-                            <div class="shop-tab2__text-container">
-                                <div class="text">
-                                    <h4>Магазин оригинальных кузовных б/у запчастей для иномарок с доставкой по России</h4>
-                                    <p>Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море.Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую
-                                        тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.</p>
-                                    <p>Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море.Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую
-                                        тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.</p>
-                                    <p>Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море.Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую
-                                        тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.</p>
-                                </div>
-                            </div>
-                            <div class="models models_sport">
-                                <div class="swiper-container">
-                                    <div class="swiper-container__swiper-pagination"></div>
-                                    <div class="swiper-container__wrapper swiper-wrapper">
-                                        <a class="swiper-slide" href="#">
-                                            <img src="assets/images/yacht.jpg" />
+                                <div class="shop-grid">
+                                    <div class="shop-grid__wrapper">
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
                                         </a>
-                                        <a class="swiper-slide" href="#">
-                                            <img src="assets/images/yacht.jpg" />
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
                                         </a>
-                                        <a class="swiper-slide" href="#">
-                                            <img src="assets/images/yacht.jpg" />
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
                                         </a>
-                                        <a class="swiper-slide" href="#">
-                                            <img src="assets/images/yacht.jpg" />
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
                                         </a>
-                                        <a class="swiper-slide" href="#">
-                                            <img src="assets/images/yacht.jpg" />
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
                                         </a>
-                                        <a class="swiper-slide" href="#">
-                                            <img src="assets/images/yacht.jpg" />
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
                                         </a>
-                                        <a class="swiper-slide" href="#">
-                                            <img src="assets/images/yacht.jpg" />
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
                                         </a>
-                                        <a class="swiper-slide" href="#">
-                                            <img src="assets/images/yacht.jpg" />
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
+                                        </a>
+                                        <a class="sale-preview-item" href="#">
+                                            <span class="sale-preview-item__img-wrap">
+                                                <span class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/sale-preview.jpg" role="presentation" />
+                                                </span>
+                                            </span>
+                                            <span class="sale-preview-item__text">
+                                                <span class="sale-preview-item__info">Azimut Yachts</span>
+                                                <span class="sale-preview-item__name">Silver Fox SC 485</span>
+                                                <span class="sale-preview-item__price">1 470 000 Р</span>
+                                                <ul class="sale-preview-item__params">
+                                                    <li class="sale-preview-item__param">Длина: 0.33 м</li>
+                                                    <li class="sale-preview-item__param">Ширина: 3.02 м</li>
+                                                    <li class="sale-preview-item__param">Осадка: 1.07 м</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
+                                <button class="button button_rounded button_kind_red shop1__show-more">Показать еще</button>
+                            </div>
+                            <div class="shop-tab2" id="shop-2">
+                                <div class="shop-tab2__text-container">
+                                    <div class="text">
+                                        <h4>Магазин оригинальных кузовных б/у запчастей для иномарок с доставкой по России</h4>
+                                        <p>Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море.Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую
+                                            тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.</p>
+                                        <p>Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море.Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую
+                                            тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.</p>
+                                        <p>Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море.Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую
+                                            тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.</p>
+                                    </div>
+                                </div>
+                                <div class="models models_sport">
+                                    <div class="swiper-container">
+                                        <div class="swiper-container__swiper-pagination"></div>
+                                        <div class="swiper-container__wrapper swiper-wrapper">
+                                            <a class="swiper-slide" href="#">
+                                                <img src="assets/images/yacht.jpg" />
+                                            </a>
+                                            <a class="swiper-slide" href="#">
+                                                <img src="assets/images/yacht.jpg" />
+                                            </a>
+                                            <a class="swiper-slide" href="#">
+                                                <img src="assets/images/yacht.jpg" />
+                                            </a>
+                                            <a class="swiper-slide" href="#">
+                                                <img src="assets/images/yacht.jpg" />
+                                            </a>
+                                            <a class="swiper-slide" href="#">
+                                                <img src="assets/images/yacht.jpg" />
+                                            </a>
+                                            <a class="swiper-slide" href="#">
+                                                <img src="assets/images/yacht.jpg" />
+                                            </a>
+                                            <a class="swiper-slide" href="#">
+                                                <img src="assets/images/yacht.jpg" />
+                                            </a>
+                                            <a class="swiper-slide" href="#">
+                                                <img src="assets/images/yacht.jpg" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-tab3" id="shop-3">
+                                <div class="shop-tab3__contacts">
+                                    <div class="shop-tab3__phone">
+                                        <div class="shop-tab3__row">
+                                            <div class="shop-tab3__col-1">Телефон:</div>
+                                            <div class="shop-tab3__col-2">+7 (925) 726-75-75, +7 (902) 652-67-77</div>
+                                        </div>
+                                    </div>
+                                    <div class="shop-tab3__work">
+                                        <div class="shop-tab3__row">
+                                            <div class="shop-tab3__col-1">Режим работы:</div>
+                                            <div class="shop-tab3__col-2">Работаем по будням с 9 -19:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="shop-tab3__adress">
+                                        <div class="shop-tab3__row">
+                                            <div class="shop-tab3__col-1">Адрес:</div>
+                                            <div class="shop-tab3__col-2">г. Волгоград, ул. Автотранспортная, 5 ул. Качалова 39а</div>
+                                        </div>
+                                    </div>
+                                    <div class="shop-tab3__mail">
+                                        <div class="shop-tab3__row">
+                                            <div class="shop-tab3__col-1">Электронная почта:</div>
+                                            <div class="shop-tab3__col-2">yaht@yandex.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="shop-tab3__site">
+                                        <div class="shop-tab3__row">
+                                            <div class="shop-tab3__col-1">Сайт:</div>
+                                            <div class="shop-tab3__col-2">
+                                                <a href="gu-yaht.com">gu-yaht.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="map"></div>
                             </div>
                         </div>
                     </main>
                 </div>
             </div>
         </div>
-        <div class="branding__bottom branding__bottom_page">
+        <div class="branding__bottom branding__bottom_shop">
             <div class="branding__image">
                 <div class="image-bg">
-                    <img class="image-bg__img" alt="" src="assets/images/branding/main-bottom.png" role="presentation" />
+                    <img class="image-bg__img" alt="" src="assets/images/branding/shop-banner.png" role="presentation" />
                 </div>
             </div>
         </div>
     </div>
-    <div class="up-btn js-up-btn">
-        <svg class="up-btn__caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+    <div class="up-btn">
+        <div class="up-btn__btn">
+            <svg class="up-btn__caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+        </div>
     </div>
     <footer class="footer">
         <div class="subscribe">

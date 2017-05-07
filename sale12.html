@@ -65,6 +65,9 @@
                             <span class="login-btn__text">Вход</span>
                         </a>
                         <a class="button button_kind_red header__proposal-btn" href="#">Создать предложение</a>
+                        <a class="button button_kind_red header__plus-btn" href="#">Предложение
+                            <svg class="button__icon-plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                        </a>
                         <div class="search-bar header__search-bar">
                             <div class="search-bar__box">
                                 <svg class="search-bar__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
@@ -136,6 +139,12 @@
                             </li>
                         </ul>
                     </div>
+                    <a class="burger-dropdown__question" href="#">
+                        <div class="burger-dropdown__question-wrapper">
+                            <span class="burger-dropdown__label">Задать вопрос</span>
+                            <svg class="burger-dropdown__icon"><use xlink:href="assets/images/icon.svg#icon_questions-circular"></use></svg>
+                        </div>
+                    </a>
                     <div class="burger-dropdown__banners">
                         <div class="burger-dropdown__banner burger-dropdown__banner_type_1">
                             <a class="banner" href="">
@@ -196,58 +205,238 @@
                     </div>
                     <main class="main-container">
                         <div class="sale12-page__filter">
-                            <div class="filter-sale filter-sale_default">
-                                <div class="filter-sale__nav">
-                                    <a class="division division_active filter-sale__division" href="#">Купить</a>
-                                    <a class="division filter-sale__division" href="#">Арендовать</a>
-                                </div>
-                                <div class="container">
-                                    <form class="filter-sale__tab">
-                                        <div class="filter-sale__content">
-                                            <div class="filter-sale__col">
-                                                <div class="filter-sale__item">
+                            <div class="sale12-page__filter-wrapper">
+                                <div class="filter-sale filter-sale_default js-filter-sale">
+                                    <div class="filter-sale__nav">
+                                        <a class="division division_active filter-sale__division" href="#">Купить</a>
+                                        <a class="division filter-sale__division" href="#">Арендовать</a>
+                                    </div>
+                                    <div class="container">
+                                        <form class="filter-sale__tab">
+                                            <div class="filter-sale__content">
+                                                <div class="filter-sale__col">
+                                                    <div class="filter-sale__item">
+                                                        <div class="filter-sale__field filter-sale__field_type_select">
+                                                            <div class="select">
+                                                                <div class="select__label">Тип</div>
+                                                                <div class="select__text"></div>
+                                                                <select class="select__control">
+                                                                    <option value="1">item #1</option>
+                                                                    <option value="2">item #2</option>
+                                                                </select>
+                                                                <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-sale__item">
+                                                        <div class="filter-sale__field filter-sale__field_type_select">
+                                                            <div class="select">
+                                                                <div class="select__label">Верфь</div>
+                                                                <div class="select__text"></div>
+                                                                <select class="select__control">
+                                                                    <option value="1">item #1</option>
+                                                                    <option value="2">item #2</option>
+                                                                </select>
+                                                                <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-sale__item">
+                                                        <div class="filter-sale__field filter-sale__field_type_select">
+                                                            <div class="select">
+                                                                <div class="select__label">Модель</div>
+                                                                <div class="select__text"></div>
+                                                                <select class="select__control">
+                                                                    <option value="1">item #1</option>
+                                                                    <option value="2">item #2</option>
+                                                                </select>
+                                                                <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-sale__item">
+                                                        <div class="filter-sale__field filter-sale__field_type_select">
+                                                            <div class="select">
+                                                                <div class="select__text"></div>
+                                                                <select class="select__control">
+                                                                    <option value="1">Местоположение</option>
+                                                                    <option value="2">item #2</option>
+                                                                </select>
+                                                                <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter-sale__col">
+                                                    <div class="filter-sale__item">
+                                                        <label class="filter-sale__field filter-sale__field_type_radio">
+                                                            <label class="radio">
+                                                                <input class="radio__control" type="radio" name="item5" value="1" checked="checked" />
+                                                                <span class="radio__box"></span>
+                                                            </label>
+                                                            <span class="filter-sale__label">Все</span>
+                                                        </label>
+                                                        <label class="filter-sale__field filter-sale__field_type_radio">
+                                                            <label class="radio">
+                                                                <input class="radio__control" type="radio" name="item5" value="2" />
+                                                                <span class="radio__box"></span>
+                                                            </label>
+                                                            <span class="filter-sale__label">Новые</span>
+                                                        </label>
+                                                        <label class="filter-sale__field filter-sale__field_type_radio">
+                                                            <label class="radio">
+                                                                <input class="radio__control" type="radio" name="item5" value="3" />
+                                                                <span class="radio__box"></span>
+                                                            </label>
+                                                            <span class="filter-sale__label">Б/у</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="filter-sale__item">
+                                                        <span class="filter-sale__label">Год</span>
+                                                        <div class="filter-sale__field filter-sale__field_type_text-field-group">
+                                                            <div class="filter-sale__field filter-sale__field_type_text-field-small">
+                                                                <div class="text-field">
+                                                                    <input class="text-field__control" type="text" name="item6" value="" />
+                                                                    <span class="text-field__placeholder">от</span>
+                                                                    <div class="text-field__error-icon-wrapper">
+                                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter-sale__separator"></div>
+                                                            <div class="filter-sale__field filter-sale__field_type_text-field-small">
+                                                                <div class="text-field">
+                                                                    <input class="text-field__control" type="text" name="item7" value="" />
+                                                                    <span class="text-field__placeholder">до</span>
+                                                                    <div class="text-field__error-icon-wrapper">
+                                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-sale__item">
+                                                        <span class="filter-sale__label">Пассажиры</span>
+                                                        <div class="filter-sale__field filter-sale__field_type_counter">
+                                                            <div class="counter js-counter">
+                                                                <div class="counter__btn counter__btn_kind_minus">
+                                                                    <svg class="counter__icon counter__icon_kind_minus"><use xlink:href="assets/images/icon.svg#icon_minus"></use></svg>
+                                                                </div>
+                                                                <input class="counter__control" type="text" name="item8" value="2" readonly="readonly" />
+                                                                <div class="counter__btn counter__btn_kind_plus">
+                                                                    <svg class="counter__icon counter__icon_kind_plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-sale__item">
+                                                        <span class="filter-sale__label">Спальных мест</span>
+                                                        <div class="filter-sale__field filter-sale__field_type_counter">
+                                                            <div class="counter js-counter">
+                                                                <div class="counter__btn counter__btn_kind_minus">
+                                                                    <svg class="counter__icon counter__icon_kind_minus"><use xlink:href="assets/images/icon.svg#icon_minus"></use></svg>
+                                                                </div>
+                                                                <input class="counter__control" type="text" name="item9" value="2" readonly="readonly" />
+                                                                <div class="counter__btn counter__btn_kind_plus">
+                                                                    <svg class="counter__icon counter__icon_kind_plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter-sale__col">
+                                                    <div class="filter-sale__item filter-sale__item_col">
+                                                        <div class="filter-sale__row">
+                                                            <div class="filter-sale__label">Длина</div>
+                                                            <div class="filter-sale__range-info">
+                                                                <span class="filter-sale__range-info-text js-filter-sale-length-min"></span>
+                                                                <span class="filter-sale__range-info-text js-filter-sale-length-max"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter-sale__field filter-sale__field_type_range">
+                                                            <div class="slider-range js-filter-sale-length-slider"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-sale__item filter-sale__item_col filter-sale__item_reset_margin">
+                                                        <span class="filter-sale__label filter-sale__label_margin_bottom">Цена</span>
+                                                        <div class="filter-sale__field filter-sale__field_type_text-field-group filter-sale__field_full_width">
+                                                            <div class="filter-sale__field filter-sale__field_type_text-field-small">
+                                                                <div class="text-field">
+                                                                    <input class="text-field__control" type="text" name="item10" value="" />
+                                                                    <span class="text-field__placeholder">от</span>
+                                                                    <div class="text-field__error-icon-wrapper">
+                                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter-sale__separator"></div>
+                                                            <div class="filter-sale__field filter-sale__field_type_text-field-small">
+                                                                <div class="text-field">
+                                                                    <input class="text-field__control" type="text" name="item11" value="" />
+                                                                    <span class="text-field__placeholder">до</span>
+                                                                    <div class="text-field__error-icon-wrapper">
+                                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter-sale__field filter-sale__field_type_select-currency">
+                                                                <div class="select-currency js-select-currency">
+                                                                    <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
+                                                                    <div class="select-currency__selected js-select-currency-selected">
+                                                                        <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                                                    </div>
+                                                                    <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                    <ul class="select-currency__select js-select-currency-select">
+                                                                        <li class="select-currency__option js-select-currency-option" data-value="rub">
+                                                                            <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                                                        </li>
+                                                                        <li class="select-currency__option js-select-currency-option" data-value="usd">
+                                                                            <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter-sale__field filter-sale__field_type_reset-filter">
+                                                            <button class="reset-filter" type="reset">
+                                                                <div class="reset-filter__circle">
+                                                                    <svg class="reset-filter__icon"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                                </div>
+                                                                <span class="reset-filter__text">Сбросить фильры</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-sale__item">
+                                                        <div class="filter-sale__field filter-sale__field_type_search-btn">
+                                                            <button class="button button_kind_red" type="submit">Найти</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter-sale__fixed-items">
+                                                    <div class="select select_text-like">
+                                                        <div class="select__text"></div>
+                                                        <select class="select__control">
+                                                            <option value="1">Купить</option>
+                                                            <option value="2">Арендовать</option>
+                                                        </select>
+                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                    </div>
                                                     <div class="filter-sale__field filter-sale__field_type_select">
                                                         <div class="select">
-                                                            <div class="select__label">Тип</div>
                                                             <div class="select__text"></div>
                                                             <select class="select__control">
-                                                                <option value="1">item #1</option>
+                                                                <option value="1">Тип лодки</option>
                                                                 <option value="2">item #2</option>
                                                             </select>
                                                             <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
                                                             <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="filter-sale__item">
-                                                    <div class="filter-sale__field filter-sale__field_type_select">
-                                                        <div class="select">
-                                                            <div class="select__label">Верфь</div>
-                                                            <div class="select__text"></div>
-                                                            <select class="select__control">
-                                                                <option value="1">item #1</option>
-                                                                <option value="2">item #2</option>
-                                                            </select>
-                                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__item">
-                                                    <div class="filter-sale__field filter-sale__field_type_select">
-                                                        <div class="select">
-                                                            <div class="select__label">Модель</div>
-                                                            <div class="select__text"></div>
-                                                            <select class="select__control">
-                                                                <option value="1">item #1</option>
-                                                                <option value="2">item #2</option>
-                                                            </select>
-                                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__item">
                                                     <div class="filter-sale__field filter-sale__field_type_select">
                                                         <div class="select">
                                                             <div class="select__text"></div>
@@ -259,461 +448,283 @@
                                                             <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="filter-sale__col">
-                                                <div class="filter-sale__item">
-                                                    <label class="filter-sale__field filter-sale__field_type_radio">
-                                                        <label class="radio">
-                                                            <input class="radio__control" type="radio" name="item5" value="1" checked="checked" />
-                                                            <span class="radio__box"></span>
-                                                        </label>
-                                                        <span class="filter-sale__label">Все</span>
-                                                    </label>
-                                                    <label class="filter-sale__field filter-sale__field_type_radio">
-                                                        <label class="radio">
-                                                            <input class="radio__control" type="radio" name="item5" value="2" />
-                                                            <span class="radio__box"></span>
-                                                        </label>
-                                                        <span class="filter-sale__label">Новые</span>
-                                                    </label>
-                                                    <label class="filter-sale__field filter-sale__field_type_radio">
-                                                        <label class="radio">
-                                                            <input class="radio__control" type="radio" name="item5" value="3" />
-                                                            <span class="radio__box"></span>
-                                                        </label>
-                                                        <span class="filter-sale__label">Б/у</span>
-                                                    </label>
-                                                </div>
-                                                <div class="filter-sale__item">
-                                                    <span class="filter-sale__label">Год</span>
-                                                    <div class="filter-sale__field filter-sale__field_type_text-field-group">
-                                                        <div class="filter-sale__field filter-sale__field_type_text-field-small">
-                                                            <div class="text-field">
-                                                                <input class="text-field__control" type="text" name="item6" value="" />
-                                                                <span class="text-field__placeholder">от</span>
-                                                                <div class="text-field__error-icon-wrapper">
-                                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                                                </div>
+                                                    <div class="filter-sale__field filter-sale__field_type_length">
+                                                        <div class="filter-sale__row">
+                                                            <div class="filter-sale__label">Длина</div>
+                                                            <div class="filter-sale__range-info">
+                                                                <span class="filter-sale__range-info-text js-filter-sale-length-min"></span>
+                                                                <span class="filter-sale__range-info-text js-filter-sale-length-max"></span>
                                                             </div>
                                                         </div>
-                                                        <div class="filter-sale__separator"></div>
-                                                        <div class="filter-sale__field filter-sale__field_type_text-field-small">
-                                                            <div class="text-field">
-                                                                <input class="text-field__control" type="text" name="item7" value="" />
-                                                                <span class="text-field__placeholder">до</span>
-                                                                <div class="text-field__error-icon-wrapper">
-                                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                                                </div>
-                                                            </div>
+                                                        <div class="filter-sale__field filter-sale__field_type_range">
+                                                            <div class="slider-range js-filter-sale-length-slider"></div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="filter-sale__item">
-                                                    <span class="filter-sale__label">Пассажиры</span>
-                                                    <div class="filter-sale__field filter-sale__field_type_counter">
-                                                        <div class="counter js-counter">
-                                                            <div class="counter__btn counter__btn_kind_minus">
-                                                                <svg class="counter__icon counter__icon_kind_minus"><use xlink:href="assets/images/icon.svg#icon_minus"></use></svg>
-                                                            </div>
-                                                            <input class="counter__control" type="text" name="item8" value="2" readonly="readonly" />
-                                                            <div class="counter__btn counter__btn_kind_plus">
-                                                                <svg class="counter__icon counter__icon_kind_plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__item">
-                                                    <span class="filter-sale__label">Спальных мест</span>
-                                                    <div class="filter-sale__field filter-sale__field_type_counter">
-                                                        <div class="counter js-counter">
-                                                            <div class="counter__btn counter__btn_kind_minus">
-                                                                <svg class="counter__icon counter__icon_kind_minus"><use xlink:href="assets/images/icon.svg#icon_minus"></use></svg>
-                                                            </div>
-                                                            <input class="counter__control" type="text" name="item9" value="2" readonly="readonly" />
-                                                            <div class="counter__btn counter__btn_kind_plus">
-                                                                <svg class="counter__icon counter__icon_kind_plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="filter-sale__col">
-                                                <div class="filter-sale__item filter-sale__item_col">
-                                                    <div class="filter-sale__row">
-                                                        <div class="filter-sale__label">Длина</div>
-                                                        <div class="filter-sale__range-info">
-                                                            <span class="filter-sale__range-info-text js-filter-sale-length-min"></span>
-                                                            <span class="filter-sale__range-info-text js-filter-sale-length-max"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="filter-sale__field filter-sale__field_type_range">
-                                                        <div class="slider-range js-filter-sale-length-slider"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__item filter-sale__item_col filter-sale__item_reset_margin">
-                                                    <span class="filter-sale__label filter-sale__label_margin_bottom">Цена</span>
-                                                    <div class="filter-sale__field filter-sale__field_type_text-field-group filter-sale__field_full_width">
-                                                        <div class="filter-sale__field filter-sale__field_type_text-field-small">
-                                                            <div class="text-field">
-                                                                <input class="text-field__control" type="text" name="item10" value="" />
-                                                                <span class="text-field__placeholder">от</span>
-                                                                <div class="text-field__error-icon-wrapper">
-                                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="filter-sale__separator"></div>
-                                                        <div class="filter-sale__field filter-sale__field_type_text-field-small">
-                                                            <div class="text-field">
-                                                                <input class="text-field__control" type="text" name="item11" value="" />
-                                                                <span class="text-field__placeholder">до</span>
-                                                                <div class="text-field__error-icon-wrapper">
-                                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="filter-sale__field filter-sale__field_type_select-currency">
-                                                            <div class="select-currency js-select-currency">
-                                                                <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
-                                                                <div class="select-currency__selected js-select-currency-selected">
-                                                                    <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                                </div>
-                                                                <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                                <ul class="select-currency__select js-select-currency-select">
-                                                                    <li class="select-currency__option js-select-currency-option" data-value="rub">
-                                                                        <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                                    </li>
-                                                                    <li class="select-currency__option js-select-currency-option" data-value="usd">
-                                                                        <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="filter-sale__field filter-sale__field_type_reset-filter">
-                                                        <button class="reset-filter" type="reset">
-                                                            <div class="reset-filter__circle">
-                                                                <svg class="reset-filter__icon"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                            </div>
-                                                            <span class="reset-filter__text">Сбросить фильры</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__item">
-                                                    <div class="filter-sale__field filter-sale__field_type_search-btn">
-                                                        <button class="button button_kind_red" type="submit">Найти</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="filter-sale__fixed-items">
-                                                <div class="select select_text-like">
-                                                    <div class="select__text"></div>
-                                                    <select class="select__control">
-                                                        <option value="1">Купить</option>
-                                                        <option value="2">Арендовать</option>
-                                                    </select>
-                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                </div>
-                                                <div class="filter-sale__field filter-sale__field_type_select">
-                                                    <div class="select">
-                                                        <div class="select__text"></div>
-                                                        <select class="select__control">
-                                                            <option value="1">Тип лодки</option>
-                                                            <option value="2">item #2</option>
-                                                        </select>
-                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__field filter-sale__field_type_select">
-                                                    <div class="select">
-                                                        <div class="select__text"></div>
-                                                        <select class="select__control">
-                                                            <option value="1">Местоположение</option>
-                                                            <option value="2">item #2</option>
-                                                        </select>
-                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__field filter-sale__field_type_length">
-                                                    <div class="filter-sale__row">
-                                                        <div class="filter-sale__label">Длина</div>
-                                                        <div class="filter-sale__range-info">
-                                                            <span class="filter-sale__range-info-text js-filter-sale-length-min"></span>
-                                                            <span class="filter-sale__range-info-text js-filter-sale-length-max"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="filter-sale__field filter-sale__field_type_range">
-                                                        <div class="slider-range js-filter-sale-length-slider"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__field filter-sale__field_type_price">
-                                                    <span class="filter-sale__label">Цена</span>
-                                                    <div class="filter-sale__field filter-sale__field_type_text-field-group">
-                                                        <div class="filter-sale__field filter-sale__field_type_text-field-small">
-                                                            <div class="text-field">
-                                                                <input class="text-field__control" type="text" name="item10" value="" />
-                                                                <span class="text-field__placeholder">от</span>
-                                                                <div class="text-field__error-icon-wrapper">
-                                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="filter-sale__separator"></div>
-                                                        <div class="filter-sale__field filter-sale__field_type_text-field-small">
-                                                            <div class="text-field">
-                                                                <input class="text-field__control" type="text" name="item11" value="" />
-                                                                <span class="text-field__placeholder">до</span>
-                                                                <div class="text-field__error-icon-wrapper">
-                                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="filter-sale__field filter-sale__field_type_select-currency">
-                                                            <div class="select-currency js-select-currency">
-                                                                <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
-                                                                <div class="select-currency__selected js-select-currency-selected">
-                                                                    <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                                </div>
-                                                                <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                                <ul class="select-currency__select js-select-currency-select">
-                                                                    <li class="select-currency__option js-select-currency-option" data-value="rub">
-                                                                        <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                                    </li>
-                                                                    <li class="select-currency__option js-select-currency-option" data-value="usd">
-                                                                        <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-sale__buttons">
-                                                    <div class="filter-sale__field filter-sale__field_type_search-btn">
-                                                        <button class="button button_kind_red" type="submit">Найти</button>
-                                                    </div>
-                                                    <a class="filter-sale__link" href="#">Расширенный фильтр</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="filter-sale__roll-down">
-                                            <button class="button button_rounded">Все параметры
-                                                <svg class="button__icon button__icon_kind_caret button__icon_kind_caret-down button__icon_stroke_blue button__icon_right"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-sale__extended-wrapper">
-                                            <fieldset class="additional-filter-params">
-                                                <legend class="additional-filter-params__heading">Дополнительные атрибуты</legend>
-                                                <div class="additional-filter-params__fields">
-                                                    <div class="additional-filter-params__col">
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_select">
-                                                                <div class="select">
-                                                                    <div class="select__label">Назначение</div>
-                                                                    <div class="select__text"></div>
-                                                                    <select class="select__control">
-                                                                        <option value="1">item #1</option>
-                                                                        <option value="2">item #2</option>
-                                                                    </select>
-                                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_select">
-                                                                <div class="select">
-                                                                    <div class="select__label">Тип корпуса</div>
-                                                                    <div class="select__text"></div>
-                                                                    <select class="select__control">
-                                                                        <option value="1">item #1</option>
-                                                                        <option value="2">item #2</option>
-                                                                    </select>
-                                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_select">
-                                                                <div class="select">
-                                                                    <div class="select__label">Материал корпуса</div>
-                                                                    <div class="select__text"></div>
-                                                                    <select class="select__control">
-                                                                        <option value="1">item #1</option>
-                                                                        <option value="2">item #2</option>
-                                                                    </select>
-                                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_select">
-                                                                <div class="select">
-                                                                    <div class="select__label">Тип оснастки</div>
-                                                                    <div class="select__text"></div>
-                                                                    <select class="select__control">
-                                                                        <option value="1">item #1</option>
-                                                                        <option value="2">item #2</option>
-                                                                    </select>
-                                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_select">
-                                                                <div class="select">
-                                                                    <div class="select__label">Управление</div>
-                                                                    <div class="select__text"></div>
-                                                                    <select class="select__control">
-                                                                        <option value="1">item #1</option>
-                                                                        <option value="2">item #2</option>
-                                                                    </select>
-                                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="additional-filter-params__col">
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_switcher">
-                                                                <label class="checkbox checkbox_switcher">
-                                                                    <input class="checkbox__control" type="checkbox" name="item2" value="1" />
-                                                                    <span class="checkbox__box">
-                                                                        <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
-                                                                    </span>
-                                                                </label>
-                                                            </div>
-                                                            <span class="additional-filter-params__label additional-filter-params__label_right">Вспомогательный двигатель</span>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_select">
-                                                                <div class="select">
-                                                                    <div class="select__text"></div>
-                                                                    <select class="select__control">
-                                                                        <option value="1">item #1</option>
-                                                                        <option value="2">item #2</option>
-                                                                    </select>
-                                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <span class="additional-filter-params__label">Осадка фальшкилем или швертом не более</span>
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
-                                                                <div class="text-field text-field_placeholder_right">
-                                                                    <input class="text-field__control" type="text" name="item8" value="" />
-                                                                    <span class="text-field__placeholder">м</span>
+                                                    <div class="filter-sale__field filter-sale__field_type_price">
+                                                        <span class="filter-sale__label">Цена</span>
+                                                        <div class="filter-sale__field filter-sale__field_type_text-field-group">
+                                                            <div class="filter-sale__field filter-sale__field_type_text-field-small">
+                                                                <div class="text-field">
+                                                                    <input class="text-field__control" type="text" name="item10" value="" />
+                                                                    <span class="text-field__placeholder">от</span>
                                                                     <div class="text-field__error-icon-wrapper">
                                                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <span class="additional-filter-params__label">Осадка корпусом не более</span>
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
-                                                                <div class="text-field text-field_placeholder_right">
+                                                            <div class="filter-sale__separator"></div>
+                                                            <div class="filter-sale__field filter-sale__field_type_text-field-small">
+                                                                <div class="text-field">
                                                                     <input class="text-field__control" type="text" name="item11" value="" />
-                                                                    <span class="text-field__placeholder">м</span>
+                                                                    <span class="text-field__placeholder">до</span>
                                                                     <div class="text-field__error-icon-wrapper">
                                                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <span class="additional-filter-params__label">Высота мачты не более</span>
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
-                                                                <div class="text-field text-field_placeholder_right">
-                                                                    <input class="text-field__control" type="text" name="item11" value="" />
-                                                                    <span class="text-field__placeholder">м</span>
-                                                                    <div class="text-field__error-icon-wrapper">
-                                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                            <div class="filter-sale__field filter-sale__field_type_select-currency">
+                                                                <div class="select-currency js-select-currency">
+                                                                    <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
+                                                                    <div class="select-currency__selected js-select-currency-selected">
+                                                                        <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
                                                                     </div>
+                                                                    <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                    <ul class="select-currency__select js-select-currency-select">
+                                                                        <li class="select-currency__option js-select-currency-option" data-value="rub">
+                                                                            <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                                                        </li>
+                                                                        <li class="select-currency__option js-select-currency-option" data-value="usd">
+                                                                            <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="additional-filter-params__col">
-                                                        <div class="additional-filter-params__item">
-                                                            <span class="additional-filter-params__label">Запас топлива не менее</span>
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
-                                                                <div class="text-field text-field_placeholder_right">
-                                                                    <input class="text-field__control" type="text" name="item3" value="" />
-                                                                    <span class="text-field__placeholder">л</span>
-                                                                    <div class="text-field__error-icon-wrapper">
-                                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                    <div class="filter-sale__buttons">
+                                                        <div class="filter-sale__field filter-sale__field_type_search-btn">
+                                                            <button class="button button_kind_red" type="submit">Найти</button>
                                                         </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <span class="additional-filter-params__label">Запас воды не менее</span>
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
-                                                                <div class="text-field text-field_placeholder_right">
-                                                                    <input class="text-field__control" type="text" name="item6" value="" />
-                                                                    <span class="text-field__placeholder">л</span>
-                                                                    <div class="text-field__error-icon-wrapper">
-                                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_switcher">
-                                                                <label class="checkbox checkbox_switcher">
-                                                                    <input class="checkbox__control" type="checkbox" name="item9" value="1" />
-                                                                    <span class="checkbox__box">
-                                                                        <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
-                                                                    </span>
-                                                                </label>
-                                                            </div>
-                                                            <span class="additional-filter-params__label additional-filter-params__label_right">Наличие камбуза</span>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__field additional-filter-params__field_type_switcher">
-                                                                <label class="checkbox checkbox_switcher">
-                                                                    <input class="checkbox__control" type="checkbox" name="item12" value="1" />
-                                                                    <span class="checkbox__box">
-                                                                        <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
-                                                                    </span>
-                                                                </label>
-                                                            </div>
-                                                            <span class="additional-filter-params__label additional-filter-params__label_right">Наличие санузла</span>
-                                                        </div>
-                                                        <div class="additional-filter-params__item">
-                                                            <div class="additional-filter-params__reset">
-                                                                <button class="reset-filter" type="reset">
-                                                                    <div class="reset-filter__circle">
-                                                                        <svg class="reset-filter__icon"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                                                    </div>
-                                                                    <span class="reset-filter__text">Сбросить фильры</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
+                                                        <a class="filter-sale__link" href="#">Расширенный фильтр</a>
                                                     </div>
                                                 </div>
-                                                <div class="additional-filter-params__buttons">
-                                                    <div class="additional-filter-params__roll-up">
-                                                        <button class="button button_rounded">Свернуть
-                                                            <svg class="button__icon button__icon_kind_caret button__icon_kind_caret-up button__icon_stroke_blue button__icon_right"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                        </button>
+                                            </div>
+                                            <div class="filter-sale__roll-down">
+                                                <button class="button button_rounded">Все параметры
+                                                    <svg class="button__icon button__icon_kind_caret button__icon_kind_caret-down button__icon_stroke_blue button__icon_right"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                </button>
+                                            </div>
+                                            <div class="filter-sale__extended-wrapper">
+                                                <fieldset class="additional-filter-params">
+                                                    <legend class="additional-filter-params__heading">Дополнительные атрибуты</legend>
+                                                    <div class="additional-filter-params__fields">
+                                                        <div class="additional-filter-params__col">
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_select">
+                                                                    <div class="select">
+                                                                        <div class="select__label">Назначение</div>
+                                                                        <div class="select__text"></div>
+                                                                        <select class="select__control">
+                                                                            <option value="1">item #1</option>
+                                                                            <option value="2">item #2</option>
+                                                                        </select>
+                                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_select">
+                                                                    <div class="select">
+                                                                        <div class="select__label">Тип корпуса</div>
+                                                                        <div class="select__text"></div>
+                                                                        <select class="select__control">
+                                                                            <option value="1">item #1</option>
+                                                                            <option value="2">item #2</option>
+                                                                        </select>
+                                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_select">
+                                                                    <div class="select">
+                                                                        <div class="select__label">Материал корпуса</div>
+                                                                        <div class="select__text"></div>
+                                                                        <select class="select__control">
+                                                                            <option value="1">item #1</option>
+                                                                            <option value="2">item #2</option>
+                                                                        </select>
+                                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_select">
+                                                                    <div class="select">
+                                                                        <div class="select__label">Тип оснастки</div>
+                                                                        <div class="select__text"></div>
+                                                                        <select class="select__control">
+                                                                            <option value="1">item #1</option>
+                                                                            <option value="2">item #2</option>
+                                                                        </select>
+                                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_select">
+                                                                    <div class="select">
+                                                                        <div class="select__label">Управление</div>
+                                                                        <div class="select__text"></div>
+                                                                        <select class="select__control">
+                                                                            <option value="1">item #1</option>
+                                                                            <option value="2">item #2</option>
+                                                                        </select>
+                                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="additional-filter-params__col">
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_switcher">
+                                                                    <label class="checkbox checkbox_switcher">
+                                                                        <input class="checkbox__control" type="checkbox" name="item2" value="1" />
+                                                                        <span class="checkbox__box">
+                                                                            <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+                                                                <span class="additional-filter-params__label additional-filter-params__label_right">Вспомогательный двигатель</span>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_select">
+                                                                    <div class="select">
+                                                                        <div class="select__text"></div>
+                                                                        <select class="select__control">
+                                                                            <option value="1">item #1</option>
+                                                                            <option value="2">item #2</option>
+                                                                        </select>
+                                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <span class="additional-filter-params__label">Осадка фальшкилем или швертом не более</span>
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
+                                                                    <div class="text-field text-field_placeholder_right">
+                                                                        <input class="text-field__control" type="text" name="item8" value="" />
+                                                                        <span class="text-field__placeholder">м</span>
+                                                                        <div class="text-field__error-icon-wrapper">
+                                                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <span class="additional-filter-params__label">Осадка корпусом не более</span>
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
+                                                                    <div class="text-field text-field_placeholder_right">
+                                                                        <input class="text-field__control" type="text" name="item11" value="" />
+                                                                        <span class="text-field__placeholder">м</span>
+                                                                        <div class="text-field__error-icon-wrapper">
+                                                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <span class="additional-filter-params__label">Высота мачты не более</span>
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
+                                                                    <div class="text-field text-field_placeholder_right">
+                                                                        <input class="text-field__control" type="text" name="item11" value="" />
+                                                                        <span class="text-field__placeholder">м</span>
+                                                                        <div class="text-field__error-icon-wrapper">
+                                                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="additional-filter-params__col">
+                                                            <div class="additional-filter-params__item">
+                                                                <span class="additional-filter-params__label">Запас топлива не менее</span>
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
+                                                                    <div class="text-field text-field_placeholder_right">
+                                                                        <input class="text-field__control" type="text" name="item3" value="" />
+                                                                        <span class="text-field__placeholder">л</span>
+                                                                        <div class="text-field__error-icon-wrapper">
+                                                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <span class="additional-filter-params__label">Запас воды не менее</span>
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_text-field">
+                                                                    <div class="text-field text-field_placeholder_right">
+                                                                        <input class="text-field__control" type="text" name="item6" value="" />
+                                                                        <span class="text-field__placeholder">л</span>
+                                                                        <div class="text-field__error-icon-wrapper">
+                                                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_switcher">
+                                                                    <label class="checkbox checkbox_switcher">
+                                                                        <input class="checkbox__control" type="checkbox" name="item9" value="1" />
+                                                                        <span class="checkbox__box">
+                                                                            <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+                                                                <span class="additional-filter-params__label additional-filter-params__label_right">Наличие камбуза</span>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__field additional-filter-params__field_type_switcher">
+                                                                    <label class="checkbox checkbox_switcher">
+                                                                        <input class="checkbox__control" type="checkbox" name="item12" value="1" />
+                                                                        <span class="checkbox__box">
+                                                                            <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+                                                                <span class="additional-filter-params__label additional-filter-params__label_right">Наличие санузла</span>
+                                                            </div>
+                                                            <div class="additional-filter-params__item">
+                                                                <div class="additional-filter-params__reset">
+                                                                    <button class="reset-filter" type="reset">
+                                                                        <div class="reset-filter__circle">
+                                                                            <svg class="reset-filter__icon"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                                        </div>
+                                                                        <span class="reset-filter__text">Сбросить фильры</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="additional-filter-params__search">
-                                                        <button class="button button_kind_red" type="submit">Найти</button>
+                                                    <div class="additional-filter-params__buttons">
+                                                        <div class="additional-filter-params__roll-up">
+                                                            <button class="button button_rounded">Свернуть
+                                                                <svg class="button__icon button__icon_kind_caret button__icon_kind_caret-up button__icon_stroke_blue button__icon_right"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="additional-filter-params__search">
+                                                            <button class="button button_kind_red" type="submit">Найти</button>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </fieldset>
-                                        </div>
-                                    </form>
+                                                </fieldset>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mobile-slide-popup" id="filter-sale-mobile">
@@ -722,7 +733,7 @@
                                     <span class="mobile-slide-popup__text">Назад</span>
                                 </div>
                                 <div class="mobile-slide-popup__content">
-                                    <div class="filter-sale filter-sale_default">
+                                    <div class="filter-sale filter-sale_default js-filter-sale">
                                         <div class="filter-sale__nav">
                                             <a class="division division_active filter-sale__division" href="#">Купить</a>
                                             <a class="division filter-sale__division" href="#">Арендовать</a>
@@ -1244,228 +1255,143 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="filter" id="filterTab">
-                                <ul class="filter__control">
-                                    <li>
-                                        <li>
-                                            <a class="division division_arrow-left division_active filter__division" href="#filterTabs-1">Купить</a>
-                                        </li>
-                                    </li>
-                                    <li>
-                                        <li>
-                                            <a class="division division_arrow-left filter__division" href="#filterTabs-2">Арендовать</a>
-                                        </li>
-                                    </li>
-                                </ul>
-                                <form class="filter__content" id="filterTabs-1">
-                                    <div class="filter__item">
-                                        <div class="select">
-                                            <div class="select__text"></div>
-                                            <select class="select__control">
-                                                <option value="1">Тип яхты #1</option>
-                                                <option value="2">Тип яхты #2</option>
-                                                <option value="3">Тип яхты #3</option>
-                                            </select>
-                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <div class="select">
-                                            <div class="select__text"></div>
-                                            <select class="select__control">
-                                                <option value="1">Модель яхты #1</option>
-                                                <option value="2">Модель яхты #2</option>
-                                                <option value="3">Модель яхты #3</option>
-                                            </select>
-                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <div class="filter__price">
-                                            <div class="filter__label">Цена</div>
-                                            <div class="filter__price-item">
-                                                <div class="text-field">
-                                                    <input class="text-field__control" type="text" name="price-from" value="" />
-                                                    <span class="text-field__placeholder">от</span>
-                                                    <div class="text-field__error-icon-wrapper">
-                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                            <div class="filter">
+                                <div class="filter__nav">
+                                    <a class="division division_active division_arrow-left filter__division" href="#">Купить</a>
+                                    <a class="division division_arrow-left filter__division" href="#">Арендовать</a>
+                                </div>
+                                <form class="filter__tab">
+                                    <div class="filter__content">
+                                        <div class="filter__col">
+                                            <div class="filter__item">
+                                                <div class="filter__field filter__field_type_select">
+                                                    <div class="select">
+                                                        <div class="select__label">Тип яхты</div>
+                                                        <div class="select__text"></div>
+                                                        <select class="select__control">
+                                                            <option value="1">item #1</option>
+                                                            <option value="2">item #2</option>
+                                                        </select>
+                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="filter__price-sep"></div>
-                                            <div class="filter__price-item">
-                                                <div class="text-field">
-                                                    <input class="text-field__control" type="text" name="price-to" value="" />
-                                                    <span class="text-field__placeholder">до</span>
-                                                    <div class="text-field__error-icon-wrapper">
-                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                            <div class="filter__item">
+                                                <div class="filter__field filter__field_type_select">
+                                                    <div class="select">
+                                                        <div class="select__label">Верфь</div>
+                                                        <div class="select__text"></div>
+                                                        <select class="select__control">
+                                                            <option value="1">item #1</option>
+                                                            <option value="2">item #2</option>
+                                                        </select>
+                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="filter__select-currency">
-                                            <div class="select-currency js-select-currency">
-                                                <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
-                                                <div class="select-currency__selected js-select-currency-selected">
-                                                    <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                </div>
-                                                <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                <ul class="select-currency__select js-select-currency-select">
-                                                    <li class="select-currency__option js-select-currency-option" data-value="rub">
-                                                        <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                    </li>
-                                                    <li class="select-currency__option js-select-currency-option" data-value="usd">
-                                                        <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <div class="select">
-                                            <div class="select__text"></div>
-                                            <select class="select__control">
-                                                <option value="1">Верфь #1</option>
-                                                <option value="2">Верфь #2</option>
-                                                <option value="3">Верфь #3</option>
-                                            </select>
-                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <div class="filter__length">
-                                            <div class="filter__label">Длина</div>
-                                            <div class="filter__length-info">
-                                                <div class="filter__length-text js-filter-length-min"></div>
-                                                <div class="filter__length-text js-filter-length-max"></div>
-                                            </div>
-                                            <div class="filter__length-slider">
-                                                <div class="slider-range js-filter-slider-range"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <button class="button button_kind_red filter__search-btn">Найти</button>
-                                    </div>
-                                    <a class="filter__extended-link" href="#">Расширенный фильтр</a>
-                                </form>
-                                <form class="filter__content" id="filterTabs-2">
-                                    <div class="filter__item">
-                                        <div class="select">
-                                            <div class="select__text"></div>
-                                            <select class="select__control">
-                                                <option value="1">Тип яхты #1</option>
-                                                <option value="2">Тип яхты #2</option>
-                                                <option value="3">Тип яхты #3</option>
-                                            </select>
-                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <div class="select">
-                                            <div class="select__text"></div>
-                                            <select class="select__control">
-                                                <option value="1">Модель яхты #1</option>
-                                                <option value="2">Модель яхты #2</option>
-                                                <option value="3">Модель яхты #3</option>
-                                            </select>
-                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <div class="filter__price">
-                                            <div class="filter__label">Цена</div>
-                                            <div class="filter__price-item">
-                                                <div class="text-field">
-                                                    <input class="text-field__control" type="text" name="price-from" value="" />
-                                                    <span class="text-field__placeholder">от</span>
-                                                    <div class="text-field__error-icon-wrapper">
-                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                        <div class="filter__col">
+                                            <div class="filter__item">
+                                                <div class="filter__field filter__field_type_select">
+                                                    <div class="select">
+                                                        <div class="select__label">Модель</div>
+                                                        <div class="select__text"></div>
+                                                        <select class="select__control">
+                                                            <option value="1">item #1</option>
+                                                            <option value="2">item #2</option>
+                                                        </select>
+                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="filter__price-sep"></div>
-                                            <div class="filter__price-item">
-                                                <div class="text-field">
-                                                    <input class="text-field__control" type="text" name="price-to" value="" />
-                                                    <span class="text-field__placeholder">до</span>
-                                                    <div class="text-field__error-icon-wrapper">
-                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                            <div class="filter__item filter__item_col">
+                                                <div class="filter__row">
+                                                    <div class="filter__label">Длина</div>
+                                                    <div class="filter__range-info">
+                                                        <span class="filter__range-info-text js-filter-sale-length-min"></span>
+                                                        <span class="filter__range-info-text js-filter-sale-length-max"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__field filter__field_type_range">
+                                                    <div class="slider-range js-filter-sale-length-slider"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__col">
+                                            <div class="filter__item">
+                                                <span class="filter__label">Цена</span>
+                                                <div class="filter__field filter__field_type_text-field-group">
+                                                    <div class="filter__field filter__field_type_text-field-small">
+                                                        <div class="text-field">
+                                                            <input class="text-field__control" type="text" name="item10" value="" />
+                                                            <span class="text-field__placeholder">от</span>
+                                                            <div class="text-field__error-icon-wrapper">
+                                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__separator"></div>
+                                                    <div class="filter__field filter__field_type_text-field-small">
+                                                        <div class="text-field">
+                                                            <input class="text-field__control" type="text" name="item11" value="" />
+                                                            <span class="text-field__placeholder">до</span>
+                                                            <div class="text-field__error-icon-wrapper">
+                                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__field filter__field_type_select-currency">
+                                                    <div class="select-currency js-select-currency">
+                                                        <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
+                                                        <div class="select-currency__selected js-select-currency-selected">
+                                                            <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                                        </div>
+                                                        <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                        <ul class="select-currency__select js-select-currency-select">
+                                                            <li class="select-currency__option js-select-currency-option" data-value="rub">
+                                                                <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                                            </li>
+                                                            <li class="select-currency__option js-select-currency-option" data-value="usd">
+                                                                <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="filter__select-currency">
-                                            <div class="select-currency js-select-currency">
-                                                <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
-                                                <div class="select-currency__selected js-select-currency-selected">
-                                                    <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                            <div class="filter__item filter__item_col">
+                                                <div class="filter__field filter__field_type_search-btn">
+                                                    <button class="button button_kind_red" type="submit">Найти</button>
                                                 </div>
-                                                <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                                <ul class="select-currency__select js-select-currency-select">
-                                                    <li class="select-currency__option js-select-currency-option" data-value="rub">
-                                                        <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                    </li>
-                                                    <li class="select-currency__option js-select-currency-option" data-value="usd">
-                                                        <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                                    </li>
-                                                </ul>
+                                                <a class="filter__link" href="#">Расширенный список</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="filter__item">
-                                        <div class="select">
-                                            <div class="select__text"></div>
-                                            <select class="select__control">
-                                                <option value="1">Верфь #1</option>
-                                                <option value="2">Верфь #2</option>
-                                                <option value="3">Верфь #3</option>
-                                            </select>
-                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <div class="filter__length">
-                                            <div class="filter__label">Длина</div>
-                                            <div class="filter__length-info">
-                                                <div class="filter__length-text js-filter-length-min"></div>
-                                                <div class="filter__length-text js-filter-length-max"></div>
-                                            </div>
-                                            <div class="filter__length-slider">
-                                                <div class="slider-range js-filter-slider-range"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="filter__item">
-                                        <button class="button button_kind_red filter__search-btn">Найти</button>
-                                    </div>
-                                    <a class="filter__extended-link" href="#">Расширенный фильтр</a>
                                 </form>
                             </div>
                             <button class="button sale12-page__show-filter-btn js-mobile-slide-popup" data-target-modal="#filter-sale-mobile">Фильтр</button>
-                            <div class="sale-help">
-                                <ul class="list">
-                                    <li class="list__item">
-                                        <h3 class="sale-help__title">Продаете яхты или катера?</h3>
-                                    </li>
-                                    <li class="list__item">
-                                        <p class="sale-help__text">Для быстрой продажи, воспользуйтесь возможностями нашего ресурса:</p>
-                                        <ul class="sale-help__list">
-                                            <li class="sale-help__item">
-                                                <a class="sale-help__link" href="#">Бесплатная публикация&nbsp;</a>одного объявления</li>
-                                            <li class="sale-help__item">
-                                                <a class="sale-help__link" href="#">VIP объявление&nbsp;</a>для привлечения внимания к вашему объявлению</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <div class="sale-help__button">
-                                    <a class="button button_kind_red button_rounded button_shadow">Создать предложение</a>
+                            <div class="sale12-page__sale-wrapper">
+                                <div class="sale-help">
+                                    <ul class="list">
+                                        <li class="list__item">
+                                            <h3 class="sale-help__title">Продаете яхты или катера?</h3>
+                                        </li>
+                                        <li class="list__item">
+                                            <p class="sale-help__text">Для быстрой продажи, воспользуйтесь возможностями нашего ресурса:</p>
+                                            <ul class="sale-help__list">
+                                                <li class="sale-help__item">
+                                                    <a class="sale-help__link" href="#">Бесплатная публикация&nbsp;</a>одного объявления</li>
+                                                <li class="sale-help__item">
+                                                    <a class="sale-help__link" href="#">VIP объявление&nbsp;</a>для привлечения внимания к вашему объявлению</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="sale-help__button">
+                                        <a class="button button_kind_red button_rounded button_shadow">Создать предложение</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2096,8 +2022,10 @@
             </div>
         </div>
     </div>
-    <div class="up-btn js-up-btn">
-        <svg class="up-btn__caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+    <div class="up-btn">
+        <div class="up-btn__btn">
+            <svg class="up-btn__caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+        </div>
     </div>
     <footer class="footer">
         <div class="subscribe">

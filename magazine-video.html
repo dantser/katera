@@ -65,6 +65,9 @@
                             <span class="login-btn__text">Вход</span>
                         </a>
                         <a class="button button_kind_red header__proposal-btn" href="#">Создать предложение</a>
+                        <a class="button button_kind_red header__plus-btn" href="#">Предложение
+                            <svg class="button__icon-plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                        </a>
                         <div class="search-bar header__search-bar">
                             <div class="search-bar__box">
                                 <svg class="search-bar__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
@@ -136,6 +139,12 @@
                             </li>
                         </ul>
                     </div>
+                    <a class="burger-dropdown__question" href="#">
+                        <div class="burger-dropdown__question-wrapper">
+                            <span class="burger-dropdown__label">Задать вопрос</span>
+                            <svg class="burger-dropdown__icon"><use xlink:href="assets/images/icon.svg#icon_questions-circular"></use></svg>
+                        </div>
+                    </a>
                     <div class="burger-dropdown__banners">
                         <div class="burger-dropdown__banner burger-dropdown__banner_type_1">
                             <a class="banner" href="">
@@ -201,232 +210,234 @@
                     </div>
                     <main class="main-container main-container_shadow magazine-videos__main-container">
                         <iframe class="magazine-video__video" src="https://www.youtube.com/embed/J-ek8drxFJA" allowfullscreen="allowfullscreen"></iframe>
-                        <div class="magazine-video__content">
-                            <div class="magazine-video__inner-content">
-                                <div class="text magazine-video__text-block">
-                                    <h2>PROyachting проведет третий этап Sochi winter Cup на новогодних праздниках</h2>
-                                    <p>Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую
-                                        тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.</p>
-                                </div>
-                                <div class="tag-list magazine-video__tags">
-                                    <b class="tag-list__title">Теги:</b>
-                                    <ul class="tag-list__tags">
-                                        <li class="tag-list__tag">
-                                            <a href="#">Активный отдых</a>
-                                        </li>
-                                        <li class="tag-list__tag">
-                                            <a href="#">Море</a>
-                                        </li>
-                                        <li class="tag-list__tag">
-                                            <a href="#">Путешествия</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="share magazine-video__share">
-                                    <b class="share__title">Поделиться:</b>
-                                    <div class="share__share-wrap">
-                                        <div class="share__buttons">
-                                            <ul class="social social_join social_small">
-                                                <li class="social__item">
-                                                    <a class="social__link social__link_type_vk" href="#">
-                                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
-                                                    </a>
-                                                </li>
-                                                <li class="social__item">
-                                                    <a class="social__link social__link_type_go" href="#">
-                                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_go"></use></svg>
-                                                    </a>
-                                                </li>
-                                                <li class="social__item">
-                                                    <a class="social__link social__link_type_fb" href="#">
-                                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
-                                                    </a>
-                                                </li>
-                                                <li class="social__item">
-                                                    <a class="social__link social__link_type_odnokl" href="#">
-                                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_odnokl"></use></svg>
-                                                    </a>
-                                                </li>
-                                                <li class="social__item">
-                                                    <a class="social__link social__link_type_tw" href="#">
-                                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_tw"></use></svg>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                        <div class="magazine-video__outer-content">
+                            <div class="magazine-video__content">
+                                <div class="magazine-video__inner-content">
+                                    <div class="text magazine-video__text-block">
+                                        <h2>PROyachting проведет третий этап Sochi winter Cup на новогодних праздниках</h2>
+                                        <p>Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую
+                                            тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.</p>
+                                    </div>
+                                    <div class="tag-list magazine-video__tags">
+                                        <b class="tag-list__title">Теги:</b>
+                                        <ul class="tag-list__tags">
+                                            <li class="tag-list__tag">
+                                                <a href="#">Активный отдых</a>
+                                            </li>
+                                            <li class="tag-list__tag">
+                                                <a href="#">Море</a>
+                                            </li>
+                                            <li class="tag-list__tag">
+                                                <a href="#">Путешествия</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="share magazine-video__share">
+                                        <b class="share__title">Поделиться:</b>
+                                        <div class="share__share-wrap">
+                                            <div class="share__buttons">
+                                                <ul class="social social_join social_small">
+                                                    <li class="social__item">
+                                                        <a class="social__link social__link_type_vk" href="#">
+                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                                        </a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a class="social__link social__link_type_go" href="#">
+                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_go"></use></svg>
+                                                        </a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a class="social__link social__link_type_fb" href="#">
+                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                                                        </a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a class="social__link social__link_type_odnokl" href="#">
+                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_odnokl"></use></svg>
+                                                        </a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a class="social__link social__link_type_tw" href="#">
+                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_tw"></use></svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="share__shared share__shared_small">
+                                                <span>1k</span>
+                                            </div>
                                         </div>
-                                        <div class="share__shared share__shared_small">
-                                            <span>1k</span>
+                                    </div>
+                                </div>
+                                <div class="magazine-video__inner-content magazine-video__inner-content_comments">
+                                    <div class="comments">
+                                        <div class="comments-container">
+                                            <h3 class="comments-container__title">Комментарии:</h3>
+                                        </div>
+                                        <div class="comments__item">
+                                            <div class="comments__left">
+                                                <img class="comments__img" src="assets/images/comments.jpg" alt="" role="presentation" />
+                                            </div>
+                                            <div class="comments__right">
+                                                <div class="comments__box">
+                                                    <h4 class="comments__fio">Мария Головина</h4>
+                                                    <span class="comments__answer">ответил Марии</span>
+                                                </div>
+                                                <p class="comments__text">Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.</p>
+                                                <div class="comments-mark">
+                                                    <a class="comments-mark__text" href="#">Отметка
+                                                        <span class="comments-mark__icon comments-mark__icon_quotes">Нравится</span>
+                                                    </a>
+                                                    <a class="comments-mark__text comments-mark__text_dot" href="#">Ответить</a>
+                                                    <span class="comments-mark__icon comments-mark__icon_color">1 декабря 2016г.</span>
+                                                    <span class="comments-mark__icon comments-mark__icon_time">4:36</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comments__item comments__item comments__item_left">
+                                            <div class="comments__left">
+                                                <img class="comments__img" src="assets/images/comments1.jpg" alt="" role="presentation" />
+                                            </div>
+                                            <div class="comments__right">
+                                                <div class="comments__box">
+                                                    <h4 class="comments__fio">Глеб Волчик</h4>
+                                                    <span class="comments__answer">ответил Марии</span>
+                                                </div>
+                                                <p class="comments__text">Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.</p>
+                                                <div class="comments-mark">
+                                                    <a class="comments-mark__text" href="#">Отметка
+                                                        <span class="comments-mark__icon comments-mark__icon_quotes">Нравится</span>
+                                                    </a>
+                                                    <a class="comments-mark__text comments-mark__text_dot" href="#">Ответить</a>
+                                                    <span class="comments-mark__icon comments-mark__icon_color">1 декабря 2016г.</span>
+                                                    <span class="comments-mark__icon comments-mark__icon_time">4:36</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comments__item comments__item comments__item_left">
+                                            <div class="comments__left">
+                                                <img class="comments__img" src="assets/images/comments.jpg" alt="" role="presentation" />
+                                            </div>
+                                            <div class="comments__right">
+                                                <div class="comments__box">
+                                                    <h4 class="comments__fio">Мария Головина</h4>
+                                                    <span class="comments__answer">ответила Глебу</span>
+                                                </div>
+                                                <p class="comments__text">Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.</p>
+                                                <div class="comments-mark">
+                                                    <a class="comments-mark__text" href="#">Отметка
+                                                        <span class="comments-mark__icon comments-mark__icon_quotes">Нравится</span>
+                                                    </a>
+                                                    <a class="comments-mark__text comments-mark__text_dot" href="#">Ответить</a>
+                                                    <span class="comments-mark__icon comments-mark__icon_color">1 декабря 2016г.</span>
+                                                    <span class="comments-mark__icon comments-mark__icon_time">4:36</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comments__item">
+                                            <div class="comments__left">
+                                                <img class="comments__img" src="assets/images/comments1.jpg" alt="" role="presentation" />
+                                            </div>
+                                            <div class="comments__right">
+                                                <a class="comments__link" href="#">Добавить комментарий</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="magazine-video__inner-content magazine-video__inner-content_comments">
-                                <div class="comments">
-                                    <div class="comments-container">
-                                        <h3 class="comments-container__title">Комментарии:</h3>
-                                    </div>
-                                    <div class="comments__item">
-                                        <div class="comments__left">
-                                            <img class="comments__img" src="assets/images/comments.jpg" alt="" role="presentation" />
-                                        </div>
-                                        <div class="comments__right">
-                                            <div class="comments__box">
-                                                <h4 class="comments__fio">Мария Головина</h4>
-                                                <span class="comments__answer">ответил Марии</span>
+                            <div class="magazine-video__sidebar">
+                                <div class="magazine-video__heading magazine-video__heading_size_medium">Другие видео:</div>
+                                <ul class="magazine-video__items">
+                                    <li class="magazine-video__item">
+                                        <a class="video-preview video-preview_row" href="#">
+                                            <div class="video-preview__image">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
+                                                </div>
                                             </div>
-                                            <p class="comments__text">Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.</p>
-                                            <div class="comments-mark">
-                                                <a class="comments-mark__text" href="#">Отметка
-                                                    <span class="comments-mark__icon comments-mark__icon_quotes">Нравится</span>
-                                                </a>
-                                                <a class="comments-mark__text comments-mark__text_dot" href="#">Ответить</a>
-                                                <span class="comments-mark__icon comments-mark__icon_color">1 декабря 2016г.</span>
-                                                <span class="comments-mark__icon comments-mark__icon_time">4:36</span>
+                                            <div class="video-preview__text">
+                                                <span class="video-preview__duration">02.16</span>
+                                                <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="comments__item comments__item comments__item_left">
-                                        <div class="comments__left">
-                                            <img class="comments__img" src="assets/images/comments1.jpg" alt="" role="presentation" />
-                                        </div>
-                                        <div class="comments__right">
-                                            <div class="comments__box">
-                                                <h4 class="comments__fio">Глеб Волчик</h4>
-                                                <span class="comments__answer">ответил Марии</span>
+                                        </a>
+                                    </li>
+                                    <li class="magazine-video__item">
+                                        <a class="video-preview video-preview_row" href="#">
+                                            <div class="video-preview__image">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
+                                                </div>
                                             </div>
-                                            <p class="comments__text">Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.</p>
-                                            <div class="comments-mark">
-                                                <a class="comments-mark__text" href="#">Отметка
-                                                    <span class="comments-mark__icon comments-mark__icon_quotes">Нравится</span>
-                                                </a>
-                                                <a class="comments-mark__text comments-mark__text_dot" href="#">Ответить</a>
-                                                <span class="comments-mark__icon comments-mark__icon_color">1 декабря 2016г.</span>
-                                                <span class="comments-mark__icon comments-mark__icon_time">4:36</span>
+                                            <div class="video-preview__text">
+                                                <span class="video-preview__duration">02.16</span>
+                                                <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
                                             </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a class="banner" href="#">
+                                    <div class="banner__image banner__video-banner">
+                                        <div class="image-bg">
+                                            <img class="image-bg__img" alt="" src="assets/images/banner3.jpg" role="presentation" />
                                         </div>
                                     </div>
-                                    <div class="comments__item comments__item comments__item_left">
-                                        <div class="comments__left">
-                                            <img class="comments__img" src="assets/images/comments.jpg" alt="" role="presentation" />
-                                        </div>
-                                        <div class="comments__right">
-                                            <div class="comments__box">
-                                                <h4 class="comments__fio">Мария Головина</h4>
-                                                <span class="comments__answer">ответила Глебу</span>
+                                </a>
+                                <ul class="magazine-video__items">
+                                    <li class="magazine-video__item">
+                                        <a class="video-preview video-preview_row" href="#">
+                                            <div class="video-preview__image">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
+                                                </div>
                                             </div>
-                                            <p class="comments__text">Статья супер! Очень информативно и доступно! Ведь я заядлая любительница яхт.</p>
-                                            <div class="comments-mark">
-                                                <a class="comments-mark__text" href="#">Отметка
-                                                    <span class="comments-mark__icon comments-mark__icon_quotes">Нравится</span>
-                                                </a>
-                                                <a class="comments-mark__text comments-mark__text_dot" href="#">Ответить</a>
-                                                <span class="comments-mark__icon comments-mark__icon_color">1 декабря 2016г.</span>
-                                                <span class="comments-mark__icon comments-mark__icon_time">4:36</span>
+                                            <div class="video-preview__text">
+                                                <span class="video-preview__duration">02.16</span>
+                                                <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="comments__item">
-                                        <div class="comments__left">
-                                            <img class="comments__img" src="assets/images/comments1.jpg" alt="" role="presentation" />
-                                        </div>
-                                        <div class="comments__right">
-                                            <a class="comments__link" href="#">Добавить комментарий</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </a>
+                                    </li>
+                                    <li class="magazine-video__item">
+                                        <a class="video-preview video-preview_row" href="#">
+                                            <div class="video-preview__image">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
+                                                </div>
+                                            </div>
+                                            <div class="video-preview__text">
+                                                <span class="video-preview__duration">02.16</span>
+                                                <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="magazine-video__item">
+                                        <a class="video-preview video-preview_row" href="#">
+                                            <div class="video-preview__image">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
+                                                </div>
+                                            </div>
+                                            <div class="video-preview__text">
+                                                <span class="video-preview__duration">02.16</span>
+                                                <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="magazine-video__item">
+                                        <a class="video-preview video-preview_row" href="#">
+                                            <div class="video-preview__image">
+                                                <div class="image-bg">
+                                                    <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
+                                                </div>
+                                            </div>
+                                            <div class="video-preview__text">
+                                                <span class="video-preview__duration">02.16</span>
+                                                <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="magazine-video__sidebar">
-                            <div class="magazine-video__heading magazine-video__heading_size_medium">Другие видео:</div>
-                            <ul class="magazine-video__items">
-                                <li class="magazine-video__item">
-                                    <a class="video-preview video-preview_row" href="#">
-                                        <div class="video-preview__image">
-                                            <div class="image-bg">
-                                                <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
-                                            </div>
-                                        </div>
-                                        <div class="video-preview__text">
-                                            <span class="video-preview__duration">02.16</span>
-                                            <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="magazine-video__item">
-                                    <a class="video-preview video-preview_row" href="#">
-                                        <div class="video-preview__image">
-                                            <div class="image-bg">
-                                                <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
-                                            </div>
-                                        </div>
-                                        <div class="video-preview__text">
-                                            <span class="video-preview__duration">02.16</span>
-                                            <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <a class="banner" href="#">
-                                <div class="banner__image banner__video-banner">
-                                    <div class="image-bg">
-                                        <img class="image-bg__img" alt="" src="assets/images/banner3.jpg" role="presentation" />
-                                    </div>
-                                </div>
-                            </a>
-                            <ul class="magazine-video__items">
-                                <li class="magazine-video__item">
-                                    <a class="video-preview video-preview_row" href="#">
-                                        <div class="video-preview__image">
-                                            <div class="image-bg">
-                                                <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
-                                            </div>
-                                        </div>
-                                        <div class="video-preview__text">
-                                            <span class="video-preview__duration">02.16</span>
-                                            <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="magazine-video__item">
-                                    <a class="video-preview video-preview_row" href="#">
-                                        <div class="video-preview__image">
-                                            <div class="image-bg">
-                                                <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
-                                            </div>
-                                        </div>
-                                        <div class="video-preview__text">
-                                            <span class="video-preview__duration">02.16</span>
-                                            <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="magazine-video__item">
-                                    <a class="video-preview video-preview_row" href="#">
-                                        <div class="video-preview__image">
-                                            <div class="image-bg">
-                                                <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
-                                            </div>
-                                        </div>
-                                        <div class="video-preview__text">
-                                            <span class="video-preview__duration">02.16</span>
-                                            <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="magazine-video__item">
-                                    <a class="video-preview video-preview_row" href="#">
-                                        <div class="video-preview__image">
-                                            <div class="image-bg">
-                                                <img class="image-bg__img" alt="" src="assets/images/video-preview-test.jpg" role="presentation" />
-                                            </div>
-                                        </div>
-                                        <div class="video-preview__text">
-                                            <span class="video-preview__duration">02.16</span>
-                                            <h2 class="video-preview__title">PROyachting проведет третий этам Sochi Winter Cup на новогодних праздниках</h2>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
                     </main>
                 </div>
@@ -440,8 +451,10 @@
             </div>
         </div>
     </div>
-    <div class="up-btn js-up-btn">
-        <svg class="up-btn__caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+    <div class="up-btn">
+        <div class="up-btn__btn">
+            <svg class="up-btn__caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+        </div>
     </div>
     <footer class="footer">
         <div class="subscribe">

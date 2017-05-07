@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Катера.RU - Личный кабинет</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__banner">
+                <a class="banner" href="#">
+                    <div class="banner__image banner__image_overlay">
+                        <div class="image-bg">
+                            <img class="image-bg__img" alt="" src="assets/images/banner.jpg" role="presentation" />
+                        </div>
+                    </div>
+                    <div class="banner__content">
+                        <img class="banner__little" src="assets/images/banner-img.png" alt="" role="presentation" />
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="header__container">
+            <div class="container">
+                <div class="header__content">
+                    <div class="header__column header__column_left">
+                        <div class="burger js-burger header__burger">
+                            <svg class="burger__icon burger__icon_type_burger"><use xlink:href="assets/images/icon.svg#icon_burger"></use></svg>
+                            <svg class="burger__icon burger__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                        </div>
+                        <a class="logo header__logo" href="#">
+                            <img class="logo__image" src="assets/images/logo-small.svg" alt="" role="presentation" />
+                        </a>
+                    </div>
+                    <div class="header__column header__column_right">
+                        <nav class="header__navbar">
+                            <ul class="navbar">
+                                <li class="navbar__item">
+                                    <a class="navbar__link" href="#">Предложения</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a class="navbar__link" href="#">Журнал</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a class="navbar__link" href="#">Капитан клуб</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a class="navbar__link" href="#">Форум</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a class="navbar__link" href="#">Разное</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a class="login-btn header__login" href="#">
+                            <svg class="login-btn__icon"><use xlink:href="assets/images/icon.svg#icon_login"></use></svg>
+                            <span class="login-btn__text">Вход</span>
+                        </a>
+                        <a class="button button_kind_red header__proposal-btn" href="#">Создать предложение</a>
+                        <a class="button button_kind_red header__plus-btn" href="#">Предложение
+                            <svg class="button__icon-plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                        </a>
+                        <div class="search-bar header__search-bar">
+                            <div class="search-bar__box">
+                                <svg class="search-bar__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
+                                <input class="search-bar__field" type="search" name="search" placeholder="Поиск по сайту" />
+                            </div>
+                            <div class="search-bar__button js-search-bar__button">
+                                <svg class="search-bar__magnifier search-bar__magnifier_color_red"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
+                                <svg class="search-bar__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-dropdown js-burger-dropdown header__burger-dropdown">
+            <div class="dropdown">
+                <div class="container burger-dropdown__content">
+                    <div class="burger-dropdown__top">
+                        <a class="login-btn burger-dropdown__login-btn" href="#">
+                            <svg class="login-btn__icon"><use xlink:href="assets/images/icon.svg#icon_login"></use></svg>
+                            <span class="login-btn__text">Вход</span>
+                        </a>
+                        <div class="search-bar search-bar_color_blue burger-dropdown__search-bar">
+                            <div class="search-bar__box">
+                                <svg class="search-bar__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
+                                <input class="search-bar__field" type="search" name="search" placeholder="Поиск по сайту" />
+                            </div>
+                            <div class="search-bar__button js-search-bar__button">
+                                <svg class="search-bar__magnifier search-bar__magnifier_color_red"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
+                                <svg class="search-bar__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burger-dropdown__navigation burger-dropdown__navigation_show_mobile">
+                        <ul class="vertical-menu vertical-menu_font_bold">
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Предложения</a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Журнал &quot;Катера.ru&quot;</a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Журнал &quot;Капитан клуб&quot;</a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Форум</a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Разное</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="burger-dropdown__navigation burger-dropdown__navigation_default_mobile">
+                        <ul class="vertical-menu vertical-menu_font_bold">
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Каталог верфей</a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Каталог яхт</a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Магазины</a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Яхт-клубы</a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">Мероприятия</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="burger-dropdown__question" href="#">
+                        <div class="burger-dropdown__question-wrapper">
+                            <span class="burger-dropdown__label">Задать вопрос</span>
+                            <svg class="burger-dropdown__icon"><use xlink:href="assets/images/icon.svg#icon_questions-circular"></use></svg>
+                        </div>
+                    </a>
+                    <div class="burger-dropdown__banners">
+                        <div class="burger-dropdown__banner burger-dropdown__banner_type_1">
+                            <a class="banner" href="">
+                                <div class="banner__image">
+                                    <div class="image-bg">
+                                        <img class="image-bg__img" alt="" src="assets/images/banner-jack.jpg" role="presentation" />
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="burger-dropdown__banner burger-dropdown__banner_type_2">
+                            <a class="banner" href="">
+                                <div class="banner__image">
+                                    <div class="image-bg">
+                                        <img class="image-bg__img" alt="" src="assets/images/banner-bmw.jpg" role="presentation" />
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="account-sale3">
+        <div class="container">
+            <div class="page-header">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Личный кабинет</a>
+                    </li>
+                </ul>
+                <h2 class="page-header__title">Личный кабинет</h2>
+            </div>
+            <div class="account-sale3__grid-container">
+                <div class="account-sale3__col-nav">
+                    <div class="account-navigation">
+                        <ul class="list">
+                            <li class="list__item">
+                                <div class="text">
+                                    <h2 class="text__name">Alex-kapitan_179</h2>
+                                    <p class="text__offers">28 предложений</p>
+                                    <h5 class="text__tariff">Тариф “Старшина”</h5>
+                                    <p class="text__time">действует до 30.08.2017</p>
+                                </div>
+                            </li>
+                            <li class="list__item list__item_hide-pc">
+                                <div class="list__icon-wrap">
+                                    <a class="list__icon-nav" href="#">
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_acc-sale"></use></svg>
+                                        <span class="list__nav-text">Предложения</span>
+                                    </a>
+                                    <a class="list__icon-nav list__icon-nav_active" href="#">
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_acc-prof"></use></svg>
+                                        <span class="list__nav-text">Профиль</span>
+                                    </a>
+                                    <a class="list__icon-nav" href="#">
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_acc-msg"></use></svg>
+                                        <span class="list__nav-text">Сообщения</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list__item list__item_show-pc">
+                                <a class="list__link" href="#">
+                                    <span class="division">Мои предложения</span>
+                                </a>
+                            </li>
+                            <li class="list__item list__item_show-pc">
+                                <a class="list__link" href="#">
+                                    <span class="division">Сообщения</span>
+                                    <span class="count">1</span>
+                                </a>
+                            </li>
+                            <li class="list__item list__item_show-pc">
+                                <a class="list__link" href="#">
+                                    <span class="division">Подписка на журнал</span>
+                                </a>
+                            </li>
+                            <li class="list__item list__item_show-pc">
+                                <a class="list__link" href="#">
+                                    <span class="division division_active division_arrow-left">Настройки профиля</span>
+                                </a>
+                            </li>
+                            <li class="list__item list__item_show-pc">
+                                <a class="list__link" href="#">
+                                    <span class="division">Помощь</span>
+                                </a>
+                            </li>
+                            <li class="list__item list__item_show-pc">
+                                <a class="button button_rounded button_kind_red button_shadow" href="#">Создать предложение</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="account-sale3__col-page">
+                    <h2 class="account-sale3__text-center">Создать предложение</h2>
+                    <div class="user-info">
+                        <h2>Контактная информация</h2>
+                        <div class="user-info__wrap">
+                            <div class="user-info__col">
+                                <div class="user-info__item">
+                                    <span class="user-info__text">Имя</span>
+                                    <span class="user-info__value">Валентин Семенович</span>
+                                </div>
+                                <div class="user-info__item">
+                                    <span class="user-info__text">Номер телефона</span>
+                                    <span class="user-info__value">+7 (756) 345-62-18</span>
+                                </div>
+                                <div class="user-info__item">
+                                    <span class="user-info__text">Email</span>
+                                    <span class="user-info__value">kapitan@mail.com</span>
+                                </div>
+                                <div class="user-info__item">
+                                    <span class="user-info__text">Сайт</span>
+                                    <span class="user-info__value">-</span>
+                                </div>
+                            </div>
+                            <div class="user-info__col">
+                                <div class="user-info__switcher">
+                                    <span>Разрешить сообщения</span>
+                                    <label class="checkbox checkbox_switcher">
+                                        <input class="checkbox__control" type="checkbox" name="" value="" checked="checked" />
+                                        <span class="checkbox__box">
+                                            <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Выберите категорию и тип объявления</h2>
+                    <div class="account-sale3__radio-wrap">
+                        <span>Тип предложения:</span>
+                        <div class="account-sale3__radio">
+                            <label class="radio">
+                                <input class="radio__control" type="radio" name="" value="" checked="checked" />
+                                <span class="radio__box"></span>
+                            </label>
+                            <span>Продам</span>
+                        </div>
+                        <div class="account-sale3__radio">
+                            <label class="radio">
+                                <input class="radio__control" type="radio" name="" value="" />
+                                <span class="radio__box"></span>
+                            </label>
+                            <span>Сдам</span>
+                        </div>
+                    </div>
+                    <div class="category-filter">
+                        <div class="category-filter__col">
+                            <div class="category-filter__header">
+                                <span class="division">Category</span>
+                            </div>
+                            <div class="category-filter__items">
+                                <span class="division division_active division_arrow-left">Active-item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                            </div>
+                        </div>
+                        <div class="category-filter__col">
+                            <div class="category-filter__header">
+                                <span class="division">Category</span>
+                            </div>
+                            <div class="category-filter__items">
+                                <span class="division division_active division_arrow-left">Active-item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                            </div>
+                        </div>
+                        <div class="category-filter__col">
+                            <div class="category-filter__header">
+                                <span class="division">Category</span>
+                            </div>
+                            <div class="category-filter__items">
+                                <span class="division division_active division_arrow-left">Active-item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                            </div>
+                        </div>
+                        <div class="category-filter__col">
+                            <div class="category-filter__header">
+                                <span class="division">Category</span>
+                            </div>
+                            <div class="category-filter__items">
+                                <span class="division division_active division_arrow-left">Active-item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                                <span class="division">Item</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <h2>Местоположение</h2>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Страна</span>
+                            <div class="input-group__input-wrap">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Испания</option>
+                                        <option value="2">Италия</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Город</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="text" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <h2>Параметры</h2>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Год выпуска</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="text" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Тип лодки</span>
+                            <div class="input-group__input-wrap">
+                                <div class="input-group__radio">
+                                    <label class="radio">
+                                        <input class="radio__control" type="radio" name="" value="" checked="checked" />
+                                        <span class="radio__box"></span>
+                                    </label>
+                                    <span>Новая</span>
+                                </div>
+                                <div class="input-group__radio">
+                                    <label class="radio">
+                                        <input class="radio__control" type="radio" name="" value="" />
+                                        <span class="radio__box"></span>
+                                    </label>
+                                    <span>Б/У</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Количество моточасов</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Длина</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                                <span class="input-group__after-text">м</span>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Осадка фальшкилем или швертом</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                                <span class="input-group__after-text">м</span>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Осадка корпусом</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                                <span class="input-group__after-text">м</span>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Высота мачты</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                                <span class="input-group__after-text">м</span>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Основное назначение</span>
+                            <div class="input-group__input-wrap">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Значение 1</option>
+                                        <option value="2">Значение 2</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Тип корпуса</span>
+                            <div class="input-group__input-wrap">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Значение 1</option>
+                                        <option value="2">Значение 2</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Материал основного корпуса</span>
+                            <div class="input-group__input-wrap">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Значение 1</option>
+                                        <option value="2">Значение 2</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Тип парусного вооружения</span>
+                            <div class="input-group__input-wrap">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Значение 1</option>
+                                        <option value="2">Значение 2</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Тип парусной оснастки</span>
+                            <div class="input-group__input-wrap">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Значение 1</option>
+                                        <option value="2">Значение 2</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <h2>Дополнительные характеристики</h2>
+                        <div class="text input-group__subheader">
+                            <h5>Пассажировместимость</h5>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Компоновка</span>
+                            <div class="input-group__input-wrap">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Значение 1</option>
+                                        <option value="2">Значение 2</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Паспортная пассажировместимость</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                                <span class="input-group__after-text">чел.</span>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label input-group__label_big">Количество стационарных спальных мест</span>
+                            <div class="input-group__input-wrap input-group__input-wrap_small">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label input-group__label_big">Кол-во дополнительно трансформируемых спальных мест</span>
+                            <div class="input-group__input-wrap input-group__input-wrap_small">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text input-group__subheader">
+                            <h5>Другое</h5>
+                        </div>
+                        <div class="input-group__item input-group__item_row">
+                            <label class="checkbox checkbox_switcher">
+                                <input class="checkbox__control" type="checkbox" name="" value="" />
+                                <span class="checkbox__box">
+                                    <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                </span>
+                            </label>
+                            <span>Наличие вспомогательного двигателя или двигателей</span>
+                        </div>
+                        <div class="input-group__item input-group__item_disabled">
+                            <span class="input-group__label input-group__label_big">Тип привода вспомогательного двигателя</span>
+                            <div class="input-group__input-wrap input-group__input-wrap_small">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Значение 1</option>
+                                        <option value="2">Значение 2</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Управление</span>
+                            <div class="input-group__input-wrap">
+                                <div class="select">
+                                    <div class="select__text"></div>
+                                    <select class="select__control">
+                                        <option value="1">Значение 1</option>
+                                        <option value="2">Значение 2</option>
+                                    </select>
+                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label input-group__label_medium">Стационарный запас топлива</span>
+                            <div class="input-group__input-wrap input-group__input-wrap_medium">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                                <span class="input-group__after-text">л</span>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label input-group__label_medium">Стационарный запас воды</span>
+                            <div class="input-group__input-wrap input-group__input-wrap_medium">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="number" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                                <span class="input-group__after-text">л</span>
+                            </div>
+                        </div>
+                        <div class="input-group__item input-group__item_row">
+                            <label class="checkbox checkbox_switcher">
+                                <input class="checkbox__control" type="checkbox" name="" value="" checked="checked" />
+                                <span class="checkbox__box">
+                                    <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                </span>
+                            </label>
+                            <span>Наличие стационарного камбуза</span>
+                        </div>
+                        <div class="input-group__item input-group__item_row">
+                            <label class="checkbox checkbox_switcher">
+                                <input class="checkbox__control" type="checkbox" name="" value="" checked="checked" />
+                                <span class="checkbox__box">
+                                    <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                </span>
+                            </label>
+                            <span>Наличие стационарного санузла</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group__item input-group__item_start">
+                            <span class="input-group__label">Описание</span>
+                            <div class="input-group__input-wrap input-group__input-wrap_tall">
+                                <textarea class="input-group__msg-field"></textarea>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-group__label">Цена</span>
+                            <div class="input-group__input-wrap">
+                                <div class="text-field">
+                                    <input class="text-field__control" type="text" value="" />
+                                    <span class="text-field__placeholder"></span>
+                                    <div class="text-field__error-icon-wrapper">
+                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="select-currency js-select-currency">
+                                    <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
+                                    <div class="select-currency__selected js-select-currency-selected">
+                                        <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                    </div>
+                                    <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                    <ul class="select-currency__select js-select-currency-select">
+                                        <li class="select-currency__option js-select-currency-option" data-value="rub">
+                                            <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                        </li>
+                                        <li class="select-currency__option js-select-currency-option" data-value="usd">
+                                            <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <div class="upload-form input-group__upload">
+                                <span class="upload-form__label">Добавить фотографии</span>
+                                <div class="upload-form__field">
+                                    <div class="text-field text-field_dashed">
+                                        <input class="text-field__control" type="text" value="" />
+                                        <span class="text-field__placeholder"></span>
+                                        <div class="text-field__error-icon-wrapper">
+                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                        </div>
+                                    </div>
+                                    <button class="upload-btn">
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                    </button>
+                                    <span class="upload-form__sup-text">Вы можете прикрепить не более 20 фотографий</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group__item">
+                            <div class="upload-form input-group__upload">
+                                <span class="upload-form__label">Добавить видео</span>
+                                <div class="upload-form__field">
+                                    <div class="text-field text-field_dashed">
+                                        <input class="text-field__control" type="text" value="" />
+                                        <span class="text-field__placeholder"></span>
+                                        <div class="text-field__error-icon-wrapper">
+                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                        </div>
+                                    </div>
+                                    <button class="upload-btn">
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                    </button>
+                                    <span class="upload-form__sup-text">Формат видео: MP4, AVI, QuickTime</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speedup">
+                        <h2>Ускорить продажу</h2>
+                        <form class="magazine-subscribe-popup">
+                            <div class="magazine-subscribe-popup__types">
+                                <label class="magazine-subscribe-popup__type">
+                                    <input class="magazine-subscribe-popup__control" type="radio" name="subscribe-type" value="1" checked="true" />
+                                    <span class="magazine-subscribe-popup__box">
+                                        <svg class="magazine-subscribe-popup__icon magazine-subscribe-popup__icon_default"><use xlink:href="assets/images/icon.svg#icon_subscribe-type-default"></use></svg>
+                                        <span class="magazine-subscribe-popup__info">
+                                            <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_period">Обычная продажа</span>
+                                            <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_price">0 Р</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="magazine-subscribe-popup__type">
+                                    <input class="magazine-subscribe-popup__control" type="radio" name="subscribe-type" value="2" />
+                                    <span class="magazine-subscribe-popup__box">
+                                        <svg class="magazine-subscribe-popup__icon magazine-subscribe-popup__icon_express"><use xlink:href="assets/images/icon.svg#icon_subscribe-type-express"></use></svg>
+                                        <span class="magazine-subscribe-popup__info">
+                                            <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_period">Экспресс продажа</span>
+                                            <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_price">1300 Р</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="magazine-subscribe-popup__type">
+                                    <input class="magazine-subscribe-popup__control" type="radio" name="subscribe-type" value="3" />
+                                    <span class="magazine-subscribe-popup__box">
+                                        <svg class="magazine-subscribe-popup__icon magazine-subscribe-popup__icon_turbo"><use xlink:href="assets/images/icon.svg#icon_subscribe-type-turbo"></use></svg>
+                                        <span class="magazine-subscribe-popup__info">
+                                            <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_period">Турбо продажа</span>
+                                            <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_price">2550 Р</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </form>
+                        <p>Вы можете разместить предложение на Katera.ru бесплатно, но дополнительные услуги помогут вам продать быстрее.</p>
+                        <div class="pricing">
+                            <div class="pricing__item-sale">
+                                <label class="checkbox checkbox_switcher">
+                                    <input class="checkbox__control" type="checkbox" name="" value="" checked="checked" />
+                                    <span class="checkbox__box">
+                                        <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                    </span>
+                                </label>
+                                <div class="hint">
+                                    <div class="hint__button">
+                                        <svg class="hint__icon"><use xlink:href="assets/images/icon.svg#icon_question-mark"></use></svg>
+                                    </div>
+                                    <div class="hint__content">
+                                        <ul class="list">
+                                            <li class="list__item">
+                                                <div class="text">
+                                                    <p>Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы</p>
+                                                </div>
+                                            </li>
+                                            <li class="list__item">
+                                                <span class="list__offer">Услуга действует 30 дней</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span class="pricing__hint-text">Поднятие в ТОП</span>
+                                <span class="pricing__price pricing__price_active">1090 Р</span>
+                            </div>
+                            <div class="pricing__item-sale">
+                                <label class="checkbox checkbox_switcher">
+                                    <input class="checkbox__control" type="checkbox" name="" value="" />
+                                    <span class="checkbox__box">
+                                        <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                    </span>
+                                </label>
+                                <div class="hint">
+                                    <div class="hint__button">
+                                        <svg class="hint__icon"><use xlink:href="assets/images/icon.svg#icon_question-mark"></use></svg>
+                                    </div>
+                                    <div class="hint__content">
+                                        <ul class="list">
+                                            <li class="list__item">
+                                                <div class="text">
+                                                    <p>Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы</p>
+                                                </div>
+                                            </li>
+                                            <li class="list__item">
+                                                <span class="list__offer">Услуга действует 30 дней</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span class="pricing__hint-text">Спецпредложение</span>
+                                <span class="pricing__price">550 Р</span>
+                            </div>
+                            <div class="pricing__item-sale">
+                                <label class="checkbox checkbox_switcher">
+                                    <input class="checkbox__control" type="checkbox" name="" value="" />
+                                    <span class="checkbox__box">
+                                        <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                    </span>
+                                </label>
+                                <div class="hint">
+                                    <div class="hint__button">
+                                        <svg class="hint__icon"><use xlink:href="assets/images/icon.svg#icon_question-mark"></use></svg>
+                                    </div>
+                                    <div class="hint__content">
+                                        <ul class="list">
+                                            <li class="list__item">
+                                                <div class="text">
+                                                    <p>Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы</p>
+                                                </div>
+                                            </li>
+                                            <li class="list__item">
+                                                <span class="list__offer">Услуга действует 30 дней</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span class="pricing__hint-text">Выделение цветом</span>
+                                <span class="pricing__price">200 Р</span>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="button button_kind_red">Разместить предложение 1090 Р</button>
+                            <span class="btn-wrap__sub-btn">Предложение будет размещено на 30 дней</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="up-btn">
+        <div class="up-btn__btn">
+            <svg class="up-btn__caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="subscribe">
+            <div class="subscribe__image">
+                <div class="image-bg">
+                    <img class="image-bg__img image-bg__image" alt="" src="assets/images/subscribe.jpg" role="presentation" />
+                </div>
+            </div>
+            <div class="container">
+                <h2 class="subscribe__heading">Подпишитесь на рассылку</h2>
+                <form class="subscribe__form">
+                    <div class="subscribe__section">
+                        <input class="subscribe__input" type="text" name="email" placeholder="Введите email" />
+                    </div>
+                    <div class="subscribe__section">
+                        <button class="subscribe__btn">Отправить
+                            <svg class="subscribe__icon"><use xlink:href="assets/images/icon.svg#icon_subscribe"></use></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__col-four">
+                    <a class="logo footer__logo" href="#">
+                        <img class="logo__image" src="assets/images/logo.svg" alt="" role="presentation" />
+                    </a>
+                    <ul class="social footer__social">
+                        <li class="social__item">
+                            <a class="social__link social__link_type_vk" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link_type_insta" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_insta"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link_type_fb" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link_type_odnokl" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_odnokl"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link_type_yt" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_yt"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col-seven footer__col-seven_offset-1">
+                    <div class="col-nav footer__col-nav">
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Предложения</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Купля-продажа</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Аренда</a>
+                            </li>
+                        </ul>
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Каталог верфей</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">В продаже</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Бренды</a>
+                            </li>
+                        </ul>
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Магазины</a>
+                            </li>
+                        </ul>
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Каталог яхт</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Парусные</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Моторные</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Рыбацкие</a>
+                            </li>
+                        </ul>
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Яхт-клубы</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Причалы</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Отели</a>
+                            </li>
+                        </ul>
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Мероприятия</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Предстоящие</a>
+                            </li>
+                            <li class="col-nav__item">
+                                <a href="#">Обзоры</a>
+                            </li>
+                        </ul>
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Журнал &quot;Катера.ru&quot;</a>
+                            </li>
+                        </ul>
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Журнал &quot;Капитан клуб&quot;</a>
+                            </li>
+                        </ul>
+                        <ul class="col-nav__list">
+                            <li class="col-nav__header">
+                                <a href="#">Форум</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row footer__row_bottom-line">
+                <div class="footer__col-four">
+                    <div class="copyright">
+                        <span class="copyright__name">&copy 1963 - 2016 журнал Катера и Яхты</span>
+                        <p class="copyright__text">Использование материалов с сайта только с согласия редакции и при указании прямой гипертекстовой ссылки на
+                            <a class="copyright__link" href="http://katera.ru">http://katera.ru</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__col-seven footer__col-seven_offset-1">
+                    <div class="developed-by">
+                        <span class="developed-by__label">Разработка и продвижение сайта</span>
+                        <a class="developed-by__logo" href="#">
+                            <svg class="developed-by__icon"><use xlink:href="assets/images/icon.svg#icon_blackidea"></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
