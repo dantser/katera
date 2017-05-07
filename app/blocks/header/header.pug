@@ -27,5 +27,8 @@ mixin header()
               +navbar(getData('navbar'))
             +login-btn().__login
             +button(true)(href='#')._kind_red.__proposal-btn Создать предложение
+            +button(true)(href='#')._kind_red.__plus-btn
+              | Предложение
+              +icon('plus').icon-plus
             +search-bar().__search-bar
     +burger-dropdown().__burger-dropdown

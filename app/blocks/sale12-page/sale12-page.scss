@@ -5,29 +5,27 @@
     justify-content: space-between;
     margin-bottom: 48px;
 
-    & > .filter-sale {
-      width: 72.2%;
-      margin-left: 2.2%;
-
-      @media (max-width: 991px) {
-        display: none;
-      }
-    }
-
     .filter {
       @media (min-width: 992px) {
         display: none;
       }
     }
+  }
 
-    .sale-help {
-      width: 23%;
-      height: 100%;
-      margin-left: 2.6%;
+  &__filter-wrapper {
+    width: 74.4%;
 
-      @media (max-width: 991px) {
-        display: none;
-      }
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__sale-wrapper {
+    width: 23%;
+    margin-left: 2.6%;
+
+    @media (max-width: 991px) {
+      display: none;
     }
   }
 

@@ -9,7 +9,7 @@ include ../tag-content/tag-content
 //- path - ссылка
 //- colorModifier - модификатор цвета тени
 mixin article-preview(data)
-  +b('article')(class='article-preview'+data.colorModifier)&attributes(attributes)
+  +b('article')(class='article-preview'+data.tags[0].colorModifier)&attributes(attributes)
     +e('div').wrapper
       +e('a')(href= data.path).link
       +e('div').picture
@@ -20,8 +20,5 @@ mixin article-preview(data)
       +e('div').text
         +e('p').category= data.category
         +e('p').title= data.title
-
-
-
 
 
