@@ -5,8 +5,9 @@ mixin extra-articles(title)
   +b.extra-articles&attributes(attributes)
     +e.H2.header= title
     +e.article
+      - var data = getData('article-preview_title-under-img_extra');
       - for (var i = 0; i < 8; i++)
         +e.item
-          +article-preview(getData('article-preview_title-under-img'))._title-under-img
+          +article-preview(data[i])._title-under-img
     +e.button
       +button()._rounded._kind_red Показать еще
