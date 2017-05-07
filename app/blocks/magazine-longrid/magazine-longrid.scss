@@ -4,6 +4,10 @@
     height: 550px;
     position: relative;
 
+    @include respond-to('large-desktop') {
+      height: 740px;
+    }
+
     a {
       cursor: default;
 
@@ -14,6 +18,10 @@
 
     &_quote {
       height: 660px;
+
+      @include respond-to('large-desktop') {
+        height: 885px;
+      }
     }
 
     &_box-shadow {

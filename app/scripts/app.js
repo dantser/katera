@@ -36,6 +36,7 @@ import accountShop from '../blocks/account-shop-3-page/account-shop-3-page';
 import yachtClub from '../blocks/yacht-club/yachtClub';
 import tarif from '../blocks/tarif/tarif';
 import shop1 from '../blocks/shop1/shop1';
+import accountFaq from '../blocks/account-faq/accountFaq';
 import accountNavigation from '../blocks/account-navigation/account-navigation';
 import saleRaznoe from '../blocks/sale-raznoe/sale-raznoe';
 import sale12Page from '../blocks/sale12-page/sale12-page';
@@ -54,6 +55,7 @@ $(() => {
   selectCurrency();
   counter();
   modal();
+  accountFaq();
   scrollSlider();
   yachtSlider();
   commonInput();

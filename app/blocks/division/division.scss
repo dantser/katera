@@ -9,11 +9,12 @@ $big-border: 12px solid $color-red;
   display: inline-block;
   color: $color-gray;
   position: relative;
-  will-change: color;
-  transition: color .25s ease-in-out;
+  opacity: 1;
+  will-change: opacity;
+  transition: opacity .25s ease-in-out;
 
   &:hover {
-    color: $color-dark-gray;
+    opacity: .75;
   }
 
   &__subtext {
