@@ -13,6 +13,16 @@ export default () => {
     mainSlider.css({ height: `${nextMainSliderHeight}px`});
   }
 
+  // init mobile slider
+  if (mainSlider && mainSlider.length > 0) {
+    const slider = mainSlider.find('.main-slider');
+    const sliderSlot = $('.index__mobile-slider-slot');
+
+    if (sliderSlot) {
+      slider.clone(true, true).appendTo(sliderSlot);
+    }
+  }
+
   $('.yacht-preview-widget').stick_in_parent({
     offset_top: 30,
   });

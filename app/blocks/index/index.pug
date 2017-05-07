@@ -23,9 +23,10 @@ include ../sale-preview-item/sale-preview-item
 mixin index()
   +b.index&attributes(attributes)
     +container()
-      +e.main-slider()
+      +e.main-slider
         +main-slider()
       +main-container().main-container_shadow.index__main-container
+        +e.mobile-slider-slot
         +filter().__filter
         +navbar(getData('navbar'))
         +e.sidebar

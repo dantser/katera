@@ -8,6 +8,15 @@
     flex-flow: row wrap;
   }
 
+  &__mobile-slider-slot {
+    margin-top: 35px;
+    width: 100%;
+
+    @media (min-width: 991px) {
+      display: none;
+    }
+  }
+
   &__main-slider {
     padding-top: 30px;
     width: 100%;
@@ -87,11 +96,11 @@
     width: 100%;
 
     @include respond-to('tablet') {
-      margin-top: 50px;
+      margin-top: 0;
     }
 
     @include respond-to('mobile') {
-      margin-top: 50px;
+      margin-top: 0;
     }
   }
 
