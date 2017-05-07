@@ -4,6 +4,7 @@ include ../vertical-menu/vertical-menu
 include ../banner/banner
 include ../login-btn/login-btn
 include ../search-bar/search-bar
+include ../icon/icon
 
 mixin burger-dropdown()
   +b.burger-dropdown.js-burger-dropdown&attributes(attributes)
@@ -16,6 +17,10 @@ mixin burger-dropdown()
           +vertical-menu(getData('vertical-menu-mobile'))._font_bold
         +e.navigation._default_mobile
           +vertical-menu(getData('vertical-menu-full'))._font_bold
+        +e('a')(href='#').question
+          +e('div').question-wrapper
+            +e('span').label Задать вопрос
+            +icon('questions-circular').icon
         +e.banners
           +e.banner._type_1
             +banner('', 'assets/images/banner-jack.jpg')

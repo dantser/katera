@@ -171,17 +171,36 @@
     height: 35px;
 
     @include respond-to('tablet') {
-      width: auto;
-      padding: 0 10px;
-      margin: 0;
-      font-size: 12px;
+      display: none;
     }
 
     @include respond-to('mobile') {
-      width: auto;
-      padding: 0 10px;
-      margin: 0;
-      font-size: 12px;
+      display: none;
+    }
+  }
+
+  &__plus-btn {
+    position: relative;
+    width: auto;
+    height: 35px;
+    padding-left: 35px;
+    padding-right: 15px;
+    font-size: 14px;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+    .button__icon-plus {
+      position: absolute;
+      top: calc(50% - 10px);
+      left: 7px;
+      width: 20px;
+      height: 20px;
+      padding: 3px;
+      border: 1px solid;
+      border-radius: 50%;
+      fill: $color-white;
     }
   }
 

@@ -16,13 +16,19 @@ mixin sale12-page()
       +main-container()
         +e('div').filter
 
-          +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}]).js-filter-sale
+          +e('div').filter-wrapper
+            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}]).js-filter-sale
+
+          +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
+
           +mobile-slide-popup()#filter-sale-mobile
             +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
           +filter(getData('filter'))
           +button()(data-target-modal='#filter-sale-mobile').__show-filter-btn.js-mobile-slide-popup Фильтр
 
-          +sale-help()
+          +e('div').sale-wrapper
+            +sale-help()
+
         +e('div').special
           +e('h2').title Спец. предложения
           +models('', getData('sale-preview-item-short'))._yacht

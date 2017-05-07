@@ -1,7 +1,7 @@
 {
   "image": "assets/images/article-preview/article-1.jpg",
   "tags": [
-    { "path": "#art-tag1", "title": "Яхты", "colorModifier": "_color_blue" }
+    { "path": "#art-tag1", "title": "Статья", "colorModifier": "_color_light-amber" }
   ],
   "category": "Яхта",
   "title": "Личный опыт: обучение яхтингу по системе RYA в Великобритании",
