@@ -7,31 +7,6 @@
     margin-bottom: 23px;
   }
 
-/*  &__wrapper {
-    position: relative;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-left: 31.5%;
-    margin-bottom: 23px;
-  }
-
-  &__slide {
-
-    &:nth-child(3n+1) {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-
-  .sale-preview-item {
-    width: 165px;
-
-    &__img-wrap {
-      height: 134px;
-    }
-  }*/
-
   &__slide {
     display: flex;
     justify-content: space-between;

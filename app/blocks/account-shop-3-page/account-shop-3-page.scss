@@ -48,7 +48,7 @@
         }
 
         &:first-child {
-          padding-top: 0
+          padding-top: 0;
         }
 
         @media (max-width: 991px) {
@@ -60,6 +60,7 @@
         }
 
         &_offers {
+
           .title {
             padding-bottom: 30px;
             border-bottom: 1px solid rgba($color-gray, .15);
@@ -149,7 +150,7 @@
       .magnifier {
         position: absolute;
         display: block;
-        top: calc(50% - 9.5px);;
+        top: calc(50% - 9.5px);
         left: 10px;
         width: 19px;
         height: 18px;
@@ -192,10 +193,6 @@
 
       @include respond-to('mobile') {
         flex-direction: column;
-      }
-
-      .offers-text {
-
       }
 
       .button {
@@ -244,7 +241,6 @@
       transition: box-shadow .25s ease-in-out;
 
       &:hover {
-
         box-shadow: 0 10px 20px 0 rgba(181, 53, 31, .3);
 
         .icon {
@@ -258,8 +254,6 @@
         .text_price {
           color: $color-red;
         }
-
-        /*box-shadow: 0 0 20px 0 rgba(19, 11, 89, .14);*/
 
         .button {
           display: block;
@@ -401,12 +395,14 @@
         & .preview {
           & .sale-preview-item {
             &__params {
+
               @include respond-to('mobile') {
                 display: none;
               }
             }
 
             &__img-wrap {
+
               @include respond-to('mobile') {
                 width: 48%;
                 height: 200px;
