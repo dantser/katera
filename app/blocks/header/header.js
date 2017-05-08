@@ -24,7 +24,7 @@ export default () => {
         left: 0,
         width: '100%',
         height: '100vh',
-        backgroundColor: 'rgba(6, 3, 37, .95)',
+        backgroundColor: 'rgba(6, 3, 37, .85)',
         zIndex: 8000,
       })
       .hide()

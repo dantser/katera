@@ -4,5 +4,8 @@ include ../blocks/account-faq-page/account-faq-page
 block head
   - var pageTitle = 'Катера.RU - Личный кабинет'
 
+block contentVariables
+  - var stickyHeader = true;
+
 block content
   +account-faq-page()

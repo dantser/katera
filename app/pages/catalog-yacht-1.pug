@@ -5,6 +5,9 @@ include ../blocks/branding/branding
 block head
   - var pageTitle = 'Катера.RU - Каталог яхт - Крейсеры'
 
+block contentVariables
+  - var stickyHeader = true;
+
 block content
   +branding()
     +catalog-yacht-1()

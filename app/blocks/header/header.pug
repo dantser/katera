@@ -14,7 +14,7 @@ mixin header()
 
   //- определяется в app/pages/pageName.pug
   if stickyHeader
-    - var headerModifier = headerModifier + ' _sticky';
+    - var headerModifier = (headerModifier + ' _sticky').trim();
 
   +b('header').header(class=headerModifier)&attributes(attributes)
     +container()

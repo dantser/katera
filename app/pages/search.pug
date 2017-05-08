@@ -5,6 +5,9 @@ include ../blocks/search/search
 block head
   - var pageTitle = 'Катера.RU'
 
+block contentVariables
+  - var stickyHeader = true;
+
 block content
   +branding()
     +search()

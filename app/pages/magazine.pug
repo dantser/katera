@@ -5,6 +5,9 @@ include ../blocks/branding/branding
 block head
   - var pageTitle = 'Катера.RU - Журнал'
 
+block contentVariables
+  - var stickyHeader = true;
+
 block content
   +branding()
     +magazine()

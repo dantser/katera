@@ -4,5 +4,8 @@ include ../blocks/account-messages-2/account-messages-2
 block head
   - var pageTitle = 'Катера.RU - Личный кабинет'
 
+block contentVariables
+  - var stickyHeader = true;
+
 block content
   +account-messages-2()

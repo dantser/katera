@@ -5,6 +5,9 @@ include ../blocks/branding/branding
 block head
   - var pageTitle = 'Катера.RU'
 
+block contentVariables
+  - var stickyHeader = true;
+
 block content
   +branding()
     +event-page()

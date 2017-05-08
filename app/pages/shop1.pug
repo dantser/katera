@@ -5,6 +5,9 @@ include ../blocks/shop1/shop1
 block head
   - var pageTitle = 'Катера.RU - Магазины - UltraBoats'
 
+block contentVariables
+  - var stickyHeader = true;
+
 block content
   +branding('shop1')
     +shop1()
