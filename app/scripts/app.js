@@ -42,6 +42,7 @@ import saleRaznoe from '../blocks/sale-raznoe/sale-raznoe';
 import sale12Page from '../blocks/sale12-page/sale12-page';
 import branding from '../blocks/branding/branding';
 import header from '../blocks/header/header';
+import burgerDropdown from '../blocks/burger-dropdown/burger-dropdown';
 
 $(() => {
   header();
@@ -86,6 +87,7 @@ $(() => {
   saleRaznoe();
   sale12Page();
   branding();
+  burgerDropdown();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

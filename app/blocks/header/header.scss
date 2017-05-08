@@ -22,6 +22,7 @@
     top: 0;
     left: 0;
     height: auto;
+    box-shadow: 0 0 15px 0 rgba(19, 11, 89, .14);
 
     .header {
 
@@ -246,24 +247,5 @@
   .search-bar_active {
     margin: 0;
     background-color: $color-white;
-  }
-
-  &__burger-dropdown {
-    position: absolute;
-    top: 175px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 175px);
-
-    @include respond-to('tablet') {
-      top: 35px;
-      height: 100%;
-      min-height: 1000px; // temp
-    }
-
-    @include respond-to('mobile') {
-      top: 35px;
-      min-height: 1000px;  // temp
-    }
   }
 }

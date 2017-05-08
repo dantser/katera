@@ -1,9 +1,13 @@
 .burger-dropdown {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: none;
   width: 100%;
+  height: 100vh;
   background-color: rgba($color-dark-blue, .95);
-  z-index: 999;
+  z-index: 8000;
+  overflow: auto;
 
   &_active {
     display: block;

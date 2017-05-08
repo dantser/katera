@@ -21,13 +21,13 @@ export default class Dropdown {
   }
 
   show() {
-    this.element.slideDown(() => {
+    this.element.fadeIn(() => {
       this.element.addClass(this.activeClass);
     });
   }
 
   hide() {
-    this.element.slideUp(() => {
+    this.element.fadeOut(() => {
       this.element.removeClass(this.activeClass);
     });
   }
