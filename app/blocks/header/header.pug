@@ -10,8 +10,13 @@ include ../search-bar/search-bar
 mixin header()
   //- Переменная page объявлена в app/pages/index.pug,
   //- На главной странцие, в мобильной версии, header должен находится под брендингом
-  - var headerModifier = page === 'index' ? 'header_index' : ''
-  +b('header')(class=headerModifier).header&attributes(attributes)
+  - var headerModifier = page === 'index' ? '_index' : ''
+
+  //- определяется в app/pages/pageName.pug
+  if stickyHeader
+    - var headerModifier = headerModifier + ' _sticky';
+
+  +b('header').header(class=headerModifier)&attributes(attributes)
     +container()
       +e.banner
         +banner('#', 'assets/images/banner.jpg')._overlay

@@ -40,9 +40,9 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
     );
 
     if (hasToBeFixed) {
-      fixedBlock.fadeIn();
+      fixedBlock.show();
     } else {
-      fixedBlock.fadeOut();
+      fixedBlock.hide();
     }
   }));
 };
