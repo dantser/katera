@@ -98,6 +98,7 @@
     font-family: $NerisBlack;
     font-size: rem(14px);
     color: $color-black;
+    white-space: nowrap;
 
     &::after {
       content: ':';
@@ -116,6 +117,7 @@
   &__icon {
     display: block;
     pointer-events: none;
+    flex-shrink: 0;
 
     &_type_caret {
       right: 11px;
