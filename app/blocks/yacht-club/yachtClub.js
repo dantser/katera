@@ -7,8 +7,6 @@ export default () => {
     'yacht-club__submenu',
     'yacht-club__submenu_default',
     'yacht-club__submenu_fixed',
-    991,
-    100000,
   ];
   makeItFixed(...submenuFixed);
   // eslint-disable-next-line no-unused-vars

@@ -2,6 +2,7 @@
 
   &__main-container.main-container {
     margin-bottom: 0;
+
   }
 
   &__banner-bottom {
@@ -22,17 +23,43 @@
     height: 90px;
   }
 
-  &__submenu.submenu {
+  &__submenu {
     background-color: $color-dark-blue;
-    border-bottom-color: $color-purple;
-    padding: 0 25px;
+    border-bottom: 1px solid $color-purple;
 
-    @include respond-to('laptop') {
-      display: none;
+    &_default {
+
+      .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
     }
 
-    span {
-      color: $color-white;
+    &_fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 8000;
+      width: 100%;
+    }
+
+    .submenu {
+      padding: 0 25px;
+      background-color: $color-dark-blue;
+      border: 0;
+
+      @include respond-to('laptop') {
+        display: none;
+      }
+
+      span {
+        color: $color-white;
+
+        &:hover {
+          color: $color-red;
+        }
+      }
     }
   }
 

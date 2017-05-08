@@ -17,14 +17,15 @@ mixin yacht-club()
         +image-bg()(src='assets/images/yacht-club/banner-shadow.png')._shadow
         +e('img')(src='assets/images/yacht-club/grand-marine-logo.png').__logo
       +main-container().yacht-club__main-container
-        +e.submenu
-          +e('span').club Grand Marine
-          +submenu(getData('submenu-club'))
+        +e.submenu._default
+          +container
+            +e('span').club Grand Marine
+            +submenu(getData('submenu-club'))
         +e.H2.title.jqcontrol Услуги
           +icon('caret').icon._kind_caret
         +services()
         +e.slider.swiper-container
-          +e.H2.title_events.jqcontrol-events.title 
+          +e.H2.title_events.jqcontrol-events.title
             span Мероприятия
             +icon('caret').icon._kind_caret
           +e.wrapper.swiper-wrapper

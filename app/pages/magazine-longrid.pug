@@ -1,6 +1,5 @@
 extends ../layouts/default
 include ../blocks/magazine-longrid/magazine-longrid
-include ../blocks/branding/branding
 
 block head
   - var pageTitle = 'Катера.RU - Журнал - Видео-обзоры'
@@ -9,6 +8,5 @@ block contentVariables
   - var stickyHeader = true;
 
 block content
-  +branding()
-    +magazine-longrid()
+  +magazine-longrid()
 
