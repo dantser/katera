@@ -69,6 +69,20 @@
   &__link {
     display: inline-block;
     text-decoration: none;
+
+    &:hover {
+
+      .catalog-verphe {
+
+        &__title {
+          color: $color-red;
+        }
+
+        &__count {
+          color: lighten($color-red, 10%);
+        }
+      }
+    }
   }
 
   &__title, &__count {
@@ -77,6 +91,8 @@
     line-height: em(26px);
     font-weight: 300;
     color: $color-black;
+    will-change: color;
+    transition: color .25s ease-in-out;
 
     @media (max-width: 767px) {
       font-size: 14px;

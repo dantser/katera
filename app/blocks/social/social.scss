@@ -60,6 +60,16 @@
 
   &__icon {
     fill: $color-white;
+    will-change: fill;
+    transition: fill .25s ease-in-out;
+
+    &:hover {
+      fill: $color-red;
+    }
+  }
+
+  &__join .social__link:hover {
+    fill: $color-white;
   }
 
   &_join .social__link {
