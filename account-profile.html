@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header header_sticky">
         <div class="container">
             <div class="header__banner">
                 <a class="banner" href="#">
@@ -82,93 +82,93 @@
                 </div>
             </div>
         </div>
-        <div class="burger-dropdown js-burger-dropdown header__burger-dropdown">
-            <div class="dropdown">
-                <div class="container burger-dropdown__content">
-                    <div class="burger-dropdown__top">
-                        <a class="login-btn burger-dropdown__login-btn" href="#">
-                            <svg class="login-btn__icon"><use xlink:href="assets/images/icon.svg#icon_login"></use></svg>
-                            <span class="login-btn__text">Вход</span>
-                        </a>
-                        <div class="search-bar search-bar_color_blue burger-dropdown__search-bar">
-                            <div class="search-bar__box">
-                                <svg class="search-bar__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
-                                <input class="search-bar__field" type="search" name="search" placeholder="Поиск по сайту" />
-                            </div>
-                            <div class="search-bar__button js-search-bar__button">
-                                <svg class="search-bar__magnifier search-bar__magnifier_color_red"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
-                                <svg class="search-bar__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="burger-dropdown__navigation burger-dropdown__navigation_show_mobile">
-                        <ul class="vertical-menu vertical-menu_font_bold">
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Предложения</a>
-                            </li>
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Журнал &quot;Катера.ru&quot;</a>
-                            </li>
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Журнал &quot;Капитан клуб&quot;</a>
-                            </li>
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Форум</a>
-                            </li>
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Разное</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="burger-dropdown__navigation burger-dropdown__navigation_default_mobile">
-                        <ul class="vertical-menu vertical-menu_font_bold">
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Каталог верфей</a>
-                            </li>
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Каталог яхт</a>
-                            </li>
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Магазины</a>
-                            </li>
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Яхт-клубы</a>
-                            </li>
-                            <li class="vertical-menu__item">
-                                <a class="vertical-menu__link" href="#">Мероприятия</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <a class="burger-dropdown__question" href="#">
-                        <div class="burger-dropdown__question-wrapper">
-                            <span class="burger-dropdown__label">Задать вопрос</span>
-                            <svg class="burger-dropdown__icon"><use xlink:href="assets/images/icon.svg#icon_questions-circular"></use></svg>
-                        </div>
+    </header>
+    <div class="burger-dropdown js-burger-dropdown">
+        <div class="dropdown">
+            <div class="container burger-dropdown__content">
+                <div class="burger-dropdown__top">
+                    <a class="login-btn burger-dropdown__login-btn" href="#">
+                        <svg class="login-btn__icon"><use xlink:href="assets/images/icon.svg#icon_login"></use></svg>
+                        <span class="login-btn__text">Вход</span>
                     </a>
-                    <div class="burger-dropdown__banners">
-                        <div class="burger-dropdown__banner burger-dropdown__banner_type_1">
-                            <a class="banner" href="">
-                                <div class="banner__image">
-                                    <div class="image-bg">
-                                        <img class="image-bg__img" alt="" src="assets/images/banner-jack.jpg" role="presentation" />
-                                    </div>
-                                </div>
-                            </a>
+                    <div class="search-bar search-bar_color_blue burger-dropdown__search-bar">
+                        <div class="search-bar__box">
+                            <svg class="search-bar__magnifier"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
+                            <input class="search-bar__field" type="search" name="search" placeholder="Поиск по сайту" />
                         </div>
-                        <div class="burger-dropdown__banner burger-dropdown__banner_type_2">
-                            <a class="banner" href="">
-                                <div class="banner__image">
-                                    <div class="image-bg">
-                                        <img class="image-bg__img" alt="" src="assets/images/banner-bmw.jpg" role="presentation" />
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="search-bar__button js-search-bar__button">
+                            <svg class="search-bar__magnifier search-bar__magnifier_color_red"><use xlink:href="assets/images/icon.svg#icon_magnifier"></use></svg>
+                            <svg class="search-bar__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                         </div>
+                    </div>
+                </div>
+                <div class="burger-dropdown__navigation burger-dropdown__navigation_show_mobile">
+                    <ul class="vertical-menu vertical-menu_font_bold">
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Предложения</a>
+                        </li>
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Журнал &quot;Катера.ru&quot;</a>
+                        </li>
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Журнал &quot;Капитан клуб&quot;</a>
+                        </li>
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Форум</a>
+                        </li>
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Разное</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="burger-dropdown__navigation burger-dropdown__navigation_default_mobile">
+                    <ul class="vertical-menu vertical-menu_font_bold">
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Каталог верфей</a>
+                        </li>
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Каталог яхт</a>
+                        </li>
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Магазины</a>
+                        </li>
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Яхт-клубы</a>
+                        </li>
+                        <li class="vertical-menu__item">
+                            <a class="vertical-menu__link" href="#">Мероприятия</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="burger-dropdown__question" href="#">
+                    <div class="burger-dropdown__question-wrapper">
+                        <span class="burger-dropdown__label">Задать вопрос</span>
+                        <svg class="burger-dropdown__icon"><use xlink:href="assets/images/icon.svg#icon_questions-circular"></use></svg>
+                    </div>
+                </a>
+                <div class="burger-dropdown__banners">
+                    <div class="burger-dropdown__banner burger-dropdown__banner_type_1">
+                        <a class="banner" href="">
+                            <div class="banner__image">
+                                <div class="image-bg">
+                                    <img class="image-bg__img" alt="" src="assets/images/banner-jack.jpg" role="presentation" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="burger-dropdown__banner burger-dropdown__banner_type_2">
+                        <a class="banner" href="">
+                            <div class="banner__image">
+                                <div class="image-bg">
+                                    <img class="image-bg__img" alt="" src="assets/images/banner-bmw.jpg" role="presentation" />
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
     <div class="account-profile">
         <div class="container">
             <div class="page-header">
