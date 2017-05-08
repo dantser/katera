@@ -5,10 +5,10 @@ include ../icon/icon
 
 mixin filter-shop()
   +b.filter-shop&attributes(attributes)
-  
+
     - var filterData = getData('filter')
       +e.item._vendor
-        +select('i', filterData.category.name, filterData.category.options, 'Все категории')
+        +select('i', filterData.category.name, filterData.category.options, true, 'Все категории')
           +e.text Все категории
       +e.item._search-field
         +icon('magnifier').magnifier

@@ -94,6 +94,7 @@
   }
 
   &__label {
+    display: none;
     font-family: $NerisBlack;
     font-size: rem(14px);
     color: $color-black;

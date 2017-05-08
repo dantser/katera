@@ -5,8 +5,8 @@ include ../checkbox/checkbox
 //- Аргументы
 //- name - Имя поля
 //- items {array} - массив объектов [{ value: 1, title: 'text'}]
-//- allSelected {string} в случае указания этого аргумента, select будет multiple (т.е вместо обычного списка)
-//-                      будет выведен список с чекбоксами. В allSelected нужно передать ТЕКСТ, который будет выведен
+//- multiple {string} в случае указания этого аргумента, select будет multiple (т.е вместо обычного списка)
+//-                      будет выведен список с чекбоксами. В multiple нужно передать ТЕКСТ, который будет выведен
 //-                      в случае выбоера ВСЕХ чекбоксов, например - 'Все категории', и.т.д
 
 //- Модификаторы
@@ -28,19 +28,19 @@ mixin default-select(name, items, label)
 
     if label
       +e.label=label
-
     +e.text
 
     +e('select').control
       each item in items
-        option(value=item.value)=item.title
+        option(value=item.value, selected=item.selected || false)=item.title
 
     +icon('caret').__icon._type_caret
     +icon('close').__icon._type_close
 
-mixin multiple-select(name, items, allSelected)
-  +b.select(data-all-selected=allSelected)&attributes(attributes)
-
+mixin multiple-select(name, items, label)
+  +b.select(data-multiple=true)&attributes(attributes)
+    if label
+      +e.label=label
     +e.text
 
     +list()._has_triangle.__list
@@ -53,8 +53,8 @@ mixin multiple-select(name, items, allSelected)
     +icon('caret').__icon._type_caret
     +icon('close').__icon._type_close
 
-mixin select(name, items, allSelected, label)
-  if allSelected
-    +multiple-select(name, items, allSelected)&attributes(attributes)
+mixin select(name, items, multiple, label)
+  if multiple
+    +multiple-select(name, items, label)&attributes(attributes)
   else
     +default-select(name, items, label)&attributes(attributes)

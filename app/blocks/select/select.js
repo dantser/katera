@@ -12,20 +12,42 @@ function deactivate(select, list, activeClass) {
   });
 }
 
-function updateText(textElement, data, allSelectedText = null) {
-  const text = allSelectedText || data.map(item => item.title).join(', ');
+function showLabel(el) {
+  if (!el || el.length === 0) {
+    return;
+  }
+
+  el.show();
+}
+
+function hideLabel(el) {
+  if (!el || el.length === 0) {
+    return;
+  }
+
+  el.hide();
+}
+
+function updateText(textElement, data) {
+  const text = data.map(item => item.title).join(', ');
   textElement.text(text);
 }
 
 function generateList(select, data) {
-  const ul = document.createElement('ul');
-  ul.className = 'list list_rounded list_has_triangle select__list';
+  const ul = $('<ul></ul>')
+    .addClass('list')
+    .addClass('list_rounded')
+    .addClass('list_has_triangle')
+    .addClass('select__list');
 
   data.forEach((item) => {
-    const li = document.createElement('li');
-    li.className = 'list__item select__item';
-    li.innerText = item.title;
-    ul.appendChild(li);
+    if (!item.disabled) {
+      $('<li></li>')
+        .addClass('list__item')
+        .addClass('select__item')
+        .text(item.title)
+        .appendTo(ul);
+    }
   });
 
   select.append(ul);
@@ -35,8 +57,9 @@ export default () => {
   const SELECT_CLASS = '.select';
   const SELECT_ACTIVE_CLASS = 'select_active';
   const TEXT_CLASS = '.select__text';
-  const LABEL_CLASS = '.select__list-label';
-  const SELECT_DATA_ALL_SELECTED = 'all-selected';
+  const LIST_LABEL_CLASS = '.select__list-label';
+  const MULTIPLE_SELECT = 'multiple';
+  const LABEL_CLASS = '.select__label';
   let selectedData = [];
 
   const selectElements = $(SELECT_CLASS);
@@ -47,24 +70,27 @@ export default () => {
 
   selectElements.each(function () { // eslint-disable-line func-names
     const select = $(this);
+    const textElement = select.find(TEXT_CLASS);
 
-    if (!select.data(SELECT_DATA_ALL_SELECTED)) {
+    if (!select.data(MULTIPLE_SELECT)) {
       const control = select.find('select');
       const options = Array.from(control.children());
 
       const optionsData = options.map((option) => {
         const el = $(option);
 
-        return ({ value: el.val(), title: el.text() });
+        return ({ value: el.val(), title: el.text(), disabled: el.attr('disabled') });
       });
 
       generateList(select, optionsData);
 
-      const textElement = control.parent().find(TEXT_CLASS);
       const selectedOption = $(control.children()[control[0].selectedIndex]);
       const data = [{ value: selectedOption.val(), title: selectedOption.text() }];
 
       updateText(textElement, data);
+    } else {
+      const labelElement = select.find(LABEL_CLASS);
+      updateText(textElement, [{ title: labelElement.text() }]);
     }
   });
 
@@ -99,9 +125,11 @@ export default () => {
     const control = $(this);
     const textElement = control.parent().find(TEXT_CLASS);
     const selectedOption = $(control.children()[control[0].selectedIndex]);
+    const labelElement = control.parent().find(LABEL_CLASS);
     const data = [{ value: selectedOption.val(), title: selectedOption.text() }];
 
     updateText(textElement, data);
+    showLabel(labelElement);
   });
 
   // handle show list (custom dropdown)
@@ -131,7 +159,7 @@ export default () => {
     const li = el.parents('li');
 
     if (el.prop('checked')) {
-      const title = li.find(LABEL_CLASS).text();
+      const title = li.find(LIST_LABEL_CLASS).text();
       selectedData.push({ value: el.val(), title });
     } else {
       selectedData = selectedData.filter(item => item.value !== el.val());
@@ -139,10 +167,15 @@ export default () => {
 
     const select = el.parents(SELECT_CLASS);
     const textElement = select.find(TEXT_CLASS);
+    const labelElement = select.find(LABEL_CLASS);
 
-    // eslint-disable-next-line max-len
-    const allSelected = li.parent().children().length === selectedData.length ? select.data(SELECT_DATA_ALL_SELECTED) : null;
-    updateText(textElement, selectedData, allSelected);
+    if (selectedData.length > 0) {
+      updateText(textElement, selectedData);
+      showLabel(labelElement);
+    } else {
+      updateText(textElement, [{ title: labelElement.text() }]);
+      hideLabel(labelElement);
+    }
   });
 
   $(document).on('click', () => {

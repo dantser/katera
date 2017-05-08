@@ -23,16 +23,16 @@ mixin filter-sale(data)
           +e.col
             +e.item
               +e.field._type_select
-                +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Тип')
+                +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Тип')
             +e.item
               +e.field._type_select
-                +select('item2', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Верфь')
+                +select('item2', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Верфь')
             +e.item
               +e.field._type_select
-                +select('item3', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Модель')
+                +select('item3', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Модель')
             +e.item
               +e.field._type_select
-                +select('item4', [{value: '1', title: 'Местоположение'}, {value: '2', title: 'item #2'}])
+                +select('item4', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Местоположение')
 
           +e.col
             +e.item
@@ -92,9 +92,9 @@ mixin filter-sale(data)
           +e.fixed-items
             +select('item111', [{value: '1', title: 'Купить'}, {value: '2', title: 'Арендовать'}])._text-like
             +e.field._type_select
-              +select('item4', [{value: '1', title: 'Тип лодки'}, {value: '2', title: 'item #2'}])
+              +select('item4', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Тип лодки')
             +e.field._type_select
-              +select('item4', [{value: '1', title: 'Местоположение'}, {value: '2', title: 'item #2'}])
+              +select('item4', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Местоположение')
             +e.field._type_length
               +e.row
                 +e.label Длина

@@ -21,15 +21,15 @@ mixin filter()
         +e.col
           +e.item
             +e.field._type_select
-              +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Тип яхты')
+              +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Тип яхты')
           +e.item
             +e.field._type_select
-              +select('item2', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Верфь')
+              +select('item2', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Верфь')
 
         +e.col
           +e.item
             +e.field._type_select
-              +select('item2', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Модель')
+              +select('item2', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Модель')
           +e.item._col
             +e.row
               +e.label Длина

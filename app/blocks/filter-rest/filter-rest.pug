@@ -17,7 +17,7 @@ mixin filter-rest()
             +select('item111', [{value: '1', title: 'Москва'}, {value: '2', title: 'Санкт-Петербург'}])._text-like
       +e.content
         +e.field._type_select
-          +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], null, 'Категория')
+          +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Категория')
         +e.price
           +e('span').label Цена
           +e.field._type_text-field-small
