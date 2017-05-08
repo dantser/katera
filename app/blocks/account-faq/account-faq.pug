@@ -62,7 +62,7 @@ mixin account-faq()
         img(src="assets/images/form-bg.jpg")
       +e.P.form-heading Задать вопрос
       +e.INPUT.form-input(type="text", name="name", placeholder="Имя")
-      +e.INPUT.form-input(type="tel", name="tel", placeholder="Телефон")
-      +e.INPUT.form-input(type="email", name="email", placeholder="Email")
+      +e.INPUT.form-input(type="text", name="phone", placeholder="Телефон")
+      +e.INPUT.form-input(type="text", name="email", placeholder="Email")
       +e.TEXTAREA.form-textarea(name="question", placeholder="Вопрос")
       +button()._rounded._kind_red._shadow.account-faq__form-button Отправить
