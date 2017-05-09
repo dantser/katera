@@ -24,7 +24,7 @@ mixin account-messages-1()
             +e.messages
               +e('span') Показать
               - var msg = getData('account-message')
-                +select(msg.msg.name, msg.msg.options).
+                +select(msg.msg.name, msg.msg.options)
           +e.message-container
             +checkbox({checked: false})._circle.__checkbox
             +e.message-content
