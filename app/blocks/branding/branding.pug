@@ -27,27 +27,12 @@ mixin branding(page)
         +e.image
           +image-bg()(src='assets/images/branding/main-bottom.png')
     else if (page === 'shop1')
-      +e.top._page
-        +e.image
-          +image-bg()(src='assets/images/branding/main-top.png')
-
-        +container()
-
-          +e.logo
-            +image-bg()(src='assets/images/branding/logo.png')
-
-          +e.text Запомни путешествие в деталях
-
-          +e.scroll-btn
-            +icon('caret').caret
-            +icon('caret').caret
-
-      +e.content
+      +e.image._left
+        +image-bg()(src='assets/images/branding/shop-left.jpg')
+      +e.image._right
+        +image-bg()(src='assets/images/branding/shop-right.jpg')
+      +e.content._shop
         block
-
-      +e.bottom._shop
-        +e.image
-          +image-bg()(src='assets/images/branding/shop-banner.png')
     else
       +e.top._page
         +e.image
@@ -63,7 +48,6 @@ mixin branding(page)
           +e.scroll-btn
             +icon('caret').caret
             +icon('caret').caret
-
       +e.content
         block
 

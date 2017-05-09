@@ -18,9 +18,10 @@ include ../shop3/shop3-page
 mixin shop1()
   +b.shop1&attributes(attributes)
     +page-header('UltraBoats', ['Главная', 'Магазины', 'UltraBoats'])
+    +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
     +container()
       +main-container().main-container_shadow.magazine-razdel__main-container
-        +e.link 
+        +e.link
           +e('a')(href='#') Информация о магазине
         +main-slider(true)
         +e.tabs#shopTabs
@@ -28,10 +29,10 @@ mixin shop1()
           +e#shop-1
             +filter-shop()
             +e.sort
-              +e.found  
+              +e.found
                 +e('span').sort__output 126
                 +e('span') предложений
-              +e.price 
+              +e.price
                 +e('span').filter__label Сортировать
                 - var filterData = getData('filter')
                   +select(filterData.priceSort.name, filterData.priceSort.options)
@@ -39,3 +40,4 @@ mixin shop1()
             +button()._rounded._kind_red.__show-more Показать еще
           +shop2-page()#shop-2
           +shop3-page()#shop-3
+    +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner

@@ -1,7 +1,18 @@
 .shop1 {
 
-  .main-container {
-    margin-bottom: 26px;
+  &__banner {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    margin-bottom: -5px;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 
   .main-slider {
@@ -15,7 +26,6 @@
   }
 
   .page-header {
-    margin-bottom: 117px;
     background-color: $color-white;
 
     @include respond-to('tablet') {
