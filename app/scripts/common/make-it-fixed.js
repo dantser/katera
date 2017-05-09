@@ -14,19 +14,7 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
     return;
   }
 
-  const tempFixedElement = $(`.${FIXED_STATE_CLASS}`);
-  const alreadyInitialized = tempFixedElement && tempFixedElement.length > 0;
-
-  if (alreadyInitialized) {
-    return;
-  }
-
-  const fixedBlock = defaultBlock
-    .clone(true, true)
-    .hide()
-    .removeClass(DEFAULT_STATE_CLASS)
-    .addClass(FIXED_STATE_CLASS)
-    .insertAfter(defaultBlock);
+  let fixedBlock = null;
 
   const w = $(window);
 
@@ -40,9 +28,14 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
     );
 
     if (hasToBeFixed) {
-      fixedBlock.show();
+      fixedBlock = fixedBlock || defaultBlock
+        .clone(true, true)
+        .removeClass(DEFAULT_STATE_CLASS)
+        .addClass(FIXED_STATE_CLASS)
+        .insertAfter(defaultBlock);
     } else {
-      fixedBlock.hide();
+      fixedBlock.remove();
+      fixedBlock = null;
     }
   }));
 };

@@ -6,22 +6,19 @@ export default () => {
   const activeBurgerClass = 'burger_active';
   const dropDownClass = '.js-burger-dropdown';
 
-  const burger = $(burgerClass);
   const dropdown = new Dropdown(dropDownClass);
 
-  if (!burger || !dropdown) {
-    return;
-  }
 
-  burger.on('click', (e) => {
-    e.preventDefault();
-
+  $('html, body').on('click', burgerClass, () => {
+    const burger = $(burgerClass);
     if (burger.hasClass(activeBurgerClass)) {
-      burger.removeClass(activeBurgerClass);
-      dropdown.hide();
+      dropdown.hide(() => {
+        burger.removeClass(activeBurgerClass);
+      });
     } else {
-      burger.addClass(activeBurgerClass);
-      dropdown.show();
+      dropdown.show(() => {
+        burger.addClass(activeBurgerClass);
+      });
     }
   });
 };

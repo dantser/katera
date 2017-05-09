@@ -20,15 +20,17 @@ export default class Dropdown {
     this.activeClass = activeClass;
   }
 
-  show() {
+  show(cb = f => f) {
     this.element.fadeIn(() => {
       this.element.addClass(this.activeClass);
+      cb();
     });
   }
 
-  hide() {
+  hide(cb) {
     this.element.fadeOut(() => {
       this.element.removeClass(this.activeClass);
+      cb();
     });
   }
 }

@@ -3,7 +3,6 @@ import $ from 'jquery';
 /* eslint-disable */
 export default () => {
   const header = $('.header');
-  const headerFixed = $('.header_fixed');
   const w = $(window);
   const burgerDropdown = $('.burger-dropdown');
 
@@ -13,10 +12,9 @@ export default () => {
   });
 
   w.on('scroll', () => {
-
     if (w.scrollTop() > header.offset().top + header.outerHeight()) {
       burgerDropdown.css({
-        top: `${headerFixed.outerHeight()}px`,
+        top: `${$('.header_fixed').outerHeight()}px`,
       });
     } else {
       burgerDropdown.css({

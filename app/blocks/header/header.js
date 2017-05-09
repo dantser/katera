@@ -2,8 +2,7 @@ import $ from 'jquery';
 import makeItFixed from '../../scripts/common/make-it-fixed';
 
 export default () => {
-  let searchBar = $('.header__search-bar');
-  let header = $('.header');
+  const header = $('.header');
 
   if (!header) {
     return;
@@ -13,30 +12,30 @@ export default () => {
     makeItFixed('header', 'header_sticky', 'header_fixed');
   }
 
-  searchBar = $('.header__search-bar');
-  header = $('.header');
+  const searchOverlay = $('<div></div>')
+    .css({
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100vh',
+      backgroundColor: 'rgba(6, 3, 37, .85)',
+      zIndex: 8000,
+    })
+    .hide()
+    .insertAfter(header);
 
-  if (searchBar && searchBar.length > 0) {
-    const searchOverlay = $('<div></div>')
-      .css({
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100vh',
-        backgroundColor: 'rgba(6, 3, 37, .85)',
-        zIndex: 8000,
-      })
-      .hide()
-      .insertAfter(header);
+  $('html, body').on('click', '.header__search-bar', () => {
+    const searchBar = $('.header__search-bar');
 
-    searchOverlay.click(() => {
-      searchOverlay.fadeOut();
-      searchBar.removeClass('search-bar_active');
-    });
-
-    searchBar.on('click', () => {
-      searchOverlay.fadeToggle();
-    });
-  }
+    if (searchBar.hasClass('search-bar_active')) {
+      searchOverlay.fadeOut(() => {
+        searchBar.removeClass('search-bar_active');
+      });
+    } else {
+      searchOverlay.fadeIn(() => {
+        searchBar.addClass('search-bar_active');
+      });
+    }
+  });
 };
