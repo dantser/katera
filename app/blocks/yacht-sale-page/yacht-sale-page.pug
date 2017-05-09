@@ -14,7 +14,7 @@ mixin yacht-sale-page()
       +main-container()
         +e('div').intro
           +scroll-slider(getData('scroll-slider'))
-          +sale-contacts(true)
+          +sale-contacts()
 
         +e('div').info
 
@@ -102,5 +102,3 @@ mixin yacht-sale-page()
           +e('div').show-contacts-button
             +button(true)._kind_red
               | Показать контакты
-
-

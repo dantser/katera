@@ -13,7 +13,7 @@
 
       &:last-child {
         padding-top: 21px;
-        padding-bottom: 0;
+        padding-bottom: 36px;
       }
     }
   }
@@ -70,10 +70,7 @@
     right: 0;
     margin-right: -13px;
     transform: translateY(-50%);
-  }
-
-  .button {
-    padding: 6px 12px;
-    line-height: em(24px);
+    width: 165px;
+    height: 40px;
   }
 }
