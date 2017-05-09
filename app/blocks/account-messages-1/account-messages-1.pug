@@ -8,6 +8,8 @@ include ../text-field/text-field
 include ../select/select
 include ../upload-form/upload-form
 include ../sale-preview-item/sale-preview-item
+include ../dotted-dropdown/dotted-dropdown
+include ../mobile-slide-popup/mobile-slide-popup
 
 mixin account-messages-1()
   +b.account-messages-1&attributes(attributes)
@@ -25,6 +27,8 @@ mixin account-messages-1()
               +e('span') Показать
               - var msg = getData('account-message')
                 +select(msg.msg.name, msg.msg.options)
+              +e.dotted
+                +dotted-dropdown()(data-target-modal='#account-messages-dotted').js-mobile-slide-popup
           +e.message-container
             +checkbox({checked: false})._circle.__checkbox
             +e.message-content
@@ -73,3 +77,5 @@ mixin account-messages-1()
                 +e('a')(href="#").request
                   +e('span') Ответить
                   +icon('arrow-next').icon.__request-icon
+    +mobile-slide-popup()#account-messages-dotted
+      | test

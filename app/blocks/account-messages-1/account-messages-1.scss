@@ -102,6 +102,22 @@
         width: 100%;
       }
     }
+
+    .dotted-dropdown {
+      padding-left: 15px;
+    }
+  }
+
+  .mobile-slide-popup {
+    margin-top: 35px;
+  }
+
+  &__dotted {
+    display: none;
+
+    @include respond-to('mobile') {
+      display: block;
+    }
   }
 
   &__checkbox {
