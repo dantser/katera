@@ -7,6 +7,8 @@ include ../button/button
 include ../banner/banner
 include ../small-article-preview/small-article-preview
 include ../select/select
+include ../dotted-dropdown/dotted-dropdown
+include ../mobile-slide-popup/mobile-slide-popup
 
 mixin magazine-videos()
   +b.magazine-videos&attributes(attributes)
@@ -16,7 +18,8 @@ mixin magazine-videos()
         +e('div').select-wrapper
           +submenu(getData('submenu-magazine-videos'))
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
-          +e('div').select-dots
+          +e.dotted
+            +dotted-dropdown()(data-target-modal='#magazine-videos-filter').js-mobile-slide-popup
         +e.content
           +e.videos-col
             - for (i=0; i<15; i++)
@@ -27,3 +30,5 @@ mixin magazine-videos()
               +submenu(getData('videos-filter'), true)
             +e.banner
               +banner('#', 'assets/images/banner2.jpg')
+    +mobile-slide-popup()#magazine-videos-filter
+      | test

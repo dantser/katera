@@ -1,5 +1,17 @@
 .magazine-videos {
 
+  .dotted-dropdown {
+    padding-left: 15px;
+  }
+
+  &__dotted {
+    display: none;
+
+    @include respond-to('mobile') {
+      display: block;
+    }
+  }
+
   &__select-wrapper {
     display: flex;
     justify-content: space-between;
@@ -38,48 +50,6 @@
       @include respond-to('mobile') {
         display: flex;
       }
-    }
-  }
-
-  &__select-dots {
-    position: relative;
-    width: 5px;
-    height: 5px;
-    background-color: $color-red;
-    margin-left: 18px;
-    border-radius: 50%;
-
-    &::before, &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: $color-red;
-
-      /* z-index: 1; */
-    }
-
-    &::before {
-      top: -12px;
-    }
-
-    &::after {
-      bottom: -12px;
-    }
-
-    @include respond-to('laptop') {
-      display: none;
-    }
-
-    @include respond-to('desktop') {
-      display: none;
-    }
-
-    @include respond-to('large-desktop') {
-      display: none;
     }
   }
 
