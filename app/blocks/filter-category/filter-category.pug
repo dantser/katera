@@ -1,0 +1,11 @@
+include ../division/division
+
+mixin filter-category()
+  +b.filter-category&attributes(attributes)
+    - for (var i=0;i<4;i++)
+      +e.category
+        +division('Category')
+        +e.items
+          +division('Active-item')._active._arrow-left
+          - for (var j=0;j<8;j++)
+            +division('Item')
