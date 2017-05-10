@@ -31,6 +31,14 @@
       { "value": 3, "title": "Страна #3" }
     ]
   },
+  "city": {
+    "name": "city",
+    "options": [
+      { "value": 1, "title": "Город #1" },
+      { "value": 2, "title": "Город #2" },
+      { "value": 3, "title": "Город #3" }
+    ]
+  },
   "priceSort": {
     "name": "price-sort",
     "options": [
