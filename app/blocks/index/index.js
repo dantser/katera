@@ -23,18 +23,11 @@ export default () => {
     }
   }
 
-  const headerSticky = $('.header_fixed');
-  let offsetTop = 30;
-
-  if (headerSticky.length > 0) {
-    offsetTop += headerSticky.outerHeight();
-  }
-
   $('.yacht-preview-widget').stick_in_parent({
-    offset_top: offsetTop,
+    offset_top: 95,
   });
 
   $('.topic-preview-widget').stick_in_parent({
-    offset_top: offsetTop,
+    offset_top: 95,
   });
 };

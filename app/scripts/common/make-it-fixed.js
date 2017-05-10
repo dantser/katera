@@ -33,7 +33,7 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
         .removeClass(DEFAULT_STATE_CLASS)
         .addClass(FIXED_STATE_CLASS)
         .insertAfter(defaultBlock);
-    } else {
+    } else if (fixedBlock) {
       fixedBlock.remove();
       fixedBlock = null;
     }
