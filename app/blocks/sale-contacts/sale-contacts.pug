@@ -6,7 +6,7 @@ include ../button/button
 include ../icon/icon
 
 mixin sale-contacts(catalog)
-  .sale-contacts-wrap
+  +b.sale-contacts-wrap&attributes(attributes)
     +list()
       +b.sale-contacts
         +icon('close').__icon-close
@@ -47,4 +47,4 @@ mixin sale-contacts(catalog)
               li sales@katera.com
           +e.A(href="#").site www.canados.com
           +button()._rounded._kind_blue.__msg-btn  Написать сообщение
-          +button()._rounded._kind_red._shadow.__call-btn Заказать звонок
+    +button()._rounded._kind_red._shadow.__call-btn Заказать звонок
