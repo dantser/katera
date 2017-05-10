@@ -4,16 +4,39 @@
 
   & > .list {
     box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
+    position: relative;
+  }
+
+  &__call-btn {
+    box-sizing: border-box;
+    position: absolute;
+    max-width: 165px;
+    height: 40px;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -20px;
+
+    @include respond-to('tablet') {
+      max-width: 290px;
+      bottom: 20px;
+    }
+
+    @include respond-to('mobile') {
+      max-width: 290px;
+      bottom: 20px;
+    }
   }
 
   @include respond-to('tablet') {
     width: 100%;
     padding-bottom: 0;
+    height: auto;
   }
 
   @include respond-to('mobile') {
     width: 100%;
     padding-bottom: 0;
+    height: auto;
   }
 
   .sale-contacts {
@@ -190,6 +213,10 @@
       @include respond-to('mobile') {
         font-size: rem(20px);
       }
+
+      &_offer {
+        margin-top: 40px;
+      }
     }
 
     &__name {
@@ -245,24 +272,6 @@
       @include respond-to('mobile') {
         max-width: 290px;
         margin: 43px 0 4px;
-      }
-    }
-
-    &__call-btn {
-      box-sizing: border-box;
-      position: absolute;
-      max-width: 165px;
-      height: 40px;
-      transform: translateX(-50%);
-      left: 50%;
-      bottom: -55px;
-
-      @include respond-to('tablet') {
-        max-width: 290px;
-      }
-
-      @include respond-to('mobile') {
-        max-width: 290px;
       }
     }
   }

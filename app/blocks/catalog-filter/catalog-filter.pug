@@ -1,10 +1,10 @@
 include ../select/select
 
-mixin catalog-filter()
+mixin catalog-filter(data)
   +b.catalog-filter&attributes(attributes)
 
-    - var filterData = getData('filter')
-      +e.item._type
-        +select(filterData.yachtType.name, filterData.yachtType.options)
-      +e.item._origin
-        +select(filterData.origin.name, filterData.origin.options)
+    - var filterData = data || getData('filter')
+    +e.item._type
+      +select(filterData.yachtType.name, filterData.yachtType.options)
+    +e.item._origin
+      +select(filterData.origin.name, filterData.origin.options)
