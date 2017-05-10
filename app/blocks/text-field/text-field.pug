@@ -5,6 +5,8 @@ include ../icon/icon
 //- Модификаторы
 //- ._has_error - Добавляет ошибку
 //- ._required - Добавляет красную звездочку placeholder'у
+//- ._disabled - убирает все события с элемента и красит его в серый цвет
+
 mixin text-field(data)
   +b.text-field&attributes(attributes)
     +e('input')(type=data.type || 'text' name=data.name value=data.value || '').control
