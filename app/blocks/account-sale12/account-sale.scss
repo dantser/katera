@@ -80,7 +80,7 @@
     }
 
     .text {
-      margin: -11px 0 23px;
+      margin: 0 0 10px;
 
       p {
         color: $color-black;
@@ -131,7 +131,7 @@
   }
 
   .button-slide {
-    margin-bottom: 54px;
+    margin-bottom: 43px;
 
     @include respond-to('tablet') {
       width: 100%;
@@ -144,6 +144,11 @@
 
   &__propose-group {
     margin-bottom: 71px;
+  }
+
+  &__submenu {
+    overflow: hidden;
+    height: 68px;
   }
 
   .submenu {
