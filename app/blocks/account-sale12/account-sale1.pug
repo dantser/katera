@@ -10,7 +10,7 @@ include ../text/text
 include ../submenu/submenu
 include ../sale-preview-item/sale-preview-item
 include ../hint/hint
-include ../account-propose-popup/account-propose-popup
+include ../account-propose-popup/account-propose
 
 mixin account-sale1()
   +b.account-sale1&attributes(attributes)
@@ -47,26 +47,26 @@ mixin account-sale1()
                     +e.propose__column
                       +e.propose__item
                         +hint()
-                          +account-propose-popup()
+                          +account-propose()
                         span Выделить
                       +e.propose__item
                         +hint()
-                          +account-propose-popup()
+                          +account-propose()
                         span Сделать VIP
                       +e.propose__item
                         +hint()
-                          +account-propose-popup()
+                          +account-propose()
                         span Поднять в ТОПе
                     +e.propose__column
                       +e.propose__item
                         +hint()
-                          +account-propose-popup()
+                          +account-propose()
                         span Быстрая продажа
                       +e.propose__item
                         +hint()
-                          +account-propose-popup()
+                          +account-propose()
                         span Верификация
                       +e.propose__item
                         +hint()
-                          +account-propose-popup()
+                          +account-propose()
                         span Завершить
