@@ -1,5 +1,10 @@
 .account-profile {
 
+  .account-navigation {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .page-header {
     border-top: 1px solid $color-light-gray;
   }
@@ -7,13 +12,16 @@
   &__grid-container {
     color: $color-black;
     display: flex;
+    margin-bottom: 50px;
 
     @include respond-to('tablet') {
       flex-direction: column;
+      margin-bottom: 0;
     }
 
     @include respond-to('mobile') {
       flex-direction: column;
+      margin-bottom: 0;
     }
   }
 
@@ -241,7 +249,7 @@
     max-width: 263px;
     height: 40px;
     font-size: rem(20px);
-    margin: 49px 0 69px;
+    margin: 49px 0 0;
     padding-bottom: 6px;
     font-family: $NerisLight;
     font-weight: 400;
