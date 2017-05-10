@@ -34,7 +34,7 @@
 
   &__col-page {
     padding-left: 15px;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
     width: calc(67%);
     //flex-grow: 1;
 
@@ -44,16 +44,16 @@
 
     @include respond-to('tablet') {
       width: 100%;
-      padding-left: 0;
-      padding-bottom: 0;
-      //padding-right: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 70px;
     }
 
     @include respond-to('mobile') {
       width: 100%;
+      padding-bottom: 70px;
+      padding-left: 15px;
       padding-right: 15px;
-      padding-bottom: 0;
-      //padding-right: 15px;
     }
   }
 
@@ -105,16 +105,25 @@
     width: 100%;
     height: 520px;
     position: relative;
-    margin-bottom: 75px;
+    margin-top: 65px;
+    margin-bottom: 60px;
   }
 
   &__img1-text {
     position: absolute;
-    padding: 0 25px 60px;
-    width: 280px;
-    left: 0;
-    bottom: 0;
+    width: 290px;
+    left: 25px;
+    bottom: 55px;
     text-align: left;
+
+    @include respond-to('tablet') {
+      bottom: 25px;
+    }
+
+    @include respond-to('mobile') {
+      bottom: 25px;
+      width: 240px;
+    }
 
     .account-shop1__title {
       font-family: $NerisLight;
@@ -124,6 +133,17 @@
       margin-top: 0;
       margin-bottom: 10px;
       line-height: 1.2;
+      padding-right: 50px;
+
+      @include respond-to('tablet') {
+        font-size: 24px;
+        padding-right: 0;
+      }
+
+      @include respond-to('mobile') {
+        font-size: 24px;
+        padding-right: 0;
+      }
     }
 
     .account-shop1__text {
@@ -131,6 +151,14 @@
       font-size: 16px;
       font-weight: 300;
       color: $color-white;
+
+      @include respond-to('tablet') {
+        font-size: 14px;
+      }
+
+      @include respond-to('mobile') {
+        font-size: 14px;
+      }
     }
   }
 
@@ -141,7 +169,12 @@
     .button {
       width: 165px;
       height: 40px;
-      margin: 44px auto 80px;
+      margin: 40px auto 80px;
+
+      &_margin {
+        margin-top: 105px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -158,19 +191,19 @@
   }
 
   .text_padding {
-    padding: 0 40px;
-    margin-top: 10px;
+    padding: 0 37px;
+    margin-top: 8px;
     text-align: justify;
+    font-size: 15px;
 
     @include respond-to('mobile') {
       padding: 0;
-      //padding-right: 15px;
     }
   }
 
   &__row {
     display: flex;
-    margin: 47px 0 80px;
+    margin: 41px 0 45px;
 
     @include respond-to('mobile') {
       flex-direction: column;
@@ -194,6 +227,12 @@
     width: 82px;
     height: 82px;
     margin-left: -14px;
+
+    @include respond-to('tablet') {
+      margin-left: 0;
+      width: 68px;
+      height: 68px;
+    }
 
     @include respond-to('mobile') {
       margin-left: 0;
@@ -219,13 +258,22 @@
   &__left-box {
     text-align: left;
     margin-left: 30px;
+    padding-right: 30px;
+
+    @include respond-to('tablet') {
+      padding-right: 0;
+    }
+
+    @include respond-to('mobile') {
+      padding-right: 0;
+    }
   }
 
   &__left-title {
     font-family: $NerisSemiBold;
     font-size: 20px;
     color: $color-black;
-    line-height: .7;
+    line-height: 1.2;
     margin-bottom: 10px;
   }
 
@@ -233,7 +281,11 @@
     font-family: $NerisLight;
     font-size: 16px;
     color: $color-black;
-    line-height: 1.2;
+    line-height: 1.5;
+  }
+
+  &__left-img {
+    padding-top: 6px;
   }
 
   &__right {
@@ -250,13 +302,22 @@
   &__right-box {
     text-align: left;
     margin-left: 30px;
+    padding-right: 30px;
+
+    @include respond-to('tablet') {
+      padding-right: 0;
+    }
+
+    @include respond-to('mobile') {
+      padding-right: 0;
+    }
   }
 
   &__right-title {
     font-family: $NerisSemiBold;
     font-size: 20px;
     color: $color-black;
-    line-height: .7;
+    line-height: 1.2;
     margin-bottom: 10px;
   }
 
@@ -264,25 +325,30 @@
     font-family: $NerisLight;
     font-size: 16px;
     color: $color-black;
-    line-height: 1.2;
+    line-height: 1.5;
+  }
+
+  &__right-img {
+    padding-top: 6px;
   }
 
   .main-slider {
 
     .main-slider__slide {
       width: 100%;
-      padding: 40px 0 50px;
+      padding: 35px 0 25px;
     }
 
     .main-slider__image {
       border-radius: 50%;
+      width: 165px;
     }
 
     &__name {
       font-family: $NerisSemiBold;
       font-size: 20px;
       color: $color-black;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     &__city {
@@ -290,7 +356,7 @@
       font-weight: 300;
       font-size: 16px;
       color: $color-gray;
-      margin-bottom: 25px;
+      margin-bottom: 18px;
     }
 
     &__text {
@@ -298,6 +364,12 @@
       font-weight: 300;
       font-size: 16px;
       color: $color-black;
+      line-height: 1.5;
+      padding: 0 16px;
+
+      @include respond-to('mobile') {
+        padding: 0;
+      }
     }
 
     .main-slider__swiper-pagination {

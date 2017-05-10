@@ -40,6 +40,11 @@ export default () => {
 
   element.find(CONTROL_CLASS).on('input', function () { // eslint-disable-line
     const el = $(this);
+
+    if (el.parent().hasClass('text-field_disabled')) {
+      return false;
+    }
+
     el.attr('value', el.val());
   });
 };
