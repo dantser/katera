@@ -1,6 +1,5 @@
 extends ../layouts/default
 include ../blocks/account-shop-3-page/account-shop-3-page
-include ../blocks/branding/branding
 
 block head
   - var pageTitle = 'Катера.RU - Личный кабинет'
@@ -9,6 +8,5 @@ block contentVariables
   - var stickyHeader = true;
 
 block content
-  +branding()
-    +account-shop-3-page()
+  +account-shop-3-page()
 

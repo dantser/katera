@@ -8,6 +8,7 @@
   box-shadow: 0 3px 10px 0 rgba(251, 37, 0, .6);
   padding: 9px;
   transition: background-color .25s ease-in-out, box-shadow .25s ease-in-out;
+  flex-shrink: 0;
 
   &:hover {
     background-color: #e02303;

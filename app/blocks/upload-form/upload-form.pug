@@ -4,7 +4,8 @@ mixin upload-form(label, supText)
   +b.upload-form&attributes(attributes)
     if (label)
       +e.SPAN.label= label
-    +e.field
+    +e.LABEL.field
+      +e.INPUT(type='file' name='test').file
       +text-field({type:"text"})._dashed
       +upload-btn()
       if (supText)
