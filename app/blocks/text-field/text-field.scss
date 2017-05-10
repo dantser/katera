@@ -7,6 +7,32 @@
   background-color: $color-white;
   border-radius: 3px;
   border: 1px solid #e5e5e5;
+  font-family: $NerisLight;
+
+  &_error_left {
+
+    .text-field {
+
+      &__error {
+        left: 0;
+        right: initial;
+
+        &::before {
+          right: initial;
+          left: 12px;
+        }
+      }
+
+      &__error-icon-wrapper {
+        left: 12px;
+        right: initial;
+      }
+
+      &__placeholder, &__control {
+        padding-left: 45px;
+      }
+    }
+  }
 
   &_dashed {
     border: 2px dashed #e5e5e5;
@@ -26,8 +52,27 @@
   &_has_error {
     border-color: $color-red;
 
-    .text-field__error-icon-wrapper {
-      display: flex;
+    .text-field {
+
+      &__error-icon-wrapper {
+        display: flex;
+      }
+
+      &__control {
+        color: $color-red;
+
+        &:focus {
+          box-shadow: 0 1px 7px 0 rgba($color-red, .5);
+        }
+      }
+    }
+
+    &:hover {
+
+      .text-field__error {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 
@@ -47,6 +92,7 @@
     height: 100%;
     color: $color-black;
     box-sizing: border-box;
+    pointer-events: all;
 
     &:focus {
       box-shadow: 0 1px 7px 0 rgba($color-black, .16);
@@ -67,6 +113,7 @@
     opacity: 1;
     color: $color-dark-gray;
     white-space: nowrap;
+    pointer-events: none;
   }
 
   &__error-icon {
@@ -88,6 +135,38 @@
       height: 21px;
       border-radius: 50%;
       background-color: $color-red;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: block;
+    width: 280px;
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #fff;
+    visibility: hidden;
+    z-index: 800;
+    transform: translateY(10px);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .15);
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 12px;
+      transform: translateY(-100%);
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 9px 7px;
+      border-color: transparent transparent $color-white transparent;
     }
   }
 }
