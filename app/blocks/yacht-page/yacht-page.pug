@@ -3,18 +3,46 @@ include ../container/container
 include ../main-container/main-container
 include ../scroll-slider/scroll-slider
 include ../sale-contacts/sale-contacts
+include ../sale-contacts/sale-contacts-offer
 include ../share/share
 include ../button/button
 include ../models/models
 
-mixin yacht-sale-page()
-  +b.yacht-sale-page
+//- Аргумент
+//- type - строка, определяет тип страницы (shop | sale | catalog)
+
+mixin yacht-page(type)
+  //- //- shop
+  //- +sale-contacts()
+  //- //- catalog
+  //- +sale-contacts(true)
+  //- //- sale
+  //- +sale-contacts-offer()
+
+  +b.yacht-page
+
+    case type
+      when 'shop'
+        - var data = getData('yacht-shop')
+      when 'catalog'
+        - var data = getData('yacht-catalog')
+      when 'sale'
+        - var data = getData('yacht-sale')
+
     +container()
-      +page-header('Wajer 55', ['Главная', 'Каталог яхт', 'Моторные яхты', 'Закрытые круизные яхты с хардтопом', 'Сфтфвщы 90'])
+      +page-header(data.name, data.breadcrumbs)
       +main-container()
         +e('div').intro
-          +scroll-slider(getData('scroll-slider'))
-          +sale-contacts()
+
+          +scroll-slider(getData(data.sliderData))
+
+          case type
+            when 'shop'
+              +sale-contacts()
+            when 'catalog'
+              +sale-contacts(true)
+            when 'sale'
+              +sale-contacts-offer()
 
         +e('div').info
 
@@ -23,43 +51,36 @@ mixin yacht-sale-page()
             +e('ul').technical-list
               +e('li').item
                 +e('span').item-name Тип судна:
-                +e('span').item-text Круизная (крейсерская) яхта
+                +e('span').item-text= data.technical.ship
               +e('li').item
                 +e('span').item-name Тип киля:
-                +e('span').item-text Длинный киль
+                +e('span').item-text= data.technical.keel
               +e('li').item
                 +e('span').item-name Число спальных мест:
-                +e('span').item-text 6
+                +e('span').item-text= data.technical.bedrooms
               +e('li').item
                 +e('span').item-name Тип судна:
-                +e('span').item-text Круизная (крейсерская) яхта
+                +e('span').item-text= data.technical.ship
               +e('li').item
                 +e('span').item-name Тип киля:
-                +e('span').item-text Длинный киль
+                +e('span').item-text= data.technical.keel
               +e('li').item
                 +e('span').item-name Число спальных мест:
-                +e('span').item-text 6
+                +e('span').item-text= data.technical.bedrooms
               +e('li').item
                 +e('span').item-name Тип судна:
-                +e('span').item-text Круизная (крейсерская) яхта
+                +e('span').item-text= data.technical.ship
               +e('li').item
                 +e('span').item-name Тип киля:
-                +e('span').item-text Длинный киль
+                +e('span').item-text= data.technical.keel
               +e('li').item
                 +e('span').item-name Число спальных мест:
-                +e('span').item-text 6
-              +e('li').item
-                +e('span').item-name Тип судна:
-                +e('span').item-text Круизная (крейсерская) яхта
-              +e('li').item
-                +e('span').item-name Тип киля:
-                +e('span').item-text Длинный киль
+                +e('span').item-text= data.technical.bedrooms
 
           +e('div').description
             +e('h3').description-title Описание
             +e('div').description-wrapper
-              +e('p').description-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, ex, fugiat. Veritatis impedit officiis, corporis reprehenderit, voluptatem nihil, ullam, fugiat accusantium aspernatur recusandae hic maiores. Harum facilis voluptates, consequatur soluta?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae excepturi, dolorum natus itaque impedit ut rerum. Nam odio molestias ipsum, deserunt enim, inventore nulla laboriosam iure. Facilis molestias magni, quos!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, nobis quibusdam. Fugiat distinctio earum iste dicta temporibus aperiam consequatur accusantium eaque ab, et ad necessitatibus blanditiis inventore, modi quos, iusto!
+              +e('p').description-text= data.description
               //- +e('p').description-text
               //-   | Лодка в стандартной комплектации, возможны дополнительные опции. <br/>
               //-   | DOMINATOR 800 - Произведение искусства <br/>
@@ -77,8 +98,8 @@ mixin yacht-sale-page()
           +e('div').button-wrapper
             +share('small')._bigger-title
           +e('div').adds
-            +e('span').adds-text Дата публикации: 28 января 2017
-            +e('span').adds-text Просмотров: 128
+            +e('span').adds-text= 'Дата публикации: ' + data.date
+            +e('span').adds-text= 'Просмотров: ' + data.views
           +e('div').hr
 
         +e('div').more

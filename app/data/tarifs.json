@@ -1,0 +1,75 @@
+[
+  {
+    "path": "#",
+    "title": "Тариф \"Юнга\"",
+    "image": "ship1",
+    "advantages": [
+      { "name": "Выделение цветом", "active": true },
+      { "name": "Поднятие в ТОП", "active": false },
+      { "name": "Спецпредложения", "active": false },
+      { "name": "VIP Предложения", "active": false }
+    ],
+    "price": "1 200 P",
+    "duration": "1 месяц"
+  }, {
+    "path": "#",
+    "title": "Тариф \"Матрос\"",
+    "image": "ship2",
+    "advantages": [
+      { "name": "Выделение цветом", "active": true },
+      { "name": "Поднятие в ТОП", "active": true },
+      { "name": "Спецпредложения", "active": false },
+      { "name": "VIP Предложения", "active": false }
+    ],
+    "price": "2 300 P",
+    "duration": "2 месяца"
+  }, {
+    "path": "#",
+    "title": "Тариф \"Старшина\"",
+    "image": "ship3",
+    "advantages": [
+      { "name": "Выделение цветом", "active": true },
+      { "name": "Поднятие в ТОП", "active": true },
+      { "name": "Спецпредложения", "active": true },
+      { "name": "VIP Предложения", "active": false }
+    ],
+    "price": "3 550 P",
+    "duration": "3 месяца"
+  }, {
+    "path": "#",
+    "title": "Тариф \"Лейтенант\"",
+    "image": "ship4",
+    "advantages": [
+      { "name": "Выделение цветом", "active": true },
+      { "name": "Поднятие в ТОП", "active": true },
+      { "name": "Спецпредложения", "active": true },
+      { "name": "VIP Предложения", "active": false }
+    ],
+    "price": "5 250 P",
+    "duration": "6 месяцев"
+  }, {
+    "path": "#",
+    "title": "Тариф \"Капитан\"",
+    "image": "ship5",
+    "advantages": [
+      { "name": "Выделение цветом", "active": true },
+      { "name": "Поднятие в ТОП", "active": true },
+      { "name": "Спецпредложения", "active": true },
+      { "name": "VIP Предложения", "active": true }
+    ],
+    "price": "7 200 P",
+    "duration": "10 месяцев"
+  }, {
+    "path": "#",
+    "title": "Тариф \"Адмирал\"",
+    "image": "ship6",
+    "advantages": [
+      { "name": "Выделение цветом", "active": true },
+      { "name": "Поднятие в ТОП", "active": true },
+      { "name": "Спецпредложения", "active": true },
+      { "name": "VIP Предложения", "active": true }
+    ],
+    "price": "10 550 P",
+    "duration": "12 месяцев"
+  }
+]

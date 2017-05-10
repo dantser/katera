@@ -3,6 +3,7 @@ include ../image-bg/image-bg
 //- data.name - наименование
 //- data.path - путь изображения
 mixin scroll-slider(data)
+
   +b('div').scroll-slider._gallery-top.swiper-container
     +e('ul').wrapper.swiper-wrapper
       each image in data.path

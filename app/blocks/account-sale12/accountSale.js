@@ -26,10 +26,15 @@ export default () => {
   });
 
 // eslint-disable-next-line no-unused-vars
-  const swiper = new Swiper('.account-sale .submenu', {
-    slidesPerView: 2,
-    paginationClickable: true,
-    spaceBetween: 30,
+  const swiper = new Swiper('.account-sale1__submenu', {
+    slidesPerView: 'auto',
     freeMode: true,
+    slideClass: 'submenu__item',
+    wrapperClass: 'submenu',
+    // breakpoints: {
+    //   640: {
+    //     slidesPerView: 2,
+    //   },
+    // },
   });
 };
