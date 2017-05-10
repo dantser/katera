@@ -47,10 +47,10 @@ mixin account-sale3()
         +e.radio-wrap
           span Тип предложения:
           +e.radio
-            +radio({checked:true})
+            +radio({name: 'offer-type', checked:true})
             span Продам
           +e.radio
-            +radio()
+            +radio({name: 'offer-type'})
             span Сдам
         +filter-category()
         +b.input-group
@@ -73,10 +73,10 @@ mixin account-sale3()
             +e.SPAN.label Тип лодки
             +e.input-wrap
               +e.radio
-                +radio({checked:true})
+                +radio({name: 'type-boat',  checked:true})
                 span Новая
               +e.radio
-                +radio()
+                +radio({name: 'type-boat'})
                 span Б/У
           +e.item
             +e.SPAN.label Количество моточасов
