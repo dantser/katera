@@ -9,6 +9,8 @@ include ../icon/icon
 include ../text/text
 include ../submenu/submenu
 include ../sale-preview-item/sale-preview-item
+include ../hint/hint
+include ../account-propose-popup/account-propose-popup
 
 mixin account-sale1()
   +b.account-sale1&attributes(attributes)
@@ -28,8 +30,7 @@ mixin account-sale1()
                 | Вы можете бесплатно разместить одно объявление в месяц. Для того, чтобы на сайте было 
                 | размещено более одного объявления одновременно, вы можете воспользоваться наиболее
                 | выгодным для Вас пакетом услуг:
-            - for (var i = 0; i < 6; i++)
-              +tarif()
+            +tarif()
           +button()._rounded.button-slide 
             span Свернуть блок
             +icon('caret').icon._kind_caret._kind_caret-up._stroke_blue
@@ -45,21 +46,27 @@ mixin account-sale1()
                   +e.propose
                     +e.propose__column
                       +e.propose__item
-                        +icon('questions-circular').icon_question.
+                        +hint()
+                          +account-propose-popup()
                         span Выделить
                       +e.propose__item
-                        +icon('questions-circular').icon_question
+                        +hint()
+                          +account-propose-popup()
                         span Сделать VIP
                       +e.propose__item
-                        +icon('questions-circular').icon_question
+                        +hint()
+                          +account-propose-popup()
                         span Поднять в ТОПе
                     +e.propose__column
                       +e.propose__item
-                        +icon('questions-circular').icon_question
+                        +hint()
+                          +account-propose-popup()
                         span Быстрая продажа
                       +e.propose__item
-                        +icon('questions-circular').icon_question
+                        +hint()
+                          +account-propose-popup()
                         span Верификация
                       +e.propose__item
-                        +icon('questions-circular').icon_question
+                        +hint()
+                          +account-propose-popup()
                         span Завершить

@@ -269,16 +269,8 @@
     }
   }
 
-  &__icon_question {
-    width: 21px;
-    height: 21px;
-    stroke: $color-gray;
-    fill: $color-gray;
+  .hint {
     margin-right: 9px;
-
-    &:hover {
-      fill: $color-red;
-    }
   }
 }
 

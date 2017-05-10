@@ -2,27 +2,26 @@ include ../icon/icon
 include ../button/button
 
 mixin tarif()
-  +b.tarif&attributes(attributes)
-    +e.wrap
-      +icon('ship1').__icon.__item
-      +e.descr.__item
-        +e.descr__title Тариф "Юнга"
-        +e.descr__text Безлимитное размещение предложений
-      +icon('caret').__hideShow
-      +e.pros.__item
-        +e.pros__item_active
-          +icon('check-mark').pros__icon 
-          SPAN Выделение цветом
-        +e.pros__item
-          +icon('check-mark').pros__icon 
-          SPAN Поднятие в ТОП
-        +e.pros__item
-          +icon('check-mark').pros__icon 
-          SPAN Спецпредложения
-        +e.pros__item
-          +icon('check-mark').pros__icon 
-          SPAN VIP предложения
-      +e.buy.__item
-        +e.buy__months 1 месяц
-        +e.buy__price 1 200 Р
-        +button()._kind_red._rounded._shadow.tarif__button Купить
+  - var data = getData('tarifs')
+    each item in data
+      +b.tarif&attributes(attributes)
+        +e.wrap
+          +icon(item.image).__icon.__item
+          +e.descr.__item
+            +e.descr__title=item.title
+            +e.descr__text Безлимитное размещение предложений
+          +icon('caret').__hideShow
+          +e.pros.__item
+            each items in item.advantages
+              if items.active
+                +e.pros__item_active
+                  +icon('check-mark').pros__icon 
+                  SPAN=items.name
+              else
+                +e.pros__item
+                  +icon('check-mark').pros__icon 
+                  SPAN=items.name
+          +e.buy.__item
+            +e.buy__months=item.duration
+            +e.buy__price=item.price
+            +button()._kind_red._rounded._shadow.tarif__button Купить

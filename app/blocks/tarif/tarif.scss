@@ -20,7 +20,9 @@
 
   &__icon {
     width: 96px;
-    height: 46px;
+    height: 82px;
+    fill: $color-dark-blue;
+    stroke: $color-dark-blue;
 
     @include respond-to('tablet') {
       display: none;
@@ -32,7 +34,7 @@
   }
 
   &__descr {
-    flex-basis: 190px;
+    flex-basis: 202px;
     padding-bottom: 11px;
     transform: translate(-3px, -3px);
 
@@ -47,6 +49,7 @@
       color: $color-dark-blue;
       font-size: 16px;
       line-height: 20px;
+      font-family: $NerisSemiBold;
     }
 
     @include respond-to('tablet') {
@@ -63,7 +66,7 @@
       text-align: center;
       transform: none;
       order: 1;
-      padding: 0 40px 12px;
+      padding: 0 20px 12px;
       border-bottom: 1px solid $color-light-gray;
     }
   }
@@ -97,7 +100,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    margin-right: 49px;
+    margin-right: 61px;
 
     &__item {
       color: $color-gray;
@@ -155,15 +158,14 @@
 
     &__months {
       font-size: 16px;
-      align-self: flex-end;
-      padding-right: 13px;
+      font-family: $NerisSemiBold;
 
       @include respond-to('tablet') {
-        align-self: center;
+        color: $color-dark-blue;
       }
 
       @include respond-to('mobile') {
-        align-self: center;
+        color: $color-dark-blue;
       }
     }
 
@@ -171,16 +173,13 @@
       font-size: 24px;
       font-family: $NerisBlack;
       margin-bottom: 50px;
-      align-self: flex-end;
 
       @include respond-to('tablet') {
         margin-bottom: 0;
-        align-self: center;
       }
 
       @include respond-to('mobile') {
         margin-bottom: 0;
-        align-self: center;
       }
     }
 
