@@ -27,39 +27,36 @@
     }
   }
 
-  .catalog-filter {
+  &__catalog-filter {
     padding-left: 25px;
-
-    @include respond-to('laptop') {
-      flex-direction: row;
-    }
-
-    @include respond-to('tablet') {
-      flex-direction: row;
-      padding-left: 0;
-    }
+    margin-top: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     @include respond-to('mobile') {
       flex-direction: column;
       padding: 0 0 30px;
+      margin: 0;
     }
 
-    &__item {
-      padding: 0;
+    .select {
+      height: 40px;
       width: 262px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
 
       @include respond-to('mobile') {
-        flex-direction: column;
+        //flex-direction: column;
         width: 100%;
 
         &:first-child {
           margin-bottom: 15px;
         }
       }
-    }
-
-    .select {
-      width: 100%;
     }
   }
   //catalog-filter
