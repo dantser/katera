@@ -19,11 +19,10 @@ export default () => {
       return;
     }
 
-    /* eslint-disable */
     if (!emailRegexp.test(input.val())) {
-      input.textFieldError('Введен некоректный email адресс. Пожалуйста, перепроверьте данные и попробуйте еще раз');
+      input.addError('Введен некоректный email адресс. Пожалуйста, перепроверьте данные и попробуйте еще раз');
     } else {
-      input.textFieldError();
+      input.removeError();
       form.submit();
     }
   });
