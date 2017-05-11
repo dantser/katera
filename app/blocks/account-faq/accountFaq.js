@@ -12,7 +12,6 @@ export default () => {
     const ACTIVE_CLASS = 'active';
     const ITEM = '.account-faq__item';
     EL.on('click', (e) => {
-
       e.preventDefault();
       EL.parent(ITEM).toggleClass(ACTIVE_CLASS);
     });
