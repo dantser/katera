@@ -49,7 +49,7 @@ mixin magazine2()
               | Подробнее с программой и ценами на участие в регате можно ознакомиться на сайте PROyachting.
 
             div.block
-              +e('span').size._medium Выжать из яхты максимум — это не просто добавить палубного пространства.
+              +e('span').size._medium.text_margin Выжать из яхты максимум — это не просто добавить палубного пространства.
               p.block-text
                 | Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших
                 | в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них
@@ -158,7 +158,7 @@ mixin magazine2()
             +e.item
               +sale-preview-item(getData('sale-preview-item'))
 
-        +e.box-bg
+        +e.box-bg.magazine2__box-bg1
           +image-bg()(src='assets/images/magazine/magazine2-1.jpg')
 
         +e.content-two
