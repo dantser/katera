@@ -124,7 +124,7 @@
     }
   }
 
-  &__icon_kind_caret {
+  &__icon {
     width: 12px;
     height: 7px;
     stroke: $color-red;
@@ -135,6 +135,7 @@
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
+    transform: rotate(180deg);
 
     @include respond-to('tablet') {
       display: block;
@@ -142,6 +143,10 @@
 
     @include respond-to('mobile') {
       display: block;
+    }
+
+    &_down {
+      transform: rotate(360deg);
     }
   }
 

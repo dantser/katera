@@ -52,23 +52,27 @@ export default () => {
   const BORDER_CLASS = 'yacht-club__title_border';
   const CLOSED_SLIDER_CLASS = 'yacht-club__slider_closed';
 
+
   elements.each(function () { // eslint-disable-line
     const el = $(this);
-
+    const ICON = el.find('svg');
     el.on('click', (e) => {
       e.preventDefault();
       el.next().slideToggle();
       el.toggleClass(BORDER_CLASS);
+      ICON.toggleClass('yacht-club__icon_down');
     });
   });
 
   elementsServises.each(function () { // eslint-disable-line
     const el = $(this);
+    const ICON = el.find('svg');
     el.on('click', (e) => {
       e.preventDefault();
       el.parent().toggleClass(CLOSED_SLIDER_CLASS);
       el.siblings().slideToggle();
       el.toggleClass(BORDER_CLASS);
+      ICON.toggleClass('yacht-club__icon_down');
     });
   });
 };
