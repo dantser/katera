@@ -12,6 +12,6 @@ mixin radio(data)
     - var name = params.name || ''
     - var value = params.value || ''
     - var checked = params.checked || false
-
-    +e('input')(type='radio' name=name value=value checked=checked).control
+    - var dataAttr = data.dataAttr = data.dataAttr || ''
+    +e('input')(type='radio' name=name value=value checked=checked dataAttr).control
     +e.box
