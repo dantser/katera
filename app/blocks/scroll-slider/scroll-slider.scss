@@ -27,6 +27,11 @@
         text-align: center;
         bottom: 0;
 
+        @include respond-to('mobile') {
+          padding-top: 7px;
+          padding-bottom: 0;
+        }
+
         @media (min-width: 767px) {
           display: none;
         }
