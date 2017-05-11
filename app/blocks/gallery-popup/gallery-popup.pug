@@ -1,0 +1,16 @@
+include ../modal/modal
+include ../image-bg/image-bg
+
+mixin gallery-popup()
+  +modal().modal__gallery#gallery-popup
+    +b.gallery-popup
+      +e.image
+        +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
+  +modal().modal__gallery#gallery-popup2
+    +b.gallery-popup
+      +e.image
+        +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
+  +modal().modal__gallery#gallery-popup3
+    +b.gallery-popup
+      +e.image
+        +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
