@@ -42,6 +42,7 @@ import branding from '../blocks/branding/branding';
 import header from '../blocks/header/header';
 import burgerDropdown from '../blocks/burger-dropdown/burger-dropdown';
 import subscribe from '../blocks/subscribe/subscribe';
+import verphe from '../blocks/verphe/verphe';
 
 $(() => {
   textField();
@@ -86,6 +87,7 @@ $(() => {
   branding();
   burgerDropdown();
   subscribe();
+  verphe();
   map.then((googleMaps) => {
     // eslint-disable-next-line no-new
     new googleMaps.Map(document.getElementById('map'), {

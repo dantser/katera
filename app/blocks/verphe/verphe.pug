@@ -47,6 +47,7 @@ mixin verphe()
                 | кораблей длиной от 24 метров, 70-метровых мегаяхт и владельцем верфей в разных частях мира.
                 | Сейчас, например, он участвует в строительстве яхт-клуба в Москве. 
         +button()._rounded._kind_red.__show-more Показать еще
+        +e.contacts Контакты верфи
         +e.sidebar
           +e.list
             +e.item
@@ -56,4 +57,4 @@ mixin verphe()
         +e.H2.title Модельный ряд
         +models('Крейсерские яхты со средиземноморским кокпитом', getData('sale-preview-item-extended'))._verphe._cruiser
         +models('Спортивные швертботы', getData('sale-preview-item-short'))._verphe._sport
-        +button(true)(href='#')._rounded._kind_red.__button Каталог верфей
+        +button(true)(href='#')._rounded._shadow._kind_red.__button Каталог верфей
