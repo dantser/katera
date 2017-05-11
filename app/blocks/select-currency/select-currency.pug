@@ -2,16 +2,5 @@ include ../select/select
 include ../icon/icon
 
 mixin select-currency()
-  +b('div').select-currency.js-select-currency
-    input(type='hidden' name='currency' value='rub').control.js-select-currency-control
-
-    +e.selected.js-select-currency-selected
-      +icon('rouble').icon._kind_rouble
-
-    +icon('caret').icon._kind_caret
-
-    +e('ul').select.js-select-currency-select
-      +e('li')(data-value='rub').option.js-select-currency-option
-        +icon('rouble').icon._kind_rouble
-      +e('li')(data-value='usd').option.js-select-currency-option
-        +icon('rouble').icon._kind_usd
+  +b('div').select-currency
+    +select('currency', [{ title: '₽', value: 'rur' }, { title: '$', value: 'usd' }])._text-like

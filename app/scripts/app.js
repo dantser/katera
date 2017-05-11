@@ -9,7 +9,6 @@ import filter from '../blocks/filter/filter';
 import textField from '../blocks/text-field/text-field';
 import timeline from '../blocks/timeline/timeline';
 import models from '../blocks/models/models';
-import selectCurrency from '../blocks/select-currency/select-currency';
 import counter from '../blocks/counter/counter';
 import modal from '../blocks/modal/modal';
 import scrollSlider from '../blocks/scroll-slider/scroll-slider';
@@ -56,7 +55,6 @@ $(() => {
   upBtn();
   timeline();
   models();
-  selectCurrency();
   counter();
   modal();
   accountFaq();
