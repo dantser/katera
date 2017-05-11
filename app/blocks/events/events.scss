@@ -1,112 +1,175 @@
-.events {
+// .events {
 
-  &__main-container.main-container {
-    margin-bottom: 0;
-  }
+//   &__main-container.main-container {
+//     margin-bottom: 0;
+//   }
 
-  &__banner-bottom {
-    display: block;
-    width: 100%;
-    padding: 30px;
+//   &__banner-bottom {
+//     display: block;
+//     width: 100%;
+//     padding: 30px;
 
-    & .banner {
-      height: 90px;
-    }
+//     & .banner {
+//       height: 90px;
+//     }
 
-    @include respond-to('laptop') {
-      display: none;
-    }
-  }
+//     @include respond-to('laptop') {
+//       display: none;
+//     }
+//   }
 
-  &__inset-banner {
-    height: 90px;
-  }
+//   &__inset-banner {
+//     height: 90px;
+//   }
 
-  &__submenu {
-    background-color: $color-dark-blue;
-    border-bottom: 1px solid $color-purple;
+//   &__submenu {
+//     background-color: $color-dark-blue;
+//     border-bottom: 1px solid $color-purple;
 
-    &_default {
+//     &_default {
 
-      .container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    }
+//       .container {
+//         width: 100%;
+//         margin: 0;
+//         padding: 0;
+//       }
+//     }
 
-    &_fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 8000;
-      width: 100%;
-    }
+//     &_fixed {
+//       position: fixed;
+//       top: 0;
+//       left: 0;
+//       z-index: 8000;
+//       width: 100%;
+//     }
 
-    .submenu {
-      padding: 0 25px;
-      background-color: $color-dark-blue;
-      border: 0;
+//     .submenu {
+//       padding: 0 25px;
+//       background-color: $color-dark-blue;
+//       border: 0;
 
-      @include respond-to('laptop') {
-        display: none;
-      }
+//       @include respond-to('laptop') {
+//         display: none;
+//       }
 
-      span {
-        color: $color-white;
+//       span {
+//         color: $color-white;
 
-        &:hover {
-          color: $color-red;
-        }
-      }
-    }
-  }
+//         &:hover {
+//           color: $color-red;
+//         }
+//       }
+//     }
+//   }
 
-  &__slider {
-    background-color: $color-dark-blue;
-    padding: 95px 0 130px;
-  }
+//   &__slider {
+//     background-color: $color-dark-blue;
+//     padding: 95px 0 130px;
+//   }
 
-  &__slide-inner {
-    width: 390px;
-    text-align: center;
-  }
+//   &__slide-inner {
+//     width: 390px;
+//     text-align: center;
+//   }
 
-  &__category {
-    font-family: $NerisLight;
-    color: $color-light-gray;
-    font-size: 13px;
-    line-height: 26px;
-  }
+//   &__category {
+//     font-family: $NerisLight;
+//     color: $color-light-gray;
+//     font-size: 13px;
+//     line-height: 26px;
+//   }
 
-  &__name {
-    font-family: $NerisBlack;
-    color: $color-white;
-    font-size: 20px;
-    line-height: 26px;
-  }
+//   &__name {
+//     font-family: $NerisBlack;
+//     color: $color-white;
+//     font-size: 20px;
+//     line-height: 26px;
+//   }
 
-  &__slide {
-    width: 420px;
-    padding: 20px 0 0 68px;
+//   &__slide {
+//     width: 420px;
+//     padding: 20px 0 0 68px;
+//     position: relative;
+//   }
+
+//   &__date {
+//     position: absolute;
+//     top: -30px;
+//     left: 0;
+//     color: $color-white;
+//     font-size: 107px;
+//     font-family: $NerisBlack;
+//     line-height: 1.2;
+//     text-align: center;
+//     text-shadow: 0 10px 27px rgba(0, 0, 0, .7);
+
+//     span {
+//       font-size: 24px;
+//       font-family: $NerisLight;
+//       display: block;
+//     }
+//   }
+.wrapper {
+  width: 1000px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.content {
+  height: 1000px;
+  background-color: lightblue;
+}
+
+.scrollable {
+  min-height: 100vh;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &-prewrapper {
     position: relative;
   }
 
-  &__date {
+  &-wrapper {
+    overflow-x: hidden;
     position: absolute;
-    top: -30px;
+    width: 1000px;
     left: 0;
-    color: $color-white;
-    font-size: 107px;
-    font-family: $NerisBlack;
-    line-height: 1.2;
-    text-align: center;
-    text-shadow: 0 10px 27px rgba(0, 0, 0, .7);
+    top: 0;
 
-    span {
-      font-size: 24px;
-      font-family: $NerisLight;
-      display: block;
+    &.finish {
+      left: auto;
+      right: 0;
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
   }
+
+  &__horiz, &__vert {
+    display: inline-block;
+    white-space: nowrap;
+    min-height: 100vh;
+    vertical-align: top;
+  }
+
+  &__horiz {
+    width: 170vw;
+    background-color: green;
+    background: url(https://cdn.pixabay.com/photo/2013/10/10/21/19/sea-193803_960_720.jpg) repeat;
+  }
+
+  &__vert {
+    height: 170vh;
+    width: 1000px;
+    background-color: darkred;
+    background: url(https://s-media-cache-ak0.pinimg.com/originals/37/be/59/37be59bdb621f155a5a2726e86ce0da9.jpg) repeat;
+  }
 }
+// }
