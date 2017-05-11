@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 7px rgba(19, 11, 89, .14);
-    padding: 24px 28px 24px 40px;
+    padding: 23px 28px 27px 40px;
 
     @include respond-to('tablet') {
       flex-flow: column nowrap;
@@ -23,6 +23,7 @@
     height: 82px;
     fill: $color-dark-blue;
     stroke: $color-dark-blue;
+    margin-right: 12px;
 
     @include respond-to('tablet') {
       display: none;
@@ -42,7 +43,8 @@
       color: $color-red;
       font-size: 22px;
       font-family: $NerisBlack;
-      margin-bottom: 3px;
+      margin-bottom: 7px;
+      transform: translateY(2px);
     }
 
     &__text {
@@ -201,6 +203,7 @@
   .tarif__button {
     position: absolute;
     bottom: 0;
+    right: -44px;
     width: 165px;
     height: 40px;
 
