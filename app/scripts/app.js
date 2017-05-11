@@ -43,6 +43,7 @@ import header from '../blocks/header/header';
 import burgerDropdown from '../blocks/burger-dropdown/burger-dropdown';
 import subscribe from '../blocks/subscribe/subscribe';
 import verphe from '../blocks/verphe/verphe';
+import join from '../blocks/join/join';
 
 $(() => {
   textField();
@@ -88,6 +89,7 @@ $(() => {
   burgerDropdown();
   subscribe();
   verphe();
+  join();
   map.then((googleMaps) => {
     const mapElement = document.getElementById('map');
 
