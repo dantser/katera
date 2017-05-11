@@ -7,6 +7,7 @@ include ../image-bg/image-bg
 include ../services/services
 include ../banner/banner
 include ../map/map
+include ../gallery-popup/gallery-popup
 
 mixin yacht-club()
   +b.yacht-club
@@ -69,15 +70,12 @@ mixin yacht-club()
           +icon('caret').icon._kind_caret
         +e.gallery.swiper-container
           +e.__gallery-slider
-            +e.box-bg.swiper-slide
-              a(href='assets/images/yacht-club/gallery-1.jpg')
-                +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
-            +e.box-bg.swiper-slide
-              a(href='assets/images/yacht-club/gallery-1.jpg')
-                +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
-            +e.box-bg.swiper-slide
-              a(href='assets/images/yacht-club/gallery-1.jpg')
-                +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
+            +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup')
+              +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
+            +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup2')
+              +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
+            +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup3')
+              +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
           +e.swiper-pagination
         +e.H2.title_contacts.jqcontrol Контакты
           +icon('caret').icon._kind_caret
@@ -102,3 +100,6 @@ mixin yacht-club()
         +e.banner-bottom
           +banner('#', 'assets/images/banner.jpg')._overlay
               +e('img')(src='assets/images/banner-img.png').little
+              
+  +gallery-popup()
+  

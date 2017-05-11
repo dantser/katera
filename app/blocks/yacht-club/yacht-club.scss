@@ -494,7 +494,6 @@
     }
 
     &__coord {
-
       @include respond-to('tablet') {
         letter-spacing: -.4px;
       }
@@ -518,5 +517,25 @@
     @include respond-to('mobile') {
       display: none;
     }
+  }
+}
+
+.modal__gallery {
+
+  .modal__header {
+    padding: 0;
+  }
+
+  .modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99999;
+  }
+
+  .modal__content {
+    width: auto;
+    height: auto;
+    position: relative;
   }
 }
