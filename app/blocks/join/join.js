@@ -11,7 +11,7 @@ export default () => {
   $($('.nav:checked').data('tab')).show();
 
   $('.nav').on('change', function () {
-    $('radio__control').parent().hide();
+    $('.tabs').children().hide();
     $($(this).data('tab')).fadeIn();
   });
 };
