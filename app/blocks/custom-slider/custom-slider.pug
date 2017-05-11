@@ -5,21 +5,35 @@ include ../sale-preview-item/sale-preview-item
 
 mixin custom-slider(data)
 
-  - var photosPerSlide = 9;
-  - var slides = (data.length - data.length % photosPerSlide) / photosPerSlide;
+  - var photosPerGroup = 9;
+  - var slides = (data.length - data.length % photosPerGroup) / photosPerGroup;
 
-  +b('div').custom-slider.swiper-container
+  +b('div').custom-slider._full.swiper-container
     +e.wrapper.swiper-wrapper
 
       - for (var i=0; i<slides; i++)
+        - var index = i * 9;
 
+        +e('div').slide._big.swiper-slide
+          +sale-preview-item(data[index])
+        +e('div').slide._group.swiper-slide
+          +sale-preview-item(data[index+1])
+          +sale-preview-item(data[index+2])
+          +sale-preview-item(data[index+3])
+          +sale-preview-item(data[index+4])
+        +e('div').slide._group.swiper-slide
+          +sale-preview-item(data[index+5])
+          +sale-preview-item(data[index+6])
+          +sale-preview-item(data[index+7])
+          +sale-preview-item(data[index+8])
+
+    +e('div').pagination.swiper-pagination
+
+  +b('div').custom-slider._mob.swiper-container
+    +e.wrapper.swiper-wrapper
+
+      each item in data
         +e('div').slide.swiper-slide
-
-          +e('div').big
-            +sale-preview-item(data[0])
-
-          +e('div').group
-            - for (var j=1; j<9; j++)
-              +sale-preview-item(data[j])
+          +sale-preview-item(item)
 
     +e('div').pagination.swiper-pagination

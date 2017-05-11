@@ -19,7 +19,7 @@ import truncate from '../blocks/yacht-page/yacht-page';
 import index from '../blocks/index/index';
 import magazineLongrid from '../blocks/magazine-longrid/magazine-longrid';
 import map from './common/map';
-import eventsSlider from '../blocks/events/events';
+// import eventsSlider from '../blocks/events/events';
 import eventPage from '../blocks/event-page/event-page';
 import filterModel from '../blocks/filter-model/filter-model';
 import resetFilter from '../blocks/reset-filter/reset-filter';
@@ -65,7 +65,7 @@ $(() => {
   commonInput();
   hint();
   truncate();
-  eventsSlider();
+  // eventsSlider();
   additionalFilterParams();
   filterSale();
   resetFilter();
