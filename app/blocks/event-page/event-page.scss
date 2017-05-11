@@ -11,6 +11,10 @@
     @include respond-to('large-desktop') {
       height: 540px;
     }
+
+    @include respond-to('mobile') {
+      height: 200px;
+    }
   }
 
   &__content {
@@ -32,9 +36,11 @@
       height: 100%;
     }
 
-    @include respond-to('tablet') {
+    @include respond-to('mobile') {
       padding: 10px;
       padding-right: 0;
+      max-width: 100%;
+      margin-left: 0;
     }
   }
 
@@ -42,7 +48,7 @@
     padding-top: 20px;
     border-top: 1px solid $color-light-gray;
 
-    @include respond-to('tablet') {
+    @include respond-to('mobile') {
       padding-right: 10px;
     }
   }
@@ -50,7 +56,7 @@
   &__tags {
     margin-bottom: 20px;
 
-    @include respond-to('tablet') {
+    @include respond-to('mobile') {
       padding-right: 10px;
     }
   }
@@ -65,6 +71,10 @@
     .event-item-box {
       width: 320px;
       margin: 0;
+
+      @include respond-to('mobile') {
+        margin: 0 auto !important;
+      }
     }
 
     .event-item-box__date {
@@ -102,6 +112,12 @@
     display: block;
     width: 263px;
     height: 100%;
+
+    @include respond-to('mobile') {
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+    }
   }
 
   .sale-preview-item__img-wrap {
@@ -121,6 +137,10 @@
     display: block !important;
     padding: 0 100px;
 
+    @include respond-to('mobile') {
+      padding: 0 10px;
+    }
+
     & p {
       line-height: 20px;
       font-size: 14px;
@@ -131,6 +151,10 @@
   &__content-wrap {
     display: flex;
     flex-flow: row wrap;
+
+    @include respond-to('mobile') {
+      flex-flow: column wrap;
+    }
   }
 
   &__props {
