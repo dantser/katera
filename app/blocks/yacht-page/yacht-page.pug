@@ -76,6 +76,12 @@ mixin yacht-page(type)
               +e('li').item
                 +e('span').item-name Число спальных мест:
                 +e('span').item-text= data.technical.bedrooms
+              +e('li').item
+                +e('span').item-name Тип судна:
+                +e('span').item-text= data.technical.ship
+              +e('li').item
+                +e('span').item-name Тип киля:
+                +e('span').item-text= data.technical.keel
 
           +e('div').description
             +e('h3').description-title Описание

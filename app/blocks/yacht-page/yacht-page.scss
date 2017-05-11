@@ -4,7 +4,7 @@
     position: relative;
 
     @media (max-width: 991px) {
-      padding-bottom: 20px;
+      padding-bottom: 27px;
     }
   }
 
@@ -70,6 +70,7 @@
 
   &__technical-title {
     @include respond-to('mobile') {
+      margin-top: 19px;
       margin-bottom: 22px;
     }
   }
@@ -86,7 +87,7 @@
     padding-left: 4px;
 
     @include respond-to('mobile') {
-      height: 289px;
+      min-height: 297px;
       overflow: hidden;
       padding-left: 0;
       margin-bottom: 8px;
@@ -114,7 +115,7 @@
     justify-content: space-between;
 
     @include respond-to('mobile') {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
   }
 
@@ -129,11 +130,20 @@
 
   &__item-name {
     color: $color-gray;
+
+    @include respond-to('mobile') {
+      white-space: nowrap;
+    }
   }
 
   &__item-text {
     font-family: 'Neris SemiBold';
     color: $color-black;
+
+    @include respond-to('mobile') {
+      margin-left: 37px;
+      text-align: right;
+    }
   }
 
   &__description-text {
@@ -146,6 +156,7 @@
     }
 
     @include respond-to('mobile') {
+      padding-top: 6px;
       margin-top: 0;
     }
   }
@@ -176,7 +187,6 @@
   }
 
   &__complain {
-
 
     .button {
       padding: 8px 37px;
@@ -321,6 +331,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 15px;
 
     &-icon {
       transform: rotate(180deg);
@@ -331,6 +342,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 15px;
   }
 
   &__prev-icon, &__next-icon {
@@ -359,11 +371,14 @@
     border-top: none;
 
     .swiper-container {
-
       @include respond-to('mobile') {
-        padding-bottom: 37px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-bottom: 20px;
+      }
+
+      &__wrapper {
+        @include respond-to('mobile') {
+          margin-bottom: 28px;
+        }
       }
 
       .swiper-slide {
@@ -380,6 +395,8 @@
     &_yacht {
       @include respond-to('mobile') {
         border-bottom: 1px solid $color-light-gray;
+        padding-left: 15px;
+        padding-right: 15px;
       }
 
       .sale-preview-item {

@@ -58,6 +58,7 @@ export default () => {
       },
       768: {
         slidesPerView: 1,
+        spaceBetween: 0,
       },
     },
   });
