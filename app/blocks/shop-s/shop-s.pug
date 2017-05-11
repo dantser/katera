@@ -6,6 +6,7 @@ include ../sailor-mail/sailor-mail
 include ../banner/banner
 include ../button/button
 include ../sale-preview-item/sale-preview-item
+include ../select/select
 
 mixin shop-s()
   +b('div').shop-s
@@ -14,7 +15,10 @@ mixin shop-s()
       +main-container()
         +e('div').wrapper
           +e('div').catalog
-            +catalog-filter()
+            +e('div').catalog-filter
+              - var filterData = getData('filter')
+                +select(filterData.category.name, filterData.category.options, false, 'Категория')
+                +select(filterData.city.name, filterData.city.options, false, 'Местоположение')
             +sailor-mail(getData('sailor-mail'))
             +button()._rounded._kind_red.__show-more Показать еще
 

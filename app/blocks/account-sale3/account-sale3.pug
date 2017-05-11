@@ -12,6 +12,7 @@ include ../magazine-subscribe-popup/magazine-subscribe-popup
 include ../hint/hint
 include ../list/list
 include ../button/button
+include ../filter-category/filter-category
 
 mixin account-sale3()
  +b.account-sale3&attributes(attributes)
@@ -46,20 +47,12 @@ mixin account-sale3()
         +e.radio-wrap
           span Тип предложения:
           +e.radio
-            +radio({checked:true})
+            +radio({name: 'offer-type', checked:true})
             span Продам
           +e.radio
-            +radio()
+            +radio({name: 'offer-type'})
             span Сдам
-        +b.category-filter
-          - for (i=0;i<4;i++)
-            +e.col
-              +e.header
-                +division('Category')
-              +e.items
-                +division('Active-item')._active._arrow-left
-                - for (j=0;j<8;j++)
-                  +division('Item')
+        +filter-category()
         +b.input-group
           h2 Местоположение
           +e.item
@@ -80,10 +73,10 @@ mixin account-sale3()
             +e.SPAN.label Тип лодки
             +e.input-wrap
               +e.radio
-                +radio({checked:true})
+                +radio({name: 'type-boat',  checked:true})
                 span Новая
               +e.radio
-                +radio()
+                +radio({name: 'type-boat'})
                 span Б/У
           +e.item
             +e.SPAN.label Количество моточасов

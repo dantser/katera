@@ -47,10 +47,12 @@
 
     @include respond-to('tablet') {
       padding-right: 15px;
+      margin-top: 20px;
     }
 
     @include respond-to('mobile') {
       padding-right: 15px;
+      margin-top: 20px;
     }
 
     .text {
