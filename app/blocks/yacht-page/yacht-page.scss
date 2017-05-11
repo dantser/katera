@@ -2,6 +2,10 @@
 
   &__intro {
     position: relative;
+
+    @media (max-width: 991px) {
+      padding-bottom: 27px;
+    }
   }
 
   .sale-contacts-wrap {
@@ -9,7 +13,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    margin-top: -22px;
+    margin-top: -11px;
     z-index: 1;
 
     @media (max-width: 767px) {
@@ -35,7 +39,7 @@
 
     @include respond-to('mobile') {
       width: 100%;
-      border-top: 1px solid $color-gray;
+      border-top: 1px solid $color-light-gray;
     }
   }
 
@@ -44,8 +48,8 @@
 
     @include respond-to('mobile') {
       width: 100%;
-      border-top: 1px solid $color-gray;
-      border-bottom: 1px solid $color-gray;
+      border-top: 1px solid $color-light-gray;
+      border-bottom: 1px solid $color-light-gray;
       padding-bottom: 19px;
     }
   }
@@ -66,6 +70,7 @@
 
   &__technical-title {
     @include respond-to('mobile') {
+      margin-top: 19px;
       margin-bottom: 22px;
     }
   }
@@ -82,7 +87,7 @@
     padding-left: 4px;
 
     @include respond-to('mobile') {
-      height: 289px;
+      min-height: 297px;
       overflow: hidden;
       padding-left: 0;
       margin-bottom: 8px;
@@ -110,7 +115,7 @@
     justify-content: space-between;
 
     @include respond-to('mobile') {
-      margin-bottom: 33px;
+      margin-bottom: 15px;
     }
   }
 
@@ -125,11 +130,20 @@
 
   &__item-name {
     color: $color-gray;
+
+    @include respond-to('mobile') {
+      white-space: nowrap;
+    }
   }
 
   &__item-text {
     font-family: 'Neris SemiBold';
     color: $color-black;
+
+    @include respond-to('mobile') {
+      margin-left: 37px;
+      text-align: right;
+    }
   }
 
   &__description-text {
@@ -142,6 +156,7 @@
     }
 
     @include respond-to('mobile') {
+      padding-top: 6px;
       margin-top: 0;
     }
   }
@@ -167,7 +182,7 @@
       display: block;
       width: 100%;
       order: 4;
-      border-top: 1px solid $color-gray;
+      border-top: 1px solid $color-light-gray;
     }
   }
 
@@ -185,6 +200,7 @@
 
     @include respond-to('mobile') {
       order: 3;
+      width: 100%;
     }
   }
 
@@ -196,7 +212,7 @@
       justify-content: center;
       order: 2;
       margin-left: 0;
-      margin-bottom: 21px;
+      margin-bottom: 25px;
     }
 
     .share {
@@ -208,6 +224,11 @@
       &__title {
         font-size: 20px;
         line-height: (24/20)*1em;
+
+        @include respond-to('mobile') {
+          margin-bottom: 7px;
+          margin-right: 0;
+        }
       }
     }
   }
@@ -216,7 +237,7 @@
     @include respond-to('mobile') {
       margin-bottom: 10px;
       text-align: center;
-      padding-bottom: 18px;
+      padding-bottom: 7px;
       order: 1;
     }
   }
@@ -246,6 +267,7 @@
       font-size: 22px;
       line-height: (24/22)*1em;
       margin: 0;
+      margin-top: 15px;
       margin-bottom: 17px;
     }
   }
@@ -309,6 +331,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 15px;
 
     &-icon {
       transform: rotate(180deg);
@@ -319,6 +342,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 15px;
   }
 
   &__prev-icon, &__next-icon {
@@ -347,6 +371,15 @@
     border-top: none;
 
     .swiper-container {
+      @include respond-to('mobile') {
+        padding-bottom: 20px;
+      }
+
+      &__wrapper {
+        @include respond-to('mobile') {
+          margin-bottom: 28px;
+        }
+      }
 
       .swiper-slide {
         flex-direction: column;
@@ -361,7 +394,9 @@
 
     &_yacht {
       @include respond-to('mobile') {
-        border-bottom: 1px solid $color-gray;
+        border-bottom: 1px solid $color-light-gray;
+        padding-left: 15px;
+        padding-right: 15px;
       }
 
       .sale-preview-item {
