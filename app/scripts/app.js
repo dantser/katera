@@ -89,8 +89,14 @@ $(() => {
   subscribe();
   verphe();
   map.then((googleMaps) => {
+    const mapElement = document.getElementById('map');
+
+    if (!mapElement) {
+      return;
+    }
+
     // eslint-disable-next-line no-new
-    new googleMaps.Map(document.getElementById('map'), {
+    new googleMaps.Map(mapElement, {
       zoom: 8,
       center: new googleMaps.LatLng(59.942897, 30.247301),
       mapTypeId: googleMaps.MapTypeId.ROADMAP,
