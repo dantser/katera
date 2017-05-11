@@ -108,6 +108,7 @@
     font-size: rem(14px);
     color: $color-black;
     white-space: nowrap;
+    pointer-events: none;
 
     &::after {
       content: ':';
