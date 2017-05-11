@@ -16,6 +16,11 @@
   }
 
   .main-slider {
+
+    .swiper-pagination-bullet {
+      background-color: $color-white;
+    }
+
     @include respond-to('tablet') {
       display: none;
     }
@@ -28,12 +33,19 @@
   .page-header {
     background-color: $color-white;
 
+    &__title {
+      margin-bottom: 0;
+      padding-bottom: 7px;
+    }
+
     @include respond-to('tablet') {
       margin-bottom: 0;
+      padding: 11px 0 4px;
     }
 
     @include respond-to('mobile') {
       margin-bottom: 0;
+      padding: 11px 0 4px;
     }
   }
 
@@ -55,10 +67,14 @@
 
     @include respond-to('tablet') {
       display: flex;
+      padding: 8px 0 9px;
+      margin-bottom: 0;
     }
 
     @include respond-to('mobile') {
       display: flex;
+      padding: 8px 0 9px;
+      margin-bottom: 0;
     }
   }
 
@@ -71,12 +87,12 @@
     width: auto;
 
     @include respond-to('tablet') {
-      padding: 15px;
+      padding: 14px 15px 15px;
       margin: 0;
     }
 
     @include respond-to('mobile') {
-      padding: 15px;
+      padding: 14px 15px 15px;
       margin: 0;
     }
   }
@@ -105,13 +121,13 @@
     align-items: center;
 
     @include respond-to('tablet') {
-      margin: 0 15px 21px;
+      margin: 0 15px 7px;
       border-top: none;
       padding-top: 17px;
     }
 
     @include respond-to('mobile') {
-      margin: 0 15px 21px;
+      margin: 0 15px 7px;
       padding-top: 17px;
       border-top: none;
     }
@@ -168,7 +184,8 @@
       }
 
       &__name {
-        line-height: 19px;
+        line-height: 21px;
+        letter-spacing: .2px;
       }
 
       &__params {
@@ -216,21 +233,21 @@
   }
 
   &__show-more {
-    width: auto;
-    min-width: 165px;
+    width: 165px;
     height: 40px;
     margin: -10px auto 44px;
     z-index: 2;
     padding: 0 6px 4px 8px;
 
     @include respond-to('tablet') {
-      margin: 29px auto;
+      min-width: 97%;
+      margin: 29px 15px;
       padding-left: 7px;
     }
 
     @include respond-to('mobile') {
+      min-width: 92%;
       margin: 21px 15px 29px;
-      width: 100%;
       padding-left: 7px;
     }
   }
@@ -262,16 +279,15 @@
 
   .submenu {
     justify-content: space-between;
-    padding: 0 326px 1px;
+    padding: 0 315px;
+    border-top: none;
 
     @include respond-to('tablet') {
-      padding: 0;
-      margin: 0 15px;
+      display: none;
     }
 
     @include respond-to('mobile') {
-      padding: 0;
-      margin: 0 15px;
+      display: none;
     }
 
     @include respond-to('large-desktop') {

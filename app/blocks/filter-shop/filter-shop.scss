@@ -64,12 +64,12 @@
 
     @include respond-to('tablet') {
       width: 100%;
-      margin-bottom: 27px;
+      margin-bottom: 15px;
     }
 
     @include respond-to('mobile') {
       width: 100%;
-      margin-bottom: 27px;
+      margin-bottom: 15px;
     }
 
     @include respond-to('large-desktop') {
@@ -85,13 +85,11 @@
 
       @include respond-to('tablet') {
         width: 100%;
-        margin-bottom: 16px;
         flex-basis: auto;
       }
 
       @include respond-to('mobile') {
         width: 100%;
-        margin-bottom: 16px;
         flex-basis: auto;
       }
 
@@ -118,18 +116,6 @@
         margin-bottom: 0;
       }
     }
-
-    &_vendor {
-      width: 262px;
-
-      @include respond-to('tablet') {
-        display: none;
-      }
-
-      @include respond-to('mobile') {
-        display: none;
-      }
-    }
   }
 
   &__button {
@@ -140,10 +126,12 @@
 
     @include respond-to('tablet') {
       width: 100%;
+      margin-bottom: 7px;
     }
 
     @include respond-to('mobile') {
       width: 100%;
+      margin-bottom: 7px;
     }
 
     @include respond-to('large-desktop') {
@@ -164,7 +152,6 @@
     display: none;
     color: $color-gray;
     font-size: 12px;
-    margin-top: 13px;
 
     @include respond-to('tablet') {
       display: block;
