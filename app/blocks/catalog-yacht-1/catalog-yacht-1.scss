@@ -43,7 +43,7 @@
     &__subdesc {
       margin-top: 4px;
       line-height: 18px;
-      
+
       @include respond-to('large-desktop') {
         padding: 0 43px;
       }
@@ -129,7 +129,7 @@
 
   &__filter__label {
     align-self: center;
-    
+
     @include respond-to('tablet') {
       display: none;
     }
