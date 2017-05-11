@@ -6,6 +6,20 @@
     background-color: $color-white;
     font-size: 22px;
     padding-bottom: 0;
+
+    @include respond-to('tablet') {
+
+      &__title {
+        margin-bottom: 6px;
+      }
+    }
+
+    @include respond-to('mobile') {
+
+      &__title {
+        margin-bottom: 6px;
+      }
+    }
   }
 
   &__main-container {
@@ -42,6 +56,7 @@
 
   &__submenu {
     position: relative;
+    border-bottom: 1px solid $color-light-gray;
 
     .yacht-club__club {
       position: absolute;
@@ -55,6 +70,7 @@
     .submenu {
       padding-left: 400px;
       padding-right: 30px;
+      border: none;
     }
 
     @include respond-to('tablet') {
@@ -100,11 +116,11 @@
 
   .services {
     @include respond-to('tablet') {
-      margin-top: 15px;
+      margin-top: 9px;
     }
 
     @include respond-to('mobile') {
-      margin-top: 15px;
+      margin-top: 9px;
     }
   }
 
@@ -159,6 +175,14 @@
 
     &_contacts {
       margin: 75px auto 18px;
+
+      @include respond-to('tablet') {
+        padding-top: 5px;
+      }
+
+      @include respond-to('mobile') {
+        padding-top: 5px;
+      }
     }
 
     @include respond-to('tablet') {
@@ -166,7 +190,7 @@
       color: $color-black;
       font-size: 16px;
       margin: 0 auto;
-      padding: 12px 0 10px 15px;
+      padding: 4px 0 8px 15px;
       border: 1px solid $color-light-gray;
       border-left: none;
       border-right: none;
@@ -177,7 +201,7 @@
       color: $color-black;
       font-size: 16px;
       margin: 0 auto;
-      padding: 12px 0 10px 15px;
+      padding: 4px 0 8px 15px;
       border: 1px solid $color-light-gray;
       border-left: none;
       border-right: none;
@@ -338,12 +362,12 @@
 
     @include respond-to('tablet') {
       margin: 15px 15px 0;
-      padding-bottom: 43px;
+      padding-bottom: 13px;
     }
 
     @include respond-to('mobile') {
       margin: 15px 15px 0;
-      padding-bottom: 43px;
+      padding-bottom: 13px;
     }
   }
 
@@ -366,6 +390,14 @@
       &-active {
         border-width: 3px;
       }
+    }
+
+    @include respond-to('tablet') {
+      bottom: 10px !important;
+    }
+
+    @include respond-to('mobile') {
+      bottom: 10px !important;
     }
   }
 
@@ -397,11 +429,11 @@
 
   .contacts {
     @include respond-to('tablet') {
-      margin-top: 15px;
+      margin-top: 11px;
     }
 
     @include respond-to('mobile') {
-      margin-top: 15px;
+      margin-top: 11px;
     }
 
     &__table {
@@ -412,13 +444,13 @@
       font-size: 16px;
 
       @include respond-to('tablet') {
-        margin: 0 15px 21px;
+        margin: 0 15px 19  px;
         font-size: 14px;
         display: block;
       }
 
       @include respond-to('mobile') {
-        margin: 0 15px 21px;
+        margin: 0 15px 19px;
         font-size: 14px;
         display: block;
       }
@@ -429,12 +461,12 @@
 
       @include respond-to('tablet') {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
 
       @include respond-to('mobile') {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
     }
 
@@ -459,6 +491,17 @@
 
     &__descr {
       font-family: $NerisBlack;
+    }
+
+    &__coord {
+
+      @include respond-to('tablet') {
+        letter-spacing: -.4px;
+      }
+
+      @include respond-to('mobile') {
+        letter-spacing: -.4px;
+      }
     }
   }
 
