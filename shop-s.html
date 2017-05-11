@@ -206,30 +206,29 @@
                     <main class="main-container">
                         <div class="shop-s__wrapper">
                             <div class="shop-s__catalog">
-                                <div class="catalog-filter">
-                                    <div class="catalog-filter__item catalog-filter__item_type">
-                                        <div class="select">
-                                            <div class="select__text"></div>
-                                            <select class="select__control">
-                                                <option value="1">Тип яхты #1</option>
-                                                <option value="2">Тип яхты #2</option>
-                                                <option value="3">Тип яхты #3</option>
-                                            </select>
-                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                        </div>
+                                <div class="shop-s__catalog-filter">
+                                    <div class="select">
+                                        <div class="select__label">Категория</div>
+                                        <div class="select__text"></div>
+                                        <select class="select__control">
+                                            <option value="1">Аксессуары</option>
+                                            <option value="2">Гидроциклы</option>
+                                            <option value="3">Катера</option>
+                                            <option value="4">Запчасти</option>
+                                        </select>
+                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                                     </div>
-                                    <div class="catalog-filter__item catalog-filter__item_origin">
-                                        <div class="select">
-                                            <div class="select__text"></div>
-                                            <select class="select__control">
-                                                <option value="1">Страна #1</option>
-                                                <option value="2">Страна #2</option>
-                                                <option value="3">Страна #3</option>
-                                            </select>
-                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
-                                        </div>
+                                    <div class="select">
+                                        <div class="select__label">Местоположение</div>
+                                        <div class="select__text"></div>
+                                        <select class="select__control">
+                                            <option value="1">Город #1</option>
+                                            <option value="2">Город #2</option>
+                                            <option value="3">Город #3</option>
+                                        </select>
+                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                                     </div>
                                 </div>
                                 <div class="sailor-mail">
@@ -567,9 +566,16 @@
             </div>
             <div class="container">
                 <h2 class="subscribe__heading">Подпишитесь на рассылку</h2>
-                <form class="subscribe__form">
+                <form class="subscribe__form" novalidate="novalidate">
                     <div class="subscribe__section">
-                        <input class="subscribe__input" type="text" name="email" placeholder="Введите email" />
+                        <div class="text-field text-field_error_left">
+                            <input class="text-field__control" type="email" name="email" value="" />
+                            <span class="text-field__placeholder">Введите email</span>
+                            <div class="text-field__error-icon-wrapper">
+                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                            </div>
+                            <div class="text-field__error"></div>
+                        </div>
                     </div>
                     <div class="subscribe__section">
                         <button class="subscribe__btn">Отправить

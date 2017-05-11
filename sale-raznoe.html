@@ -247,6 +247,7 @@
                                                         <div class="text-field__error-icon-wrapper">
                                                             <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                                         </div>
+                                                        <div class="text-field__error"></div>
                                                     </div>
                                                 </div>
                                                 <div class="filter-rest__separator"></div>
@@ -257,6 +258,7 @@
                                                         <div class="text-field__error-icon-wrapper">
                                                             <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                                         </div>
+                                                        <div class="text-field__error"></div>
                                                     </div>
                                                 </div>
                                                 <div class="filter-rest__field filter-rest__field_type_select-currency">
@@ -342,6 +344,7 @@
                                                             <div class="text-field__error-icon-wrapper">
                                                                 <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                                             </div>
+                                                            <div class="text-field__error"></div>
                                                         </div>
                                                     </div>
                                                     <div class="filter-rest__separator"></div>
@@ -352,6 +355,7 @@
                                                             <div class="text-field__error-icon-wrapper">
                                                                 <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                                             </div>
+                                                            <div class="text-field__error"></div>
                                                         </div>
                                                     </div>
                                                     <div class="filter-rest__field filter-rest__field_type_select-currency">
@@ -1049,9 +1053,16 @@
             </div>
             <div class="container">
                 <h2 class="subscribe__heading">Подпишитесь на рассылку</h2>
-                <form class="subscribe__form">
+                <form class="subscribe__form" novalidate="novalidate">
                     <div class="subscribe__section">
-                        <input class="subscribe__input" type="text" name="email" placeholder="Введите email" />
+                        <div class="text-field text-field_error_left">
+                            <input class="text-field__control" type="email" name="email" value="" />
+                            <span class="text-field__placeholder">Введите email</span>
+                            <div class="text-field__error-icon-wrapper">
+                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                            </div>
+                            <div class="text-field__error"></div>
+                        </div>
                     </div>
                     <div class="subscribe__section">
                         <button class="subscribe__btn">Отправить

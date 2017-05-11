@@ -283,25 +283,23 @@
                         <span>Тип предложения:</span>
                         <div class="account-sale3__radio">
                             <label class="radio">
-                                <input class="radio__control" type="radio" name="" value="" checked="checked" />
+                                <input class="radio__control" type="radio" name="offer-type" value="" checked="checked" dataAttr="dataAttr" />
                                 <span class="radio__box"></span>
                             </label>
                             <span>Продам</span>
                         </div>
                         <div class="account-sale3__radio">
                             <label class="radio">
-                                <input class="radio__control" type="radio" name="" value="" />
+                                <input class="radio__control" type="radio" name="offer-type" value="" dataAttr="dataAttr" />
                                 <span class="radio__box"></span>
                             </label>
                             <span>Сдам</span>
                         </div>
                     </div>
-                    <div class="category-filter">
-                        <div class="category-filter__col">
-                            <div class="category-filter__header">
-                                <span class="division">Category</span>
-                            </div>
-                            <div class="category-filter__items">
+                    <div class="filter-category">
+                        <div class="filter-category__category">
+                            <span class="division">Category</span>
+                            <div class="filter-category__items">
                                 <span class="division division_active division_arrow-left">Active-item</span>
                                 <span class="division">Item</span>
                                 <span class="division">Item</span>
@@ -313,11 +311,9 @@
                                 <span class="division">Item</span>
                             </div>
                         </div>
-                        <div class="category-filter__col">
-                            <div class="category-filter__header">
-                                <span class="division">Category</span>
-                            </div>
-                            <div class="category-filter__items">
+                        <div class="filter-category__category">
+                            <span class="division">Category</span>
+                            <div class="filter-category__items">
                                 <span class="division division_active division_arrow-left">Active-item</span>
                                 <span class="division">Item</span>
                                 <span class="division">Item</span>
@@ -329,11 +325,9 @@
                                 <span class="division">Item</span>
                             </div>
                         </div>
-                        <div class="category-filter__col">
-                            <div class="category-filter__header">
-                                <span class="division">Category</span>
-                            </div>
-                            <div class="category-filter__items">
+                        <div class="filter-category__category">
+                            <span class="division">Category</span>
+                            <div class="filter-category__items">
                                 <span class="division division_active division_arrow-left">Active-item</span>
                                 <span class="division">Item</span>
                                 <span class="division">Item</span>
@@ -345,11 +339,9 @@
                                 <span class="division">Item</span>
                             </div>
                         </div>
-                        <div class="category-filter__col">
-                            <div class="category-filter__header">
-                                <span class="division">Category</span>
-                            </div>
-                            <div class="category-filter__items">
+                        <div class="filter-category__category">
+                            <span class="division">Category</span>
+                            <div class="filter-category__items">
                                 <span class="division division_active division_arrow-left">Active-item</span>
                                 <span class="division">Item</span>
                                 <span class="division">Item</span>
@@ -387,6 +379,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                             </div>
                         </div>
@@ -402,6 +395,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                             </div>
                         </div>
@@ -410,14 +404,14 @@
                             <div class="input-group__input-wrap">
                                 <div class="input-group__radio">
                                     <label class="radio">
-                                        <input class="radio__control" type="radio" name="" value="" checked="checked" />
+                                        <input class="radio__control" type="radio" name="type-boat" value="" checked="checked" dataAttr="dataAttr" />
                                         <span class="radio__box"></span>
                                     </label>
                                     <span>Новая</span>
                                 </div>
                                 <div class="input-group__radio">
                                     <label class="radio">
-                                        <input class="radio__control" type="radio" name="" value="" />
+                                        <input class="radio__control" type="radio" name="type-boat" value="" dataAttr="dataAttr" />
                                         <span class="radio__box"></span>
                                     </label>
                                     <span>Б/У</span>
@@ -433,6 +427,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                             </div>
                         </div>
@@ -445,6 +440,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                                 <span class="input-group__after-text">м</span>
                             </div>
@@ -458,6 +454,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                                 <span class="input-group__after-text">м</span>
                             </div>
@@ -471,6 +468,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                                 <span class="input-group__after-text">м</span>
                             </div>
@@ -484,6 +482,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                                 <span class="input-group__after-text">м</span>
                             </div>
@@ -587,6 +586,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                                 <span class="input-group__after-text">чел.</span>
                             </div>
@@ -600,6 +600,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                             </div>
                         </div>
@@ -612,6 +613,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                             </div>
                         </div>
@@ -664,6 +666,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                                 <span class="input-group__after-text">л</span>
                             </div>
@@ -677,6 +680,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                                 <span class="input-group__after-text">л</span>
                             </div>
@@ -716,6 +720,7 @@
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
                                     </div>
+                                    <div class="text-field__error"></div>
                                 </div>
                                 <div class="select-currency js-select-currency">
                                     <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
@@ -737,37 +742,41 @@
                         <div class="input-group__item">
                             <div class="upload-form input-group__upload">
                                 <span class="upload-form__label">Добавить фотографии</span>
-                                <div class="upload-form__field">
-                                    <div class="text-field text-field_dashed">
+                                <label class="upload-form__field">
+                                    <input class="upload-form__file" type="file" name="test" />
+                                    <span class="text-field text-field_dashed">
                                         <input class="text-field__control" type="text" value="" />
                                         <span class="text-field__placeholder"></span>
-                                        <div class="text-field__error-icon-wrapper">
+                                        <span class="text-field__error-icon-wrapper">
                                             <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                        </div>
-                                    </div>
+                                        </span>
+                                        <span class="text-field__error"></span>
+                                    </span>
                                     <button class="upload-btn">
                                         <svg><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
                                     </button>
                                     <span class="upload-form__sup-text">Вы можете прикрепить не более 20 фотографий</span>
-                                </div>
+                                </label>
                             </div>
                         </div>
                         <div class="input-group__item">
                             <div class="upload-form input-group__upload">
                                 <span class="upload-form__label">Добавить видео</span>
-                                <div class="upload-form__field">
-                                    <div class="text-field text-field_dashed">
+                                <label class="upload-form__field">
+                                    <input class="upload-form__file" type="file" name="test" />
+                                    <span class="text-field text-field_dashed">
                                         <input class="text-field__control" type="text" value="" />
                                         <span class="text-field__placeholder"></span>
-                                        <div class="text-field__error-icon-wrapper">
+                                        <span class="text-field__error-icon-wrapper">
                                             <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                        </div>
-                                    </div>
+                                        </span>
+                                        <span class="text-field__error"></span>
+                                    </span>
                                     <button class="upload-btn">
                                         <svg><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
                                     </button>
                                     <span class="upload-form__sup-text">Формат видео: MP4, AVI, QuickTime</span>
-                                </div>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -914,9 +923,16 @@
             </div>
             <div class="container">
                 <h2 class="subscribe__heading">Подпишитесь на рассылку</h2>
-                <form class="subscribe__form">
+                <form class="subscribe__form" novalidate="novalidate">
                     <div class="subscribe__section">
-                        <input class="subscribe__input" type="text" name="email" placeholder="Введите email" />
+                        <div class="text-field text-field_error_left">
+                            <input class="text-field__control" type="email" name="email" value="" />
+                            <span class="text-field__placeholder">Введите email</span>
+                            <div class="text-field__error-icon-wrapper">
+                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                            </div>
+                            <div class="text-field__error"></div>
+                        </div>
                     </div>
                     <div class="subscribe__section">
                         <button class="subscribe__btn">Отправить
