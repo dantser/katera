@@ -4,8 +4,11 @@ include ../account-navigation/account-navigation
 include ../submenu/submenu
 include ../upload-btn/upload-btn
 include ../text-field/text-field
+include ../select/select
 include ../upload-form/upload-form
 include ../sale-preview-item/sale-preview-item
+include ../dotted-dropdown/dotted-dropdown
+include ../mobile-slide-popup/mobile-slide-popup
 
 mixin account-messages-2()
   +b.account-messages-2&attributes(attributes)
@@ -21,6 +24,12 @@ mixin account-messages-2()
               +e('span') Назад
             +button()._rounded._kind_blue-border._right Спам
             +button()._rounded._kind_blue-border._right Удалить
+            +e.messages
+              +e('span') Показать
+              - var msg = getData('account-message')
+                +select(msg.msg.name, msg.msg.options)
+              +e.dotted
+                +dotted-dropdown()(data-target-modal='#account-messages-dotted').js-mobile-slide-popup
           +e.chat-props
             +e.companion
               +e.companion-name Михаил Владиславович
