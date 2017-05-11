@@ -22,50 +22,22 @@
     height: 90px;
   }
 
-  &__submenu {
+  &__submenu.submenu {
     background-color: $color-dark-blue;
-    border-bottom: 1px solid $color-purple;
+    border-bottom-color: $color-purple;
 
-    &_default {
-
-      .container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
+    @include respond-to('laptop') {
+      display: none;
     }
 
-    &_fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 8000;
-      width: 100%;
-    }
-
-    .submenu {
-      padding: 0 25px;
-      background-color: $color-dark-blue;
-      border: 0;
-
-      @include respond-to('laptop') {
-        display: none;
-      }
-
-      span {
-        color: $color-white;
-
-        &:hover {
-          color: $color-red;
-        }
-      }
+    span {
+      color: $color-white;
     }
   }
 
   &__slider {
     background-color: $color-dark-blue;
     padding: 95px 0 130px;
-    height: 100vh;
   }
 
   &__slide-inner {
@@ -91,7 +63,6 @@
     width: 420px;
     padding: 20px 0 0 68px;
     position: relative;
-    white-space: normal;
   }
 
   &__date {
@@ -103,7 +74,7 @@
     font-family: $NerisBlack;
     line-height: 1.2;
     text-align: center;
-    text-shadow: 0 10px 27px rgba(0, 0, 0, .7);
+    text-shadow: 0px 10px 27px rgba(0, 0, 0, 0.7);
 
     span {
       font-size: 24px;
