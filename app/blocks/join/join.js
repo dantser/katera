@@ -8,10 +8,10 @@ export default () => {
   }
 
   $('.tabs').children().css({ display: 'none' });
-  $($('.nav:checked').data('tab')).show();
+  $($('.nav').data('tab')).show();
 
-  $('.nav').on('change', function () {
-    $('radio__control').parent().hide();
-    $($(this).data('tab')).fadeIn();
+  $('.nav').find('input').on('change', function () {
+    $('.tabs').children().hide();
+    $($(this).parent().data('tab')).fadeIn();
   });
 };

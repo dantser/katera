@@ -4,50 +4,59 @@ include ../submenu/submenu
 include ../page-header/page-header
 
 mixin events()
-  +b.events&attributes(attributes)
+  //+b.events&attributes(attributes)
     +container()
       +page-header('Мероприятия', ['Главная', 'Мероприятия'])
       +main-container().events__main-container
         +e.submenu._default
           +submenu(getData('events'))
-        +e.slider.swiper-container
-          +e.swiper-pagination._shop-slider-pagination
-          +e.wrapper.swiper-wrapper
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+         +e.slider.scrollable-prewrapper
+          +e.wrapper.scrollable-wrapper
+            +e.scrollable
+              +e.scrollable__horiz
+                +e.slide
+                  +e.date 06
+                    +b('span') января
+                  +e.slide-inner
+                    +e('img').img(src='assets/images/events-slide.jpg')
+                    +e.category Яхтинг в россии
+                    +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+                +e.slide
+                  +e.date 06
+                    +b('span') января
+                  +e.slide-inner
+                    +e('img').img(src='assets/images/events-slide.jpg')
+                    +e.category Яхтинг в россии
+                    +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+                +e.slide
+                  +e.date 06
+                    +b('span') января
+                  +e.slide-inner
+                    +e('img').img(src='assets/images/events-slide.jpg')
+                    +e.category Яхтинг в россии
+                    +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+                +e.slide
+                  +e.date 06
+                    +b('span') января
+                  +e.slide-inner
+                    +e('img').img(src='assets/images/events-slide.jpg')
+                    +e.category Яхтинг в россии
+                    +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+                +e.slide
+                  +e.date 06
+                    +b('span') января
+                  +e.slide-inner
+                    +e('img').img(src='assets/images/events-slide.jpg')
+                    +e.category Яхтинг в россии
+                    +e.name PROyachting проведет третий этап. Конференция любителей яхт.
         +e.banner-bottom
           +banner('#', 'assets/images/banner.jpg')._overlay
             +e('img')(src='assets/images/banner-img.png').little
+  .wrapper
+    .content
+    .scrollable-prewrapper
+      .scrollable-wrapper
+        .scrollable
+          .scrollable__horiz
+          .scrollable__vert
+    .content

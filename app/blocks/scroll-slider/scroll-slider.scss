@@ -7,6 +7,7 @@
 
       &__wrapper {
         margin: 0;
+        padding: 0;
       }
 
       &__image {
@@ -17,6 +18,12 @@
         @include respond-to('mobile') {
           height: 300px;
         }
+
+        &:nth-child(n+6) {
+          @include respond-to('mobile') {
+            display: none;
+          }
+        }
       }
 
       &__pagination {
@@ -26,6 +33,11 @@
         z-index: 2;
         text-align: center;
         bottom: 0;
+
+        @include respond-to('mobile') {
+          padding-top: 7px;
+          padding-bottom: 0;
+        }
 
         @media (min-width: 767px) {
           display: none;
@@ -56,6 +68,15 @@
     }
 
     .scroll-slider {
+      margin: 0;
+
+      &__wrapper {
+        @media (min-width: 767px) {
+          padding: 0;
+          margin: 0;
+          margin-bottom: 9px;
+        }
+      }
 
       &__image {
         position: relative;

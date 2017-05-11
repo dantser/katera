@@ -12,11 +12,12 @@ include ../icon/icon
 mixin modal(heading)
   +b.modal&attributes(attributes)
     +e.wrapper
-      +e.header
-        +icon('close').close
+      +e.content
+        +e.header
+          +icon('close').close
 
-        if heading
-          +e('h2').heading= heading
+          if heading
+            +e('h2').heading= heading
 
-      +e.body
-        block
+        +e.body
+          block
