@@ -11,6 +11,10 @@
     border-top: 1px solid #e5e5e5;
   }
 
+  label {
+    cursor: pointer;
+  }
+
   &__row {
     display: flex;
     align-items: center;
