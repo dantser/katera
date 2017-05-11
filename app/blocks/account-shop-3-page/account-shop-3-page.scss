@@ -148,6 +148,11 @@
       position: relative;
       height: 41px;
 
+      @include respond-to('mobile') {
+        width: 100%;
+        margin-bottom: 17px;
+      }
+
       .text {
         height: 100%;
         width: 360px;
@@ -234,6 +239,10 @@
         padding-left: 28px;
         padding-right: 28px;
         font-size: 20px;
+
+        @include respond-to('mobile') {
+          margin: 0 auto;
+        }
       }
     }
 
@@ -459,11 +468,6 @@
 
             &__img-wrap {
               margin-right: 15px;
-
-              @include respond-to('mobile') {
-                width: 48%;
-                height: 200px;
-              }
             }
           }
         }

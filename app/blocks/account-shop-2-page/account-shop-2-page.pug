@@ -38,14 +38,14 @@ mixin account-shop-2-page()
               +list-item()._about
                 div.item-wrapper
                   h3.title О компании
-                  .field
-                    textarea(name='description').textarea
+                  .textarea
+                    textarea(name='description')
                   .field
                     +upload-form('Добавить фотографию', 'Вы можете прикрепить не более 20 фотогрфий')
                   .field
                     +upload-form('Добавить видео', 'Формат видео: MP4, AVI, QuickTime')
 
-              +list-item().contacts
+              +list-item()._contacts
                 div.item-wrapper
                   h3.title Контакты
                   .field
@@ -142,7 +142,7 @@ mixin account-shop-2-page()
                           li.option.option_active Выделенная круглосуточная поддержка
                             +icon('mark', true).mark
 
-              +list-item()._disign
+              +list-item()._design
                 div.item-wrapper
                   h3.title Оформление
                   .download
