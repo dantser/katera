@@ -1,0 +1,39 @@
+.scrollable {
+  min-height: 100vh;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &-prewrapper {
+    position: relative;
+  }
+
+  &-wrapper {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    &.finish {
+      left: auto;
+      right: 0;
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &__horiz, &__vert {
+    display: inline-block;
+    white-space: nowrap;
+    min-height: 100vh;
+    vertical-align: top;
+  }
+}

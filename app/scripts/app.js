@@ -44,8 +44,10 @@ import burgerDropdown from '../blocks/burger-dropdown/burger-dropdown';
 import subscribe from '../blocks/subscribe/subscribe';
 import verphe from '../blocks/verphe/verphe';
 import join from '../blocks/join/join';
+import scrollable from '../blocks/scrollable/scrollable';
 
 $(() => {
+  scrollable();
   textField();
   header();
   index();
