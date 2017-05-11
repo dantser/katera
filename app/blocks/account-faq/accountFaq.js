@@ -5,14 +5,14 @@ export default () => {
   if (!CONTROL) {
     return;
   }
-  console.log(CONTROL);
+
 // сворачиваемся
   CONTROL.each( function () { // eslint-disable-line
     const EL = $(this);
     const ACTIVE_CLASS = 'active';
     const ITEM = '.account-faq__item';
     EL.on('click', (e) => {
-      console.log('click');
+
       e.preventDefault();
       EL.parent(ITEM).toggleClass(ACTIVE_CLASS);
     });
