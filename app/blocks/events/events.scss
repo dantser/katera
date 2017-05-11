@@ -25,6 +25,7 @@
   &__submenu.submenu {
     background-color: $color-dark-blue;
     border-bottom-color: $color-purple;
+    justify-content: space-around;
 
     @include respond-to('laptop') {
       display: none;
