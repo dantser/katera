@@ -257,11 +257,11 @@
                                 </div>
                             </div>
                             <div class="account-magazine__buttons">
-                                <button class="button button_kind_blue button_left button_rounded button_shadow">
+                                <button class="button button_kind_blue button_left button_rounded button_shadow js-open-modal" data-target-modal="#magazine-popup">
                                     <span>Купить номер</span>
                                     <b>525 Р</b>
                                 </button>
-                                <button class="button button_kind_red button_right button_rounded button_shadow">
+                                <button class="button button_kind_red button_right button_rounded button_shadow js-open-modal" data-target-modal="#magazine-subscribe-popup">
                                     <span>Оформить подписку</span>
                                 </button>
                             </div>
@@ -279,7 +279,7 @@
                                 </div>
                             </div>
                             <div class="account-magazine__buttons">
-                                <button class="button button_kind_blue button_left button_rounded button_shadow">
+                                <button class="button button_kind_blue button_left button_rounded button_shadow js-open-modal" data-target-modal="#magazine-popup">
                                     <span>Купить номер</span>
                                     <b>525 Р</b>
                                 </button>
@@ -327,7 +327,7 @@
                                 <div class="account-magazine__journal-box">
                                     <div class="account-magazine__journal-number">№5.2016</div>
                                     <img class="account-magazine__journal-img" src="assets/images/account/journal.jpg" alt="" role="presentation" />
-                                    <button class="button button_kind_red button_rounded button_shadow">
+                                    <button class="button button_kind_red button_rounded button_shadow js-open-modal" data-target-modal="#magazine-popup">
                                         <span>Купить</span>
                                         <b>525 Р</b>
                                     </button>
@@ -335,7 +335,7 @@
                                 <div class="account-magazine__journal-box">
                                     <div class="account-magazine__journal-number">№5.2016</div>
                                     <img class="account-magazine__journal-img" src="assets/images/account/journal.jpg" alt="" role="presentation" />
-                                    <button class="button button_kind_red button_rounded button_shadow">
+                                    <button class="button button_kind_red button_rounded button_shadow js-open-modal" data-target-modal="#magazine-popup">
                                         <span>Купить</span>
                                         <b>525 Р</b>
                                     </button>
@@ -351,6 +351,361 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="magazine-popup">
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <svg class="modal__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                    <h2 class="modal__heading">Купить журнал “Капитан клуб”</h2>
+                </div>
+                <div class="modal__body">
+                    <div class="magazine-popup">
+                        <div class="magazine-popup__magazine">
+                            <div class="magazine-popup__image">
+                                <div class="image-bg">
+                                    <img class="image-bg__img" alt="" src="assets/images/magazine-captain.jpg" role="presentation" />
+                                </div>
+                            </div>
+                            <div class="magazine-popup__info">
+                                <span class="magazine-popup__text">263 номер</span>
+                                <span class="magazine-popup__text">сентябрь - октябрь 2016</span>
+                            </div>
+                        </div>
+                        <form class="buy-magazine-form">
+                            <fieldset class="buy-magazine-form__fieldset">
+                                <label class="buy-magazine-form__row buy-magazine-form__row_inverse">
+                                    <span class="buy-magazine-form__label">Получить печатную версию</span>
+                                    <div class="buy-magazine-form__field">
+                                        <label class="checkbox checkbox_switcher">
+                                            <input class="checkbox__control" type="checkbox" name="printed" value="1" checked="checked" />
+                                            <span class="checkbox__box">
+                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </label>
+                                <label class="buy-magazine-form__row">
+                                    <span class="buy-magazine-form__label">Город</span>
+                                    <div class="buy-magazine-form__field">
+                                        <div class="buy-magazine-form__text-field">
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="city" value="Набережные челны" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="buy-magazine-form__row">
+                                    <span class="buy-magazine-form__label">Город</span>
+                                    <div class="buy-magazine-form__field">
+                                        <div class="buy-magazine-form__text-field">
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="city" value="Набережные челны" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="buy-magazine-form__row buy-magazine-form__row_half">
+                                    <span class="buy-magazine-form__label">Дом, корп.</span>
+                                    <div class="buy-magazine-form__field">
+                                        <div class="buy-magazine-form__text-field">
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="house" value="5/1" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="buy-magazine-form__row buy-magazine-form__row_half">
+                                    <span class="buy-magazine-form__label">Квартира</span>
+                                    <div class="buy-magazine-form__field">
+                                        <div class="buy-magazine-form__text-field">
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="apartment-number" value="125" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="buy-magazine-form__row buy-magazine-form__row_half">
+                                    <span class="buy-magazine-form__label">Индекс</span>
+                                    <div class="buy-magazine-form__field">
+                                        <div class="buy-magazine-form__text-field">
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="postcode" value="125080" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </fieldset>
+                            <fieldset class="buy-magazine-form__fieldset">
+                                <label class="buy-magazine-form__row buy-magazine-form__row_inverse">
+                                    <span class="buy-magazine-form__label">Получить электронную версию на email</span>
+                                    <div class="buy-magazine-form__field">
+                                        <label class="checkbox checkbox_switcher">
+                                            <input class="checkbox__control" type="checkbox" name="electronic" value="1" checked="checked" />
+                                            <span class="checkbox__box">
+                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </label>
+                                <label class="buy-magazine-form__row">
+                                    <span class="buy-magazine-form__label">Email</span>
+                                    <div class="buy-magazine-form__field">
+                                        <div class="buy-magazine-form__text-field">
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="email" value="kapitan_179@mail.ru" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </fieldset>
+                            <fieldset class="buy-magazine-form__fieldset">
+                                <label class="buy-magazine-form__row buy-magazine-form__row_inverse buy-magazine-form__row_reset">
+                                    <span class="buy-magazine-form__label">Оплата онлайн</span>
+                                    <div class="buy-magazine-form__field">
+                                        <label class="radio">
+                                            <input class="radio__control" type="radio" name="payment" value="1" checked="checked" />
+                                            <span class="radio__box"></span>
+                                        </label>
+                                    </div>
+                                </label>
+                                <label class="buy-magazine-form__row buy-magazine-form__row_inverse buy-magazine-form__row_reset">
+                                    <span class="buy-magazine-form__label">Сформировать счет</span>
+                                    <div class="buy-magazine-form__field">
+                                        <label class="radio">
+                                            <input class="radio__control" type="radio" name="payment" value="2" checked="checked" />
+                                            <span class="radio__box"></span>
+                                        </label>
+                                    </div>
+                                </label>
+                            </fieldset>
+                            <fieldset class="buy-magazine-form__fieldset">
+                                <button class="button button_kind_red button_rounded button_shadow buy-magazine-form__button" type="submit">Оплатить</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="magazine-subscribe-popup">
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <svg class="modal__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                    <h2 class="modal__heading">Оформление подписки</h2>
+                </div>
+                <div class="modal__body">
+                    <form class="magazine-subscribe-popup">
+                        <div class="magazine-subscribe-popup__types">
+                            <label class="magazine-subscribe-popup__type">
+                                <input class="magazine-subscribe-popup__control" type="radio" name="subscribe-type" value="1" checked="true" />
+                                <span class="magazine-subscribe-popup__box">
+                                    <svg class="magazine-subscribe-popup__icon magazine-subscribe-popup__icon_default"><use xlink:href="assets/images/icon.svg#icon_subscribe-type-default"></use></svg>
+                                    <span class="magazine-subscribe-popup__info">
+                                        <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_period">3 месяца</span>
+                                        <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_price">800 Р</span>
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="magazine-subscribe-popup__type">
+                                <input class="magazine-subscribe-popup__control" type="radio" name="subscribe-type" value="2" />
+                                <span class="magazine-subscribe-popup__box">
+                                    <svg class="magazine-subscribe-popup__icon magazine-subscribe-popup__icon_express"><use xlink:href="assets/images/icon.svg#icon_subscribe-type-express"></use></svg>
+                                    <span class="magazine-subscribe-popup__info">
+                                        <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_period">6 месяцец</span>
+                                        <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_price">1300 Р</span>
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="magazine-subscribe-popup__type">
+                                <input class="magazine-subscribe-popup__control" type="radio" name="subscribe-type" value="3" />
+                                <span class="magazine-subscribe-popup__box">
+                                    <svg class="magazine-subscribe-popup__icon magazine-subscribe-popup__icon_turbo"><use xlink:href="assets/images/icon.svg#icon_subscribe-type-turbo"></use></svg>
+                                    <span class="magazine-subscribe-popup__info">
+                                        <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_period">12 месяцев</span>
+                                        <span class="magazine-subscribe-popup__text magazine-subscribe-popup__text_price">2550 Р</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="magazine-subscribe-popup__buy-magazine-form">
+                            <div class="buy-magazine-form">
+                                <fieldset class="buy-magazine-form__fieldset">
+                                    <label class="buy-magazine-form__row buy-magazine-form__row_inverse">
+                                        <span class="buy-magazine-form__label">Получить печатную версию</span>
+                                        <div class="buy-magazine-form__field">
+                                            <label class="checkbox checkbox_switcher">
+                                                <input class="checkbox__control" type="checkbox" name="printed" value="1" checked="checked" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </label>
+                                    <label class="buy-magazine-form__row">
+                                        <span class="buy-magazine-form__label">Город</span>
+                                        <div class="buy-magazine-form__field">
+                                            <div class="buy-magazine-form__text-field">
+                                                <div class="text-field">
+                                                    <input class="text-field__control" type="text" name="city" value="Набережные челны" />
+                                                    <span class="text-field__placeholder"></span>
+                                                    <div class="text-field__error-icon-wrapper">
+                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                    </div>
+                                                    <div class="text-field__error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="buy-magazine-form__row">
+                                        <span class="buy-magazine-form__label">Город</span>
+                                        <div class="buy-magazine-form__field">
+                                            <div class="buy-magazine-form__text-field">
+                                                <div class="text-field">
+                                                    <input class="text-field__control" type="text" name="city" value="Набережные челны" />
+                                                    <span class="text-field__placeholder"></span>
+                                                    <div class="text-field__error-icon-wrapper">
+                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                    </div>
+                                                    <div class="text-field__error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="buy-magazine-form__row buy-magazine-form__row_half">
+                                        <span class="buy-magazine-form__label">Дом, корп.</span>
+                                        <div class="buy-magazine-form__field">
+                                            <div class="buy-magazine-form__text-field">
+                                                <div class="text-field">
+                                                    <input class="text-field__control" type="text" name="house" value="5/1" />
+                                                    <span class="text-field__placeholder"></span>
+                                                    <div class="text-field__error-icon-wrapper">
+                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                    </div>
+                                                    <div class="text-field__error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="buy-magazine-form__row buy-magazine-form__row_half">
+                                        <span class="buy-magazine-form__label">Квартира</span>
+                                        <div class="buy-magazine-form__field">
+                                            <div class="buy-magazine-form__text-field">
+                                                <div class="text-field">
+                                                    <input class="text-field__control" type="text" name="apartment-number" value="125" />
+                                                    <span class="text-field__placeholder"></span>
+                                                    <div class="text-field__error-icon-wrapper">
+                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                    </div>
+                                                    <div class="text-field__error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="buy-magazine-form__row buy-magazine-form__row_half">
+                                        <span class="buy-magazine-form__label">Индекс</span>
+                                        <div class="buy-magazine-form__field">
+                                            <div class="buy-magazine-form__text-field">
+                                                <div class="text-field">
+                                                    <input class="text-field__control" type="text" name="postcode" value="125080" />
+                                                    <span class="text-field__placeholder"></span>
+                                                    <div class="text-field__error-icon-wrapper">
+                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                    </div>
+                                                    <div class="text-field__error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="buy-magazine-form__fieldset">
+                                    <label class="buy-magazine-form__row buy-magazine-form__row_inverse">
+                                        <span class="buy-magazine-form__label">Получить электронную версию на email</span>
+                                        <div class="buy-magazine-form__field">
+                                            <label class="checkbox checkbox_switcher">
+                                                <input class="checkbox__control" type="checkbox" name="electronic" value="1" checked="checked" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </label>
+                                    <label class="buy-magazine-form__row">
+                                        <span class="buy-magazine-form__label">Email</span>
+                                        <div class="buy-magazine-form__field">
+                                            <div class="buy-magazine-form__text-field">
+                                                <div class="text-field">
+                                                    <input class="text-field__control" type="text" name="email" value="kapitan_179@mail.ru" />
+                                                    <span class="text-field__placeholder"></span>
+                                                    <div class="text-field__error-icon-wrapper">
+                                                        <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                    </div>
+                                                    <div class="text-field__error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="buy-magazine-form__fieldset">
+                                    <label class="buy-magazine-form__row buy-magazine-form__row_inverse buy-magazine-form__row_reset">
+                                        <span class="buy-magazine-form__label">Оплата онлайн</span>
+                                        <div class="buy-magazine-form__field">
+                                            <label class="radio">
+                                                <input class="radio__control" type="radio" name="payment" value="1" checked="checked" />
+                                                <span class="radio__box"></span>
+                                            </label>
+                                        </div>
+                                    </label>
+                                    <label class="buy-magazine-form__row buy-magazine-form__row_inverse buy-magazine-form__row_reset">
+                                        <span class="buy-magazine-form__label">Сформировать счет</span>
+                                        <div class="buy-magazine-form__field">
+                                            <label class="radio">
+                                                <input class="radio__control" type="radio" name="payment" value="2" checked="checked" />
+                                                <span class="radio__box"></span>
+                                            </label>
+                                        </div>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="buy-magazine-form__fieldset">
+                                    <button class="button button_kind_red button_rounded button_shadow buy-magazine-form__button" type="submit">Оплатить</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

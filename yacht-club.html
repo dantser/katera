@@ -377,26 +377,20 @@
                 </h2>
                 <div class="yacht-club__gallery swiper-container">
                     <div class="yacht-club__gallery-slider">
-                        <div class="yacht-club__box-bg swiper-slide">
-                            <a href="assets/images/yacht-club/gallery-1.jpg">
-                                <div class="image-bg">
-                                    <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-1.jpg" role="presentation" />
-                                </div>
-                            </a>
+                        <div class="yacht-club__box-bg swiper-slide js-open-modal" data-target-modal="#gallery-popup">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-1.jpg" role="presentation" />
+                            </div>
                         </div>
-                        <div class="yacht-club__box-bg swiper-slide">
-                            <a href="assets/images/yacht-club/gallery-1.jpg">
-                                <div class="image-bg">
-                                    <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-2.jpg" role="presentation" />
-                                </div>
-                            </a>
+                        <div class="yacht-club__box-bg swiper-slide js-open-modal" data-target-modal="#gallery-popup2">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-2.jpg" role="presentation" />
+                            </div>
                         </div>
-                        <div class="yacht-club__box-bg swiper-slide">
-                            <a href="assets/images/yacht-club/gallery-1.jpg">
-                                <div class="image-bg">
-                                    <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-3.jpg" role="presentation" />
-                                </div>
-                            </a>
+                        <div class="yacht-club__box-bg swiper-slide js-open-modal" data-target-modal="#gallery-popup3">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-3.jpg" role="presentation" />
+                            </div>
                         </div>
                     </div>
                     <div class="yacht-club__swiper-pagination"></div>
@@ -412,7 +406,7 @@
                         </div>
                         <div class="contacts__item">
                             <span class="contacts__title">GPS координаты:</span>
-                            <span class="contacts__descr">N 55°41’19,7” E 037°41’53,6”</span>
+                            <span class="contacts__descr contacts__coord">N 55°41’19,7” E 037°41’53,6”</span>
                         </div>
                         <div class="contacts__item">
                             <span class="contacts__title">Телефон:</span>
@@ -442,6 +436,60 @@
                     </a>
                 </div>
             </main>
+        </div>
+    </div>
+    <div class="modal modal__gallery" id="gallery-popup">
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <svg class="modal__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                </div>
+                <div class="modal__body">
+                    <div class="gallery-popup">
+                        <div class="gallery-popup__image">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-1.jpg" role="presentation" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal__gallery" id="gallery-popup2">
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <svg class="modal__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                </div>
+                <div class="modal__body">
+                    <div class="gallery-popup">
+                        <div class="gallery-popup__image">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-2.jpg" role="presentation" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal__gallery" id="gallery-popup3">
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <svg class="modal__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                </div>
+                <div class="modal__body">
+                    <div class="gallery-popup">
+                        <div class="gallery-popup__image">
+                            <div class="image-bg">
+                                <img class="image-bg__img" alt="" src="assets/images/yacht-club/gallery-3.jpg" role="presentation" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="up-btn">

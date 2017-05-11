@@ -283,14 +283,14 @@
                         <span>Тип предложения:</span>
                         <div class="account-sale3__radio">
                             <label class="radio">
-                                <input class="radio__control" type="radio" name="offer-type" value="" checked="checked" dataAttr="dataAttr" />
+                                <input class="radio__control" type="radio" name="offer-type" value="" checked="checked" />
                                 <span class="radio__box"></span>
                             </label>
                             <span>Продам</span>
                         </div>
                         <div class="account-sale3__radio">
                             <label class="radio">
-                                <input class="radio__control" type="radio" name="offer-type" value="" dataAttr="dataAttr" />
+                                <input class="radio__control" type="radio" name="offer-type" value="" />
                                 <span class="radio__box"></span>
                             </label>
                             <span>Сдам</span>
@@ -404,14 +404,14 @@
                             <div class="input-group__input-wrap">
                                 <div class="input-group__radio">
                                     <label class="radio">
-                                        <input class="radio__control" type="radio" name="type-boat" value="" checked="checked" dataAttr="dataAttr" />
+                                        <input class="radio__control" type="radio" name="type-boat" value="" checked="checked" />
                                         <span class="radio__box"></span>
                                     </label>
                                     <span>Новая</span>
                                 </div>
                                 <div class="input-group__radio">
                                     <label class="radio">
-                                        <input class="radio__control" type="radio" name="type-boat" value="" dataAttr="dataAttr" />
+                                        <input class="radio__control" type="radio" name="type-boat" value="" />
                                         <span class="radio__box"></span>
                                     </label>
                                     <span>Б/У</span>
@@ -722,20 +722,16 @@
                                     </div>
                                     <div class="text-field__error"></div>
                                 </div>
-                                <div class="select-currency js-select-currency">
-                                    <input class="control js-select-currency-control" type="hidden" name="currency" value="rub" />
-                                    <div class="select-currency__selected js-select-currency-selected">
-                                        <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
+                                <div class="select-currency">
+                                    <div class="select select_text-like">
+                                        <div class="select__text"></div>
+                                        <select class="select__control">
+                                            <option value="rur">₽</option>
+                                            <option value="usd">$</option>
+                                        </select>
+                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                                     </div>
-                                    <svg class="select-currency__icon select-currency__icon_kind_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
-                                    <ul class="select-currency__select js-select-currency-select">
-                                        <li class="select-currency__option js-select-currency-option" data-value="rub">
-                                            <svg class="select-currency__icon select-currency__icon_kind_rouble"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                        </li>
-                                        <li class="select-currency__option js-select-currency-option" data-value="usd">
-                                            <svg class="select-currency__icon select-currency__icon_kind_usd"><use xlink:href="assets/images/icon.svg#icon_rouble"></use></svg>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>

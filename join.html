@@ -205,7 +205,7 @@
                     </div>
                     <main class="main-container main-container_shadow magazine__main-container">
                         <div class="forms">
-                            <div class="form form-one" id="join-1">
+                            <div class="form form-one">
                                 <fieldset class="join__fieldset fieldset-one">
                                     <p class="join__entrance">Уже зарегистрированы?
                                         <a href="#" class="join__entrance-link">Вход</a href="#">
@@ -213,8 +213,8 @@
                                     <div class="form__row">
                                         <div class="left">
                                             <label>
-                                                <label class="radio">
-                                                    <input class="radio__control" type="radio" name="selection" value="1" checked="checked" dataAttr="dataAttr" />
+                                                <label class="radio nav" data-tab="#tab1">
+                                                    <input class="radio__control" type="radio" name="selection" value="1" checked="checked" />
                                                     <span class="radio__box"></span>
                                                 </label>
                                                 <span class="join__label">Частное лицо</span>
@@ -222,8 +222,8 @@
                                         </div>
                                         <div class="right">
                                             <label>
-                                                <label class="radio">
-                                                    <input class="radio__control" type="radio" name="selection" value="2" dataAttr="dataAttr" />
+                                                <label class="radio nav" data-tab="#tab2">
+                                                    <input class="radio__control" type="radio" name="selection" value="2" />
                                                     <span class="radio__box"></span>
                                                 </label>
                                                 <span class="join__label">Компания</span>
@@ -231,204 +231,179 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset class="join__fieldset fieldset-two">
-                                    <div class="form__row">
-                                        <span class="join__label">Имя</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="text" name="name" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row">
-                                        <span class="join__label">E-mail</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="email" name="email" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row">
-                                        <span class="join__label">Телефон</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="tel" name="phone" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row">
-                                        <span class="join__label">Пароль</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="password" name="password" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row form__row-switch">
-                                        <label class="checkbox checkbox_switcher">
-                                            <input class="checkbox__control" type="checkbox" name="" value="" />
-                                            <span class="checkbox__box">
-                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
-                                            </span>
-                                        </label>
-                                        <p class="join__text">Я согласен с условиями
-                                            <span class="join__text join__text_color-red">пользовательского соглашения</span>
-                                        </p>
-                                    </div>
-                                    <button class="button button_kind_red button_rounded button_shadow join__button" type="submit">Зарегистрироваться</button>
-                                    <p class="join__entrance">Уже зарегистрированы?
-                                        <a href="#" class="join__entrance-link">Вход</a href="#">
-                                    </p>
-                                    <p class="join__or">или</p>
-                                    <div class="share">
-                                        <b class="share__title">Поделиться:</b>
-                                        <div class="share__share-wrap">
-                                            <div class="share__buttons">
-                                                <ul class="social social_join social_small">
-                                                    <li class="social__item">
-                                                        <a class="social__link social__link_type_vk" href="#">
-                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
-                                                        </a>
-                                                    </li>
-                                                    <li class="social__item">
-                                                        <a class="social__link social__link_type_go" href="#">
-                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_go"></use></svg>
-                                                        </a>
-                                                    </li>
-                                                    <li class="social__item">
-                                                        <a class="social__link social__link_type_fb" href="#">
-                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
-                                                        </a>
-                                                    </li>
-                                                    <li class="social__item">
-                                                        <a class="social__link social__link_type_odnokl" href="#">
-                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_odnokl"></use></svg>
-                                                        </a>
-                                                    </li>
-                                                    <li class="social__item">
-                                                        <a class="social__link social__link_type_tw" href="#">
-                                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_tw"></use></svg>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="share__shared share__shared_small">
-                                                <span>1k</span>
+                                <div class="tabs">
+                                    <fieldset class="join__fieldset fieldset-two" id="tab1">
+                                        <div class="form__row">
+                                            <span class="join__label">Имя</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="name" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div class="form form-two" id="join-2">
-                                <fieldset class="join__fieldset fieldset-one">
-                                    <p class="join__entrance">Уже зарегистрированы?
-                                        <a href="#" class="join__entrance-link">Вход</a href="#">
-                                    </p>
-                                    <div class="form__row">
-                                        <div class="left">
-                                            <label>
-                                                <label class="radio">
-                                                    <input class="radio__control" type="radio" name="selection" value="1" checked="checked" dataAttr="dataAttr" />
-                                                    <span class="radio__box"></span>
-                                                </label>
-                                                <span class="join__label">Частное лицо</span>
+                                        <div class="form__row">
+                                            <span class="join__label">E-mail</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="email" name="email" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__row">
+                                            <span class="join__label">Телефон</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="tel" name="phone" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__row">
+                                            <span class="join__label">Пароль</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="password" name="password" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__row form__row-switch">
+                                            <label class="checkbox checkbox_switcher">
+                                                <input class="checkbox__control" type="checkbox" name="" value="" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                </span>
                                             </label>
+                                            <p class="join__text">Я согласен с условиями
+                                                <span class="join__text join__text_color-red">пользовательского соглашения</span>
+                                            </p>
                                         </div>
-                                        <div class="right">
-                                            <label>
-                                                <label class="radio">
-                                                    <input class="radio__control" type="radio" name="selection" value="2" dataAttr="dataAttr" />
-                                                    <span class="radio__box"></span>
-                                                </label>
-                                                <span class="join__label">Компания</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="join__fieldset fieldset-two">
-                                    <div class="form__row">
-                                        <span class="join__label">Название компании</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="text" name="name" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row">
-                                        <span class="join__label">Контактное лицо</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="text" name="contact person" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row">
-                                        <span class="join__label">E-mail</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="email" name="email" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row">
-                                        <span class="join__label">Телефон</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="tel" name="phone" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row">
-                                        <span class="join__label">Пароль</span>
-                                        <div class="text-field">
-                                            <input class="text-field__control" type="password" name="password" value="" />
-                                            <span class="text-field__placeholder"></span>
-                                            <div class="text-field__error-icon-wrapper">
-                                                <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
-                                            </div>
-                                            <div class="text-field__error"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form__row form__row-switch">
-                                        <label class="checkbox checkbox_switcher">
-                                            <input class="checkbox__control" type="checkbox" name="" value="" />
-                                            <span class="checkbox__box">
-                                                <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
-                                            </span>
-                                        </label>
-                                        <p class="join__text">Я согласен с условиями
-                                            <span class="join__text join__text_color-red">пользовательского соглашения</span>
+                                        <button class="button button_kind_red button_rounded button_shadow join__button" type="submit">Зарегистрироваться</button>
+                                        <p class="join__entrance">Уже зарегистрированы?
+                                            <a href="#" class="join__entrance-link">Вход</a href="#">
                                         </p>
-                                    </div>
-                                    <button class="button button_kind_red button_rounded button_shadow join__button" type="submit">Зарегистрироваться</button>
-                                    <p class="join__entrance">Уже зарегистрированы?
-                                        <a href="#" class="join__entrance-link">Вход</a href="#">
-                                    </p>
-                                </fieldset>
+                                        <p class="join__or">или</p>
+                                        <div class="share">
+                                            <b class="share__title">Поделиться:</b>
+                                            <div class="share__share-wrap">
+                                                <div class="share__buttons">
+                                                    <ul class="social social_join social_small">
+                                                        <li class="social__item">
+                                                            <a class="social__link social__link_type_vk" href="#">
+                                                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="social__item">
+                                                            <a class="social__link social__link_type_go" href="#">
+                                                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_go"></use></svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="social__item">
+                                                            <a class="social__link social__link_type_fb" href="#">
+                                                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="social__item">
+                                                            <a class="social__link social__link_type_odnokl" href="#">
+                                                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_odnokl"></use></svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="social__item">
+                                                            <a class="social__link social__link_type_tw" href="#">
+                                                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_tw"></use></svg>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="share__shared share__shared_small">
+                                                    <span>1k</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="join__fieldset fieldset-two" id="tab2">
+                                        <div class="form__row">
+                                            <span class="join__label">Название компании</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="name" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__row">
+                                            <span class="join__label">Контактное лицо</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="text" name="contact person" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__row">
+                                            <span class="join__label">E-mail</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="email" name="email" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__row">
+                                            <span class="join__label">Телефон</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="tel" name="phone" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__row">
+                                            <span class="join__label">Пароль</span>
+                                            <div class="text-field">
+                                                <input class="text-field__control" type="password" name="password" value="" />
+                                                <span class="text-field__placeholder"></span>
+                                                <div class="text-field__error-icon-wrapper">
+                                                    <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                </div>
+                                                <div class="text-field__error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__row form__row-switch">
+                                            <label class="checkbox checkbox_switcher">
+                                                <input class="checkbox__control" type="checkbox" name="" value="" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
+                                                </span>
+                                            </label>
+                                            <p class="join__text">Я согласен с условиями
+                                                <span class="join__text join__text_color-red">пользовательского соглашения</span>
+                                            </p>
+                                        </div>
+                                        <button class="button button_kind_red button_rounded button_shadow join__button" type="submit">Зарегистрироваться</button>
+                                        <p class="join__entrance">Уже зарегистрированы?
+                                            <a href="#" class="join__entrance-link">Вход</a href="#">
+                                        </p>
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
                     </main>
