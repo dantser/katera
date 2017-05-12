@@ -12,6 +12,9 @@ const finishClass = 'finish';
 const vH = $(window).innerHeight();
 
 function ultraScrollInit() {
+  if (!scrollBlock.length || !scrollWrapper.length || !scrollPreWrapper.length) {
+    return;
+  }
   // eslint-disable-next-line no-mixed-operators
   scrollPreWrapper.height(scrollBlock.width() + scrollBlock.height() - vH);
   // eslint-disable-next-line no-mixed-operators
@@ -23,6 +26,9 @@ function ultraScrollInit() {
 }
 
 export default () => {
+  if (!scrollBlock.length || !scrollWrapper.length || !scrollPreWrapper.length) {
+    return;
+  }
   $(window).scroll(function () { // eslint-disable-line func-names
     sT = $(this).scrollTop();
 
