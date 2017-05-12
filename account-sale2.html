@@ -146,6 +146,16 @@
                         <svg class="burger-dropdown__icon"><use xlink:href="assets/images/icon.svg#icon_questions-circular"></use></svg>
                     </div>
                 </a>
+                <div class="burger-dropdown__form">
+                    <svg class="burger-dropdown__form-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                    <img class="burger-dropdown__form-bg" src="assets/images/form-bg.jpg" alt="" role="presentation" />
+                    <p class="burger-dropdown__form-heading">Задать вопрос</p>
+                    <input class="burger-dropdown__form-input" type="text" name="name" placeholder="Имя" />
+                    <input class="burger-dropdown__form-input" type="text" name="phone" placeholder="Телефон" />
+                    <input class="burger-dropdown__form-input" type="text" name="email" placeholder="Email" />
+                    <textarea class="burger-dropdown__form-textarea" name="question" placeholder="Вопрос"></textarea>
+                    <button class="button button_rounded button_kind_red button_shadow burger-dropdown__form-button">Отправить</button>
+                </div>
                 <div class="burger-dropdown__banners">
                     <div class="burger-dropdown__banner burger-dropdown__banner_type_1">
                         <a class="banner" href="">
@@ -196,11 +206,11 @@
                             </li>
                             <li class="list__item list__item_hide-pc">
                                 <div class="list__icon-wrap">
-                                    <a class="list__icon-nav" href="#">
+                                    <a class="list__icon-nav list__icon-nav_active" href="#">
                                         <svg><use xlink:href="assets/images/icon.svg#icon_acc-sale"></use></svg>
                                         <span class="list__nav-text">Предложения</span>
                                     </a>
-                                    <a class="list__icon-nav list__icon-nav_active" href="#">
+                                    <a class="list__icon-nav" href="#">
                                         <svg><use xlink:href="assets/images/icon.svg#icon_acc-prof"></use></svg>
                                         <span class="list__nav-text">Профиль</span>
                                     </a>
@@ -212,7 +222,7 @@
                             </li>
                             <li class="list__item list__item_show-pc">
                                 <a class="list__link" href="#">
-                                    <span class="division">Мои предложения</span>
+                                    <span class="division division_active division_arrow-left">Мои предложения</span>
                                 </a>
                             </li>
                             <li class="list__item list__item_show-pc">
@@ -228,7 +238,7 @@
                             </li>
                             <li class="list__item list__item_show-pc">
                                 <a class="list__link" href="#">
-                                    <span class="division division_active division_arrow-left">Настройки профиля</span>
+                                    <span class="division">Настройки профиля</span>
                                 </a>
                             </li>
                             <li class="list__item list__item_show-pc">
