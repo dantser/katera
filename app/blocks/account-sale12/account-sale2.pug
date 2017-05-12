@@ -31,12 +31,13 @@ mixin account-sale2()
                 | размещено более одного объявления одновременно, вы можете воспользоваться наиболее
                 | выгодным для Вас пакетом услуг:
             +tarif()
-          +button()._rounded.button-slide
+          +button()._rounded._kind_red-border.button-slide
             span Тарифы
           +e.propose-group
             +text()
                 h3.sale-preview-item__header Мои предложения
-            +submenu(getData('submenu-account'))
+            +e.submenu.account-sale__submenu
+              +submenu(getData('submenu-account'))
             +e.items
               - for (var i = 0; i < 3; i++)
                 +e.item

@@ -13,7 +13,7 @@
     color: $color-red;
     border-bottom: 1px solid $color-light-gray;
     align-items: center;
-    padding-bottom: 15px;
+    padding: 15px 0;
     margin-bottom: 19px;
     font-family: $NerisSemiBold;
     cursor: pointer;
@@ -160,12 +160,27 @@
     }
   }
 
-  &__submenu {
+  .account-sale__submenu {
     overflow: hidden;
+    border: 1px solid $color-light-gray;
+    border-right: none;
+    border-left: none;
+
+    @include respond-to('tablet') {
+      width: 100vw;
+      margin-left: -15px;
+      padding-left: 15px;
+    }
+
+    @include respond-to('mobile') {
+      width: 100vw;
+      margin-left: -15px;
+      padding-left: 15px;
+    }
   }
 
   .submenu {
-    border-bottom: 1px solid $color-light-gray;
+    border: none;
     padding: 0 21px 0 20px;
     white-space: nowrap;
 
@@ -185,7 +200,6 @@
     }
 
     @include respond-to('mobile') {
-      overflow: hidden;
       font-size: 14px;
       width: 100vw;
       padding-left: 2px;
@@ -262,6 +276,7 @@
 
     @include respond-to('mobile') {
       margin-bottom: 11px;
+      width: auto;
 
       &__params {
         display: block;
@@ -354,8 +369,6 @@
 
     @include respond-to('tablet') {
       width: 100%;
-      border-color: $color-red;
-      color: $color-red;
       margin-bottom: 15px;
       font-family: $NerisSemiBold;
       padding-right: 13px;
@@ -363,8 +376,6 @@
 
     @include respond-to('mobile') {
       width: 100%;
-      border-color: $color-red;
-      color: $color-red;
       margin-bottom: 15px;
       font-family: $NerisSemiBold;
       padding-right: 13px;
