@@ -82,7 +82,6 @@
       }
 
       &_yacht {
-
         @include respond-to('mobile') {
           padding-left: 15px;
           padding-right: 15px;
