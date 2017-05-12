@@ -16,8 +16,12 @@ mixin account-shop-2-page()
       +main-container()
 
         +e('div').wrapper
-
-          +account-navigation(getData('account-navigation'))
+          -
+            var nav = getData('account-navigation')
+            nav.default[0].name = 'Магазин'
+            nav.default[3].active = false
+            nav.default[0].active = true
+          +account-navigation(nav)
 
           +e('form')(name='createMagazine' action='#').form
 

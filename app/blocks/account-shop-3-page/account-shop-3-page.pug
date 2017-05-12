@@ -18,8 +18,12 @@ mixin account-shop-3-page()
       +main-container()
 
         +e('div').wrapper
-
-          +account-navigation(getData('account-navigation'))
+          -
+            var nav = getData('account-navigation')
+            nav.default[0].name = 'Магазин'
+            nav.default[3].active = false
+            nav.default[0].active = true
+          +account-navigation(nav)
 
           +e('div').form
 
@@ -145,9 +149,3 @@ mixin account-shop-3-page()
                           +sale-preview-item(res)._image_left
                         .actions
                           +proposal-actions()
-
-
-
-
-
-

@@ -425,6 +425,10 @@
         align-items: center;
         padding: 9px 0;
 
+        @include respond-to('mobile') {
+          flex-wrap: wrap;
+        }
+
         .checkbox {
           margin-right: 30px;
         }
@@ -445,6 +449,11 @@
         color: $color-gray;
         margin-left: auto;
 
+        @include respond-to('mobile') {
+          width: 100%;
+          text-align: center;
+        }
+
         &_active {
           color: $color-black;
         }
@@ -462,11 +471,11 @@
     margin-bottom: 112px;
 
     @include respond-to('tablet') {
-      margin-bottom: 17pc;
+      margin-bottom: 17px;
     }
 
     @include respond-to('mobile') {
-      margin-bottom: 17pc;
+      margin-bottom: 17px;
     }
 
     .button {

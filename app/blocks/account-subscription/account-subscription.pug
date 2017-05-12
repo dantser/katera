@@ -12,7 +12,11 @@ mixin account-subscription()
       +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
       +e.grid-container
         +e.col-nav
-          +account-navigation(getData('account-navigation'))
+          -
+            var nav = getData('account-navigation')
+            nav.default[3].active = false
+            nav.default[2].active = true
+          +account-navigation(nav)
         +e.col-page
           +e.link-box
             +e('a href="#"').link Назад

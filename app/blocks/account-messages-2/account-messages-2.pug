@@ -16,7 +16,11 @@ mixin account-messages-2()
       +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
       +e.grid-container
         +e.col-nav
-          +account-navigation(getData('account-navigation'))
+          -
+            var nav = getData('account-navigation')
+            nav.default[3].active = false
+            nav.default[1].active = true
+          +account-navigation(nav)
         +e.col-page
           +e.heading
             +e('a')(href="#").back

@@ -8,6 +8,14 @@
     "title": "account-magazine"
   },
   {
+    "path": "https://verstaburo.github.io/katera/account-messages-1.html",
+    "title": "account-messages-1"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-messages-2.html",
+    "title": "account-messages-2"
+  },
+  {
     "path": "https://verstaburo.github.io/katera/account-profile-jur.html",
     "title": "account-profile-jur"
   },
@@ -26,6 +34,18 @@
   {
     "path": "https://verstaburo.github.io/katera/account-sale3.html",
     "title": "account-sale3"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-shop1.html",
+    "title": "account-shop1"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-shop-2.html",
+    "title": "account-shop-2"
+  },
+  {
+    "path": "https://verstaburo.github.io/katera/account-shop-3.html",
+    "title": "account-shop-3"
   },
   {
     "path": "https://verstaburo.github.io/katera/account-subscription.html",
@@ -166,13 +186,5 @@
   {
     "path": "https://verstaburo.github.io/katera/yacht-shop.html",
     "title": "yacht-shop"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/account-shop1.html",
-    "title": "account-shop1"
-  },
-  {
-    "path": "https://verstaburo.github.io/katera/account-subscription.html",
-    "title": "account-subscription"
   }
 ]
