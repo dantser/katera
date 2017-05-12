@@ -45,6 +45,7 @@ import subscribe from '../blocks/subscribe/subscribe';
 import verphe from '../blocks/verphe/verphe';
 import join from '../blocks/join/join';
 import scrollable from '../blocks/scrollable/scrollable';
+import './common/lazy-image-loading';
 
 $(() => {
   scrollable();
