@@ -80,6 +80,10 @@
   .sailor-mail {
     height: inherit;
     display: inherit;
+
+    .sailor-mail-box__description {
+      padding-right: 0;
+    }
   }
 
   .button {
