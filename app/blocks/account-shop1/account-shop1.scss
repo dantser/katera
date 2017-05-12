@@ -4,6 +4,17 @@
     border-top: 1px solid $color-light-gray;
   }
 
+  .account-navigation {
+
+    .division {
+      padding: 0;
+    }
+
+    .text {
+      padding: 0;
+    }
+  }
+
   &__grid-container {
     color: $color-black;
     display: flex;
@@ -90,10 +101,10 @@
     left: 50%;
     font-family: $NerisLight;
     font-weight: 300;
-    font-size: 60px;
+    font-size: 59px;
     color: $color-white;
     width: 100%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
 
     @include respond-to('mobile') {
       font-size: 32px;
