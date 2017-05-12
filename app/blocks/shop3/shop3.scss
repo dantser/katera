@@ -28,13 +28,13 @@
     padding: 0 326px 1px;
 
     @include respond-to('tablet') {
-      padding: 0;
-      margin: 0 15px;
+      padding: 0 15px;
+      //margin: 0 15px;
     }
 
     @include respond-to('mobile') {
-      padding: 0;
-      margin: 0 15px;
+      padding: 0 15px;
+      //margin: 0 15px;
     }
   }
 
