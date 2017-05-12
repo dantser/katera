@@ -5,6 +5,7 @@ import 'sticky-kit/dist/sticky-kit';
 export default () => {
 
   const mainSlider = $('.index__main-slider');
+  const mainSliderItem = mainSlider.find('.main-slider');
   const header = $('.header');
   const w = $(window);
 
@@ -23,6 +24,11 @@ export default () => {
     }
   }
 
+  $(window).on('scroll', () => {
+    if ($(window).scrollTop() > 100 && !mainSliderItem.hasClass('main-slider_animated')) {
+      mainSliderItem.addClass('main-slider_animated')
+    }
+  });
   $('.yacht-preview-widget').stick_in_parent({
     offset_top: 95,
   });

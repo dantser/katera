@@ -17,10 +17,13 @@
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-    border-bottom: 1px solid $color-light-gray;
+    border: 1px solid $color-light-gray;
+    border-right: none;
+    border-left: none;
 
     @include respond-to('mobile') {
       height: 40px;
+      border: none;
     }
 
     .submenu {

@@ -136,13 +136,16 @@
   }
 
   &__arrows {
-    display: none;
     position: relative;
-    margin-top: 40px;
-    height: 16px;
 
     @include respond-to('tablet') {
       display: block;
+    }
+
+    @include respond-to('mobile') {
+      display: block;
+      margin: 0;
+      height: 0;
     }
   }
 
@@ -160,5 +163,30 @@
   &__next {
     left: auto;
     right: 0;
+    top: -172px;
+    padding: 20px;
+
+    @include respond-to('tablet') {
+      padding: 0;
+      top: 0;
+    }
+
+    @include respond-to('mobile') {
+      display: block;
+      top: -188px;
+      padding: 20px;
+    }
+  }
+
+  &__prev {
+    display: none;
+
+    @include respond-to('tablet') {
+      display: block;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
   }
 }
