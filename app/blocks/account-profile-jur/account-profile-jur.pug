@@ -12,7 +12,10 @@ mixin account-profile-jur()
       +page-header('Личный кабинет', ['Главная', 'Личный кабинет'])
       +e.grid-container
         +e.col-nav
-          +account-navigation(getData('account-navigation'))
+          -
+            var nav = getData('account-navigation')
+            nav.default[0].name = 'Магазин'
+          +account-navigation(nav)
         +e.col-page
           +b.input-group
             +text()
