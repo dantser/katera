@@ -7,13 +7,13 @@ export default () => {
     pagination: '.custom-slider_full .custom-slider__pagination',
     paginationClickable: true,
     slidesPerView: 3,
-    spaceBetween: 15,
+    spaceBetween: 30,
     // Responsive breakpoints
     breakpoints: {
-      1170: {
+      1169: {
         slidesPerView: 2,
       },
-      992: {
+      991: {
         slidesPerView: 1,
       },
       // 768: {

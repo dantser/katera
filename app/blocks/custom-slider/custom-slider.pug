@@ -1,7 +1,7 @@
 include ../sale-preview-item/sale-preview-item
 
-//- На данный момент на каждый слайд выводится 9 первых фото из json
-//- На разрешениях меньше десктопа group скрывается, big тянется на 100%
+//- Лишние отступы
+//- Брейкпоинты не срабатывают
 
 mixin custom-slider(data)
 
@@ -12,7 +12,7 @@ mixin custom-slider(data)
     +e.wrapper.swiper-wrapper
 
       - for (var i=0; i<slides; i++)
-        - var index = i * 9;
+        - var index = i * photosPerGroup;
 
         +e('div').slide._big.swiper-slide
           +sale-preview-item(data[index])
