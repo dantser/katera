@@ -105,8 +105,8 @@ export default () => {
 
   selectElements.on('click', 'li', (e) => {
     const el = $(e.target);
-    const selected = el.index();
     const control = el.parents(SELECT_CLASS).find('select');
+    const list = el.parents('ul');
 
     if (control.length === 0) {
       return;
@@ -116,12 +116,11 @@ export default () => {
     e.stopPropagation();
 
     deactivate(control.parent(), el.parent(), SELECT_ACTIVE_CLASS);
-    const selectedEl = control.children().eq(selected);
-    if (!selectedEl.prop('selected')) {
-      selectedEl.prop('selected', true);
-    } else {
-      control.children().eq(selected + 1).prop('selected', true);
-    }
+
+    const options = control.children();
+    const nextSelected = list.children().length < options.length ? el.index() + 1 : el.index();
+
+    options.eq(nextSelected).prop('selected', true);
     control.trigger('change');
   });
 
