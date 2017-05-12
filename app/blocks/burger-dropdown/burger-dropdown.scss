@@ -208,6 +208,95 @@
     transition: fill .25s ease-in-out;
   }
 
+  &__form {
+    display: none;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 61px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+
+    &::placeholder {
+      color: $color-white;
+    }
+  }
+
+  &__form-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 19px;
+    height: 19px;
+    fill: #fb2500;
+    cursor: pointer;
+  }
+
+  &__form-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      min-width: 100%;
+      min-height: 100%;
+      width: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__form-heading {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 22px;
+  }
+
+  &__form-input, &__form-textarea {
+    font-family: 'Neris Light', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid $color-gray;
+    width: 100%;
+    margin-top: 34px;
+    line-height: 33px;
+
+    @include respond-to('large-desktop') {
+      max-width: 450px;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__form-textarea {
+    resize: none;
+    line-height: 1em;
+    margin-top: 41px;
+    height: 29px;
+  }
+
+  &__form-button {
+    height: 40px !important;
+    margin: 41px auto 0;
+  }
+
   &__banners {
     display: inline-flex;
     justify-content: space-between;

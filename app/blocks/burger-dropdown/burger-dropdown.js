@@ -22,4 +22,24 @@ export default () => {
       });
     }
   });
+
+
+  const top = $('.burger-dropdown__top');
+  const nav = $('.burger-dropdown__navigation');
+  const questionButton = $('.burger-dropdown__question');
+  const form = $('.burger-dropdown__form');
+  const close = $('.burger-dropdown__form-close');
+
+  questionButton.click(function() {
+    form.css({ display: 'block' });
+    top.css({ display: 'none' });
+    nav.css({ display: 'none' });
+    questionButton.css({ display: 'none' });
+  });
+  close.click(function() {
+    form.css({ display: 'none' });
+    top.css({ display: 'flex' });
+    nav.css({ display: 'block' });
+    questionButton.css({ display: 'block' });
+  });
 };
