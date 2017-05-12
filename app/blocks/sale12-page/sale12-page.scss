@@ -40,12 +40,16 @@
       font-size: 22px;
       line-height: (24/22)*1em;
       margin: 0;
-      margin-bottom: 17px;
+      margin-bottom: 18px;
     }
   }
 
   &__special {
     margin-bottom: 55px;
+
+    @include respond-to('mobile') {
+      margin-bottom: 35px;
+    }
 
     .models__header {
       display: none;
@@ -71,9 +75,17 @@
 
       .swiper-wrapper {
         margin-bottom: 38px;
+
+        @include respond-to('mobile') {
+          margin-bottom: 21px;
+        }
       }
 
       &_yacht {
+        @include respond-to('mobile') {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
 
         .sale-preview-item {
           margin-top: 0 !important;
@@ -103,6 +115,15 @@
           }
         }
       }
+    }
+  }
+
+  &__intake {
+    padding-bottom: 29px;
+
+    @include respond-to('mobile') {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 

@@ -162,12 +162,12 @@
 
   &__submenu {
     overflow: hidden;
-    height: 68px;
   }
 
   .submenu {
     border-bottom: 1px solid $color-light-gray;
     padding: 0 21px 0 20px;
+    white-space: nowrap;
 
     &__title {
       padding: 19px 0 21px;
@@ -175,11 +175,29 @@
 
     @include respond-to('tablet') {
       font-size: 14px;
+      width: 100vw;
+      padding-left: 2px;
+
+      &__title {
+        padding: 12px 0 11px;
+        font-size: 14px;
+      }
     }
 
     @include respond-to('mobile') {
       overflow: hidden;
       font-size: 14px;
+      width: 100vw;
+      padding-left: 2px;
+
+      &__item {
+        padding-right: 33px;
+      }
+
+      &__title {
+        padding: 12px 0 11px;
+        font-size: 14px;
+      }
     }
   }
 
@@ -191,12 +209,12 @@
 
     @include respond-to('tablet') {
       flex-flow: column nowrap;
-      padding: 5px 0 0;
+      padding: 11px 0 0;
     }
 
     @include respond-to('mobile') {
       flex-flow: column nowrap;
-      padding: 5px 0 0;
+      padding: 11px 0 0;
     }
   }
 
@@ -243,7 +261,7 @@
     }
 
     @include respond-to('mobile') {
-      margin-bottom: 18px;
+      margin-bottom: 11px;
 
       &__params {
         display: block;
@@ -279,6 +297,10 @@
       display: flex;
       margin-bottom: 22px;
       align-items: center;
+
+      @include respond-to('mobile') {
+        margin-bottom: 13px;
+      }
     }
 
     @include respond-to('tablet') {
@@ -312,6 +334,11 @@
     display: none;
   }
 
+  &__tarif-group {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
   .tarif {
     @include respond-to('tablet') {
       display: none;
@@ -323,12 +350,15 @@
   }
 
   .button-slide {
+    padding-right: 14px;
+
     @include respond-to('tablet') {
       width: 100%;
       border-color: $color-red;
       color: $color-red;
       margin-bottom: 15px;
       font-family: $NerisSemiBold;
+      padding-right: 13px;
     }
 
     @include respond-to('mobile') {
@@ -337,6 +367,7 @@
       color: $color-red;
       margin-bottom: 15px;
       font-family: $NerisSemiBold;
+      padding-right: 13px;
     }
   }
 }

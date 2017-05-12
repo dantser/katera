@@ -1,0 +1,44 @@
+{
+  "default": [
+    {
+      "path": "#",
+      "name": "Мои предложения",
+      "active": true
+    },
+    {
+      "path": "#",
+      "name": "Сообщения",
+      "count": 1
+    },
+    {
+      "path": "#",
+      "name": "Подписка на журнал"
+    },
+    {
+      "path": "#",
+      "name": "Настройки профиля"
+    },
+    {
+      "path": "#",
+      "name": "Помощь"
+    }
+  ],
+  "mobile": [
+    {
+      "path": "#",
+      "title": "Предложения",
+      "icon": "acc-sale",
+      "active": true
+    },
+    {
+      "path": "#",
+      "title": "Профиль",
+      "icon": "acc-prof"
+    },
+    {
+      "path": "#",
+      "title": "Сообщения",
+      "icon": "acc-msg"
+    }
+  ]
+}
