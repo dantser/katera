@@ -2,6 +2,9 @@ include ../main-container/main-container
 include ../container/container
 include ../page-header/page-header
 include ../submenu/submenu
+include ../select/select
+include ../dotted-dropdown/dotted-dropdown
+include ../mobile-slide-popup/mobile-slide-popup
 include ../button/button
 include ../banner/banner
 include ../article-preview/article-preview
@@ -15,7 +18,7 @@ mixin magazine-razdel()
         +e('div').select-wrapper
           +submenu(getData('submenu'))
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
-          +e('div').select-dots
+          +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
         +e.content
           - var data = getData('article-preview_title-under-img_magazine-razdel');
           +e.list
@@ -61,3 +64,5 @@ mixin magazine-razdel()
                       +banner('#', 'assets/images/banner2.jpg')
 
           +button()._rounded._kind_red.__show-more Показать еще
+    +mobile-slide-popup()#magazine-mobile-filter
+      | test

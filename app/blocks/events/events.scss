@@ -4,6 +4,44 @@
     margin-bottom: 0;
   }
 
+  &__select-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid $color-light-gray;
+    border-right: none;
+    border-left: none;
+
+    @include respond-to('mobile') {
+      height: 40px;
+      border: none;
+    }
+
+    .submenu {
+      @include respond-to('mobile') {
+        display: none;
+      }
+    }
+
+    .select {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .dotted-dropdown {
+      display: none;
+
+      @include respond-to('mobile') {
+        display: inline-block;
+        margin-left: 18px;
+      }
+    }
+  }
+
   &__banner-bottom {
     display: block;
     width: 100%;

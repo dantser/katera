@@ -2,6 +2,9 @@ include ../main-container/main-container
 include ../container/container
 include ../page-header/page-header
 include ../submenu/submenu
+include ../select/select
+include ../dotted-dropdown/dotted-dropdown
+include ../mobile-slide-popup/mobile-slide-popup
 include ../button/button
 include ../sale-preview-item/sale-preview-item
 include ../default-article-preview/default-article-preview
@@ -12,8 +15,10 @@ mixin search()
     +container()
       +page-header('Найдено 215 материалов', ['Главная', 'Поиск'])
       +main-container().main-container_shadow.magazine__main-container
-        +e.submenu
+        +e('div').select-wrapper
           +submenu(getData('submenu-search'))
+          +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
+          +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
         +e.items
           - for (var i = 0; i < 2; i++)
             +e.item
@@ -25,3 +30,5 @@ mixin search()
             +e.item
               +big-forum-post-preview(getData('big-forum-post-preview'))
         +button()._rounded._kind_red._shadow.__show-more Показать еще
+    +mobile-slide-popup()#magazine-mobile-filter
+      | test
