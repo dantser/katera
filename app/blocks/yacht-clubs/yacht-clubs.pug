@@ -3,8 +3,8 @@ include ../container/container
 include ../main-container/main-container
 include ../yacht-clubs-item/yacht-clubs-item
 include ../submenu/submenu
-include ../catalog-filter/catalog-filter
 include ../button/button
+include ../select/select
 
 mixin yacht-clubs()
   +b('div').yacht-clubs
@@ -13,7 +13,9 @@ mixin yacht-clubs()
       +main-container()
         +submenu(getData('city'))
         +e('div').wrapper
-          +catalog-filter()
+          +e('div').catalog-filter
+            - var filterData = getData('filter')
+            +select(filterData.city.name, filterData.city.options, false, 'Местоположение')
           +e('div').yacht-clubs-row
             +yacht-clubs-item(getData('yacht-clubs-item'))
             +yacht-clubs-item(getData('yacht-clubs-item'))
