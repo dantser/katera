@@ -33,7 +33,10 @@
         transform: scale(0);
         height: 100%;
         transform-origin: bottom;
-        animation: indexMainSlider 1s linear 2s forwards;
+
+        &_animated {
+          animation: indexMainSlider 1s linear forwards;
+        }
       }
     }
   }

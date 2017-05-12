@@ -84,6 +84,12 @@
         z-index: 15;
         height: 100vh;
 
+        .image-bg__img {
+          min-width: 105%;
+          min-height: 105%;
+          transition: min-width .75s ease-in-out, min-height .75s ease-in-out;
+        }
+
         @include respond-to('tablet') {
 
           &::after {

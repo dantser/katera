@@ -4,10 +4,11 @@
   align-items: center;
   width: 100%;
 
-  @include respond-to('tablet') {
+  @include respond-to('mobile') {
     overflow: hidden;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
   }
 
   &__title {
@@ -18,7 +19,7 @@
     color: $color-black;
     margin-right: 20px;
 
-    @include respond-to('tablet') {
+    @include respond-to('mobile') {
       font-size: 14px;
       width: 100%;
       margin: 0;
@@ -34,19 +35,28 @@
     padding: 0;
     list-style: none;
 
-    @include respond-to('tablet') {
+    @include respond-to('mobile') {
       font-size: 14px;
-      min-width: 480px;
+      //min-width: 480px;
+      margin: 0 auto;
+      flex-direction: column;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
   &__tag {
     display: block;
-    margin: 0;
     margin-right: 17px;
     padding: 0;
     border: 1px solid #e5e5e5;
     border-radius: 50px;
+
+    @include respond-to('mobile') {
+      margin: 0 0 20px;
+    }
   }
 
   &__tag a {
@@ -58,6 +68,10 @@
     text-decoration: none;
 
     @include respond-to('tablet') {
+      font-size: 14px;
+    }
+
+    @include respond-to('mobile') {
       font-size: 14px;
     }
 
