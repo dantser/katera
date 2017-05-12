@@ -75,7 +75,7 @@
       padding: 10px 30px;
 
       @include respond-to('mobile') {
-        padding: 0 15px;
+        padding: 0 0 0 15px;
         display: flex;
         flex-direction: column;
       }
@@ -105,7 +105,7 @@
       @include respond-to('mobile') {
         margin-bottom: 0;
         letter-spacing: inherit;
-        font-size: 14px;
+        font-size: 13px;
         order: 2;
         line-height: 1.3;
       }
