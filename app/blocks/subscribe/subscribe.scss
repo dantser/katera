@@ -6,13 +6,15 @@
   z-index: 1;
 
   @include respond-to('tablet') {
-    padding: 20px 15px 0;
+    //padding: 20px 15px 0;
     height: 105px;
+    padding-top: 15px;
   }
 
   @include respond-to('mobile') {
-    padding: 20px 15px 0;
+    //padding: 20px 15px 0;
     height: 105px;
+    padding-top: 15px;
   }
 
   &__image {
@@ -36,6 +38,16 @@
     letter-spacing: .13px;
     display: inline-flex;
     margin-bottom: 14px;
+
+    @include respond-to('tablet') {
+      margin-bottom: 5px;
+      letter-spacing: .3px;
+    }
+
+    @include respond-to('mobile') {
+      margin-bottom: 5px;
+      letter-spacing: .3px;
+    }
   }
 
   &__form {
@@ -98,10 +110,14 @@
 
       @include respond-to('tablet') {
         font-size: 20px;
+        letter-spacing: .5px;
+        padding-left: 3px;
       }
 
       @include respond-to('mobile') {
         font-size: 20px;
+        letter-spacing: .5px;
+        padding-left: 3px;
       }
     }
 
@@ -148,12 +164,20 @@
   }
 
   &__icon {
-    width: 30px;
+    width: 33px;
     height: 20px;
     display: inline-block;
     pointer-events: none;
     margin-left: 9px;
     transform: translate(7px, 3px);
     stroke: $color-white;
+
+    @include respond-to('tablet') {
+      margin-top: -10px;
+    }
+
+    @include respond-to('mobile') {
+      margin-top: -10px;
+    }
   }
 }
