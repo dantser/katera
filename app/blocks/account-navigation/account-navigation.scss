@@ -120,7 +120,8 @@
       text-decoration: inherit;
 
       .division {
-        padding: 0 7px 0 26px;
+        //padding: 0 7px 0 26px;
+        padding: 0;
         color: $color-white;
         font-size: rem(18px);
         transition: color .25s ease-in-out;
@@ -146,7 +147,7 @@
   }
 
   .text {
-    padding: 0 25px;
+    //padding: 0 25px;
 
     @include respond-to('mobile') {
       text-align: center;
