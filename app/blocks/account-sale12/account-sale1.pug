@@ -37,7 +37,7 @@ mixin account-sale1()
           +e.propose-group
             +text()
                 h3.sale-preview-item__header Мои предложения
-            +e.submenu
+            +e.submenu.account-sale__submenu
               +submenu(getData('submenu-account'))
             +e.items
               - for (var i = 0; i < 3; i++)

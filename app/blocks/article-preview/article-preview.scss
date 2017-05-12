@@ -26,17 +26,7 @@
   }
 
   @include respond-to('mobile') {
-    border-bottom: 1px solid $color-gray;
-  }
-
-  @include respond-to('tablet') {
-
-    &_color_dark-blue:hover {
-
-      .article-preview__picture {
-        box-shadow: none;
-      }
-    }
+    border-bottom: 1px solid $color-light-gray;
   }
 
   &__picture {
@@ -133,6 +123,10 @@
         text-align: center;
         color: $color-black;
 
+        @include respond-to('tablet') {
+          font-size: 14px;
+        }
+
         @include respond-to('mobile') {
           text-align: left;
           font-size: 16px;
@@ -197,6 +191,10 @@
         line-height: (22/18)*1em;
         text-align: left;
         color: $color-white;
+
+        @include respond-to('tablet') {
+          font-size: 14px;
+        }
 
         @include respond-to('mobile') {
           text-align: left;
