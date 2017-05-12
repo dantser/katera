@@ -1,6 +1,9 @@
 include ../main-container/main-container
 include ../container/container
 include ../submenu/submenu
+include ../select/select
+include ../dotted-dropdown/dotted-dropdown
+include ../mobile-slide-popup/mobile-slide-popup
 include ../page-header/page-header
 
 mixin events()
@@ -8,7 +11,10 @@ mixin events()
     +container()
       +page-header('Мероприятия', ['Главная', 'Мероприятия'])
       +main-container().events__main-container
-        +submenu(getData('submenu')).__submenu
+        +e('div').select-wrapper
+          +submenu(getData('submenu'))
+          +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
+          +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
         +e.slider.swiper-container
           +e.swiper-pagination._shop-slider-pagination
           +e.wrapper.swiper-wrapper
@@ -50,3 +56,5 @@ mixin events()
         +e.banner-bottom
           +banner('#', 'assets/images/banner.jpg')._overlay
             +e('img')(src='assets/images/banner-img.png').little
+    +mobile-slide-popup()#magazine-mobile-filter
+      | test
