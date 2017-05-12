@@ -6,12 +6,12 @@
     padding-bottom: 39px;
 
     @include respond-to('tablet') {
-      flex-flow: column nowrap;
+      //flex-flow: column nowrap;
       padding: 0 15px 35px;
     }
 
     @include respond-to('mobile') {
-      flex-flow: column nowrap;
+      //flex-flow: column nowrap;
       padding: 0 15px 35px;
     }
   }
@@ -79,6 +79,7 @@
 
   .sailor-mail {
     height: inherit;
+    display: inherit;
   }
 
   .button {
