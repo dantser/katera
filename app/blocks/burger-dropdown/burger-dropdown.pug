@@ -21,6 +21,18 @@ mixin burger-dropdown()
           +e('div').question-wrapper
             +e('span').label Задать вопрос
             +icon('questions-circular').icon
+
+        +e.form
+          +icon('close').form-close
+          +e.form-bg(src="assets/images/form-bg.jpg")
+            img(src="assets/images/form-bg.jpg")
+          +e.P.form-heading Задать вопрос
+          +e.INPUT.form-input(type="text", name="name", placeholder="Имя")
+          +e.INPUT.form-input(type="text", name="phone", placeholder="Телефон")
+          +e.INPUT.form-input(type="text", name="email", placeholder="Email")
+          +e.TEXTAREA.form-textarea(name="question", placeholder="Вопрос")
+          +button()._rounded._kind_red._shadow.burger-dropdown__form-button Отправить
+
         +e.banners
           +e.banner._type_1
             +banner('', 'assets/images/banner-jack.jpg')

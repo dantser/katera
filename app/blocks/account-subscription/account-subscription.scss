@@ -4,6 +4,17 @@
     border-top: 1px solid $color-light-gray;
   }
 
+  .account-navigation {
+
+    .division {
+      padding: 0;
+    }
+
+    .text {
+      padding: 0;
+    }
+  }
+
   &__grid-container {
     color: $color-black;
     display: flex;
@@ -34,7 +45,7 @@
 
   &__col-page {
     padding-left: 15px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     padding-top: 10px;
     flex-grow: 1;
 
