@@ -76,6 +76,14 @@
   &__container {
     display: block;
     border-top: 1px solid $color-light-gray;
+
+    @include respond-to('tablet') {
+      border-top: none;
+    }
+
+    @include respond-to('mobile') {
+      border-top: none;
+    }
   }
 
   &__content {
