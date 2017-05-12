@@ -32,6 +32,8 @@ mixin default-select(name, items, label)
     +e.text
 
     +e('select').control
+      if label
+        option(disabled=true selected=true)=label
       each item in items
         option(value=item.value, selected=item.selected || false)=item.title
 

@@ -18,7 +18,7 @@ mixin magazine()
       +main-container().main-container_shadow.magazine__main-container
         +e('div').select-wrapper
           +submenu(getData('submenu'))
-          +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
+          +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], false, 'Категория')
           +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
         +e.content
           +articles-grid()

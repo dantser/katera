@@ -116,8 +116,12 @@ export default () => {
     e.stopPropagation();
 
     deactivate(control.parent(), el.parent(), SELECT_ACTIVE_CLASS);
-
-    control.children().eq(selected).prop('selected', true);
+    const selectedEl = control.children().eq(selected);
+    if (!selectedEl.prop('selected')) {
+      selectedEl.prop('selected', true);
+    } else {
+      control.children().eq(selected + 1).prop('selected', true);
+    }
     control.trigger('change');
   });
 
