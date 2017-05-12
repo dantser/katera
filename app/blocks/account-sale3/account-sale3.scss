@@ -189,7 +189,7 @@
     margin: 26px 0;
 
     @include respond-to('mobile') {
-      width: 320px;
+      width: 100%;
     }
   }
 
