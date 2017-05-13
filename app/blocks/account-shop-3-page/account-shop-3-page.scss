@@ -148,6 +148,11 @@
       position: relative;
       height: 41px;
 
+      @include respond-to('tablet') {
+        width: 100%;
+        margin-bottom: 17px;
+      }
+
       @include respond-to('mobile') {
         width: 100%;
         margin-bottom: 17px;
@@ -165,6 +170,10 @@
 
         @include respond-to('laptop') {
           width: 270px;
+        }
+
+        @include respond-to('tablet') {
+          width: 100%;
         }
 
         @include respond-to('mobile') {
@@ -197,10 +206,47 @@
       margin-bottom: 7px;
     }
 
+    .select-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      border: 1px solid $color-light-gray;
+      border-right: none;
+      border-left: none;
+
+      @include respond-to('mobile') {
+        height: 40px;
+        border: none;
+      }
+
+      .submenu {
+        @include respond-to('mobile') {
+          display: none;
+        }
+      }
+
+      .select {
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+
+      .dotted-dropdown {
+        display: none;
+
+        @include respond-to('mobile') {
+          display: inline-block;
+          margin-left: 18px;
+        }
+      }
+    }
+
     .sortby-params {
       border-bottom: 1px solid rgba($color-gray, .15);
       align-items: center;
       margin-bottom: 0;
+      flex-wrap: wrap;
 
       .count .value {
         color: $color-red;
@@ -213,6 +259,10 @@
         justify-content: space-between;
         align-items: center;
         font-size: 14px;
+
+        @include respond-to('mobile') {
+          width: 100%;
+        }
 
         .caption {
           margin-right: 15px;
@@ -230,6 +280,10 @@
       justify-content: space-between;
       width: 100%;
 
+      @include respond-to('tablet') {
+        flex-direction: column;
+      }
+
       @include respond-to('mobile') {
         flex-direction: column;
       }
@@ -239,6 +293,10 @@
         padding-left: 28px;
         padding-right: 28px;
         font-size: 20px;
+
+        @include respond-to('tablet') {
+          margin: 0 auto;
+        }
 
         @include respond-to('mobile') {
           margin: 0 auto;
