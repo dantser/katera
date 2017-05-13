@@ -162,16 +162,6 @@
     &_events {
       color: $color-white;
       margin: 0 auto 107px;
-
-      @include respond-to('tablet') {
-        margin-left: -38px !important;
-        padding-left: 38px !important;
-      }
-
-      @include respond-to('mobile') {
-        margin-left: -38px !important;
-        padding-left: 38px !important;
-      }
     }
 
     &_gallery {
@@ -223,9 +213,27 @@
     }
   }
 
-  &__slider {
+  &__events {
     background-color: $color-dark-blue;
-    padding: 75px 0 120px 38px;
+    padding: 75px 0 0 38px;
+
+    @include respond-to('tablet') {
+      background-color: $color-white;
+      padding: 0;
+      padding-bottom: 34px;
+    }
+
+    @include respond-to('mobile') {
+      background-color: $color-white;
+      padding: 0;
+      padding-bottom: 34px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin: 0 15px;
+    padding-bottom: 120px;
 
     span {
       margin-left: 15px;
