@@ -1,11 +1,15 @@
 include ../division/division
 
-mixin filter-category()
+//- ГЕНЕРИРУЕТ РАЗМЕТКУ ДЛЯ ФИЛЬТРА (ВСЯ ЛОГИКА И ВЫВОД ИНФОРМАЦИИ В JS ФАЙЛЕ)
+//- КОЛ-ВО ЗАГОЛОВКОВ (+e.heading-box) ВСЕГДА НА 1 МЕНЬШЕ, ЧЕМ .category-box
+
+mixin filter-category(count)
   +b.filter-category&attributes(attributes)
-    - for (var i=0;i<4;i++)
-      +e.category
-        +division('Category')
-        +e.items
-          +division('Active-item')._active._arrow-left
-          - for (var j=0;j<8;j++)
-            +division('Item')
+    +e.headings
+      - for (var i = 0; i < count-1; i++)
+        +e.heading-box
+          +e.heading
+          +e.selected
+    +e.wrapper
+      - for (var i = 0; i < count; i++)
+        +e.category-box
