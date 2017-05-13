@@ -5,6 +5,13 @@
     padding-bottom: 40px;
   }
 
+  .event-item {
+
+    @include respond-to('mobile') {
+      flex-direction: row;
+    }
+  }
+
   &__banner {
     height: 400px;
 
@@ -92,6 +99,10 @@
       height: 175px;
       margin-top: 40px;
       margin-left: 20px;
+
+      @include respond-to('mobile') {
+        width: 100%;
+      }
     }
 
     .event-item-box__number {

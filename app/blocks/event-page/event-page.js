@@ -8,5 +8,10 @@ export default () => {
     slidesPerView: 'auto',
     mousewheelControl: true,
     spaceBetween: 60,
+    breakpoints: {
+      767: {
+        slidesPerView: '1',
+      },
+    },
   });
 };
