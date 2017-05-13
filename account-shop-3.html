@@ -394,28 +394,56 @@
                                     </form>
                                 </div>
                                 <div class="field sortby-status">
-                                    <ul class="submenu">
-                                        <li class="submenu__item">
-                                            <a class="submenu__link" href="#">
-                                                <span class="division division_active submenu__title">Активные 3</span>
-                                            </a>
-                                        </li>
-                                        <li class="submenu__item">
-                                            <a class="submenu__link" href="#">
-                                                <span class="division submenu__title">Завершенные 10</span>
-                                            </a>
-                                        </li>
-                                        <li class="submenu__item">
-                                            <a class="submenu__link" href="#">
-                                                <span class="division submenu__title">Заблокированные 10</span>
-                                            </a>
-                                        </li>
-                                        <li class="submenu__item">
-                                            <a class="submenu__link" href="#">
-                                                <span class="division submenu__title">На модерации 5</span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <div class="select-wrapper">
+                                        <ul class="submenu">
+                                            <li class="submenu__item">
+                                                <a class="submenu__link" href="#">
+                                                    <span class="division division_active submenu__title">Активные 3</span>
+                                                </a>
+                                            </li>
+                                            <li class="submenu__item">
+                                                <a class="submenu__link" href="#">
+                                                    <span class="division submenu__title">Завершенные 10</span>
+                                                </a>
+                                            </li>
+                                            <li class="submenu__item">
+                                                <a class="submenu__link" href="#">
+                                                    <span class="division submenu__title">Заблокированные 10</span>
+                                                </a>
+                                            </li>
+                                            <li class="submenu__item">
+                                                <a class="submenu__link" href="#">
+                                                    <span class="division submenu__title">На модерации 5</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="select">
+                                            <div class="select__label">Категория</div>
+                                            <div class="select__text"></div>
+                                            <select class="select__control">
+                                                <option disabled="disabled" selected="selected">Категория</option>
+                                                <option value="1">Все</option>
+                                                <option value="2">Путешествия</option>
+                                                <option value="3">Видео-обзоры</option>
+                                            </select>
+                                            <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                            <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                        </div>
+                                        <div class="dotted-dropdown js-mobile-slide-popup" data-target-modal="#magazine-mobile-filter">
+                                            <div class="dotted-dropdown__button">
+                                                <div class="dotted-dropdown__dot"></div>
+                                                <div class="dotted-dropdown__dot"></div>
+                                                <div class="dotted-dropdown__dot"></div>
+                                            </div>
+                                            <div class="dotted-dropdown__content">
+                                                <ul class="list">
+                                                    <li class="list__item">Test #1</li>
+                                                    <li class="list__item">Test #2</li>
+                                                    <li class="list__item">Test #3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="field sortby-params">
                                     <p class="count">
@@ -1416,6 +1444,13 @@
                     </div>
                 </div>
             </main>
+        </div>
+        <div class="mobile-slide-popup" id="magazine-mobile-filter">
+            <div class="mobile-slide-popup__back">
+                <svg class="mobile-slide-popup__icon"><use xlink:href="assets/images/icon.svg#icon_subscribe"></use></svg>
+                <span class="mobile-slide-popup__text">Назад</span>
+            </div>
+            <div class="mobile-slide-popup__content">test</div>
         </div>
     </div>
     <div class="up-btn">
