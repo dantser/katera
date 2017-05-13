@@ -50,10 +50,10 @@ mixin account-sale3()
         h2 Выберите категорию и тип объявления
         +e.radio-wrap
           span Тип предложения:
-          +e.radio
+          +e('label').radio
             +radio({name: 'offer-type', checked:true})
             span Продам
-          +e.radio
+          +e('label').radio
             +radio({name: 'offer-type'})
             span Сдам
         +filter-category(4).__filter-category
@@ -76,10 +76,10 @@ mixin account-sale3()
           +e.item
             +e.SPAN.label Тип лодки
             +e.input-wrap
-              +e.radio
+              +e('label').radio
                 +radio({name: 'type-boat',  checked:true})
                 span Новая
-              +e.radio
+              +e('label').radio
                 +radio({name: 'type-boat'})
                 span Б/У
           +e.item
