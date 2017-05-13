@@ -27,6 +27,7 @@
 
   @include respond-to('mobile') {
     border-bottom: 1px solid $color-light-gray;
+    min-height: inherit;
   }
 
   &__picture {
@@ -69,7 +70,8 @@
     min-height: 500px;
 
     @include respond-to('mobile') {
-      min-height: 290px;
+      //min-height: 290px;
+      min-height: inherit;
     }
   }
 

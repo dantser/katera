@@ -220,13 +220,11 @@
     @include respond-to('tablet') {
       background-color: $color-white;
       padding: 0;
-      padding-bottom: 34px;
     }
 
     @include respond-to('mobile') {
       background-color: $color-white;
       padding: 0;
-      padding-bottom: 34px;
     }
   }
 
