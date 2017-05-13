@@ -90,7 +90,6 @@
   }
 
   .article-preview {
-
     @include respond-to('mobile') {
       min-height: inherit;
     }
