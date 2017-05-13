@@ -89,11 +89,13 @@
     border: none;
   }
 
-  //iphone edits
   .article-preview {
     @include respond-to('mobile') {
       min-height: inherit;
     }
   }
 
+  .col {
+    padding: 15px 15px 0;
+  }
 }
