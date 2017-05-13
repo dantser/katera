@@ -70,7 +70,8 @@
     min-height: 500px;
 
     @include respond-to('mobile') {
-      min-height: 290px;
+      //min-height: 290px;
+      min-height: inherit;
     }
   }
 

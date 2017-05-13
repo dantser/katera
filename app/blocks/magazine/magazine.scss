@@ -96,6 +96,8 @@
   }
 
   .col {
-    padding: 15px 15px 0;
+    @include respond-to('mobile') {
+      padding: 15px 15px 0;
+    }
   }
 }
