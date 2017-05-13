@@ -70,8 +70,7 @@
   }
 
   &__big-banner {
-    margin: 30px 0;
-    margin-bottom: 0;
+    margin: 30px 0 0;
   }
 
   &__show-more-wrapper {
@@ -89,4 +88,12 @@
   .submenu {
     border: none;
   }
+
+  //iphone edits
+  .article-preview {
+    @include respond-to('mobile') {
+      min-height: inherit;
+    }
+  }
+
 }
