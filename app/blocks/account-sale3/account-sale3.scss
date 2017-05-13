@@ -96,22 +96,23 @@
         font-size: rem(16px);
         font-weight: 400;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         padding-top: 25px;
 
         @include respond-to('laptop') {
           flex-direction: column;
-          align-items: flex-start;
+          //align-items: flex-start;
         }
 
         @include respond-to('tablet') {
           flex-direction: column;
-          align-items: flex-start;
+          //align-items: flex-start;
         }
 
         @include respond-to('mobile') {
           flex-direction: column;
-          align-items: flex-start;
+          //align-items: flex-start;
         }
       }
 
@@ -149,10 +150,10 @@
       }
 
       &__col {
-        display: flex;
-        flex-direction: column;
-        flex: 0 0 50%;
-        width: 100%;
+        //display: flex;
+        //flex-direction: column;
+        //flex: 0 0 50%;
+        //width: 100%;
 
         @include respond-to('laptop') {
           margin-top: 25px;
@@ -257,7 +258,20 @@
         @include respond-to('mobile') {
           flex-direction: row;
           align-items: center;
+          justify-content: space-between;
           font-size: 1rem;
+        }
+
+        .checkbox {
+          @include respond-to('mobile') {
+            margin-right: 0;
+          }
+        }
+
+        span:not(.checkbox__box) {
+          @include respond-to('mobile') {
+            width: 70%;
+          }
         }
       }
 
@@ -328,11 +342,21 @@
       }
     }
 
+    .select {
+
+      &__text {
+        display: none;
+      }
+
+      &__icon {
+        margin-left: auto;
+      }
+    }
+
     &__radio {
       margin-left: 70px;
       display: flex;
       align-items: center;
-      cursor: pointer;
 
       &:first-child {
         margin-left: 0;
@@ -471,6 +495,10 @@
     .button {
       height: 40px;
       font-size: rem(20px);
+
+      @include respond-to('mobile') {
+        font-size: rem(16px);
+      }
     }
 
     &__sub-btn {
