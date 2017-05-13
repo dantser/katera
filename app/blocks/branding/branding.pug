@@ -25,10 +25,9 @@ mixin branding(page)
 
       +e.bottom._index
     else if (page === 'shop1')
-      +e.image._left
-        +image-bg()(src='assets/images/branding/shop-left.jpg')
-      +e.image._right
-        +image-bg()(src='assets/images/branding/shop-right.jpg')
+      +e.shop-bg
+        +e.image
+          +image-bg()(src='assets/images/branding/shop-bg.jpg')
       +e.content._shop
         block
     else
