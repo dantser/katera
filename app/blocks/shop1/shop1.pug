@@ -17,8 +17,7 @@ include ../shop3/shop3-page
 
 mixin shop1()
   +b.shop1&attributes(attributes)
-    +page-header('UltraBoats', ['Главная', 'Магазины', 'UltraBoats'])
-    +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
+    //- +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
     +container()
       +main-container().main-container_shadow.magazine-razdel__main-container
         +e.link
@@ -40,4 +39,4 @@ mixin shop1()
             +button()._rounded._kind_red.__show-more Показать еще
           +shop2-page()#shop-2
           +shop3-page()#shop-3
-    +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
+    //- +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
