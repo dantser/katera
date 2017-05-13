@@ -7,6 +7,8 @@ include ../list/list
 include ../text-field/text-field
 include ../select/select
 include ../submenu/submenu
+include ../dotted-dropdown/dotted-dropdown
+include ../mobile-slide-popup/mobile-slide-popup
 include ../button/button
 include ../sale-preview-item/sale-preview-item
 include ../proposal-actions/proposal-actions
@@ -129,7 +131,10 @@ mixin account-shop-3-page()
                         | Показать
 
                 .field.sortby-status
-                  +submenu(getData('submenu-account'))
+                  .select-wrapper
+                    +submenu(getData('submenu-account'))
+                    +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], false, 'Категория')
+                    +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
 
                 .field.sortby-params
                   p.count
@@ -149,3 +154,5 @@ mixin account-shop-3-page()
                           +sale-preview-item(res)._image_left
                         .actions
                           +proposal-actions()
+    +mobile-slide-popup()#magazine-mobile-filter
+      | test
