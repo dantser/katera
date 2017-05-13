@@ -143,11 +143,12 @@
     font-size: 16px;
     color: #fff;
     background-color: transparent;
-    border: 0;
+    border: transparent;
     border-bottom: 1px solid #fff;
     width: 100%;
     margin-top: 34px;
     line-height: 33px;
+    border-radius: inherit;
 
     @include respond-to('large-desktop') {
       max-width: 450px;
