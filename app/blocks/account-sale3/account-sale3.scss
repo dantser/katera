@@ -290,10 +290,6 @@
 
       .checkbox {
         margin-right: 30px;
-
-        @include respond-to('mobile') {
-          margin-right: 0;
-        }
       }
     }
 
