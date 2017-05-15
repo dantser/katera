@@ -114,6 +114,17 @@
       }
     }
 
+    &_vendor {
+
+      @include respond-to('tablet') {
+        margin-bottom: 22px;
+      }
+
+      @include respond-to('mobile') {
+        margin-bottom: 22px;
+      }
+    }
+
     &_search {
       display: flex;
       flex-direction: column;
@@ -125,12 +136,14 @@
         order: 5;
         transform: none;
         margin-bottom: 0;
+        max-width: none;
       }
 
       @include respond-to('mobile') {
         order: 5;
         transform: none;
         margin-bottom: 0;
+        max-width: none;
       }
     }
 
@@ -144,10 +157,12 @@
 
       @include respond-to('tablet') {
         order: 4;
+        margin-bottom: 25px;
       }
 
       @include respond-to('mobile') {
         order: 4;
+        margin-bottom: 25px;
       }
     }
 
@@ -194,6 +209,14 @@
     opacity: 1;
     will-change: opacity;
     transition: opacity .25s ease-in-out;
+
+    @include respond-to('tablet') {
+      transform: translateY(8px);
+    }
+
+    @include respond-to('mobile') {
+      transform: translateY(8px);
+    }
   }
 
   &__currency {

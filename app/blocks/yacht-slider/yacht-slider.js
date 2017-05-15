@@ -11,9 +11,6 @@ export default () => {
       992: {
         slidesPerView: 2,
       },
-      // 768: {
-      //   slidesPerView: 2,
-      // },
       640: {
         slidesPerView: 1,
       },

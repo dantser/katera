@@ -76,7 +76,7 @@ export default () => {
       768: {
         slidesPerView: 1,
         spaceBetween: 14,
-        slidesPerColumn: 4,
+        slidesPerColumn: 8,
       },
     },
   });
