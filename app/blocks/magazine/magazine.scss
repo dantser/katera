@@ -78,6 +78,8 @@
 
     @include respond-to('mobile') {
       margin: 15px 0 0;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $color-light-gray;
     }
   }
 
