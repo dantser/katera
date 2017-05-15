@@ -26,6 +26,14 @@
   &__content {
     background: $color-white;
     padding: 30px;
+
+    @include respond-to('tablet') {
+      padding: 0;
+    }
+
+    @include respond-to('mobile') {
+      padding: 0;
+    }
   }
 
   &__inner-content {
@@ -42,9 +50,13 @@
       height: 100%;
     }
 
+    @include respond-to('tablet') {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @include respond-to('mobile') {
       padding: 10px;
-      padding-right: 0;
       max-width: 100%;
       margin-left: 0;
     }
@@ -77,6 +89,10 @@
     .event-item-box {
       width: 320px;
       margin: 0;
+
+      @include respond-to('mobile') {
+        margin: 0 auto !important;
+      }
     }
 
     .event-item-box__date {
@@ -126,6 +142,12 @@
     }
   }
 
+  .sale-preview-item {
+    @include respond-to('mobile') {
+      height: 306px;
+    }
+  }
+
   .sale-preview-item__img-wrap {
     height: 215px;
     margin-top: 30px;
@@ -165,7 +187,7 @@
 
   &__props {
     margin: 50px 0 0 !important;
-    display: block;
+    display: flex;
     width: 100%;
 
     h3 {
@@ -185,7 +207,7 @@
   }
 
   .text div {
-    display: block;
+    margin: 0;
   }
 
   .sale-preview-item__img-wrap {
@@ -230,5 +252,56 @@
     background-color: rgba(255, 255, 255, .8);
     width: 10px;
     height: 10px;
+  }
+
+  .event-page__props {
+    display: flex !important;
+    flex-direction: column;
+
+    @include respond-to('mobile') {
+      margin: 10px 0 0 !important;
+    }
+
+    .share-calendar {
+      display: flex !important;
+
+      &__link {
+
+        &:first-child {
+          @include respond-to('mobile') {
+            margin-left: 0;
+          }
+        }
+
+        @include respond-to('mobile') {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .event-page__text-inner {
+    @include respond-to('mobile') {
+      display: flex !important;
+      flex-direction: column;
+    }
+  }
+
+  .event-page__sidebar {
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+
+  .map {
+    @include respond-to('mobile') {
+      display: flex;
+      height: 300px;
+      overflow: hidden;
+    }
   }
 }
