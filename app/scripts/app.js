@@ -46,7 +46,6 @@ import verphe from '../blocks/verphe/verphe';
 import join from '../blocks/join/join';
 import scrollable from '../blocks/scrollable/scrollable';
 import accountSale3 from '../blocks/account-sale3/account-sale3';
-import './common/lazy-image-loading';
 
 $(() => {
   scrollable();

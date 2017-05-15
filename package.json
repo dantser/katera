@@ -53,6 +53,7 @@
     "jade-get-data": "^1.0.1",
     "jquery": "^3.2.1",
     "jquery-ui-bundle": "^1.12.1",
+    "jquery-ui-touch-punch": "^0.2.3",
     "jquery.inputmask": "^3.3.4",
     "load-google-maps-api": "0.0.3",
     "normalize.css": "^6.0.0",
