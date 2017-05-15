@@ -35,7 +35,7 @@
   &_index {
     @include respond-to('tablet') {
       position: absolute;
-      top: 100vh;
+      top: 50vh;
       left: 0;
       z-index: 200;
 

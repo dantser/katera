@@ -36,6 +36,7 @@
 
     @include respond-to('tablet') {
       position: relative;
+      height: 50vh;
     }
 
     .container {
@@ -105,6 +106,7 @@
         }
 
         @include respond-to('tablet') {
+          height: 50vh;
 
           &::after {
             content: '';
@@ -157,7 +159,7 @@
     }
 
     @include respond-to('tablet') {
-      margin: auto 6px 94px auto;
+      margin: auto 15px 94px auto;
       font-size: rem(22px);
       font-weight: 700;
       line-height: 1.5;
@@ -177,7 +179,7 @@
     @include respond-to('mobile') {
       top: initial;
       right: initial;
-      left: 0;
+      left: 6px;
       bottom: 73px;
       box-sizing: content-box;
       border-left: 13px solid $color-white;
@@ -189,7 +191,7 @@
     @include respond-to('tablet') {
       top: initial;
       right: initial;
-      left: 0;
+      left: 15px;
       bottom: 73px;
       box-sizing: content-box;
       border-left: 13px solid $color-white;
