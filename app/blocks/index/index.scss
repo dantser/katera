@@ -83,7 +83,6 @@
     margin-top: 30px;
     display: block;
     flex: 1;
-    overflow: hidden;
 
     @include respond-to('tablet') {
       flex-basis: 100%;
