@@ -5,6 +5,11 @@ import 'sticky-kit/dist/sticky-kit';
 export default () => {
 
   const mainSlider = $('.index__main-slider');
+
+  if (mainSlider.length === 0) {
+    return;
+  }
+
   const mainSliderItem = mainSlider.find('.main-slider');
   const header = $('.header');
   const w = $(window);

@@ -1,5 +1,9 @@
 .magazine-longrid {
 
+  & > .branding {
+    display: none;
+  }
+
   &__block {
     height: 100vh;
   }
