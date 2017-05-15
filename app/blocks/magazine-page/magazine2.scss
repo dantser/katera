@@ -770,4 +770,9 @@
   .margin-one {
     margin: 29px 0 0;
   }
+
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
