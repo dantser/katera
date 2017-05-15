@@ -204,6 +204,7 @@
     margin-left: 19px;
     width: 165px;
     height: 35px;
+    padding-top: 5px;
 
     @include respond-to('tablet') {
       display: none;

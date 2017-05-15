@@ -84,6 +84,7 @@
     margin: 60px auto;
     width: 165px;
     height: 40px;
+    display: block;
 
     @include respond-to('mobile') {
       margin: 50px auto 20px;

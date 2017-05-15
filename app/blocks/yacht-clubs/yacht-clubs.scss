@@ -126,6 +126,7 @@
     height: 40px;
     box-shadow: 0 0 35px 0 rgba(9, 4, 53, .3);
     margin: 25px auto 0;
+    display: block;
 
     @include respond-to('mobile') {
       width: 290px;
