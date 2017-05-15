@@ -28,6 +28,7 @@
   @include respond-to('mobile') {
     border-bottom: 1px solid $color-light-gray;
     min-height: inherit;
+    padding-top: 15px;
   }
 
   &__picture {
@@ -110,7 +111,7 @@
         align-items: center;
 
         @include respond-to('mobile') {
-          padding-bottom: 6px;
+          padding-bottom: 10px;
           padding-left: 0;
         }
       }
@@ -141,7 +142,7 @@
     @include respond-to('mobile') {
       padding-left: 15px;
       padding-right: 15px;
-      padding-bottom: 10px;
+      padding-bottom: 15px;
     }
 
     .article-preview {

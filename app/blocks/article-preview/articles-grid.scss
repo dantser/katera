@@ -1,4 +1,10 @@
-.articles-grid:not(:first-of-type) { margin-top: 30px; }
+.articles-grid:not(:first-of-type) {
+  margin-top: 30px;
+
+  @include respond-to(mobile) {
+    margin-top: 0;
+  }
+}
 
 .articles__tablet-hide {
   @include respond-to(tablet) {
@@ -38,6 +44,14 @@
 
   &:not(:first-of-type) {
     padding-top: 30px;
+
+    @include respond-to(mobile) {
+      padding-top: 0;
+    }
+  }
+
+  @include respond-to(mobile) {
+    margin-top: 0;
   }
 }
 
@@ -47,6 +61,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
+  @include respond-to(mobile) {
+    padding-top: 0;
+  }
 
   &_three {
     width: (3/12)*100%;
