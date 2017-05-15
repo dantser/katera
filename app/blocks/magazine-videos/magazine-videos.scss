@@ -106,12 +106,12 @@
     }
 
     .video-preview {
-      max-width: 263px;
+      width: 263px;
       padding: 0 5px;
       margin-bottom: 17px;
 
       @include respond-to('mobile') {
-        max-width: 500px;
+        width: 100%;
         flex-flow: row nowrap;
         margin-bottom: 0;
         align-items: flex-start;
