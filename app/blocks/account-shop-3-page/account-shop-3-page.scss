@@ -97,17 +97,34 @@
           .button-slide {
             width: 165px;
             height: 40px;
-
-            @include respond-to('tablet') {
-              width: 100%;
-            }
+            display: block;
+            margin: 0 auto;
+            padding-top: 1px;
+            position: relative;
+            //display: flex !important;
+            //align-items: center;
+            //justify-content: center;
 
             @include respond-to('mobile') {
-              width: 100%;
+              width: 290px;
+            }
+
+            span {
+              margin-left: -20px;
+
+              @include respond-to('mobile') {
+                margin-left: -50px;
+              }
             }
 
             .button__icon {
-              margin-left: 8px;
+              position: absolute;
+              right: 23px;
+              top: 13px;
+
+              @include respond-to('mobile') {
+                right: 85px;
+              }
             }
           }
         }
@@ -294,6 +311,7 @@
         padding-right: 28px;
         font-size: 20px;
         padding-top: 3px;
+        display: block;
 
         @include respond-to('tablet') {
           margin: 0 auto;
