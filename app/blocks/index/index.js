@@ -25,7 +25,12 @@ export default () => {
   }
 
   const yachtWidget = $('.yacht-preview-widget');
+  const yachtBtn = yachtWidget.find('.yacht-preview-widget__button');
   const topicWidget = $('.topic-preview-widget');
+  const topicBtn = topicWidget.find('.topic-preview-widget__button');
+
+  let yachtBtnAttached = false;
+  let topicBtnAttached = false;
 
   w.on('scroll', () => {
     const sT = w.scrollTop();
@@ -39,30 +44,56 @@ export default () => {
       return;
     }
 
-    if (sT + vH >= yachtWidget.parent().offset().top && !yachtWidget.hasClass('is_stuck')) {
+    if (sT + vH >= yachtWidget.parent().offset().top) {
       const offset = sT + vH - yachtWidget.parent().offset().top;
-      let translate = 100 - offset * .15;
-      translate = translate > 0 ? `${translate}%` : 0;
 
-      if (translate === 0) {
-        yachtWidget.trigger('sticky_kit:recalc');
-        yachtWidget.addClass('animate_btn');
+      if (!yachtWidget.hasClass('is_stuck')) {
+        let translate = 100 - offset * .16;
+        translate = translate > 0 ? `${translate}%` : 0;
+
+        if (translate === 0) {
+          yachtWidget.trigger('sticky_kit:recalc');
+        }
+
+        yachtWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
       }
 
-      yachtWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
+      let btnTranslate = 100 - offset * .13;
+      btnTranslate = btnTranslate > 0 ? `${btnTranslate}vh` : 0;
+
+      if (!yachtBtnAttached) {
+        yachtBtn.css({ transform: `translate3d(0, ${btnTranslate}, 0)`});
+      }
+
+      if (btnTranslate === 0) {
+        yachtBtnAttached = true;
+      }
     }
 
-    if (sT + vH >= topicWidget.parent().offset().top && !topicWidget.hasClass('is_stuck')) {
+    if (sT + vH >= topicWidget.parent().offset().top) {
       const offset = sT + vH - topicWidget.parent().offset().top;
-      let translate = 100 - offset * .15;
-      translate = translate > 0 ? `${translate}%` : 0;
 
-      if (translate === 0) {
-        topicWidget.trigger('sticky_kit:recalc');
-        topicWidget.addClass('animate_btn');
+      if (!topicWidget.hasClass('is_stuck')) {
+        let translate = 100 - offset * .16;
+        translate = translate > 0 ? `${translate}%` : 0;
+
+        if (translate === 0) {
+          topicWidget.trigger('sticky_kit:recalc');
+        }
+
+        topicWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
       }
 
-      topicWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
+      let btnTranslate = 100 - offset * .13;
+      btnTranslate = btnTranslate > 0 ? `${btnTranslate}vh` : 0;
+
+      if (!topicBtnAttached) {
+        topicBtn.css({ transform: `translate3d(0, ${btnTranslate}, 0)`});
+      }
+
+      if (btnTranslate === 0) {
+        topicBtnAttached = true;
+      }
     }
   });
 

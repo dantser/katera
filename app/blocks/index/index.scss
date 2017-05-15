@@ -45,17 +45,9 @@
     transform: translate3d(0, 0, 0);
     transform-origin: top;
 
-    &.animate_btn {
-
-      .yacht-preview-widget__button, .topic-preview-widget__button {
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
     .yacht-preview-widget__button, .topic-preview-widget__button {
       will-change: transform;
-      transition: transform .5s linear;
-      transform: translate3d(0, 100vh, 0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
