@@ -127,6 +127,7 @@
 
     @include respond-to('mobile') {
       flex-direction: column;
+      padding: 0 15px;
     }
   }
 
