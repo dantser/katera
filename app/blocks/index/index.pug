@@ -30,7 +30,7 @@ mixin index()
         +filter().__filter
         +navbar(getData('navbar'))
         +e.sidebar
-          +yacht-preview-widget("Яхты в продаже", getData('yacht-preview'))
+          +yacht-preview-widget("Яхты в продаже", getData('yacht-preview')).__widget
         +e.content
           .grid
             .stroke
@@ -91,5 +91,5 @@ mixin index()
                     +article-preview(getData('article-preview_title-under-img_color_red'))._title-under-img
 
         +e.sidebar._right
-          +topic-preview-widget("Обсуждения в форуме", getData('topic-preview'))
+          +topic-preview-widget("Обсуждения в форуме", getData('topic-preview')).__widget
 
