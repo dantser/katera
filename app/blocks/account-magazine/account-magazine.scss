@@ -111,6 +111,7 @@
     margin-top: 28px;
 
     @include respond-to('mobile') {
+      display: block;
       flex-direction: column;
     }
 
@@ -121,6 +122,7 @@
       justify-content: space-around;
 
       @include respond-to('mobile') {
+        display: block;
         margin: 15px auto;
       }
 
@@ -173,6 +175,7 @@
       justify-content: space-around;
 
       @include respond-to('mobile') {
+        display: block;
         margin: 20px auto;
       }
     }
