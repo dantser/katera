@@ -293,6 +293,7 @@
         padding-left: 28px;
         padding-right: 28px;
         font-size: 20px;
+        padding-top: 3px;
 
         @include respond-to('tablet') {
           margin: 0 auto;

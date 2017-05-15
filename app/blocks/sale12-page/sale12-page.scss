@@ -145,11 +145,11 @@
     z-index: 999;
 
     @include respond-to('tablet') {
-      display: flex;
+      display: block;
     }
 
     @include respond-to('mobile') {
-      display: flex;
+      display: block;
     }
 
     .button {

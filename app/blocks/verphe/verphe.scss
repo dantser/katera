@@ -241,6 +241,7 @@
     width: 165px;
     height: 40px;
     margin: 47px auto 51px;
+    padding-top: 7px;
 
     @include respond-to('tablet') {
       order: 9;
