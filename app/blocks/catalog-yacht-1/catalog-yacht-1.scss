@@ -227,7 +227,7 @@
 
   .col {
     @include respond-to('mobile') {
-      padding: 10px 15px 0;
+      //padding: 10px 15px 0;
     }
   }
 
