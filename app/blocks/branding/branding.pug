@@ -3,7 +3,7 @@ include ../container/container
 include ../icon/icon
 
 mixin branding(page)
-  +b.branding
+  +b.branding&attributes(attributes)
     if (page === 'index')
       +e.top._index
         +e.image
