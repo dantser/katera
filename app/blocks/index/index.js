@@ -24,16 +24,49 @@ export default () => {
     }
   }
 
-  $(window).on('scroll', () => {
-    if ($(window).scrollTop() > 100 && !mainSliderItem.hasClass('main-slider_animated')) {
+  const yachtWidget = $('.yacht-preview-widget');
+  const topicWidget = $('.topic-preview-widget');
+
+  w.on('scroll', () => {
+    const sT = w.scrollTop();
+    const vH = w.height();
+
+    if (sT > 100 && !mainSliderItem.hasClass('main-slider_animated')) {
       mainSliderItem.addClass('main-slider_animated')
     }
-  });
-  $('.yacht-preview-widget').stick_in_parent({
-    offset_top: 95,
+
+    if (w.width() <= 991) {
+      return;
+    }
+
+    if (sT + vH >= yachtWidget.parent().offset().top && !yachtWidget.hasClass('is_stuck')) {
+      const offset = sT + vH - yachtWidget.parent().offset().top;
+      let translate = 100 - offset * .15;
+      translate = translate > 0 ? `${translate}%` : 0;
+
+      if (translate === 0) {
+        yachtWidget.trigger('sticky_kit:recalc');
+        yachtWidget.addClass('animate_btn');
+      }
+
+      yachtWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
+    }
+
+    if (sT + vH >= topicWidget.parent().offset().top && !topicWidget.hasClass('is_stuck')) {
+      const offset = sT + vH - topicWidget.parent().offset().top;
+      let translate = 100 - offset * .15;
+      translate = translate > 0 ? `${translate}%` : 0;
+
+      if (translate === 0) {
+        topicWidget.trigger('sticky_kit:recalc');
+        topicWidget.addClass('animate_btn');
+      }
+
+      topicWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
+    }
   });
 
-  $('.topic-preview-widget').stick_in_parent({
+  $('.index__widget').stick_in_parent({
     offset_top: 95,
   });
 };

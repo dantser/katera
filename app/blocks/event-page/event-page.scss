@@ -77,10 +77,6 @@
     .event-item-box {
       width: 320px;
       margin: 0;
-
-      @include respond-to('mobile') {
-        margin: 0 auto !important;
-      }
     }
 
     .event-item-box__date {
