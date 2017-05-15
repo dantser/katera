@@ -1,3 +1,8 @@
+.catalog-b {
+  @include respond-to('mobile') {
+    overflow: hidden;
+  }
+}
 .catalog-yacht {
 
   &__header {
@@ -7,11 +12,27 @@
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
+
+    @include respond-to('mobile') {
+      position: absolute;
+      left: 50%;
+      margin-left: -270px;
+    }
+  }
+
+  &__tabs {
+    @include respond-to('mobile') {
+      overflow: hidden;
+    }
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
+
+    @include respond-to('mobile') {
+      padding-top: 240px;
+    }
   }
 
   &__element-wrap {
@@ -20,6 +41,11 @@
     text-align: center;
     text-decoration: none;
     margin-bottom: 25px;
+
+    @include respond-to('mobile') {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__img {
@@ -54,6 +80,10 @@
     flex-grow: 1;
     text-align: center;
     position: relative;
+
+    @include respond-to('mobile') {
+      width: 180px;
+    }
 
     &:focus {
       outline: 0;
@@ -94,6 +124,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
   }
 
   .ui-state-active {
