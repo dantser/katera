@@ -55,7 +55,6 @@
     flex-flow: row wrap;
     width: 100%;
     height: auto;
-    overflow: hidden;
 
     @include respond-to('mobile') {
       margin-top: 2px;
