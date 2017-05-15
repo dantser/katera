@@ -2,6 +2,14 @@
 
   .main-container {
     margin-bottom: 140px;
+
+    @include respond-to('tablet') {
+      margin-bottom: 0;
+    }
+
+    @include respond-to('mobile') {
+      margin-bottom: 0;
+    }
   }
 
   .page-header {
@@ -209,5 +217,29 @@
   &__link {
     margin: 58px auto 49px;
     padding: 0 5px 0 7px;
+  }
+
+  .article-preview {
+    @include respond-to('mobile') {
+      min-height: inherit;
+    }
+  }
+
+  .col {
+    @include respond-to('mobile') {
+      //padding: 10px 15px 0;
+    }
+  }
+
+  .stroke {
+    @include respond-to('mobile') {
+      margin: 0 -15px;
+    }
+  }
+
+  .stroke:not(:first-of-type) {
+    @include respond-to('mobile') {
+      padding-top: 0;
+    }
   }
 }

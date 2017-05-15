@@ -1,8 +1,3 @@
-.catalog-b {
-  @include respond-to('mobile') {
-    overflow: hidden;
-  }
-}
 .catalog-yacht {
 
   &__header {
@@ -14,9 +9,7 @@
     margin-bottom: 20px;
 
     @include respond-to('mobile') {
-      position: absolute;
-      left: 50%;
-      margin-left: -270px;
+      width: 600px;
     }
   }
 
@@ -26,13 +19,20 @@
     }
   }
 
+  &__scroll-header {
+    @include respond-to('mobile') {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
 
-    @include respond-to('mobile') {
-      padding-top: 240px;
-    }
+    // @include respond-to('mobile') {
+    //   padding-top: 240px;
+    // }
   }
 
   &__element-wrap {
@@ -127,6 +127,7 @@
 
     @include respond-to('mobile') {
       flex-direction: column;
+      padding: 0 15px;
     }
   }
 
