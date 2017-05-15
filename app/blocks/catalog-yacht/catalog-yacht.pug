@@ -9,22 +9,23 @@ mixin catalog-yacht()
     +main-container().main-container_shadow
       +b.catalog-yacht&attributes(attributes)
         +e.tabs
-          +e('ul').header
-            +e('li').li
-              +e.count 325
-              +e('a').link(href="#motor")
-                +icon('motor').icon._motor
-                +e.link-desc Моторные
-            +e('li').li
-              +e.count 450
-              +e('a').link(href="#sailing")
-                +icon('sailing').icon._sailing
-                +e.link-desc Парусные
-            +e('li').li
-              +e.count 846
-              +e('a').link(href="#rowing")
-                +icon('rowing').icon._rowing
-                +e.link-desc Гребные
+          +e.scroll-header
+            +e('ul').header
+              +e('li').li
+                +e.count 325
+                +e('a').link(href="#motor")
+                  +icon('motor').icon._motor
+                  +e.link-desc Моторные
+              +e('li').li
+                +e.count 450
+                +e('a').link(href="#sailing")
+                  +icon('sailing').icon._sailing
+                  +e.link-desc Парусные
+              +e('li').li
+                +e.count 846
+                +e('a').link(href="#rowing")
+                  +icon('rowing').icon._rowing
+                  +e.link-desc Гребные
           +e.content
             +e.inner#motor
                +e.row
