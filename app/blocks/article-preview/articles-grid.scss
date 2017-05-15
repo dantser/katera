@@ -17,6 +17,8 @@
 }
 
 .articles-grid {
+  overflow: hidden;
+
   .col_three {
     @include respond-to(mobile) {
       width: 100%;
@@ -28,6 +30,7 @@
   padding: 0;
   margin: 0;
   float: left;
+  overflow: hidden;
 
   &:not(:first-of-type) {
     padding-top: 30px;
