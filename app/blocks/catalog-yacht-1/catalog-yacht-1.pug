@@ -39,7 +39,8 @@ mixin catalog-yacht-1()
         +models('', getData('sale-preview-item-extended'))._catalog
         +button()._rounded._kind_red.__button Показать еще
         +text().H2.__header Похожие категории
-        +yacht-slider()
+        +e.categories
+          +yacht-slider()
         +text().H2.__header Статьи по теме
 
         +articles-grid()
