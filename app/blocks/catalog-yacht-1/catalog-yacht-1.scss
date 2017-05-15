@@ -125,6 +125,7 @@
       }
 
       @include respond-to('tablet') {
+
         &:last-child {
           margin-top: 0;
         }
@@ -135,6 +136,7 @@
       }
 
       @include respond-to('mobile') {
+
         &:last-child {
           margin-top: 0;
         }
@@ -345,13 +347,13 @@
 
     @include respond-to('tablet') {
       // order: 9;
-      margin: 29px 15px 29px;
+      margin: 29px 15px;
       width: auto;
     }
 
     @include respond-to('mobile') {
       // order: 9;
-      margin: 29px 15px 29px;
+      margin: 29px 15px;
       width: auto;
     }
   }
