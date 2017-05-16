@@ -5,7 +5,7 @@
   }
 
   &__block {
-    height: 100vh;
+    height: 100%;
   }
 
   &__banner {
@@ -52,18 +52,20 @@
     background: $color-dark-blue;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 
     .container {
       padding: 35px 190px;
 
-      @include respond-to('laptop') { /**/
+      @include respond-to('laptop') {
         padding: 35px 100px;
       }
-      @include respond-to('tablet') { /**/
+
+      @include respond-to('tablet') {
         padding: 35px 15px;
       }
-      @include respond-to('mobile') { /**/
+
+      @include respond-to('mobile') {
         padding: 10px 15px;
       }
     }
@@ -222,7 +224,7 @@
   &__slider {
     padding: 115px 0 120px;
     background: $color-dark-blue;
-    height: 100vh;
+    height: 100%;
 
     @include respond-to('mobile') {
       padding: 15px 0;
@@ -249,11 +251,12 @@
   &__text-container {
     padding: 45px 210px 20px;
     background: $color-white;
-    height: 100vh;
+    height: 100%;
 
     @include respond-to('tablet') {
       padding: 15px 100px;
     }
+
     @include respond-to('mobile') {
       padding: 15px;
     }
