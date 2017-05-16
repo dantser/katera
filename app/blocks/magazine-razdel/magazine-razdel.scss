@@ -14,7 +14,6 @@
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-    border: 1px solid $color-light-gray;
     border-right: none;
     border-left: none;
 
@@ -59,7 +58,6 @@
 
     @include respond-to('mobile') {
       flex-direction: column;
-      margin-bottom: 38px;
 
       .article-preview {
         height: auto;
@@ -206,15 +204,14 @@
     height: 40px;
     z-index: 2;
     padding: 8px 6px;
-    display: inline-block;
 
     @include respond-to('tablet') {
-      margin: 26px 15px -26px;
+      margin: 0 auto -26px;
       padding-left: 7px;
     }
 
     @include respond-to('mobile') {
-      margin: 26px 15px -26px;
+      margin: -73px 15px -26px;
       padding-left: 7px;
     }
   }
