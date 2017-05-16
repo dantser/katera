@@ -56,10 +56,16 @@
 
     .container {
       padding: 35px 190px;
-    }
 
-    @include respond-to('mobile') {
-      padding: 10px;
+      @include respond-to('laptop') { /**/
+        padding: 35px 100px;
+      }
+      @include respond-to('tablet') { /**/
+        padding: 35px 15px;
+      }
+      @include respond-to('mobile') { /**/
+        padding: 10px 15px;
+      }
     }
   }
 
@@ -245,8 +251,11 @@
     background: $color-white;
     height: 100vh;
 
+    @include respond-to('tablet') {
+      padding: 15px 100px;
+    }
     @include respond-to('mobile') {
-      padding: 15px 0;
+      padding: 15px;
     }
 
     .heading {
