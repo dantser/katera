@@ -180,6 +180,10 @@
   &__tags {
     margin-bottom: 20px;
 
+    .tag-list__tag {
+      white-space: nowrap;
+    }
+
     @include respond-to('tablet') {
       padding-right: 10px;
     }
