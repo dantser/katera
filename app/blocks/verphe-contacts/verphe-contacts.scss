@@ -145,9 +145,9 @@
 
     .button {
       position: absolute;
-      width: 165px;
+      width: 152px;
       height: 40px;
-      left: 60%;
+      left: 65%;
       bottom: -55px;
 
       @include respond-to('tablet') {
