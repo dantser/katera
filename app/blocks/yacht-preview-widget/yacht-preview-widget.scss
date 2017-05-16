@@ -27,6 +27,14 @@
     position: absolute;
     z-index: 1;
 
+    @include respond-to('laptop') {
+      left: 49px;
+    }
+
+    @include respond-to('tablet') {
+      left: 49px;
+    }
+
     &_right {
       left: initial;
       right: -15px;
