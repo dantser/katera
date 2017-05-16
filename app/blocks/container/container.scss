@@ -8,7 +8,7 @@
   }
 
   @include respond-to('desktop') {
-    max-width: 1170px;
+    width: 1170px;
   }
 
   @include respond-to('laptop') {
