@@ -533,18 +533,22 @@
 
 .modal__gallery {
 
+  .modal__wrapper {
     height: 551px;
   }
 
+  .modal__header {
     padding: 0;
   }
 
+  .modal__close {
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 999;
   }
 
+  .modal__content {
     width: auto;
     height: auto;
     position: relative;
