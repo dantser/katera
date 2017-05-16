@@ -1,6 +1,6 @@
 .verphe {
-  // display: block;
-  // flex: 1 0 auto;
+  display: block;
+  flex: 1 0 auto;
 
   @include respond-to('tablet') {
     background-color: $color-white;
@@ -98,7 +98,7 @@
     margin-top: 30px;
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 100%;
+    flex: 1;
 
     @include respond-to('tablet') {
       margin-top: 7px;
@@ -120,7 +120,7 @@
 
   &__sidebar {
     display: block;
-    margin: 0 0 -6px 130px;
+    margin: 30px 0 -6px 130px;
 
     @include respond-to('tablet') {
       order: 1;
@@ -140,7 +140,6 @@
   &__list {
     display: flex;
     flex-direction: column;
-    flex: 1;
   }
 
   &__item {
@@ -191,7 +190,7 @@
     margin-bottom: 24px;
 
     &:nth-of-type(2) {
-      margin: 96px 0 22px;
+      margin: 59px 0 22px;
     }
 
     @include respond-to('tablet') {
@@ -257,15 +256,8 @@
     }
   }
 
-  .models {
-
-    .swiper-container {
-      padding-bottom: 90px;
-    }
-  }
-
   .models_sport, .models_yacht {
-    padding-bottom: 40px;
+    padding-bottom: 42px;
     border-bottom: 1px solid $color-light-gray;
 
     @include respond-to('tablet') {
@@ -332,7 +324,6 @@
     background-color: $color-white;
     border-bottom: 1px solid $color-light-gray;
     padding: 15px 0;
-    padding-bottom: 34px;
 
     @include respond-to('tablet') {
       display: block;
