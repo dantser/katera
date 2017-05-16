@@ -238,6 +238,14 @@
 
     &__size {
       margin-right: 29px;
+
+      @include respond-to('tablet') {
+        margin-right: 10px;
+      }
+
+      @include respond-to('mobile') {
+        margin-right: 10px;
+      }
     }
 
     &__size-medium {
@@ -257,7 +265,7 @@
       }
 
       @include respond-to('mobile') {
-        margin-right: 0;
+        margin-right: 50px;
         margin-bottom: 20px;
       }
     }
@@ -358,6 +366,14 @@
   .content-three {
     width: calc(100% - 293px);
     padding-left: 97px;
+
+    @include respond-to('laptop') {
+      width: 100%;
+
+      .text {
+        padding: 0 15px;
+      }
+    }
 
     @include respond-to('tablet') {
       width: 100%;
@@ -783,5 +799,15 @@
       margin-top: 0;
       flex-flow: column wrap;
     }
+  }
+
+  .magazine2__content-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .magazine-page__content-box {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
