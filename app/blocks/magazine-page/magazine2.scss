@@ -273,6 +273,10 @@
   }
   //text
 
+  .text__block {
+    display: block;
+  }
+
   .block-text {
     width: calc(100% - 263px);
 
@@ -798,5 +802,15 @@
       margin-top: 0;
       flex-flow: column wrap;
     }
+  }
+
+  .magazine2__content-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .magazine-page__content-box {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

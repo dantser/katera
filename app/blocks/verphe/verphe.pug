@@ -18,7 +18,6 @@ mixin verphe()
         +e.box-bg
           +image-bg()(src='assets/images/verphe.jpg')
         +e.content
-          +e.contacts Контакты верфи
           +e.list
             +text().__text
               p
@@ -47,11 +46,12 @@ mixin verphe()
                 | но затем увлекся строительством яхт, вплоть до того, что стал лидером в строительстве прогулочных
                 | кораблей длиной от 24 метров, 70-метровых мегаяхт и владельцем верфей в разных частях мира.
                 | Сейчас, например, он участвует в строительстве яхт-клуба в Москве. 
-          +e.sidebar
-            +e.list
-              +e.item
-                +verphe-contacts()
         +button()._rounded._kind_red.__show-more Показать еще
+        +e.contacts Контакты верфи
+        +e.sidebar
+          +e.list
+            +e.item
+              +verphe-contacts()
         +e.H2.title История верфи
         +timeline().__timeline
         +e.H2.title Модельный ряд
