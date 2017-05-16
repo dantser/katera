@@ -37,6 +37,7 @@
     height: 400px;
     width: 100%;
     display: block;
+    flex-shrink: 0;
 
     @include respond-to('large-desktop') {
       height: 540px;
@@ -294,7 +295,8 @@
     margin-top: 18px;
     display: flex;
     flex-flow: row wrap;
-    flex: 1;
+    flex-grow: 1;
+    flex-basis: 60%;
 
     &::after {
       content: '';
@@ -313,6 +315,7 @@
 
     @include respond-to('mobile') {
       margin-top: 0;
+      flex-basis: auto;
     }
   }
 

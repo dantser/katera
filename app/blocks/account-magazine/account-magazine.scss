@@ -118,8 +118,6 @@
     .button {
       width: 260px;
       height: 40px;
-      display: flex;
-      justify-content: space-around;
 
       @include respond-to('mobile') {
         display: block;
@@ -171,8 +169,6 @@
       width: 165px;
       height: 40px;
       margin: 15px 0;
-      display: flex;
-      justify-content: space-around;
 
       @include respond-to('mobile') {
         display: block;
