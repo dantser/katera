@@ -101,15 +101,13 @@
     flex-basis: 100%;
 
     @include respond-to('tablet') {
-      order: 1;
-      margin-top: 0;
-      flex-direction: column;
+      margin-top: 7px;
+      order: 2;
     }
 
     @include respond-to('mobile') {
-      order: 1;
-      margin-top: 0;
-      flex-direction: column;
+      margin-top: 7px;
+      order: 2;
     }
   }
 
@@ -143,7 +141,6 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    order: 2;
   }
 
   &__item {
@@ -339,14 +336,10 @@
 
     @include respond-to('tablet') {
       display: block;
-      padding-bottom: 15px;
-      order: 1;
     }
 
     @include respond-to('mobile') {
       display: block;
-      padding-bottom: 15px;
-      order: 1;
     }
   }
 }
