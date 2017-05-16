@@ -21,6 +21,14 @@
     right: -15px;
     position: absolute;
     z-index: 1;
+
+    @include respond-to('laptop') {
+      right: 49px;
+    }
+
+    @include respond-to('tablet') {
+      right: 49px;
+    }
   }
 
   .button {
