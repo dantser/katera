@@ -57,13 +57,15 @@
     .container {
       padding: 35px 190px;
 
-      @include respond-to('laptop') { /**/
+      @include respond-to('laptop') {
         padding: 35px 100px;
       }
-      @include respond-to('tablet') { /**/
+
+      @include respond-to('tablet') {
         padding: 35px 15px;
       }
-      @include respond-to('mobile') { /**/
+
+      @include respond-to('mobile') {
         padding: 10px 15px;
       }
     }
