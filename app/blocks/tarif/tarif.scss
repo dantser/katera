@@ -7,6 +7,10 @@
     box-shadow: 0 0 7px rgba(19, 11, 89, .14);
     padding: 23px 28px 27px 40px;
 
+    @media (max-width: 1025px) and (min-width: 991px) {
+      padding-left: 20px;
+    }
+
     @include respond-to('tablet') {
       flex-flow: column nowrap;
       padding: 21px 23px 26px;
