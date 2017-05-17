@@ -14,10 +14,6 @@
   transition: background-color .25s ease-in-out;
   border-radius: 50%;
 
-  @include respond-to('tablet') {
-    display: none !important;
-  }
-
   @include respond-to('mobile') {
     display: none !important;
   }
