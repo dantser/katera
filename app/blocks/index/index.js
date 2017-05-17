@@ -59,7 +59,7 @@ export default () => {
         if (translate === 0) {
           yachtWidget.trigger('sticky_kit:recalc');
         }
-
+b
         yachtWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
       }
 

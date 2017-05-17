@@ -37,7 +37,7 @@ export default () => {
     const hasToBeFixed = fixedHeader.length;
 
     if (hasToBeFixed && brandingTop.css('position') !== 'fixed') {
-      brandingTop.css({ position: 'fixed', transform: `translate3d(0, ${fixedHeader.height()}px, 0)` });
+      brandingTop.css({ position: 'fixed' });
       brandingBottom.height($(window).innerHeight() - fixedHeader.height() - footer.height());
     }
 
