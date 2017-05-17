@@ -167,6 +167,10 @@
     margin-right: -60px;
     margin-bottom: -40px;
 
+    @include respond-to('tablet') {
+      margin-right: 0;
+    }
+
     @include respond-to('mobile') {
       margin-right: 0;
       padding: 0 15px;
@@ -198,6 +202,10 @@
 
     @include respond-to('tablet') {
       flex-basis: calc(33.33% - 60px);
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
 
     @include respond-to('mobile') {
