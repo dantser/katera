@@ -38,6 +38,7 @@
     margin-top: -11px;
 
     @include respond-to('laptop') {
+      max-width: 640px;
     }
 
     @include respond-to('tablet') {
