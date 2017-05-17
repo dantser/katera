@@ -51,6 +51,10 @@
         &__img-wrap {
           height: 417px;
 
+          @include respond-to('large-desktop') {
+            height: 609px;
+          }
+
           @include respond-to('tablet') {
             height: 631px;
           }
@@ -64,6 +68,10 @@
         width: 165px;
         margin-bottom: 25px;
 
+        @include respond-to('large-desktop') {
+          width: 47%;
+        }
+
         @include respond-to('laptop') {
           width: 47%;
         }
@@ -74,6 +82,10 @@
 
         &__img-wrap {
           height: 134px;
+
+          @include respond-to('large-desktop') {
+            height: 230px;
+          }
 
           @include respond-to('tablet') {
             height: 268px;
