@@ -25,7 +25,7 @@ export default () => {
 
   const isIndex = $('.index').length;
 
-  if (isIndex) {
+  if (isIndex && w.width() > 991) {
     if ($(document).scrollTop() < header.height()) {
       brandingTop.css({ top: `${header.height()}px`});
     }
