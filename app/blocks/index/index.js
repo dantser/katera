@@ -41,8 +41,18 @@ export default () => {
     const sT = w.scrollTop();
     const vH = w.height();
 
+    if (sT === 0 && mainSliderItem.hasClass('main-slider_animated')) {
+      mainSliderItem.fadeOut(() => mainSliderItem.removeClass('main-slider_animated'));
+    }
+
     if (sT > 100 && !mainSliderItem.hasClass('main-slider_animated')) {
-      mainSliderItem.addClass('main-slider_animated')
+      if (mainSliderItem.css('display') === 'none') {
+        mainSliderItem
+          .show()
+          .addClass('main-slider_animated');
+      } else {
+        mainSliderItem.addClass('main-slider_animated');
+      }
     }
 
     if (w.width() <= 991) {
