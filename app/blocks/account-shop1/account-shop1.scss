@@ -301,6 +301,14 @@
     display: block;
     width: 83px;
     padding-right: 15px;
+
+    @include respond-to('tablet') {
+      margin-right: 20px;
+    }
+
+    @include respond-to('laptop') {
+      margin-right: 20px;
+    }
   }
 
   &__right {
@@ -348,6 +356,14 @@
     display: block;
     width: 83px;
     padding-right: 15px;
+
+    @include respond-to('tablet') {
+      margin-right: 20px;
+    }
+
+    @include respond-to('laptop') {
+      margin-right: 20px;
+    }
   }
 
   .main-slider {
