@@ -136,6 +136,10 @@
       height: 9px;
     }
 
+    @include respond-to('laptop') {
+      margin-right: 30px;
+    }
+
     @include respond-to('tablet') {
       transform: none;
       order: 3;

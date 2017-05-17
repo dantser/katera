@@ -76,7 +76,7 @@
     flex-grow: 1;
 
     @include respond-to('laptop') {
-      padding-left: 0;
+      max-width: 680px;
     }
 
     @include respond-to('tablet') {
