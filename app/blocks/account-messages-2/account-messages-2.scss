@@ -32,7 +32,11 @@
       margin-right: 15px;
 
       @include respond-to('laptop') {
-        margin-right: 10px;
+        margin-right: 22px;
+      }
+
+      @include respond-to('tablet') {
+        margin-right: 22px;
       }
 
       @include respond-to('mobile') {
@@ -89,6 +93,10 @@
     padding-left: 15px;
     flex-grow: 1;
     margin-top: -11px;
+
+    @include respond-to('laptop') {
+      max-width: 640px;
+    }
 
     @include respond-to('tablet') {
       padding-right: 15px;

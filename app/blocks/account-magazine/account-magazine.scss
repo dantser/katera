@@ -69,6 +69,14 @@
     margin-right: 30px;
     margin-top: 11px;
 
+    @include respond-to('laptop') {
+      min-width: 263px;
+    }
+
+    @include respond-to('tablet') {
+      min-width: 263px;
+    }
+
     @include respond-to('mobile') {
       margin: 0 auto;
       width: 50%;

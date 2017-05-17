@@ -126,11 +126,14 @@
     @include respond-to('tablet') {
       order: 1;
       margin: 0 auto;
-      width: auto;
       display: none;
 
       .verphe-contacts {
         padding-bottom: 30px;
+
+        &-wrap {
+          box-shadow: none;
+        }
       }
     }
 
@@ -142,6 +145,10 @@
 
       .verphe-contacts {
         padding-bottom: 30px;
+
+        &-wrap {
+          box-shadow: none;
+        }
       }
     }
   }

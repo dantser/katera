@@ -37,6 +37,9 @@
     flex-grow: 1;
     margin-top: -11px;
 
+    @include respond-to('laptop') {
+    }
+
     @include respond-to('tablet') {
       padding-right: 15px;
     }
@@ -90,9 +93,21 @@
       margin: 0;
     }
 
+    @include respond-to('laptop') {
+      padding-right: 5px;
+    }
+
     span {
       align-self: center;
       margin-right: 15px;
+
+      @include respond-to('laptop') {
+        margin-right: 22px;
+      }
+
+      @include respond-to('tablet') {
+        margin-right: 22px;
+      }
 
       @include respond-to('mobile') {
         display: none;
