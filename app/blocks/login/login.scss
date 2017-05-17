@@ -74,23 +74,23 @@
           font-size: 15px;
           display: flex;
           align-items: center;
-          justify-content: space-around;
+          justify-content: space-between;
 
           &::after {
             content: '';
-            width: 100%;
+            width: 43%;
             background: $color-light-gray;
             height: 1px;
-            margin-left: 12px;
+            //margin-left: 12px;
             margin-top: 4px;
           }
 
           &::before {
             content: '';
-            width: 100%;
+            width: 43%;
             background: $color-light-gray;
             height: 1px;
-            margin-right: 12px;
+            //margin-right: 12px;
             margin-top: 4px;
           }
         }
