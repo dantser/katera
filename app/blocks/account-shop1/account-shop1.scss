@@ -269,7 +269,7 @@
 
   &__left-box {
     text-align: left;
-    padding-left: 30px;
+    padding-left: 15px;
     padding-right: 30px;
 
     @include respond-to('tablet') {
@@ -298,6 +298,9 @@
 
   &__left-img {
     padding-top: 6px;
+    display: block;
+    width: 83px;
+    padding-right: 15px;
   }
 
   &__right {
@@ -313,7 +316,7 @@
 
   &__right-box {
     text-align: left;
-    padding-left: 30px;
+    padding-left: 15px;
     padding-right: 30px;
 
     @include respond-to('tablet') {
@@ -342,6 +345,9 @@
 
   &__right-img {
     padding-top: 6px;
+    display: block;
+    width: 83px;
+    padding-right: 15px;
   }
 
   .main-slider {
