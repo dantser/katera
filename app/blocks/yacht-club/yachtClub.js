@@ -15,6 +15,7 @@ export default () => {
     slidesPerView: 'auto',
     mousewheelControl: true,
     freeMode: true,
+    paginationClickable: true,
 
     breakpoints: {
       991: {
