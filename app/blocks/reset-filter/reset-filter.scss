@@ -4,6 +4,10 @@
   align-items: center;
   cursor: pointer;
 
+  @include respond-to('laptop') {
+    white-space: nowrap;
+  }
+
   &:hover {
 
     .reset-filter {
