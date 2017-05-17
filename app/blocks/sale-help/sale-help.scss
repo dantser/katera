@@ -74,8 +74,17 @@
     width: 165px;
     height: 40px;
 
+    @include respond-to('laptop') {
+      margin-right: 0;
+    }
+
+    @include respond-to('tablet') {
+      margin-right: 0;
+    }
+
     .button {
       padding-top: 7px;
+      padding-bottom: 7px;
     }
   }
 }
