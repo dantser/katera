@@ -12,10 +12,6 @@
     background: $color-red;
     z-index: -1;
 
-    @include respond-to('laptop') {
-      left: 17%;
-    }
-
     @include respond-to('tablet') {
       display: none;
     }

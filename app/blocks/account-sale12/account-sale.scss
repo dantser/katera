@@ -1,5 +1,9 @@
 .account-sale1, .account-sale2 {
 
+  // .container {
+  //   max-width: 1024px;
+  // }
+
   .page-header {
     border-top: 1px solid $color-light-gray;
 
@@ -70,6 +74,10 @@
   &__col-page {
     padding-left: 13px;
     flex-grow: 1;
+
+    @include respond-to('laptop') {
+      padding-left: 0;
+    }
 
     @include respond-to('tablet') {
       padding-right: 15px;
