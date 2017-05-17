@@ -59,8 +59,10 @@ export default () => {
         if (translate === 0) {
           yachtWidget.trigger('sticky_kit:recalc');
         }
-b
+
         yachtWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
+      } else {
+        yachtBtnAttached = false;
       }
 
       let btnTranslate = 100 - offset * .13;
@@ -87,6 +89,8 @@ b
         }
 
         topicWidget.css({ transform: `translate3d(0, ${translate}, 0)`});
+      } else {
+        topicBtnAttached = false;
       }
 
       let btnTranslate = 100 - offset * .13;

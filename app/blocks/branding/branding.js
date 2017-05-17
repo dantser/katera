@@ -23,26 +23,31 @@ export default () => {
 
   let nextImageMinWidth = null;
 
+  const isIndex = $('.index').length;
+
+  if (isIndex) {
+    if ($(document).scrollTop() < header.height()) {
+      brandingTop.css({ top: `${header.height()}px`});
+    }
+
+    brandingBottom.height(w.innerHeight() - 65 - footer.height());
+  }
+
   $(window).on('scroll', () => {
 
     if ($(window).width() <= 991) {
       return;
     }
 
-    if (!$('.index').length) {
+    if (!isIndex) {
       return;
     }
 
     const fixedHeader = $('.header_fixed');
     const hasToBeFixed = fixedHeader.length;
 
-    if (hasToBeFixed && brandingTop.css('position') !== 'fixed') {
-      brandingTop.css({ position: 'fixed' });
-      brandingBottom.height($(window).innerHeight() - fixedHeader.height() - footer.height());
-    }
-
-    if (!hasToBeFixed) {
-      brandingTop.css({ position: 'absolute', transform: 'translate3d(0, 0, 0)' });
+    if (w.scrollTop() < header.height()) {
+      brandingTop.css({ top: `${header.height() - w.scrollTop()}px`});
     }
 
     const animateImage = $(window).innerHeight() + $(document).scrollTop() - footer.offset().top - brandingBottom.height();
