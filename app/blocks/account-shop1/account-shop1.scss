@@ -223,6 +223,7 @@
 
   &__icon {
     width: 68px;
+    display: block;
     fill: #130b59;
   }
 
@@ -268,7 +269,7 @@
 
   &__left-box {
     text-align: left;
-    margin-left: 30px;
+    padding-left: 30px;
     padding-right: 30px;
 
     @include respond-to('tablet') {
@@ -302,17 +303,17 @@
   &__right {
     display: flex;
     width: 50%;
-    margin-left: 30px;
+    padding-left: 30px;
 
     @include respond-to('mobile') {
       width: 100%;
-      margin-left: 0;
+      padding-left: 0;
     }
   }
 
   &__right-box {
     text-align: left;
-    margin-left: 30px;
+    padding-left: 30px;
     padding-right: 30px;
 
     @include respond-to('tablet') {
