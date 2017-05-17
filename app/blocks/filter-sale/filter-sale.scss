@@ -247,6 +247,7 @@
     &_type_counter {
       width: 112px;
       height: 30px;
+      flex-shrink: 0;
     }
 
     &_type_range {
