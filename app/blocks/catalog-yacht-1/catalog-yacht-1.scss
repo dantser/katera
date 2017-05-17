@@ -88,10 +88,10 @@
 
   &__categories {
     width: 100%;
+    overflow: hidden;
 
     @include respond-to('tablet') {
-      width: auto;
-      margin: 0 15px 23px;
+      padding: 0 15px 23px;
     }
 
     @include respond-to('mobile') {
