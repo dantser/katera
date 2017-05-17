@@ -8,7 +8,7 @@
     padding: 23px 28px 27px 40px;
 
     @media (max-width: 1025px) and (min-width: 991px) {
-      padding-left: 20px;
+      padding-left: 15px;
     }
 
     @include respond-to('tablet') {
@@ -210,6 +210,13 @@
     right: -44px;
     width: 165px;
     height: 40px;
+
+    @include respond-to('laptop') {
+      right: 0;
+      width: 135px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     @include respond-to('tablet') {
       bottom: -223px;
