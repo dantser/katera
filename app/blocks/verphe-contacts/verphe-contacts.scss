@@ -150,11 +150,15 @@
       left: 60%;
       bottom: -55px;
 
+      @include respond-to('laptop') {
+        left: 25%;
+      }
+
       @include respond-to('tablet') {
         position: relative;
         width: 290px;
         transform: none;
-        left: initial;
+        left: 25%;
         bottom: initial;
         margin-top: 58px;
       }
