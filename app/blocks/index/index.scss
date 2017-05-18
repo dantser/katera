@@ -106,16 +106,7 @@
   }
 
   &__filter {
-    margin-top: 35px;
     width: 100%;
-
-    @include respond-to('tablet') {
-      margin-top: 0;
-    }
-
-    @include respond-to('mobile') {
-      margin-top: 0;
-    }
   }
 
   .small-article-preview {
