@@ -94,6 +94,12 @@
             width: 100%;
           }
 
+          .title {
+            @include respond-to('mobile') {
+              margin-top: 36px;
+            }
+          }
+
           .button-slide {
             width: 165px;
             height: 40px;
