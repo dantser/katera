@@ -49,11 +49,15 @@
   }
 
   &__text {
+    display: block;
     padding-left: 25px;
     position: relative;
 
     @include respond-to('tablet') {
-      padding-right: 25px;
+      //padding-right: 25px;
+      padding: 0;
+      width: calc(100% - 30px);
+      margin: 0 auto;
 
       &::after {
         content: '';
@@ -68,7 +72,10 @@
     }
 
     @include respond-to('mobile') {
-      padding-right: 25px;
+      //padding-right: 25px;
+      padding: 0;
+      width: calc(100% - 30px);
+      margin: 0 auto;
 
       &::after {
         content: '';
@@ -109,10 +116,25 @@
       align-items: center;
     }
 
+    @media (max-width: 768px) and (orientation: landscape){
+      max-width: 768px;
+      align-items: center;
+
+      .verphe__text {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+      }
+    }
+
     @include respond-to('mobile') {
       margin-top: 7px;
       order: 1;
       flex-direction: column;
+    }
+
+    @media (max-width: 320px) {
+      max-width: 320px;
+      align-items: center;
     }
   }
 
@@ -144,7 +166,7 @@
     @include respond-to('mobile') {
       order: 1;
       margin: 0 auto;
-      width: auto;
+      width: 320px;
       display: none;
 
       .verphe-contacts {
@@ -204,7 +226,7 @@
     }
 
     @include respond-to('mobile') {
-      display: inline-block;
+      display: block;
     }
   }
 
@@ -370,6 +392,7 @@
 
     @include respond-to('mobile') {
       display: block;
+      width: 100%;
       padding-bottom: 15px;
     }
   }
