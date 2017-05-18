@@ -1,7 +1,7 @@
 .reset-filter {
   all: initial;
-  display: flex;
-  align-items: center;
+  display: block;
+  vertical-align: middle;
   cursor: pointer;
 
   @include respond-to('laptop') {
@@ -27,7 +27,7 @@
   }
 
   &__circle {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 18px;
