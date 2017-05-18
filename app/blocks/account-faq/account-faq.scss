@@ -35,6 +35,14 @@
     position: relative;
     margin: 0;
     cursor: pointer;
+
+    @include respond-to('tablet') {
+      font-size: 18px;
+    }
+
+    @include respond-to('mobile') {
+      font-size: 18px;
+    }
   }
 
   &__item-showbutton {

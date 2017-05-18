@@ -9,6 +9,6 @@ export default () => {
   const text = p.innerText;
 
   if (mqMobile.matches && text.length > 200) {
-    p.innerText = `${text.slice(0, 197)}...`;
+    p.innerText = `${text.slice(0, 800)}...`;
   }
 };
