@@ -97,12 +97,16 @@
   &__content {
     margin-top: 30px;
     display: flex;
-    flex-flow: row wrap;
 
     @include respond-to('tablet') {
       margin-top: 7px;
       order: 1;
       flex-direction: column;
+    }
+
+    @media (width: 768px) {
+      max-width: 768px;
+      align-items: center;
     }
 
     @include respond-to('mobile') {
@@ -160,6 +164,7 @@
 
     @include respond-to('tablet') {
       order: 2;
+      align-self: center;
     }
 
     @include respond-to('mobile') {
@@ -360,6 +365,7 @@
     @include respond-to('tablet') {
       display: block;
       padding-bottom: 15px;
+      width: 100%;
     }
 
     @include respond-to('mobile') {
