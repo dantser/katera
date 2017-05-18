@@ -18,41 +18,16 @@ mixin events()
         +e.slider.swiper-container
           +e.swiper-pagination._shop-slider-pagination
           +e.wrapper.swiper-wrapper
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
-            +e.slide.swiper-slide
-              +e.date 06
-                +b('span') января
-              +e.slide-inner
-                +e('img').img(src='assets/images/events-slide.jpg')
-                +e.category Яхтинг в россии
-                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            - var data = getData('events-photos')
+            each item in data
+              +e.slide.swiper-slide
+                +e.date= item.day
+                  +b('span')= item.month
+                +e.slide-inner
+                  +e('img').img(src= item.path)
+                  +e.category= item.category
+                  +e.name= item.title
+
         +e.banner-bottom
           +banner('#', 'assets/images/banner.jpg')._overlay
             +e('img')(src='assets/images/banner-img.png').little
