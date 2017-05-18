@@ -37,6 +37,8 @@ export default () => {
   let yachtBtnAttached = false;
   let topicBtnAttached = false;
 
+  const iOS = window.navigator.platform.match(/i(Phone|Pod)/i);
+
   w.on('scroll', () => {
     const sT = w.scrollTop();
     const vH = w.height();
@@ -55,7 +57,7 @@ export default () => {
       }
     }
 
-    if (w.width() <= 991) {
+    if (w.width() <= 1169 || iOS) {
       return;
     }
 
