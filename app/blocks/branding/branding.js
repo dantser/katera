@@ -51,7 +51,7 @@ export default () => {
       brandingTop.css({ top: `${header.height() - w.scrollTop()}px`});
     }
 
-    if (iOS) {
+    if ($(window).width() <= 1024 || iOS) {
       return;
     }
 

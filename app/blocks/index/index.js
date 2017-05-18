@@ -57,7 +57,7 @@ export default () => {
       }
     }
 
-    if (w.width() < 991 || iOS) {
+    if (w.width() <= 1024 || iOS) {
       return;
     }
 
