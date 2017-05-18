@@ -666,11 +666,13 @@
       @include respond-to('tablet') {
         //margin-top: 0;
         //margin-bottom: 17px;
+        font-size: 22px;
       }
 
       @include respond-to('mobile') {
         margin-top: 0;
         margin-bottom: 17px;
+        font-size: 22px;
       }
     }
 

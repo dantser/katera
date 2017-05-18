@@ -12,7 +12,12 @@
     text-align: center;
 
     @include respond-to('tablet') {
+      font-size: 22px;
       display: none;
+    }
+
+    @include respond-to('mobile') {
+      font-size: 22px;
     }
   }
 
