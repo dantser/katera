@@ -18,12 +18,14 @@
       height: 40px;
       border: none;
       background-color: $color-white;
+      margin-bottom: 20px;
     }
 
     @include respond-to('mobile') {
       height: 40px;
       border: none;
       background-color: $color-white;
+      margin-bottom: 20px;
     }
 
     .submenu {
