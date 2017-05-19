@@ -233,10 +233,6 @@
     margin: 0 15px;
     padding-bottom: 120px;
 
-    span {
-      margin-left: 15px;
-    }
-
     @include respond-to('tablet') {
       background-color: $color-white;
       padding: 0;

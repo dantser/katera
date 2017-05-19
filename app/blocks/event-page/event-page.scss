@@ -6,6 +6,10 @@
   }
 
   .event-item {
+    @include respond-to('tablet') {
+      flex-direction: row;
+    }
+
     @include respond-to('mobile') {
       flex-direction: row;
     }
@@ -111,6 +115,11 @@
       margin-top: 40px;
       margin-left: 20px;
 
+      @include respond-to('tablet') {
+        width: 100%;
+        height: 246px;
+      }
+
       @include respond-to('mobile') {
         width: 100%;
       }
@@ -127,6 +136,14 @@
     font-size: 38px;
     text-align: center;
     display: block;
+
+    @include respond-to('tablet') {
+      font-size: 22px;
+    }
+
+    @include respond-to('mobile') {
+      font-size: 22px;
+    }
   }
 
   &__sidebar {
@@ -219,8 +236,9 @@
     opacity: .75;
   }
 
+
   .swiper-wrapper {
-    padding-left: 30px;
+    // padding-left: 30px;
     padding-bottom: 40px;
 
     .event-item-box__text {
