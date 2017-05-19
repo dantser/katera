@@ -1,6 +1,10 @@
 .search {
   display: block;
 
+  .submenu {
+    border: none;
+  }
+
   &__select-wrapper {
     display: flex;
     justify-content: space-between;
