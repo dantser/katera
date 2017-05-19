@@ -1,64 +1,81 @@
+/* eslint-disable */
 import $ from 'jquery';
 
-const scrollBlock = $('.scrollable');
-const scrollWrapper = $('.scrollable-wrapper');
-const scrollPreWrapper = $('.scrollable-prewrapper');
-let sT = null;
-let topBreakpoint;
-let bottomBreakpoint;
-let translate = 0;
-const fixedClass = 'fixed';
-const finishClass = 'finish';
-const vH = $(window).innerHeight();
+function ultraScroll(element) {
+  // Задаем переменные
+  var scrollPreWrapper = element,
+    scrollBlock = element.find(".scrollable__content"),
+    scrollWrapper = element.find(".scrollable__wrapper"),
+    scrollSlide = element.find(".scrollable__slide"),
+    scrollSlideVertical = element.find(".scrollable__slide_vertical"),
+    sT, topBreakpoint, bottomBreakpoint,
+    fixedClass = "fixed",
+    finishClass = "finish",
+    vH = $(window).height(),
+    translate;
 
-function ultraScrollInit() {
-  if (!scrollBlock.length || !scrollWrapper.length || !scrollPreWrapper.length) {
-    return;
+  // Расчет дефолтных значений
+  function ultraScrollInit() {
+    scrollSlideVertical.width( scrollPreWrapper.width() );
+    scrollPreWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - vH );
+    scrollWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - vH );
+
+    topBreakpoint = scrollPreWrapper.offset().top;
+    bottomBreakpoint = scrollPreWrapper.offset().top + scrollBlock.outerWidth() - vH;
   }
-  // eslint-disable-next-line no-mixed-operators
-  scrollPreWrapper.height(scrollBlock.width() + scrollBlock.height() - vH);
-  // eslint-disable-next-line no-mixed-operators
-  scrollWrapper.height(scrollBlock.width() + scrollBlock.height() - vH);
 
-  topBreakpoint = scrollPreWrapper.offset().top;
-  // eslint-disable-next-line no-mixed-operators
-  bottomBreakpoint = scrollPreWrapper.offset().top + scrollBlock.width() - vH;
-}
+  ultraScrollInit();
 
-export default () => {
-  if (!scrollBlock.length || !scrollWrapper.length || !scrollPreWrapper.length) {
-    return;
-  }
-  $(window).scroll(function () { // eslint-disable-line func-names
+  // Обновляем значения при изменении размера окна
+  $(window).resize(function(){
+    ultraScrollInit();
+  });
+
+  // Функция скролла
+  $(window).scroll(function(){
     sT = $(this).scrollTop();
 
+    // Если мы выше скроллблока
     if (sT < topBreakpoint) {
+
       scrollWrapper
         .removeClass(fixedClass)
         .removeClass(finishClass)
-        .css('top', '0');
+        .css("top", "0");
+      scrollBlock.css("transform", "translate3d(0, 0, 0)")
 
-      scrollBlock.css('transform', 'translate3d(0, 0, 0)');
+      // Если мы внутри скроллблока
     } else if (sT >= topBreakpoint && sT < bottomBreakpoint) {
-      scrollWrapper
-        .addClass(fixedClass)
-        .removeClass(finishClass)
-        .css('top', '0');
+
+      scrollWrapper.addClass(fixedClass).removeClass(finishClass).css("top", "0");
 
       translate = sT - topBreakpoint;
-      if (translate > scrollBlock.width() - scrollWrapper.width()) {
-        translate = scrollBlock.width() - scrollWrapper.width();
+      if ( translate > scrollBlock.outerWidth() - scrollWrapper.width() ) {
+        translate = scrollBlock.outerWidth() - scrollWrapper.width();
       }
 
-      scrollBlock.css('transform', `translate3d(-${translate}px, 0, 0`);
+      scrollBlock.css("transform", "translate3d(-" + translate + "px, 0, 0");
+
+      // Если мы ниже скроллблока
     } else {
+
       scrollWrapper
         .removeClass(fixedClass)
         .addClass(finishClass)
-        .css('top', scrollBlock.width() - vH);
+        .css("top", scrollBlock.outerWidth() - vH );
     }
   });
+}
 
-  $(window).on('resize', ultraScrollInit);
-  ultraScrollInit();
-};
+export default () => {
+  var blocks = $(".scrollable");
+
+  if (!blocks.length) {
+    return;
+  }
+
+  $(".scrollable").each(function(){
+    ultraScroll( $(this) );
+  });
+}
+/* eslint-enabled */

@@ -1,15 +1,17 @@
 .scrollable {
-  min-height: 100vh;
-  white-space: nowrap;
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
+  overflow: hidden;
 
-  &-prewrapper {
-    position: relative;
+  &__content {
+    min-height: 100vh;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
   }
 
-  &-wrapper {
+  &__wrapper {
     overflow-x: hidden;
     position: absolute;
     width: 100%;
@@ -30,10 +32,18 @@
     }
   }
 
-  &__horiz, &__vert {
-    display: inline-block;
+  &__slide {
+    display: inline-flex;
     white-space: nowrap;
-    min-height: 100vh;
     vertical-align: top;
+
+    &_horizontal {
+      min-width: 100vw;
+      height: 100vh;
+    }
+
+    &_vertical {
+      min-height: 100vh;
+    }
   }
 }
