@@ -1,11 +1,21 @@
 .magazine-videos {
 
+  .page-header {
+    @include respond-to('mobile') {
+      border: none;
+    }
+  }
+
   .dotted-dropdown {
     padding-left: 15px;
   }
 
   &__dotted {
     display: none;
+
+    @include respond-to('tablet') {
+      display: block;
+    }
 
     @include respond-to('mobile') {
       display: block;
