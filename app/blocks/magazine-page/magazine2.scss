@@ -201,9 +201,11 @@
       .image-bg {
         z-index: 1;
         margin: 0;
+        width: 100%;
 
         &__img {
           height: 100%;
+          width: 100%;
         }
       }
     }
@@ -295,6 +297,7 @@
   &__content {
     position: relative;
     margin-top: 18px;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     flex-grow: 1;
@@ -318,6 +321,10 @@
     @include respond-to('mobile') {
       margin-top: 0;
       flex-basis: auto;
+    }
+
+    .text {
+      width: 100%;
     }
   }
 
@@ -550,6 +557,7 @@
   }
 
   &__extra-articles {
+    width: 100%;
     position: relative;
 
     &::after {
@@ -791,6 +799,11 @@
         }
       }
     }
+
+    .image-bg__img {
+      height: 100%;
+      width: 100%;
+    }
   }
   //extra-articles
 
@@ -811,10 +824,12 @@
   .magazine2__content-box {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .magazine-page__content-box {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
 }
