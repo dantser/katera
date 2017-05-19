@@ -27,6 +27,8 @@
     margin: 0;
     text-align: center;
     margin-bottom: 11px;
+    display: block;
+    max-width: 100%;
 
     @include respond-to('tablet') {
       font-size: 22px;
