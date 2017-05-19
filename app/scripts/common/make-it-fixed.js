@@ -2,7 +2,7 @@ import $ from 'jquery';
 import { throttle } from 'throttle-debounce';
 /* eslint-disable */
 // eslint-disable-next-line max-len
-export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakpoint = null, startFixingBreakpoint = 99999, onStick) => {
+export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakpoint = null, startFixingBreakpoint = 99999, onStick = (f) => f) => {
   // eslint-disable-next-line no-confusing-arrow
   const normalizeClassName = cn => cn.slice(0, 1) === '.' ? cn.slice(1) : cn;
   const DEFAULT_STATE_CLASS = normalizeClassName(defaultStateClass);
