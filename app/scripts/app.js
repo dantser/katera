@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import 'babel-polyfill';
+import svg4everybody from 'svg4everybody';
+
 import commonInput from './common/input';
 import burger from '../blocks/burger/burger';
 import upBtn from '../blocks/up-btn/up-btn';
@@ -49,6 +51,7 @@ import scrollable from '../blocks/scrollable/scrollable';
 import accountSale3 from '../blocks/account-sale3/account-sale3';
 
 $(() => {
+  svg4everybody();
   scrollable();
   textField();
   header();
