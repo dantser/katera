@@ -118,6 +118,10 @@ export default () => {
     }
   });
 
+  if (w.width() <= 1169 || iOS) {
+    return;
+  };
+
   $('.index__widget').stick_in_parent({
     offset_top: 95,
   });
