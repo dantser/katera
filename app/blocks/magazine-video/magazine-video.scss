@@ -124,9 +124,9 @@
     display: block;
 
     &_comments {
-      height: 100%;
       display: block;
       width: 100%;
+      height: auto;
     }
 
     @include respond-to('tablet') {
