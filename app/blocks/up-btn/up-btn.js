@@ -27,7 +27,7 @@ export default () => {
 
     if (stickToFooter >= 0) {
       // eslint-disable-next-line
-      btn.css({ bottom: `${stickToFooter + 20}px` });
+      btn.css({ bottom: `${stickToFooter + 30}px` });
     } else {
       btn.css({ bottom: '20px' });
     }
