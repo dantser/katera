@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    width: 100%;
 
     @include respond-to('tablet') {
       width: 100%;
@@ -19,21 +20,24 @@
 
     @include respond-to('mobile') {
       width: 100%;
-      padding: 10px;
     }
   }
 
   &__sidebar {
     margin-top: 15px;
     width: 360px;
+    height: 100%;
     margin-left: 30px;
     margin-bottom: 30px;
+    display: block;
 
     @include respond-to('tablet') {
       width: 242px;
+      display: block;
     }
 
     @include respond-to('mobile') {
+      display: block;
       width: 100%;
       margin: 0;
       padding: 10px;
@@ -116,25 +120,34 @@
     box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
     padding: 20px 25px;
     width: 100%;
+    height: 100%;
     margin-bottom: 30px;
+    display: block;
 
     &_comments {
       height: 100%;
+      display: block;
+      width: 100%;
     }
 
     @include respond-to('tablet') {
+      display: block;
       padding: 10px;
       padding-right: 0;
+      width: 100%;
     }
 
     @include respond-to('mobile') {
+      display: block;
       padding: 10px;
+      width: 100%;
     }
   }
 
   &__text-block.text {
     margin-bottom: 33px;
     display: block;
+    width: 100%;
 
     @include respond-to('tablet') {
       padding-right: 10px;
@@ -169,6 +182,7 @@
   }
 
   &__share {
+    width: 100%;
     padding-top: 20px;
     border-top: 1px solid $color-light-gray;
 
@@ -200,8 +214,10 @@
   &__outer-content {
     display: flex;
     flex-direction: row;
+    width: 100%;
 
     @include respond-to('mobile') {
+      display: block;
       flex-direction: column;
     }
   }
