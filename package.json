@@ -58,6 +58,7 @@
     "jquery.inputmask": "^3.3.4",
     "load-google-maps-api": "0.0.3",
     "normalize.css": "^6.0.0",
+    "object-fit-polyfill": "^0.1.0",
     "postcss-autoreset": "^1.2.1",
     "postcss-center": "^1.0.0",
     "postcss-clearfix": "^1.0.0",
