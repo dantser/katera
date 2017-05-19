@@ -1,3 +1,5 @@
+/* eslint-disable */
+import $ from 'jquery';
 import makeItFixed from '../../scripts/common/make-it-fixed';
 
 export default () => {
@@ -9,6 +11,16 @@ export default () => {
     991,
   ];
   makeItFixed(...sortFilterFixedParams);
-  makeItFixed('js-filter-sale', 'filter-sale_default', 'filter-sale_fixed', 991);
+  makeItFixed('js-filter-sale', 'filter-sale_default', 'filter-sale_fixed', 991, undefined, () => {
+    const filter = $('.js-filter-sale');
+
+    filter
+      .find('.filter-sale__tab')
+      .removeClass('filter_extended');
+
+    filter
+      .find('.filter-sale__extended-wrapper')
+      .hide();
+  });
   makeItFixed('js-filter-rest', 'filter-rest_default', 'filter-rest_fixed', 991);
 };
