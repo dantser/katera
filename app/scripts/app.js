@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'babel-polyfill';
+import 'object-fit-polyfill';
 import commonInput from './common/input';
 import burger from '../blocks/burger/burger';
 import upBtn from '../blocks/up-btn/up-btn';
