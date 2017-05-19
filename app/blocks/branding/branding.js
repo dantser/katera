@@ -33,7 +33,6 @@ export default () => {
     brandingBottom.height(w.innerHeight() - 65 - footer.height());
   }
 
-  const iOS = window.navigator.platform.match(/i(Phone|Pod)/i);
   $(window).on('scroll', () => {
 
     if ($(window).width() <= 991) {
@@ -49,10 +48,6 @@ export default () => {
 
     if (w.scrollTop() < header.height()) {
       brandingTop.css({ top: `${header.height() - w.scrollTop()}px`});
-    }
-
-    if ($(window).width() <= 1169 || iOS) {
-      return;
     }
 
     const animateImage = $(window).innerHeight() + $(document).scrollTop() - footer.offset().top - brandingBottom.height();
