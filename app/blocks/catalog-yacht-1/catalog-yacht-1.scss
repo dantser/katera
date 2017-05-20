@@ -59,7 +59,7 @@
   }
 
   .filter-model {
-    padding-bottom: 10px;
+    padding-bottom: 11px;
     margin-bottom: 27px;
 
     &__price-text {
@@ -219,12 +219,12 @@
 
     @include respond-to('tablet') {
       width: auto;
-      margin: 0 15px 16px;
+      margin: 0 15px 14px;
     }
 
     @include respond-to('mobile') {
       width: auto;
-      margin: 0 15px 16px;
+      margin: 0 15px 14px;
     }
 
     .select {
@@ -270,6 +270,135 @@
 
     @include respond-to('mobile') {
       align-self: center;
+    }
+    &_desktop {
+      display: inline-block;
+
+      @include respond-to('mobile') {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      display: none;
+      font-family: $NerisLight;
+
+      @include respond-to('mobile') {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 22px;
+    margin-bottom: 32px;
+
+    @include respond-to('tablet') {
+      margin-right: 0;
+    }
+
+    @include respond-to('mobile') {
+      padding: 0 15px;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    will-change: box-shadow;
+    transition: box-shadow .25s ease-in-out;
+
+    // @include respond-to('large-desktop') {
+    //   flex-basis: calc(20% - 95px);
+    // }
+    // @include respond-to('desktop') {
+    //   flex-basis: calc(25% - 60px);
+    // }
+    //
+    // @include respond-to('laptop') {
+    //   flex-basis: calc(33.33% - 60px);
+    // }
+
+    @include respond-to('tablet') {
+      flex-basis: calc(25% - 43px);
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+
+    @include respond-to('mobile') {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: 1px;
+    }
+
+    .sale-preview-item {
+      @include respond-to('mobile') {
+        flex-direction: row;
+
+        &__img-wrap {
+          margin-right: 30px;
+          width: 165px;
+          height: 134px;
+
+          @include respond-to('mobile') {
+            width: 107px;
+            height: 93px;
+            margin-right: 3px;
+          }
+        }
+
+        &__text {
+          text-align: left;
+        }
+
+        &__param {
+          text-align: left;
+
+          @include respond-to('mobile') {
+
+            &:not(:last-child)::after {
+              content: ', ';
+            }
+          }
+        }
+      }
+
+      &__img-wrap {
+        height: 134px;
+        width: 165px;
+      }
+
+      &__params {
+        @include respond-to('mobile') {
+          display: block;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      &__param {
+        font-size: rem(12px);
+
+        @include respond-to('mobile') {
+          display: block;
+          float: left;
+          text-align: center;
+        }
+      }
+
+      &__text {
+        padding: 4px 5px 5px 9px;
+      }
+
+      &__name, &__price {
+        font-size: rem(16px);
+      }
     }
   }
 
