@@ -5,12 +5,12 @@ include ../banner/banner
 include ../filter-model/filter-model
 include ../button/button
 include ../text/text
-include ../models/models
 include ../image-bg/image-bg
 include ../yacht-slider/yacht-slider
 include ../select/select
 include ../article-preview/articles-grid
 include ../article-preview/article-preview
+include ../sale-preview-item/sale-preview-item
 
 mixin catalog-yacht-1()
   +b.catalog-yacht-1
@@ -31,12 +31,16 @@ mixin catalog-yacht-1()
           +e.found
             +e('span').filter__label Найдено
             +e('span').sort__output 125
-            +e('span') моделей
+            +e('span').found_desktop моделей
+            +e('span').found_mobile предложений
           +e.price
             +e('span').filter__label Сортировать
             - var filterData = getData('filter')
               +select(filterData.priceSort.name, filterData.priceSort.options).
-        +models('', getData('sale-preview-item-extended'))._catalog
+        +e.items
+          - for (var i = 0; i < 18; i++)
+            +e.item
+              +sale-preview-item(getData('sale-preview-items'))
         +button()._rounded._kind_red.__button Показать еще
         +text().H2.__header Похожие категории
         +e.categories
