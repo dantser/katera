@@ -18,6 +18,7 @@
 
   &__row {
     display: flex;
+    width: 100%;
     padding: 27px 0 23px;
     margin-left: 1px;
 
@@ -62,6 +63,8 @@
   }
 
   &__col-seven {
+    display: flex;
+    height: auto;
     width: 58.33333333%;
 
     @include respond-to('tablet') {
@@ -128,5 +131,9 @@
     @include respond-to('mobile') {
       display: none;
     }
+  }
+
+  .col-nav {
+    max-height: 213px;
   }
 }
