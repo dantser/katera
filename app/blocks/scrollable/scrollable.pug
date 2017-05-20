@@ -1,13 +1,13 @@
 mixin scrollable()
-  .scrollable-prewrapper&attributes(attributes)
-    .scrollable-wrapper
-      .scrollable
+  .scrollable
+    .scrollable__wrapper
+      .scrollable__content
         block
 
 mixin scrollable-h()
-  .scrollable__horiz&attributes(attributes)
+  .scrollable__slide.scrollable__slide_horizontal&attributes(attributes)
     block
 
 mixin scrollable-v()
-  .scrollable__vert&attributes(attributes)
+  .scrollable__slide.scrollable__slide_vertical&attributes(attributes)
     block
