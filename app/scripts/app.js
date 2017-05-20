@@ -50,6 +50,10 @@ import join from '../blocks/join/join';
 import scrollable from '../blocks/scrollable/scrollable';
 import accountSale3 from '../blocks/account-sale3/account-sale3';
 
+$(window).on('load', () => {
+  scrollable();
+});
+
 $(() => {
   svg4everybody();
   scrollable();

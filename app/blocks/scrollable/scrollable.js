@@ -70,7 +70,7 @@ function ultraScroll(element) {
 export default () => {
   var blocks = $(".scrollable");
 
-  if (!blocks.length) {
+  if (!blocks.length || $(window).width() <= 1024) {
     return;
   }
 

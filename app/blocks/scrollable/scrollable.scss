@@ -1,49 +1,52 @@
 .scrollable {
-  position: relative;
-  overflow: hidden;
 
-  &__content {
-    min-height: 100vh;
-    white-space: nowrap;
-    position: absolute;
-    left: 0;
-    top: 0;
+  @media (min-width: 1025px) {
+    position: relative;
     overflow: hidden;
-  }
 
-  &__wrapper {
-    overflow-x: hidden;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-
-    &.finish {
-      left: auto;
-      right: 0;
-    }
-
-    &.fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-  }
-
-  &__slide {
-    display: inline-flex;
-    white-space: nowrap;
-    vertical-align: top;
-
-    &_horizontal {
-      min-width: 100vw;
-      height: 100vh;
-    }
-
-    &_vertical {
+    &__content {
       min-height: 100vh;
+      white-space: nowrap;
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+    }
+
+    &__wrapper {
+      overflow-x: hidden;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+
+      &.finish {
+        left: auto;
+        right: 0;
+      }
+
+      &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    &__slide {
+      display: inline-flex;
+      white-space: nowrap;
+      vertical-align: top;
+
+      &_horizontal {
+        min-width: 100vw;
+        height: 100vh;
+      }
+
+      &_vertical {
+        min-height: 100vh;
+      }
     }
   }
 }
