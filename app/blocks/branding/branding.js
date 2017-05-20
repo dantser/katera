@@ -33,7 +33,7 @@ export default () => {
     brandingBottom.height(w.innerHeight() - 65 - footer.height());
   }
 
-  $(window).on('scroll', () => {
+  w.on('scroll', () => {
 
     if ($(window).width() <= 991) {
       return;
