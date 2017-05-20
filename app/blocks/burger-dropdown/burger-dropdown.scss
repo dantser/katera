@@ -329,11 +329,13 @@
 
     &_type_1 {
       width: 292px;
+      min-width: 292px;
     }
 
     &_type_2 {
       margin-left: 30px;
       width: 428px;
+      min-width: 428px;
     }
   }
 }
