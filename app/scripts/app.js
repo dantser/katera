@@ -102,13 +102,14 @@ $(() => {
   verphe();
   join();
   accountSale3();
+
+  const mapElement = document.getElementById('map');
+
+  if (!mapElement) {
+    return;
+  }
+
   map.then((googleMaps) => {
-    const mapElement = document.getElementById('map');
-
-    if (!mapElement) {
-      return;
-    }
-
     // eslint-disable-next-line no-new
     new googleMaps.Map(mapElement, {
       zoom: 8,
@@ -214,5 +215,5 @@ $(() => {
         },
       ],
     });
-  });
+  }).catch(f => f);
 });

@@ -1,11 +1,14 @@
 .magazine-longrid {
 
-  & > .branding {
-    display: none;
+  @media (min-width: 1025px) {
+
+    .swiper-wrapper, .swiper-container, .swiper-slide {
+      all: initial;
+    }
   }
 
-  .scrollable__slide {
-    padding-top: 65px;
+  & > .branding {
+    display: none;
   }
 
   &__block {
@@ -60,6 +63,10 @@
     display: flex;
     align-items: center;
     width: 100%;
+
+    @media (max-width: 1024px) {
+      align-items: center;
+    }
   }
 
   &__wrap {
@@ -131,7 +138,7 @@
     &_slide-text {
       margin-left: 100px;
 
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         margin-left: 0;
       }
 
@@ -177,7 +184,6 @@
 
     @include respond-to('mobile') {
       padding: 0;
-      padding-right: 0;
     }
   }
 
@@ -235,17 +241,49 @@
     display: none;
   }
 
+  &__slider-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
   &__slider {
     min-width: 100%;
     background: $color-dark-blue;
     height: 100vh;
 
-    @include respond-to('mobile') {
-      padding: 15px 0;
+    @media (max-width: 1024px) {
+      padding: 30px 15px;
+      height: auto;
     }
 
     &_white {
       background: $color-white;
+    }
+  }
+
+  &__swiper-pagination {
+    margin-top: 15px;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 5px;
+      height: 5px;
+      border: 2px solid #fff;
+      display: inline-block;
+      margin: 0 10px !important;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: .25s ease-in-out;
+      background: transparent;
+      box-sizing: content-box;
+
+      &-active {
+        border-width: 3px;
+      }
     }
   }
 
@@ -255,6 +293,12 @@
     height: 420px;
     margin-right: 20px;
     flex-shrink: 0;
+
+    @media (max-width: 1024px) {
+      width: 50%;
+      height: auto;
+      margin-right: 0;
+    }
   }
 
   &__slide-text {

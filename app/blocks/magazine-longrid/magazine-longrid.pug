@@ -36,22 +36,25 @@ mixin magazine-longrid()
       +quote()._white._bottom Выжать из яхты максимум — это не просто добавить палубного пространства.
       +banner('#', 'assets/images/lngrd-banner2.jpg')
     +scrollable()
-      +scrollable-h().magazine-longrid__slider
-        +e.wrapper
-          +e.slide
-            +e.text._slide-text
-              +e('span') В
-              p.big-letter ремя этапа серии регат Sochi Winter Cup 2016–2017 состоится с 6 по 8 января. По результатам двух этапов лидирует команда «Правый галс».
-              p Принимет регату Имеретинский яхтенный порт с современной олимпийской инфраструктурой, новыми отелями и спортивными комплексами. Гонки будут проходить на монотипах GP 26.
-              p Концепция регаты — доступные по ценам гонки и профессиональная организация. Регата рассчитана как на опытных яхтсменов, которым важно поддерживать спортивную форму круглый год, так и на новичков, которые только знакомятся с парусом. Вступить в борьбу участники могут на любом из этапов серии. В пакет участника регаты Sochi Winter Cup входят три дня гонок на морской акватории.
-          +e.slide
-            +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-          +e.slide
-            +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-          +e.slide
-            +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-          +e.slide
-            +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+      +scrollable-h()
+        .swiper-container.magazine-longrid__slider.js-magazine-longrid-slider1
+          .swiper-wrapper.magazine-longrid__wrapper
+            .swiper-slide.magazine-longrid__slide
+              +e.text._slide-text
+                +e('span') В
+                p.big-letter ремя этапа серии регат Sochi Winter Cup 2016–2017 состоится с 6 по 8 января. По результатам двух этапов лидирует команда «Правый галс».
+                p Принимет регату Имеретинский яхтенный порт с современной олимпийской инфраструктурой, новыми отелями и спортивными комплексами. Гонки будут проходить на монотипах GP 26.
+                p Концепция регаты — доступные по ценам гонки и профессиональная организация. Регата рассчитана как на опытных яхтсменов, которым важно поддерживать спортивную форму круглый год, так и на новичков, которые только знакомятся с парусом. Вступить в борьбу участники могут на любом из этапов серии. В пакет участника регаты Sochi Winter Cup входят три дня гонок на морской акватории.
+            .swiper-slide.magazine-longrid__slide
+              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+            .swiper-slide.magazine-longrid__slide
+              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+            .swiper-slide.magazine-longrid__slide
+              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+            .swiper-slide.magazine-longrid__slide
+              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+
+          +e.swiper-pagination.js-magazine-longrid-slider1-pagination
       +scrollable-v()
         +e.block
           +e.banner._quote
@@ -65,16 +68,17 @@ mixin magazine-longrid()
                 p Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.В первом блоке перечислены татуировки, служащие для обозначения морских достижений.
                 p Мы все их видели. Они украшают руки, ноги, грудь как моряков, так и людей, ни разу не выходивших в море. Если вы знаете больше двух человек с татуировками, скорее всего, хотя бы у одного из них есть наколка на морскую тематику. Благотворительная организация Sail Training International составила список своих любимых морских татуировок и их значений. Список разбит на четыре блока.В первом блоке перечислены татуировки, служащие для обозначения морских достижений. Экстравагантные игрушки — другой очевидный индикатор статуса в море. Теперь, когда вертолеты и бассейны на борту принимаются как нечто само собой разумеющееся, бой перешел на новые территории. Последний писк моды — судна поддержки. Зачем загружать свою 150-метровую яхту игрушками, когда можно сложить их на судно поддержки размером поменьше и получать их в свое распоряжение по первому требованию?
     +scrollable()
-      +scrollable-h().magazine-longrid__slider.magazine-longrid__slider_white
-        +e.wrapper
-          +e.slide
-            +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-          +e.slide
-            +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-          +e.slide
-            +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-          +e.slide
-            +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+      +scrollable-h()
+        .swiper-container.swiper-container.magazine-longrid__slider.swiper-container.magazine-longrid__slider_white.js-magazine-longrid-slider2
+          .swiper-wrapper.magazine-longrid__wrapper
+            .swiper-slide.magazine-longrid__slide
+              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+            .swiper-slide.magazine-longrid__slide
+              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+            .swiper-slide.magazine-longrid__slide
+              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+            .swiper-slide.magazine-longrid__slide
+              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
 
       +scrollable-v()
         +e.block
