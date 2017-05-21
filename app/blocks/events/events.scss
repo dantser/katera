@@ -11,14 +11,23 @@
     width: 100%;
     padding-left: 55px;
     padding-right: 55px;
-    border-bottom: 1px solid #393557;
-    background-color: #130b59;
+
+    @media (max-width: 1024px) {
+      height: 40px;
+      border: none;
+      background-color: $color-white;
+      margin-bottom: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
     @include respond-to('tablet') {
       height: 40px;
       border: none;
       background-color: $color-white;
       margin-bottom: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     @include respond-to('mobile') {
@@ -26,11 +35,17 @@
       border: none;
       background-color: $color-white;
       margin-bottom: 20px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .submenu {
-      background-color: #130b59;
+      background-color: #16123a;
       border: none;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
 
       @include respond-to('tablet') {
         display: none;
@@ -46,7 +61,7 @@
     }
 
     .select {
-      @media (min-width: 992px) {
+      @media (min-width: 1025px) {
         display: none;
       }
     }
@@ -75,7 +90,15 @@
       height: 90px;
     }
 
-    @include respond-to('laptop') {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
       display: none;
     }
   }
@@ -98,9 +121,12 @@
     }
   }
 
+  &__scrollable-wrapper {
+    background-color: #16123a;
+  }
+
   &__slider {
-    background-color: $color-dark-blue;
-    padding: 95px 30px 130px;
+    //padding: 95px 30px 130px;
 
     @include respond-to('tablet') {
       background-color: $color-white;
@@ -131,9 +157,15 @@
   }
 
   &__slide {
-    width: 420px;
-    padding: 20px 0 0 68px;
+    width: 460px;
+    padding: 20px 0 0 55px;
     position: relative;
+    white-space: initial;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__date {
@@ -152,5 +184,119 @@
       font-family: $NerisLight;
       display: block;
     }
+  }
+
+  &__event-item-wrapper {
+    display: none;
+    padding: 0 15px;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+
+    @include respond-to('tablet') {
+      display: block;
+    }
+
+    @include respond-to('mobile') {
+      display: block;
+    }
+
+    .button {
+      display: block;
+      width: 290px;
+      height: 40px;
+      margin: 25px auto 40px;
+    }
+
+    .event-item {
+      margin: 10px 0 0;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    .event-item-box {
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+
+      .event-item-box__link {
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .events__submenu-wrapper {
+    background-color: #16123a;
+    border-bottom: 1px solid #393557;
+
+    @media (max-width: 1024px) {
+      background-color: $color-white;
+    }
+
+    @include respond-to('tablet') {
+      background-color: $color-white;
+    }
+
+    @include respond-to('mobile') {
+      background-color: $color-white;
+    }
+  }
+
+  .events__wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 120px;
+    margin-top: 95px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  &__scrollable-wrapper {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
+    .events__banner-bottom {
+      padding: 0;
+      width: 1140px;
+      background: #fff;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+
+      @include respond-to('large-desktop') {
+        width: 1530px;
+      }
+    }
+  }
+
+  .scrollable {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .scrollable__slide_horizontal {
+    flex-direction: column;
+  }
+
+  .scrollable__slide_vertical {
+    align-items: flex-end;
   }
 }

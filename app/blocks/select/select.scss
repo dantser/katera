@@ -154,6 +154,10 @@
     height: auto;
     z-index: 999;
     width: 100%;
+
+    .list__item {
+      list-style-type: none;
+    }
   }
 
   &__item {

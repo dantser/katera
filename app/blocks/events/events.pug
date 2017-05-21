@@ -5,31 +5,49 @@ include ../select/select
 include ../dotted-dropdown/dotted-dropdown
 include ../mobile-slide-popup/mobile-slide-popup
 include ../page-header/page-header
+include ../scrollable/scrollable
+include ../event-item/event-item
+include ../button/button
 
 mixin events()
   +b.events&attributes(attributes)
     +container()
       +page-header('Мероприятия', ['Главная', 'Мероприятия'])
       +main-container().events__main-container
+    +e('div').submenu-wrapper
+      +container()
         +e('div').select-wrapper
-          +submenu(getData('submenu'))
+          +submenu(getData('submenu-events'))
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
           +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
-        +e.slider.swiper-container
-          +e.swiper-pagination._shop-slider-pagination
-          +e.wrapper.swiper-wrapper
-            - var data = getData('events-photos')
-            each item in data
-              +e.slide.swiper-slide
-                +e.date= item.day
-                  +b('span')= item.month
-                +e.slide-inner
-                  +e('img').img(src= item.path)
-                  +e.category= item.category
-                  +e.name= item.title
+        +e('div').event-item-wrapper
+          +event-item(getData('event-item1'))
+          +event-item(getData('event-item1'))
+          +event-item(getData('event-item1'))
+          +event-item(getData('event-item1'))
+          +button()._rounded._kind_red.__show-more Показать еще
+    +e('div').scrollable-wrapper
+      +container()
+        +scrollable()
+          +scrollable-h().events__slider
+            +e.wrapper
+              +e.slide
+                +event-item(getData('event-item1'))
+              +e.slide
+                +event-item(getData('event-item1'))
+              +e.slide
+                +event-item(getData('event-item1'))
+              +e.slide
+                +event-item(getData('event-item1'))
+              +e.slide
+                +event-item(getData('event-item1'))
+              +e.slide
+                +event-item(getData('event-item1'))
+            +e.banner-bottom
+              +banner('#', 'assets/images/banner.jpg')._overlay
+                +e('img')(src='assets/images/banner-img.png').little
 
-        +e.banner-bottom
-          +banner('#', 'assets/images/banner.jpg')._overlay
-            +e('img')(src='assets/images/banner-img.png').little
-    +mobile-slide-popup()#magazine-mobile-filter
-      | test
+    +container()
+      +e.banner-bottom
+        +banner('#', 'assets/images/banner.jpg')._overlay
+          +e('img')(src='assets/images/banner-img.png').little
