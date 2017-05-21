@@ -1,0 +1,12 @@
+{
+  "blocks": [
+    {
+      "link": "#",
+      "image": "assets/images/event/event1.jpg",
+      "title": "Яхтинг в России",
+      "text": "PROyachting проведет третий этап конференции любителей яхт",
+      "number": "17",
+      "month": "апреля"
+    }
+  ]
+}
