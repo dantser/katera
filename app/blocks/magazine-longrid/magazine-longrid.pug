@@ -37,22 +37,23 @@ mixin magazine-longrid()
       +banner('#', 'assets/images/lngrd-banner2.jpg')
     +scrollable()
       +scrollable-h()
-        .swiper-container.magazine-longrid__slider.js-magazine-longrid-slider1
-          .swiper-wrapper.magazine-longrid__wrapper
-            .swiper-slide.magazine-longrid__slide
-              +e.text._slide-text
-                +e('span') В
-                p.big-letter ремя этапа серии регат Sochi Winter Cup 2016–2017 состоится с 6 по 8 января. По результатам двух этапов лидирует команда «Правый галс».
-                p Принимет регату Имеретинский яхтенный порт с современной олимпийской инфраструктурой, новыми отелями и спортивными комплексами. Гонки будут проходить на монотипах GP 26.
-                p Концепция регаты — доступные по ценам гонки и профессиональная организация. Регата рассчитана как на опытных яхтсменов, которым важно поддерживать спортивную форму круглый год, так и на новичков, которые только знакомятся с парусом. Вступить в борьбу участники могут на любом из этапов серии. В пакет участника регаты Sochi Winter Cup входят три дня гонок на морской акватории.
-            .swiper-slide.magazine-longrid__slide
-              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-            .swiper-slide.magazine-longrid__slide
-              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-            .swiper-slide.magazine-longrid__slide
-              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
-            .swiper-slide.magazine-longrid__slide
-              +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+        .magazine-longrid__slider
+          +e.text._slide-text
+            +e('span') В
+            p.big-letter ремя этапа серии регат Sochi Winter Cup 2016–2017 состоится с 6 по 8 января. По результатам двух этапов лидирует команда «Правый галс».
+            p Принимет регату Имеретинский яхтенный порт с современной олимпийской инфраструктурой, новыми отелями и спортивными комплексами. Гонки будут проходить на монотипах GP 26.
+            p Концепция регаты — доступные по ценам гонки и профессиональная организация. Регата рассчитана как на опытных яхтсменов, которым важно поддерживать спортивную форму круглый год, так и на новичков, которые только знакомятся с парусом. Вступить в борьбу участники могут на любом из этапов серии. В пакет участника регаты Sochi Winter Cup входят три дня гонок на морской акватории.
+
+          .swiper-container.js-magazine-longrid-slider1
+            .swiper-wrapper.magazine-longrid__wrapper
+              .swiper-slide.magazine-longrid__slide
+                +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+              .swiper-slide.magazine-longrid__slide
+                +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+              .swiper-slide.magazine-longrid__slide
+                +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+              .swiper-slide.magazine-longrid__slide
+                +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
 
           +e.swiper-pagination.js-magazine-longrid-slider1-pagination
       +scrollable-v()
@@ -79,6 +80,8 @@ mixin magazine-longrid()
               +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
             .swiper-slide.magazine-longrid__slide
               +e('img').slider-img(src="assets/images/lngrd/lngrd-img.jpg")
+
+          +e.swiper-pagination.js-magazine-longrid-slider2-pagination
 
       +scrollable-v()
         +e.block

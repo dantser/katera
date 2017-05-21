@@ -18,6 +18,7 @@ export default function magazineLongrid() {
       },
     },
   });
+
   // eslint-disable-next-line no-new
   new Swiper('.js-magazine-longrid-slider2', {
     slidesPerView: 2,

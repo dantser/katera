@@ -175,6 +175,12 @@
     font-family: $NerisLight;
     border-top: 1px solid #393557;
     color: $color-white;
+
+    @include respond-to('mobile') {
+      p:first-child {
+        margin-top: 0;
+      }
+    }
   }
 
   &__quote {
@@ -263,15 +269,31 @@
     @media (min-width: 1025px) {
       padding-top: 65px !important;
       box-sizing: border-box !important;
-    }
+      display: flex;
+      align-items: center;
+      white-space: initial;
 
+      & > .magazine-longrid__text {
+        width: 457px;
+        height: 420px;
+        margin-right: 20px;
+      }
+    }
     @media (max-width: 1024px) {
       padding: 30px 15px !important;
       height: auto !important;
+
+      & > .magazine-longrid__text {
+        margin-bottom: 30px;
+      }
     }
 
     &_white {
       background: $color-white !important;
+
+      .swiper-pagination-bullet {
+        border-color: $color-dark-blue !important;
+      }
     }
   }
 
@@ -283,16 +305,17 @@
     text-align: center;
 
     .swiper-pagination-bullet {
-      width: 5px;
-      height: 5px;
-      border: 2px solid #fff;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #fff;
       display: inline-block;
       margin: 0 10px !important;
       border-radius: 100%;
       cursor: pointer;
       transition: .25s ease-in-out;
       background: transparent;
-      box-sizing: content-box;
+      box-sizing: border-box;
+      opacity: 1;
 
       &-active {
         border-width: 3px;
