@@ -19,7 +19,7 @@
                 <a class="banner" href="#">
                     <div class="banner__image banner__image_overlay">
                         <div class="image-bg">
-                            <img class="image-bg__img" alt="" src="assets/images/banner.jpg" data-object-fit="cover" role="presentation" />
+                            <img class="image-bg__img" alt="" src="assets/images/banner.jpg" role="presentation" />
                         </div>
                     </div>
                     <div class="banner__content">
@@ -161,7 +161,7 @@
                         <a class="banner" href="">
                             <div class="banner__image">
                                 <div class="image-bg">
-                                    <img class="image-bg__img" alt="" src="assets/images/banner-jack.jpg" data-object-fit="cover" role="presentation" />
+                                    <img class="image-bg__img" alt="" src="assets/images/banner-jack.jpg" role="presentation" />
                                 </div>
                             </div>
                         </a>
@@ -170,7 +170,7 @@
                         <a class="banner" href="">
                             <div class="banner__image">
                                 <div class="image-bg">
-                                    <img class="image-bg__img" alt="" src="assets/images/banner-bmw.jpg" data-object-fit="cover" role="presentation" />
+                                    <img class="image-bg__img" alt="" src="assets/images/banner-bmw.jpg" role="presentation" />
                                 </div>
                             </div>
                         </a>
@@ -192,7 +192,10 @@
                 </ul>
                 <h2 class="page-header__title">Мероприятия</h2>
             </div>
-            <main class="main-container events__main-container">
+            <main class="main-container events__main-container"></main>
+        </div>
+        <div class="events__submenu-wrapper">
+            <div class="container">
                 <div class="events__select-wrapper">
                     <ul class="submenu">
                         <li class="submenu__item">
@@ -237,7 +240,7 @@
                         </li>
                         <li class="submenu__item">
                             <a class="submenu__link" href="#">
-                                <span class="division submenu__title">Видео-обзоры</span>
+                                <span class="division submenu__title">Юмор</span>
                             </a>
                         </li>
                     </ul>
@@ -268,91 +271,234 @@
                         </div>
                     </div>
                 </div>
-                <div class="events__slider swiper-container">
-                    <div class="events__swiper-pagination events__swiper-pagination_shop-slider-pagination"></div>
-                    <div class="events__wrapper swiper-wrapper">
-                        <div class="events__slide swiper-slide">
-                            <div class="events__date">06
-                                <span>января</span>
+                <div class="events__event-item-wrapper">
+                    <div class="event-item">
+                        <div class="event-item-box swiper-slide">
+                            <a class="event-item-box__link" href="#">
+                                <span class="image-bg">
+                                    <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                </span>
+                            </a>
+                            <div class="event-item-box__description">
+                                <p class="event-item-box__title">Яхтинг в России</p>
+                                <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
                             </div>
-                            <div class="events__slide-inner">
-                                <img class="events__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
-                                <div class="events__category">Яхтинг в России</div>
-                                <div class="events__name">PROyachting проведет третий этап. Конференция любителей яхт</div>
-                            </div>
-                        </div>
-                        <div class="events__slide swiper-slide">
-                            <div class="events__date">18
-                                <span>января</span>
-                            </div>
-                            <div class="events__slide-inner">
-                                <img class="events__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
-                                <div class="events__category">Море</div>
-                                <div class="events__name">PROyachting проведет третий этап. Конференция любителей яхт</div>
+                            <div class="event-item-box__date">
+                                <p class="event-item-box__number">17</p>
+                                <span class="event-item-box__month">апреля</span>
                             </div>
                         </div>
-                        <div class="events__slide swiper-slide">
-                            <div class="events__date">20
-                                <span>января</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-item-box swiper-slide">
+                            <a class="event-item-box__link" href="#">
+                                <span class="image-bg">
+                                    <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                </span>
+                            </a>
+                            <div class="event-item-box__description">
+                                <p class="event-item-box__title">Яхтинг в России</p>
+                                <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
                             </div>
-                            <div class="events__slide-inner">
-                                <img class="events__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
-                                <div class="events__category">Путешествия</div>
-                                <div class="events__name">PROyachting проведет третий этап. Конференция любителей яхт</div>
-                            </div>
-                        </div>
-                        <div class="events__slide swiper-slide">
-                            <div class="events__date">03
-                                <span>января</span>
-                            </div>
-                            <div class="events__slide-inner">
-                                <img class="events__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
-                                <div class="events__category">Активный отдых</div>
-                                <div class="events__name">PROyachting проведет третий этап. Конференция любителей яхт</div>
+                            <div class="event-item-box__date">
+                                <p class="event-item-box__number">17</p>
+                                <span class="event-item-box__month">апреля</span>
                             </div>
                         </div>
-                        <div class="events__slide swiper-slide">
-                            <div class="events__date">16
-                                <span>января</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-item-box swiper-slide">
+                            <a class="event-item-box__link" href="#">
+                                <span class="image-bg">
+                                    <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                </span>
+                            </a>
+                            <div class="event-item-box__description">
+                                <p class="event-item-box__title">Яхтинг в России</p>
+                                <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
                             </div>
-                            <div class="events__slide-inner">
-                                <img class="events__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
-                                <div class="events__category">Рыбалка</div>
-                                <div class="events__name">PROyachting проведет третий этап. Конференция любителей яхт</div>
+                            <div class="event-item-box__date">
+                                <p class="event-item-box__number">17</p>
+                                <span class="event-item-box__month">апреля</span>
                             </div>
                         </div>
-                        <div class="events__slide swiper-slide">
-                            <div class="events__date">17
-                                <span>января</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-item-box swiper-slide">
+                            <a class="event-item-box__link" href="#">
+                                <span class="image-bg">
+                                    <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                </span>
+                            </a>
+                            <div class="event-item-box__description">
+                                <p class="event-item-box__title">Яхтинг в России</p>
+                                <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
                             </div>
-                            <div class="events__slide-inner">
-                                <img class="events__img" src="assets/images/events-slide.jpg" alt="" role="presentation" />
-                                <div class="events__category">Яхтинг в России</div>
-                                <div class="events__name">PROyachting проведет третий этап. Конференция любителей яхт</div>
+                            <div class="event-item-box__date">
+                                <p class="event-item-box__number">17</p>
+                                <span class="event-item-box__month">апреля</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button button_rounded button_kind_red events__show-more">Показать еще</button>
+                </div>
+            </div>
+        </div>
+        <div class="events__scrollable-wrapper">
+            <div class="scrollable">
+                <div class="scrollable__wrapper">
+                    <div class="scrollable__content">
+                        <div class="scrollable__slide scrollable__slide_horizontal">
+                            <div class="swiper-container events__slider">
+                                <div class="events__wrapper swiper-wrapper">
+                                    <div class="events__slide swiper-slide">
+                                        <div class="event-item">
+                                            <div class="event-item-box swiper-slide">
+                                                <a class="event-item-box__link" href="#">
+                                                    <span class="image-bg">
+                                                        <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                                    </span>
+                                                </a>
+                                                <div class="event-item-box__description">
+                                                    <p class="event-item-box__title">Яхтинг в России</p>
+                                                    <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
+                                                </div>
+                                                <div class="event-item-box__date">
+                                                    <p class="event-item-box__number">17</p>
+                                                    <span class="event-item-box__month">апреля</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="events__slide swiper-slide">
+                                        <div class="event-item">
+                                            <div class="event-item-box swiper-slide">
+                                                <a class="event-item-box__link" href="#">
+                                                    <span class="image-bg">
+                                                        <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                                    </span>
+                                                </a>
+                                                <div class="event-item-box__description">
+                                                    <p class="event-item-box__title">Яхтинг в России</p>
+                                                    <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
+                                                </div>
+                                                <div class="event-item-box__date">
+                                                    <p class="event-item-box__number">17</p>
+                                                    <span class="event-item-box__month">апреля</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="events__slide swiper-slide">
+                                        <div class="event-item">
+                                            <div class="event-item-box swiper-slide">
+                                                <a class="event-item-box__link" href="#">
+                                                    <span class="image-bg">
+                                                        <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                                    </span>
+                                                </a>
+                                                <div class="event-item-box__description">
+                                                    <p class="event-item-box__title">Яхтинг в России</p>
+                                                    <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
+                                                </div>
+                                                <div class="event-item-box__date">
+                                                    <p class="event-item-box__number">17</p>
+                                                    <span class="event-item-box__month">апреля</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="events__slide swiper-slide">
+                                        <div class="event-item">
+                                            <div class="event-item-box swiper-slide">
+                                                <a class="event-item-box__link" href="#">
+                                                    <span class="image-bg">
+                                                        <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                                    </span>
+                                                </a>
+                                                <div class="event-item-box__description">
+                                                    <p class="event-item-box__title">Яхтинг в России</p>
+                                                    <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
+                                                </div>
+                                                <div class="event-item-box__date">
+                                                    <p class="event-item-box__number">17</p>
+                                                    <span class="event-item-box__month">апреля</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="events__slide swiper-slide">
+                                        <div class="event-item">
+                                            <div class="event-item-box swiper-slide">
+                                                <a class="event-item-box__link" href="#">
+                                                    <span class="image-bg">
+                                                        <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                                    </span>
+                                                </a>
+                                                <div class="event-item-box__description">
+                                                    <p class="event-item-box__title">Яхтинг в России</p>
+                                                    <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
+                                                </div>
+                                                <div class="event-item-box__date">
+                                                    <p class="event-item-box__number">17</p>
+                                                    <span class="event-item-box__month">апреля</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="events__slide swiper-slide">
+                                        <div class="event-item">
+                                            <div class="event-item-box swiper-slide">
+                                                <a class="event-item-box__link" href="#">
+                                                    <span class="image-bg">
+                                                        <img class="image-bg__img" alt="" src="assets/images/event/event1.jpg" role="presentation" />
+                                                    </span>
+                                                </a>
+                                                <div class="event-item-box__description">
+                                                    <p class="event-item-box__title">Яхтинг в России</p>
+                                                    <h3 class="event-item-box__text">PROyachting проведет третий этап конференции любителей яхт</h3>
+                                                </div>
+                                                <div class="event-item-box__date">
+                                                    <p class="event-item-box__number">17</p>
+                                                    <span class="event-item-box__month">апреля</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="events__banner-bottom">
+                                    <a class="banner" href="#">
+                                        <div class="banner__image banner__image_overlay">
+                                            <div class="image-bg">
+                                                <img class="image-bg__img" alt="" src="assets/images/banner.jpg" role="presentation" />
+                                            </div>
+                                        </div>
+                                        <div class="banner__content">
+                                            <img class="banner__little" src="assets/images/banner-img.png" alt="" role="presentation" />
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="events__banner-bottom">
-                    <a class="banner" href="#">
-                        <div class="banner__image banner__image_overlay">
-                            <div class="image-bg">
-                                <img class="image-bg__img" alt="" src="assets/images/banner.jpg" data-object-fit="cover" role="presentation" />
-                            </div>
-                        </div>
-                        <div class="banner__content">
-                            <img class="banner__little" src="assets/images/banner-img.png" alt="" role="presentation" />
-                        </div>
-                    </a>
-                </div>
-            </main>
-        </div>
-        <div class="mobile-slide-popup" id="magazine-mobile-filter">
-            <div class="mobile-slide-popup__back">
-                <svg class="mobile-slide-popup__icon"><use xlink:href="assets/images/icon.svg#icon_subscribe"></use></svg>
-                <span class="mobile-slide-popup__text">Назад</span>
             </div>
-            <div class="mobile-slide-popup__content">test</div>
+        </div>
+        <div class="container">
+            <div class="events__banner-bottom">
+                <a class="banner" href="#">
+                    <div class="banner__image banner__image_overlay">
+                        <div class="image-bg">
+                            <img class="image-bg__img" alt="" src="assets/images/banner.jpg" role="presentation" />
+                        </div>
+                    </div>
+                    <div class="banner__content">
+                        <img class="banner__little" src="assets/images/banner-img.png" alt="" role="presentation" />
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <div class="up-btn">
@@ -364,7 +510,7 @@
         <div class="subscribe">
             <div class="subscribe__image">
                 <div class="image-bg">
-                    <img class="image-bg__img image-bg__image" alt="" src="assets/images/subscribe.jpg" data-object-fit="cover" role="presentation" />
+                    <img class="image-bg__img image-bg__image" alt="" src="assets/images/subscribe.jpg" role="presentation" />
                 </div>
             </div>
             <div class="container">
