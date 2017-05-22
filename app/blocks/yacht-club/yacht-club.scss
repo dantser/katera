@@ -9,6 +9,12 @@
     height: auto;
   }
 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
   .page-header {
     background-color: $color-white;
     font-size: 22px;
@@ -356,7 +362,8 @@
 
     .yacht-club__box-bg {
       margin-bottom: 30px;
-      height: 500px;
+      /*height: 500px;*/
+      height: 100vh;
 
       @include respond-to('large-desktop') {
         height: 671px;
@@ -371,7 +378,11 @@
       }
     }
 
-    &_default {
+    &_last {
+      width: 100%;
+    }
+
+    &_default, &_last {
       @media (max-width: 1024px) {
         display: none;
       }
@@ -386,12 +397,6 @@
         padding-bottom: 13px;
       }
     }
-  }
-
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
   }
 
   &__pagination {
