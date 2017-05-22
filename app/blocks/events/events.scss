@@ -230,9 +230,17 @@
     }
   }
 
-  .events__submenu-wrapper {
+  &__submenu-wrapper {
     background-color: #16123a;
     border-bottom: 1px solid #393557;
+
+    &_fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 999;
+    }
 
     @media (max-width: 1024px) {
       background-color: $color-white;
