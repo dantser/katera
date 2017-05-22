@@ -17,7 +17,7 @@ mixin magazine-longrid()
     .branding //- for up-btn block
     +container()
       +page-header('PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках', ['Главная', 'Журнал', 'Видео-обзоры', 'PROyachting проведет третий этап Sochi Winter Cup на новогодних праздниках'])
-    +e.banner
+    +e.banner._1st
       +banner(notLink, 'assets/images/lngrd-banner.jpg')
     +e.block
       +e.wrap
@@ -98,7 +98,7 @@ mixin magazine-longrid()
                 +share('vk', 'go', 'fb', 'odnokl', 'tw', small).__share
               +e.inner-content._comments
                 +comments(getData('comments'))
-              +extra-articles('Другие статьи')
+              +extra-articles('Другие статьи', 'Все статьи')
               +e.banner-bottom
                 +banner('#', 'assets/images/banner.jpg')._overlay
                   +e('img')(src='assets/images/banner-img.png').little

@@ -7,6 +7,17 @@
     }
   }
 
+  .quote {
+    @include respond-to('mobile') {
+      left: 15px;
+      max-width: 70vw;
+
+      &__text {
+        font-size: 22px;
+      }
+    }
+  }
+
   & > .branding {
     display: none;
   }
@@ -25,11 +36,14 @@
 
   &__banner {
     width: 100%;
-    height: 550px;
+    height: calc(100vh - 65px);
     position: relative;
 
-    @include respond-to('large-desktop') {
-      height: 740px;
+    @media (max-width: 1024px) {
+
+      &:not(.magazine-longrid__banner_quote) {
+        height: 50vh;
+      }
     }
 
     a {
@@ -42,7 +56,6 @@
 
     &_quote {
       white-space: initial;
-      height: 660px;
 
       @include respond-to('large-desktop') {
         height: 885px;
@@ -179,6 +192,7 @@
     @include respond-to('mobile') {
       p:first-child {
         margin-top: 0;
+        font-size: 18px;
       }
     }
   }
@@ -243,13 +257,47 @@
     height: 90px;
     margin-top: 30px;
 
-    @include respond-to('laptop') {
+    @include respond-to('mobile') {
       display: none;
     }
   }
 
-  & .extra-articles__button {
-    display: none;
+  .extra-articles {
+
+    @include respond-to('mobile') {
+
+      &__item {
+        flex-basis: initial;
+      }
+
+      .article-preview {
+
+        &__tags {
+          position: static;
+        }
+
+        &__picture {
+          all: initial;
+
+          &::before {
+            content: unset;
+          }
+        }
+
+        .image-bg {
+          display: none;
+        }
+      }
+    }
+
+    &__button {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media (min-width: 769px) {
+        display: none;
+      }
+    }
   }
 
   &__slider-img {
@@ -371,6 +419,10 @@
       margin-bottom: 40px;
       line-height: 30px;
       margin-top: 0;
+
+      @include respond-to('mobile') {
+        font-size: 18px;
+      }
     }
 
     p {

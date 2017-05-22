@@ -1,7 +1,7 @@
 include ../article-preview/article-preview
 include ../button/button
 
-mixin extra-articles(title)
+mixin extra-articles(title, btnText)
   +b.extra-articles&attributes(attributes)
     +e.H2.header= title
     +e.article
@@ -10,4 +10,5 @@ mixin extra-articles(title)
         +e.item
           +article-preview(data[i])._title-under-img
     +e.button
-      +button()._rounded._kind_red Показать еще
+       - var btnText = btnText || 'Показать еще'
+      +button()._rounded._kind_red= btnText
