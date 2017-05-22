@@ -28,20 +28,21 @@ mixin events()
           +button()._rounded._kind_red.__show-more Показать еще
     +e('div').scrollable-wrapper
       +scrollable()
-        +scrollable-h().events__slider
-          +e.wrapper
-            +e.slide
-              +event-item(getData('event-item1'))
-            +e.slide
-              +event-item(getData('event-item1'))
-            +e.slide
-              +event-item(getData('event-item1'))
-            +e.slide
-              +event-item(getData('event-item1'))
-            +e.slide
-              +event-item(getData('event-item1'))
-            +e.slide
-              +event-item(getData('event-item1'))
+        +scrollable-h()
+          .swiper-container.events__slider
+            +e.wrapper.swiper-wrapper
+              +e.slide.swiper-slide
+                +event-item(getData('event-item1'))
+              +e.slide.swiper-slide
+                +event-item(getData('event-item1'))
+              +e.slide.swiper-slide
+                +event-item(getData('event-item1'))
+              +e.slide.swiper-slide
+                +event-item(getData('event-item1'))
+              +e.slide.swiper-slide
+                +event-item(getData('event-item1'))
+              +e.slide.swiper-slide
+                +event-item(getData('event-item1'))
 
           +container()
             +e.banner-bottom
