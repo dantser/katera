@@ -61,6 +61,10 @@
     }
   }
 
+  &__content {
+    padding-bottom: 1px;
+  }
+
   &__description {
     color: $color-black;
     font-size: 18px;
@@ -175,7 +179,7 @@
     width: auto;
     min-width: 165px;
     height: 40px;
-    margin: 19px auto 50px;
+    margin: 19px auto 49px;
     display: block;
   }
 }

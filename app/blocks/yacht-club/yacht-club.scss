@@ -1,6 +1,13 @@
 .yacht-club {
   display: block;
   flex: 1 0 auto;
+  padding-bottom: 30px;
+
+  &__block {
+    white-space: initial;
+    width: 100%;
+    height: auto;
+  }
 
   .page-header {
     background-color: $color-white;
@@ -160,6 +167,8 @@
     margin: 42px auto 80px;
 
     &_events {
+      width: 100vw;
+      text-align: left;
       color: $color-white;
       margin: 0 auto 107px;
     }
@@ -217,12 +226,7 @@
     background-color: $color-dark-blue;
     padding: 75px 0 0 38px;
 
-    @include respond-to('tablet') {
-      background-color: $color-white;
-      padding: 0;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       background-color: $color-white;
       padding: 0;
     }
@@ -233,16 +237,22 @@
     margin: 0 15px;
     padding-bottom: 120px;
 
-    @include respond-to('tablet') {
-      background-color: $color-white;
-      padding: 0;
-      padding-bottom: 34px;
+    &_default {
+      @media (max-width: 1024px) {
+        display: none !important;
+      }
     }
 
-    @include respond-to('mobile') {
-      background-color: $color-white;
-      padding: 0;
-      padding-bottom: 34px;
+    &_mob {
+      display: none;
+
+      @media (max-width: 1024px) {
+        display: block;
+        background-color: $color-white;
+        padding: 0;
+        padding-top: 15px;
+        padding-bottom: 34px;
+      }
     }
 
     &_closed {
@@ -254,11 +264,7 @@
     width: 390px;
     text-align: center;
 
-    @include respond-to('tablet') {
-      width: 100%;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       width: 100%;
     }
 
@@ -270,7 +276,7 @@
 
   &__category {
     font-family: $NerisLight;
-    color: $color-gray;
+    color: $color-white;
     font-size: 13px;
     line-height: 26px;
   }
@@ -297,14 +303,12 @@
   &__slide {
     width: 420px;
     padding: 20px 0 0 68px;
+    margin-right: 80px;
     position: relative;
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       padding: 0;
-    }
-
-    @include respond-to('mobile') {
-      padding: 0;
+      margin-right: 0;
     }
   }
 
@@ -367,52 +371,30 @@
       }
     }
 
-    @include respond-to('tablet') {
-      margin: 15px 15px 0;
-      padding-bottom: 13px;
-    }
-
-    @include respond-to('mobile') {
-      margin: 15px 15px 0;
-      padding-bottom: 13px;
-    }
-  }
-
-  &__swiper-pagination {
-    position: absolute;
-    bottom: 0 !important;
-    text-align: center;
-
-    .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      border: 1px solid $color-dark-blue;
-      margin: 0 10px;
-      display: inline-block;
-      border-radius: 100%;
-      cursor: pointer;
-      transition: .25s ease-in-out;
-      background-color: $color-white;
-
-      &-active {
-        border-width: 3px;
+    &_default {
+      @media (max-width: 1024px) {
+        display: none;
       }
     }
 
-    @include respond-to('tablet') {
-      bottom: 10px !important;
-    }
+    &_mob {
+      display: none;
 
-    @include respond-to('mobile') {
-      bottom: 10px !important;
+      @media (max-width: 1024px) {
+        display: block;
+        margin: 15px 15px 0;
+        padding-bottom: 13px;
+      }
     }
   }
 
   &__wrapper {
-    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
-  &__events__swiper-pagination {
+  &__pagination {
     position: absolute;
     bottom: 20px !important;
     text-align: center;

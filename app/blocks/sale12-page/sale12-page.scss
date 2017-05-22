@@ -110,6 +110,15 @@
 
           &__text {
             align-items: center;
+            min-height: 124px;
+
+            @include respond-to('tablet') {
+              min-height: 67px;
+            }
+
+            @include respond-to('mobile') {
+              min-height: 67px;
+            }
           }
 
           &__params {
