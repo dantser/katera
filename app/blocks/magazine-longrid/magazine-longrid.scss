@@ -327,6 +327,7 @@
         margin-right: 20px;
       }
     }
+
     @media (max-width: 1024px) {
       padding: 30px 15px !important;
       height: auto !important;
@@ -338,6 +339,10 @@
 
     &_white {
       background: $color-white !important;
+
+      @media (min-width: 1025px) {
+        margin-left: calc(50vw - 365px) !important;
+      }
 
       .swiper-pagination-bullet {
         border-color: $color-dark-blue !important;
