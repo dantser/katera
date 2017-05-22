@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import 'babel-polyfill';
 import svg4everybody from 'svg4everybody';
-import 'object-fit-polyfill';
+import objectFitImages from 'object-fit-images';
 import commonInput from './common/input';
 import burger from '../blocks/burger/burger';
 import upBtn from '../blocks/up-btn/up-btn';
@@ -55,6 +55,7 @@ $(window).on('load', () => {
 });
 
 $(() => {
+  objectFitImages('.image-bg__img');
   svg4everybody();
   scrollable();
   textField();
