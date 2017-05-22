@@ -362,7 +362,9 @@
 
     .yacht-club__box-bg {
       margin-bottom: 30px;
-      /*height: 500px;*/
+
+      /*
+      height: 500px; */
       height: 100vh;
 
       @include respond-to('large-desktop') {

@@ -1,5 +1,4 @@
 .magazine-longrid {
-
   @media (min-width: 1025px) {
 
     .swiper-wrapper, .swiper-container, .swiper-slide {
@@ -190,6 +189,7 @@
     color: $color-white;
 
     @include respond-to('mobile') {
+
       p:first-child {
         margin-top: 0;
         font-size: 18px;
@@ -263,7 +263,6 @@
   }
 
   .extra-articles {
-
     @include respond-to('mobile') {
 
       &__item {
@@ -301,7 +300,6 @@
   }
 
   &__slider-img {
-
     @media (max-width: 1024px) {
       width: 100%;
       height: auto;
