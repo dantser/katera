@@ -48,6 +48,7 @@
     padding-bottom: 60px;
     padding-top: 10px;
     flex-grow: 1;
+    display: flex;
 
     @include respond-to('tablet') {
       padding-right: 15px;
@@ -113,6 +114,8 @@
 
   &__description {
     padding-left: 30px;
+    display: flex;
+    flex-direction: column;
 
     @include respond-to('mobile') {
       padding-left: 0;
@@ -161,6 +164,7 @@
     &__text-box {
       display: flex;
       flex-direction: column;
+      flex: 1 1 auto;
       margin: 8px 0 10px;
 
       &:first-child {

@@ -94,6 +94,10 @@
     flex-grow: 1;
     margin-top: -11px;
 
+    @include respond-to('desktop') {
+      width: 960px;
+    }
+
     @include respond-to('laptop') {
       max-width: 640px;
     }
@@ -111,7 +115,6 @@
   &__heading {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     padding-bottom: 15px;
     margin-top: 11px;
     border-bottom: 1px solid  $color-light-gray;
