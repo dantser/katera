@@ -412,9 +412,11 @@
       display: block;
       color: #999;
       font-size: 14px;
+      text-align: center;
 
       @include respond-to('tablet') {
         width: 100%;
+        text-align: center;
       }
 
       @include respond-to('mobile') {
