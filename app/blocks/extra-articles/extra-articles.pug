@@ -10,5 +10,5 @@ mixin extra-articles(title, btnText)
         +e.item
           +article-preview(data[i])._title-under-img
     +e.button
-       - var btnText = btnText || 'Показать еще'
+      - var btnText = btnText || 'Показать еще'
       +button()._rounded._kind_red= btnText
