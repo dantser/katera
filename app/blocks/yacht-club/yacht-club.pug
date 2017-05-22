@@ -36,16 +36,6 @@ mixin yacht-club()
             +icon('caret').icon.
 
           - var data = getData('yacht-club');
-          +e.slider._default
-            +e.wrapper
-              each item in data
-                +e.slide
-                  +e.date= item.day
-                    +b('span')= item.month
-                  +e.slide-inner
-                    +e('img').img(src= item.path)
-                    +e.category= item.category
-                    +e.name= item.title
 
           +e.slider._mob.swiper-container
             +e.wrapper.swiper-wrapper
@@ -59,56 +49,69 @@ mixin yacht-club()
                     +e.name= item.title
             +e.pagination.swiper-pagination
 
-    +scrollable()
-      +scrollable-v()
-        +e.block
-          +container()
-            +e.H2.title_gallery.jqcontrol Галерея
-              +icon('caret').icon
 
-            +e.gallery._default
-              +e.__gallery-slider
-                +e.box-bg.js-open-modal(data-target-modal='#gallery-popup')
-                  +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
-                +e.box-bg.js-open-modal(data-target-modal='#gallery-popup2')
-                  +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
-                +e.box-bg.js-open-modal(data-target-modal='#gallery-popup3')
-                  +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
+          +e.slider._default
+            +e.wrapper
+              each item in data
+                +e.slide
+                  +e.date= item.day
+                    +b('span')= item.month
+                  +e.slide-inner
+                    +e('img').img(src= item.path)
+                    +e.category= item.category
+                    +e.name= item.title
 
-            +e.gallery._mob.swiper-container
-              +e.gallery-wrapper.swiper-wrapper
-                +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup')
-                  +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
-                +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup2')
-                  +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
-                +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup3')
-                  +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
-              +e.pagination.swiper-pagination
+    //- +scrollable()
+    //-   +scrollable-v()
+    //-     +e.block
 
-            +e.H2.title_contacts.jqcontrol Контакты
-              +icon('caret').icon
-            +b.contacts
-              +e.table
-                +e.item
-                  +e('span').title Наш адрес:
-                  +e('span').descr г.Москва, ул. Речников, д.7
-                +e.item
-                  +e('span').title GPS координаты:
-                  +e('span').descr.__coord N 55°41’19,7” E 037°41’53,6”
-                +e.item
-                  +e('span').title Телефон:
-                  +e('span').descr +7 (495) 568-78-32
-                +e.item
-                  +e('span').title Email:
-                  +e('span').descr nagatino@mrpclub.ru
-                +e.item
-                  +e('span').title График работы:
-                  +e('span').descr Круглосуточно.
-              +map()
+    +container()
+      +e.H2.title_gallery.jqcontrol Галерея
+        +icon('caret').icon
 
-            +e.banner-bottom
-              +banner('#', 'assets/images/banner.jpg')._overlay
-                  +e('img')(src='assets/images/banner-img.png').little
+      +e.gallery._mob.swiper-container
+        +e.gallery-wrapper.swiper-wrapper
+          +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup')
+            +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
+          +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup2')
+            +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
+          +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup3')
+            +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
+        +e.pagination.swiper-pagination
+
+      +e.gallery._default
+        +e.__gallery-slider
+          +e.box-bg.js-open-modal(data-target-modal='#gallery-popup')
+            +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
+          +e.box-bg.js-open-modal(data-target-modal='#gallery-popup2')
+            +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
+          +e.box-bg.js-open-modal(data-target-modal='#gallery-popup3')
+            +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
+
+      +e.H2.title_contacts.jqcontrol Контакты
+        +icon('caret').icon
+      +b.contacts
+        +e.table
+          +e.item
+            +e('span').title Наш адрес:
+            +e('span').descr г.Москва, ул. Речников, д.7
+          +e.item
+            +e('span').title GPS координаты:
+            +e('span').descr.__coord N 55°41’19,7” E 037°41’53,6”
+          +e.item
+            +e('span').title Телефон:
+            +e('span').descr +7 (495) 568-78-32
+          +e.item
+            +e('span').title Email:
+            +e('span').descr nagatino@mrpclub.ru
+          +e.item
+            +e('span').title График работы:
+            +e('span').descr Круглосуточно.
+        +map()
+
+      +e.banner-bottom
+        +banner('#', 'assets/images/banner.jpg')._overlay
+            +e('img')(src='assets/images/banner-img.png').little
 
   +gallery-popup()
 

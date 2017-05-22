@@ -239,7 +239,7 @@
 
     &_default {
       @media (max-width: 1024px) {
-        display: none;
+        display: none !important;
       }
     }
 
