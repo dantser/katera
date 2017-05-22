@@ -47,6 +47,7 @@
 
       .sale-preview-item {
         width: 100%;
+        min-height: 541px;
 
         &__img-wrap {
           height: 417px;
@@ -57,6 +58,10 @@
 
           @include respond-to('tablet') {
             height: 631px;
+          }
+
+          @include respond-to('mobile') {
+            min-height: inherit;
           }
         }
       }
@@ -118,6 +123,18 @@
   }
 
   .sale-preview-item {
+
+    &__text {
+      min-height: 124px;
+
+      @include respond-to('tablet') {
+        min-height: 64px;
+      }
+
+      @include respond-to('mobile') {
+        min-height: 64px;
+      }
+    }
 
     &__info {
       font-size: 13px;
