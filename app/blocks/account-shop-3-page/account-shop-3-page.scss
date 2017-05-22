@@ -76,6 +76,7 @@
 
           .submenu {
             padding: 0 19px;
+            border: none;
 
             &__title {
               padding: 19px 0;
@@ -188,7 +189,7 @@
         border-radius: 3px;
         font-size: 14px;
         text-align: left;
-        border: 1px solid $color-gray;
+        border: 1px solid $color-light-gray;
         padding-left: 40px;
 
         @include respond-to('laptop') {
