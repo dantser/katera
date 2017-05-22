@@ -281,9 +281,9 @@
     margin: 0 auto;
 
     .button {
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 6px;
       line-height: (24/14)*1em;
+      height: 40px;
     }
   }
 
@@ -388,7 +388,15 @@
       &__swiper-pagination {
         display: block;
         position: relative;
-        bottom: 0;
+        bottom: -33px;
+
+        @include respond-to('tablet') {
+          bottom: 0;
+        }
+
+        @include respond-to('mobile') {
+          bottom: 0;
+        }
       }
     }
 
@@ -417,12 +425,27 @@
         }
 
         &__text {
+          min-height: 124px;
+
+          @include respond-to('tablet') {
+            min-height: 67px;
+            align-items: center;
+          }
+
           @include respond-to('mobile') {
             align-items: center;
+            min-height: 67px;
           }
         }
 
         &__params {
+
+          & .sale-preview-item__param {
+            @include respond-to('tablet') {
+              float: none;
+            }
+          }
+
           @include respond-to('mobile') {
             display: none;
           }
