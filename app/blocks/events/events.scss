@@ -294,6 +294,23 @@
 
   .scrollable__slide_horizontal {
     flex-direction: column;
+
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+
+    @include respond-to('large-desktop') {
+      padding-left: 185px;
+    }
+
+    @include respond-to('desktop') {
+      padding-left: 90px;
+    }
+
+    @include respond-to('laptop') {
+      padding-left: 15px;
+    }
   }
 
   .scrollable__slide_vertical {
