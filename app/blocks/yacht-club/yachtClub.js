@@ -10,42 +10,42 @@ export default () => {
   ];
   makeItFixed(...submenuFixed);
   // eslint-disable-next-line no-unused-vars
-  const yachtScrollSlider = new Swiper('.yacht-club__slider', {
-    pagination: '.yacht-club__events__swiper-pagination',
-    slidesPerView: 'auto',
-    mousewheelControl: true,
-    freeMode: true,
+  const yachtScrollSlider = new Swiper('.yacht-club__slider_mob', {
+    pagination: '.yacht-club__events .yacht-club__pagination',
     paginationClickable: true,
-
-    breakpoints: {
-      991: {
-        mousewheelControl: false,
-        freeMode: false,
-        slidesPerView: 1,
-      },
-    },
+    slidesPerView: 1,
+    spaceBetween: 0,
+  });
+  // eslint-disable-next-line no-unused-vars
+  const yachtGallerySlider = new Swiper('.yacht-club__gallery_mob', {
+    pagination: '.yacht-club__gallery .yacht-club__pagination',
+    paginationClickable: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
   });
 
-  const WRAPPER = $('.yacht-club__gallery-slider');
-  const WINDOW = $(window);
-  const WRAPPER_CLASS = 'swiper-wrapper';
-  function resize() {
-    if (WINDOW.width() < 992) {
-      // eslint-disable-next-line no-unused-vars
-      const yachtGallerySlider = new Swiper('.yacht-club__gallery', {
-        pagination: '.yacht-club__gallery .yacht-club__swiper-pagination',
-        paginationClickable: true,
-        slidesPerView: 1,
-      },
-    );
-      WRAPPER.addClass(WRAPPER_CLASS);
-    } else {
-      WRAPPER.removeClass(WRAPPER_CLASS);
-    }
-  }
-  WINDOW.on('resize', resize());
-  resize();
-// Сворачивание на мобильной версии
+  // const WRAPPER = $('.yacht-club__gallery-slider');
+  // const WINDOW = $(window);
+  // const WRAPPER_CLASS = 'swiper-wrapper';
+  // function resize() {
+  //   if (WINDOW.width() <= 1024) {
+  // eslint-disable-next-line no-unused-vars
+  // const yachtGallerySlider = new Swiper('.yacht-club__gallery_mob', {
+  //   pagination: '.yacht-club__gallery .yacht-club__pagination',
+  //   paginationClickable: true,
+  //   slidesPerView: 1,
+  //   spaceBetween: 0,
+  // }
+  //   );
+  //     WRAPPER.addClass(WRAPPER_CLASS);
+  //   } else {
+  //     WRAPPER.removeClass(WRAPPER_CLASS);
+  //   }
+  // }
+  // WINDOW.on('resize', resize());
+  // resize();
+
+  // Сворачивание на мобильной версии
   const control = '.jqcontrol';
   const elements = $(control);
   const controlServises = '.jqcontrol-events';
