@@ -144,6 +144,11 @@
       margin-left: 37px;
       text-align: right;
     }
+
+    @include respond-to('tablet') {
+      margin-left: 37px;
+      text-align: right;
+    }
   }
 
   &__description-text {
@@ -156,6 +161,11 @@
     }
 
     @include respond-to('mobile') {
+      padding-top: 6px;
+      margin-top: 0;
+    }
+
+    @include respond-to('tablet') {
       padding-top: 6px;
       margin-top: 0;
     }
@@ -173,12 +183,25 @@
       border-bottom: none;
       padding: 17px 15px;
     }
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+      border-bottom: none;
+      padding: 17px 15px;
+    }
   }
 
   &__hr {
     display: none;
 
     @include respond-to('mobile') {
+      display: block;
+      width: 100%;
+      order: 4;
+      border-top: 1px solid $color-light-gray;
+    }
+
+    @include respond-to('tablet') {
       display: block;
       width: 100%;
       order: 4;
@@ -196,11 +219,21 @@
         padding-bottom: 8px;
         margin-bottom: 20px;
       }
+
+      @include respond-to('tablet') {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+      }
     }
 
     @include respond-to('mobile') {
       order: 3;
       width: 100%;
+    }
+
+    @include respond-to('tablet') {
+      order: 3;
     }
   }
 
@@ -215,8 +248,21 @@
       margin-bottom: 25px;
     }
 
+    @include respond-to('tablet') {
+      display: flex;
+      justify-content: center;
+      order: 2;
+      margin-left: 0;
+      margin-bottom: 25px;
+    }
+
     .share {
       @include respond-to('mobile') {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      @include respond-to('tablet') {
         flex-wrap: wrap;
         justify-content: center;
       }
@@ -235,6 +281,13 @@
 
   &__adds {
     @include respond-to('mobile') {
+      margin-bottom: 10px;
+      text-align: center;
+      padding-bottom: 7px;
+      order: 1;
+    }
+
+    @include respond-to('tablet') {
       margin-bottom: 10px;
       text-align: center;
       padding-bottom: 7px;
@@ -391,7 +444,7 @@
         bottom: -33px;
 
         @include respond-to('tablet') {
-          bottom: 0;
+          bottom: -15px;
         }
 
         @include respond-to('mobile') {
