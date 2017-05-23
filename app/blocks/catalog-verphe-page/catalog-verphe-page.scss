@@ -114,6 +114,7 @@
       display: flex;
       flex-flow: row nowrap;
       margin-bottom: 22px;
+      justify-content: space-between;
 
       &:last-child {
         margin-bottom: 0;
@@ -127,11 +128,7 @@
     &_col {
       display: flex;
       flex-flow: column nowrap;
-      margin-right: 8.3%;
-
-      &:last-child {
-        margin-right: 0;
-      }
+      width: 46%;
     }
 
     &_small {
@@ -153,7 +150,16 @@
     }
   }
 
-  .sale-preview-item:hover .sale-preview-item__img-wrap {
-    opacity: .75;
+  .sale-preview-item {
+
+    &:hover .sale-preview-item__img-wrap {
+      opacity: .75;
+    }
+
+    &__name, &__price {
+      @media (max-width: 1169px) {
+        font-size: 14px;
+      }
+    }
   }
 }
