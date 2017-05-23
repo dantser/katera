@@ -13,6 +13,12 @@
     align-items: center;
   }
 
+  @media (max-width: 320px) {
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 9px;
+  }
+
   &__item {
     width: 270px;
     height: 40px;
@@ -20,6 +26,11 @@
     @include respond-to('laptop') {
       width: 100%;
       padding: 0 15px;
+    }
+
+    @media (max-width: 320px) {
+      width: 100%;
+      margin-bottom: 13px;
     }
   }
 }

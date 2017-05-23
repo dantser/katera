@@ -1,5 +1,14 @@
 .catalog-verphe-page {
 
+  .page-header {
+
+    &__title {
+      @media (max-width: 320px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__wrapper {
     box-sizing: border-box;
     display: flex;
@@ -8,6 +17,10 @@
     @media (max-width: 767px) {
       flex-flow: column nowrap;
       padding: 0 2.2%;
+    }
+
+    @media (max-width: 320px) {
+      padding: 0 15px;
     }
   }
 
