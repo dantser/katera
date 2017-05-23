@@ -27,12 +27,12 @@ function ultraScroll(element) {
   ultraScrollInit();
 
   // Обновляем значения при изменении размера окна
-  $(window).resize(function(){
+  $(window).on('resize', function(){
     ultraScrollInit();
   });
 
   // Функция скролла
-  $(window).scroll(function(){
+  $(window).on('scroll', function(){
     sT = $(this).scrollTop();
 
     // Если мы выше скроллблока

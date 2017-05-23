@@ -1,5 +1,14 @@
 .catalog-verphe-page {
 
+  .page-header {
+
+    &__title {
+      @media (max-width: 320px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__wrapper {
     box-sizing: border-box;
     display: flex;
@@ -8,6 +17,10 @@
     @media (max-width: 767px) {
       flex-flow: column nowrap;
       padding: 0 2.2%;
+    }
+
+    @media (max-width: 320px) {
+      padding: 0 15px;
     }
   }
 
@@ -101,6 +114,7 @@
       display: flex;
       flex-flow: row nowrap;
       margin-bottom: 22px;
+      justify-content: space-between;
 
       &:last-child {
         margin-bottom: 0;
@@ -114,11 +128,7 @@
     &_col {
       display: flex;
       flex-flow: column nowrap;
-      margin-right: 8.3%;
-
-      &:last-child {
-        margin-right: 0;
-      }
+      width: 46%;
     }
 
     &_small {
@@ -140,7 +150,16 @@
     }
   }
 
-  .sale-preview-item:hover .sale-preview-item__img-wrap {
-    opacity: .75;
+  .sale-preview-item {
+
+    &:hover .sale-preview-item__img-wrap {
+      opacity: .75;
+    }
+
+    &__name, &__price {
+      @media (max-width: 1169px) {
+        font-size: 14px;
+      }
+    }
   }
 }
