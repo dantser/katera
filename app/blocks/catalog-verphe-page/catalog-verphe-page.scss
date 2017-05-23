@@ -13,6 +13,9 @@
     box-sizing: border-box;
     display: flex;
     padding-left: 2.2%;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-bottom: 30px;
 
     @media (max-width: 767px) {
       flex-flow: column nowrap;

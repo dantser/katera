@@ -49,6 +49,7 @@ import verphe from '../blocks/verphe/verphe';
 import join from '../blocks/join/join';
 import scrollable from '../blocks/scrollable/scrollable';
 import accountSale3 from '../blocks/account-sale3/account-sale3';
+import catalogVerphePage from '../blocks/catalog-verphe-page/catalog-verphe-page';
 
 $(window).on('load', () => {
   scrollable();
@@ -103,6 +104,7 @@ $(() => {
   verphe();
   join();
   accountSale3();
+  catalogVerphePage();
 
   const mapElement = document.getElementById('map');
 
