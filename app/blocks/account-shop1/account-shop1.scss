@@ -30,6 +30,7 @@
 
   &__col-nav {
     padding-right: 15px;
+    //flex: 0 0 375px;
     flex: 0 0 33%;
 
     @include respond-to('tablet') {
@@ -46,8 +47,10 @@
   &__col-page {
     padding-left: 15px;
     padding-bottom: 70px;
-    width: calc(67%);
+    width: 67%;
+    //width: calc(100% - 405px);
     //flex-grow: 1;
+    //flex-basis: 67%;
 
     * {
       margin: 0;
@@ -269,8 +272,8 @@
 
   &__left-box {
     text-align: left;
-    padding-left: 15px;
-    padding-right: 30px;
+    margin-left: 30px;
+    //padding-right: 30px;
 
     @include respond-to('tablet') {
       padding-right: 0;
@@ -299,15 +302,15 @@
   &__left-img {
     padding-top: 6px;
     display: block;
-    width: 83px;
-    padding-right: 15px;
+    width: 68px;
+    //padding-right: 15px;
 
     @include respond-to('tablet') {
-      margin-right: 20px;
+      //margin-right: 20px;
     }
 
     @include respond-to('laptop') {
-      margin-right: 20px;
+      //margin-right: 20px;
     }
   }
 
@@ -324,8 +327,8 @@
 
   &__right-box {
     text-align: left;
-    padding-left: 15px;
-    padding-right: 30px;
+    margin-left: 30px;
+    //padding-right: 30px;
 
     @include respond-to('tablet') {
       padding-right: 0;
@@ -354,19 +357,21 @@
   &__right-img {
     padding-top: 6px;
     display: block;
-    width: 83px;
-    padding-right: 15px;
+    width: 68px;
+    //padding-right: 15px;
 
     @include respond-to('tablet') {
-      margin-right: 20px;
+      //margin-right: 20px;
     }
 
     @include respond-to('laptop') {
-      margin-right: 20px;
+      //margin-right: 20px;
     }
   }
 
   .main-slider {
+    width: 100%;
+    display: block;
 
     .main-slider__slide {
       width: 100%;

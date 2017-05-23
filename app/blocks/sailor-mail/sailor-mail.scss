@@ -42,7 +42,7 @@
       box-sizing: border-box;
       width: 263px;
       height: 150px;
-      padding: 0 20px;
+      //padding: 0 20px;
       display: flex;
       align-items: center;
       transition: all .2s ease-in-out;
@@ -51,7 +51,7 @@
       @include respond-to('mobile') {
         height: 60px;
         width: 107px;
-        padding: 0 10px;
+        //padding: 0 10px;
       }
 
       &:hover {
@@ -65,16 +65,24 @@
 
     &__img {
       width: 223px;
+      height: auto;
+      display: block;
+      margin: 0 20px;
 
       @include respond-to('mobile') {
         width: 87px;
+        height: auto;
+        display: block;
+        margin: 0 10px;
       }
     }
 
     &__description {
+      width: calc(100% - 263px);
       padding: 10px 30px;
 
       @include respond-to('mobile') {
+        width: calc(100% - 107px);
         padding: 0 0 0 15px;
         display: flex;
         flex-direction: column;
