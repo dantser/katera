@@ -48,6 +48,7 @@
     padding-left: 15px;
     padding-bottom: 70px;
     width: 67%;
+    overflow-x: hidden;
     //width: calc(100% - 405px);
     //flex-grow: 1;
     //flex-basis: 67%;
@@ -273,14 +274,16 @@
   &__left-box {
     text-align: left;
     margin-left: 30px;
-    //padding-right: 30px;
+    width: 100%;
 
     @include respond-to('tablet') {
       padding-right: 0;
+      width: 100%;
     }
 
     @include respond-to('mobile') {
       padding-right: 0;
+      width: 100%;
     }
   }
 
@@ -328,14 +331,16 @@
   &__right-box {
     text-align: left;
     margin-left: 30px;
-    //padding-right: 30px;
+    width: 100%;
 
     @include respond-to('tablet') {
       padding-right: 0;
+      width: 100%;
     }
 
     @include respond-to('mobile') {
       padding-right: 0;
+      width: 100%;
     }
   }
 
