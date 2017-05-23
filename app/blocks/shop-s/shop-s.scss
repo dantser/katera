@@ -3,7 +3,9 @@
   &__wrapper {
     box-sizing: border-box;
     display: flex;
-    padding-bottom: 39px;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-bottom: 30px;
 
     @include respond-to('tablet') {
       //flex-flow: column nowrap;

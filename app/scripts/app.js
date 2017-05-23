@@ -50,6 +50,7 @@ import join from '../blocks/join/join';
 import scrollable from '../blocks/scrollable/scrollable';
 import accountSale3 from '../blocks/account-sale3/account-sale3';
 import catalogVerphePage from '../blocks/catalog-verphe-page/catalog-verphe-page';
+import shops from '../blocks/shop-s/shop-s';
 
 $(window).on('load', () => {
   scrollable();
@@ -105,6 +106,7 @@ $(() => {
   join();
   accountSale3();
   catalogVerphePage();
+  shops();
 
   const mapElement = document.getElementById('map');
 
