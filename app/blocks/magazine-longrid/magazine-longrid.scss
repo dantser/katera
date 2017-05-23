@@ -432,4 +432,20 @@
       line-height: 22px;
     }
   }
+
+  .extra-articles__item {
+    @include respond-to('mobile') {
+      border-top: none;
+
+      &:first-child {
+        border-top: 1px solid $color-light-gray;
+      }
+    }
+
+    .article-preview {
+      @include respond-to('mobile') {
+        border: none;
+      }
+    }
+  }
 }
