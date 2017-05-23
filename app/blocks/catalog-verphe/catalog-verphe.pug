@@ -4,8 +4,6 @@
 //- data.count - количество яхт
 mixin catalog-verphe(data)
   +b('div').catalog-verphe
-    //- each obj in data
-    //-   +e('div')
     each obj in data
       +e('div').item
         +e('b').letter= obj.letter
