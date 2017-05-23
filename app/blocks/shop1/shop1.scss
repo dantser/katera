@@ -1,6 +1,14 @@
 .shop1 {
   padding: 118px 0;
 
+  @include respond-to('tablet') {
+    padding: 0;
+  }
+
+  @include respond-to('mobile') {
+    padding: 0;
+  }
+
   &__banner {
     width: 100%;
     height: auto;
@@ -64,6 +72,14 @@
       color: red;
       text-decoration: none;
       margin: 0 auto;
+
+      @include respond-to('tablet') {
+        margin: inherit;
+      }
+
+      @include respond-to('mobile') {
+        margin: inherit;
+      }
     }
 
     @include respond-to('tablet') {
@@ -162,14 +178,22 @@
 
     &__wrapper {
       justify-content: center;
+
+      @include respond-to('mobile') {
+        justify-content: flex-start;
+      }
     }
 
     @include respond-to('tablet') {
-      margin: 0 15px;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0 15px;
     }
 
     @include respond-to('mobile') {
-      margin: 0 15px;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0 15px;
     }
 
     .sale-preview-item {
@@ -178,7 +202,7 @@
       min-height: 204px;
 
       &:nth-child(5n) {
-        margin-right: 0;
+        //margin-right: 0;
       }
 
       &:nth-child(n+21) {
@@ -206,31 +230,42 @@
       }
 
       @include respond-to('tablet') {
-        flex-flow: row wrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        margin-right: 0;
         min-height: inherit;
 
         &__params {
           display: block;
+          width: 100%;
         }
       }
 
       @include respond-to('mobile') {
-        flex-flow: row nowrap;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 290px;
+        //justify-content: center;
+        //align-items: center;
         margin: 9px 0 0 !important;
         min-height: inherit;
 
         &__params {
           display: block;
+          width: 100%;
         }
 
         &:nth-child(n+9) {
           display: none;
+        }
+      }
+
+      &__text {
+        @include respond-to('mobile') {
+          max-width: inherit;
+          width: calc(100% - 107px);
         }
       }
     }
@@ -245,14 +280,14 @@
     display: block;
 
     @include respond-to('tablet') {
-      min-width: 97%;
-      margin: 29px 15px;
+      width: 290px;
+      margin: 30px auto;
       padding-left: 7px;
     }
 
     @include respond-to('mobile') {
-      min-width: 92%;
-      margin: 21px 15px 29px;
+      width: 290px;
+      margin: 30px auto;
       padding-left: 7px;
     }
   }
