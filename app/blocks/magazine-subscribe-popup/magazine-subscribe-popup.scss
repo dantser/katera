@@ -90,7 +90,6 @@
 
   &__info {
     display: block;
-    margin-top: auto;
   }
 
   &__text {
@@ -112,10 +111,12 @@
   }
 
   &__icon {
-    margin: auto;
     fill: $color-dark-blue;
     will-change: fill;
     transition: fill .25s ease-in-out;
+    align-self: center;
+    text-align: center;
+    margin: 19px 0;
 
     @include respond-to('mobile') {
       margin: 0;
@@ -129,6 +130,7 @@
     &_express {
       width: 60px;
       height: 60px;
+      margin-top: 0;
     }
 
     &_turbo {
