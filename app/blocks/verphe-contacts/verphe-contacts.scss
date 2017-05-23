@@ -12,7 +12,7 @@
   }
 
   .verphe-contacts {
-    padding: 25px 25px 41px;
+    padding: 25px 25px 36px;
     font-size: rem(16px);
     color: $color-white;
     font-family: $NerisLight;
@@ -55,7 +55,7 @@
 
     .list__item {
       margin: 0;
-      padding: 0 0 25px;
+      padding: 0 0 23px;
       font-family: $NerisLight;
 
       @include respond-to('tablet') {
@@ -100,7 +100,7 @@
 
     &__title {
       font-size: rem(30px);
-      margin-top: 18px;
+      margin-top: 14px;
 
       @include respond-to('tablet') {
         font-size: rem(20px);
@@ -115,7 +115,8 @@
 
     &__email, &__tel {
       display: flex;
-      margin-top: 14px;
+      margin-top: 10px;
+      font-size: 16px;
 
       ul {
         padding: 0 0 0 7px;
@@ -126,8 +127,13 @@
       }
     }
 
+    &__email {
+      margin-top: 7px;
+    }
+
     &__country {
       margin-top: 22px;
+      font-size: 16px;
 
       @include respond-to('tablet') {
         display: none;
@@ -140,7 +146,8 @@
 
     &__site {
       color: $color-white;
-      margin-top: 13px;
+      margin-top: 9px;
+      font-size: 16px;
     }
 
     .button {

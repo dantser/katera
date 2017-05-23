@@ -114,6 +114,10 @@
       display: none;
     }
 
+    @include respond-to('mobile') {
+      display: none;
+    }
+
     .swiper-pagination-bullet {
       width: 10px;
       height: 10px;
@@ -150,39 +154,45 @@
     stroke: $color-red;
     width: 24px;
     height: 16px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
   }
 
   &__next {
     left: auto;
     right: 0;
-    top: -172px;
-    padding: 20px;
+    top: -193px;
+    padding: 20px 0;
+    position: absolute;
+    z-index: 2;
 
     @include respond-to('tablet') {
       padding: 0;
       top: 0;
+      left: auto;
     }
 
     @include respond-to('mobile') {
       display: block;
-      top: -188px;
-      padding: 20px;
+      top: -35px;
+      padding: 20px 0;
+      right: 15px;
     }
   }
 
   &__prev {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 
     @include respond-to('tablet') {
       display: block;
     }
 
     @include respond-to('mobile') {
-      display: none;
+      display: block;
+      top: -15px;
+      left: 15px;
     }
   }
 }
