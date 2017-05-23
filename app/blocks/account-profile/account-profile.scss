@@ -44,6 +44,7 @@
     padding-left: 15px;
     flex-grow: 1;
     margin-top: -11px;
+    flex-basis: 100%;
 
     @include respond-to('tablet') {
       padding-right: 15px;

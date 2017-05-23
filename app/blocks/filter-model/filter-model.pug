@@ -11,7 +11,7 @@ mixin filter-model()
     - var filterData = getData('filter')
     +e.items
       +e.item._vendor
-        +select(filterData.shipyard.name, filterData.shipyard.options, false, 'Тип яхты')
+        +select(filterData.shipyard.name, filterData.shipyard.options, false, 'Верфь')
       +e.item._range
         +e.item-info
           +e.item-label Длина
