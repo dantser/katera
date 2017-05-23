@@ -15,7 +15,7 @@ mixin sale-list2()
     +container()
       +page-header('Предложения', ['Главная', 'Предложения'])
       +main-container().main-container_shadow.sale-raznoe__main-container
-        +e.content
+        +e.content.js-sale-content
           +e.filter
             +filter-sale([{title: "Купить", path: "#"}, {title: "Арендовать", path: "#", active: true}]).js-filter-sale
           +mobile-slide-popup()#filter-sale
@@ -36,17 +36,18 @@ mixin sale-list2()
           +button()._shadow._rounded._kind_red.__show-more Показать еще
 
         +e.sidebar
-          +e.sale-help
-            +sale-help()
-          +e.sidebar-list
-            +e.sidebar-list-item
-              +e.banner
-                +banner('#', 'assets/images/banner2.jpg')
-            +e.sidebar-list-item
-              +sale-preview-item(getData('sale-preview-item'))
-            +e.sidebar-list-item
-              +sale-preview-item(getData('sale-preview-item'))
-          +e.yacht-preview-widget
-            +yacht-preview-widget("Топ-10 яхт в продаже", getData('yacht-preview'), true, true)
+          .js-sale-widgets
+            +e.sale-help
+              +sale-help()
+            +e.sidebar-list
+              +e.sidebar-list-item
+                +e.banner
+                  +banner('#', 'assets/images/banner2.jpg')
+              +e.sidebar-list-item
+                +sale-preview-item(getData('sale-preview-item'))
+              +e.sidebar-list-item
+                +sale-preview-item(getData('sale-preview-item'))
+            +e.yacht-preview-widget
+              +yacht-preview-widget("Топ-10 яхт в продаже", getData('yacht-preview'), true, true)
 
         +button()(data-target-modal='#filter-sale')._kind_red.__show-filter-btn.js-mobile-slide-popup Фильтр
