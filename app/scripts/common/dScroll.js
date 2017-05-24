@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export default (b1Class, b2Class) => {
-  if (!b1Class || !b2Class) {
+  if (!b1Class || !b2Class || $(window).width() <= 1024) {
     return;
   }
 
