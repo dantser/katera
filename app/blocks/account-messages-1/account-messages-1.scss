@@ -167,11 +167,11 @@
 
     .account-messages-1__checkbox {
       align-self: flex-start;
+      width: auto;
 
       @include respond-to('mobile') {
         margin-top: 5px;
         margin-right: 18px;
-        width: auto;
       }
     }
   }
@@ -196,10 +196,7 @@
   &__message-content {
     max-width: 520px;
     display: inline-flex;
-
-    @include respond-to('mobile') {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   &__message-props {
