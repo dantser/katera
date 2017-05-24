@@ -17,8 +17,8 @@ include ../shop3/shop3-page
 
 mixin shop1()
   +b.shop1&attributes(attributes)
-    +e.banner(style='background-image: url(assets/images/branding/shop-bg.jpg)')
-    //- +e('img')(src='assets/images/branding/shop-bg.jpg' alt='').banner
+    +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
+    +e.IMG(src='assets/images/branding/shop-main-bg.jpg' alt='').brand-bg
     +container()
       +main-container().main-container_shadow.magazine-razdel__main-container
         +e.link
@@ -40,4 +40,4 @@ mixin shop1()
             +button()._rounded._kind_red.__show-more Показать еще
           +shop2-page()#shop-2
           +shop3-page()#shop-3
-    //- +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
+    +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
