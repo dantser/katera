@@ -58,7 +58,7 @@ export default () => {
     const ICON = el.find('svg');
     const WINDOW = $(window);
 
-    if (WINDOW.width() <= 767) {
+    if (WINDOW.width() <= 991) {
       el.on('click', (e) => {
         e.preventDefault();
         el.next().slideToggle();
@@ -73,7 +73,7 @@ export default () => {
     const ICON = el.find('svg');
     const WINDOW = $(window);
 
-    if (WINDOW.width() <= 767) {
+    if (WINDOW.width() <= 991) {
       el.on('click', (e) => {
         e.preventDefault();
         el.parent().toggleClass(CLOSED_SLIDER_CLASS);

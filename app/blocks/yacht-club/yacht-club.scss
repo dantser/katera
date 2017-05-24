@@ -48,6 +48,10 @@
 
   &__main-container {
     margin-bottom: 30px;
+
+    @include respond-to('tablet') {
+      margin-bottom: 0;
+    }
   }
 
   &__box-bg {
