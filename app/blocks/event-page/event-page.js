@@ -3,24 +3,16 @@ import Swiper from 'swiper';
 export default () => {
   // eslint-disable-next-line no-unused-vars
   const eventPage = new Swiper('.event-page__slider', {
-    pagination: '.event-page__swiper-pagination',
+    pagination: 'event-page__events__swiper-paginationn',
     paginationClickable: true,
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     mousewheelControl: true,
-    spaceBetween: 30,
     freeMode: true,
     breakpoints: {
-      320: {
+      991: {
+        mousewheelControl: false,
+        freeMode: false,
         slidesPerView: 1,
-        spaceBetween: 30,
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
       },
     },
   });
