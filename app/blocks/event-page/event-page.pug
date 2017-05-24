@@ -49,7 +49,42 @@ mixin event-page()
             +share('vk', 'go', 'fb', 'odnokl', 'tw', small).__share
           +e.inner-content._comments
             +comments(getData('comments'))
-          +e('h2').slider-head Другие мероприятия
-        +e.slider._white.swiper-container
-          +event-item(getData('event-item')).__white.wrapper.swiper-wrapper
-          +e.swiper-pagination._shop-slider-pagination
+        +e('h2').slider-head Другие мероприятия
+        +e.slider.swiper-container
+          +e.wrapper.swiper-wrapper
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+            +e.slide.swiper-slide
+              +e.date 06
+                +b('span') января
+              +e.slide-inner
+                +e('img').img(src='assets/images/events-slide.jpg')
+                +e.category Яхтинг в россии
+                +e.name PROyachting проведет третий этап. Конференция любителей яхт.
+          +e.events__swiper-pagination
