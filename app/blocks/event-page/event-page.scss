@@ -101,6 +101,10 @@
     .event-item-box {
       width: 320px;
       margin: 0;
+
+      @include respond-to('mobile') {
+        margin: 0 auto !important;
+      }
     }
 
     .event-item-box__date {
@@ -111,6 +115,21 @@
 
     .event-item-box__title {
       color: $color-gray;
+
+      @include respond-to('mobile') {
+        margin-left: 43px;
+      }
+    }
+
+    .event-item-box__text {
+      @include respond-to('tablet') {
+        margin-left: 20px;
+        width: 245px;
+      }
+
+      @include respond-to('mobile') {
+        margin-left: 43px;
+      }
     }
 
     .event-item-box__link {
@@ -123,22 +142,15 @@
         width: 450px;
         height: 246px;
       }
+
+      @include respond-to('tablet') {
+        width: 245px;
+        height: 175px;
+      }
     }
 
     .event-item-box__number {
       font-size: 85px;
-    }
-
-    .event-item-box__description {
-      @include respond-to('tablet') {
-        margin-left: 20px;
-        width: 85%;
-      }
-
-      @include respond-to('mobile') {
-        margin-left: 20px;
-        width: 85%;
-      }
     }
   }
 
@@ -197,12 +209,8 @@
     position: relative;
     margin-top: 26px;
     display: flex;
-    flex: 1;
     flex-flow: row wrap;
-
-    &-block {
-      display: block !important;
-    }
+    flex: 1;
   }
 
   &__text-inner {
