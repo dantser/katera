@@ -294,6 +294,7 @@
     }
 
     &__label {
+      width: 100%;
       flex: 0 0 195px;
 
       @include respond-to('tablet') {
@@ -404,7 +405,7 @@
 
     &__box {
       @media (max-width: 1200px) and (orientation: landscape) {
-        width: 200px;
+        width: 185px;
       }
     }
   }
