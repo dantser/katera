@@ -21,9 +21,13 @@
     display: inline-flex;
     margin-left: auto;
 
+    @media (min-width: 768px) {
+      display: none;
+    }
+
     @include respond-to('mobile') {
       align-items: center;
-      width: 100%;
+      width: auto;
       margin: 0;
     }
 
@@ -54,6 +58,7 @@
 
       @include respond-to('mobile') {
         width: 100%;
+        display: none;
       }
     }
 
@@ -121,6 +126,7 @@
 
     @include respond-to('mobile') {
       margin-top: 0;
+      padding-bottom: 8px;
     }
 
     .button {
@@ -166,10 +172,6 @@
     transition: all .25 ease-in-out;
     text-decoration: none;
 
-    @include respond-to('mobile') {
-      display: none;
-    }
-
     &:hover {
       opacity: .7;
     }
@@ -179,6 +181,12 @@
     padding: 20px 0;
     border-bottom: 1px solid  $color-light-gray;
     display: flex;
+    margin-bottom: 18px;
+
+    @include respond-to('mobile') {
+      padding: 13px 0;
+      margin-bottom: 18px;
+    }
   }
 
   &__companion {
@@ -186,6 +194,36 @@
     flex-direction: column;
     flex: 1;
     align-self: center;
+
+    @include respond-to('mobile') {
+      display: none;
+    }
+
+    &_mob {
+      display: none;
+
+      @include respond-to('mobile') {
+        display: inline-flex;
+        text-align: right;
+      }
+
+      .account-messages-2 {
+
+        &__companion-name {
+          @include respond-to('mobile') {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+
+        &__companion-date {
+          @include respond-to('mobile') {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
   }
 
   &__companion-name {
@@ -201,7 +239,7 @@
   }
 
   .sale-preview-item {
-    flex: 1;
+    width: auto;
 
     &__params {
       display: none;
@@ -214,6 +252,26 @@
     &__name, &__price {
       font-size: 16px;
     }
+
+    &_image_right {
+
+      & .sale-preview-item__img-wrap {
+        @include respond-to('mobile') {
+          order: 0;
+          width: 92px;
+          height: 75px;
+          margin-left: 0;
+          margin-right: 15px;
+        }
+      }
+
+      & .sale-preview-item__text {
+        @include respond-to('mobile') {
+          order: 1;
+          text-align: left;
+        }
+      }
+    }
   }
 
   &__msg-wrap {
@@ -225,6 +283,10 @@
     font-size: 14px;
     color: $color-medium-gray;
     margin-bottom: 25px;
+
+    @include respond-to('mobile') {
+      margin-bottom: 22px;
+    }
   }
 
   &__msg-box {
@@ -238,6 +300,8 @@
 
     @include respond-to('mobile') {
       min-width: 100%;
+      padding: 15px 20px;
+      margin-bottom: 40px;
     }
 
     &::before {
@@ -253,10 +317,19 @@
   &__msg {
     width: 100%;
 
+    @include respond-to('mobile') {
+      width: auto;
+      max-width: 100%;
+    }
+
     &_right {
       display: flex;
       align-items: flex-end;
       flex-direction: column;
+
+      @include respond-to('mobile') {
+        align-self: flex-end;
+      }
 
       .account-messages-2__msg-box {
         background: #e5e9f8;
@@ -280,6 +353,10 @@
     color: $color-gray;
     margin-top: -15px;
     margin-bottom: 45px;
+
+    @include respond-to('mobile') {
+      margin-bottom: 17px;
+    }
   }
 
   &__msg-field {
@@ -292,6 +369,10 @@
     padding: 10px;
     font-family: $NerisLight;
     font-size: 14px;
+
+    @include respond-to('mobile') {
+      height: 104px;
+    }
   }
 
   &__msg-props {
@@ -300,7 +381,6 @@
     justify-content: space-between;
 
     @include respond-to('mobile') {
-      flex-direction: column;
       margin-bottom: 30px;
       align-items: center;
     }
@@ -308,10 +388,33 @@
     .button {
       width: 165px;
       height: 40px;
+
+      @include respond-to('mobile') {
+        width: 214px;
+        order: 0;
+      }
+    }
+  }
+
+  .upload-form {
+    @include respond-to('mobile') {
+      padding-bottom: 0;
+      order: 1;
     }
   }
 
   &__upload-file {
     width: 50% !important;
+
+    @include respond-to('mobile') {
+      width: auto !important;
+      padding-bottom: 0;
+    }
+
+    .text-field_dashed {
+      @include respond-to('mobile') {
+        display: none;
+      }
+    }
   }
 }
