@@ -46,14 +46,14 @@
   &__grid-container {
     color: $color-black;
     display: flex;
-
-    @include respond-to('laptop') {
-      overflow-x: hidden;
-    }
-
-    @include respond-to('tablet') {
-      overflow-x: hidden;
-    }
+    // 
+    // @include respond-to('laptop') {
+    //   overflow-x: hidden;
+    // }
+    //
+    // @include respond-to('tablet') {
+    //   overflow-x: hidden;
+    // }
 
     @include respond-to('mobile') {
       flex-direction: column;
