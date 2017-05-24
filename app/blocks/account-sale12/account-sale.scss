@@ -120,6 +120,10 @@
   &__tarif-group {
     margin-bottom: 24px;
     margin-top: -11px;
+
+    @include respond-to('laptop') {
+      width: 650px;
+    }
   }
 
   .tarif {
@@ -343,6 +347,32 @@
     &__content {
       padding-top: 10px;
       right: -6px;
+    }
+  }
+
+  .account-sale__propose__column-left {
+    @include respond-to('tablet') {
+
+      .hint__content {
+        right: inherit;
+      }
+
+      .account-propose::before {
+        right: inherit;
+        left: 4px;
+      }
+    }
+
+    @include respond-to('mobile') {
+
+      .hint__content {
+        right: inherit;
+      }
+
+      .account-propose::before {
+        right: inherit;
+        left: 4px;
+      }
     }
   }
 }
