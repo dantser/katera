@@ -8,6 +8,7 @@ export default () => {
     slidesPerView: 3,
     mousewheelControl: true,
     spaceBetween: 30,
+    freeMode: true,
     breakpoints: {
       320: {
         slidesPerView: 1,

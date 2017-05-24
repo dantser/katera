@@ -42,7 +42,7 @@ mixin event-page()
                   +banner('#', 'assets/images/banner2.jpg')
               +e.item
                 +sale-preview-item(getData('sale-preview-item'))
-        +map()
+        +map().map
         +e.content
           +e.inner-content
             +tag-list( 'video1', getData('tag-list')).__tags
@@ -53,4 +53,3 @@ mixin event-page()
         +e.slider._white.swiper-container
           +event-item(getData('event-item')).__white.wrapper.swiper-wrapper
           +e.swiper-pagination._shop-slider-pagination
-
