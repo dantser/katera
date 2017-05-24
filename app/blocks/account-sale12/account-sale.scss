@@ -47,8 +47,12 @@
     color: $color-black;
     display: flex;
 
+    @include respond-to('laptop') {
+      overflow-x: hidden;
+    }
+
     @include respond-to('tablet') {
-      flex-direction: column;
+      overflow-x: hidden;
     }
 
     @include respond-to('mobile') {
@@ -76,7 +80,7 @@
     flex-grow: 1;
 
     @include respond-to('laptop') {
-      max-width: 680px;
+      max-width: 645px;
     }
 
     @include respond-to('tablet') {
@@ -125,6 +129,11 @@
   .tarif {
     margin-bottom: 29px;
 
+    @include respond-to('laptop') {
+      max-width: 640px;
+      display: block;
+    }
+
     &:last-child {
       margin-bottom: 0;
 
@@ -134,6 +143,16 @@
 
       .tarif__buy__months, .tarif__buy__price {
         transform: translateX(8px);
+      }
+    }
+
+    &__wrap {
+      @include respond-to('laptop') {
+        padding-left: 15px;
+      }
+
+      @include respond-to('tablet') {
+        padding-left: 15px;
       }
     }
   }
@@ -169,19 +188,19 @@
   }
 
   .account-sale__submenu {
-    overflow: hidden;
+    overflow-x: auto;
     border: 1px solid $color-light-gray;
     border-right: none;
     border-left: none;
 
     @include respond-to('tablet') {
-      width: 100vw;
+      width: calc(100% + 30px);
       margin-left: -15px;
       padding-left: 15px;
     }
 
     @include respond-to('mobile') {
-      width: 100vw;
+      width: calc(100% + 30px);
       margin-left: -15px;
       padding-left: 15px;
     }
@@ -198,7 +217,7 @@
 
     @include respond-to('tablet') {
       font-size: 14px;
-      width: 100vw;
+      //width: 100vw;
       padding-left: 2px;
 
       &__title {
@@ -209,7 +228,7 @@
 
     @include respond-to('mobile') {
       font-size: 14px;
-      width: 100vw;
+      //width: 100vw;
       padding-left: 2px;
 
       &__item {
@@ -242,7 +261,7 @@
 
   .sale-preview-item {
     width: 341px;
-    margin-right: 26px;
+    //margin-right: 26px;
 
     &__text {
       transform: translateY(-4px);
@@ -283,8 +302,8 @@
     }
 
     @include respond-to('mobile') {
-      margin-bottom: 11px;
-      width: auto;
+      margin: 0 auto 11px;
+      width: 290px;
 
       &__params {
         display: block;
@@ -326,13 +345,18 @@
       }
     }
 
+    @include respond-to('laptop') {
+      justify-content: space-around;
+    }
+
     @include respond-to('tablet') {
       margin: 0;
       justify-content: center;
+      width: 100%;
     }
 
     @include respond-to('mobile') {
-      justify-content: space-between;
+      justify-content: space-around;
       margin: 0;
     }
   }
@@ -363,6 +387,11 @@
   }
 
   .tarif {
+    @include respond-to('laptop') {
+      max-width: 630px;
+      display: block;
+    }
+
     @include respond-to('tablet') {
       display: none;
     }
