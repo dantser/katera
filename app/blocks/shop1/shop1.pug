@@ -17,7 +17,8 @@ include ../shop3/shop3-page
 
 mixin shop1()
   +b.shop1&attributes(attributes)
-    //- +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
+    +e.banner(style='background-image: url(assets/images/branding/shop-bg.jpg)')
+    //- +e('img')(src='assets/images/branding/shop-bg.jpg' alt='').banner
     +container()
       +main-container().main-container_shadow.magazine-razdel__main-container
         +e.link

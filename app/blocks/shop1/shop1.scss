@@ -1,5 +1,10 @@
 .shop1 {
   padding: 118px 0;
+  position: relative;
+
+  @include respond-to('large-desktop') {
+    padding: 165px 0 0;
+  }
 
   @include respond-to('tablet') {
     padding: 0;
@@ -11,9 +16,25 @@
 
   &__banner {
     width: 100%;
-    height: auto;
-    pointer-events: none;
-    margin-bottom: -5px;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    background-size: cover;
+    background-position-x: 50%;
+    max-width: 1530px;
+
+    @include respond-to('large-desktop') {
+      max-width: 2100px;
+    }
+
+    @include respond-to('laptop') {
+      transform: translateX(-50%) scaleX(.9);
+      width: 111%;
+    }
 
     @include respond-to('tablet') {
       display: none;
