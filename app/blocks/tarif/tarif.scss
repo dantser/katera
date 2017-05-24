@@ -11,6 +11,11 @@
       padding-left: 15px;
     }
 
+    @include respond-to('laptop') {
+      flex-flow: column nowrap;
+      padding: 21px 23px 26px;
+    }
+
     @include respond-to('tablet') {
       flex-flow: column nowrap;
       padding: 21px 23px 26px;
@@ -28,6 +33,10 @@
     fill: $color-dark-blue;
     stroke: $color-dark-blue;
     margin-right: 12px;
+
+    @include respond-to('laptop') {
+      display: none;
+    }
 
     @include respond-to('tablet') {
       display: none;
@@ -58,6 +67,15 @@
       font-family: $NerisSemiBold;
     }
 
+    @include respond-to('laptop') {
+      flex-basis: auto;
+      text-align: center;
+      transform: none;
+      order: 1;
+      padding: 0 40px 12px;
+      border-bottom: 1px solid $color-light-gray;
+    }
+
     @include respond-to('tablet') {
       flex-basis: auto;
       text-align: center;
@@ -86,6 +104,11 @@
     cursor: pointer;
 
     @include respond-to('tablet') {
+      display: block;
+      order: 4;
+    }
+
+    @include respond-to('laptop') {
       display: block;
       order: 4;
     }
@@ -137,7 +160,11 @@
     }
 
     @include respond-to('laptop') {
-      margin-right: 30px;
+      transform: none;
+      order: 3;
+      margin: 0;
+      padding-bottom: 79px;
+      display: none;
     }
 
     @include respond-to('tablet') {
@@ -170,6 +197,10 @@
       font-size: 16px;
       font-family: $NerisSemiBold;
 
+      @include respond-to('laptop') {
+        color: $color-dark-blue;
+      }
+
       @include respond-to('tablet') {
         color: $color-dark-blue;
       }
@@ -184,6 +215,10 @@
       font-family: $NerisBlack;
       margin-bottom: 50px;
 
+      @include respond-to('laptop') {
+        margin-bottom: 0;
+      }
+
       @include respond-to('tablet') {
         margin-bottom: 0;
       }
@@ -191,6 +226,13 @@
       @include respond-to('mobile') {
         margin-bottom: 0;
       }
+    }
+
+    @include respond-to('laptop') {
+      transform: none;
+      order: 2;
+      align-self: center;
+      margin-bottom: 23px;
     }
 
     @include respond-to('tablet') {
@@ -216,10 +258,8 @@
     height: 40px;
 
     @include respond-to('laptop') {
-      right: 0;
-      width: 135px;
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: -223px;
+      display: none;
     }
 
     @include respond-to('tablet') {
