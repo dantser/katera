@@ -222,10 +222,6 @@
   &__content-wrap {
     display: flex;
     flex-flow: row wrap;
-
-    @include respond-to('mobile') {
-      flex-flow: column wrap;
-    }
   }
 
   &__props {
@@ -428,13 +424,6 @@
     }
   }
 
-  .event-page__text-inner {
-    @include respond-to('mobile') {
-      display: flex !important;
-      flex-direction: column;
-    }
-  }
-
   .event-page__sidebar {
     @include respond-to('tablet') {
       display: none;
@@ -452,6 +441,39 @@
       display: flex;
       height: 300px;
       overflow: hidden;
+    }
+  }
+
+  &__swiper-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    text-align: center;
+    display: none;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $color-dark-blue;
+      margin: 0 10px;
+      display: inline-block;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: .25s ease-in-out;
+      background-color: $color-white;
+
+      &-active {
+        border-width: 3px;
+      }
+    }
+
+    @include respond-to('tablet') {
+      display: block;
+    }
+
+    @include respond-to('mobile') {
+      display: block;
     }
   }
 }
