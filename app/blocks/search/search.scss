@@ -112,4 +112,10 @@
       width: 290px;
     }
   }
+
+  .sale-preview-item__params {
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+  }
 }
