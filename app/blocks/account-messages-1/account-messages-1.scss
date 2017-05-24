@@ -155,13 +155,24 @@
   }
 
   &__message-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid  $color-light-gray;
     padding: 25px 0;
 
+    @include respond-to('mobile') {
+      padding: 17px 0;
+    }
+
     .account-messages-1__checkbox {
       align-self: flex-start;
+
+      @include respond-to('mobile') {
+        margin-top: 5px;
+        margin-right: 18px;
+        width: auto;
+      }
     }
   }
 
@@ -185,12 +196,22 @@
   &__message-content {
     max-width: 520px;
     display: inline-flex;
+
+    @include respond-to('mobile') {
+      width: 100%;
+    }
   }
 
   &__message-props {
     display: flex;
     margin-left: auto;
     justify-content: space-between;
+
+    @include respond-to('mobile') {
+      position: absolute;
+      top: 25px;
+      right: 0;
+    }
   }
 
   &__request {
@@ -201,6 +222,10 @@
     transition: all .25 ease-in-out;
     text-decoration: none;
     font-size: 16px;
+
+    @include respond-to('mobile') {
+      display: none;
+    }
 
     &:hover {
       opacity: .7;
@@ -215,20 +240,37 @@
     font-size: 18px;
     line-height: 26px;
     font-family: $NerisSemiBold;
+
+    @include respond-to('mobile') {
+      font-size: 14px;
+    }
   }
 
   &__message-heading {
     color: $color-medium-gray;
     line-height: 26px;
     margin: 7px 0;
+
+    @include respond-to('mobile') {
+      margin: 0;
+    }
   }
 
   &__message-date {
     color: $color-medium-gray;
+
+    @include respond-to('mobile') {
+      font-size: 12px;
+    }
   }
 
   &__message-text {
     line-height: 26px;
     font-size: 14px;
+
+    @include respond-to('mobile') {
+      max-height: 54px;
+      overflow: hidden;
+    }
   }
 }
