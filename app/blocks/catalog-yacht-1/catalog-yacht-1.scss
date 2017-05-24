@@ -103,6 +103,10 @@
   .yacht-slider {
     padding-bottom: 0;
 
+    @include respond-to('mobile') {
+      width: 290px;
+    }
+
     img {
       height: 213px;
     }
