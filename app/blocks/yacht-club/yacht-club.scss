@@ -59,6 +59,7 @@
     height: 400px;
     width: 100%;
     display: block;
+    overflow: hidden;
 
     @include respond-to('large-desktop') {
       height: 540px;
