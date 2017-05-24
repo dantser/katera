@@ -111,12 +111,12 @@ mixin yacht-club()
               +e.item
                 +e('span').title График работы:
                 +e('span').descr Круглосуточно.
+          +e.map_contacts
             +map()
 
-    +container()
-      +e.banner-bottom
-        +banner('#', 'assets/images/banner.jpg')._overlay
-            +e('img')(src='assets/images/banner-img.png').little
+    +e.banner-bottom
+      +banner('#', 'assets/images/banner.jpg')._overlay
+          +e('img')(src='assets/images/banner-img.png').little
 
   +gallery-popup()
 
