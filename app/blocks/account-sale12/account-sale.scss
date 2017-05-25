@@ -46,7 +46,7 @@
   &__grid-container {
     color: $color-black;
     display: flex;
-    // 
+    //
     // @include respond-to('laptop') {
     //   overflow-x: hidden;
     // }
@@ -63,6 +63,10 @@
   &__col-nav {
     padding-right: 15px;
     flex: 0 0 33%;
+
+    @include respond-to('laptop') {
+      flex: 0 0 30%;
+    }
 
     @include respond-to('tablet') {
       flex: none;
