@@ -10,13 +10,15 @@ include ../counter/counter
 include ../reset-filter/reset-filter
 
 mixin filter()
-  +b.filter&attributes(attributes)
+  +b.filter#filterTab&attributes(attributes)
 
-    +e.nav
-      +division('Купить').A(href='#')._active._arrow-left.__division
-      +division('Арендовать').A(href='#')._arrow-left.__division
+    +e('ul').nav
+       li
+         +division('Купить').A(href='#filter-1')._active._arrow-left.__division
+       li
+         +division('Арендовать').A(href='#filter-2')._arrow-left.__division
 
-    +e('form').tab
+    +e('form').tab#filter-1
       +e.content
         +e.col
           +e.item
@@ -55,3 +57,42 @@ mixin filter()
             +e.field._type_search-btn
               +button()(type='submit')._kind_red Найти
             +e('a')(href='#').link Расширенный список
+    +e('form').tab#filter-2
+      +e.content
+        +e.col
+          +e.item
+            +e.field._type_select
+              +select('item1', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Тип яхты')
+          +e.item
+            +e.field._type_select
+              +select('item2', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Верфь')
+
+        +e.col
+          +e.item
+            +e.field._type_select
+              +select('item2', [{value: '1', title: 'item #1'}, {value: '2', title: 'item #2'}], false, 'Модель')
+          +e.item._col
+            +e.row
+              +e.label Длина
+              +e.range-info
+                +e('span').range-info-text.js-filter-sale-length-min
+                +e('span').range-info-text.js-filter-sale-length-max
+            +e.field._type_range
+              +slider-range().js-filter-sale-length-slider
+
+        +e.col
+          +e.item
+            +e('span').label Цена
+            +e.field._type_text-field-group
+              +e.field._type_text-field-small
+                +text-field({name: 'item10', placeholder: 'от'})
+              +e.separator
+              +e.field._type_text-field-small
+                +text-field({name: 'item11', placeholder: 'до'})
+            +e.field._type_select-currency
+              +select-currency()
+
+          +e.item._col
+            +e.field._type_search-btn
+              +button()(type='submit')._kind_red Найти
+            +e('a')(href='#').link Расширенный список11

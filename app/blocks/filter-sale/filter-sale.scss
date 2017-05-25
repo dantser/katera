@@ -140,11 +140,9 @@
     border-bottom: 1px solid #e5e5e5;
   }
 
-  &__division {
-    text-decoration: none;
+  &__nav__item {
     padding-left: 0;
     padding-right: 0;
-    font-size: rem(20px);
 
     &:not(:last-child) {
       margin-right: 100px;
@@ -153,6 +151,11 @@
         margin-right: 30px;
       }
     }
+  }
+
+  &__division {
+    text-decoration: none;
+    font-size: rem(20px);
 
     @include respond-to('mobile') {
       font-size: rem(16px);

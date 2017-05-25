@@ -17,9 +17,9 @@ mixin sale-list()
       +main-container().main-container_shadow.sale-raznoe__main-container
         +e.content.js-sale-content
           +e.filter
-            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}]).js-filter-sale
-          +mobile-slide-popup()#filter-sale
-            +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
+            +filter-sale([{title: "Купить", path: "#listTab-1", active: true}, {title: "Арендовать", path: "#listTab-2"}]).js-filter-sale
+          +mobile-slide-popup()
+            +filter-sale([{title: "Купить1", path: "#listTab-1", active: true}, {title: "Арендовать", path: "#listTab-2"}])
           +e.result
             +e.sort-filter
               +e.output

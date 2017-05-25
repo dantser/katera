@@ -7,6 +7,17 @@ export default () => {
   if (!filter) {
     return;
   }
+  // tabs
+  const DIVISION_CLASS = '.division';
+  const DIVISION_ACTIVE_CLASS = 'division_active';
+  filterSale.tabs({
+    activate: (event, ui) => {
+      const { newTab, oldTab } = ui;
+
+      oldTab.find(DIVISION_CLASS).removeClass(DIVISION_ACTIVE_CLASS);
+      newTab.find(DIVISION_CLASS).addClass(DIVISION_ACTIVE_CLASS);
+    },
+  });
 
   // slider range
   const lengthSliderTextMin = $('.js-filter-sale-length-min');
