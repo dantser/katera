@@ -448,4 +448,10 @@
       }
     }
   }
+
+  .article-preview_title-under-img .article-preview__picture::before {
+    @include respond-to('mobile') {
+      background-image: none;
+    }
+  }
 }
