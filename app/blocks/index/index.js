@@ -46,6 +46,10 @@ export default () => {
   mainSliderItem.on('transitionend', () => {
     $('.index').css('visibility', 'visible');
     shouldAnimateSlider = false;
+
+    setTimeout(() => {
+      disableScroll.off();
+    }, 750);
   });
 
   if ($(document).scrollTop() > 100 && w.width() > 1024) {
@@ -69,8 +73,6 @@ export default () => {
       disableScroll.on();
       $('.index').css('visibility', 'hidden');
       mainSliderItem.addClass('main-slider_animated');
-    } else {
-      disableScroll.off();
     }
 
     if (sT + vH >= yachtWidget.parent().offset().top) {
