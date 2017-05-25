@@ -19,6 +19,10 @@
 .articles-grid {
   flex-basis: 100%;
 
+  @include respond-to('laptop') {
+    overflow-x: hidden;
+  }
+
   @include respond-to('tablet') {
     overflow-x: hidden;
   }
