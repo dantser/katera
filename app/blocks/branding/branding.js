@@ -31,6 +31,10 @@ export default () => {
     } else {
       brandingTop.css({ top: `${header.find('.header__container').outerHeight()}px`});
     }
+
+    if ($(document).scrollTop() > 500) {
+      brandingTop.find('.branding__scroll-btn').hide();
+    }
   }
 
   w.on('scroll', () => {
@@ -55,6 +59,7 @@ export default () => {
       brandingTopImage.css({ minWidth: '100%', minHeight: '100%' });
     } else {
       brandingTopImage.css({ minWidth: '105%', minHeight: '105%' });
+      brandingTop.find('.branding__scroll-btn').hide();
     }
   });
 };
