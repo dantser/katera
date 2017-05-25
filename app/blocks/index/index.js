@@ -57,7 +57,7 @@ export default () => {
       transition: 'unset',
       transform: 'scale(1)',
     });
-
+    $('.index').css('visibility', 'visible');
     shouldAnimateSlider = false;
   }
 
