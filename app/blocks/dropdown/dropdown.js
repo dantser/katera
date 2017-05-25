@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import disableScroll from 'disable-scroll';
 
 export default class Dropdown {
   constructor(elementClass, activeClass = 'dropdown_active') {
@@ -23,6 +24,7 @@ export default class Dropdown {
   show(cb = f => f) {
     this.element.fadeIn(() => {
       this.element.addClass(this.activeClass);
+      disableScroll.on();
       cb();
     });
   }
@@ -30,6 +32,7 @@ export default class Dropdown {
   hide(cb) {
     this.element.fadeOut(() => {
       this.element.removeClass(this.activeClass);
+      disableScroll.off();
       cb();
     });
   }

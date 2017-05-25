@@ -1,15 +1,19 @@
 import $ from 'jquery';
-import makeItFixed from '../../scripts/common/make-it-fixed';
+import disableScroll from 'disable-scroll';
 
+/* eslint-disable */
 export default () => {
   const header = $('.header');
 
-  if (!header) {
+  if (!header.length) {
     return;
   }
 
-  if (header.hasClass('header_sticky')) {
-    makeItFixed('header', 'header_sticky', 'header_fixed');
+  // Обработка search-bar
+  const searchBar = $('.header__search-bar');
+
+  if (!searchBar.length) {
+    return;
   }
 
   const searchOverlay = $('<div></div>')
@@ -23,19 +27,50 @@ export default () => {
       zIndex: 8000,
     })
     .hide()
-    .insertAfter(header);
+    .insertAfter(header)
+    .on('click', function() {
+      $(this).fadeOut();
+      searchBar.removeClass('search-bar_active');
+      disableScroll.off();
+    });
 
-  $('html, body').on('click', '.header__search-bar', () => {
+  searchBar.find('.js-search-bar__button').on('click', () => {
     const searchBar = $('.header__search-bar');
 
     if (searchBar.hasClass('search-bar_active')) {
       searchOverlay.fadeOut(() => {
         searchBar.removeClass('search-bar_active');
+        disableScroll.off();
       });
     } else {
       searchOverlay.fadeIn(() => {
         searchBar.addClass('search-bar_active');
+        disableScroll.on();
       });
     }
   });
+
+  // фиксация хедера
+  if (!header.hasClass('header_sticky')) {
+    return;
+  }
+
+  const w = $(window);
+  const navContainer = header.find('.header__container');
+  const navTopBreakpoint = navContainer.offset().top;
+
+  const fixHeader = () => {
+    const sT = w.scrollTop();
+
+    if (sT >= navTopBreakpoint && !navContainer.hasClass('header__container_fixed')) {
+      navContainer.addClass('header__container_fixed');
+    }
+
+    if (sT < navTopBreakpoint && navContainer.hasClass('header__container_fixed')) {
+      navContainer.removeClass('header__container_fixed');
+    }
+  };
+
+  w.on('scroll', fixHeader);
+  fixHeader();
 };

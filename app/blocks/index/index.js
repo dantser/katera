@@ -14,7 +14,7 @@ export default () => {
   const header = $('.header');
   const w = $(window);
 
-  if (mainSlider && mainSlider.length > 0 && header && header.length > 0 && w.width() > 991) {
+  if (mainSlider && mainSlider.length > 0 && header && header.length > 0 && w.width() > 1200) {
     const nextMainSliderHeight = w.height() - header.outerHeight();
     mainSlider.css({ height: `${nextMainSliderHeight}px`});
   }

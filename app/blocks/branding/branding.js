@@ -15,27 +15,27 @@ export default () => {
   const header = $('.header');
   const w = $(window);
 
-  if (header.length > 0 && w.width() > 991) {
+  if (header.length > 0 && w.width() > 1024) {
     const nextBrandingTopHeight = w.height() - header.outerHeight();
 
-    brandingTop.css({ height: `${nextBrandingTopHeight}px`});
+    brandingTop.css('height', `${nextBrandingTopHeight}px`);
   }
 
   let nextImageMinWidth = null;
 
   const isIndex = $('.index').length;
 
-  if (isIndex && w.width() > 991) {
+  if (isIndex && w.width() > 1024) {
     if ($(document).scrollTop() < header.height()) {
-      brandingTop.css({ top: `${header.height()}px`});
+      brandingTop.css('top', `${header.height() - $(document).scrollTop()}px`);
+    } else {
+      brandingTop.css({ top: `${header.find('.header__container').outerHeight()}px`});
     }
-
-    brandingBottom.height(w.innerHeight() - 65 - footer.height());
   }
 
   w.on('scroll', () => {
 
-    if ($(window).width() <= 991) {
+    if ($(window).width() <= 1024) {
       return;
     }
 
@@ -43,11 +43,10 @@ export default () => {
       return;
     }
 
-    const fixedHeader = $('.header_fixed');
-    const hasToBeFixed = fixedHeader.length;
-
     if (w.scrollTop() < header.height()) {
-      brandingTop.css({ top: `${header.height() - w.scrollTop()}px`});
+      brandingTop.css('top', `${header.height() - w.scrollTop()}px`);
+    } else {
+      brandingTop.css({ top: `${header.find('.header__container').outerHeight()}px`});
     }
 
     const animateImage = $(window).innerHeight() + $(document).scrollTop() - footer.offset().top - brandingBottom.height();

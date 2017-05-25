@@ -17,32 +17,12 @@
     height: 35px;
   }
 
-  &_fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: auto;
-    box-shadow: 0 0 15px 0 rgba(19, 11, 89, .14);
-
-    .header {
-
-      &__banner {
-        display: none;
-      }
-    }
-  }
-
   &_index {
     @include respond-to('tablet') {
       position: absolute;
       top: 50vh;
       left: 0;
       z-index: 200;
-
-      &.header_fixed {
-        position: fixed;
-        top: 0;
-      }
     }
 
     @include respond-to('mobile') {
@@ -50,11 +30,6 @@
       top: 100vh;
       left: 0;
       z-index: 200;
-
-      &.header_fixed {
-        position: fixed;
-        top: 0;
-      }
     }
   }
 
@@ -83,6 +58,15 @@
 
     @include respond-to('mobile') {
       border-top: none;
+    }
+
+    &_fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-shadow: 0 0 15px 0 rgba(19, 11, 89, .14);
+      background-color: #fff;
+      width: 100%;
     }
   }
 
