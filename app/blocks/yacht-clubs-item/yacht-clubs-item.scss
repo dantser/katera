@@ -23,6 +23,7 @@
     .image-bg {
       z-index: inherit;
       height: 213px;
+      width: 100%;
 
       @include respond-to('mobile') {
         height: 158px;
@@ -34,7 +35,8 @@
     }
 
     .yacht-clubs-item__img {
-      max-width: 100%;
+      //flex-basis: 100%;
+      max-width: 220px;
     }
   }
 

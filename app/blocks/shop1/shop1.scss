@@ -1,54 +1,46 @@
 .shop1 {
   position: relative;
 
-  // @include respond-to('tablet') {
-  //   padding: 0;
-  // }
-  //
-  // @include respond-to('mobile') {
-  //   padding: 0;
-  // }
-
   &__brand-bg {
-    width: 100%;
+    margin: 0 auto;
     height: 100%;
-    position: absolute;
-    top: initial;
     z-index: -1;
-    max-width: 1560px;
-    transform: translateX(-50%);
-    left: 50%;
+    max-width: 1565px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
 
-    @include respond-to('large-desktop') {
-      max-width: 2100px;
+    @include respond-to ('large-desktop') {
+      max-width: 1920px;
     }
 
-    @include respond-to('tablet') {
-      display: none;
+    @include respond-to ('tablet') {
+      background-image: none;
     }
 
-    @include respond-to('mobile') {
-      display: none;
+    @include respond-to ('mobile') {
+      background-image: none;
     }
   }
 
   &__banner {
-    max-width: 1560px;
-    width: 100%;
-    height: auto;
-    pointer-events: none;
-    display: block;
+    max-width: 1565px;
+    height: 137px;
     margin: 0 auto -1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
 
-    @include respond-to('large-desktop') {
-      max-width: 2100px;
+    @include respond-to ('large-desktop') {
+      max-width: 1920px;
+      height: 167px;
     }
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       display: none;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       display: none;
     }
   }
@@ -59,11 +51,11 @@
       background-color: $color-white;
     }
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       display: none;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       display: none;
     }
   }
@@ -76,12 +68,12 @@
       padding-bottom: 7px;
     }
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       margin-bottom: 0;
       padding: 11px 0 4px;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       margin-bottom: 0;
       padding: 11px 0 4px;
     }
@@ -102,22 +94,22 @@
       text-decoration: none;
       margin: 0 auto;
 
-      @include respond-to('tablet') {
+      @include respond-to ('tablet') {
         margin: inherit;
       }
 
-      @include respond-to('mobile') {
+      @include respond-to ('mobile') {
         margin: inherit;
       }
     }
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       display: flex;
       padding: 8px 0 9px;
       margin-bottom: 0;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       display: flex;
       padding: 8px 0 9px;
       margin-bottom: 0;
@@ -132,12 +124,12 @@
     margin: 0 97px 0 99px;
     width: auto;
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       padding: 14px 15px 15px;
       margin: 0;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       padding: 14px 15px 15px;
       margin: 0;
     }
@@ -146,11 +138,11 @@
   &__filter__label {
     align-self: center;
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       display: none;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       display: none;
     }
   }
@@ -166,13 +158,13 @@
     line-height: 24px;
     align-items: center;
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       margin: 0 15px 7px;
       border-top: none;
       padding-top: 17px;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       margin: 0 15px 7px;
       padding-top: 17px;
       border-top: none;
@@ -208,18 +200,18 @@
     &__wrapper {
       justify-content: center;
 
-      @include respond-to('mobile') {
+      @include respond-to ('mobile') {
         justify-content: flex-start;
       }
     }
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       justify-content: space-between;
       margin: 0;
       padding: 0 15px;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       justify-content: space-between;
       margin: 0;
       padding: 0 15px;
@@ -247,7 +239,7 @@
         display: none;
       }
 
-      @include respond-to('large-desktop') {
+      @include respond-to ('large-desktop') {
 
         &:nth-child(5n) {
           margin-right: 30px;
@@ -258,7 +250,7 @@
         }
       }
 
-      @include respond-to('tablet') {
+      @include respond-to ('tablet') {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
@@ -272,7 +264,7 @@
         }
       }
 
-      @include respond-to('mobile') {
+      @include respond-to ('mobile') {
         flex-direction: row;
         flex-wrap: nowrap;
         width: 290px;
@@ -292,7 +284,7 @@
       }
 
       &__text {
-        @include respond-to('mobile') {
+        @include respond-to ('mobile') {
           max-width: inherit;
           width: calc(100% - 107px);
         }
@@ -308,13 +300,13 @@
     padding: 0 6px 4px 8px;
     display: block;
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       width: 290px;
       margin: 30px auto;
       padding-left: 7px;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       width: 290px;
       margin: 30px auto;
       padding-left: 7px;
@@ -327,11 +319,11 @@
     width: 100%;
     z-index: 15;
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       display: none;
     }
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       display: none;
     }
 
@@ -351,15 +343,15 @@
     padding: 0 315px;
     border-top: none;
 
-    @include respond-to('tablet') {
+    @include respond-to ('tablet') {
       display: none;
     }
 
-    @include respond-to('mobile') {
+    @include respond-to ('mobile') {
       display: none;
     }
 
-    @include respond-to('large-desktop') {
+    @include respond-to ('large-desktop') {
       padding: 0 450px 1px;
     }
 

@@ -214,65 +214,35 @@
   &_color_red:hover {
 
     .article-preview__picture {
-      box-shadow:
-        0 2px 2px 0 rgba(215, 64, 64, .2),
-        0 4px 4px 0 rgba(215, 64, 64, .2),
-        0 8px 8px 0 rgba(215, 64, 64, .2),
-        0 16px 16px 0 rgba(215, 64, 64, .2),
-        0 32px 32px 0 rgba(215, 64, 64, .2),
-        0 64px 64px 0 rgba(215, 64, 64, .2);
+      @include article-shadow(215, 64, 64, .1);
     }
   }
 
   &_color_dark-blue:hover {
 
     .article-preview__picture {
-      box-shadow:
-        0 2px 2px 0 rgba(19, 11, 89, .2),
-        0 4px 4px 0 rgba(19, 11, 89, .2),
-        0 8px 8px 0 rgba(19, 11, 89, .2),
-        0 16px 16px 0 rgba(19, 11, 89, .2),
-        0 32px 32px 0 rgba(19, 11, 89, .2),
-        0 64px 64px 0 rgba(19, 11, 89, .2);
+      @include article-shadow(11, 3, 73, .1);
     }
   }
 
   &_color_light-blue:hover {
 
     .article-preview__picture {
-      box-shadow:
-        0 2px 2px 0 rgba(23, 194, 192, .2),
-        0 4px 4px 0 rgba(23, 194, 192, .2),
-        0 8px 8px 0 rgba(23, 194, 192, .2),
-        0 16px 16px 0 rgba(23, 194, 192, .2),
-        0 32px 32px 0 rgba(23, 194, 192, .2),
-        0 64px 64px 0 rgba(23, 194, 192, .2);
+      @include article-shadow(55, 186, 224, .1);
     }
   }
 
   &_color_light-amber:hover {
 
     .article-preview__picture {
-      box-shadow:
-        0 2px 2px 0 rgba(216, 209, 28, .2),
-        0 4px 4px 0 rgba(216, 209, 28, .2),
-        0 8px 8px 0 rgba(216, 209, 28, .2),
-        0 16px 16px 0 rgba(216, 209, 28, .2),
-        0 32px 32px 0 rgba(216, 209, 28, .2),
-        0 64px 64px 0 rgba(216, 209, 28, .2);
+      @include article-shadow(216, 209, 28, .2);
     }
   }
 
   &_color_blue:hover {
 
     .article-preview__picture {
-      box-shadow:
-        0 2px 2px 0 rgba(0, 0, 255, .2),
-        0 4px 4px 0 rgba(0, 0, 255, .2),
-        0 8px 8px 0 rgba(0, 0, 255, .2),
-        0 16px 16px 0 rgba(0, 0, 255, .2),
-        0 32px 32px 0 rgba(0, 0, 255, .2),
-        0 64px 64px 0 rgba(0, 0, 255, .2);
+      @include article-shadow(19, 11, 89, .1);
     }
   }
 }

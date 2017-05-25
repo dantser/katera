@@ -17,27 +17,27 @@ include ../shop3/shop3-page
 
 mixin shop1()
   +b.shop1&attributes(attributes)
-    +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
-    +e.IMG(src='assets/images/branding/shop-main-bg.jpg' alt='').brand-bg
-    +container()
-      +main-container().main-container_shadow.magazine-razdel__main-container
-        +e.link
-          +e('a')(href='#') Информация о магазине
-        +main-slider(true)
-        +e.tabs#shopTabs
-          +submenu(getData('submenu-shop')).shop1__submenu
-          +e#shop-1.shop-1
-            +filter-shop()
-            +e.sort
-              +e.found
-                +e('span').sort__output 126
-                +e('span') предложений
-              +e.price
-                +e('span').filter__label Сортировать
-                - var filterData = getData('filter')
-                  +select(filterData.priceSort.name, filterData.priceSort.options)
-            +shop-grid(getData('sale-preview-item-extended')).shop1__grid
-            +button()._rounded._kind_red.__show-more Показать еще
-          +shop2-page()#shop-2
-          +shop3-page()#shop-3
-    +e('img')(src='assets/images/branding/shop-banner.jpg' alt='').banner
+    +e(style='background-image: url(assets/images/branding/shop-banner.jpg)').banner
+    +e(style='background-image: url(assets/images/branding/shop-main-bg.jpg)').brand-bg
+      +container()
+        +main-container().main-container_shadow.magazine-razdel__main-container
+          +e.link
+            +e('a')(href='#') Информация о магазине
+          +main-slider(true)
+          +e.tabs#shopTabs
+            +submenu(getData('submenu-shop')).shop1__submenu
+            +e#shop-1.shop-1
+              +filter-shop()
+              +e.sort
+                +e.found
+                  +e('span').sort__output 126
+                  +e('span') предложений
+                +e.price
+                  +e('span').filter__label Сортировать
+                  - var filterData = getData('filter')
+                    +select(filterData.priceSort.name, filterData.priceSort.options)
+              +shop-grid(getData('sale-preview-item-extended')).shop1__grid
+              +button()._rounded._kind_red.__show-more Показать еще
+            +shop2-page()#shop-2
+            +shop3-page()#shop-3
+    +e(style='background-image: url(assets/images/branding/shop-banner.jpg)').banner

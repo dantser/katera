@@ -17,7 +17,19 @@
 }
 
 .articles-grid {
-  overflow: hidden;
+  flex-basis: 100%;
+
+  @include respond-to('laptop') {
+    overflow-x: hidden;
+  }
+
+  @include respond-to('tablet') {
+    overflow-x: hidden;
+  }
+
+  @include respond-to('mobile') {
+    overflow-x: hidden;
+  }
 
   .col_three {
     @include respond-to(mobile) {
@@ -29,8 +41,6 @@
 .grid {
   padding: 0;
   margin: 0;
-  // float: left;
-  overflow: hidden;
 
   &:not(:first-of-type) {
     padding-top: 30px;

@@ -38,6 +38,10 @@
     flex-grow: 1;
     margin-top: -11px;
 
+    @include respond-to('laptop') {
+      padding-right: 10px;
+    }
+
     @include respond-to('tablet') {
       padding-right: 15px;
     }
