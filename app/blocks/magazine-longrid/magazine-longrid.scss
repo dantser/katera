@@ -433,18 +433,44 @@
     }
   }
 
-  .extra-articles__item {
-    @include respond-to('mobile') {
-      border-top: none;
+  .extra-articles {
 
-      &:first-child {
-        border-top: 1px solid $color-light-gray;
+    &__article {
+      margin: 0 auto;
+      justify-content: flex-start;
+
+      @include respond-to('laptop') {
+        width: 810px;
+      }
+
+      @include respond-to('tablet') {
+        width: 80%;
       }
     }
 
-    .article-preview {
+    &__item {
+      margin: 0 auto;
+
+      @include respond-to('large-desktop') {
+        margin: 0 49px;
+      }
+
+      @include respond-to('laptop') {
+        margin: 0 4px;
+      }
+
       @include respond-to('mobile') {
-        border: none;
+        border-top: none;
+
+        &:first-child {
+          border-top: 1px solid $color-light-gray;
+        }
+      }
+
+      .article-preview {
+        @include respond-to('mobile') {
+          border: none;
+        }
       }
     }
   }
