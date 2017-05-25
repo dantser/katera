@@ -386,7 +386,9 @@
 
       &__params {
         @include respond-to('mobile') {
-          display: block;
+          //display: block;
+          flex-direction: column;
+          align-items: flex-start;
           margin: 0;
           padding: 0;
         }
