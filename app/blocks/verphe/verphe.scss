@@ -69,7 +69,7 @@
     @include respond-to('tablet') {
       //padding-right: 25px;
       padding: 0;
-      width: calc(100% - 30px);
+      width: 100%;
       margin: 0 auto;
 
       &::after {
@@ -87,7 +87,7 @@
     @include respond-to('mobile') {
       //padding-right: 25px;
       padding: 0;
-      width: calc(100% - 30px);
+      width: 100%;
       margin: 0 auto;
 
       &::after {
@@ -131,9 +131,9 @@
     justify-content: space-between;
 
     @include respond-to('tablet') {
-      margin-top: 7px;
       order: 1;
       flex-direction: column;
+      margin-top: 7px;
     }
 
     @media (width: 768px) {
@@ -216,12 +216,15 @@
     @include respond-to('tablet') {
       order: 2;
       align-self: center;
-      width: auto;
+      width: 100%;
+      padding: 0 15px;
+      max-width: 768px;
     }
 
     @include respond-to('mobile') {
       order: 2;
-      width: auto;
+      width: 100%;
+      padding: 0 15px;
     }
   }
 
@@ -439,8 +442,23 @@
   .sale-preview-item {
     margin-top: 10px !important;
 
+    @include respond-to('tablet') {
+      align-items: flex-start;
+
+      &__text {
+        min-height: 107px;
+      }
+
+      &__img-wrap {
+        height: 98px;
+        align-self: center;
+      }
+    }
+
     @include respond-to('mobile') {
       flex-direction: row;
+      min-height: 110px;
+      align-items: flex-start;
 
       &__img-wrap {
         margin-right: 30px;
@@ -449,8 +467,9 @@
 
         @include respond-to('mobile') {
           width: 107px;
-          height: 93px;
+          height: 98px;
           margin-right: 3px;
+          align-self: baseline;
         }
       }
 
@@ -462,6 +481,9 @@
         text-align: left;
         min-height: inherit;
         padding-bottom: 4px;
+        width: 172px;
+        align-self: flex-end;
+        max-height: 100px;
       }
 
       &__param {
@@ -486,7 +508,11 @@
         display: block !important;
         margin: 0;
         padding: 0;
-        width: 100%;
+        width: auto;
+      }
+
+      @include respond-to('tablet') {
+        max-width: 170px;
       }
     }
 
@@ -494,16 +520,16 @@
       font-size: rem(12px);
 
       @include respond-to('mobile') {
-        display: block;
-        float: left;
+        display: inline-block;
         text-align: center;
+        float: none;
       }
     }
 
     &__text {
       padding: 1px 5px 5px 9px;
-      min-height: 130px;
       margin-top: 0;
+      min-height: 130px;
     }
 
     &__name, &__price {
