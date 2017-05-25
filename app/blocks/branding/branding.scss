@@ -81,6 +81,7 @@
         display: block;
         width: 22px;
         height: 22px;
+        animation: brandngCaretBtn .75s infinite ease-in-out;
 
         .branding__caret {
           width: 22px;
@@ -88,6 +89,10 @@
 
           * {
             stroke: $color-white;
+          }
+
+          &:first-child {
+            animation: brandngCaret .75s infinite ease-in-out;
           }
 
           &:last-child {
@@ -260,5 +265,27 @@
         width: calc(50vw - 578px);
       }
     }
+  }
+}
+
+@keyframes brandngCaretBtn {
+
+  from {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+@keyframes brandngCaret {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
