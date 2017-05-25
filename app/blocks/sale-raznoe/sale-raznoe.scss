@@ -186,7 +186,7 @@
     transition: box-shadow .25s ease-in-out;
 
     &:last-child {
-      margin-right: auto;
+      margin-right: 0;
     }
 
     @include respond-to('large-desktop') {
