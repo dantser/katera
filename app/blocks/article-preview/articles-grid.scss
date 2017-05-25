@@ -17,6 +17,7 @@
 }
 
 .articles-grid {
+  flex-basis: 100%;
 
   .col_three {
     @include respond-to(mobile) {
