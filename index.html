@@ -206,41 +206,49 @@
                         <div class="main-slider swiper-container">
                             <div class="main-slider__swiper-pagination"></div>
                             <div class="main-slider__wrapper swiper-wrapper">
-                                <div class="main-slider__slide swiper-slide">
-                                    <div class="main-slider__overlay">
-                                        <div class="main-slider__slide-text">Sunseeker 62 Predator, 2008
+                                <a class="main-slider__slide swiper-slide" href="#">
+                                    <span class="main-slider__overlay">
+                                        <span class="main-slider__slide-text">Sunseeker 62 Predator, 2008
                                             <span class="main-slider__price">980 000 €</span>
-                                        </div>
-                                    </div>
+                                        </span>
+                                    </span>
                                     <img class="main-slider__img" src="assets/images/yacht.jpg" alt="" role="presentation" />
-                                </div>
-                                <div class="main-slider__slide swiper-slide">
-                                    <div class="main-slider__overlay">
-                                        <div class="main-slider__slide-text">Sunseeker 62 Predator, 2008
+                                </a>
+                                <a class="main-slider__slide swiper-slide" href="#">
+                                    <span class="main-slider__overlay">
+                                        <span class="main-slider__slide-text">Sunseeker 62 Predator, 2008
                                             <span class="main-slider__price">980 000 €</span>
-                                        </div>
-                                    </div>
+                                        </span>
+                                    </span>
                                     <img class="main-slider__img" src="assets/images/yacht.jpg" alt="" role="presentation" />
-                                </div>
-                                <div class="main-slider__slide swiper-slide">
-                                    <div class="main-slider__overlay">
-                                        <div class="main-slider__slide-text">Sunseeker 62 Predator, 2008
+                                </a>
+                                <a class="main-slider__slide swiper-slide" href="#">
+                                    <span class="main-slider__overlay">
+                                        <span class="main-slider__slide-text">Sunseeker 62 Predator, 2008
                                             <span class="main-slider__price">980 000 €</span>
-                                        </div>
-                                    </div>
+                                        </span>
+                                    </span>
                                     <img class="main-slider__img" src="assets/images/yacht.jpg" alt="" role="presentation" />
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <main class="main-container main-container_shadow index__main-container">
                         <div class="index__mobile-slider-slot"></div>
-                        <div class="filter index__filter">
-                            <div class="filter__nav">
-                                <a class="division division_active division_arrow-left filter__division" href="#">Купить</a>
-                                <a class="division division_arrow-left filter__division" href="#">Арендовать</a>
-                            </div>
-                            <form class="filter__tab">
+                        <div class="filter index__filter" id="filterTab">
+                            <ul class="filter__nav">
+                                <li>
+                                    <li>
+                                        <a class="division division_active division_arrow-left filter__division" href="#filter-1">Купить</a>
+                                    </li>
+                                </li>
+                                <li>
+                                    <li>
+                                        <a class="division division_arrow-left filter__division" href="#filter-2">Арендовать</a>
+                                    </li>
+                                </li>
+                            </ul>
+                            <form class="filter__tab" id="filter-1">
                                 <div class="filter__content">
                                     <div class="filter__col">
                                         <div class="filter__item">
@@ -348,6 +356,118 @@
                                                 <button class="button button_kind_red" type="submit">Найти</button>
                                             </div>
                                             <a class="filter__link" href="#">Расширенный список</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="filter__tab" id="filter-2">
+                                <div class="filter__content">
+                                    <div class="filter__col">
+                                        <div class="filter__item">
+                                            <div class="filter__field filter__field_type_select">
+                                                <div class="select">
+                                                    <div class="select__label">Тип яхты</div>
+                                                    <div class="select__text"></div>
+                                                    <select class="select__control">
+                                                        <option disabled="disabled" selected="selected">Тип яхты</option>
+                                                        <option value="1">item #1</option>
+                                                        <option value="2">item #2</option>
+                                                    </select>
+                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div class="filter__field filter__field_type_select">
+                                                <div class="select">
+                                                    <div class="select__label">Верфь</div>
+                                                    <div class="select__text"></div>
+                                                    <select class="select__control">
+                                                        <option disabled="disabled" selected="selected">Верфь</option>
+                                                        <option value="1">item #1</option>
+                                                        <option value="2">item #2</option>
+                                                    </select>
+                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__col">
+                                        <div class="filter__item">
+                                            <div class="filter__field filter__field_type_select">
+                                                <div class="select">
+                                                    <div class="select__label">Модель</div>
+                                                    <div class="select__text"></div>
+                                                    <select class="select__control">
+                                                        <option disabled="disabled" selected="selected">Модель</option>
+                                                        <option value="1">item #1</option>
+                                                        <option value="2">item #2</option>
+                                                    </select>
+                                                    <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                    <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item filter__item_col">
+                                            <div class="filter__row">
+                                                <div class="filter__label">Длина</div>
+                                                <div class="filter__range-info">
+                                                    <span class="filter__range-info-text js-filter-sale-length-min"></span>
+                                                    <span class="filter__range-info-text js-filter-sale-length-max"></span>
+                                                </div>
+                                            </div>
+                                            <div class="filter__field filter__field_type_range">
+                                                <div class="slider-range js-filter-sale-length-slider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__col">
+                                        <div class="filter__item">
+                                            <span class="filter__label">Цена</span>
+                                            <div class="filter__field filter__field_type_text-field-group">
+                                                <div class="filter__field filter__field_type_text-field-small">
+                                                    <div class="text-field">
+                                                        <input class="text-field__control" type="text" name="item10" value="" />
+                                                        <span class="text-field__placeholder">от</span>
+                                                        <div class="text-field__error-icon-wrapper">
+                                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                        </div>
+                                                        <div class="text-field__error"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__separator"></div>
+                                                <div class="filter__field filter__field_type_text-field-small">
+                                                    <div class="text-field">
+                                                        <input class="text-field__control" type="text" name="item11" value="" />
+                                                        <span class="text-field__placeholder">до</span>
+                                                        <div class="text-field__error-icon-wrapper">
+                                                            <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
+                                                        </div>
+                                                        <div class="text-field__error"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="filter__field filter__field_type_select-currency">
+                                                <div class="select-currency">
+                                                    <div class="select select_text-like">
+                                                        <div class="select__text"></div>
+                                                        <select class="select__control">
+                                                            <option value="rur">₽</option>
+                                                            <option value="usd">$</option>
+                                                        </select>
+                                                        <svg class="select__icon select__icon_type_caret"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                                                        <svg class="select__icon select__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item filter__item_col">
+                                            <div class="filter__field filter__field_type_search-btn">
+                                                <button class="button button_kind_red" type="submit">Найти</button>
+                                            </div>
+                                            <a class="filter__link" href="#">Расширенный список11</a>
                                         </div>
                                     </div>
                                 </div>
