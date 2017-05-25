@@ -7,7 +7,7 @@
     max-width: 1565px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: 50%;
+    background-position: top center;
 
     @include respond-to ('large-desktop') {
       max-width: 1920px;
@@ -28,7 +28,7 @@
     margin: 0 auto -1px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: 50%;
+    background-position: top center;
 
     @include respond-to ('large-desktop') {
       max-width: 1920px;
