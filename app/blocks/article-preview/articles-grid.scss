@@ -19,6 +19,14 @@
 .articles-grid {
   flex-basis: 100%;
 
+  @include respond-to('tablet') {
+    overflow-x: hidden;
+  }
+
+  @include respond-to('mobile') {
+    overflow-x: hidden;
+  }
+
   .col_three {
     @include respond-to(mobile) {
       width: 100%;
