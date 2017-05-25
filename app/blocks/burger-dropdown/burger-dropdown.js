@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 /* eslint-disable */
 export default () => {
-  const header = $('.header');
+  const header = $('.header__container');
   const w = $(window);
   const burgerDropdown = $('.burger-dropdown');
 

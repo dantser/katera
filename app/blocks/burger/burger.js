@@ -9,8 +9,9 @@ export default () => {
   const dropdown = new Dropdown(dropDownClass);
 
 
-  $('html, body').on('click', burgerClass, () => {
+  $(burgerClass).on('click', (e) => {
     const burger = $(burgerClass);
+    e.preventDefault();
     if (burger.hasClass(activeBurgerClass)) {
       dropdown.hide(() => {
         burger.removeClass(activeBurgerClass);
