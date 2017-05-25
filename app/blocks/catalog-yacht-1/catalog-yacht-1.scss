@@ -330,10 +330,6 @@
 
     @include respond-to('tablet') {
       margin: 15px auto;
-
-      &:nth-child(4n) {
-        margin-right: 0;
-      }
     }
 
     @include respond-to('mobile') {
