@@ -59,10 +59,10 @@ $(window).on('load', () => {
 $(() => {
   objectFitImages('.image-bg__img');
   svg4everybody();
+  index();
   scrollable();
   textField();
   header();
-  index();
   burger();
   select();
   searchBar();

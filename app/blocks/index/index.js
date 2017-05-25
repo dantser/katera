@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import disableScroll from 'disable-scroll';
 import 'sticky-kit/dist/sticky-kit';
 
 /* eslint-disable */
@@ -13,10 +14,11 @@ export default () => {
   const mainSliderItem = mainSlider.find('.main-slider');
   const header = $('.header');
   const w = $(window);
+  let mainSliderHeight = 0;
 
-  if (mainSlider && mainSlider.length > 0 && header && header.length > 0 && w.width() > 1200) {
-    const nextMainSliderHeight = w.height() - header.outerHeight();
-    mainSlider.css({ height: `${nextMainSliderHeight}px`});
+  if (mainSlider.length > 0 && header.length && w.width() > 1169) {
+    mainSliderHeight = w.height() - header.outerHeight();
+    mainSlider.css({ height: `${mainSliderHeight}px`});
   }
 
   // init mobile slider
@@ -39,26 +41,36 @@ export default () => {
 
   const iOS = window.navigator.platform.match(/i(Phone|Pod)/i);
 
+  let shouldAnimateSlider = true;
+
+  mainSliderItem.on('transitionend', () => {
+    $('.index').css('visibility', 'visible');
+    shouldAnimateSlider = false;
+  });
+
+  if ($(document).scrollTop() > 100 && w.width() > 1024) {
+    mainSliderItem.css({
+      transition: 'unset',
+      transform: 'scale(1)',
+    });
+
+    shouldAnimateSlider = false;
+  }
+
   w.on('scroll', () => {
     const sT = w.scrollTop();
     const vH = w.height();
 
-    if (sT === 0 && mainSliderItem.hasClass('main-slider_animated')) {
-      mainSliderItem.fadeOut(() => mainSliderItem.removeClass('main-slider_animated'));
-    }
-
-    if (sT > 100 && !mainSliderItem.hasClass('main-slider_animated')) {
-      if (mainSliderItem.css('display') === 'none') {
-        mainSliderItem
-          .show()
-          .addClass('main-slider_animated');
-      } else {
-        mainSliderItem.addClass('main-slider_animated');
-      }
-    }
-
     if (w.width() <= 1169 || iOS) {
       return;
+    }
+
+    if (shouldAnimateSlider && !mainSliderItem.hasClass('main-slider_animated')) {
+      disableScroll.on();
+      $('.index').css('visibility', 'hidden');
+      mainSliderItem.addClass('main-slider_animated');
+    } else {
+      disableScroll.off();
     }
 
     if (sT + vH >= yachtWidget.parent().offset().top) {
