@@ -104,6 +104,10 @@
     left: 30px;
     line-height: .7;
     top: 0;
+
+    @include respond-to('large-desktop') {
+      left: 97px;
+    }
   }
 
   &__link {
@@ -162,15 +166,30 @@
   &__icon {
 
     &_motor {
-      max-width: 159px;
+      width: 159px;
+      margin-top: 20px;
+
+      & + span {
+        margin-top: -30px;
+      }
     }
 
     &_sailing {
-      max-width: 134px;
+      width: 134px;
+      margin-top: -10px;
+
+      & + span {
+        //margin-top: -10px;
+      }
     }
 
     &_rowing {
-      max-width: 160px;
+      width: 160px;
+      margin-top: 20px;
+
+      & + span {
+        margin-top: -30px;
+      }
     }
   }
 
