@@ -68,6 +68,24 @@ export default () => {
     return;
   }
 
+  selectElements.on('disable', function () { // eslint-disable-line func-names
+    const el = $(this);
+
+    el
+      .addClass('select_disabled')
+      .find('select__control')
+      .prop('disabled', true);
+  });
+
+  selectElements.on('enable', function () { // eslint-disable-line func-names
+    const el = $(this);
+
+    el
+      .removeClass('select_disabled')
+      .find('select__control')
+      .prop('disabled', false);
+  });
+
   selectElements.each(function () { // eslint-disable-line func-names
     const select = $(this);
     const textElement = select.find(TEXT_CLASS);

@@ -25,7 +25,7 @@ mixin account-sale3()
           nav.default[3].active = false
           nav.default[0].active = true
         +account-navigation(nav)
-      +e.col-page
+      +e('form').col-page.js-sale3-form
         +e.H2.text-center Создать предложение
         +b.user-info
           h2 Контактная информация
@@ -138,9 +138,9 @@ mixin account-sale3()
           +text().__subheader
             h5 Другое
           +e.item._row
-            +checkbox()._switcher
+            +checkbox()._switcher.js-has-additional-engine
             span Наличие вспомогательного двигателя или двигателей
-          +e.item._disabled
+          +e.item.js-type-of-additional-engine
             +e.SPAN.label._big Тип привода вспомогательного двигателя
             +e.input-wrap._small
               +select('test', [{ value: 1, title: 'Значение 1' }, { value: 2, title: 'Значение 2' }])
@@ -180,7 +180,7 @@ mixin account-sale3()
             +upload-form('Добавить видео', 'Формат видео: MP4, AVI, QuickTime').__upload
         +b.speedup
           h2 Ускорить продажу
-          +b('form').magazine-subscribe-popup
+          +b.magazine-subscribe-popup
             +e.types
               +e('label').type
                 +e('input')(type='radio' name='subscribe-type' value='1' checked='true').control

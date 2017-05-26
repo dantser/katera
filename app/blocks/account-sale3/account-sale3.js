@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import filterCategory from '../filter-category/filter-category';
 
 const mockData = {
@@ -86,6 +87,35 @@ const mockData = {
   },
 };
 
+/* eslint-disable */
 export default () => {
   filterCategory('.account-sale3__filter-category', mockData, 'categories');
+
+  // additioanl engine checkbox dependencies
+  const hasAdditionalEngine = $('.js-has-additional-engine');
+
+  if (hasAdditionalEngine.length > 0) {
+    const typeContainer = $('.js-type-of-additional-engine');
+    const control = hasAdditionalEngine.find('.checkbox__control');
+
+    const changeAdditionalEngineState = () => {
+      if (!typeContainer.length) {
+        return;
+      }
+
+      const select = typeContainer.find('.select');
+
+      if (control.prop('checked')) {
+        typeContainer.removeClass('input-group__item_disabled');
+        select.trigger('enable');
+      } else {
+        typeContainer.addClass('input-group__item_disabled');
+        select.trigger('disable');
+      }
+    };
+
+    changeAdditionalEngineState();
+
+    control.on('change', changeAdditionalEngineState);
+  }
 };
