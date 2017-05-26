@@ -17,11 +17,11 @@ function ultraScroll(element) {
   // Расчет дефолтных значений
   function ultraScrollInit() {
     scrollSlideVertical.width( scrollPreWrapper.width() );
-    scrollPreWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - vH );
-    scrollWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - vH );
+    scrollPreWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - scrollSlideVertical.outerWidth() );
+    scrollWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - scrollSlideVertical.outerWidth() );
 
     topBreakpoint = scrollPreWrapper.offset().top;
-    bottomBreakpoint = scrollPreWrapper.offset().top + scrollBlock.outerWidth() - vH;
+    bottomBreakpoint = scrollPreWrapper.offset().top + scrollBlock.outerWidth() - scrollSlideVertical.outerWidth();
   }
 
   ultraScrollInit();
@@ -58,11 +58,12 @@ function ultraScroll(element) {
 
       // Если мы ниже скроллблока
     } else {
-
+      translate = scrollBlock.outerWidth() - scrollWrapper.width();
+      scrollBlock.css("transform", "translate3d(-" + translate + "px, 0, 0");
       scrollWrapper
         .removeClass(fixedClass)
         .addClass(finishClass)
-        .css("top", scrollBlock.outerWidth() - vH );
+        .css("top", scrollBlock.outerWidth() - scrollSlideVertical.outerWidth() );
     }
   });
 }
