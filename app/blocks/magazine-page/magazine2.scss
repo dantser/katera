@@ -343,8 +343,19 @@
     padding-left: 97px;
 
     @include respond-to('large-desktop') {
-      width: 70%;
-      margin: 0 auto;
+      width: 750px;
+
+      .text {
+        width: 1043px;
+      }
+    }
+
+    @include respond-to('desktop') {
+      width: 750px;
+
+      .text {
+        width: 100%;
+      }
     }
 
     @include respond-to('laptop') {
@@ -352,6 +363,7 @@
       padding-right: 97px;
 
       .text {
+        width: 100%;
         padding: 0 15px;
       }
     }
@@ -362,6 +374,7 @@
       padding-right: 0;
 
       .text {
+        width: 100%;
         padding: 0 15px;
       }
     }
@@ -372,6 +385,7 @@
       padding-right: 0;
 
       .text {
+        width: 100%;
         padding: 0 15px;
       }
     }
@@ -379,8 +393,16 @@
   //content-two
 
   .content-three {
-    width: calc(100% - 293px);
+    //width: calc(100% - 293px);
     padding-left: 97px;
+
+    @include respond-to('large-desktop') {
+      width: 750px;
+    }
+
+    @include respond-to('desktop') {
+      width: 750px;
+    }
 
     @include respond-to('laptop') {
       width: 100%;
