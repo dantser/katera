@@ -344,7 +344,12 @@
       }
 
       .select-currency {
-        margin-left: 33px;
+        margin-left: 43px;
+
+        .select__text {
+          display: block !important;
+          margin-right: 5px;
+        }
       }
     }
 
@@ -397,6 +402,10 @@
   .magazine-subscribe-popup {
     margin-top: 22px;
     padding: 0;
+
+    @include respond-to('large-desktop') {
+      max-width: 800px;
+    }
 
     &__types {
       padding: 0;
@@ -532,5 +541,9 @@
 
   .upload-form__sup-text {
     left: 0;
+  }
+
+  .text-field {
+    border: 1px solid #ccc;
   }
 }

@@ -1,12 +1,12 @@
 include ../upload-btn/upload-btn
 
-mixin upload-form(label, supText)
+mixin upload-form(label, supText, placeholder)
   +b.upload-form&attributes(attributes)
     if (label)
       +e.SPAN.label= label
     +e.LABEL.field
       +e.INPUT(type='file' name='test').file
-      +text-field({type:"text"})._dashed
+      +text-field({type:"text", placeholder: placeholder})._dashed
       +upload-btn()
       if (supText)
         +e.SPAN.sup-text= supText

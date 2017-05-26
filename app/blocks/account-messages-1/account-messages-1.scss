@@ -37,6 +37,14 @@
     flex-grow: 1;
     margin-top: -11px;
 
+    @include respond-to('desktop') {
+      padding-bottom: 70px;
+    }
+
+    @include respond-to('large-desktop') {
+      padding-bottom: 70px;
+    }
+
     @include respond-to('laptop') {
       width: 600px !important;
     }

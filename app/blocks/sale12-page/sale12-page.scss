@@ -15,6 +15,10 @@
   &__filter-wrapper {
     width: 74.4%;
 
+    @include respond-to('large-desktop') {
+      width: 81%;
+    }
+
     @media (max-width: 991px) {
       display: none;
     }
@@ -24,6 +28,10 @@
     width: 23%;
     margin-left: 2.6%;
     align-self: flex-start;
+
+    @include respond-to('large-desktop') {
+      max-width: 263px;
+    }
 
     @media (max-width: 991px) {
       display: none;

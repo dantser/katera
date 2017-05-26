@@ -405,7 +405,7 @@
   }
 
   &__upload-file {
-    width: 50% !important;
+    width: 375px !important;
 
     @include respond-to('mobile') {
       width: auto !important;
@@ -416,6 +416,14 @@
       @include respond-to('mobile') {
         display: none;
       }
+    }
+  }
+
+  .sale-preview-item {
+    transition: box-shadow .25s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 35px 0 rgba(0, 0, 0, .3);
     }
   }
 }
