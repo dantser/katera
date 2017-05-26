@@ -194,6 +194,12 @@
         text-decoration: none;
         color: $color-white;
         font-family: $NerisSemiBold;
+        transition: all .25s ease-in-out;
+
+        &:hover {
+          color: #fb2500;
+          text-decoration: underline;
+        }
       }
     }
 
@@ -237,6 +243,19 @@
       @include respond-to('mobile') {
         font-size: rem(16px);
         margin-top: 8px;
+      }
+    }
+
+    &__email {
+      cursor: pointer;
+
+      & > ul > li {
+        transition: all .25s ease-in-out;
+      }
+
+      &:hover > ul > li {
+        color: #fb2500;
+        text-decoration: underline;
       }
     }
 
