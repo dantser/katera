@@ -38,6 +38,24 @@ export default () => {
     return;
   }
 
+  element.on('disable', function () { // eslint-disable-line func-names
+    const el = $(this);
+
+    el
+      .addClass('text-field_disabled')
+      .find(CONTROL_CLASS)
+      .prop('disabled', true);
+  });
+
+  element.on('enable', function () { // eslint-disable-line func-names
+    const el = $(this);
+
+    el
+      .removeClass('text-field_disabled')
+      .find(CONTROL_CLASS)
+      .prop('disabled', false);
+  });
+
   element.find(CONTROL_CLASS).on('input', function () { // eslint-disable-line
     const el = $(this);
 
