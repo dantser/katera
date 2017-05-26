@@ -205,7 +205,7 @@ mixin account-sale3()
                     +e.text._price 2550 Р
           p Вы можете разместить предложение на Katera.ru бесплатно, но дополнительные услуги помогут вам продать  быстрее.
           +b.pricing
-            +e.item-sale
+            +e.item-sale.js-pricing__item-sale
               +checkbox({checked: true})._switcher
               +hint()
                 +list()
@@ -215,8 +215,8 @@ mixin account-sale3()
                   +list-item()
                     +e.SPAN.offer Услуга действует 30 дней
               +e.SPAN.hint-text Поднятие в ТОП
-              +e.SPAN.price._active 1090 Р
-            +e.item-sale
+              +e.SPAN.price 1090 Р
+            +e.item-sale.js-pricing__item-sale
               +checkbox()._switcher
               +hint()
                 +list()
@@ -227,7 +227,7 @@ mixin account-sale3()
                     +e.SPAN.offer Услуга действует 30 дней
               +e.SPAN.hint-text Спецпредложение
               +e.SPAN.price 550 Р
-            +e.item-sale
+            +e.item-sale.js-pricing__item-sale
               +checkbox()._switcher
               +hint()
                 +list()
@@ -239,5 +239,5 @@ mixin account-sale3()
               +e.SPAN.hint-text Выделение цветом
               +e.SPAN.price 200 Р
           +b.btn-wrap
-            +button()._kind_red Разместить предложение 1090 Р
+            +button()._kind_red.js-sale3-submit-proposal Разместить предложение <span>0</span> Р
             +e.SPAN.sub-btn Предложение будет размещено на 30 дней

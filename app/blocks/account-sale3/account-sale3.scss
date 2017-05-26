@@ -472,6 +472,8 @@
         font-size: rem(18px);
         color: $color-gray;
         margin-left: auto;
+        will-change: color;
+        transition: color .25s ease-in-out;
 
         @include respond-to('mobile') {
           width: 100%;

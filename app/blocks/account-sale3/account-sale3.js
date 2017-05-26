@@ -118,4 +118,42 @@ export default () => {
 
     control.on('change', changeAdditionalEngineState);
   }
+
+  // pricing item sale dependencies
+  const pricingItemSale = $('.js-pricing__item-sale');
+
+  if (pricingItemSale.length) {
+    const changePricingItemSaleState = function () {
+      const checkbox = $(this);
+      const item = checkbox.parents('.js-pricing__item-sale');
+      const priceElement = item.find('.pricing__price');
+      const btnPrice = $('.js-sale3-submit-proposal span');
+
+      if (!item.length || !priceElement.length || !btnPrice.length) {
+        return;
+      }
+
+      if (checkbox.prop('checked')) {
+        priceElement.addClass('pricing__price_active');
+      } else {
+        priceElement.removeClass('pricing__price_active');
+      }
+
+      // update price
+      const nextPrice = Array.from(item
+        .parent()
+        .find('.pricing__price_active')
+        .map(function() {
+          return parseInt($(this).text(), 10);
+        }))
+        .reduce((a, b) => a + b, 0);
+
+      btnPrice.text(nextPrice);
+    };
+
+    pricingItemSale
+      .find('.checkbox__control')
+      .each(changePricingItemSaleState)
+      .on('change', changePricingItemSaleState);
+  }
 };
