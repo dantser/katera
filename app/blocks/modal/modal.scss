@@ -18,6 +18,10 @@
     padding: 25px 0;
   }
 
+  &_darken {
+    background-color: rgba(6, 3, 37, .9);
+  }
+
   &_active {
     display: flex;
     align-items: center;

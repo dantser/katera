@@ -18,6 +18,10 @@
     flex: none;
     width: 31.5%;
 
+    @include respond-to('large-desktop') {
+      max-width: 360px;
+    }
+
     @media (max-width: 991px) {
       width: 100%;
     }
@@ -26,6 +30,10 @@
   &__form {
     flex: none;
     width: 65.8%;
+
+    @include respond-to('large-desktop') {
+      width: 74%;
+    }
 
     @media (max-width: 991px) {
       width: 100%;
