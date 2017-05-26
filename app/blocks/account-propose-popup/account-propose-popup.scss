@@ -27,6 +27,11 @@
     left: 10px;
   }
 
+  &_bc::before {
+    right: initial;
+    left: center;
+  }
+
   &__info {
     line-height: 22px;
     font-family: $NerisLight;

@@ -19,6 +19,15 @@ export default function hint() {
         })
         .addClass('hint__content_left');
     }
+
+    if (item.offset().left + content.width() > $(window).innerWidth()) {
+      content
+        .css({
+          left: ~(item.offset().left + content.width() - $(window).innerWidth() + 15) + 'px', // eslint-disable-line
+          right: 'initial',
+        })
+        .addClass('hint__content_bc');
+    }
   });
 
   const w = $(window);

@@ -17,6 +17,10 @@ export default function accountProposePopup() {
     if (popup.parent().hasClass('hint__content_left')) {
       popup.addClass('account-propose_left');
     }
+
+    if (popup.parent().hasClass('hint__content_bc')) {
+      popup.addClass('account-propose_bc');
+    }
   });
 
   $(window).on('resize', accountProposePopup);
