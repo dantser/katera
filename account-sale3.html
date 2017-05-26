@@ -252,7 +252,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="account-sale3__col-page">
+                <form class="account-sale3__col-page js-sale3-form">
                     <h2 class="account-sale3__text-center">Создать предложение</h2>
                     <div class="user-info">
                         <h2>Контактная информация</h2>
@@ -396,7 +396,7 @@
                             <span class="input-group__label">Количество моточасов</span>
                             <div class="input-group__input-wrap">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -409,7 +409,7 @@
                             <span class="input-group__label">Длина</span>
                             <div class="input-group__input-wrap">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -423,7 +423,7 @@
                             <span class="input-group__label">Осадка фальшкилем или швертом</span>
                             <div class="input-group__input-wrap">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -437,7 +437,7 @@
                             <span class="input-group__label">Осадка корпусом</span>
                             <div class="input-group__input-wrap">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -451,7 +451,7 @@
                             <span class="input-group__label">Высота мачты</span>
                             <div class="input-group__input-wrap">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -555,7 +555,7 @@
                             <span class="input-group__label">Паспортная пассажировместимость</span>
                             <div class="input-group__input-wrap">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -569,7 +569,7 @@
                             <span class="input-group__label input-group__label_big">Количество стационарных спальных мест</span>
                             <div class="input-group__input-wrap input-group__input-wrap_small">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -582,7 +582,7 @@
                             <span class="input-group__label input-group__label_big">Кол-во дополнительно трансформируемых спальных мест</span>
                             <div class="input-group__input-wrap input-group__input-wrap_small">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -595,7 +595,7 @@
                             <h5>Другое</h5>
                         </div>
                         <div class="input-group__item input-group__item_row">
-                            <label class="checkbox checkbox_switcher">
+                            <label class="checkbox checkbox_switcher js-has-additional-engine">
                                 <input class="checkbox__control" type="checkbox" name="" value="" />
                                 <span class="checkbox__box">
                                     <svg class="checkbox__mark"><use xlink:href="assets/images/icon.svg#icon_check-mark"></use></svg>
@@ -603,7 +603,7 @@
                             </label>
                             <span>Наличие вспомогательного двигателя или двигателей</span>
                         </div>
-                        <div class="input-group__item input-group__item_disabled">
+                        <div class="input-group__item js-type-of-additional-engine">
                             <span class="input-group__label input-group__label_big">Тип привода вспомогательного двигателя</span>
                             <div class="input-group__input-wrap input-group__input-wrap_small">
                                 <div class="select">
@@ -635,7 +635,7 @@
                             <span class="input-group__label input-group__label_medium">Стационарный запас топлива</span>
                             <div class="input-group__input-wrap input-group__input-wrap_medium">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -649,7 +649,7 @@
                             <span class="input-group__label input-group__label_medium">Стационарный запас воды</span>
                             <div class="input-group__input-wrap input-group__input-wrap_medium">
                                 <div class="text-field">
-                                    <input class="text-field__control" type="number" value="" />
+                                    <input class="text-field__control" type="text" value="" />
                                     <span class="text-field__placeholder"></span>
                                     <div class="text-field__error-icon-wrapper">
                                         <svg class="text-field__error-icon"><use xlink:href="assets/images/icon.svg#icon_exclamation-point"></use></svg>
@@ -752,7 +752,7 @@
                     </div>
                     <div class="speedup">
                         <h2>Ускорить продажу</h2>
-                        <form class="magazine-subscribe-popup">
+                        <div class="magazine-subscribe-popup">
                             <div class="magazine-subscribe-popup__types">
                                 <label class="magazine-subscribe-popup__type">
                                     <input class="magazine-subscribe-popup__control" type="radio" name="subscribe-type" value="1" checked="true" />
@@ -785,10 +785,10 @@
                                     </span>
                                 </label>
                             </div>
-                        </form>
+                        </div>
                         <p>Вы можете разместить предложение на Katera.ru бесплатно, но дополнительные услуги помогут вам продать быстрее.</p>
                         <div class="pricing">
-                            <div class="pricing__item-sale">
+                            <div class="pricing__item-sale js-pricing__item-sale">
                                 <label class="checkbox checkbox_switcher">
                                     <input class="checkbox__control" type="checkbox" name="" value="" checked="checked" />
                                     <span class="checkbox__box">
@@ -813,9 +813,9 @@
                                     </div>
                                 </div>
                                 <span class="pricing__hint-text">Поднятие в ТОП</span>
-                                <span class="pricing__price pricing__price_active">1090 Р</span>
+                                <span class="pricing__price">1090 Р</span>
                             </div>
-                            <div class="pricing__item-sale">
+                            <div class="pricing__item-sale js-pricing__item-sale">
                                 <label class="checkbox checkbox_switcher">
                                     <input class="checkbox__control" type="checkbox" name="" value="" />
                                     <span class="checkbox__box">
@@ -842,7 +842,7 @@
                                 <span class="pricing__hint-text">Спецпредложение</span>
                                 <span class="pricing__price">550 Р</span>
                             </div>
-                            <div class="pricing__item-sale">
+                            <div class="pricing__item-sale js-pricing__item-sale">
                                 <label class="checkbox checkbox_switcher">
                                     <input class="checkbox__control" type="checkbox" name="" value="" />
                                     <span class="checkbox__box">
@@ -871,11 +871,12 @@
                             </div>
                         </div>
                         <div class="btn-wrap">
-                            <button class="button button_kind_red">Разместить предложение 1090 Р</button>
+                            <button class="button button_kind_red js-sale3-submit-proposal">Разместить предложение
+                                <span>0</span> Р</button>
                             <span class="btn-wrap__sub-btn">Предложение будет размещено на 30 дней</span>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
