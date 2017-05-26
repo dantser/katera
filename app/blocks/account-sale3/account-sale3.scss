@@ -403,6 +403,10 @@
     margin-top: 22px;
     padding: 0;
 
+    @include respond-to('large-desktop') {
+      max-width: 800px;
+    }
+
     &__types {
       padding: 0;
       margin: 0;

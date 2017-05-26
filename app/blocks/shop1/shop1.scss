@@ -362,4 +362,10 @@
   &__shop-1 {
     padding-bottom: 1px;
   }
+
+  .models .swiper-container {
+    @include respond-to('large-desktop') {
+      width: 79%;
+    }
+  }
 }
