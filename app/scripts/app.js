@@ -52,6 +52,7 @@ import accountSale3 from '../blocks/account-sale3/account-sale3';
 import catalogVerphePage from '../blocks/catalog-verphe-page/catalog-verphe-page';
 import shops from '../blocks/shop-s/shop-s';
 import magazinePage from '../blocks/magazine-page/magazine-page';
+import accountProposePopup from '../blocks/account-propose-popup/account-propose-popup';
 
 $(window).on('load', () => {
   scrollable();
@@ -109,6 +110,7 @@ $(() => {
   catalogVerphePage();
   shops();
   magazinePage();
+  accountProposePopup();
   const mapElement = document.getElementById('map');
 
   if (!mapElement) {

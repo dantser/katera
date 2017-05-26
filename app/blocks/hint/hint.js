@@ -1,27 +1,32 @@
 import $ from 'jquery';
 
 export default () => {
-  // const mouseEnter = function () { // eslint-disable-line func-names
-  //   const hint = $(this);
-  //   const content = hint.find('.hint__content');
-  //
-  //   content.show(() => {
-  //     hint.addClass('hint_active');
-  //   });
-  // };
-  //
-  // const mouseLeave = function () { // eslint-disable-line func-names
-  //   const hint = $(this);
-  //   console.log('leave');
-  //   const content = hint.find('.hint__content');
-  //
-  //   content.hide(() => {
-  //     hint.removeClass('hint_active');
-  //   });
-  // };
+  const hints = $('.hint');
 
-  // $('.hint').hover(mouseEnter, mouseLeave);
-  $('.hint').hover(function () { // eslint-disable-line func-names
+  if (!hints.length) {
+    return;
+  }
+
+  const init = () => {
+    hints.each(function () { // eslint-disable-line func-names
+      const item = $(this);
+      const content = item.find('.hint__content');
+
+      if (item.offset().left - content.width() < 0) {
+        content
+          .css({
+            left: '-6px',
+            right: 'initial',
+          })
+          .addClass('hint__content_left');
+      }
+    });
+  };
+
+  init();
+  $(window).on('resize', init);
+
+  hints.hover(function () { // eslint-disable-line func-names
     const hint = $(this);
     const content = hint.find('.hint__content');
 
