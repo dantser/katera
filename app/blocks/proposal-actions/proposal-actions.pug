@@ -7,7 +7,7 @@ mixin proposal-actions()
     - var items = ['Выделить', 'Поднять в ТОПе', 'Сделать VIP', 'Верификация', 'Быстрая продажа', 'Завершить'];
 
     each item in items
-      +e('li').item
+      +e('li').item.js-hint
         - var test = item == 'Выделить' ? 'hint_active' : ''
         +hint()(class=test).__item
           +list()._has_triangle.proposal-actions__list

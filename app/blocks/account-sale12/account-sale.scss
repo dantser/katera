@@ -345,11 +345,28 @@
 
     &__item {
       display: flex;
-      margin-bottom: 22px;
+      padding-bottom: 22px;
       align-items: center;
 
       @include respond-to('mobile') {
-        margin-bottom: 13px;
+        padding-bottom: 13px;
+      }
+
+      & > span {
+        will-change: color;
+        transition: color .25s ease-in-out;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .hint__icon {
+          fill: $color-red;
+        }
+
+        & > span {
+          color: $color-red;
+        }
       }
     }
 

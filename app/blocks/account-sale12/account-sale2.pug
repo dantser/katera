@@ -27,7 +27,7 @@ mixin account-sale2()
             +text()
               h3 Тарифы
               p
-                | Вы можете бесплатно разместить одно объявление в месяц. Для того, чтобы на сайте было 
+                | Вы можете бесплатно разместить одно объявление в месяц. Для того, чтобы на сайте было
                 | размещено более одного объявления одновременно, вы можете воспользоваться наиболее
                 | выгодным для Вас пакетом услуг:
             +tarif()
@@ -44,28 +44,28 @@ mixin account-sale2()
                   +sale-preview-item(getData('sale-preview-item-extended')[0])._image_left
                   +e.propose
                     +e.propose__column
-                      +e.propose__item
+                      +e.propose__item.js-hint
                         +hint()
                           +account-propose()
                         span Выделить
-                      +e.propose__item
+                      +e.propose__item.js-hint
                         +hint()
                           +account-propose()
                         span Сделать VIP
-                      +e.propose__item
+                      +e.propose__item.js-hint
                         +hint()
                           +account-propose()
                         span Поднять в ТОПе
                     +e.propose__column
-                      +e.propose__item
+                      +e.propose__item.js-hint
                         +hint()
                           +account-propose()
                         span Быстрая продажа
-                      +e.propose__item
+                      +e.propose__item.js-hint
                         +hint()
                           +account-propose()
                         span Верификация
-                      +e.propose__item
+                      +e.propose__item.js-hint
                         +hint()
                           +account-propose()
                         span Завершить

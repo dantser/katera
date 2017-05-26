@@ -1,14 +1,14 @@
 import $ from 'jquery';
 
 export default function hint() {
-  const hints = $('.hint');
+  const hints = $('.js-hint');
 
   if (!hints.length) {
     return;
   }
 
   hints.each(function () { // eslint-disable-line func-names
-    const item = $(this);
+    const item = $(this).find('.hint');
     const content = item.find('.hint__content');
 
     if (item.offset().left - content.width() < 0) {
@@ -32,14 +32,12 @@ export default function hint() {
 
   const w = $(window);
   const hideAllElements = () => {
-    hints
-      .filter((index, item) => $(item).hasClass('hint_active'))
-      .each(function () { // eslint-disable-line func-names
-        $(this)
-          .removeClass('hint_active')
-          .find('.hint__content')
-          .hide('slow');
-      });
+    $('.hint_active').each(function () { // eslint-disable-line func-names
+      $(this)
+        .removeClass('hint_active')
+        .find('.hint__content')
+        .fadeOut();
+    });
   };
 
   const toggleContent = function (e) { // eslint-disable-line func-names
@@ -53,7 +51,7 @@ export default function hint() {
       hideAllElements();
     }
 
-    content.toggle(() => {
+    content.fadeToggle(() => {
       el.toggleClass('hint_active');
     });
   };
