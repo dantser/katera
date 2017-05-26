@@ -1,37 +1,45 @@
 import $ from 'jquery';
 
-export default () => {
+export default function hint() {
   const hints = $('.hint');
 
   if (!hints.length) {
     return;
   }
 
-  const init = () => {
-    hints.each(function () { // eslint-disable-line func-names
-      const item = $(this);
-      const content = item.find('.hint__content');
+  hints.each(function () { // eslint-disable-line func-names
+    const item = $(this);
+    const content = item.find('.hint__content');
 
-      if (item.offset().left - content.width() < 0) {
-        content
-          .css({
-            left: '-6px',
-            right: 'initial',
-          })
-          .addClass('hint__content_left');
-      }
+    if (item.offset().left - content.width() < 0) {
+      content
+        .css({
+          left: '-6px',
+          right: 'initial',
+        })
+        .addClass('hint__content_left');
+    }
+  });
+
+  const w = $(window);
+
+  const toggleContent = function () { // eslint-disable-line func-names
+    const el = $(this);
+    const content = el.find('.hint__content');
+
+    content.toggle(() => {
+      el.toggleClass('hint_active');
     });
   };
 
-  init();
-  $(window).on('resize', init);
+  hints.off('click');
+  hints.off('hover');
 
-  hints.hover(function () { // eslint-disable-line func-names
-    const hint = $(this);
-    const content = hint.find('.hint__content');
+  if (w.width() > 1024) {
+    hints.hover(toggleContent);
+  } else {
+    hints.click(toggleContent);
+  }
 
-    content.toggle(() => {
-      hint.toggleClass('hint_active');
-    });
-  });
-};
+  $(window).on('resize', hint);
+}
