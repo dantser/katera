@@ -44,8 +44,8 @@ mixin account-profile-jur()
               var contactInfo=[
                 {label:"Юридический адрес",name:"jur",type:"text"},
                 {label:"Фактический адрес",name:"jur",type:"text"},
-                {label:"Телефон",name:"jur",type:"tel"},
-                {label:"Email",name:"jur",type:"email"}]
+                {label:"Телефон",name:"phone",type:"tel"},
+                {label:"Email",name:"email",type:"text"}]
             each obj in contactInfo
               +e.item
                 label= obj.label

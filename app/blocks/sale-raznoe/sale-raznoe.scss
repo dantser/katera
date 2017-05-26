@@ -15,7 +15,6 @@
   &__main-container {
     display: flex;
     padding-bottom: 50px;
-    overflow: hidden;
 
     @include respond-to('mobile') {
       padding-top: 15px;
