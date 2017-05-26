@@ -51,6 +51,7 @@ import scrollable from '../blocks/scrollable/scrollable';
 import accountSale3 from '../blocks/account-sale3/account-sale3';
 import catalogVerphePage from '../blocks/catalog-verphe-page/catalog-verphe-page';
 import shops from '../blocks/shop-s/shop-s';
+import magazinePage from '../blocks/magazine-page/magazine-page';
 
 $(window).on('load', () => {
   scrollable();
@@ -107,7 +108,7 @@ $(() => {
   accountSale3();
   catalogVerphePage();
   shops();
-
+  magazinePage();
   const mapElement = document.getElementById('map');
 
   if (!mapElement) {
@@ -120,6 +121,7 @@ $(() => {
       zoom: 8,
       center: new googleMaps.LatLng(59.942897, 30.247301),
       mapTypeId: googleMaps.MapTypeId.ROADMAP,
+      scrollwheel: false,
       styles: [
         {
           featureType: 'all',

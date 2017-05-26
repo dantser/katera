@@ -302,6 +302,7 @@
     flex-flow: row wrap;
     flex-grow: 1;
     flex-basis: 50%;
+    align-items: flex-start;
 
     &::after {
       content: '';
