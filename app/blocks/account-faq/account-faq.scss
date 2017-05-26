@@ -164,10 +164,14 @@
     width: 100%;
     margin-top: 34px;
     line-height: 33px;
+    height: 36px;
     border-radius: inherit;
 
     @include respond-to('large-desktop') {
       max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
     }
 
     &:focus {
