@@ -15,6 +15,10 @@ export default () => {
     return;
   }
 
+  modals.on('scroll', (e) => {
+    e.stopPropagation();
+  });
+
   const isTrueButton = el => !!(el && el.hasClass(OPEN_BUTTON_CLASS.slice(1)) && el.data(DATA_TARGET_ATTRIBUTE).slice(0, 1) === '#');
   const isTrueModal = el => !!(el && el.hasClass(MODAL_CLASS.slice(1)) && el.attr('id'));
 
@@ -22,6 +26,8 @@ export default () => {
     if (!isTrueModal(el)) {
       return;
     }
+
+    $('body').css('overflow', 'hidden');
 
     el.fadeIn(FADE_DURATION, () => {
       el.addClass(ACTIVE_MODAL_CLASS);
@@ -32,6 +38,8 @@ export default () => {
     if (!isTrueModal(el)) {
       return;
     }
+
+    $('body').css('overflow', 'auto');
 
     el.fadeOut(FADE_DURATION);
   };
