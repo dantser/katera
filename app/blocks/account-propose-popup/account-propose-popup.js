@@ -7,6 +7,10 @@ export default function accountProposePopup() {
     return;
   }
 
+  popups.on('click', (e) => {
+    e.stopPropagation();
+  });
+
   popups.each(function () { // eslint-disable-line func-names
     const popup = $(this);
 
