@@ -344,7 +344,12 @@
       }
 
       .select-currency {
-        margin-left: 33px;
+        margin-left: 43px;
+
+        .select__text {
+          display: block !important;
+          margin-right: 5px;
+        }
       }
     }
 
@@ -532,5 +537,9 @@
 
   .upload-form__sup-text {
     left: 0;
+  }
+
+  .text-field {
+    border: 1px solid #ccc;
   }
 }

@@ -24,13 +24,13 @@ mixin account-profile-jur()
               var contactInfo=[
                 {label:"Название компании на русском языке",name:"jur",type:"text"},
                 {label:"Свидетельство о внесении в Единый государственный реестр юр. лиц (дата, №, кем  выдано)",name:"jur",type:"text"},
-                {label:"ОГРН",name:"jur",type:"number"},
-                {label:"ИНН",name:"jur",type:"number"},
-                {label:"КПП",name:"jur",type:"number"},
-                {label:"ОКПО",name:"jur",type:"number"},
-                {label:"Расчетный счет -№",name:"jur",type:"number"},
-                {label:"Корреспондентский счет-№",name:"jur",type:"number"},
-                {label:"Код БИК",name:"jur",type:"number"},
+                {label:"ОГРН",name:"jur",type:"text"},
+                {label:"ИНН",name:"jur",type:"text"},
+                {label:"КПП",name:"jur",type:"text"},
+                {label:"ОКПО",name:"jur",type:"text"},
+                {label:"Расчетный счет -№",name:"jur",type:"text"},
+                {label:"Корреспондентский счет-№",name:"jur",type:"text"},
+                {label:"Код БИК",name:"jur",type:"text"},
                 {label:"Наименование и адрес обслуживающего банка",name:"jur",type:"text"}]
             each obj in contactInfo
               +e.item

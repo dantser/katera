@@ -85,26 +85,26 @@ mixin account-sale3()
           +e.item
             +e.SPAN.label Количество моточасов
             +e.input-wrap
-              +text-field({type:'number'})
+              +text-field({type:'text'})
           +e.item
             +e.SPAN.label Длина
             +e.input-wrap
-              +text-field({type:'number'})
+              +text-field({type:'text'})
               +e.SPAN.after-text м
           +e.item
             +e.SPAN.label Осадка фальшкилем или швертом
             +e.input-wrap
-              +text-field({type:'number'})
+              +text-field({type:'text'})
               +e.SPAN.after-text м
           +e.item
             +e.SPAN.label Осадка корпусом
             +e.input-wrap
-              +text-field({type:'number'})
+              +text-field({type:'text'})
               +e.SPAN.after-text м
           +e.item
             +e.SPAN.label Высота мачты
             +e.input-wrap
-              +text-field({type:'number'})
+              +text-field({type:'text'})
               +e.SPAN.after-text м
           -
             var selects = ['Основное назначение', 'Тип корпуса', 'Материал основного корпуса',
@@ -125,16 +125,16 @@ mixin account-sale3()
           +e.item
             +e.SPAN.label Паспортная пассажировместимость
             +e.input-wrap
-              +text-field({type:'number'})
+              +text-field({type:'text'})
               +e.SPAN.after-text чел.
           +e.item
             +e.SPAN.label._big Количество стационарных  спальных мест
             +e.input-wrap._small
-              +text-field({type:'number'})
+              +text-field({type:'text'})
           +e.item
             +e.SPAN.label._big Кол-во дополнительно трансформируемых спальных мест
             +e.input-wrap._small
-              +text-field({type:'number'})
+              +text-field({type:'text'})
           +text().__subheader
             h5 Другое
           +e.item._row
@@ -151,12 +151,12 @@ mixin account-sale3()
           +e.item
             +e.SPAN.label._medium Стационарный запас топлива
             +e.input-wrap._medium
-              +text-field({type:'number'})
+              +text-field({type:'text'})
               +e.SPAN.after-text л
           +e.item
             +e.SPAN.label._medium Стационарный запас воды
             +e.input-wrap._medium
-              +text-field({type:'number'})
+              +text-field({type:'text'})
               +e.SPAN.after-text л
           +e.item._row
             +checkbox({checked: true})._switcher

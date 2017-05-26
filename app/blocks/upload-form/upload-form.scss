@@ -55,5 +55,10 @@
 
   .text-field {
     margin-right: 30px;
+
+    &__placeholder {
+      color: $color-gray;
+      vertical-align: middle;
+    }
   }
 }
