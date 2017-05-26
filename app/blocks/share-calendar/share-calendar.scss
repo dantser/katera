@@ -37,11 +37,15 @@
       height: 100%;
       width: 100%;
       display: block;
-      fill: $color-white;
+      //fill: $color-white;
     }
 
     &_g-share {
       background-color: #72c1fa;
+
+      & > svg {
+        fill: $color-white;
+      }
     }
 
     &_ya-share > svg {
@@ -50,6 +54,10 @@
 
     &_win-share {
       background-color: $color-black;
+
+      & > svg {
+        fill: $color-white;
+      }
     }
   }
 }
