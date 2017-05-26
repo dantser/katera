@@ -56,14 +56,11 @@
 
   &__box-bg {
     position: relative;
-    height: 400px;
+    height: 65vh;
     width: 100%;
     display: block;
     overflow: hidden;
-
-    @include respond-to('large-desktop') {
-      height: 540px;
-    }
+    min-height: 400px;
 
     .image-bg {
       height: 100%;
@@ -84,22 +81,28 @@
   }
 
   &__submenu {
-    position: relative;
     border-bottom: 1px solid $color-light-gray;
 
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+    }
+
     .yacht-club__club {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 30px;
+      align-self: center;
       z-index: 1;
       font-size: 24px;
+      flex-shrink: 0;
     }
 
     .submenu {
-      padding-left: 400px;
-      padding-right: 30px;
       border: none;
+      width: auto;
+
+      &__item:not(:last-child) {
+        margin-right: 150px;
+      }
     }
 
     @include respond-to('tablet') {
@@ -120,15 +123,9 @@
       z-index: 999;
       width: 100%;
       margin: 0 auto;
-      padding: 0 15px;
 
       .submenu {
         border: none;
-        padding: 0 250px;
-
-        @include respond-to('large-desktop') {
-          padding-right: 400px;
-        }
       }
     }
   }
