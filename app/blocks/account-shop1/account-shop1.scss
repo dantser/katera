@@ -83,25 +83,31 @@
     width: 100%;
     height: 370px;
     position: relative;
-    background: #130b59;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      //z-index: -1;
-      background-image: linear-gradient(45deg, rgb(251, 37, 0) 0%, rgb(253, 146, 128) 20%, rgb(255, 255, 255) 48%, rgb(137, 133, 172) 80%, rgb(19, 11, 89) 100%);
-      opacity: .3;
-    }
+  &__img-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: .7;
+    background-color: #130b59;
+  }
+
+  &__img-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, rgb(251, 37, 0) 0%, rgb(253, 146, 128) 20%, transparent 48%, rgb(137, 133, 172) 80%, rgb(19, 11, 89) 100%);
+    z-index: 2;
+    opacity: .3;
   }
 
   &__img-text {
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 5;
     font-family: 'Neris Thin', sans-serif;
     font-weight: 300;
     font-size: 59px;
