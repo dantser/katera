@@ -62,6 +62,8 @@
   }
 
   .magazine2__box-bg1 {
+    margin: 30px 0;
+
     @include respond-to('tablet') {
       width: calc(100% - 30px);
       margin: 0 auto;
