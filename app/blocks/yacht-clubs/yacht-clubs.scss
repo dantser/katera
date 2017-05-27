@@ -94,6 +94,26 @@
       &:nth-child(3) {
         display: none;
       }
+
+      &:nth-child(4) {
+
+        .yacht-clubs-item {
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+
+        .yacht-clubs-item {
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
     }
 
     .yacht-clubs-item {
