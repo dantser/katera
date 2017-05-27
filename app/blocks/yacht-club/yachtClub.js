@@ -1,14 +1,71 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
-import makeItFixed from '../../scripts/common/make-it-fixed';
 
+/* eslint-disable */
 export default () => {
-  const submenuFixed = [
-    'yacht-club__submenu',
-    'yacht-club__submenu_default',
-    'yacht-club__submenu_fixed',
-  ];
-  makeItFixed(...submenuFixed);
+
+  const submenu = $('.yacht-club__submenu');
+
+  if (!submenu.hasClass('yacht-club__submenu_default')) {
+    return;
+  }
+
+  const w = $(window);
+  const navTopBreakpoint = submenu.offset().top;
+
+  const fixSubmenu = () => {
+    const sT = w.scrollTop();
+
+    if (sT >= navTopBreakpoint && !submenu.hasClass('yacht-club__submenu_fixed')) {
+      submenu.addClass('yacht-club__submenu_fixed');
+    }
+
+    if (sT < navTopBreakpoint && submenu.hasClass('yacht-club__submenu_fixed')) {
+      submenu.removeClass('yacht-club__submenu_fixed');
+    }
+  };
+
+  w.on('scroll', fixSubmenu);
+  fixSubmenu();
+
+  // Отменяем обычный клик по ссылке из сабменю
+  submenu.on('click', '.submenu__link', function (e) {
+    e.preventDefault();
+    window.location.hash = $(this).attr('href');
+  });
+
+  // Меняем активную ссылку, в зависимости от HASH'а, пример: #events, #contacts и скролим до экрана
+  w.on('hashchange', (e) => {
+    const nextElement = $(`[data-id="${window.location.hash}"]`);
+
+    if (!nextElement.length) {
+      return;
+    }
+
+    submenu
+      .find('.submenu__link')
+      .each(function () {
+        $(this)
+          .children('.division')
+          .removeClass('division_active')
+      })
+      .filter(function () {
+        return $(this).attr('href') === window.location.hash
+      })
+      .children('.division')
+      .addClass('division_active');
+
+    let nextTop = nextElement.offset().top;
+
+    if (nextElement.hasClass('scrollable__slide_vertical')) {
+      nextTop += nextElement.prev().outerWidth();
+    }
+
+    $('html, body').animate({
+      scrollTop: nextTop,
+    }, 1000, 'swing');
+  });
+
   // eslint-disable-next-line no-unused-vars
   const yachtScrollSlider = new Swiper('.yacht-club__slider_mob', {
     pagination: '.yacht-club__events .yacht-club__pagination',
@@ -23,27 +80,6 @@ export default () => {
     slidesPerView: 1,
     spaceBetween: 0,
   });
-
-  // const WRAPPER = $('.yacht-club__gallery-slider');
-  // const WINDOW = $(window);
-  // const WRAPPER_CLASS = 'swiper-wrapper';
-  // function resize() {
-  //   if (WINDOW.width() <= 1024) {
-  // eslint-disable-next-line no-unused-vars
-  // const yachtGallerySlider = new Swiper('.yacht-club__gallery_mob', {
-  //   pagination: '.yacht-club__gallery .yacht-club__pagination',
-  //   paginationClickable: true,
-  //   slidesPerView: 1,
-  //   spaceBetween: 0,
-  // }
-  //   );
-  //     WRAPPER.addClass(WRAPPER_CLASS);
-  //   } else {
-  //     WRAPPER.removeClass(WRAPPER_CLASS);
-  //   }
-  // }
-  // WINDOW.on('resize', resize());
-  // resize();
 
   // Сворачивание на мобильной версии
   const control = '.jqcontrol';
