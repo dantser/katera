@@ -10,4 +10,12 @@
   &_active {
     display: block;
   }
+
+  @media (min-width: 992px) and (orientation: portrait) {
+    padding: 0 15px;
+  }
+
+  @media (min-width: 992px) and (orientation: landscape) {
+    padding: 0 15px;
+  }
 }
