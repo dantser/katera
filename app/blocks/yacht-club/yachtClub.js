@@ -17,16 +17,28 @@ export default () => {
     const sT = w.scrollTop();
 
     if (sT >= navTopBreakpoint && !submenu.hasClass('yacht-club__submenu_fixed')) {
-      submenu.addClass('yacht-club__submenu_fixed');
+      submenu
+        .addClass('yacht-club__submenu_fixed')
+        .next()
+        .css('margin-top', submenu.outerHeight() + 'px');
     }
 
     if (sT < navTopBreakpoint && submenu.hasClass('yacht-club__submenu_fixed')) {
-      submenu.removeClass('yacht-club__submenu_fixed');
+      submenu
+        .removeClass('yacht-club__submenu_fixed')
+        .next()
+        .css('margin-top', 0);
     }
   };
 
-  w.on('scroll', fixSubmenu);
-  fixSubmenu();
+  if (w.width() > 1024) {
+    w.on('scroll', () => {
+      fixSubmenu();
+
+      const sT = w.scrollTop();
+    });
+    fixSubmenu();
+  }
 
   // Отменяем обычный клик по ссылке из сабменю
   submenu.on('click', '.submenu__link', function (e) {
@@ -36,12 +48,6 @@ export default () => {
 
   // Меняем активную ссылку, в зависимости от HASH'а, пример: #events, #contacts и скролим до экрана
   w.on('hashchange', (e) => {
-    const nextElement = $(`[data-id="${window.location.hash}"]`);
-
-    if (!nextElement.length) {
-      return;
-    }
-
     submenu
       .find('.submenu__link')
       .each(function () {
@@ -54,16 +60,6 @@ export default () => {
       })
       .children('.division')
       .addClass('division_active');
-
-    let nextTop = nextElement.offset().top;
-
-    if (nextElement.hasClass('scrollable__slide_vertical')) {
-      nextTop += nextElement.prev().outerWidth();
-    }
-
-    $('html, body').animate({
-      scrollTop: nextTop,
-    }, 1000, 'swing');
   });
 
   // eslint-disable-next-line no-unused-vars

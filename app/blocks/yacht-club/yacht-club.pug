@@ -15,87 +15,85 @@ mixin yacht-club()
     +container()
       +page-header('Яхт-клуб Grand Marine', ['Главная', 'Яхт клубы', 'Яхт-клуб Grand Marine'])
 
-    +main-container().yacht-club__main-container
-      +e.box-bg
-        +image-bg()(src='assets/images/yacht-club/yacht-club-banner.png')
-        +image-bg()(src='assets/images/yacht-club/banner-shadow.png')._shadow
-        +e('img')(src='assets/images/yacht-club/grand-marine-logo.png').__logo
+    +e.box-bg
+      +image-bg()(src='assets/images/yacht-club/yacht-club-banner.png')
+      +image-bg()(src='assets/images/yacht-club/banner-shadow.png')._shadow
+      +e('img')(src='assets/images/yacht-club/grand-marine-logo.png').__logo
 
-      +e.submenu._default
-        +container
-          +e('span').club Grand Marine
-          +submenu(getData('submenu-club'))
+    +e.submenu._default
+      +container
+        +e('span').club Grand Marine
+        +submenu(getData('submenu-club'))
 
-      +container(data-id="#services")
-        +e.H2.title.jqcontrol Услуги
-          +icon('caret').icon.
-        +services()
+    +container(data-id="#services").js-yacht-club-menu-block
+      +e.H2.title.jqcontrol Услуги
+        +icon('caret').icon
+      +services()
 
-      +scrollable()
+    +scrollable()
+      +scrollable-h()(data-id='#events').js-yacht-club-menu-block
+        +e.events
+          +e.H2.title_events.jqcontrol-events.title
+            span Мероприятия
+            +icon('caret').icon
 
-        +scrollable-h().yacht-club__events(data-id='#events')
-          +e.block
-            +e.H2.title_events.jqcontrol-events.title
-              span Мероприятия
-              +icon('caret').icon.
+          - var data = getData('yacht-club');
 
-            - var data = getData('yacht-club');
+          +e.slider._default
+            +e.wrapper
+              each item in data
+                +e.slide
+                  +e.date= item.day
+                  +b('span')= item.month
+                  +e.slide-inner
+                    +e('img').img(src= item.path)
+                    +e.category= item.category
+                    +e.name= item.title
 
-            +e.slider._mob.swiper-container
-              +e.wrapper.swiper-wrapper
-                each item in data
-                  +e.slide.swiper-slide
-                    +e.date= item.day
-                      +b('span')= item.month
-                    +e.slide-inner
-                      +e('img').img(src= item.path)
-                      +e.category= item.category
-                      +e.name= item.title
-              +e.pagination.swiper-pagination
+          +e.slider._mob.swiper-container
+            +e.wrapper.swiper-wrapper
+              each item in data
+                +e.slide.swiper-slide
+                  +e.date= item.day
+                    +b('span')= item.month
+                  +e.slide-inner
+                    +e('img').img(src= item.path)
+                    +e.category= item.category
+                    +e.name= item.title
+            +e.pagination.swiper-pagination
 
+      +scrollable-v()(data-id='#gallery').js-yacht-club-menu-block
+        +e.block
+          +e.H2.title_gallery.jqcontrol Галерея
+            +icon('caret').icon
 
-            +e.slider._default
-              +e.wrapper
-                each item in data
-                  +e.slide
-                    +e.date= item.day
-                      +b('span')= item.month
-                    +e.slide-inner
-                      +e('img').img(src= item.path)
-                      +e.category= item.category
-                      +e.name= item.title
+          +e.gallery._mob.swiper-container
+            +e.gallery-wrapper.swiper-wrapper
+              +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup')
+                +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
+              +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup2')
+                +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
+              +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup3')
+                +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
+            +e.pagination.swiper-pagination
 
-        +scrollable-v()(data-id='#gallery')
-          +e.block
-            +e.H2.title_gallery.jqcontrol Галерея
-              +icon('caret').icon
+          +e.gallery._default
+            +e.__gallery-slider
+              +e.box-bg.js-open-modal(data-target-modal='#gallery-popup')
+                +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
+              +e.box-bg.js-open-modal(data-target-modal='#gallery-popup2')
+                +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
 
-            +e.gallery._mob.swiper-container
-              +e.gallery-wrapper.swiper-wrapper
-                +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup')
-                  +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
-                +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup2')
-                  +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
-                +e.box-bg.swiper-slide.js-open-modal(data-target-modal='#gallery-popup3')
-                  +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
-              +e.pagination.swiper-pagination
+    +scrollable()
 
-            +e.gallery._default
-              +e.__gallery-slider
-                +e.box-bg.js-open-modal(data-target-modal='#gallery-popup')
-                  +image-bg()(src='assets/images/yacht-club/gallery-1.jpg')
-                +e.box-bg.js-open-modal(data-target-modal='#gallery-popup2')
-                  +image-bg()(src='assets/images/yacht-club/gallery-2.jpg')
+      +scrollable-h()
+        +e.gallery._default._last
+          +e.box-bg.js-open-modal(data-target-modal='#gallery-popup3')
+            +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
 
-      +scrollable()
-
-        +scrollable-h()
-          +e.gallery._default._last
-            +e.box-bg.js-open-modal(data-target-modal='#gallery-popup3')
-              +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
-
-        +scrollable-v()(data-id='#contacts')
-          +e.block
+      +scrollable-v()(data-id='#contacts').js-yacht-club-menu-block
+        +e.block
+          +container()
             +e.H2.title_contacts.jqcontrol Контакты
               +icon('caret').icon
             +b.contacts
@@ -115,12 +113,12 @@ mixin yacht-club()
                 +e.item
                   +e('span').title График работы:
                   +e('span').descr Круглосуточно.
-            +e.map_contacts
-              +map()
+              +e.map_contacts
+                +map()
 
-      +e.banner-bottom
-        +banner('#', 'assets/images/banner.jpg')._overlay
-            +e('img')(src='assets/images/banner-img.png').little
+              +e.banner-bottom
+                +banner('#', 'assets/images/banner.jpg')._overlay
+                  +e('img')(src='assets/images/banner-img.png').little
 
-    +gallery-popup()
+  +gallery-popup()
 
