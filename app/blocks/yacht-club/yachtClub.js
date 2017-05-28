@@ -31,19 +31,45 @@ export default () => {
     }
   };
 
+  const detectCurrentBlock = () => {
+    var currid,
+      sT = w.scrollTop();
+
+    $(".yacht-club__submenu").find('.submenu__link').each(function(){
+      var id = $(this).attr("href"),
+        el = $(document).find(`[data-id='${id}']`),
+        eltop = el.offset().top,
+        elbottom = eltop + el.outerHeight();
+
+      if ((sT >= eltop) && (sT < elbottom)) {
+        currid = id;
+        if ( el.hasClass("scrollable__slide") ) {
+          if ( el.parents(".scrollable__wrapper").hasClass("fixed") ) {
+            currid = el.parents(".scrollable__wrapper").find(".scrollable__slide_horizontal").data("id");
+          } else if ( el.parents(".scrollable__wrapper").hasClass("finish") ) {
+            currid = el.parents(".scrollable__wrapper").find(".scrollable__slide_vertical").data("id");
+          }
+        }
+      }
+    });
+
+    if (currid) {
+      window.location.hash = currid;
+    }
+  };
+
   if (w.width() > 1024) {
     w.on('scroll', () => {
       fixSubmenu();
-
-      const sT = w.scrollTop();
+      detectCurrentBlock();
     });
     fixSubmenu();
+    detectCurrentBlock();
   }
 
   // Отменяем обычный клик по ссылке из сабменю
   submenu.on('click', '.submenu__link', function (e) {
     e.preventDefault();
-    window.location.hash = $(this).attr('href');
   });
 
   // Меняем активную ссылку, в зависимости от HASH'а, пример: #events, #contacts и скролим до экрана
