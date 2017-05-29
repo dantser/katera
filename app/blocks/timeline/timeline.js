@@ -6,18 +6,24 @@ export default () => {
     pagination: '.timeline__swiper-pagination',
     paginationClickable: true,
     slidesPerView: 4,
+    nextButton: '.timeline__caret_next',
+    prevButton: '.timeline__caret_prev',
     breakpoints: {
       992: {
         slidesPerView: 3,
+        nextButton: '.timeline__next',
+        prevButton: '.timeline__prev',
       },
       768: {
         slidesPerView: 2,
+        nextButton: '.timeline__next',
+        prevButton: '.timeline__prev',
       },
       640: {
         slidesPerView: 1,
+        nextButton: '.timeline__next',
+        prevButton: '.timeline__prev',
       },
     },
-    nextButton: '.timeline__next',
-    prevButton: '.timeline__prev',
   });
 };
