@@ -74,6 +74,10 @@
           box-shadow: 0 1px 7px 0 rgba($color-red, .5);
         }
       }
+
+      &__eye-icon {
+        display: none;
+      }
     }
 
     &:hover {
@@ -127,6 +131,23 @@
     color: $color-dark-gray;
     white-space: nowrap;
     pointer-events: none;
+  }
+
+  &__eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 13px;
+    fill: #ccc;
+    will-change: fill;
+    transition: fill .25s ease-in-out;
+    margin-right: 15px;
+
+    &_active {
+      fill: #000;
+    }
   }
 
   &__error-icon {

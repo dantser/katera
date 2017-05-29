@@ -14,4 +14,8 @@ mixin text-field(data)
       = data.placeholder
     +e.error-icon-wrapper
       +icon('exclamation-point').error-icon
+
     +e.error
+
+    if data.type === 'password'
+      +icon('eye').eye-icon

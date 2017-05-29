@@ -31,6 +31,8 @@ $.fn.removeError = function removeError() {
 export default () => {
   const ELEMENT_CLASS = '.text-field';
   const CONTROL_CLASS = '.text-field__control';
+  const EYE_ICON_CLASS = '.text-field__eye-icon';
+  const EYE_ICON_ACTIVE_CLASS = 'text-field__eye-icon_active';
 
   const element = $(ELEMENT_CLASS);
 
@@ -64,5 +66,24 @@ export default () => {
     }
 
     el.attr('value', el.val());
+  });
+
+  const eyeIcon = $(EYE_ICON_CLASS);
+
+  if (!eyeIcon.length) {
+    return;
+  }
+
+  eyeIcon.on('click', function () { // eslint-disable-line func-names
+    const eye = $(this);
+    const control = eye.siblings(CONTROL_CLASS);
+
+    if (eye.hasClass(EYE_ICON_ACTIVE_CLASS)) {
+      control.prop('type', 'password');
+      eye.removeClass(EYE_ICON_ACTIVE_CLASS);
+    } else {
+      control.prop('type', 'text');
+      eye.addClass(EYE_ICON_ACTIVE_CLASS);
+    }
   });
 };
