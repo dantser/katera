@@ -189,15 +189,15 @@
   //preview
 
   .sale-preview-item__img-wrap {
-    opacity: 1;
-    transition: all .25s ease-in-out;
+    //opacity: 1;
+    //transition: all .25s ease-in-out;
   }
 
   .sale-preview-item {
     cursor: pointer;
 
     &:hover .sale-preview-item__img-wrap {
-      opacity: .75;
+      //opacity: .75;
     }
   }
 }
