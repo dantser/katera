@@ -108,8 +108,9 @@
     top: 50%;
     left: 50%;
     z-index: 5;
-    font-family: 'Neris Thin', sans-serif;
-    font-weight: 300;
+    font-family: $NerisThin;
+    font-style: normal;
+    font-weight: 100;
     font-size: 59px;
     color: $color-white;
     width: 100%;

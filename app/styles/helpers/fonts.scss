@@ -1,12 +1,36 @@
+//@font-face {
+//  font-family: 'Open Sans';
+//  font-style: normal;
+//  font-weight: 400;
+//  src:
+//    local('Open Sans'),
+//    local('OpenSans'),
+//    url('../fonts/open-sans-v13-cyrillic_latin-regular.woff2') format('woff2'),
+//    url('../fonts/open-sans-v13-cyrillic_latin-regular.woff') format('woff');
+//}
+
+//@font-face {
+//  font-family: 'Roboto Slab';
+//  font-style: normal;
+//  font-weight: 400;
+//  src:
+//    local('Roboto Slab Regular'),
+//    local('RobotoSlab-Regular'),
+//    url('../fonts/RobotoSlab-Regular.ttf') format('ttf');
+//  url('../fonts/roboto-slab-v6-cyrillic_latin-regular.woff2') format('woff2'),
+//  url('../fonts/roboto-slab-v6-cyrillic_latin-regular.woff') format('woff');
+//}
+
+//RobotoSlab
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Roboto Slab';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   src:
-    local('Open Sans'),
-    local('OpenSans'),
-    url('../fonts/open-sans-v13-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/open-sans-v13-cyrillic_latin-regular.woff') format('woff');
+    local('Roboto Slab Bold'),
+    local('RobotoSlab-Bold'),
+  url('../fonts/RobotoSlab-Bold.ttf') format('ttf');
 }
 
 @font-face {
@@ -16,38 +40,122 @@
   src:
     local('Roboto Slab Regular'),
     local('RobotoSlab-Regular'),
-    url('../fonts/roboto-slab-v6-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/roboto-slab-v6-cyrillic_latin-regular.woff') format('woff');
+  url('../fonts/RobotoSlab-Regular.ttf') format('ttf');
 }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('Roboto Slab Light'),
+    local('RobotoSlab-Light'),
+  url('../fonts/RobotoSlab-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  src:
+    local('Roboto Slab Thin'),
+    local('RobotoSlab-Thin'),
+  url('../fonts/RobotoSlab-Thin.ttf') format('ttf');
+}
+
+//Neris
 
 @font-face {
   font-family: 'Neris Black';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   src:
     local('Neris Black'),
     local('Neris-Black'),
-    url('../fonts/neris-black.woff') format('woff');
+  url('../fonts/neris-black.woff') format('woff'),
+  url('../fonts/Neris-Black.otf') format('otf');
 }
 
 @font-face {
-  font-family: 'Neris Light';
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Neris Black';
+  font-style: italic;
+  font-weight: 900;
   src:
-    local('Neris Light'),
-    local('Neris-Light'),
-    url('../fonts/neris-light.woff') format('woff');
+    local('Neris Black Italic'),
+    local('Neris-BlackItalic'),
+  url('../fonts/Neris-BlackItalic.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Neris Bold';
+  font-style: italic;
+  font-weight: 700;
+  src:
+    local('Neris Bold Italic'),
+    local('Neris-BoldItalic'),
+  url('../fonts/Neris-BoldItalic.otf') format('otf');
 }
 
 @font-face {
   font-family: 'Neris SemiBold';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   src:
     local('Neris SemiBold'),
     local('Neris-SemiBold'),
-    url('../fonts/neris-semibold.woff') format('woff');
+  url('../fonts/neris-semibold.woff') format('woff'),
+  url('../fonts/Neris-SemiBold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Neris SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local('Neris SemiBold Italic'),
+    local('Neris-SemiBoldItalic'),
+  url('../fonts/Neris-SemiBoldItalic.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Neris Light';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('Neris Light'),
+    local('Neris-Light'),
+  url('../fonts/neris-light.woff') format('woff'),
+  url('../fonts/Neris-Light.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Neris Light';
+  font-style: italic;
+  font-weight: 300;
+  src:
+    local('Neris Light Italic'),
+    local('Neris-LightItalic'),
+  url('../fonts/Neris-LightItalic.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Neris Thin';
+  font-style: normal;
+  font-weight: 100;
+  src:
+    local('Neris Thin'),
+    local('Neris-Thin'),
+  url('../fonts/Neris-Thin.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Neris Thin';
+  font-style: italic;
+  font-weight: 100;
+  src:
+    local('Neris Thin Italic'),
+    local('Neris-ThinItalic'),
+  url('../fonts/Neris-ThinItalic.otf') format('otf');
 }
 
 @font-face {
@@ -57,5 +165,5 @@
   src:
     local('GothamPro Light'),
     local('GothamPro-Light'),
-    url('../fonts/GothamProLight.woff') format('woff');
+  url('../fonts/GothamProLight.woff') format('woff');
 }
