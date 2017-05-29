@@ -16,6 +16,14 @@ export default () => {
 
       oldTab.find(DIVISION_CLASS).removeClass(DIVISION_ACTIVE_CLASS);
       newTab.find(DIVISION_CLASS).addClass(DIVISION_ACTIVE_CLASS);
+
+      const map = document.getElementById('map');
+
+      if (!map) {
+        return;
+      }
+
+      google.maps.event.trigger(map, 'resize'); // eslint-disable-line
     },
   });
 };
