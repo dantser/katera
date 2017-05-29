@@ -139,8 +139,8 @@
 
       & .sale-preview-item__img-wrap {
         height: 134px;
-        opacity: 1;
-        transition: all .25s ease-in-out;
+        //opacity: 1;
+        //transition: all .25s ease-in-out;
       }
 
       &:last-child {
@@ -156,7 +156,7 @@
   .sale-preview-item {
 
     &:hover .sale-preview-item__img-wrap {
-      opacity: .75;
+      //opacity: .75;
     }
 
     &__text {

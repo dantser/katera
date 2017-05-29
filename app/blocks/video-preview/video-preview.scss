@@ -2,11 +2,11 @@
   display: flex;
   width: 100%;
   text-decoration: none;
-  will-change: box-shadow;
-  transition: box-shadow .25s ease-in-out;
+  box-shadow: 0 0 -20px 0 rgba(0, 0, 0, .15);
+  transition: all .25s ease-in-out;
 
   &:hover {
-    box-shadow: 0 0 35px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
   }
 
   &__image {

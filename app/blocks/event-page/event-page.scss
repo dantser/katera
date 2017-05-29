@@ -179,6 +179,8 @@
   }
 
   .sale-preview-item {
+    margin-top: 30px;
+
     @include respond-to('mobile') {
       height: 306px;
     }
@@ -190,7 +192,7 @@
 
   .sale-preview-item__img-wrap {
     height: 215px;
-    margin-top: 30px;
+    //margin-top: 30px;
   }
 
   &__text-content {
@@ -254,12 +256,12 @@
   }
 
   .sale-preview-item__img-wrap {
-    opacity: 1;
-    transition: all .25s ease-in-out;
+    //opacity: 1;
+    //transition: all .25s ease-in-out;
   }
 
   .sale-preview-item:hover .sale-preview-item__img-wrap {
-    opacity: .75;
+    //opacity: .75;
   }
 
   &__slider {
