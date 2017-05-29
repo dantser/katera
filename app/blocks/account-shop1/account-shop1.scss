@@ -46,7 +46,7 @@
   &__col-page {
     padding-left: 15px;
     padding-bottom: 70px;
-    width: 67%;
+    //width: 67%;
     overflow-x: hidden;
     //width: calc(100% - 405px);
     //flex-grow: 1;
@@ -127,6 +127,10 @@
     position: relative;
     margin-top: 65px;
     margin-bottom: 60px;
+
+    @include respond-to('large-desktop') {
+      height: 790px;
+    }
   }
 
   &__img1-text {
@@ -200,6 +204,10 @@
 
   &__img {
     width: 100%;
+
+    @include respond-to('large-desktop') {
+      height: 562px;
+    }
   }
 
   &__title {
@@ -215,6 +223,10 @@
     margin-top: 8px;
     text-align: justify;
     font-size: 15px;
+
+    @include respond-to('large-desktop') {
+      padding: 0 137px;
+    }
 
     @include respond-to('mobile') {
       padding: 0;
@@ -415,6 +427,10 @@
       color: $color-black;
       line-height: 1.5;
       padding: 0 16px;
+
+      @include respond-to('large-desktop') {
+        padding: 0 116px;
+      }
 
       @include respond-to('mobile') {
         padding: 0;
