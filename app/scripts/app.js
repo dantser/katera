@@ -53,6 +53,7 @@ import shops from '../blocks/shop-s/shop-s';
 import magazinePage from '../blocks/magazine-page/magazine-page';
 import accountProposePopup from '../blocks/account-propose-popup/account-propose-popup';
 import buyMagazineForm from '../blocks/buy-magazine-form/buy-magazine-form';
+import accountMessages1 from '../blocks/account-messages-1/account-message-1';
 
 $(window).on('load', () => {
   scrollable();
@@ -111,6 +112,7 @@ $(() => {
   magazinePage();
   accountProposePopup();
   buyMagazineForm();
+  accountMessages1();
   const mapElement = document.getElementById('map');
 
   if (!mapElement) {

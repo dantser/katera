@@ -124,4 +124,15 @@
       transition: stroke .25s ease-in-out;
     }
   }
+
+  &_disabled {
+    background-color: #fbfbfb !important;
+    border-color: #e5e5e5 !important;
+    color: $color-dark-gray !important;
+    pointer-events: none !important;
+
+    * {
+      pointer-events: none !important;
+    }
+  }
 }

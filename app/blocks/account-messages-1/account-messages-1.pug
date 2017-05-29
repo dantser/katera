@@ -24,9 +24,9 @@ mixin account-messages-1()
           +account-navigation(nav)
         +e.col-page
           +e.heading
-            +checkbox({checked: false})._circle.__checkbox
-            +button()._rounded._kind_blue-border._right Спам
-            +button()._rounded._kind_blue-border._right Удалить
+            +checkbox({checked: false})._circle.__checkbox.js-account-messages-1-select-all
+            +button()._rounded._kind_blue-border._right.js-account-messages-1-btn Спам
+            +button()._rounded._kind_blue-border._right.js-account-messages-1-btn Удалить
             +e.messages
               +e('span') Показать
               - var msg = getData('account-message')
@@ -34,7 +34,7 @@ mixin account-messages-1()
               +e.dotted
                 +dotted-dropdown()(data-target-modal='#account-messages-dotted').js-mobile-slide-popup
           +e.message-container
-            +checkbox({checked: false})._circle.__checkbox
+            +checkbox({checked: false})._circle.__checkbox.js-account-messages-1-checkbox
             +e.message-content
               +e.message-name Михаил Владиславович
               +e.message-heading Silver Fox SC 485, 1470000 Р
@@ -46,7 +46,7 @@ mixin account-messages-1()
                   +e('span') Ответить
                   +icon('arrow-next').icon.__request-icon
           +e.message-container
-            +checkbox({checked: true})._circle.__checkbox
+            +checkbox({checked: true})._circle.__checkbox.js-account-messages-1-checkbox
             +e.message-content
               +e.message-name Михаил Владиславович
               +e.message-heading Silver Fox SC 485, 1470000 Р
@@ -58,7 +58,7 @@ mixin account-messages-1()
                   +e('span') Ответить
                   +icon('arrow-next').icon.__request-icon
           +e.message-container
-            +checkbox({checked: true})._circle.__checkbox
+            +checkbox({checked: true})._circle.__checkbox.js-account-messages-1-checkbox
             +e.message-content
               +e.message-name Михаил Владиславович
               +e.message-heading Silver Fox SC 485, 1470000 Р
@@ -70,7 +70,7 @@ mixin account-messages-1()
                   +e('span') Ответить
                   +icon('arrow-next').icon.__request-icon
           +e.message-container
-            +checkbox({checked: false})._circle.__checkbox
+            +checkbox({checked: false})._circle.__checkbox.js-account-messages-1-checkbox
             +e.message-content
               +e.message-name Михаил Владиславович
               +e.message-heading Silver Fox SC 485, 1470000 Р
