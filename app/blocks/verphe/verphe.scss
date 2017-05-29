@@ -350,7 +350,13 @@
     .swiper-container {
       padding-bottom: 83px;
 
+      @include respond-to('tablet') {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
       @include respond-to('mobile') {
+        padding-top: 10px;
         padding-bottom: 30px;
       }
     }
@@ -439,6 +445,12 @@
 
   .sale-preview-item {
     margin-top: 10px !important;
+    box-shadow: 0 0 -20px 0 rgba(0, 0, 0, .15);
+    transition: all .25s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+    }
 
     @include respond-to('tablet') {
       align-items: flex-start;
