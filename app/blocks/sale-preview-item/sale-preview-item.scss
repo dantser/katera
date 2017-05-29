@@ -4,6 +4,13 @@
   align-items: center;
   flex-direction: column;
   text-decoration: inherit;
+  box-shadow: 0 0 -20px 0 rgba(0, 0, 0, .15);
+  transition: all .25s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+  }
 
   &_image_left {
     flex-direction: row;
