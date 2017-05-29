@@ -32,29 +32,54 @@ export default () => {
   };
 
   const detectCurrentBlock = () => {
-    var currid,
-      sT = w.scrollTop();
+    let currid;
+    const sT = w.scrollTop();
 
-    $(".yacht-club__submenu").find('.submenu__link').each(function(){
-      var id = $(this).attr("href"),
-        el = $(document).find(`[data-id='${id}']`),
-        eltop = el.offset().top,
-        elbottom = eltop + el.outerHeight();
+    $(".yacht-club__submenu").find('.submenu__link').each(function() {
+      const link = $(this);
+      const id = link.attr("href");
+
+      if (!id) {
+        return;
+      }
+
+      const el = $(document).find(id);
+
+      if (!el) {
+        return;
+      }
+
+      const eltop = el.offset().top;
+      const elbottom = eltop + el.outerHeight();
 
       if ((sT >= eltop) && (sT < elbottom)) {
         currid = id;
         if ( el.hasClass("scrollable__slide") ) {
           if ( el.parents(".scrollable__wrapper").hasClass("fixed") ) {
-            currid = el.parents(".scrollable__wrapper").find(".scrollable__slide_horizontal").data("id");
+            currid = el.parents(".scrollable__wrapper").find(".scrollable__slide_horizontal").attr("id");
           } else if ( el.parents(".scrollable__wrapper").hasClass("finish") ) {
-            currid = el.parents(".scrollable__wrapper").find(".scrollable__slide_vertical").data("id");
+            currid = el.parents(".scrollable__wrapper").find(".scrollable__slide_vertical").attr("id");
           }
         }
       }
     });
 
     if (currid) {
-      window.location.hash = currid;
+
+      currid = currid[0] === '#' ? currid : `#${currid}`;
+      const link = $(document).find(`[href='${currid}']`);
+
+      if (!link) {
+        return;
+      }
+
+      link
+        .find('.division')
+        .addClass('division_active')
+        .parents('.submenu__item')
+        .siblings()
+        .find('.division')
+        .removeClass('division_active');
     }
   };
 
@@ -66,27 +91,6 @@ export default () => {
     fixSubmenu();
     detectCurrentBlock();
   }
-
-  // Отменяем обычный клик по ссылке из сабменю
-  submenu.on('click', '.submenu__link', function (e) {
-    e.preventDefault();
-  });
-
-  // Меняем активную ссылку, в зависимости от HASH'а, пример: #events, #contacts и скролим до экрана
-  w.on('hashchange', (e) => {
-    submenu
-      .find('.submenu__link')
-      .each(function () {
-        $(this)
-          .children('.division')
-          .removeClass('division_active')
-      })
-      .filter(function () {
-        return $(this).attr('href') === window.location.hash
-      })
-      .children('.division')
-      .addClass('division_active');
-  });
 
   // eslint-disable-next-line no-unused-vars
   const yachtScrollSlider = new Swiper('.yacht-club__slider_mob', {

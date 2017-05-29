@@ -25,13 +25,13 @@ mixin yacht-club()
         +e('span').club Grand Marine
         +submenu(getData('submenu-club'))
 
-    +container(data-id="#services")
+    +container#services
       +e.H2.title.jqcontrol Услуги
         +icon('caret').icon
       +services()
 
     +scrollable()
-      +scrollable-h()(data-id='#events')
+      +scrollable-h()#events
         +e.events
           +e.H2.title_events.jqcontrol-events.title
             span Мероприятия
@@ -62,7 +62,7 @@ mixin yacht-club()
                     +e.name= item.title
             +e.pagination.swiper-pagination
 
-      +scrollable-v()(data-id='#gallery')
+      +scrollable-v()#gallery
         +e.block
           +e.H2.title_gallery.jqcontrol Галерея
             +icon('caret').icon
@@ -86,12 +86,12 @@ mixin yacht-club()
 
     +scrollable()
 
-      +scrollable-h()(data-id='#gallery')
+      +scrollable-h()
         +e.gallery._default._last
           +e.box-bg.js-open-modal(data-target-modal='#gallery-popup3')
             +image-bg()(src='assets/images/yacht-club/gallery-3.jpg')
 
-      +scrollable-v()(data-id='#contacts')
+      +scrollable-v()#contacts
         +e.block
           +container()
             +e.H2.title_contacts.jqcontrol Контакты
