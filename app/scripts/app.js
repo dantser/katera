@@ -40,7 +40,6 @@ import shop1 from '../blocks/shop1/shop1';
 import accountFaq from '../blocks/account-faq/accountFaq';
 import accountNavigation from '../blocks/account-navigation/account-navigation';
 import saleRaznoe from '../blocks/sale-raznoe/sale-raznoe';
-import sale12Page from '../blocks/sale12-page/sale12-page';
 import branding from '../blocks/branding/branding';
 import header from '../blocks/header/header';
 import burgerDropdown from '../blocks/burger-dropdown/burger-dropdown';
@@ -101,7 +100,6 @@ $(() => {
   shop1();
   accountNavigation();
   saleRaznoe();
-  sale12Page();
   branding();
   burgerDropdown();
   subscribe();

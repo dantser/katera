@@ -19,10 +19,8 @@ mixin sale12-page()
           +e('div').filter-wrapper
             +filter-sale([{title: "Купить", path: "#listTab-1", active: true}, {title: "Арендовать", path: "#listTab-2"}]).js-filter-sale
 
-          //- +filter-sale([{title: "Купить", path: "#", active: true}, {title: "Арендовать", path: "#"}])
-
           +mobile-slide-popup()
-            +filter-sale([{title: "Купить", path: "#listTab-1", active: true}, {title: "Арендовать", path: "#listTab-2"}]).js-filter-sale
+            +filter-sale([{title: "Купить", path: "#listTab-1", active: true}, {title: "Арендовать", path: "#listTab-2"}])
           +filter(getData('filter'))
           +button()(data-target-modal='#filter-sale-mobile').__show-filter-btn.js-mobile-slide-popup Фильтр
 
