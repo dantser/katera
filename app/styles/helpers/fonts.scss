@@ -145,7 +145,8 @@
   src:
     local('Neris Thin'),
     local('Neris-Thin'),
-    url('../fonts/Neris-Thin.otf') format('otf');
+    url('../fonts/Neris-Thin.otf') format('otf'),
+    url('../fonts/Neris-Thin.woff') format('woff');
 }
 
 @font-face {
