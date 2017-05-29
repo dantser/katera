@@ -23,7 +23,8 @@ $big-border: 12px solid $color-red;
   }
 
   &_active {
-    font-family: $NerisBlack;
+    font-family: $NerisBlack !important;
+    font-weight: 900;
     color: $color-black;
 
     &::before {

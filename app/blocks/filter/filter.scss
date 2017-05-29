@@ -38,7 +38,8 @@
     padding-bottom: 0;
     text-decoration: none;
     font-size: rem(20px);
-    font-family: $NerisBlack;
+    font-family: $NerisSemiBold;
+    font-weight: 600;
 
     @include respond-to('mobile') {
       padding-top: 15px;
