@@ -11,18 +11,18 @@ export default () => {
     breakpoints: {
       992: {
         slidesPerView: 3,
-        nextButton: '.timeline__next',
-        prevButton: '.timeline__prev',
+        nextButton: '.timeline__arrow_next',
+        prevButton: '.timeline__arrow_prev',
       },
       768: {
         slidesPerView: 2,
-        nextButton: '.timeline__next',
-        prevButton: '.timeline__prev',
+        nextButton: '.timeline__arrow_next',
+        prevButton: '.timeline__arrow_prev',
       },
       640: {
         slidesPerView: 1,
-        nextButton: '.timeline__next',
-        prevButton: '.timeline__prev',
+        nextButton: '.timeline__arrow_next',
+        prevButton: '.timeline__arrow_prev',
       },
     },
   });

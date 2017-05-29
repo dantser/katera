@@ -75,6 +75,13 @@
       box-shadow: 0 16px 40px 0 rgba(9, 4, 53, .35);
     }
 
+    @include respond-to('mobile') {
+      width: 232px;
+      height: 232px;
+      border: 0;
+      box-shadow: 0 16px 40px 0 rgba(9, 4, 53, .35);
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -151,11 +158,20 @@
       left: 5px;
       transform: rotate(-135deg);
     }
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+
+    @include  respond-to('mobile') {
+      display: none;
+    }
   }
 
   &__arrows {
     position: relative;
     display: none;
+    width: 100%;
 
     @include respond-to('tablet') {
       display: block;
@@ -169,49 +185,34 @@
   }
 
   &__arrow {
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    padding: 15px;
+
+    &_next {
+      right: 0;
+    }
+
+    &_prev {
+      top: 0;
+      left: 0;
+    }
+
+    @include respond-to('tablet') {
+      display: inline-block;
+    }
+
+    @include respond-to('mobile') {
+      display: inline-block;
+    }
+  }
+
+  &__arrow-icon {
     fill: $color-red;
     stroke: $color-red;
     width: 24px;
     height: 16px;
-  }
-
-  &__next {
-    left: auto;
-    right: 0;
-    top: -193px;
-    padding: 20px 0;
-    position: absolute;
-    z-index: 2;
-
-    @include respond-to('tablet') {
-      padding: 0;
-      top: 0;
-      left: auto;
-    }
-
-    @include respond-to('mobile') {
-      display: block;
-      top: -35px;
-      padding: 20px 0;
-      right: 15px;
-    }
-  }
-
-  &__prev {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-
-    @include respond-to('tablet') {
-      display: block;
-    }
-
-    @include respond-to('mobile') {
-      display: block;
-      top: -15px;
-      left: 15px;
-    }
   }
 }

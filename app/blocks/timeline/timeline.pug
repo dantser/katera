@@ -55,7 +55,7 @@ mixin timeline()
     +e.SPAN.caret_next
 
     +e.arrows
-      +e.SPAN.next
-        +icon('arrow-next').__arrow
-      +e.SPAN.prev
-        +icon('arrow-prev').__arrow
+      +e.arrow._prev
+        +icon('arrow-prev').arrow-icon
+      +e.arrow._next
+        +icon('arrow-next').arrow-icon
