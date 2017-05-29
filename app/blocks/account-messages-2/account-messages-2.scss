@@ -97,6 +97,7 @@
   &__col-page {
     padding-left: 15px;
     flex-grow: 1;
+    width: 100%;
     margin-top: -11px;
 
     @include respond-to('desktop') {
