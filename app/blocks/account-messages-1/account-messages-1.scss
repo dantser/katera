@@ -185,6 +185,11 @@
     }
   }
 
+  &__message-content {
+    text-decoration: none;
+    color: inherit;
+  }
+
   &__message-content, &__message-props {
     display: flex;
     flex-direction: column;
