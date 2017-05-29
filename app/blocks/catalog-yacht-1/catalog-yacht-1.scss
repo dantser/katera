@@ -103,6 +103,15 @@
   .yacht-slider {
     padding-bottom: 0;
 
+    &__slide-wrap {
+      box-shadow: 0 0 -20px 0 rgba(0, 0, 0, .15);
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+      }
+    }
+
     @include respond-to('mobile') {
       width: 290px;
     }
@@ -323,7 +332,7 @@
     transition: all .25s ease-in-out;
 
     &:hover .sale-preview-item__img-wrap {
-      opacity: .7;
+      //opacity: .7;
     }
 
     // @include respond-to('large-desktop') {
@@ -391,8 +400,8 @@
       &__img-wrap {
         height: 134px;
         width: 165px;
-        opacity: 1;
-        transition: all .25s ease-in-out;
+        //opacity: 1;
+        //transition: all .25s ease-in-out;
       }
 
       &__params {

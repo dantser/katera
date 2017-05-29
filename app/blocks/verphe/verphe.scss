@@ -445,11 +445,11 @@
 
   .sale-preview-item {
     margin-top: 10px !important;
-    box-shadow: 0 0 -20px 0 rgba(0, 0, 0, .15);
-    transition: all .25s ease-in-out;
+    //box-shadow: 0 0 -20px 0 rgba(0, 0, 0, .15);
+    //ransition: all .25s ease-in-out;
 
     &:hover {
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+      //box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
     }
 
     @include respond-to('tablet') {
