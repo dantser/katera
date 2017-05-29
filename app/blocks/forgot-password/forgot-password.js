@@ -49,6 +49,15 @@ export default () => {
   // show initial step
   nextStep();
 
+  // handle click on re-send code link
+  enterCodeForm
+    .find('.js-re-send-code')
+    .on('click', (e) => {
+      e.preventDefault();
+      // reset steps to initial one
+      nextStep('#send-code');
+    });
+
   // handle forms
   sendCodeForm.on('submit', (e) => {
     e.preventDefault();
