@@ -169,6 +169,10 @@
       flex: 1 1 auto;
       margin: 8px 0 10px;
 
+      @include respond-to('large-desktop') {
+        width: 70%;
+      }
+
       &:first-child {
         margin: 23px 0 0;
       }

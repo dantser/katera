@@ -271,7 +271,6 @@
     padding-bottom: 120px;
 
     &_default {
-
       @media (min-width: 1025px) {
         margin: 0;
         padding: 0;
@@ -492,7 +491,6 @@
   }
 
   .contacts {
-
     @include respond-to('tablet') {
       padding: 0 15px;
       margin-top: 11px;
