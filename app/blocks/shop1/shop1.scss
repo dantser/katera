@@ -1,6 +1,10 @@
 .shop1 {
   position: relative;
 
+  &.branding {
+    display: none;
+  }
+
   &__brand-bg {
     margin: 0 auto;
     z-index: -1;
