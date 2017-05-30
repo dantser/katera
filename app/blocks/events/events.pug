@@ -29,19 +29,19 @@ mixin events()
     +e('div').scrollable-wrapper
       +scrollable()
         +scrollable-h()
-          .swiper-container.events__slider
-            +e.wrapper.swiper-wrapper
-              +e.slide.swiper-slide
+          +e.slider
+            +e.wrapper
+              +e.slide
                 +event-item(getData('event-item1'))
-              +e.slide.swiper-slide
+              +e.slide
                 +event-item(getData('event-item1'))
-              +e.slide.swiper-slide
+              +e.slide
                 +event-item(getData('event-item1'))
-              +e.slide.swiper-slide
+              +e.slide
                 +event-item(getData('event-item1'))
-              +e.slide.swiper-slide
+              +e.slide
                 +event-item(getData('event-item1'))
-              +e.slide.swiper-slide
+              +e.slide
                 +event-item(getData('event-item1'))
 
           +container()

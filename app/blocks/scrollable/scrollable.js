@@ -16,12 +16,15 @@ function ultraScroll(element) {
 
   // Расчет дефолтных значений
   function ultraScrollInit() {
+    // slideWidth
+    var slide = scrollWrapper.outerWidth();
+
     scrollSlideVertical.width( scrollPreWrapper.width() );
-    scrollPreWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - scrollSlideVertical.outerWidth() );
-    scrollWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - scrollSlideVertical.outerWidth() );
+    scrollPreWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - slide );
+    scrollWrapper.height( scrollBlock.outerWidth() + scrollBlock.height() - slide );
 
     topBreakpoint = scrollPreWrapper.offset().top;
-    bottomBreakpoint = scrollPreWrapper.offset().top + scrollBlock.outerWidth() - scrollSlideVertical.outerWidth();
+    bottomBreakpoint = scrollPreWrapper.offset().top + scrollBlock.outerWidth() - slide;
   }
 
   ultraScrollInit();
@@ -58,12 +61,12 @@ function ultraScroll(element) {
 
       // Если мы ниже скроллблока
     } else {
-      translate = scrollBlock.outerWidth() - scrollWrapper.width();
+      translate = scrollBlock.outerWidth() - scrollWrapper.outerWidth();
       scrollBlock.css("transform", "translate3d(-" + translate + "px, 0, 0");
       scrollWrapper
         .removeClass(fixedClass)
         .addClass(finishClass)
-        .css("top", scrollBlock.outerWidth() - scrollSlideVertical.outerWidth() );
+        .css("top", scrollBlock.outerWidth() - scrollWrapper.outerWidth() );
     }
   });
 }
