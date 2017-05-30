@@ -43,6 +43,7 @@
     min-width: 165px;
 
     @include respond-to('mobile') {
+      text-align: center;
       padding-top: 15px;
       font-size: rem(16px);
 
@@ -59,6 +60,7 @@
     }
 
     @include respond-to('tablet') {
+      text-align: center;
       padding-top: 15px;
       font-size: rem(16px);
 
