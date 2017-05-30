@@ -1,0 +1,26 @@
+include ../modal/modal
+
+mixin shop-info-popup()
+  +modal()#shop-info-popup.shop-info-popup-modal
+    +b.shop-info-popup
+      +e.about
+        +e('img')(src='assets/images/ultraboats.png' alt='UltraBoats').logo
+        +e.name
+          +e('span').name-title Магазин:
+          +e('a')(href='#').name-link UltraBoats
+      +e('ul').info
+        +e.item
+          +e.item-title Телефон:
+          +e.item-description +7 (925) 726-75-75, +7 (902) 652-67-77
+        +e.item
+          +e.item-title Режим работы:
+          +e.item-description Работаем по будням с 9 -19:00
+        +e.item
+          +e.item-title Адрес:
+          +e.item-description г. Волгоград, ул. Автотранспортная, <br /> 5 ул. Качалова 39а
+        +e.item
+          +e.item-title Электронная почта:
+          +e.item-description yaht@yandex.com
+        +e.item
+          +e.item-title Сайт:
+          +e.item-description gu-yaht.com
