@@ -3,7 +3,8 @@ include ../page-header/page-header
 include ../account-navigation/account-navigation
 include ../image-bg/image-bg
 include ../icon/icon
-
+include ../magazine-popup/magazine-popup
+include ../magazine-subscribe-popup/magazine-subscribe-popup
 
 
 mixin account-subscription()
@@ -27,8 +28,8 @@ mixin account-subscription()
             +e.description
               +e('h3').description-title Журнал “Катера и яхты”
               +e('p').description-number 263 номер, сентябрь - октябрь 2016
-              +button()._kind_blue._rounded._shadow Купить номер 525р
-              +button()._kind_red._rounded._shadow Оформить подписку
+              +button()(data-target-modal='#magazine-popup')._kind_red._rounded._shadow.js-open-modal Купить номер 525р
+              +button()(data-target-modal='#magazine-subscribe-popup')._kind_red._right._rounded._shadow.js-open-modal Оформить подписку
           +text()
             +e.text-box
               +e('a') От редакции
@@ -65,3 +66,7 @@ mixin account-subscription()
               +e('a') Построено любителями: Мотолодка-тримаран «Гриф» • Евгений Грибов
               +e('a') Идея! Плыть и петь • Александр Леонов КРУГОЗОР Кижский крафт • Ольга Теслова Баржа принца Фредерика • Владимир Чепелев У моря нет плохой погоды • Ольга Теслова
               +e('a') Тематический указатель основных материалов, опубликованных в «КиЯ» №253–263 (2015–2016 гг.)
+
+    //- popups
+    +magazine-popup()
+    +magazine-subscribe-popup()
