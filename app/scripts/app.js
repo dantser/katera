@@ -55,6 +55,7 @@ import accountProposePopup from '../blocks/account-propose-popup/account-propose
 import buyMagazineForm from '../blocks/buy-magazine-form/buy-magazine-form';
 import accountMessages1 from '../blocks/account-messages-1/account-message-1';
 import forgotPassword from '../blocks/forgot-password/forgot-password';
+import gallerySliderPopup from '../blocks/gallery-slider-popup/gallery-slider-popup';
 
 $(window).on('load', () => {
   scrollable();
@@ -115,6 +116,7 @@ $(() => {
   buyMagazineForm();
   accountMessages1();
   forgotPassword();
+  gallerySliderPopup();
   const mapElement = document.getElementById('map');
 
   if (!mapElement) {

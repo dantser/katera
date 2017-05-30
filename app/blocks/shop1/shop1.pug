@@ -14,6 +14,7 @@ include ../shop-grid/shop-grid
 include ../image-bg/image-bg
 include ../shop2-page/shop2-page
 include ../shop3/shop3-page
+include ../gallery-slider-popup/gallery-slider-popup
 
 mixin shop1()
   +b.shop1&attributes(attributes)
@@ -41,3 +42,4 @@ mixin shop1()
             +shop2-page()#shop-2
             +shop3-page()#shop-3
     +e(style='background-image: url(assets/images/branding/shop-banner.jpg)').banner
+    +gallery-slider-popup(['assets/images/yacht-club/gallery-1.jpg', 'assets/images/yacht-club/gallery-2.jpg', 'assets/images/yacht-club/gallery-3.jpg'])

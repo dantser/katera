@@ -36,6 +36,20 @@
     pointer-events: none;
   }
 
+  &_empty {
+
+    .modal {
+
+      &__content {
+        background-color: transparent;
+      }
+
+      &__header {
+        padding: 0;
+      }
+    }
+  }
+
   &__content {
     width: 945px;
     max-height: 100%;
