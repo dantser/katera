@@ -81,4 +81,8 @@ export default () => {
 
     show(modal);
   });
+
+  $(window).on('resize', () => {
+    $('mobile-slide-popup_active').each(hide);
+  });
 };

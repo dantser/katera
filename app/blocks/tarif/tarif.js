@@ -1,10 +1,10 @@
 import $ from 'jquery';
 
-export default () => {
+export default function tarif() {
 // сворачивание тарифа
   const MORE = $('.tarif__hideShow');
   const SLIDE_EL = '.tarif__pros';
-  if ($(window).width < 992) {
+  if ($(window).width <= 991) {
     $(SLIDE_EL).slideUp();
   }
   MORE.each( function () { // eslint-disable-line
@@ -18,4 +18,6 @@ export default () => {
       EL.siblings().children(BUTTON).slideToggle();
     });
   });
-};
+}
+
+$(window).on('resize', tarif);

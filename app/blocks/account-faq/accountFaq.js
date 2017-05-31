@@ -17,21 +17,3 @@ export default () => {
     });
   });
 };
-
-//   $('.account-faq__item-showbutton').click(() => {
-//     const block = $(this).parents('.account-faq__item');
-//     const details = block.find('.account-faq__item-details');
-//     if (block.hasClass('active')) {
-//       block.removeClass('active');
-//       details.height(0);
-//     } else {
-//       block.addClass('active');
-//       let detailsHeight = 0;
-//       details.children().each(() => {
-//         const textHeight = $(this).outerHeight(true);
-//         detailsHeight += textHeight;
-//       });
-//       details.height(detailsHeight);
-//     }
-//   });
-// };

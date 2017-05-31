@@ -50,27 +50,31 @@ export default () => {
     }
   });
 
-  // фиксация хедера
-  if (!header.hasClass('header_sticky')) {
-    return;
-  }
-
-  const w = $(window);
-  const navContainer = header.find('.header__container');
-  const navTopBreakpoint = navContainer.offset().top;
-
-  const fixHeader = () => {
-    const sT = w.scrollTop();
-
-    if (sT >= navTopBreakpoint && !navContainer.hasClass('header__container_fixed')) {
-      navContainer.addClass('header__container_fixed');
+  const fixHeaderInit = () => {
+    // фиксация хедера
+    if (!header.hasClass('header_sticky')) {
+      return;
     }
 
-    if (sT < navTopBreakpoint && navContainer.hasClass('header__container_fixed')) {
-      navContainer.removeClass('header__container_fixed');
-    }
+    const w = $(window);
+    const navContainer = header.find('.header__container');
+    const navTopBreakpoint = navContainer.offset().top;
+
+    const fixHeader = () => {
+      const sT = w.scrollTop();
+
+      if (sT >= navTopBreakpoint && !navContainer.hasClass('header__container_fixed')) {
+        navContainer.addClass('header__container_fixed');
+      }
+
+      if (sT < navTopBreakpoint && navContainer.hasClass('header__container_fixed')) {
+        navContainer.removeClass('header__container_fixed');
+      }
+    };
+
+    w.on('scroll', fixHeader);
+    fixHeader();
   };
 
-  w.on('scroll', fixHeader);
-  fixHeader();
+  $(window).on('resize', fixHeaderInit);
 };

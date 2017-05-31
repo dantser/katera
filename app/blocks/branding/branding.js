@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 /* eslint-disable */
-export default () => {
+export default function branding() {
   const branding = $('.branding');
 
   if (!branding) {
@@ -63,3 +63,5 @@ export default () => {
     }
   });
 };
+
+$(window).on('resize', branding);

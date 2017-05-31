@@ -3,7 +3,7 @@ import $ from 'jquery';
 import makeItFixed from '../../scripts/common/make-it-fixed';
 import dScroll from '../../scripts/common/dScroll';
 
-export default () => {
+export default function saleRaznoe() {
   const sortFilterFixedParams = [
     'sale-raznoe__sort-filter',
     'sale-raznoe__sort-filter_default',
@@ -27,4 +27,6 @@ export default () => {
   });
 
   makeItFixed('js-filter-rest', 'filter-rest_default', 'filter-rest_fixed', 991);
-};
+}
+
+$(window).on('resize', saleRaznoe);

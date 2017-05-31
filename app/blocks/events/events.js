@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-export default () => {
+export default function events() {
   const submenu = $('.events__submenu-wrapper');
 
   if (!submenu.length) {
@@ -31,4 +31,6 @@ export default () => {
   if (w.width() > 1024) {
     w.on('load scroll', fixSubmenu);
   }
-};
+}
+
+$(window).on('resize', events);

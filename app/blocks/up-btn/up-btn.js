@@ -1,13 +1,13 @@
 import $ from 'jquery';
 
-export default () => {
+export default function upBtn() {
   const ELEMENT_CLASS = '.up-btn';
   const SHOW_ELEMENT_AT = 200;
 
   const btn = $(ELEMENT_CLASS);
   const w = $(window);
 
-  if (!btn || w.width() <= 991) {
+  if (!btn || w.width() <= 768) {
     return;
   }
 
@@ -43,4 +43,6 @@ export default () => {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 600, 'swing');
   });
-};
+}
+
+$(window).resize(upBtn);

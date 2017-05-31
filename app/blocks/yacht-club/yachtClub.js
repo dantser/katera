@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Swiper from 'swiper';
 
 /* eslint-disable */
-export default () => {
+export default function yachtClub() {
 
   const submenu = $('.yacht-club__submenu');
 
@@ -120,7 +120,7 @@ export default () => {
     const ICON = el.find('svg');
     const WINDOW = $(window);
 
-    if (WINDOW.width() <= 991) {
+    if (WINDOW.width() <= 1024) {
       el.on('click', (e) => {
         e.preventDefault();
         el.next().slideToggle();
@@ -135,7 +135,7 @@ export default () => {
     const ICON = el.find('svg');
     const WINDOW = $(window);
 
-    if (WINDOW.width() <= 991) {
+    if (WINDOW.width() <= 1024) {
       el.on('click', (e) => {
         e.preventDefault();
         el.parent().toggleClass(CLOSED_SLIDER_CLASS);
@@ -146,3 +146,5 @@ export default () => {
     }
   });
 };
+
+$(window).on('resize', yachtClub);

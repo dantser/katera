@@ -3,7 +3,7 @@ import disableScroll from 'disable-scroll';
 import 'sticky-kit/dist/sticky-kit';
 
 /* eslint-disable */
-export default () => {
+export default function index() {
 
   const mainSlider = $('.index__main-slider');
 
@@ -140,3 +140,5 @@ export default () => {
     offset_top: 95,
   });
 };
+
+$(window).on('resize', index);
