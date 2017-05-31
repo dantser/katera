@@ -3,6 +3,10 @@ import $ from 'jquery';
 export default () => {
   const submenu = $('.events__submenu-wrapper');
 
+  if (!submenu.length) {
+    return;
+  }
+
   const w = $(window);
   const navTopBreakpoint = submenu.offset().top;
 

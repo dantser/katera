@@ -19,13 +19,6 @@ mixin events()
         +e('div').select-wrapper
           +submenu(getData('submenu-events'))
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
-          +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
-        +e('div').event-item-wrapper
-          +event-item(getData('event-item1'))
-          +event-item(getData('event-item1'))
-          +event-item(getData('event-item1'))
-          +event-item(getData('event-item1'))
-          +button()._rounded._kind_red.__show-more Показать еще
     +e('div').scrollable-wrapper
       +scrollable()
         +scrollable-h()
@@ -43,6 +36,8 @@ mixin events()
                 +event-item(getData('event-item1'))
               +e.slide
                 +event-item(getData('event-item1'))
+
+            +button()._rounded._kind_red.__show-more Показать еще
 
           +container()
             +e.banner-bottom
