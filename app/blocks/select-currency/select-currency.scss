@@ -1,7 +1,15 @@
 .select-currency {
 
-  .select__text {
-    font-size: rem(18px);
-    padding-right: 0;
+  .select {
+
+    &__text {
+      font-size: rem(18px);
+      padding-right: 0;
+    }
+
+    &__text, &__item {
+      font-family: 'Harvey', sans-serif !important;
+      font-weight: 400;
+    }
   }
 }

@@ -24,6 +24,14 @@
 //RobotoSlab
 
 @font-face {
+  font-family: 'Harvey';
+  src:
+    url('../fonts/Harvey.woff') format('woff'),
+    url('../fonts/Harvey.ttf') format('truetype'),
+}
+
+
+@font-face {
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 700;
