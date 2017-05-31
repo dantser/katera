@@ -7,6 +7,7 @@
   &__grid-container {
     color: $color-black;
     display: flex;
+    margin-bottom: 20px;
 
     @include respond-to('tablet') {
       flex-direction: column;
@@ -36,14 +37,6 @@
     padding-left: 15px;
     flex-grow: 1;
     margin-top: -11px;
-
-    @include respond-to('desktop') {
-      padding-bottom: 70px;
-    }
-
-    @include respond-to('large-desktop') {
-      padding-bottom: 70px;
-    }
 
     @include respond-to('laptop') {
       width: 600px !important;
@@ -169,6 +162,14 @@
     flex-direction: row;
     border-bottom: 1px solid  $color-light-gray;
     padding: 25px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+
+      @media (min-width: 1024px) {
+        margin-bottom: 30px;
+      }
+    }
 
     @include respond-to('mobile') {
       padding: 17px 0;

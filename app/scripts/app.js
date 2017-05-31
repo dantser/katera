@@ -56,6 +56,8 @@ import buyMagazineForm from '../blocks/buy-magazine-form/buy-magazine-form';
 import accountMessages1 from '../blocks/account-messages-1/account-message-1';
 import forgotPassword from '../blocks/forgot-password/forgot-password';
 import gallerySliderPopup from '../blocks/gallery-slider-popup/gallery-slider-popup';
+import magazineVideo from '../blocks/magazine-video/magazine-video';
+import magazineVideos from '../blocks/magazine-videos/magazine-videos';
 
 $(window).on('load', () => {
   scrollable();
@@ -117,6 +119,8 @@ $(() => {
   accountMessages1();
   forgotPassword();
   gallerySliderPopup();
+  magazineVideo();
+  magazineVideos();
   const mapElement = document.getElementById('map');
 
   if (!mapElement) {

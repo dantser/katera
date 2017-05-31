@@ -18,6 +18,7 @@
   &__grid-container {
     color: $color-black;
     display: flex;
+    margin-bottom: 20px;
 
     @include respond-to('tablet') {
       flex-direction: column;
@@ -45,7 +46,7 @@
 
   &__col-page {
     padding-left: 15px;
-    padding-bottom: 60px;
+    padding-bottom: 25px;
     padding-top: 10px;
     flex-grow: 1;
     display: flex;

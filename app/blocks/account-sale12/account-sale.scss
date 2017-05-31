@@ -46,6 +46,8 @@
   &__grid-container {
     color: $color-black;
     display: flex;
+    margin-bottom: 20px;
+
     //
     // @include respond-to('laptop') {
     //   overflow-x: hidden;
@@ -188,7 +190,7 @@
   }
 
   &__propose-group {
-    margin-bottom: 71px;
+    margin-bottom: 20px;
 
     .text {
       padding-left: 1px;

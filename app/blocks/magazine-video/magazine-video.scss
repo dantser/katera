@@ -11,7 +11,6 @@
     margin-top: 23px;
     display: flex;
     flex-direction: column;
-    flex: 1;
     width: 100%;
 
     @include respond-to('tablet') {
@@ -28,7 +27,6 @@
     width: 360px;
     height: 100%;
     margin-left: 30px;
-    margin-bottom: 30px;
     display: block;
 
     @include respond-to('tablet') {
@@ -120,7 +118,6 @@
     box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
     padding: 20px 25px;
     width: 100%;
-    margin-bottom: 30px;
     display: block;
 
     &_comments {
@@ -213,7 +210,9 @@
   &__outer-content {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     width: 100%;
+    margin-bottom: 30px;
 
     @include respond-to('mobile') {
       display: block;

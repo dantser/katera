@@ -2,6 +2,7 @@
 
   &__grid-container {
     display: flex;
+    margin-bottom: 20px;
 
     @include respond-to('tablet') {
       flex-direction: column;
@@ -494,7 +495,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-bottom: 112px;
+    margin-bottom: 13px;
 
     @include respond-to('tablet') {
       margin-bottom: 17px;

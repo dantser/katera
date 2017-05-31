@@ -1,6 +1,6 @@
 .account-shop-2-page {
   display: block;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   background-color: $color-white;
 
   &__wrapper {
@@ -46,7 +46,7 @@
       & > .list__item {
         width: 100%;
         margin: 0;
-        padding-bottom: 28px;
+        padding-bottom: 13px;
         padding-top: 44px;
 
         &:not(:last-child) {
