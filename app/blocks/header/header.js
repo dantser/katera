@@ -76,5 +76,7 @@ export default () => {
     fixHeader();
   };
 
+  fixHeaderInit();
+
   $(window).on('resize', fixHeaderInit);
 };

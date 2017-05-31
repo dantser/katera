@@ -26,7 +26,7 @@ export default function index() {
     const slider = mainSlider.find('.main-slider');
     const sliderSlot = $('.index__mobile-slider-slot');
 
-    if (sliderSlot) {
+    if (sliderSlot && !sliderSlot.children().length) {
       slider.clone(true, true).appendTo(sliderSlot);
     }
   }
@@ -132,7 +132,7 @@ export default function index() {
     }
   });
 
-  if (w.width() <= 1169 || iOS) {
+  if (w.width() <= 1169) {
     return;
   };
 
