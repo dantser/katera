@@ -7,13 +7,13 @@
     margin-left: 15px;
   }
 
-  @include respond-to('mobile') {
+  @media (max-width: 768px) {
     width: 100%;
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
 
-  @include respond-to('tablet') {
+  @media (max-width: 1024px) {
     width: 100%;
   }
 
@@ -23,13 +23,12 @@
     padding-left: 25px;
     padding-right: 25px;
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       box-shadow: none;
     }
 
-    @include respond-to('mobile') {
+    @media (max-width: 768px) {
       padding-bottom: 0;
-      box-shadow: none;
     }
 
     &__item {
@@ -37,30 +36,18 @@
       margin: 0;
       position: relative;
 
-      @include respond-to('mobile') {
+      @media (max-width: 768px) {
         padding: 5px 0 2px;
       }
 
       &_show-pc {
-        @include respond-to('tablet') {
-          display: none;
-        }
-
-        @include respond-to('mobile') {
+        @media (max-width: 1024px) {
           display: none;
         }
       }
 
       &_hide-pc {
-        @include respond-to('laptop') {
-          display: none;
-        }
-
-        @include respond-to('desktop') {
-          display: none;
-        }
-
-        @include respond-to('large-desktop') {
+        @media (min-width: 1025px) {
           display: none;
         }
       }
@@ -102,7 +89,7 @@
         height: 30px;
         display: block;
 
-        @include respond-to('tablet') {
+        @media (max-width: 1024px) {
           width: 60px;
           height: 45px;
         }
@@ -136,9 +123,11 @@
           color: $color-red;
         }
 
-        &:hover {
-          color: $color-red;
-          opacity: 1;
+        @media (min-width: 769px) {
+          &:hover {
+            color: $color-red;
+            opacity: 1;
+          }
         }
       }
 
@@ -152,13 +141,7 @@
   }
 
   .text {
-    //padding: 0 25px;
-
-    @include respond-to('mobile') {
-      text-align: center;
-    }
-
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       text-align: center;
     }
 
@@ -167,19 +150,19 @@
       color: $color-white;
       line-height: 1.4;
 
-      @include respond-to('mobile') {
+      @media (max-width: 768px) {
         font-size: rem(17px);
       }
     }
 
     &__offers {
-      @include respond-to('mobile') {
+      @media (max-width: 768px) {
         display: none;
       }
     }
 
     &__time, &__tariff {
-      @include respond-to('mobile') {
+      @media (max-width: 768px) {
         display: inline-block;
         font-size: rem(12px);
         margin-top: 0;
@@ -191,7 +174,7 @@
       font-family: $NerisLight;
       color: $color-light-gray;
 
-      @include respond-to('mobile') {
+      @media (max-width: 768px) {
         font-size: rem(12px);
       }
     }
