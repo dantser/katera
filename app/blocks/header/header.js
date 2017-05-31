@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import disableScroll from 'disable-scroll';
+import stickyBlock from '../../scripts/common/stickyBlock';
 
 /* eslint-disable */
 export default () => {
@@ -50,33 +51,7 @@ export default () => {
     }
   });
 
-  const fixHeaderInit = () => {
-    // фиксация хедера
-    if (!header.hasClass('header_sticky')) {
-      return;
-    }
-
-    const w = $(window);
-    const navContainer = header.find('.header__container');
-    const navTopBreakpoint = navContainer.offset().top;
-
-    const fixHeader = () => {
-      const sT = w.scrollTop();
-
-      if (sT >= navTopBreakpoint && !navContainer.hasClass('header__container_fixed')) {
-        navContainer.addClass('header__container_fixed');
-      }
-
-      if (sT < navTopBreakpoint && navContainer.hasClass('header__container_fixed')) {
-        navContainer.removeClass('header__container_fixed');
-      }
-    };
-
-    w.on('scroll', fixHeader);
-    fixHeader();
-  };
-
-  fixHeaderInit();
-
-  $(window).on('resize', fixHeaderInit);
+  if (header.hasClass('.header_sticky')) {
+    stickyBlock('.header__container', false, true);
+  }
 };

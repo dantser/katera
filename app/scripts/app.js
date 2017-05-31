@@ -1,8 +1,9 @@
-/* eslint-disable */
+/*eslint-disable*/
 import $ from 'jquery';
-import 'babel-polyfill';
-import svg4everybody from 'svg4everybody';
-import objectFitImages from 'object-fit-images';
+// import 'babel-polyfill';
+// import svg4everybody from 'svg4everybody';
+// import objectFitImages from 'object-fit-images';
+import './common/device';
 // import commonInput from './common/input';
 // import burger from '../blocks/burger/burger';
 // import upBtn from '../blocks/up-btn/up-btn';
@@ -39,10 +40,10 @@ import objectFitImages from 'object-fit-images';
 // import tarif from '../blocks/tarif/tarif';
 // import shop1 from '../blocks/shop1/shop1';
 // import accountFaq from '../blocks/account-faq/accountFaq';
-// import accountNavigation from '../blocks/account-navigation/account-navigation';
+import accountNavigation from '../blocks/account-navigation/account-navigation';
 // import saleRaznoe from '../blocks/sale-raznoe/sale-raznoe';
 // import branding from '../blocks/branding/branding';
-// import header from '../blocks/header/header';
+import header from '../blocks/header/header';
 // import burgerDropdown from '../blocks/burger-dropdown/burger-dropdown';
 // import subscribe from '../blocks/subscribe/subscribe';
 // import verphe from '../blocks/verphe/verphe';
@@ -70,7 +71,7 @@ $(() => {
   // index();
   // scrollable();
   // textField();
-  // header();
+  header();
   // burger();
   // select();
   // searchBar();
@@ -104,7 +105,7 @@ $(() => {
   // accountShop();
   // tarif();
   // shop1();
-  // accountNavigation();
+  accountNavigation();
   // saleRaznoe();
   // branding();
   // burgerDropdown();
