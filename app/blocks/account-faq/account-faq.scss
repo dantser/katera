@@ -1,6 +1,10 @@
 .account-faq {
   padding-top: 11px;
 
+  @media (max-width: 1024px) {
+    padding-right: 15px;
+  }
+
   &__item {
     padding: 17px 0 21px;
     border-top: 1px solid #e5e5e5;

@@ -3,6 +3,10 @@
   margin-bottom: 20px;
   flex-grow: 1;
 
+  @media (max-width: 1024px) {
+    margin-left: 15px;
+  }
+
   @include respond-to('mobile') {
     width: 100%;
     padding-bottom: 0;
