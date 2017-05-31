@@ -1,3 +1,4 @@
+/* eslint-disable */
 import $ from 'jquery';
 import 'babel-polyfill';
 import svg4everybody from 'svg4everybody';
@@ -59,180 +60,180 @@ import gallerySliderPopup from '../blocks/gallery-slider-popup/gallery-slider-po
 import magazineVideo from '../blocks/magazine-video/magazine-video';
 import magazineVideos from '../blocks/magazine-videos/magazine-videos';
 
-$(window).on('load', () => {
-  scrollable();
-});
+// $(window).on('load', () => {
+//   scrollable();
+// });
 
 $(() => {
-  objectFitImages('.image-bg__img');
-  svg4everybody();
-  index();
-  scrollable();
-  textField();
-  header();
-  burger();
-  select();
-  searchBar();
-  mainSlider();
-  filter();
-  upBtn();
-  timeline();
-  models();
-  counter();
-  modal();
-  accountFaq();
-  scrollSlider();
-  yachtSlider();
-  commonInput();
-  hint();
-  truncate();
-  eventsSlider();
-  additionalFilterParams();
-  filterSale();
-  resetFilter();
-  filterModel();
-  magazineLongrid();
-  eventPage();
-  magazineRazdel();
-  mobileSlidePopup();
-  customSlider();
-  catalogYacht();
-  filterEngines();
-  yachtClub();
-  accountSale();
-  accountShop();
-  tarif();
-  shop1();
-  accountNavigation();
-  saleRaznoe();
-  branding();
-  burgerDropdown();
-  subscribe();
-  verphe();
-  join();
-  accountSale3();
-  catalogVerphePage();
-  shops();
-  magazinePage();
-  accountProposePopup();
-  buyMagazineForm();
-  accountMessages1();
-  forgotPassword();
-  gallerySliderPopup();
-  magazineVideo();
-  magazineVideos();
-  const mapElement = document.getElementById('map');
-
-  if (!mapElement) {
-    return;
-  }
-
-  map.then((googleMaps) => {
-    // eslint-disable-next-line no-new
-    new googleMaps.Map(mapElement, {
-      zoom: 8,
-      center: new googleMaps.LatLng(59.942897, 30.247301),
-      mapTypeId: googleMaps.MapTypeId.ROADMAP,
-      scrollwheel: false,
-      styles: [
-        {
-          featureType: 'all',
-          elementType: 'labels.text.fill',
-          stylers: [
-            {
-              color: '#ffffff',
-            },
-          ],
-        }, {
-          featureType: 'all',
-          elementType: 'labels.text.stroke',
-          stylers: [
-            {
-              visibility: 'on',
-            }, {
-              color: '#424b5b',
-            }, {
-              weight: 2,
-            }, {
-              gamma: '1',
-            },
-          ],
-        }, {
-          featureType: 'all',
-          elementType: 'labels.icon',
-          stylers: [
-            {
-              visibility: 'off',
-            },
-          ],
-        }, {
-          featureType: 'administrative',
-          elementType: 'geometry',
-          stylers: [
-            {
-              weight: 0.6,
-            }, {
-              color: '#545b6b',
-            }, {
-              gamma: '0',
-            },
-          ],
-        }, {
-          featureType: 'landscape',
-          elementType: 'geometry',
-          stylers: [
-            {
-              color: '#545b6b',
-            }, {
-              gamma: '1',
-            }, {
-              weight: '10',
-            },
-          ],
-        }, {
-          featureType: 'poi',
-          elementType: 'geometry',
-          stylers: [
-            {
-              color: '#666c7b',
-            },
-          ],
-        }, {
-          featureType: 'poi.park',
-          elementType: 'geometry',
-          stylers: [
-            {
-              color: '#545b6b',
-            },
-          ],
-        }, {
-          featureType: 'road',
-          elementType: 'geometry',
-          stylers: [
-            {
-              color: '#424a5b',
-            }, {
-              lightness: '0',
-            },
-          ],
-        }, {
-          featureType: 'transit',
-          elementType: 'geometry',
-          stylers: [
-            {
-              color: '#666c7b',
-            },
-          ],
-        }, {
-          featureType: 'water',
-          elementType: 'geometry',
-          stylers: [
-            {
-              color: '#2e3546',
-            },
-          ],
-        },
-      ],
-    });
-  }).catch(f => f);
+  // objectFitImages('.image-bg__img');
+  // svg4everybody();
+  // index();
+  // scrollable();
+  // textField();
+  // header();
+  // burger();
+  // select();
+  // searchBar();
+  // mainSlider();
+  // filter();
+  // upBtn();
+  // timeline();
+  // models();
+  // counter();
+  // modal();
+  // accountFaq();
+  // scrollSlider();
+  // yachtSlider();
+  // commonInput();
+  // hint();
+  // truncate();
+  // eventsSlider();
+  // additionalFilterParams();
+  // filterSale();
+  // resetFilter();
+  // filterModel();
+  // magazineLongrid();
+  // eventPage();
+  // magazineRazdel();
+  // mobileSlidePopup();
+  // customSlider();
+  // catalogYacht();
+  // filterEngines();
+  // yachtClub();
+  // accountSale();
+  // accountShop();
+  // tarif();
+  // shop1();
+  // accountNavigation();
+  // saleRaznoe();
+  // branding();
+  // burgerDropdown();
+  // subscribe();
+  // verphe();
+  // join();
+  // accountSale3();
+  // catalogVerphePage();
+  // shops();
+  // magazinePage();
+  // accountProposePopup();
+  // buyMagazineForm();
+  // accountMessages1();
+  // forgotPassword();
+  // gallerySliderPopup();
+  // magazineVideo();
+  // magazineVideos();
+  // const mapElement = document.getElementById('map');
+  //
+  // if (!mapElement) {
+  //   return;
+  // }
+  //
+  // map.then((googleMaps) => {
+  //   // eslint-disable-next-line no-new
+  //   new googleMaps.Map(mapElement, {
+  //     zoom: 8,
+  //     center: new googleMaps.LatLng(59.942897, 30.247301),
+  //     mapTypeId: googleMaps.MapTypeId.ROADMAP,
+  //     scrollwheel: false,
+  //     styles: [
+  //       {
+  //         featureType: 'all',
+  //         elementType: 'labels.text.fill',
+  //         stylers: [
+  //           {
+  //             color: '#ffffff',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'all',
+  //         elementType: 'labels.text.stroke',
+  //         stylers: [
+  //           {
+  //             visibility: 'on',
+  //           }, {
+  //             color: '#424b5b',
+  //           }, {
+  //             weight: 2,
+  //           }, {
+  //             gamma: '1',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'all',
+  //         elementType: 'labels.icon',
+  //         stylers: [
+  //           {
+  //             visibility: 'off',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'administrative',
+  //         elementType: 'geometry',
+  //         stylers: [
+  //           {
+  //             weight: 0.6,
+  //           }, {
+  //             color: '#545b6b',
+  //           }, {
+  //             gamma: '0',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'landscape',
+  //         elementType: 'geometry',
+  //         stylers: [
+  //           {
+  //             color: '#545b6b',
+  //           }, {
+  //             gamma: '1',
+  //           }, {
+  //             weight: '10',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'poi',
+  //         elementType: 'geometry',
+  //         stylers: [
+  //           {
+  //             color: '#666c7b',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'poi.park',
+  //         elementType: 'geometry',
+  //         stylers: [
+  //           {
+  //             color: '#545b6b',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'road',
+  //         elementType: 'geometry',
+  //         stylers: [
+  //           {
+  //             color: '#424a5b',
+  //           }, {
+  //             lightness: '0',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'transit',
+  //         elementType: 'geometry',
+  //         stylers: [
+  //           {
+  //             color: '#666c7b',
+  //           },
+  //         ],
+  //       }, {
+  //         featureType: 'water',
+  //         elementType: 'geometry',
+  //         stylers: [
+  //           {
+  //             color: '#2e3546',
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   });
+  // }).catch(f => f);
 });
