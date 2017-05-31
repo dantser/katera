@@ -198,7 +198,7 @@
         <div class="shop1__brand-bg" style="background-image: url(assets/images/branding/shop-main-bg.jpg);">
             <div class="container">
                 <main class="main-container main-container_shadow magazine-razdel__main-container">
-                    <div class="shop1__link">
+                    <div class="shop1__link js-open-modal" data-target-modal="#shop-info-popup">
                         <a href="#">Информация о магазине</a>
                     </div>
                     <div class="main-slider swiper-container swiper-container_shop-slider">
@@ -865,7 +865,7 @@
             </div>
         </div>
         <div class="shop1__banner" style="background-image: url(assets/images/branding/shop-banner.jpg);"></div>
-        <div class="branding">//- for up-btn</div>
+        <div class="branding"></div>
         <div class="modal modal_darken modal_empty" id="gallery-slider-popup">
             <div class="modal__wrapper">
                 <div class="modal__content">
@@ -895,6 +895,49 @@
                             </div>
                             <svg class="gallery-slider-popup__btn gallery-slider-popup__btn_prev"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
                             <svg class="gallery-slider-popup__btn gallery-slider-popup__btn_next"><use xlink:href="assets/images/icon.svg#icon_caret"></use></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal shop-info-popup-modal" id="shop-info-popup">
+            <div class="modal__wrapper">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <svg class="modal__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                    </div>
+                    <div class="modal__body">
+                        <div class="shop-info-popup">
+                            <div class="shop-info-popup__about">
+                                <img class="shop-info-popup__logo" src="assets/images/ultraboats.png" alt="UltraBoats" title="" />
+                                <div class="shop-info-popup__name">
+                                    <span class="shop-info-popup__name-title">Магазин:</span>
+                                    <a class="shop-info-popup__name-link" href="#">UltraBoats</a>
+                                </div>
+                            </div>
+                            <ul class="shop-info-popup__info">
+                                <li class="shop-info-popup__item">
+                                    <div class="shop-info-popup__item-title">Телефон:</div>
+                                    <div class="shop-info-popup__item-description">+7 (925) 726-75-75, +7 (902) 652-67-77</div>
+                                </li>
+                                <li class="shop-info-popup__item">
+                                    <div class="shop-info-popup__item-title">Режим работы:</div>
+                                    <div class="shop-info-popup__item-description">Работаем по будням с 9 -19:00</div>
+                                </li>
+                                <li class="shop-info-popup__item">
+                                    <div class="shop-info-popup__item-title">Адрес:</div>
+                                    <div class="shop-info-popup__item-description">г. Волгоград, ул. Автотранспортная,
+                                        <br /> 5 ул. Качалова 39а</div>
+                                </li>
+                                <li class="shop-info-popup__item">
+                                    <div class="shop-info-popup__item-title">Электронная почта:</div>
+                                    <div class="shop-info-popup__item-description">yaht@yandex.com</div>
+                                </li>
+                                <li class="shop-info-popup__item">
+                                    <div class="shop-info-popup__item-title">Сайт:</div>
+                                    <div class="shop-info-popup__item-description">gu-yaht.com</div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
