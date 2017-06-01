@@ -129,18 +129,8 @@
       width: 263px;
       height: 40px;
 
-      @include respond-to('mobile') {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      &_kind_blue {
-        margin-top: 39px;
-      }
-
-      &_kind_red {
-        margin-top: 44px;
-        margin-bottom: 45px;
+      @media (max-width: 1024px){
+        margin: 15px auto;
       }
     }
   }
