@@ -1,35 +1,10 @@
 import $ from 'jquery';
-import disableScroll from 'disable-scroll';
 import 'sticky-kit/dist/sticky-kit';
 
 /* eslint-disable */
 export default function index() {
-
-  const mainSlider = $('.index__main-slider');
-
-  if (mainSlider.length === 0) {
-    return;
-  }
-
-  const mainSliderItem = mainSlider.find('.main-slider');
   const header = $('.header');
   const w = $(window);
-  let mainSliderHeight = 0;
-
-  if (mainSlider.length > 0 && header.length && w.width() > 1169) {
-    mainSliderHeight = w.height() - header.outerHeight();
-    mainSlider.css({ height: `${mainSliderHeight}px`});
-  }
-
-  // init mobile slider
-  if (mainSlider && mainSlider.length > 0) {
-    const slider = mainSlider.find('.main-slider');
-    const sliderSlot = $('.index__mobile-slider-slot');
-
-    if (sliderSlot && !sliderSlot.children().length) {
-      slider.clone(true, true).appendTo(sliderSlot);
-    }
-  }
 
   const yachtWidget = $('.yacht-preview-widget');
   const yachtBtn = yachtWidget.find('.yacht-preview-widget__button');
@@ -39,40 +14,12 @@ export default function index() {
   let yachtBtnAttached = false;
   let topicBtnAttached = false;
 
-  const iOS = window.navigator.platform.match(/i(Phone|Pod)/i);
-
-  let shouldAnimateSlider = true;
-
-  mainSliderItem.on('transitionend', () => {
-    $('.index').css('visibility', 'visible');
-    shouldAnimateSlider = false;
-
-    setTimeout(() => {
-      disableScroll.off();
-    }, 750);
-  });
-
-  if ($(document).scrollTop() > 100 && w.width() > 1024) {
-    mainSliderItem.css({
-      transition: 'unset',
-      transform: 'scale(1)',
-    });
-    $('.index').css('visibility', 'visible');
-    shouldAnimateSlider = false;
-  }
-
   w.on('scroll', () => {
     const sT = w.scrollTop();
     const vH = w.height();
 
-    if (w.width() <= 1169 || iOS) {
+    if (w.width() <= 1169) {
       return;
-    }
-
-    if (shouldAnimateSlider && !mainSliderItem.hasClass('main-slider_animated')) {
-      disableScroll.on();
-      $('.index').css('visibility', 'hidden');
-      mainSliderItem.addClass('main-slider_animated');
     }
 
     if (sT + vH >= yachtWidget.parent().offset().top) {
@@ -134,7 +81,7 @@ export default function index() {
 
   if (w.width() <= 1169) {
     return;
-  };
+  }
 
   $('.index__widget').stick_in_parent({
     offset_top: 95,

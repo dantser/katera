@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { debounce, throttle } from 'throttle-debounce';
+import { debounce } from 'throttle-debounce';
 
 export default function stickyBlock(el, addOffset = false, stickOnMobile = true) {
   if (!el.length) {
@@ -46,7 +46,7 @@ export default function stickyBlock(el, addOffset = false, stickOnMobile = true)
   };
 
   initFixation();
-  w.scroll(throttle(200, initFixation));
+  w.scroll(initFixation);
 }
 
 $(window).resize(debounce(200, stickyBlock));

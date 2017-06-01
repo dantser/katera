@@ -3,38 +3,9 @@
   display: block;
   flex: 1 0 auto;
 
-  &__mobile-slider-slot {
-    margin-top: 35px;
-    width: 100%;
-
-    @media (min-width: 1025px) {
-      display: none;
-    }
-  }
-
   &__main-slider {
-    padding-top: 30px;
     width: 100%;
-    height: 100vh;
-
-    @media (max-width: 1024px) {
-      display: none;
-    }
-
-    @media (min-width: 1025px) {
-
-      .main-slider {
-        will-change: transform;
-        transform: scale(0);
-        height: 100%;
-        transform-origin: bottom;
-        transition: transform 1s ease-in-out;
-
-        &_animated {
-          transform: scale(1);
-        }
-      }
-    }
+    max-height: 100vh;
   }
 
   &__widget {
