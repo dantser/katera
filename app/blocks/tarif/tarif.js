@@ -40,5 +40,3 @@ export default function tarif() {
       }
     });
 }
-
-$(window).on('resize', tarif);
