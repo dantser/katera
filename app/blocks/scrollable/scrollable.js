@@ -1,5 +1,6 @@
 /* eslint-disable */
 import $ from 'jquery';
+import { debounce } from 'throttle-debounce';
 
 function ultraScroll(element) {
   // Задаем переменные
@@ -30,9 +31,7 @@ function ultraScroll(element) {
   ultraScrollInit();
 
   // Обновляем значения при изменении размера окна
-  $(window).on('resize', function(){
-    ultraScrollInit();
-  });
+  $(window).on('resize', debounce(200, ultraScrollInit));
 
   // Функция скролла
   $(window).on('scroll', function(){
@@ -73,8 +72,10 @@ function ultraScroll(element) {
 
 export default () => {
   var blocks = $(".scrollable");
+  const h = $('html');
+  const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
 
-  if (!blocks.length || $(window).width() <= 1024) {
+  if (!blocks.length || isMobile) {
     return;
   }
 

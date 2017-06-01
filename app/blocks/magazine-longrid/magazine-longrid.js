@@ -1,13 +1,26 @@
 import Swiper from 'swiper';
 import $ from 'jquery';
+import { debounce } from 'throttle-debounce';
 
 export default function magazineLongrid() {
-  if ($(window).width() >= 1025) {
+  const h = $('html');
+  const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
+  magazineLongrid.sliders = magazineLongrid.sliders || [];
+
+  if (!isMobile) {
+    if (magazineLongrid.sliders.length) {
+      magazineLongrid.sliders.sliders.forEach(item => item.destroy(item));
+    }
+
+    return;
+  }
+
+  if (magazineLongrid.sliders.length) {
     return;
   }
 
   // eslint-disable-next-line no-new
-  new Swiper('.js-magazine-longrid-slider1', {
+  magazineLongrid.s1 = new Swiper('.js-magazine-longrid-slider1', {
     slidesPerView: 2,
     spaceBetween: 20,
     pagination: '.js-magazine-longrid-slider1-pagination',
@@ -20,7 +33,7 @@ export default function magazineLongrid() {
   });
 
   // eslint-disable-next-line no-new
-  new Swiper('.js-magazine-longrid-slider2', {
+  magazineLongrid.s2 = new Swiper('.js-magazine-longrid-slider2', {
     slidesPerView: 2,
     spaceBetween: 20,
     pagination: '.js-magazine-longrid-slider2-pagination',
@@ -31,6 +44,6 @@ export default function magazineLongrid() {
       },
     },
   });
-
-  $(window).on('resize', magazineLongrid);
 }
+
+$(window).on('resize', debounce(200, magazineLongrid));
