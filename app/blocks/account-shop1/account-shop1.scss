@@ -20,11 +20,7 @@
     display: flex;
     margin-bottom: 20px;
 
-    @include respond-to('tablet') {
-      flex-direction: column;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       flex-direction: column;
     }
   }
@@ -33,12 +29,7 @@
     padding-right: 15px;
     flex: 0 0 375px;
 
-    @include respond-to('tablet') {
-      flex: none;
-      padding: 0;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       flex: none;
       padding: 0;
     }
@@ -46,25 +37,15 @@
 
   &__col-page {
     padding-left: 15px;
-    //width: 67%;
     overflow-x: hidden;
-    //width: calc(100% - 405px);
-    //flex-grow: 1;
-    //flex-basis: 67%;
 
     * {
       margin: 0;
     }
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       width: 100%;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    @include respond-to('mobile') {
-      width: 100%;
-      padding-bottom: 70px;
+      padding-top: 15px;
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -140,12 +121,11 @@
     bottom: 55px;
     text-align: left;
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       bottom: 25px;
     }
 
     @include respond-to('mobile') {
-      bottom: 25px;
       width: 240px;
     }
 
@@ -159,12 +139,7 @@
       line-height: 1.2;
       padding-right: 50px;
 
-      @include respond-to('tablet') {
-        font-size: 24px;
-        padding-right: 0;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         font-size: 24px;
         padding-right: 0;
       }
@@ -176,11 +151,7 @@
       font-weight: 300;
       color: $color-white;
 
-      @include respond-to('tablet') {
-        font-size: 14px;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         font-size: 14px;
       }
     }
@@ -200,7 +171,7 @@
       margin: 40px auto 80px;
 
       &_margin {
-        margin-top: 105px;
+        margin-top: 40px;
         margin-bottom: 0;
       }
     }
@@ -265,13 +236,7 @@
     height: 82px;
     margin-left: -14px;
 
-    @include respond-to('tablet') {
-      margin-left: 0;
-      width: 68px;
-      height: 68px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       margin-left: 0;
       width: 68px;
       height: 68px;
@@ -297,7 +262,7 @@
     margin-left: 30px;
     width: 100%;
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       padding-right: 0;
       width: 100%;
     }
@@ -327,15 +292,6 @@
     padding-top: 6px;
     display: block;
     width: 68px;
-    //padding-right: 15px;
-
-    @include respond-to('tablet') {
-      //margin-right: 20px;
-    }
-
-    @include respond-to('laptop') {
-      //margin-right: 20px;
-    }
   }
 
   &__right {
@@ -354,12 +310,7 @@
     margin-left: 30px;
     width: 100%;
 
-    @include respond-to('tablet') {
-      padding-right: 0;
-      width: 100%;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       padding-right: 0;
       width: 100%;
     }
@@ -384,15 +335,6 @@
     padding-top: 6px;
     display: block;
     width: 68px;
-    //padding-right: 15px;
-
-    @include respond-to('tablet') {
-      //margin-right: 20px;
-    }
-
-    @include respond-to('laptop') {
-      //margin-right: 20px;
-    }
   }
 
   .main-slider {

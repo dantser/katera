@@ -36,6 +36,7 @@ import hint from '../blocks/hint/hint';
 // import filterEngines from '../blocks/filter-engines/filter-engines';
 import accountSale from '../blocks/account-sale12/accountSale';
 // import accountShop from '../blocks/account-shop-3-page/account-shop-3-page';
+import accountShop1 from '../blocks/account-shop1/account-shop1';
 // import yachtClub from '../blocks/yacht-club/yachtClub';
 import tarif from '../blocks/tarif/tarif';
 // import shop1 from '../blocks/shop1/shop1';
@@ -86,6 +87,7 @@ $(() => {
   // scrollSlider();
   // yachtSlider();
   commonInput();
+  accountShop1();
   hint();
   // truncate();
   // eventsSlider();
