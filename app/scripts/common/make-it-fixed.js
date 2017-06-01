@@ -20,7 +20,7 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
 
     const w = $(window);
 
-    w.on('scroll', throttle(200, () => {
+    w.on('scroll.make-it-fixed', throttle(200, () => {
       const documentScrollTop = $(document).scrollTop();
       const defaultBlockOffset = defaultBlock.offset().top + defaultBlock.outerHeight();
       const hasToBeFixed = (
@@ -30,7 +30,12 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
       );
 
       if (hasToBeFixed) {
-        fixedBlock = fixedBlock || defaultBlock
+
+        if (fixedBlock !== null) {
+          return;
+        }
+
+        fixedBlock = defaultBlock
             .clone(true, true)
             .removeClass(DEFAULT_STATE_CLASS)
             .addClass(FIXED_STATE_CLASS)
@@ -47,6 +52,5 @@ export default (blockClass, defaultStateClass, fixedStateClass, stopFixingBreakp
       }
     }));
   };
-
-  $(window).on('resize', init);
+  init();
 };

@@ -28,5 +28,3 @@ export default function saleRaznoe() {
 
   makeItFixed('js-filter-rest', 'filter-rest_default', 'filter-rest_fixed', 991);
 }
-
-$(window).on('resize', saleRaznoe);

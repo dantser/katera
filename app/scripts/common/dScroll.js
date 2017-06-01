@@ -1,7 +1,10 @@
 import $ from 'jquery';
 
 export default (b1Class, b2Class) => {
-  if (!b1Class || !b2Class || $(window).width() <= 1024) {
+  const h = $('html');
+  const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
+
+  if (!b1Class || !b2Class || isMobile) {
     return;
   }
 
