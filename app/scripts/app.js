@@ -17,7 +17,7 @@ import textField from '../blocks/text-field/text-field';
 // import counter from '../blocks/counter/counter';
 import modal from '../blocks/modal/modal';
 // import scrollSlider from '../blocks/scroll-slider/scroll-slider';
-// import catalogYacht from '../blocks/catalog-yacht/catalog-yacht';
+import catalogYacht from '../blocks/catalog-yacht/catalog-yacht';
 // import yachtSlider from '../blocks/yacht-slider/yacht-slider';
 import hint from '../blocks/hint/hint';
 // import truncate from '../blocks/yacht-page/yacht-page';
@@ -100,7 +100,7 @@ $(() => {
   // magazineRazdel();
   // mobileSlidePopup();
   // customSlider();
-  // catalogYacht();
+  catalogYacht();
   // filterEngines();
   // yachtClub();
   accountSale();

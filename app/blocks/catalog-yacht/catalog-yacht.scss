@@ -22,17 +22,13 @@
   &__scroll-header {
     @include respond-to('mobile') {
       max-width: 100%;
-      overflow-x: auto;
+      overflow-x: scroll;
     }
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
-
-    // @include respond-to('mobile') {
-    //   padding-top: 240px;
-    // }
   }
 
   &__element-wrap {
@@ -110,7 +106,7 @@
     left: 30px;
     line-height: .7;
     top: 0;
-
+    pointer-events: none;
     @include respond-to('large-desktop') {
       left: 97px;
     }
