@@ -11,7 +11,7 @@ import select from '../blocks/select/select';
 import searchBar from '../blocks/search-bar/search-bar';
 // import mainSlider from '../blocks/main-slider/main-slider';
 // import filter from '../blocks/filter/filter';
-// import textField from '../blocks/text-field/text-field';
+import textField from '../blocks/text-field/text-field';
 // import timeline from '../blocks/timeline/timeline';
 // import models from '../blocks/models/models';
 // import counter from '../blocks/counter/counter';
@@ -70,7 +70,7 @@ $(() => {
   svg4everybody();
   // index();
   // scrollable();
-  // textField();
+  textField();
   header();
   burger();
   select();
