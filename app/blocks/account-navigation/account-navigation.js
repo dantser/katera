@@ -7,7 +7,7 @@ export default function accountNavigation() {
   const h = $('html');
 
   const init = () => {
-    const isMobile = h.hasClass('.mobile') || h.hasClass('.tablet');
+    const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
 
     if (isMobile || !el.length) {
       return;

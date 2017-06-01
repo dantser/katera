@@ -9,22 +9,21 @@ export default function stickyBlock(el, addOffset = false, stickOnMobile = true)
   const h = $('html');
   const w = $(window);
   const topBreakpoint = el.offset().top;
-  const bottomBreakpoint = topBreakpoint + el.outerHeight();
+  const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
+
+  if (!stickOnMobile && isMobile) {
+    return;
+  }
 
   const initFixation = () => {
     const sT = w.scrollTop();
     const isFixed = el.hasClass('fixed');
-    const isMobile = h.hasClass('.mobile') || h.hasClass('.tablet');
-
-    if (!stickOnMobile && isMobile) {
-      return;
-    }
 
     if (sT >= topBreakpoint && !isFixed) {
       el.addClass('fixed');
     }
 
-    if (sT < bottomBreakpoint && isFixed) {
+    if (sT < topBreakpoint && isFixed) {
       el.removeClass('fixed');
     }
   };

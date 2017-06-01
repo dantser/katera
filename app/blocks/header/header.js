@@ -51,7 +51,7 @@ export default () => {
     }
   });
 
-  if (header.hasClass('.header_sticky')) {
-    stickyBlock('.header__container', false, true);
+  if (header.hasClass('header_sticky')) {
+    stickyBlock($('.header__container'), false, true);
   }
 };
