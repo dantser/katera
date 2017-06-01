@@ -1,35 +1,15 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
+import { throttle } from 'throttle-debounce';
+import stickyBlock from '../../scripts/common/stickyBlock';
 
 /* eslint-disable */
 export default function yachtClub() {
-
-  const submenu = $('.yacht-club__submenu');
-
-  if (!submenu.hasClass('yacht-club__submenu_default')) {
-    return;
-  }
+  stickyBlock($('.yacht-club__submenu'), true, false);
 
   const w = $(window);
-  const navTopBreakpoint = submenu.offset().top;
-
-  const fixSubmenu = () => {
-    const sT = w.scrollTop();
-
-    if (sT >= navTopBreakpoint && !submenu.hasClass('yacht-club__submenu_fixed')) {
-      submenu
-        .addClass('yacht-club__submenu_fixed')
-        .next()
-        .css('margin-top', submenu.outerHeight() + 'px');
-    }
-
-    if (sT < navTopBreakpoint && submenu.hasClass('yacht-club__submenu_fixed')) {
-      submenu
-        .removeClass('yacht-club__submenu_fixed')
-        .next()
-        .css('margin-top', 0);
-    }
-  };
+  const h = $('html');
+  const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
 
   const detectCurrentBlock = () => {
     let currid;
@@ -83,13 +63,10 @@ export default function yachtClub() {
     }
   };
 
-  if (w.width() > 1024) {
-    w.on('scroll', () => {
-      fixSubmenu();
-      detectCurrentBlock();
-    });
-    fixSubmenu();
+  if (!isMobile) {
+    w.on('scroll', throttle(200, detectCurrentBlock));
     detectCurrentBlock();
+    return;
   }
 
   // eslint-disable-next-line no-unused-vars
@@ -120,8 +97,10 @@ export default function yachtClub() {
     const ICON = el.find('svg');
     const WINDOW = $(window);
 
-    if (WINDOW.width() <= 1024) {
-      el.on('click', (e) => {
+    if (isMobile) {
+      el
+        .off('click')
+        .on('click', (e) => {
         e.preventDefault();
         el.next().slideToggle();
         el.toggleClass(BORDER_CLASS);
@@ -135,8 +114,10 @@ export default function yachtClub() {
     const ICON = el.find('svg');
     const WINDOW = $(window);
 
-    if (WINDOW.width() <= 1024) {
-      el.on('click', (e) => {
+    if (isMobile) {
+      el
+        .off('click')
+        .on('click', (e) => {
         e.preventDefault();
         el.parent().toggleClass(CLOSED_SLIDER_CLASS);
         el.siblings().slideToggle();

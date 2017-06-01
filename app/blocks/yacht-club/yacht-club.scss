@@ -3,11 +3,7 @@
   flex: 1 0 auto;
   padding-bottom: 30px;
 
-  @include respond-to('tablet') {
-    padding-bottom: 0;
-  }
-
-  @include respond-to('mobile') {
+  @media (max-width: 1024px) {
     padding-bottom: 0;
   }
 
@@ -31,14 +27,7 @@
     font-size: 22px;
     padding-bottom: 0;
 
-    @include respond-to('tablet') {
-
-      &__title {
-        margin-bottom: 6px;
-      }
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
 
       &__title {
         margin-bottom: 6px;
@@ -76,11 +65,7 @@
       opacity: .7;
     }
 
-    @include respond-to('tablet') {
-      height: 200px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       height: 200px;
     }
   }
@@ -110,15 +95,11 @@
       }
     }
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       display: none;
     }
 
-    @include respond-to('mobile') {
-      display: none;
-    }
-
-    &_fixed {
+    &.fixed {
       position: fixed;
       top: 0;
       left: 0;
@@ -146,11 +127,7 @@
   }
 
   .services {
-    @include respond-to('tablet') {
-      margin-top: 9px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       margin-top: 9px;
     }
 
@@ -174,11 +151,7 @@
     transform: translateY(-50%);
     transform: rotate(180deg);
 
-    @include respond-to('tablet') {
-      display: block;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       display: block;
     }
 
@@ -206,19 +179,7 @@
       color: $color-white;
     }
 
-    @include respond-to('tablet') {
-      width: 100%;
-      text-align: left;
-      color: $color-black;
-      font-size: 16px;
-      margin: 0 auto;
-      padding: 4px 0 8px 15px;
-      border: 1px solid $color-light-gray;
-      border-left: none;
-      border-right: none;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       width: 100%;
       text-align: left;
       color: $color-black;
@@ -231,11 +192,7 @@
     }
 
     &_border {
-      @include respond-to('tablet') {
-        border-bottom: none;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         border-bottom: none;
       }
     }
@@ -246,6 +203,7 @@
 
     @media (max-width: 1024px) {
       margin-top: 0;
+      padding-top: 0;
     }
   }
 
@@ -325,11 +283,7 @@
       line-height: 36px;
     }
 
-    @include respond-to('tablet') {
-      color: $color-gray;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       color: $color-gray;
     }
   }
@@ -345,13 +299,7 @@
       line-height: 36px;
     }
 
-    @include respond-to('tablet') {
-      color: $color-black;
-      font-size: 17px;
-      padding: 0 7px 17px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       color: $color-black;
       font-size: 17px;
       padding: 0 7px 17px;
@@ -394,11 +342,7 @@
         font-size: 36px;
       }
 
-      @include respond-to('tablet') {
-        font-size: 18px;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         font-size: 18px;
       }
     }
@@ -409,14 +353,7 @@
       font-size: 180px;
     }
 
-    @include respond-to('tablet') {
-      text-shadow: 5px 9px 27px rgba(0, 0, 0, .7);
-      font-size: 50px;
-      top: 0;
-      left: 9px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       text-shadow: 5px 9px 27px rgba(0, 0, 0, .7);
       font-size: 50px;
       top: 0;
@@ -430,11 +367,7 @@
       margin-bottom: 30px;
       height: 100vh;
 
-      @include respond-to('tablet') {
-        height: 164px;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         height: 164px;
       }
     }
@@ -491,12 +424,7 @@
   }
 
   .contacts {
-    @include respond-to('tablet') {
-      padding: 0 15px;
-      margin-top: 11px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       padding: 0 15px;
       margin-top: 11px;
     }
@@ -507,11 +435,7 @@
       height: 90px;
       margin-top: 35px;
 
-      @include respond-to('tablet') {
-        display: none;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         display: none;
       }
     }
@@ -528,13 +452,7 @@
         font-size: 34px;
       }
 
-      @include respond-to('tablet') {
-        margin: 0 0 19px;
-        font-size: 14px;
-        display: block;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         margin: 0 0 19px;
         font-size: 14px;
         display: block;
@@ -544,12 +462,7 @@
     &__item {
       display: table-row;
 
-      @include respond-to('tablet') {
-        display: block;
-        margin-bottom: 8px;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         display: block;
         margin-bottom: 8px;
       }
@@ -558,12 +471,7 @@
     &__title, &__descr {
       display: table-cell;
 
-      @include respond-to('tablet') {
-        display: block;
-        text-align: left;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         display: block;
         text-align: left;
       }
@@ -579,26 +487,19 @@
     }
 
     &__coord {
-      @include respond-to('tablet') {
+      @media (max-width: 1024px) {
         letter-spacing: -.4px;
       }
 
-      @include respond-to('mobile') {
-        letter-spacing: -.4px;
-      }
     }
   }
 
   &__map_contacts {
     padding-left: 30px;
     padding-right: 30px;
+    max-height: 80vh;
 
-    @include respond-to('tablet') {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       padding-left: 0;
       padding-right: 0;
     }

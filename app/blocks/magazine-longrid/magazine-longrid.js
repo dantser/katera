@@ -10,6 +10,7 @@ export default function magazineLongrid() {
   if (!isMobile) {
     if (magazineLongrid.sliders.length) {
       magazineLongrid.sliders.sliders.forEach(item => item.destroy(item));
+      delete magazineLongrid.sliders;
     }
 
     return;
@@ -20,7 +21,7 @@ export default function magazineLongrid() {
   }
 
   // eslint-disable-next-line no-new
-  magazineLongrid.s1 = new Swiper('.js-magazine-longrid-slider1', {
+  magazineLongrid.sliders.push(new Swiper('.js-magazine-longrid-slider1', {
     slidesPerView: 2,
     spaceBetween: 20,
     pagination: '.js-magazine-longrid-slider1-pagination',
@@ -30,10 +31,10 @@ export default function magazineLongrid() {
         slidesPerView: 1,
       },
     },
-  });
+  }));
 
   // eslint-disable-next-line no-new
-  magazineLongrid.s2 = new Swiper('.js-magazine-longrid-slider2', {
+  magazineLongrid.sliders.push(new Swiper('.js-magazine-longrid-slider2', {
     slidesPerView: 2,
     spaceBetween: 20,
     pagination: '.js-magazine-longrid-slider2-pagination',
@@ -43,7 +44,7 @@ export default function magazineLongrid() {
         slidesPerView: 1,
       },
     },
-  });
+  }));
 }
 
 $(window).on('resize', debounce(200, magazineLongrid));
