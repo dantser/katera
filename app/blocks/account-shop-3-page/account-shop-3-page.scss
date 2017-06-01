@@ -86,6 +86,11 @@
             padding: 0 19px;
             border: none;
 
+            &__item {
+              white-space: nowrap;
+              margin-right: 15px;
+            }
+
             &__title {
               padding: 19px 0;
             }
@@ -116,9 +121,6 @@
             margin: 0 auto;
             padding-top: 1px;
             position: relative;
-            //display: flex !important;
-            //align-items: center;
-            //justify-content: center;
 
             @include respond-to('mobile') {
               width: 290px;
@@ -254,32 +256,7 @@
       border: 1px solid $color-light-gray;
       border-right: none;
       border-left: none;
-
-      @include respond-to('mobile') {
-        height: 40px;
-        border: none;
-      }
-
-      .submenu {
-        @include respond-to('mobile') {
-          display: none;
-        }
-      }
-
-      .select {
-        @media (min-width: 768px) {
-          display: none;
-        }
-      }
-
-      .dotted-dropdown {
-        display: none;
-
-        @include respond-to('mobile') {
-          display: inline-block;
-          margin-left: 18px;
-        }
-      }
+      overflow-x: auto;
     }
 
     .sortby-params {
@@ -287,6 +264,10 @@
       align-items: center;
       margin-bottom: 0;
       flex-wrap: wrap;
+
+      @media (max-width: 1024px) {
+        padding-bottom: 15px;
+      }
 
       .count .value {
         color: $color-red;
@@ -378,6 +359,8 @@
     }
 
     .box {
+      display: flex;
+      flex-direction: column;
       position: relative;
       width: 100%;
       padding: 27px;
@@ -386,33 +369,40 @@
       transition: box-shadow .25s ease-in-out;
 
       &:hover {
-        box-shadow: 0 10px 20px 0 rgba(181, 53, 31, .3);
+        @media (min-width: 1025px) {
+          box-shadow: 0 10px 20px 0 rgba(181, 53, 31, .3);
 
-        .icon {
-          fill: $color-red;
-        }
+          .icon {
+            fill: $color-red;
+          }
 
-        .text_period {
-          color: $color-black;
-        }
+          .text_period {
+            color: $color-black;
+          }
 
-        .text_price {
-          color: $color-red;
-        }
+          .text_price {
+            color: $color-red;
+          }
 
-        .button {
-          display: block;
+          .button {
+            display: block;
+          }
         }
       }
 
       .button {
-        display: none;
-        position: absolute;
         width: 165px;
         height: 40px;
-        transform: translate(-50%);
-        left: 50%;
-        bottom: -20px;
+        margin: 15px auto 0;
+
+        @media (min-width: 1025px) {
+          display: none;
+          transform: translate(-50%);
+          left: 50%;
+          bottom: -20px;
+          margin: 0;
+          position: absolute;
+        }
       }
     }
 
@@ -424,17 +414,9 @@
       padding-bottom: 16px;
       border-bottom: 1px solid rgba($color-gray, .15);
 
-      @include respond-to('tablet') {
-        min-height: 145px;
-      }
-
-      @include respond-to('mobile') {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
+      @media (max-width: 1024px) {
         align-items: center;
-        min-height: 0;
-        padding: 15px;
+        min-height: 145px;
       }
     }
 

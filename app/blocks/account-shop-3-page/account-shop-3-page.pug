@@ -133,8 +133,6 @@ mixin account-shop-3-page()
                 .field.sortby-status
                   .select-wrapper
                     +submenu(getData('submenu-account'))
-                    +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], false, 'Категория')
-                    +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
 
                 .field.sortby-params
                   p.count
@@ -154,5 +152,3 @@ mixin account-shop-3-page()
                           +sale-preview-item(res)._image_left
                         .actions
                           +proposal-actions()
-    +mobile-slide-popup()#magazine-mobile-filter
-      | test

@@ -35,7 +35,7 @@ import hint from '../blocks/hint/hint';
 // import customSlider from '../blocks/custom-slider/custom-slider';
 // import filterEngines from '../blocks/filter-engines/filter-engines';
 import accountSale from '../blocks/account-sale12/accountSale';
-// import accountShop from '../blocks/account-shop-3-page/account-shop-3-page';
+import accountShop from '../blocks/account-shop-3-page/account-shop-3-page';
 import accountShop1 from '../blocks/account-shop1/account-shop1';
 // import yachtClub from '../blocks/yacht-club/yachtClub';
 import tarif from '../blocks/tarif/tarif';
@@ -104,7 +104,7 @@ $(() => {
   // filterEngines();
   // yachtClub();
   accountSale();
-  // accountShop();
+  accountShop();
   tarif();
   // shop1();
   accountNavigation();

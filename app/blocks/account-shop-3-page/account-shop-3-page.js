@@ -15,6 +15,5 @@ export default () => {
     SLIDE_EL.slideToggle();
     EL.text(TEXT === 'Свернуть блок' ? 'Развернуть блок' : 'Свернуть блок');
     ICON.toggleClass('button__icon_kind_caret-down button__icon_kind_caret-up');
-    $('html, body').animate({ scrollTop: 0 }, 600, 'swing');
   });
 };
