@@ -49,7 +49,7 @@ import burgerDropdown from '../blocks/burger-dropdown/burger-dropdown';
 // import verphe from '../blocks/verphe/verphe';
 // import join from '../blocks/join/join';
 // import scrollable from '../blocks/scrollable/scrollable';
-// import accountSale3 from '../blocks/account-sale3/account-sale3';
+import accountSale3 from '../blocks/account-sale3/account-sale3';
 // import catalogVerphePage from '../blocks/catalog-verphe-page/catalog-verphe-page';
 // import shops from '../blocks/shop-s/shop-s';
 // import magazinePage from '../blocks/magazine-page/magazine-page';
@@ -112,7 +112,7 @@ $(() => {
   // subscribe();
   // verphe();
   // join();
-  // accountSale3();
+  accountSale3();
   // catalogVerphePage();
   // shops();
   // magazinePage();
