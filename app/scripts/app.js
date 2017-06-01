@@ -37,7 +37,7 @@ import textField from '../blocks/text-field/text-field';
 import accountSale from '../blocks/account-sale12/accountSale';
 // import accountShop from '../blocks/account-shop-3-page/account-shop-3-page';
 // import yachtClub from '../blocks/yacht-club/yachtClub';
-// import tarif from '../blocks/tarif/tarif';
+import tarif from '../blocks/tarif/tarif';
 // import shop1 from '../blocks/shop1/shop1';
 // import accountFaq from '../blocks/account-faq/accountFaq';
 import accountNavigation from '../blocks/account-navigation/account-navigation';
@@ -103,7 +103,7 @@ $(() => {
   // yachtClub();
   accountSale();
   // accountShop();
-  // tarif();
+  tarif();
   // shop1();
   accountNavigation();
   // saleRaznoe();

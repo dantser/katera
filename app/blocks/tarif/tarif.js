@@ -1,23 +1,44 @@
 import $ from 'jquery';
 
 export default function tarif() {
-// сворачивание тарифа
-  const MORE = $('.tarif__hideShow');
-  const SLIDE_EL = '.tarif__pros';
-  if ($(window).width <= 991) {
-    $(SLIDE_EL).slideUp();
+  const items = $('.tarif__hideShow');
+
+  if (!items.length) {
+    return;
   }
-  MORE.each( function () { // eslint-disable-line
-    const EL = $(this);
-    const OPENED_CLASS = 'tarif__hideShow_opened';
-    const BUTTON = '.tarif__button';
-    EL.on('click', (e) => {
+
+  const h = $('html');
+  const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
+
+  if (!isMobile) {
+    items.off('click');
+    return;
+  }
+
+  items
+    .off('click')
+    .on('click', function (e) { // eslint-disable-line func-names
       e.preventDefault();
-      EL.toggleClass(OPENED_CLASS);
-      EL.siblings(SLIDE_EL).slideToggle();
-      EL.siblings().children(BUTTON).slideToggle();
+      const el = $(this);
+
+      if (el.hasClass('tarif__hideShow_opened')) {
+        el
+          .removeClass('tarif__hideShow_opened')
+          .siblings('.tarif__pros')
+          .fadeOut()
+          .parent()
+          .find('.tarif__button')
+          .fadeOut();
+      } else {
+        el
+          .addClass('tarif__hideShow_opened')
+          .siblings('.tarif__pros')
+          .fadeIn()
+          .parent()
+          .find('.tarif__button')
+          .fadeIn();
+      }
     });
-  });
 }
 
 $(window).on('resize', tarif);
