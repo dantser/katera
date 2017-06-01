@@ -1,36 +1,6 @@
 import $ from 'jquery';
+import stickyBlock from '../../scripts/common/stickyBlock';
 
 export default function events() {
-  const submenu = $('.events__submenu-wrapper');
-
-  if (!submenu.length) {
-    return;
-  }
-
-  const w = $(window);
-  const navTopBreakpoint = submenu.offset().top;
-
-  const fixSubmenu = () => {
-    const sT = w.scrollTop();
-
-    if (sT >= navTopBreakpoint && !submenu.hasClass('events__submenu-wrapper_fixed')) {
-      submenu
-        .addClass('events__submenu-wrapper_fixed')
-        .next()
-        .css('margin-top', `${submenu.outerHeight()}px`);
-    }
-
-    if (sT < navTopBreakpoint && submenu.hasClass('events__submenu-wrapper_fixed')) {
-      submenu
-        .removeClass('events__submenu-wrapper_fixed')
-        .next()
-        .css('margin-top', 0);
-    }
-  };
-
-  if (w.width() > 1024) {
-    w.on('load scroll', fixSubmenu);
-  }
+  stickyBlock($('.events__submenu-wrapper'), true, false);
 }
-
-$(window).on('resize', events);

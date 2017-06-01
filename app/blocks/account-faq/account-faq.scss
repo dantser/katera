@@ -89,7 +89,9 @@
     }
 
     &:hover {
-      background-color: #e02303;
+      @media (min-width: 1025px) {
+        background-color: #e02303;
+      }
     }
   }
 

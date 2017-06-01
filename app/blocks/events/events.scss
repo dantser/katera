@@ -198,7 +198,7 @@
       border-bottom: 0;
     }
 
-    &_fixed {
+    &.fixed {
       position: fixed;
       top: 0;
       left: 0;
@@ -208,6 +208,7 @@
 
     @media (max-width: 1024px) {
       background-color: $color-white;
+      padding: 0 15px;
     }
 
     @include respond-to('tablet') {
