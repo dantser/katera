@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { debounce } from 'throttle-debounce';
 
 export default (b1Class, b2Class) => {
   const h = $('html');
@@ -38,5 +39,6 @@ export default (b1Class, b2Class) => {
     });
   };
 
-  $(window).on('resize', init);
+  init();
+  $(window).on('resize', debounce(200, init));
 };
