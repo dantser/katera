@@ -37,10 +37,6 @@
       height: 50vh !important;
     }
 
-    @media (max-width: 768px) {
-      height: 100vh !important;
-    }
-
     .container {
       display: flex;
       position: relative;
@@ -129,7 +125,7 @@
         }
 
         @include respond-to('mobile') {
-
+          height: 50vh;
           &::after {
             content: '';
             position: absolute;

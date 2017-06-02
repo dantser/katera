@@ -1,17 +1,17 @@
 .articles-grid:not(:first-of-type) {
   margin-top: 30px;
 
-  @include respond-to(mobile) {
+  @include respond-to('mobile') {
     margin-top: 0;
   }
 }
 
 .articles__tablet-hide {
-  @include respond-to(tablet) {
+  @include respond-to('tablet') {
     display: none;
   }
 
-  @include respond-to(mobile) {
+  @include respond-to('mobile') {
     display: none;
   }
 }
@@ -32,7 +32,7 @@
   }
 
   .col_three {
-    @include respond-to(mobile) {
+    @include respond-to('mobile') {
       width: 100%;
     }
   }
@@ -41,6 +41,10 @@
 .grid {
   padding: 0;
   margin: 0;
+
+  @media (max-width: 1024px) {
+    overflow: hidden;
+  }
 
   &:not(:first-of-type) {
     padding-top: 30px;
@@ -57,12 +61,12 @@
   &:not(:first-of-type) {
     padding-top: 30px;
 
-    @include respond-to(mobile) {
+    @include respond-to('mobile') {
       padding-top: 0;
     }
   }
 
-  @include respond-to(mobile) {
+  @include respond-to('mobile') {
     margin-top: 0;
   }
 }
@@ -74,7 +78,7 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  @include respond-to(mobile) {
+  @include respond-to('mobile') {
     padding-top: 0;
   }
 
