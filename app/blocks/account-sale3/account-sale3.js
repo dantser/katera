@@ -91,6 +91,13 @@ const mockData = {
 export default () => {
   filterCategory('.account-sale3__filter-category', mockData, 'categories');
 
+  // center tabs
+  const tabs = $('.account-sale3 .magazine-subscribe-popup__types');
+
+  if (tabs.length) {
+    tabs.scrollLeft(tabs.width() / 2 + 20);
+  }
+
   // additioanl engine checkbox dependencies
   const hasAdditionalEngine = $('.js-has-additional-engine');
 

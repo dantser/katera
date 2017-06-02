@@ -220,7 +220,6 @@
 
     @include respond-to('mobile') {
       padding: 25px 0;
-      max-width: 400px;
     }
 
     &__subheader {
@@ -400,11 +399,23 @@
     &__types {
       padding: 0;
       margin: 0;
+      overflow-y: visible;
+      overflow-x: auto;
+      flex-direction: row;
     }
 
     &__box {
       @media (max-width: 1200px) and (orientation: landscape) {
         width: 185px;
+        padding: 10px;
+      }
+    }
+
+    &__type {
+      padding: 15px;
+
+      &:not(:last-child) {
+        margin-right: 10px;
       }
     }
   }
@@ -443,6 +454,7 @@
 
       @include respond-to('mobile') {
         margin: 20px 0;
+        max-width: initial;
       }
 
       &__item-sale {
@@ -476,7 +488,7 @@
         will-change: color;
         transition: color .25s ease-in-out;
 
-        @include respond-to('mobile') {
+        @media (max-width: 400px) {
           width: 100%;
           text-align: center;
         }
@@ -503,6 +515,7 @@
 
     @include respond-to('mobile') {
       margin-bottom: 17px;
+      max-width: initial;
     }
 
     .button {

@@ -6,6 +6,10 @@ export default function index() {
   const header = $('.header');
   const w = $(window);
 
+  if (!$('.index').length) {
+    return;
+  }
+
   const yachtWidget = $('.yacht-preview-widget');
   const yachtBtn = yachtWidget.find('.yacht-preview-widget__button');
   const topicWidget = $('.topic-preview-widget');
