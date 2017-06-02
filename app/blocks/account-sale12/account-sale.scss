@@ -1,9 +1,5 @@
 .account-sale1, .account-sale2 {
 
-  // .container {
-  //   max-width: 1024px;
-  // }
-
   .page-header {
     border-top: 1px solid $color-light-gray;
 
@@ -47,15 +43,6 @@
     color: $color-black;
     display: flex;
     margin-bottom: 20px;
-
-    //
-    // @include respond-to('laptop') {
-    //   overflow-x: hidden;
-    // }
-    //
-    // @include respond-to('tablet') {
-    //   overflow-x: hidden;
-    // }
 
     @include respond-to('mobile') {
       flex-direction: column;
@@ -238,7 +225,6 @@
 
     @include respond-to('mobile') {
       font-size: 14px;
-      //width: 100vw;
       padding-left: 2px;
 
       &__item {
@@ -271,7 +257,6 @@
 
   .sale-preview-item {
     width: 341px;
-    //margin-right: 26px;
 
     &__text {
       transform: translateY(-4px);
@@ -312,8 +297,8 @@
     }
 
     @include respond-to('mobile') {
-      margin: 0 auto 11px;
-      width: 290px;
+      margin-bottom: 11px;
+      width: 100%;
 
       &__params {
         display: block;
@@ -383,7 +368,7 @@
     }
 
     @include respond-to('mobile') {
-      justify-content: space-around;
+      justify-content: space-between;
       margin: 0;
     }
   }
