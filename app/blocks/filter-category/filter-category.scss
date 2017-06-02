@@ -119,8 +119,10 @@
       }
     }
 
-    &:hover .filter-category__label {
-      color: $color-red;
+    @media (min-width: 1025px) {
+      &:hover .filter-category__label {
+        color: $color-red;
+      }
     }
   }
 

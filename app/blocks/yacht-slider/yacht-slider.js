@@ -8,10 +8,10 @@ export default () => {
     slidesPerView: 3,
     spaceBetween: 30,
     breakpoints: {
-      992: {
+      1024: {
         slidesPerView: 2,
       },
-      640: {
+      768: {
         slidesPerView: 1,
       },
     },
