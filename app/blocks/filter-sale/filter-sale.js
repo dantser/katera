@@ -3,7 +3,6 @@ import 'jquery-ui-bundle';
 
 export default () => {
   const filter = $('.filter-sale');
-  const filterSale = $('#filterSale1');
 
   if (!filter) {
     return;
@@ -11,7 +10,7 @@ export default () => {
   // tabs
   const DIVISION_CLASS = '.division';
   const DIVISION_ACTIVE_CLASS = 'division_active';
-  filterSale.tabs({
+  filter.tabs({
     activate: (event, ui) => {
       const { newTab, oldTab } = ui;
 

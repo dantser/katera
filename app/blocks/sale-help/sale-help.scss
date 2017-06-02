@@ -62,7 +62,7 @@
   &__link {
     color: $color-white;
     line-height: em(20px);
-    font-family: 'Neris Light';
+    font-family: $NerisLight;
   }
 
   &__button {
@@ -74,12 +74,11 @@
     width: 165px;
     height: 40px;
 
-    @include respond-to('laptop') {
+    @media (max-width: 1160px) {
       margin-right: 0;
-    }
-
-    @include respond-to('tablet') {
-      margin-right: 0;
+      left: 50%;
+      right: initial;
+      transform: translate(-50%, 50%);
     }
 
     .button {

@@ -11,6 +11,8 @@
   @media (max-width: 1024px) {
     padding: 10px 0 6px;
     background-color: rgba(255, 255, 255, 1);
+    position: relative;
+    z-index: 10;
   }
 
   &__title {

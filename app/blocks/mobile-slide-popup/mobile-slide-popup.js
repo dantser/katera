@@ -29,7 +29,7 @@ export default () => {
       el.data('scroll-top', body.scrollTop());
 
       el.on('transitionend', () => {
-        body.animate({ scrollTop: 0 }, 500, 'swing');
+        body.addClass('overflow-hidden');
         el.off('transitionend');
       });
     });
@@ -46,7 +46,7 @@ export default () => {
         el
           .css({ display: 'none' })
           .off('transitionend');
-        $('html, body').animate({ scrollTop: +el.data('scroll-top') || 0 }, 500, 'swing');
+        $('body').removeClass('overflow-hidden');
       });
   };
 
@@ -66,7 +66,6 @@ export default () => {
 
   $(OPEN_BUTTON_CLASS).on('click', (e) => {
     e.preventDefault();
-
     const target = $(e.currentTarget);
 
     if (!isTrueButton(target)) {
