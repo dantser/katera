@@ -34,6 +34,10 @@ export default () => {
       lengthSliderTextMin.text(`${ui.values[0]} м`);
       lengthSliderTextMax.text(`${ui.values[1]} м`);
     },
+    change(e, ui) {
+      lengthSliderTextMin.text(`${ui.values[0]} м`);
+      lengthSliderTextMax.text(`${ui.values[1]} м`);
+    },
   });
 
   lengthSliderTextMin.text(`${lengthRangleSlider.slider('values', 0)} м`);

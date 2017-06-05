@@ -24,6 +24,10 @@ export default () => {
       powerSliderTextMin.text(`${ui.values[0]} л.с.`);
       powerSliderTextMax.text(`${ui.values[1]} л.с.`);
     },
+    change(e, ui) {
+      powerSliderTextMin.text(`${ui.values[0]} л.с.`);
+      powerSliderTextMax.text(`${ui.values[1]} л.с.`);
+    },
   });
 
   powerSliderTextMin.text(`${powerRangleSlider.slider('values', 0)} л.с.`);

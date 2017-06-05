@@ -150,7 +150,12 @@ export default () => {
     const data = [{ value: selectedOption.val(), title: selectedOption.text() }];
 
     updateText(textElement, data);
-    showLabel(labelElement);
+
+    if (selectedOption.prop('disabled')) {
+      hideLabel(labelElement);
+    } else {
+      showLabel(labelElement);
+    }
   });
 
   // handle show list (custom dropdown)
