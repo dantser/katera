@@ -4,13 +4,10 @@
     display: flex;
     flex-direction: row;
     list-style: none;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
-
-    @include respond-to('mobile') {
-      width: 600px;
-    }
   }
 
   &__tabs {
@@ -83,13 +80,10 @@
   }
 
   &__li {
-    flex-grow: 1;
     text-align: center;
     position: relative;
-
-    @include respond-to('mobile') {
-      width: 180px;
-    }
+    width: 30%;
+    min-width: 300px;
 
     &:focus {
       outline: 0;
@@ -103,10 +97,12 @@
     text-shadow: 0 10px 20px rgba(153, 153, 153, .3);
     font-family: $NerisBlack;
     position: absolute;
-    left: 30px;
+    left: 50%;
+    transform: translateX(-100%);
     line-height: .7;
     top: 0;
     pointer-events: none;
+
     @include respond-to('large-desktop') {
       left: 97px;
     }

@@ -4,7 +4,7 @@ import $ from 'jquery';
 export default function branding() {
   const branding = $('.branding');
 
-  if (!branding) {
+  if (!branding.length) {
     return;
   }
 
