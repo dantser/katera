@@ -90,6 +90,43 @@ export default function index() {
   $('.index__widget').stick_in_parent({
     offset_top: 95,
   });
+
+  //
+  // SLIDER
+  //
+  var slider = $(".main-slider"),
+    mainSliderContainer = $(".index__main-slider"),
+    sliderScroll = $('.slider-scroll');
+
+  mainSliderContainer.height(w.height() - header.outerHeight());
+
+  sliderScroll.scroll(function(){
+    var ssT = $(this).scrollTop(),
+      percents = ssT/$(window).height();
+
+    slider.css("transform", "scale(" + percents + ")");
+
+    if (ssT >= w.innerHeight()) {
+
+      if (!sliderScroll.hasClass("scrolled")) {
+        sliderScroll.addClass("scrolled");
+        console.log("slider scroll finished.");
+      }
+
+    }
+  });
+
+  $(window).scroll(function(){
+    var sT = $(this).scrollTop();
+
+    if (sT === 0) {
+
+      if (sliderScroll.hasClass("scrolled")) {
+        sliderScroll.removeClass("scrolled");
+        console.log("slider scroll zero.");
+      }
+    }
+  });
 };
 
 $(window).on('resize', index);

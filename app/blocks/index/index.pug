@@ -22,10 +22,11 @@ include ../sale-preview-item/sale-preview-item
 
 mixin index()
   +b.index&attributes(attributes)
+    .slider-scroll
     +container()
+      +e.main-slider
+        +main-slider()
       +main-container().main-container_shadow.index__main-container
-        +e.main-slider
-          +main-slider()
         +filter().__filter
         +navbar(getData('navbar'))
         +e.row
