@@ -9,6 +9,7 @@ export default function branding() {
   }
 
   const brandingTop = branding.find('.branding__top');
+  const brandigOffsetTop = branding.offset().top;
   const brandingTopImage = brandingTop.find('img');
   const brandingBottom = branding.find('.branding__bottom');
   const footer = $('.footer');
@@ -26,18 +27,12 @@ export default function branding() {
   const isIndex = $('.index').length;
 
   if (isIndex && w.width() > 1024) {
-    if ($(document).scrollTop() < header.height()) {
-      brandingTop.css('top', `${header.height() - $(document).scrollTop()}px`);
-    } else {
-      brandingTop.css({ top: `${header.find('.header__container').outerHeight()}px`});
-    }
-
-    if ($(document).scrollTop() > 500) {
+    if ($(document).scrollTop() > $(window).innerHeight()) {
       brandingTop.find('.branding__scroll-btn').hide();
     }
   }
 
-  w.on('scroll', () => {
+  w.on('scroll load', () => {
 
     if ($(window).width() <= 1024) {
       return;
@@ -47,10 +42,12 @@ export default function branding() {
       return;
     }
 
-    if (w.scrollTop() < header.height()) {
-      brandingTop.css('top', `${header.height() - w.scrollTop()}px`);
-    } else {
-      brandingTop.css({ top: `${header.find('.header__container').outerHeight()}px`});
+    if (w.scrollTop() < brandigOffsetTop && brandingTop.hasClass('fixed')) {
+      brandingTop.removeClass('fixed');
+    }
+
+    if (w.scrollTop() >= brandigOffsetTop && !brandingTop.hasClass('fixed')) {
+      brandingTop.addClass('fixed');
     }
 
     const animateImage = $(window).innerHeight() + $(document).scrollTop() - footer.offset().top - brandingBottom.height();

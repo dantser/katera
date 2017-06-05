@@ -70,7 +70,12 @@
     }
 
     &_index {
-      position: fixed;
+      position: absolute;
+
+      &.fixed {
+        position: fixed;
+        height: calc(100vh - 95px);
+      }
 
       .branding__scroll-btn {
         position: absolute;
