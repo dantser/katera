@@ -32,7 +32,7 @@ mixin account-messages-1()
               - var msg = getData('account-message')
                 +select(msg.msg.name, msg.msg.options)
               +e.dotted
-                +dotted-dropdown()(data-target-modal='#account-messages-dotted').js-mobile-slide-popup
+                +dotted-dropdown()
           +e.message-container
             +checkbox({checked: false})._circle.__checkbox.js-account-messages-1-checkbox
             +e('a')(href='#').message-content
@@ -81,5 +81,4 @@ mixin account-messages-1()
                 +e('a')(href="#").request
                   +e('span') Ответить
                   +icon('arrow-next').icon.__request-icon
-    +mobile-slide-popup()#account-messages-dotted
-      | test
+

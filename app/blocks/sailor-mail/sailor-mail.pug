@@ -6,7 +6,7 @@ mixin sailor-mail(data)
       - var backgroundClass = block.background ? 'link_background' : '';
       - var borderClass = block.border ? 'link_border' : '';
       +b.sailor-mail-box
-        +e('a').link(class=backgroundClass, class=borderClass)(href= block.link)
+        +e('a').link(class=backgroundClass class=borderClass href= block.link)
           +e('img')(src= block.image alt='').img
         +e.description
           +e('p').city= block.city

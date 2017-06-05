@@ -5,12 +5,14 @@
   &_content_right {
 
     .dotted-dropdown__content {
-      right: 0;
+      right: 0 !important;
+      left: initial !important;
     }
   }
 
   &_content_left {
-    left: 0;
+    left: 0 !important;
+    right: initial !important;
   }
 
   &_active {
@@ -47,16 +49,24 @@
     }
   }
 
-  &__content {
+  .dotted-dropdown &__content {
     position: absolute;
     top: 100%;
+    left: 0;
     display: none;
-    padding-top: 10px;
-    width: 200px;
-    z-index: 9998;
+    margin-top: 9px;
+    height: auto;
+    z-index: 9999;
+    width: initial;
 
-    @include respond-to('mobile') {
-      width: 100%;
+    &.loading {
+      display: block !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    .list__item {
+      white-space: nowrap;
     }
   }
 }

@@ -19,7 +19,7 @@ mixin magazine()
         +e('div').select-wrapper
           +submenu(getData('submenu'))
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], false, 'Категория')
-          +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
+          +dotted-dropdown()
         +e.content
           +articles-grid()
             .stroke
@@ -85,5 +85,4 @@ mixin magazine()
                 +article-preview(getData('article-preview_title-under-img_color_light-amber'))._title-under-img
 
         +button()._rounded._kind_red.__show-more Показать еще
-    +mobile-slide-popup()#magazine-mobile-filter
-      | test
+

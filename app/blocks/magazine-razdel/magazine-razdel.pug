@@ -18,7 +18,7 @@ mixin magazine-razdel()
         +e('div').select-wrapper
           +submenu(getData('submenu'))
           +select('item10', [{value: '1', title: 'Все'}, {value: '2', title: 'Путешествия'}, {value: '3', title: 'Видео-обзоры'}], null, 'Категория')
-          +dotted-dropdown()(data-target-modal='#magazine-mobile-filter').js-mobile-slide-popup
+          +dotted-dropdown()
         +e.content
           - var data = getData('article-preview_title-under-img_magazine-razdel');
           +e.list
@@ -64,5 +64,3 @@ mixin magazine-razdel()
                       +banner('#', 'assets/images/banner2.jpg')
 
           +button()._rounded._kind_red._shadow.__show-more Показать еще
-    +mobile-slide-popup()#magazine-mobile-filter
-      | test

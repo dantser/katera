@@ -61,6 +61,7 @@ import forgotPassword from '../blocks/forgot-password/forgot-password';
 import gallerySliderPopup from '../blocks/gallery-slider-popup/gallery-slider-popup';
 import magazineVideo from '../blocks/magazine-video/magazine-video';
 import magazineVideos from '../blocks/magazine-videos/magazine-videos';
+import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
 
 $(window).on('load', () => {
   scrollable();
@@ -83,6 +84,7 @@ $(() => {
   models();
   counter();
   modal();
+  dottedDropdown();
   accountFaq();
   scrollSlider();
   yachtSlider();
