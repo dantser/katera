@@ -1,6 +1,7 @@
 .yacht-page {
 
   &__intro {
+    display: flex;
     position: relative;
 
     @media (max-width: 991px) {
@@ -9,12 +10,7 @@
   }
 
   .sale-contacts-wrap {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: -11px;
-    z-index: 1;
+    flex: none;
 
     @media (max-width: 991px) {
       display: none;
@@ -336,7 +332,7 @@
     margin: 0 auto;
 
     .button {
-      padding-top: 6px;
+      padding-top: 8px;
       line-height: (24/14)*1em;
       height: 40px;
     }

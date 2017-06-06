@@ -1,22 +1,27 @@
 import Swiper from 'swiper';
+import $ from 'jquery';
 
 export default () => {
-  // eslint-disable-next-line no-unused-vars
-  const galleryTop = new Swiper('.scroll-slider_gallery-top', {
-    initialSlide: 0,
+  if (!$('.scroll-slider').length) {
+    return;
+  }
+
+  const galleryTop = new Swiper('.scroll-slider__gallery', {
     pagination: '.scroll-slider__pagination',
     paginationClickable: true,
+    slidesPerView: 1,
   });
-  // eslint-disable-next-line no-unused-vars
-  const galleryThumbs = new Swiper('.scroll-slider_gallery-thumbs', {
-    initialSlide: 0,
+
+  const galleryThumbs = new Swiper('.scroll-slider__thumbs', {
     slidesPerView: 'auto',
     touchRatio: 0.2,
     slideToClickedSlide: true,
     scrollbarDraggable: true,
     scrollbar: '.scroll-slider__scrollbar',
     scrollbarHide: false,
+    centeredSlides: true,
   });
+
   galleryTop.params.control = galleryThumbs;
   galleryThumbs.params.control = galleryTop;
 };
