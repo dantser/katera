@@ -5,5 +5,5 @@ export default function magazineVideos() {
   if (!$('.magazine-videos').length) {
     return;
   }
-  dScroll('.magazine-videos__content', '.magazine-videos__sidebar');
+  dScroll('.magazine-videos__videos-col', '.magazine-videos__sidebar');
 }

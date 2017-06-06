@@ -16,7 +16,7 @@ export default (b1Class, b2Class) => {
     }
 
     // eslint-disable-next-line no-confusing-arrow
-    const [b1, b2] = blocks.sort((a, b) => a.height() > b.height() ? -1 : 1);
+    const [max, min] = blocks.sort((a, b) => a.height() > b.height() ? -1 : 1);
     const w = $(window);
     let translate = 0;
 
@@ -24,17 +24,17 @@ export default (b1Class, b2Class) => {
       const sT = w.scrollTop();
       const vH = w.innerHeight();
 
-      if (sT < b1.offset().top) {
+      if (sT < max.offset().top) {
         translate = 0;
-      } else if (sT > b1.offset().top + b1.height() - vH) { // eslint-disable-line
-        translate = b1.height() - b2.height();
+      } else if (sT > max.offset().top + max.height() - vH) { // eslint-disable-line
+        translate = max.height() - min.height();
       } else {
         // пройденная дистанция в %
-        const percent = (sT - b1.offset().top) / (b1.height() - vH);
-        translate = percent * (b1.height() - b2.height());
+        const percent = (sT - max.offset().top) / (max.height() - vH);
+        translate = percent * (max.height() - min.height());
       }
 
-      b2.css('transform', `translate3d(0, ${translate}px, 0)`);
+      min.css('transform', `translate3d(0, ${translate}px, 0)`);
     });
   };
 

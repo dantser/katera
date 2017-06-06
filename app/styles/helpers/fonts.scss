@@ -80,7 +80,6 @@
   src:
     local('Neris Black'),
     local('Neris-Black'),
-    url('../fonts/neris-black.woff') format('woff'),
     url('../fonts/Neris-Black.otf') format('otf');
 }
 
@@ -111,7 +110,6 @@
   src:
     local('Neris SemiBold'),
     local('Neris-SemiBold'),
-    url('../fonts/neris-semibold.woff') format('woff'),
     url('../fonts/Neris-SemiBold.otf') format('otf');
 }
 
@@ -132,7 +130,6 @@
   src:
     local('Neris Light'),
     local('Neris-Light'),
-    url('../fonts/neris-light.woff') format('woff'),
     url('../fonts/Neris-Light.otf') format('otf');
 }
 
@@ -153,8 +150,7 @@
   src:
     local('Neris Thin'),
     local('Neris-Thin'),
-    url('../fonts/Neris-Thin.otf') format('otf'),
-    url('../fonts/Neris-Thin.woff') format('woff');
+    url('../fonts/Neris-Thin.otf') format('otf');
 }
 
 @font-face {
