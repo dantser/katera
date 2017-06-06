@@ -5,7 +5,7 @@ export default () => {
   const filter = $('.filter');
   const filterTab = $('#filterTab');
 
-  if (!filter) {
+  if (!filter.length) {
     return;
   }
 // tabs

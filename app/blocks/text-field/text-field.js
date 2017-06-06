@@ -6,7 +6,7 @@ $.fn.addError = function addError(message = null) {
   const textField = !IS_TEXT_FIELD ? this.parents('.text-field') : this;
   const errorElement = textField.find('.text-field__error');
 
-  if (!errorElement || !textField || textField.length === 0) {
+  if (!errorElement.length || !textField.length) {
     return this;
   }
 

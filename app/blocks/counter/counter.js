@@ -17,7 +17,6 @@ function decrement(control) {
     control.val(0);
   }
 
-  console.log(control.val());
   control.val(val - 1);
 }
 
@@ -29,7 +28,7 @@ export default () => {
 
   const counters = $(ELEMENT_CLASS);
 
-  if (!counters) {
+  if (!counters.length) {
     return;
   }
 

@@ -89,6 +89,10 @@ const mockData = {
 
 /* eslint-disable */
 export default () => {
+  if (!$('.account-sale3').length) {
+    return;
+  }
+
   filterCategory('.account-sale3__filter-category', mockData, 'categories');
 
   // center tabs

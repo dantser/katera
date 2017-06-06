@@ -8,7 +8,6 @@ export default () => {
 
   const dropdown = new Dropdown(dropDownClass);
 
-
   $(burgerClass).on('click', (e) => {
     const burger = $(burgerClass);
     e.preventDefault();

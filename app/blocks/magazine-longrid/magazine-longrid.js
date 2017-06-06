@@ -3,6 +3,10 @@ import $ from 'jquery';
 import { debounce } from 'throttle-debounce';
 
 export default function magazineLongrid() {
+  if (!$('.magazine-longrid').length) {
+    return;
+  }
+
   const h = $('html');
   const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
   magazineLongrid.sliders = magazineLongrid.sliders || [];

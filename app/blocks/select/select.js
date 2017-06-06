@@ -64,7 +64,7 @@ export default () => {
 
   const selectElements = $(SELECT_CLASS);
 
-  if (!selectElements) {
+  if (!selectElements.length) {
     return;
   }
 

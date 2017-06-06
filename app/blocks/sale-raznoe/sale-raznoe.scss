@@ -112,6 +112,7 @@
 
     &_fixed {
       position: fixed;
+      transform: translate3d(0, 0, 0);
       top: 0;
       left: 0;
       padding: 0 15px;
@@ -119,6 +120,7 @@
       background-color: #fff;
       box-shadow: 0 0 7px 0 rgba(19, 11, 89, .14);
       z-index: 999;
+      transform: translate3d(0, 0, 0);
 
       @include respond-to('tablet') {
         padding: 0 15px;
@@ -288,6 +290,7 @@
 
   &__show-filter-btn {
     position: fixed;
+    transform: translate3d(0, 0, 0);
     left: 0;
     bottom: 0;
     display: none;

@@ -11,7 +11,7 @@ export default () => {
 
   const modals = $(MODAL_CLASS);
 
-  if (!modals) {
+  if (!modals.length) {
     return;
   }
 

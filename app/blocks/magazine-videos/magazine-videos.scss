@@ -76,13 +76,13 @@
   }
 
   &__videos-col {
-    flex: 0 0 75.8%;
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-right: 15px;
     position: relative;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 
     &::after {
       content: '';
@@ -163,7 +163,7 @@
   }
 
   &__sidebar {
-    flex: 1 0 24.2%;
+    flex: 0 0 263px;
     padding-left: 15px;
 
     @include respond-to('tablet') {
@@ -202,7 +202,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -20px;
+    bottom: 0;
 
     @include respond-to('mobile') {
       max-width: 290px;

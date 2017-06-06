@@ -1,6 +1,10 @@
 import $ from 'jquery';
 
 export default () => {
+  if (!$('.account-faq').length) {
+    return;
+  }
+
   const CONTROL = $('.account-faq__item-heading');
   if (!CONTROL) {
     return;

@@ -3,7 +3,7 @@ import $ from 'jquery';
 export default () => {
   const CONTROL = $('.account-shop-3-page .button-slide');
   const SLIDE_EL = $('.types');
-  if (!CONTROL) {
+  if (!CONTROL.length) {
     return;
   }
 // Сворачивание тарифов на account-sale1

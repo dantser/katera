@@ -4,7 +4,7 @@ import 'jquery-ui-bundle';
 export default () => {
   const filter = $('.filter-sale');
 
-  if (!filter) {
+  if (!filter.length) {
     return;
   }
   // tabs

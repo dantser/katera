@@ -5,7 +5,7 @@ import 'jquery-ui-touch-punch';
 export default () => {
   const filter = $('.filter-engines');
 
-  if (!filter) {
+  if (!filter.length) {
     return;
   }
 

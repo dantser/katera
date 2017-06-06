@@ -3,7 +3,7 @@ import $ from 'jquery';
 export default () => {
   const el = $('.reset-filter');
 
-  if (!el) {
+  if (!el.length) {
     return;
   }
 

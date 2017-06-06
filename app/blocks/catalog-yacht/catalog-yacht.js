@@ -4,7 +4,7 @@ import 'jquery-ui-bundle';
 export default () => {
   const tabs = $('.catalog-yacht__tabs');
 
-  if (!tabs) {
+  if (!tabs.length) {
     return;
   }
 

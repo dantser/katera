@@ -7,7 +7,7 @@ export default function upBtn() {
   const btn = $(ELEMENT_CLASS);
   const w = $(window);
 
-  if (!btn || w.width() <= 768) {
+  if (!btn.length || w.width() <= 768) {
     return;
   }
 

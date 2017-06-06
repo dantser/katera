@@ -3,7 +3,7 @@ import $ from 'jquery';
 export default () => {
   const join = $('.join');
 
-  if (!join) {
+  if (!join.length) {
     return;
   }
 

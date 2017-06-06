@@ -4,7 +4,7 @@ import 'jquery-ui-touch-punch';
 export default () => {
   const filter = $('.filter-model');
 
-  if (!filter) {
+  if (!filter.length) {
     return;
   }
 

@@ -3,16 +3,15 @@ import { debounce } from 'throttle-debounce';
 
 export default (b1Class, b2Class) => {
   const h = $('html');
-  const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
 
-  if (!b1Class || !b2Class || isMobile) {
+  if (!b1Class || !b2Class || h.hasClass('mobile') || h.hasClass('tablet')) {
     return;
   }
 
   const init = () => {
     const blocks = [$(b1Class), $(b2Class)];
 
-    if (blocks.some(el => !el.length)) {
+    if (blocks.some(el => !el.length) || h.hasClass('mobile') || h.hasClass('tablet')) {
       return;
     }
 

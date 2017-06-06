@@ -5,6 +5,10 @@ import stickyBlock from '../../scripts/common/stickyBlock';
 
 /* eslint-disable */
 export default function yachtClub() {
+  if (!$('.yacht-club').length) {
+    return;
+  }
+
   stickyBlock($('.yacht-club__submenu'), true, false);
 
   const w = $(window);

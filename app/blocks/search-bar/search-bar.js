@@ -7,7 +7,7 @@ export default () => {
 
   const elements = $(ELEMENT_CLASS);
 
-  if (!elements) {
+  if (!elements.length) {
     return;
   }
 

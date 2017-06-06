@@ -4,7 +4,7 @@ import 'jquery-ui-bundle';
 export default () => {
   const shopTabs = $('#tabs');
 
-  if (!shopTabs) {
+  if (!shopTabs.length) {
     return;
   }
 

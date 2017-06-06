@@ -4,7 +4,7 @@ export default () => {
   const CLOSE = $('.verphe-contacts__icon-close');
   const CONTACTS = $('.verphe__contacts');
   const SIDEBAR = $('.verphe__sidebar');
-  if (!CLOSE) {
+  if (!CLOSE.length) {
     return;
   }
   CLOSE.on('click', (e) => {

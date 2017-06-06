@@ -1,6 +1,10 @@
 import $ from 'jquery';
 
 export default () => {
+  if (!$('.account-messages-1').length) {
+    return;
+  }
+
   const allCheckbox = $('.js-account-messages-1-select-all').find('.checkbox__control');
   const checkboxes = $('.js-account-messages-1-checkbox').find('.checkbox__control');
   const btns = $('.js-account-messages-1-btn');
