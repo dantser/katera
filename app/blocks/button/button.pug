@@ -29,4 +29,6 @@ mixin button(isLink)
       block
   else
     +b('button').button&attributes(attributes)
-      block
+      //- fix flexbox iOS
+      +e.container
+        block
