@@ -13,6 +13,7 @@ include ../hint/hint
 include ../list/list
 include ../button/button
 include ../filter-category/filter-category
+include ../account-propose-popup/account-propose
 
 mixin account-sale3()
  +b.account-sale3&attributes(attributes)
@@ -207,36 +208,24 @@ mixin account-sale3()
           +b.pricing
             +e.item-sale.js-pricing__item-sale
               +checkbox({checked: true})._switcher
-              +hint()
-                +list()
-                  +list-item()
-                    +text()
-                      p Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы
-                  +list-item()
-                    +e.SPAN.offer Услуга действует 30 дней
-              +e.SPAN.hint-text Поднятие в ТОП
+              +e.item-sale-hint.js-hint
+                +hint()
+                  +account-propose()
+                +e.SPAN.hint-text Поднятие в ТОП
               +e.SPAN.price 1090 Р
             +e.item-sale.js-pricing__item-sale
               +checkbox()._switcher
-              +hint()
-                +list()
-                  +list-item()
-                    +text()
-                      p Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы
-                  +list-item()
-                    +e.SPAN.offer Услуга действует 30 дней
-              +e.SPAN.hint-text Спецпредложение
+              +e.item-sale-hint.js-hint
+                +hint()
+                  +account-propose()
+                +e.SPAN.hint-text Спецпредложение
               +e.SPAN.price 550 Р
             +e.item-sale.js-pricing__item-sale
               +checkbox()._switcher
-              +hint()
-                +list()
-                  +list-item()
-                    +text()
-                      p Отличная возможность выделить свое предложение среди других. В результате поиска ваше объявление будет привлекать больше внимания, что позволит увеличить скорость продажи в разы
-                  +list-item()
-                    +e.SPAN.offer Услуга действует 30 дней
-              +e.SPAN.hint-text Выделение цветом
+              +e.item-sale-hint.js-hint
+                +hint()
+                  +account-propose()
+                +e.SPAN.hint-text Выделение цветом
               +e.SPAN.price 200 Р
           +b.btn-wrap
             +button()._kind_red.js-sale3-submit-proposal Разместить предложение <span>0</span> Р

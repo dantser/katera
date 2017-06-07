@@ -30,24 +30,29 @@
 }
 
 @mixin hover-shadow($direction: 'top') {
+
   @media (min-width: 1025px) {
     @if $direction == 'right' {
       box-shadow:
-        64px 0 64px rgba(#130b59, .2),
         32px 0 32px rgba(#130b59, .2),
         16px 0 16px rgba(#130b59, .2),
         8px 0 8px rgba(#130b59, .2),
         4px 0 4px rgba(#130b59, .2),
-        2px 0 2px rgba(#130b59, .2);
-    } @else if $direction == 'left' {
+        2px 0 2px rgba(#130b59, .2),
+        1px 0 1px rgba(#130b59, .2);
+    }
+
+    @else if $direction == 'left' {
       box-shadow:
-        -64px 0 64px rgba(#130b59, .2),
         -32px 0 32px rgba(#130b59, .2),
         -16px 0 16px rgba(#130b59, .2),
         -8px 0 8px rgba(#130b59, .2),
         -4px 0 4px rgba(#130b59, .2),
-        -2px 0 2px rgba(#130b59, .2);
-    } @else {
+        -2px 0 2px rgba(#130b59, .2),
+        -1px 0 1px rgba(#130b59, .2);
+    }
+
+    @else {
       box-shadow:
         0 64px 64px rgba(#130b59, .2),
         0 32px 32px rgba(#130b59, .2),

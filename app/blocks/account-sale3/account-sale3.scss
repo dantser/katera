@@ -460,6 +460,11 @@
         max-width: initial;
       }
 
+      &__item-sale-hint {
+        display: inline-flex;
+        align-items: center;
+      }
+
       &__item-sale {
         display: flex;
         align-items: center;
@@ -526,6 +531,11 @@
     .button {
       height: 40px;
       font-size: rem(20px);
+
+      span {
+        margin-left: 10px;
+        margin-right: 5px;
+      }
 
       @include respond-to('mobile') {
         font-size: rem(16px);

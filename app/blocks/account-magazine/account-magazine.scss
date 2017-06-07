@@ -134,6 +134,10 @@
       width: 260px;
       height: 40px;
 
+      &__container {
+        justify-content: space-around;
+      }
+
       @include respond-to('mobile') {
         display: block;
         margin: 15px auto;
@@ -184,6 +188,10 @@
       width: 165px;
       height: 40px;
       margin: 15px 0;
+
+      &__container {
+        justify-content: space-around;
+      }
 
       @include respond-to('mobile') {
         display: block;

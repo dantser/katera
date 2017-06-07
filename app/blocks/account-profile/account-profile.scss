@@ -263,8 +263,8 @@
     font-weight: 300;
 
     @include respond-to('mobile') {
-      margin: 4px 0 0;
-      max-width: 320px;
+      max-width: 290px;
+      margin: 4px auto 0;
     }
   }
 }

@@ -9,7 +9,7 @@ export default function hint() {
   }
 
   const hideAllElements = () => {
-    $('.hint_active').each(function () { // eslint-disable-line func-names
+    $(document).find('.hint_active').each(function () { // eslint-disable-line func-names
       $(this)
         .removeClass('hint_active')
         .find('.hint__content')

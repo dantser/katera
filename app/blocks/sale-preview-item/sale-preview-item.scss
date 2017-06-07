@@ -16,14 +16,14 @@
   &_image_left {
     flex-direction: row;
 
-    .sale-preview-item {
+    &:hover {
 
-      &:hover {
-
-        .sale-preview-item__img-wrap {
-          @include hover-shadow('right');
-        }
+      .sale-preview-item__img-wrap {
+        @include hover-shadow('right');
       }
+    }
+
+    .sale-preview-item {
 
       &__img-wrap {
         margin-right: 30px;
@@ -62,14 +62,14 @@
   &_image_right {
     flex-direction: row;
 
-    .sale-preview-item {
+    &:hover {
 
-      &:hover {
-
-        .sale-preview-item__img-wrap {
-          @include hover-shadow('left');
-        }
+      .sale-preview-item__img-wrap {
+        @include hover-shadow('left');
       }
+    }
+
+    .sale-preview-item {
 
       &__img-wrap {
         margin-left: 20px;
