@@ -17,5 +17,5 @@ export default () => {
   }
 
   // eslint-disable-next-line no-mixed-operators
-  sc.scrollLeft(sc.width() / 2 - 20);
+  sc.scrollLeft(60);
 };
