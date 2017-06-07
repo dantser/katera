@@ -148,6 +148,7 @@
 
   &__category {
     font-family: $NerisLight;
+    font-weight: 300;
     color: $color-light-gray;
     font-size: 13px;
     line-height: 26px;
@@ -155,6 +156,7 @@
 
   &__name {
     font-family: $NerisBlack;
+    font-weight: 900;
     color: $color-white;
     font-size: 20px;
     line-height: 26px;
@@ -183,6 +185,7 @@
     color: $color-white;
     font-size: 107px;
     font-family: $NerisBlack;
+    font-weight: 900;
     line-height: 1.2;
     text-align: center;
     text-shadow: 0 10px 27px rgba(0, 0, 0, .7);
@@ -190,6 +193,7 @@
     span {
       font-size: 24px;
       font-family: $NerisLight;
+      font-weight: 300;
       display: block;
     }
   }

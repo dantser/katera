@@ -48,6 +48,7 @@
   &__name-link {
     color: #fff;
     font-family: $NerisSemiBold;
+    font-weight: 600;
   }
 
   &__info {
@@ -66,6 +67,7 @@
     &-description {
       display: block;
       font-family: $NerisBlack;
+      font-weight: 900;
     }
   }
 }

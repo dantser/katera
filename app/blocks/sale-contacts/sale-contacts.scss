@@ -44,6 +44,7 @@
     font-size: rem(16px);
     color: $color-white;
     font-family: $NerisLight;
+    font-weight: 300;
     list-style: none;
     position: relative;
 
@@ -105,6 +106,7 @@
       margin: 0;
       padding: 0;
       font-family: $NerisLight;
+      font-weight: 300;
 
       &:nth-child(2) {
         @include respond-to('mobile') {
@@ -194,6 +196,7 @@
         text-decoration: none;
         color: $color-white;
         font-family: $NerisSemiBold;
+        font-weight: 600;
         transition: all .25s ease-in-out;
 
         &:hover {
@@ -207,6 +210,7 @@
       font-size: rem(34px);
       color: $color-red;
       font-family: $NerisSemiBold;
+      font-weight: 600;
       padding: 11px 0;
 
       @include respond-to('tablet') {
@@ -237,6 +241,7 @@
 
     &__name {
       font-family: $NerisSemiBold;
+      font-weight: 600;
       font-size: rem(18px);
       margin-top: 13px;
 

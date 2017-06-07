@@ -5,6 +5,7 @@
 
   &__heading {
     font-family: $NerisBlack;
+    font-weight: 900;
     font-size: rem(18px);
     color: $color-black;
   }
@@ -71,6 +72,7 @@
     padding-right: 10px;
     font-size: rem(14px);
     font-family: $NerisLight;
+    font-weight: 300;
     color: $color-black;
     line-height: (16/14)*1;
 

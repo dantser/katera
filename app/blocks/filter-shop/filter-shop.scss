@@ -37,6 +37,7 @@
 
       &__control, &__placeholder {
         font-family: $NerisLight;
+        font-weight: 300;
         font-size: rem(13px);
         font-style: italic;
         color: #666;
@@ -54,6 +55,7 @@
     height: 100%;
     line-height: 1;
     font-family: $NerisLight;
+    font-weight: 300;
     font-size: rem(14px);
     color: $color-dark-gray;
   }

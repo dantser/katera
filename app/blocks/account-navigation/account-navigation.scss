@@ -120,6 +120,7 @@
 
         &_active {
           font-family: $NerisLight;
+          font-weight: 300;
           color: $color-red;
         }
 
@@ -133,6 +134,7 @@
 
       .count {
         font-family: $NerisBlack;
+        font-weight: 900;
         font-size: rem(18px);
         color: $color-red;
         margin-left: 2px;
@@ -172,6 +174,7 @@
     p {
       margin: 0;
       font-family: $NerisLight;
+      font-weight: 300;
       color: $color-light-gray;
 
       @media (max-width: 768px) {
@@ -182,6 +185,7 @@
     &__tariff {
       margin-top: 12px;
       font-family: $NerisSemiBold;
+      font-weight: 600;
       color: $color-red;
     }
   }

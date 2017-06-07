@@ -80,15 +80,6 @@
   .yacht-slider {
     padding-bottom: 0;
 
-    &__slide-wrap {
-      box-shadow: 0 0 -20px 0 rgba(0, 0, 0, .15);
-      transition: all .25s ease-in-out;
-
-      &:hover {
-        box-shadow: 0 0 35px 0 rgba($color-dark-blue, .3);
-      }
-    }
-
     @include respond-to('mobile') {
       width: 290px;
     }
@@ -181,6 +172,7 @@
     display: flex;
     justify-content: space-between;
     font-family: $NerisSemiBold;
+    font-weight: 600;
     line-height: 24px;
     align-items: center;
 
@@ -237,6 +229,7 @@
     &_mobile {
       display: none;
       font-family: $NerisLight;
+      font-weight: 300;
 
       @include respond-to('mobile') {
         display: inline-block;
@@ -368,6 +361,7 @@
     color: $color-dark-blue;
     font-size: 38px;
     font-family: $NerisSemiBold;
+    font-weight: 600;
     text-align: center;
     margin-top: 81px;
     margin-bottom: 22px;

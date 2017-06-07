@@ -144,6 +144,7 @@
 
   &__slider-head {
     font-family: $NerisSemiBold;
+    font-weight: 600;
     color: #130b59;
     font-size: 38px;
     text-align: center;
@@ -244,6 +245,7 @@
       margin-top: 20px;
       font-size: 16px;
       font-family: $NerisLight;
+      font-weight: 300;
     }
 
     &:nth-of-type(2) {
@@ -317,6 +319,7 @@
 
   &__category {
     font-family: $NerisLight;
+    font-weight: 300;
     color: $color-gray;
     font-size: 13px;
     line-height: 26px;
@@ -324,6 +327,7 @@
 
   &__name {
     font-family: $NerisBlack;
+    font-weight: 900;
     font-size: 18px;
     line-height: 26px;
 
@@ -359,12 +363,14 @@
     color: $color-white;
     font-size: 85px;
     font-family: $NerisBlack;
+    font-weight: 900;
     line-height: 1.2;
     text-align: center;
     text-shadow: 0 10px 27px rgba(0, 0, 0, .7);
 
     span {
       font-family: $NerisLight;
+      font-weight: 300;
       display: block;
       font-size: 16px;
       margin-top: -10px;

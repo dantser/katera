@@ -46,6 +46,7 @@
     text-align: center;
     color: $color-white;
     font-family: $NerisSemiBold;
+    font-weight: 600;
     margin-bottom: 11px;
     position: relative;
 
@@ -91,6 +92,7 @@
 
   &__name {
     font-family: $NerisSemiBold;
+    font-weight: 600;
     color: $color-dark-blue;
     font-size: 18px;
   }
@@ -99,6 +101,7 @@
     font-size: 14px;
     color: $color-gray;
     font-family: $NerisLight;
+    font-weight: 300;
   }
 
   & > &__swiper-pagination {

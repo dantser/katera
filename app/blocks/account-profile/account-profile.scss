@@ -64,6 +64,7 @@
 
       p {
         font-family: $NerisLight;
+        font-weight: 300;
         color: $color-black;
       }
     }
@@ -259,7 +260,7 @@
     margin: 49px 0 0;
     padding-bottom: 6px;
     font-family: $NerisLight;
-    font-weight: 400;
+    font-weight: 300;
 
     @include respond-to('mobile') {
       margin: 4px 0 0;

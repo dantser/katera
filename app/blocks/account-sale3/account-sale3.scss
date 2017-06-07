@@ -48,6 +48,7 @@
       font-size: rem(24px);
       margin: 0;
       font-family: $NerisSemiBold;
+      font-weight: 600;
 
       @include respond-to('tablet') {
         font-size: rem(20px);
@@ -147,6 +148,7 @@
 
       &__value {
         font-family: $NerisBlack;
+        font-weight: 900;
       }
 
       &__col {
@@ -235,6 +237,7 @@
       width: 100%;
       padding: 10px;
       font-family: $NerisLight;
+      font-weight: 300;
       font-size: 14px;
     }
 
@@ -474,11 +477,13 @@
       &__hint-text {
         font-size: rem(18px);
         font-family: $NerisSemiBold;
+        font-weight: 600;
         margin-left: 10px;
       }
 
       .list__offer {
         font-family: $NerisSemiBold;
+        font-weight: 600;
       }
 
       &__price {

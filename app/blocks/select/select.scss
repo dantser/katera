@@ -34,6 +34,7 @@
 
       &__text {
         font-family: $NerisBlack;
+        font-weight: 900;
         line-height: 1;
       }
 
@@ -93,6 +94,7 @@
 
   &__text {
     font-family: $NerisLight;
+    font-weight: 300;
     color: #000;
     white-space: nowrap;
     overflow: hidden;
@@ -105,6 +107,7 @@
   &__label {
     display: none;
     font-family: $NerisLight;
+    font-weight: 300;
     font-size: rem(14px);
     color: $color-black;
     white-space: nowrap;

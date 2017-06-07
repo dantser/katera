@@ -104,6 +104,7 @@
 
     p {
       font-family: $NerisSemiBold;
+      font-weight: 600;
       line-height: 20px;
       font-size: 14px;
       margin: 20px 0 0;
@@ -236,6 +237,7 @@
 
   &__header {
     font-family: $NerisSemiBold;
+    font-weight: 600;
     color: $color-dark-blue;
     font-size: 38px;
     text-align: center;
@@ -271,6 +273,7 @@
     color: $color-dark-blue;
     font-size: 38px;
     font-family: $NerisSemiBold;
+    font-weight: 600;
     text-align: center;
     margin-top: 65px;
     margin-bottom: 24px;
@@ -288,6 +291,7 @@
       font-size: 22px;
       margin-top: 0;
       font-family: $NerisLight;
+      font-weight: 300;
       margin-bottom: 16px;
 
       &:nth-of-type(2) {
@@ -300,6 +304,7 @@
       font-size: 22px;
       margin-top: 0;
       font-family: $NerisLight;
+      font-weight: 300;
       margin-bottom: 16px;
 
       &:nth-of-type(2) {
@@ -422,6 +427,7 @@
     display: none;
     width: auto;
     font-family: $NerisSemiBold;
+    font-weight: 600;
     color: $color-red;
     text-align: center;
     background-color: $color-white;

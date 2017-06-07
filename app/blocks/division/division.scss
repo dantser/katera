@@ -3,6 +3,7 @@ $big-border: 12px solid $color-red;
 
 .division {
   font-family: $NerisLight;
+  font-weight: 300;
   font-size: rem(16px);
   cursor: pointer;
   padding: 14px 26px;
@@ -22,11 +23,13 @@ $big-border: 12px solid $color-red;
   &__subtext {
     margin-left: 6px;
     font-family: $NerisLight;
+    font-weight: 300;
     color: $color-gray;
   }
 
   &_active {
     font-family: $NerisBlack !important;
+    font-weight: 900 !important;
     color: $color-black;
 
     &::before {

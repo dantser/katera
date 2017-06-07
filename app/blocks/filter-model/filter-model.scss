@@ -63,6 +63,7 @@
 
       &__control, &__placeholder {
         font-family: $NerisLight;
+        font-weight: 300;
         font-size: rem(13px);
         font-style: italic;
         color: #666;
@@ -153,6 +154,7 @@
       justify-content: space-around;
       color: $color-black;
       font-family: $NerisSemiBold;
+      font-weight: 600;
       width: 270px;
 
       @include respond-to('tablet') {
@@ -205,6 +207,7 @@
   &__link {
     color: $color-gray;
     font-family: $NerisLight;
+    font-weight: 300;
     font-size: 12px;
     opacity: 1;
     will-change: opacity;

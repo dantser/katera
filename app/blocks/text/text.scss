@@ -25,6 +25,7 @@
     &_medium {
       max-width: 262px;
       font-family: $NerisBlack;
+      font-weight: 900;
       font-size: rem(24px);
       line-height: 1.4;
     }
@@ -42,6 +43,7 @@
 
   h2 {
     font-family: $NerisSemiBold;
+    font-weight: 600;
     font-size: rem(38px);
     color: $color-dark-blue;
   }
@@ -49,6 +51,7 @@
   h3 {
     font-family: $NerisLight;
     font-size: rem(24px);
+    font-weight: 300;
   }
 
   h4 {

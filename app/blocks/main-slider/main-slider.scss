@@ -46,6 +46,7 @@
   &__slide-text {
     font-size: 38px;
     font-family: $NerisBlack;
+    font-weight: 900;
     color: #fff;
     width: 50%;
     line-height: 46px;
@@ -68,6 +69,7 @@
 
     @media (max-width: 1024px) {
       font-family: $NerisLight;
+      font-weight: 300;
     }
   }
 

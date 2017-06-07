@@ -31,6 +31,7 @@
   &__header a {
     color: $color-white;
     font-family: $NerisSemiBold;
+    font-weight: 600;
     will-change: background-color;
     transition: background-color .25s ease-in-out;
   }

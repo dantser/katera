@@ -104,6 +104,7 @@
   .text__size_medium {
     max-width: 262px;
     font-family: $NerisBlack;
+    font-weight: 900;
     font-size: 1.71429rem;
     line-height: 1.4;
 
@@ -130,7 +131,7 @@
 
     p {
       font-family: $NerisLight;
-      font-weight: 400;
+      font-weight: 300;
       font-size: 14px;
       line-height: 1.45;
     }
@@ -689,6 +690,7 @@
 
     &__header {
       font-family: $NerisSemiBold;
+      font-weight: 600;
       color: #130b59;
       font-size: 38px;
       text-align: center;
@@ -797,6 +799,7 @@
         display: block;
         padding: 5px 0 11px;
         font-family: $NerisBlack;
+        font-weight: 900;
         font-weight: 900;
       }
 

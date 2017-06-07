@@ -232,6 +232,7 @@
   &__companion-name {
     font-size: 18px;
     font-family: $NerisSemiBold;
+    font-weight: 600;
     line-height: 26px;
   }
 
@@ -371,6 +372,7 @@
     margin-bottom: 17px;
     padding: 10px;
     font-family: $NerisLight;
+    font-weight: 300;
     font-size: 14px;
 
     @include respond-to('mobile') {
