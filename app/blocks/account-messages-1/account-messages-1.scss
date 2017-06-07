@@ -9,11 +9,7 @@
     display: flex;
     margin-bottom: 20px;
 
-    @include respond-to('tablet') {
-      flex-direction: column;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       flex-direction: column;
     }
   }
@@ -22,12 +18,7 @@
     padding-right: 15px;
     flex: 0 0 375px;
 
-    @include respond-to('tablet') {
-      flex: none;
-      padding: 0;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       flex: none;
       padding: 0;
     }
@@ -39,17 +30,12 @@
     margin-top: -11px;
 
     @include respond-to('laptop') {
-      width: 600px !important;
+      width: 600px;
     }
 
-    @include respond-to('tablet') {
-      //max-width: 600px;
+    @media (max-width: 1024px) {
+      margin-top: 20px;
       padding-right: 15px;
-    }
-
-    @include respond-to('mobile') {
-      padding-right: 15px;
-      margin-top: 15px;
     }
   }
 

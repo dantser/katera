@@ -45,7 +45,7 @@
     display: flex;
     margin-bottom: 20px;
 
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       flex-direction: column;
     }
   }
@@ -54,16 +54,7 @@
     padding-right: 15px;
     flex: 0 0 375px;
 
-    @include respond-to('laptop') {
-      flex: 0 0 30%;
-    }
-
-    @include respond-to('tablet') {
-      flex: none;
-      padding: 0;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       flex: none;
       padding: 0;
     }
@@ -77,12 +68,9 @@
       max-width: 645px;
     }
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       padding-right: 15px;
-    }
-
-    @include respond-to('mobile') {
-      padding-right: 15px;
+      max-width: initial !important;
     }
 
     .text {
@@ -123,6 +111,10 @@
     @include respond-to('laptop') {
       width: 650px;
     }
+
+    @media (max-width: 1024px) {
+      width: 100% !important;
+    }
   }
 
   .tarif {
@@ -131,6 +123,11 @@
     @include respond-to('laptop') {
       max-width: 640px;
       display: block;
+    }
+
+    @media (max-width: 1024px) {
+      max-width: initial !important;
+      width: 100%;
     }
 
     &:last-child {
@@ -169,8 +166,10 @@
     margin-bottom: 43px;
     padding: 0 3px 4px 7px;
 
-    @include respond-to('tablet') {
-      width: 100%;
+    @media (max-width: 1024px) {
+      min-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @include respond-to('mobile') {

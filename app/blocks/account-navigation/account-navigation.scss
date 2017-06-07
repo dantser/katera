@@ -4,10 +4,6 @@
   flex-grow: 1;
   transform: translate3d(0, 0, 0);
 
-  @media (max-width: 1024px) {
-    margin-left: 15px;
-  }
-
   @media (max-width: 768px) {
     width: 100%;
     padding-bottom: 0;
@@ -42,13 +38,13 @@
       }
 
       &_show-pc {
-        @media (max-width: 1023px) {
+        @media (max-width: 1024px) {
           display: none !important;
         }
       }
 
       &_hide-pc {
-        @media (min-width: 1024px) {
+        @media (min-width: 1025px) {
           display: none !important;
         }
       }
