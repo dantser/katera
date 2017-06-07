@@ -40,5 +40,9 @@
     height: 13px;
     transform: rotate(180deg);
     stroke: $color-white;
+
+    @media (max-width: 1024px) {
+      stroke: $color-dark-blue;
+    }
   }
 }

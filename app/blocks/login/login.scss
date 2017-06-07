@@ -1,12 +1,11 @@
 .login {
 
   .page-header {
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       background: $color-white;
     }
 
     @include respond-to('mobile') {
-      background: $color-white;
       border-bottom: 1px solid #e5e5e5;
     }
 
@@ -22,11 +21,7 @@
     margin-bottom: 140px;
 
     &_shadow {
-      @include respond-to('tablet') {
-        box-shadow: none;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         box-shadow: none;
         margin-bottom: 0;
       }
