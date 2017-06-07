@@ -9,7 +9,7 @@ export default () => {
     nextButton: '.timeline__caret_next',
     prevButton: '.timeline__caret_prev',
     breakpoints: {
-      992: {
+      1024: {
         slidesPerView: 3,
         nextButton: '.timeline__arrow_next',
         prevButton: '.timeline__arrow_prev',

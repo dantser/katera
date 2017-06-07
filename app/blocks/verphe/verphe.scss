@@ -1,8 +1,6 @@
 .verphe {
-  // display: block;
-  // flex: 1 0 auto;
 
-  @include respond-to('tablet') {
+  @media (max-width: 1024px) {
     background-color: $color-white;
 
     .main-container_shadow {
@@ -11,15 +9,10 @@
   }
 
   @include respond-to('mobile') {
-    background-color: $color-white;
 
     .page-header__title {
       margin-bottom: 0;
       padding-bottom: 7px;
-    }
-
-    .main-container_shadow {
-      box-shadow: none;
     }
   }
 
@@ -28,11 +21,11 @@
     flex-flow: row wrap;
     margin-bottom: 162px;
 
-    @include respond-to('tablet') {
-      flex-direction: column;
+    @media (max-width: 1024px) {
+      margin-bottom: 0;
     }
 
-    @include respond-to('mobile') {
+    @media (max-width: 991px) {
       flex-direction: column;
     }
   }
@@ -137,12 +130,7 @@
       margin-top: 7px;
     }
 
-    @media (width: 768px) {
-      max-width: 768px;
-      align-items: center;
-    }
-
-    @media (max-width: 768px) and (orientation: landscape) {
+    @media (max-width: 768px) {
       max-width: 768px;
       align-items: center;
 
@@ -319,12 +307,7 @@
     z-index: 5;
     width: 100%;
 
-    @include respond-to('tablet') {
-      order: 4;
-      margin: 0;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 991px) {
       order: 4;
       margin: 0;
     }
@@ -336,13 +319,7 @@
     margin: 47px auto 51px;
     padding-top: 7px;
 
-    @include respond-to('tablet') {
-      order: 8;
-      margin: 0 auto 50px;
-      max-width: 290px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       order: 8;
       margin: 0 auto 50px;
       max-width: 290px;

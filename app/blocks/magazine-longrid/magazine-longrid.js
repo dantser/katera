@@ -30,6 +30,7 @@ export default function magazineLongrid() {
     spaceBetween: 20,
     pagination: '.js-magazine-longrid-slider1-pagination',
     paginationClickable: true,
+    loop: true,
     breakpoints: {
       768: {
         slidesPerView: 1,
@@ -43,6 +44,7 @@ export default function magazineLongrid() {
     spaceBetween: 20,
     pagination: '.js-magazine-longrid-slider2-pagination',
     paginationClickable: true,
+    loop: true,
     breakpoints: {
       768: {
         slidesPerView: 1,
