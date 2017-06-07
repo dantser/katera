@@ -9,9 +9,14 @@ export default () => {
     mousewheelControl: true,
     freeMode: true,
     breakpoints: {
-      991: {
+      1024: {
         mousewheelControl: false,
         freeMode: false,
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 20,
+      },
+      768: {
         slidesPerView: 1,
       },
     },

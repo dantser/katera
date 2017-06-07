@@ -10,11 +10,8 @@
   }
 
   .event-item {
-    @include respond-to('tablet') {
-      flex-direction: row;
-    }
 
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       flex-direction: row;
     }
   }
@@ -35,11 +32,7 @@
     background: $color-white;
     padding: 30px 30px 0;
 
-    @include respond-to('tablet') {
-      padding: 0;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       padding: 0;
     }
   }
@@ -62,7 +55,7 @@
       margin-left: 300px;
     }
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       margin-left: auto;
       margin-right: auto;
     }
@@ -71,6 +64,7 @@
       padding: 10px;
       max-width: 100%;
       margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -130,12 +124,7 @@
     }
 
     .event-item-box__description {
-      @include respond-to('tablet') {
-        margin-left: 20px;
-        width: 85%;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         margin-left: 20px;
         width: 85%;
       }
@@ -151,12 +140,7 @@
     display: block;
     margin: 92px 0 5px;
 
-    @include respond-to('tablet') {
-      font-size: 22px;
-      margin: inherit;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       font-size: 22px;
       margin: inherit;
     }
@@ -257,15 +241,6 @@
     margin: 0;
   }
 
-  .sale-preview-item__img-wrap {
-    //opacity: 1;
-    //transition: all .25s ease-in-out;
-  }
-
-  .sale-preview-item:hover .sale-preview-item__img-wrap {
-    //opacity: .75;
-  }
-
   &__slider {
     position: relative;
     padding-bottom: 34px;
@@ -273,25 +248,21 @@
     span {
       margin-left: 44px;
 
-      @include respond-to('tablet') {
-        margin-left: 0;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         margin-left: 0;
       }
     }
 
-    @include respond-to('tablet') {
+    @media (max-width: 1024px) {
       background-color: $color-white;
       padding: 0;
       padding-bottom: 34px;
+      margin: 0 15px;
     }
 
     @include respond-to('mobile') {
-      background-color: $color-white;
-      padding: 0;
-      padding-bottom: 34px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -303,11 +274,7 @@
     width: 309px;
     text-align: center;
 
-    @include respond-to('tablet') {
-      width: 100%;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       width: 100%;
     }
 
@@ -331,12 +298,7 @@
     font-size: 18px;
     line-height: 26px;
 
-    @include respond-to('tablet') {
-      font-size: 17px;
-      padding: 0 7px 17px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       font-size: 17px;
       padding: 0 7px 17px;
     }
@@ -347,11 +309,7 @@
     padding: 19px 0 0 50px;
     position: relative;
 
-    @include respond-to('tablet') {
-      padding: 0;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       padding: 0;
     }
   }
@@ -375,25 +333,13 @@
       font-size: 16px;
       margin-top: -10px;
 
-      @include respond-to('tablet') {
-        font-size: 18px;
-        margin-top: 0;
-      }
-
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         font-size: 18px;
         margin-top: 0;
       }
     }
 
-    @include respond-to('tablet') {
-      text-shadow: 5px 9px 27px rgba(0, 0, 0, .7);
-      font-size: 50px;
-      top: 0;
-      left: 9px;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       text-shadow: 5px 9px 27px rgba(0, 0, 0, .7);
       font-size: 50px;
       top: 0;
@@ -433,11 +379,7 @@
   }
 
   .event-page__sidebar {
-    @include respond-to('tablet') {
-      display: none;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       display: none;
     }
   }
@@ -476,11 +418,7 @@
       }
     }
 
-    @include respond-to('tablet') {
-      display: block;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       display: block;
     }
   }
