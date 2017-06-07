@@ -3,7 +3,7 @@
   flex-direction: column;
   width: calc(100% - 360px);
 
-  @include respond-to('mobile') {
+  @media (max-width: 1024px) {
     width: 100%;
   }
 
@@ -19,7 +19,7 @@
     height: 100%;
 
     .swiper-slide {
-      @include respond-to('mobile') {
+      @media (max-width: 1024px) {
         height: 300px;
       }
     }
@@ -33,12 +33,12 @@
     text-align: center;
     bottom: 0;
 
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       padding-top: 7px;
       padding-bottom: 0;
     }
 
-    @media (min-width: 769px) {
+    @media (min-width: 1025px) {
       display: none;
     }
 
@@ -63,7 +63,7 @@
     width: 100%;
     height: 76px;
 
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       display: none;
     }
 
@@ -89,7 +89,7 @@
     bottom: 0 !important;
     background-color: #e5e5e5;
 
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       display: none;
     }
 
@@ -102,7 +102,7 @@
     display: none;
     text-align: center;
 
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       display: block;
     }
   }
