@@ -162,7 +162,7 @@
     @include respond-to('mobile') {
       margin: auto 6px 94px auto;
       font-size: rem(22px);
-      font-weight: 700;
+      font-family: $NerisSemiBold;
       line-height: 1.5;
       width: 170px;
       padding-bottom: 0;

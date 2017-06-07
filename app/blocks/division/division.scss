@@ -13,7 +13,10 @@ $big-border: 12px solid $color-red;
   transition: color .25s ease-in-out;
 
   &:hover {
-    color: $color-dark-gray;
+
+    @media (min-width: 1024px) {
+      color: $color-dark-gray;
+    }
   }
 
   &__subtext {
@@ -24,7 +27,6 @@ $big-border: 12px solid $color-red;
 
   &_active {
     font-family: $NerisBlack !important;
-    font-weight: 900;
     color: $color-black;
 
     &::before {

@@ -6,14 +6,16 @@
 
   &:hover {
 
-    .login-btn {
+    @media (min-width: 1025px) {
+      .login-btn {
 
-      &__icon {
-        stroke: #e02303;
-      }
+        &__icon {
+          stroke: #e02303;
+        }
 
-      &__text {
-        color: #e02303;
+        &__text {
+          color: #e02303;
+        }
       }
     }
   }
@@ -34,5 +36,7 @@
     pointer-events: none;
     will-change: color;
     transition: color .25s ease-in-out;
+    font-family: $NerisLight;
+    font-size: 13px;
   }
 }

@@ -30,7 +30,7 @@
 
   &__header a {
     color: $color-white;
-    font-weight: 600;
+    font-family: $NerisSemiBold;
     will-change: background-color;
     transition: background-color .25s ease-in-out;
   }

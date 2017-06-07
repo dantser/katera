@@ -47,7 +47,7 @@
     h2 {
       font-size: rem(24px);
       margin: 0;
-      font-weight: 400;
+      font-family: $NerisSemiBold;
 
       @include respond-to('tablet') {
         font-size: rem(20px);

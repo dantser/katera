@@ -21,10 +21,9 @@
   &__title {
     display: block;
     margin: 0;
-    font-family: 'Neris Black';
+    font-family: $NerisBlack;
     font-size: 20px;
     line-height: em(20px);
-    font-weight: 900;
     text-align: center;
   }
 

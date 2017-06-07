@@ -104,11 +104,12 @@
 
   &__label {
     display: none;
-    font-family: $NerisBlack;
+    font-family: $NerisLight;
     font-size: rem(14px);
     color: $color-black;
     white-space: nowrap;
     pointer-events: none;
+    font-weight: 300;
 
     &::after {
       content: ':';
