@@ -421,6 +421,54 @@
                                         </button>
                                     </li>
                             </div>
+                            <div class="modal sale-contacts-popup-modal" id="sale-contacts-popup">
+                                <div class="modal__wrapper">
+                                    <div class="modal__content">
+                                        <div class="modal__header">
+                                            <svg class="modal__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                        </div>
+                                        <div class="modal__body">
+                                            <div class="sale-contacts-popup">
+                                                <div class="sale-contacts-popup__about">
+                                                    <img class="sale-contacts-popup__logo" src="assets/images/canados-logo.png" alt="canados" title="" />
+                                                    <div class="sale-contacts-popup__name">
+                                                        <span class="sale-contacts-popup__name-title">Верфь:</span>
+                                                        <span class="sale-contacts-popup__name-link">Canados (Италия)</span>
+                                                    </div>
+                                                    <div class="sale-contacts-popup__name">
+                                                        <span class="sale-contacts-popup__name-title">Класс:</span>
+                                                        <span class="sale-contacts-popup__name-link">Закрытые круизные яхты с хардтопом</span>
+                                                    </div>
+                                                </div>
+                                                <ul class="sale-contacts-popup__info">
+                                                    <li class="sale-contacts-popup__item">
+                                                        <div class="sale-contacts-popup__item-title sale-contacts-popup__item-title_big">Контактное лицо</div>
+                                                        <div class="sale-contacts-popup__item-description sale-contacts-popup__item-description_medium">Михаил Александрович</div>
+                                                    </li>
+                                                    <li class="sale-contacts-popup__item sale-contacts-popup__item_inline">
+                                                        <div class="sale-contacts-popup__item-title">Телефон:</div>
+                                                        <ul class="sale-contacts-popup__item-description">
+                                                            <li>+7 (495) 77-11-700</li>
+                                                            <li>+380 (98) 977 11 11</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sale-contacts-popup__item sale-contacts-popup__item_inline">
+                                                        <div class="sale-contacts-popup__item-title">E-mail:</div>
+                                                        <div class="sale-contacts-popup__item-description">sales@gmail.com</div>
+                                                    </li>
+                                                    <li class="sale-contacts-popup__item">
+                                                        <a class="sale-contacts-popup__item-description" href="#">www.canados.com</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="sale-contacts-popup__buttons">
+                                                    <a class="button button_rounded button_kind_white-border" href="#">Написать сообщение</a>
+                                                    <a class="button button_rounded button_kind_red" href="#">Заказать звонок</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="yacht-page__info">
                             <div class="yacht-page__technical">
@@ -677,7 +725,7 @@
                                 </div>
                             </div>
                             <div class="yacht-page__show-contacts-button">
-                                <a class="button button_kind_red">Показать контакты</a>
+                                <a class="button button_kind_red js-open-modal" data-target-modal="#sale-contacts-popup">Показать контакты</a>
                             </div>
                         </div>
                     </main>
