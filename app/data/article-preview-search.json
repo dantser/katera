@@ -1,5 +1,6 @@
 {
   "image": "assets/images/article-preview/article-1.jpg",
+  "colorModifier": "_color_red",
   "tags": [
     { "path": "#art-tag1", "title": "Аренда", "colorModifier": "_color_red" },
     { "path": "#art-tag2", "title": "Мероприятия", "colorModifier": "_color_blue" }

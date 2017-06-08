@@ -64,14 +64,36 @@
   }
 }
 
-@mixin article-shadow($r, $g, $b, $a) {
-  box-shadow:
-    0 2px 2px 0 rgba($r, $g, $b, $a),
-    0 4px 4px 0 rgba($r, $g, $b, $a),
-    0 8px 8px 0 rgba($r, $g, $b, $a),
-    0 16px 16px 0 rgba($r, $g, $b, $a),
-    0 32px 32px 0 rgba($r, $g, $b, $a),
-    0 64px 64px 0 rgba($r, $g, $b, $a);
+@mixin article-shadow($r, $g, $b, $a, $direction: 'top') {
+  @if $direction == 'right' {
+    box-shadow:
+      32px 0 32px rgba($r, $g, $b, $a),
+      16px 0 16px rgba($r, $g, $b, $a),
+      8px 0 8px rgba($r, $g, $b, $a),
+      4px 0 4px rgba($r, $g, $b, $a),
+      2px 0 2px rgba($r, $g, $b, $a),
+      1px 0 1px rgba($r, $g, $b, $a);
+  }
+
+  @else if $direction == 'left' {
+    box-shadow:
+      -32px 0 32px rgba($r, $g, $b, $a),
+      -16px 0 16px rgba($r, $g, $b, $a),
+      -8px 0 8px rgba($r, $g, $b, $a),
+      -4px 0 4px rgba($r, $g, $b, $a),
+      -2px 0 2px rgba($r, $g, $b, $a),
+      -1px 0 1px rgba($r, $g, $b, $a);
+  }
+
+  @else {
+    box-shadow:
+      0 64px 64px rgba($r, $g, $b, $a),
+      0 32px 32px rgba($r, $g, $b, $a),
+      0 16px 16px rgba($r, $g, $b, $a),
+      0 8px 8px rgba($r, $g, $b, $a),
+      0 4px 4px rgba($r, $g, $b, $a),
+      0 2px 2px rgba($r, $g, $b, $a);
+  }
 }
 
 // rem & em to px

@@ -7,9 +7,10 @@ include ../tag-content/tag-content
 //- title - заголовок
 //- path - ссылка
 //- description - описание
+//- colorModifier - цвет тени
 
 mixin default-article-preview(data)
-  +b('article').default-article-preview&attributes(attributes)
+  +b('article').default-article-preview(class=data.colorModifier)&attributes(attributes)
     +e('a')(href=data.path).picture
       +image-bg()(src= data.image)
 
