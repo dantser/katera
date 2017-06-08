@@ -1,6 +1,6 @@
 .shop-info-popup {
   padding: 15px 20px;
-  height: 100%;
+  width: 100vw;
   text-align: center;
   color: #fff;
 
@@ -16,6 +16,8 @@
 
       &__content {
         background-color: $color-dark-blue;
+        height: calc(100vh - 35px) !important;
+        width: 100vw !important;
         overflow-y: auto;
       }
 
