@@ -42,10 +42,10 @@ mixin yacht-club()
           +e.slider._default
             +e.wrapper
               each item in data
-                +e.slide
+                +e('a')(href='#').slide
                   +e.date= item.day
                   +b('span')= item.month
-                  +e.slide-inner
+                  +e('div').slide-inner
                     +e('img').img(src= item.path)
                     +e.category= item.category
                     +e.name= item.title
@@ -53,10 +53,10 @@ mixin yacht-club()
           +e.slider._mob.swiper-container
             +e.wrapper.swiper-wrapper
               each item in data
-                +e.slide.swiper-slide
+                +e('a')(href='#').slide.swiper-slide
                   +e.date= item.day
                     +b('span')= item.month
-                  +e.slide-inner
+                  +e('div').slide-inner
                     +e('img').img(src= item.path)
                     +e.category= item.category
                     +e.name= item.title

@@ -65,6 +65,13 @@
     flex-flow: row nowrap;
     justify-content: space-between;
 
+    &:hover {
+
+      .video-preview__image {
+        @include hover-shadow('right');
+      }
+    }
+
     .video-preview {
 
       &__image {

@@ -270,6 +270,8 @@
     .yacht-club__img {
       width: 100%;
       height: auto;
+      will-change: opacity;
+      transition: opacity .25s ease-in-out;
     }
   }
 
@@ -315,6 +317,14 @@
     margin-right: 80px;
     position: relative;
 
+    @media (min-width: 1025px) {
+      &:hover {
+        .yacht-club__img {
+          opacity: .75;
+        }
+      }
+    }
+
     @include respond-to('large-desktop') {
       width: 660px;
     }
@@ -336,6 +346,7 @@
     line-height: 1.2;
     text-align: center;
     text-shadow: 0 10px 27px rgba(0, 0, 0, .7);
+    z-index: 1;
 
     span {
       font-size: 24px;
