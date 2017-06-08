@@ -56,12 +56,10 @@
     max-height: 100%;
     background-color: $color-white;
     pointer-events: all;
+    position: relative;
+    z-index: 999;
 
-    @include respond-to('tablet') {
-      width: 100%;
-    }
-
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       width: 100%;
     }
   }

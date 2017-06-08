@@ -1,0 +1,87 @@
+//- +sale-contacts-popup(pageName)
+//- pageName = shop, catalog, offers
+include ../modal/modal
+include ../button/button
+
+mixin sale-contacts-popup-shop()
+  +e.about
+    +e('img')(src='assets/images/moreman-logo.png' alt='Мореман').logo
+    +e.name
+      +e('span').name-title Магазин:
+      +e('a')(href='#').name-link Мореман
+    +e.name
+      +e('span').name-title Местоположение:
+      +e('span').name-link Новоросийск
+  +e('ul').info
+    +e.item
+      +e.item-title._big Контактное лицо
+      +e.item-description._medium Михаил Александрович
+    +e.item._inline
+      +e.item-title Телефон:
+      +e('ul').item-description
+        li +7 (495) 77-11-700
+        li +380 (98) 977 11 11
+    +e.item._inline
+      +e.item-title E-mail:
+      +e.item-description sales@gmail.com
+    +e.item
+      +e('a')(href='#').item-description www.canados.com
+  +e.buttons
+    +button(true)(href='#')._rounded._kind_white-border Написать сообщение
+    +button(true)(href='#')._rounded._kind_red Заказать звонок
+
+mixin sale-contacts-popup-catalog()
+  +e.about
+    +e('img')(src='assets/images/canados-logo.png' alt='canados').logo
+    +e.name
+      +e('span').name-title Верфь:
+      +e('span').name-link Canados (Италия)
+    +e.name
+      +e('span').name-title Класс:
+      +e('span').name-link Закрытые круизные яхты с хардтопом
+  +e('ul').info
+    +e.item
+      +e.item-title._big Контактное лицо
+      +e.item-description._medium Михаил Александрович
+    +e.item._inline
+      +e.item-title Телефон:
+      +e('ul').item-description
+        li +7 (495) 77-11-700
+        li +380 (98) 977 11 11
+    +e.item._inline
+      +e.item-title E-mail:
+      +e.item-description sales@gmail.com
+    +e.item
+      +e('a')(href='#').item-description www.canados.com
+  +e.buttons
+    +button(true)(href='#')._rounded._kind_white-border Написать сообщение
+    +button(true)(href='#')._rounded._kind_red Заказать звонок
+
+mixin sale-contacts-popup-offers()
+  +e.about._borderless
+    +e.heading Контакты продавца
+  +e('ul').info._center
+    +e.item
+      +e.item-description._medium Михаил Александрович
+    +e.item._inline
+      +e.item-title Телефон:
+      +e('ul').item-description
+        li +7 (495) 77-11-700
+        li +380 (98) 977 11 11
+    +e.item._inline
+      +e.item-title E-mail:
+      +e.item-description sales@gmail.com
+  +e.buttons
+    +button(true)(href='#')._rounded._kind_white-border Написать сообщение
+    +button(true)(href='#')._rounded._kind_red Заказать звонок
+
+mixin sale-contacts-popup(pageName)
+  +modal()#sale-contacts-popup.sale-contacts-popup-modal
+    +b.sale-contacts-popup
+      case pageName
+        when 'shop'
+          +sale-contacts-popup-shop()
+        when 'catalog'
+          +sale-contacts-popup-catalog()
+        when 'offers'
+          +sale-contacts-popup-offers()

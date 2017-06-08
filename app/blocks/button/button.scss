@@ -99,6 +99,19 @@
         }
       }
     }
+
+    &_white-border {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+
+      &:hover {
+
+        @media (min-width: 1025px) {
+          box-shadow: 0 2px 5px 0 rgba(#090435, .3);
+        }
+      }
+    }
   }
 
   &__container {

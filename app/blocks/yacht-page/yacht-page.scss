@@ -84,7 +84,6 @@
     padding-left: 4px;
 
     @include respond-to('mobile') {
-      min-height: 297px;
       overflow: hidden;
       padding-left: 0;
       margin-bottom: 8px;
@@ -286,19 +285,19 @@
     margin: 0 auto;
 
     .button {
-      padding-top: 8px;
       line-height: (24/14)*1em;
       height: 40px;
     }
   }
 
   &__show-contacts-button {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
 
     .button {
       font-size: 18px;
-      line-height: 1em;
-      padding-top: 11px;
-      padding-bottom: 11px;
     }
   }
 
@@ -365,7 +364,7 @@
   &__show-contacts-button {
     display: none;
 
-    @include respond-to('mobile') {
+    @media (max-width: 1024px) {
       display: block;
       width: 100%;
     }

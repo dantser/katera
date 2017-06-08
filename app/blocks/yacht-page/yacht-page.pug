@@ -3,6 +3,7 @@ include ../container/container
 include ../main-container/main-container
 include ../scroll-slider/scroll-slider
 include ../sale-contacts/sale-contacts
+include ../sale-contacts-popup/sale-contacts-popup
 include ../sale-contacts/sale-contacts-offer
 include ../share/share
 include ../button/button
@@ -39,10 +40,13 @@ mixin yacht-page(type)
           case type
             when 'shop'
               +sale-contacts()
+              +sale-contacts-popup('shop')
             when 'catalog'
               +sale-contacts(true)
+              +sale-contacts-popup('catalog')
             when 'sale'
               +sale-contacts-offer()
+              +sale-contacts-popup('offers')
 
         +e('div').info
 
@@ -127,5 +131,5 @@ mixin yacht-page(type)
               +icon('subscribe').next-icon
 
           +e('div').show-contacts-button
-            +button(true)._kind_red
+            +button(true)(data-target-modal='#sale-contacts-popup')._kind_red.js-open-modal
               | Показать контакты
