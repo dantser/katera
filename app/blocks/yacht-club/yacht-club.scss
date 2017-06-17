@@ -184,7 +184,7 @@
       width: 100%;
       text-align: left;
       color: $color-black;
-      font-size: 16px;
+      font-size: 18px;
       margin: 0 auto;
       padding: 4px 0 8px 15px;
       border: 1px solid $color-light-gray;
@@ -317,6 +317,10 @@
     margin-right: 80px;
     position: relative;
 
+    * {
+      text-decoration: none;
+    }
+
     @media (min-width: 1025px) {
       &:hover {
         .yacht-club__img {
@@ -353,6 +357,7 @@
       font-family: $NerisLight;
       font-weight: 300;
       display: block;
+      line-height: 0;
 
       @include respond-to('large-desktop') {
         font-size: 36px;
@@ -461,7 +466,7 @@
       margin: 0 auto;
       border-spacing: 13px;
       margin-bottom: 24px;
-      font-size: 16px;
+      font-size: 14px;
 
       @include respond-to('large-desktop') {
         margin-bottom: 60px;
@@ -470,7 +475,6 @@
 
       @media (max-width: 1024px) {
         margin: 0 0 19px;
-        font-size: 14px;
         display: block;
       }
     }
@@ -486,6 +490,7 @@
 
     &__title, &__descr {
       display: table-cell;
+      font-size: 14px;
 
       @media (max-width: 1024px) {
         display: block;

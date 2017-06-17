@@ -75,6 +75,12 @@
       width: 98px;
       height: 69px;
       background-color: rgba(0, 0, 0, .45);
+      transition: all .25s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0);
+      }
     }
 
     .swiper-slide-active {

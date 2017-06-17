@@ -10,6 +10,7 @@ mixin sailor-mail(data)
           +e('img')(src= block.image alt='').img
         +e.description
           +e('p').city= block.city
-          +e('h4').title= block.title
+          a(href=href= block.link)
+            +e('h4').title= block.title
           +e('p').text= block.text
           +e('p').proposal= block.proposal

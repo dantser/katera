@@ -44,7 +44,7 @@ mixin yacht-club()
               each item in data
                 +e('a')(href='#').slide
                   +e.date= item.day
-                  +b('span')= item.month
+                    +b('span')= item.month
                   +e('div').slide-inner
                     +e('img').img(src= item.path)
                     +e.category= item.category

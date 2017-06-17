@@ -112,7 +112,8 @@
     pointer-events: none;
 
     @include respond-to('large-desktop') {
-      left: 97px;
+      transform: translateX(50%);
+      left: 0;
     }
   }
 

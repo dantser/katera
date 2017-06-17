@@ -18,8 +18,9 @@
     position: absolute;
     border: 7px solid transparent;
     border-bottom: 7px solid $color-dark-blue;
-    top: -4px;
-    right: 10px;
+    top: -7px;
+    right: 5px;
+    flex-shrink: 0;
   }
 
   &_left::before {
@@ -44,6 +45,8 @@
   &__button {
     width: 211px !important;
     margin-bottom: 18px;
+    flex-shrink: 0;
+    height: 40px !important;
   }
 
   &__days {
@@ -67,7 +70,6 @@
     .button {
       width: 130px !important;
       margin-bottom: 10px;
-      height: 27px;
     }
   }
 

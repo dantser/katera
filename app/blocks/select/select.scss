@@ -54,6 +54,10 @@
       &__item {
         display: block;
       }
+
+      &__text {
+        white-space: nowrap;
+      }
     }
 
     &.select_active {
@@ -96,7 +100,6 @@
     font-family: $NerisLight;
     font-weight: 300;
     color: #000;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     pointer-events: none;
@@ -112,7 +115,6 @@
     color: $color-black;
     white-space: nowrap;
     pointer-events: none;
-    font-weight: 300;
 
     &::after {
       content: ':';

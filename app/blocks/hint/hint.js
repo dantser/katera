@@ -8,12 +8,14 @@ export default function hint() {
     return;
   }
 
+  let hintTimer;
+
   const hideAllElements = () => {
-    $(document).find('.hint_active').each(function () { // eslint-disable-line func-names
+    $(document).find('.js-hint').each(function () { // eslint-disable-line func-names
       $(this)
         .removeClass('hint_active')
         .find('.hint__content')
-        .fadeOut();
+        .fadeOut(100);
     });
   };
 
@@ -64,7 +66,19 @@ export default function hint() {
     const isMobile = h.hasClass('mobile') || h.hasClass('tablet');
 
     if (!isMobile) {
-      hints.hover(toggleContent);
+      hints.hover(function () { // eslint-disable-line func-names
+        hintTimer = setTimeout(() => {
+          const el = $(this);
+          const content = el.find('.hint__content');
+
+          content.fadeIn(() => {
+            el.addClass('hint_active');
+          });
+        }, 100);
+      }, () => {
+        clearTimeout(hintTimer);
+        hideAllElements();
+      });
     } else {
       hints.click(toggleContent);
     }
