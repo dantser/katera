@@ -104,15 +104,12 @@ export default function index() {
     var ssT = $(this).scrollTop(),
       percents = ssT/$(window).height();
 
+      console.log("ssT: " + ssT);
+
     slider.css("transform", "scale(" + percents + ")");
 
-    if (ssT >= w.innerHeight()) {
-
-      if (!sliderScroll.hasClass("scrolled")) {
-        sliderScroll.addClass("scrolled");
-        console.log("slider scroll finished.");
-      }
-
+    if (ssT === w.height()) {
+      sliderScroll.addClass("scrolled");
     }
   });
 
@@ -120,13 +117,23 @@ export default function index() {
     var sT = $(this).scrollTop();
 
     if (sT === 0) {
-
-      if (sliderScroll.hasClass("scrolled")) {
-        sliderScroll.removeClass("scrolled");
-        console.log("slider scroll zero.");
-      }
+      sliderScroll.removeClass("scrolled");
+      sliderScroll.scrollTop(w.height() - 1);
+    } else {
+      sliderScroll.addClass("scrolled");
     }
   });
+
+
+  // При загрузке страницы
+  var sT = $(window).scrollTop();
+
+  if (sT === 0) {
+    sliderScroll.removeClass("scrolled");
+  } else {
+    sliderScroll.addClass("scrolled");
+    slider.css("transform", "scale(1)");
+  }
 };
 
 $(window).on('resize', index);
