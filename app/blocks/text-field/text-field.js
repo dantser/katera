@@ -40,7 +40,7 @@ export default () => {
     return;
   }
 
-  element.on('disable', function () { // eslint-disable-line func-names
+  $(document).on('disable', ELEMENT_CLASS, function () { // eslint-disable-line func-names
     const el = $(this);
 
     el
@@ -49,7 +49,7 @@ export default () => {
       .prop('disabled', true);
   });
 
-  element.on('enable', function () { // eslint-disable-line func-names
+  $(document).on('enable', ELEMENT_CLASS, function () { // eslint-disable-line func-names
     const el = $(this);
 
     el
@@ -58,7 +58,7 @@ export default () => {
       .prop('disabled', false);
   });
 
-  element.find(CONTROL_CLASS).on('input', function () { // eslint-disable-line
+  $(document).on('input', CONTROL_CLASS, function () { // eslint-disable-line
     const el = $(this);
 
     if (el.parent().hasClass('text-field_disabled')) {
@@ -68,13 +68,7 @@ export default () => {
     el.attr('value', el.val());
   });
 
-  const eyeIcon = $(EYE_ICON_CLASS);
-
-  if (!eyeIcon.length) {
-    return;
-  }
-
-  eyeIcon.on('click', function () { // eslint-disable-line func-names
+  $(document).on('click', EYE_ICON_CLASS, function () { // eslint-disable-line func-names
     const eye = $(this);
     const control = eye.siblings(CONTROL_CLASS);
 

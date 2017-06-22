@@ -61,6 +61,7 @@ import gallerySliderPopup from '../blocks/gallery-slider-popup/gallery-slider-po
 import magazineVideo from '../blocks/magazine-video/magazine-video';
 import magazineVideos from '../blocks/magazine-videos/magazine-videos';
 import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
+import uploadForm from '../blocks/upload-form/upload-form';
 
 $(window).on('load', () => {
   scrollable();
@@ -69,6 +70,7 @@ $(window).on('load', () => {
 $(() => {
   objectFitImages('.image-bg__img');
   svg4everybody();
+  uploadForm();
   index();
   scrollable();
   textField();

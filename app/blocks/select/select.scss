@@ -53,6 +53,7 @@
 
       &__item {
         display: block;
+        white-space: nowrap;
       }
 
       &__text {
@@ -168,7 +169,6 @@
 
   &__item {
     cursor: pointer;
-    white-space: nowrap;
 
     &:hover {
       color: $color-red;

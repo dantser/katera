@@ -9,7 +9,7 @@ include ../icon/icon
 
 mixin text-field(data)
   +b.text-field&attributes(attributes)
-    +e('input')(type=data.type || 'text' name=data.name value=data.value || '').control
+    +e('input')(type=data.type || 'text' name=data.name value=data.value || '' readonly=data.readonly || '').control
     +e('span').placeholder
       = data.placeholder
     +e.error-icon-wrapper
