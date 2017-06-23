@@ -68,7 +68,7 @@ export default () => {
     return;
   }
 
-  selectElements.on('disable', function () { // eslint-disable-line func-names
+  $(document).on('disable', SELECT_CLASS, function () { // eslint-disable-line func-names
     const el = $(this);
 
     el
@@ -77,7 +77,7 @@ export default () => {
       .prop('disabled', true);
   });
 
-  selectElements.on('enable', function () { // eslint-disable-line func-names
+  $(document).on('enable', SELECT_CLASS, function () { // eslint-disable-line func-names
     const el = $(this);
 
     el
@@ -86,7 +86,7 @@ export default () => {
       .prop('disabled', false);
   });
 
-  selectElements.each(function () { // eslint-disable-line func-names
+  $(document).find(SELECT_CLASS).each(function () { // eslint-disable-line func-names
     const select = $(this);
     const textElement = select.find(TEXT_CLASS);
 
@@ -113,7 +113,7 @@ export default () => {
   });
 
   const deactivateAll = () => {
-    selectElements.each(function () { // eslint-disable-line func-names
+    $(document).find(SELECT_CLASS).each(function () { // eslint-disable-line func-names
       const el = $(this);
       const list = el.find('ul');
 
@@ -121,7 +121,7 @@ export default () => {
     });
   };
 
-  selectElements.on('click', 'li', (e) => {
+  $(document).on('click', `${SELECT_CLASS} li`, (e) => {
     const el = $(e.target);
     const control = el.parents(SELECT_CLASS).find('select');
     const list = el.parents('ul');
@@ -142,7 +142,7 @@ export default () => {
     control.trigger('change');
   });
 
-  selectElements.find('select').on('change', function () { // eslint-disable-line func-names
+  $(document).find(SELECT_CLASS).find('select').on('change', function () { // eslint-disable-line func-names
     const control = $(this);
     const textElement = control.parent().find(TEXT_CLASS);
     const selectedOption = $(control.children()[control[0].selectedIndex]);
@@ -159,7 +159,7 @@ export default () => {
   });
 
   // handle show list (custom dropdown)
-  selectElements.on('click', (e) => {
+  $(document).on('click', SELECT_CLASS, (e) => {
     const select = $(e.target);
     e.stopPropagation();
 
@@ -180,7 +180,7 @@ export default () => {
     }
   });
 
-  selectElements.find('input[type="checkbox"]').on('change', (e) => {
+  $(document).find(SELECT_CLASS).find('input[type="checkbox"]').on('change', (e) => {
     const el = $(e.target);
     const li = el.parents('li');
 
