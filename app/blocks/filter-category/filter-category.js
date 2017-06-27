@@ -64,4 +64,4 @@ export default (categoryClass, data, firstItemName) => {
 
     nextElement.html(generateCategory(childData));
   });
-}
+};
