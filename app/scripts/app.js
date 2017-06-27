@@ -62,6 +62,9 @@ import magazineVideo from '../blocks/magazine-video/magazine-video';
 import magazineVideos from '../blocks/magazine-videos/magazine-videos';
 import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
 import uploadForm from '../blocks/upload-form/upload-form';
+import filterCategory from '../blocks/filter-category/filter-category';
+
+window.filterCategory = filterCategory;
 
 $(window).on('load', () => {
   scrollable();
