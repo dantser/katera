@@ -18,7 +18,7 @@ const generateHeadings = data => `
   <div class="filter-category__selected">${data.selected}</div>
 `;
 
-export default (categoryClass, data, firstItemName) => {
+function filterCategory (categoryClass, data, firstItemName) => {
   const categories = $(categoryClass);
   const CATEGORY_BOX_CLASS = '.filter-category__category-box';
   const CATEGORY_HEADING_CLASS = '.filter-category__heading';
@@ -64,4 +64,7 @@ export default (categoryClass, data, firstItemName) => {
 
     nextElement.html(generateCategory(childData));
   });
-};
+}
+
+window.filterCategory = filterCategory;
+export default filterCategory;
