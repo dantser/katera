@@ -25,7 +25,7 @@ export default () => {
       width: '100%',
       height: '100vh',
       backgroundColor: 'rgba(6, 3, 37, .85)',
-      zIndex: 8000,
+      zIndex: 890,
     })
     .hide()
     .insertAfter(header)

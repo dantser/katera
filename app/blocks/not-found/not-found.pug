@@ -1,0 +1,12 @@
+include ../button/button
+
+mixin not-found()
+  +b.not-found&attributes(attributes)
+    +e.images
+      +e.IMG(src='assets/images/404/bg.jpg' alt='').img_bg
+      +e.IMG(src='assets/images/404/404.png' alt='').img_404
+
+    +e.content
+      +e.H2.heading Приплыли, страница не найдена
+      +e.button
+        +button(true)(href='/')._kind_red._shadow._rounded На главную

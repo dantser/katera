@@ -1,0 +1,11 @@
+extends ../layouts/default
+include ../blocks/not-found/not-found
+
+block head
+  - var pageTitle = 'Катера.RU - 404'
+
+block contentVariables
+  - var stickyHeader = true;
+
+block content
+  +not-found
