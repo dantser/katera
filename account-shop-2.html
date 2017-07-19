@@ -354,7 +354,7 @@
                                     <div class="field">
                                         <span class="caption">Телефон</span>
                                         <div class="input">
-                                            <div class="text-field">
+                                            <div class="text-field js-inputmask-phone">
                                                 <input class="text-field__control" type="text" name="phone" value="" />
                                                 <span class="text-field__placeholder"></span>
                                                 <div class="text-field__error-icon-wrapper">
@@ -367,7 +367,7 @@
                                     <div class="field">
                                         <span class="caption">Email</span>
                                         <div class="input">
-                                            <div class="text-field">
+                                            <div class="text-field js-inputmask-email">
                                                 <input class="text-field__control" type="text" name="email" value="" />
                                                 <span class="text-field__placeholder"></span>
                                                 <div class="text-field__error-icon-wrapper">
@@ -380,7 +380,7 @@
                                     <div class="field">
                                         <span class="caption">Сайт</span>
                                         <div class="input">
-                                            <div class="text-field">
+                                            <div class="text-field js-inputmask-url">
                                                 <input class="text-field__control" type="text" name="site" value="" />
                                                 <span class="text-field__placeholder"></span>
                                                 <div class="text-field__error-icon-wrapper">
@@ -595,7 +595,9 @@
                             </li>
                             <li class="list__item list__item_submit">
                                 <div class="item-wrapper item-wrapper_button">
-                                    <a class="button button_kind_red">Создать магазин 1090 Р</a>
+                                    <button class="button button_kind_red">
+                                        <div class="button__container">Создать магазин 1090 Р</div>
+                                    </button>
                                     <span class="note">Магазин будет размещен на 60 дней</span>
                                 </div>
                             </li>
