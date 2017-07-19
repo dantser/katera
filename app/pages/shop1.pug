@@ -1,12 +1,17 @@
 extends ../layouts/default
 include ../blocks/branding/branding
 include ../blocks/shop1/shop1
+include ../blocks/map/map
 
 block head
   - var pageTitle = 'Катера.RU - Магазины - UltraBoats'
 
 block contentVariables
   - var stickyHeader = true;
+
+
+block scripts
+  +map-scripts
 
 block content
   +page-header('UltraBoats', ['Главная', 'Магазины', 'UltraBoats'])

@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import $ from 'jquery';
+// import $ from 'jquery';
 import { debounce } from 'throttle-debounce';
 
 export default function magazineLongrid() {

@@ -1,8 +1,12 @@
 extends ../layouts/default
 include ../blocks/yacht-club/yacht-club
+include ../blocks/map/map
 
 block head
   - var pageTitle = 'Катера.RU - Яхт-клубы - Grand Marine'
+
+block scripts
+  +map-scripts
 
 block content
   +yacht-club()

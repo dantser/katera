@@ -1,2 +1,7 @@
 mixin map()
   +b(id='map').map
+
+mixin map-scripts
+  script
+    include ./map.js
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhTmgtMtEDorDsQwyrkrLPjAie8g7IV34&callback=initMap")

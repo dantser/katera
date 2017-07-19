@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import Swiper from 'swiper';
 import { throttle } from 'throttle-debounce';
 import stickyBlock from '../../scripts/common/stickyBlock';

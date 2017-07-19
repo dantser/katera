@@ -11,21 +11,21 @@ module.exports = (watch = false) => ({
   devtool: isDebug ? 'cheap-module-inline-source-map' : false,
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
+      // {
+      //   enforce: 'pre',
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: 'eslint-loader',
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
-      {
-        test: require.resolve('jquery'),
-        loader: 'expose-loader?jQuery!expose-loader?$',
-      },
+      // {
+      //   test: require.resolve('jquery'),
+      //   loader: 'expose-loader?jQuery!expose-loader?$',
+      // },
     ],
   },
   resolve: {

@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 export default () => {
   $(document).on('click', '.upload-form', function (e) { // eslint-disable-line func-names

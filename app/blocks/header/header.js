@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import disableScroll from 'disable-scroll';
 import stickyBlock from '../../scripts/common/stickyBlock';
 

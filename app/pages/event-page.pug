@@ -1,12 +1,16 @@
 extends ../layouts/default
 include ../blocks/event-page/event-page
 include ../blocks/branding/branding
+include ../blocks/map/map
 
 block head
   - var pageTitle = 'Катера.RU'
 
 block contentVariables
   - var stickyHeader = true;
+
+block scripts
+  +map-scripts
 
 block content
   +branding()

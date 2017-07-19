@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 export default function yachtPage() {
   const p = document.querySelector('.yacht-page__description-text');

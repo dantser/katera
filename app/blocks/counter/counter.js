@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 function increment(control) { // eslint-disable-line consistent-return
   const val = Number(control.val());

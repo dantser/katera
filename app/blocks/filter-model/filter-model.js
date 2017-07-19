@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import 'jquery-ui-touch-punch';
+// import $ from 'jquery';
+// import 'jquery-ui-touch-punch';
 
 export default () => {
   const filter = $('.filter-model');

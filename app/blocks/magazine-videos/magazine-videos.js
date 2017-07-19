@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import dScroll from '../../scripts/common/dScroll';
 
 export default function magazineVideos() {

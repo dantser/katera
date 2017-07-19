@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 export default () => {
   if (!$('.account-messages-1').length) {

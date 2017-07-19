@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import { debounce } from 'throttle-debounce';
 
 export default (b1Class, b2Class) => {

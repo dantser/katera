@@ -149,7 +149,7 @@ $(document).on('click', `${SELECT_CLASS} li`, (e) => {
   control.trigger('change');
 });
 
-$(document).find(SELECT_CLASS).find('select').on('change', function () { // eslint-disable-line func-names
+$(document).on('change', '.select__control', function () { // eslint-disable-line func-names
   const control = $(this);
   const textElement = control.parent().find(TEXT_CLASS);
   const selectedOption = $(control.children()[control[0].selectedIndex]);
@@ -187,7 +187,7 @@ $(document).on('click', SELECT_CLASS, (e) => {
   }
 });
 
-$(document).find(SELECT_CLASS).find('input[type="checkbox"]').on('change', (e) => {
+$(document).on('change', `${SELECT_CLASS} input[type="checkbox"]`, (e) => {
   const el = $(e.target);
   const li = el.parents('li');
 

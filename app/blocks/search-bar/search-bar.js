@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 export default () => {
   const ELEMENT_CLASS = '.search-bar';

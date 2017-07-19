@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 const generateCategory = data => `
   <div class="filter-category__category">
