@@ -50,14 +50,14 @@ export default () => {
   lengthSliderTextMax.text(`${lengthRangleSlider.slider('values', 1)} м`);
   lengthSliderValMin.val(lengthRangleSlider.slider('values', 0));
   lengthSliderValMax.val(lengthRangleSlider.slider('values', 1));
-
-  filter.find('.filter-sale__roll-down').on('click', (e) => {
-    e.preventDefault();
-
-    const form = $(e.target).parents('form');
-    const extendedBlock = form.find('.filter-sale__extended-wrapper');
-
-    form.addClass('filter_extended');
-    extendedBlock.slideDown();
-  });
 };
+
+$(document).on('click', '.filter-sale__roll-down', (e) => {
+  e.preventDefault();
+
+  const form = $(e.target).parents('form');
+  const extendedBlock = form.find('.filter-sale__extended-wrapper');
+
+  form.addClass('filter_extended');
+  extendedBlock.slideDown();
+});
