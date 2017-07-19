@@ -59,6 +59,7 @@ mixin filter()
             +e.field._type_search-btn
               +button()(type='submit')._kind_red Найти
             +e('a')(href='#').link Расширенный список
+
     +e('form').tab#filter-2
       +e.content
         +e.col
@@ -82,7 +83,7 @@ mixin filter()
                 input(type='hidden' name='filter-min').js-filter-length-min-val
                 input(type='hidden' name='filter-max').js-filter-length-max-val
             +e.field._type_range
-              +slider-range().js-filter-length-slider
+              +slider-range().js-filter-slider-range
 
         +e.col
           +e.item

@@ -18,9 +18,9 @@ export default () => {
   const powerRangleSlider = $('.js-filter-engines-power-slider');
 
   powerRangleSlider.slider({
-    min: 0,
-    max: 100,
-    values: [20, 45],
+    min: powerRangleSlider.data('range-min'),
+    max: powerRangleSlider.data('range-max'),
+    values: [powerRangleSlider.data('value-min'), powerRangleSlider.data('value-max')],
     range: true,
     slide(e, ui) {
       powerSliderTextMin.text(`${ui.values[0]} л.с.`);
@@ -50,9 +50,9 @@ export default () => {
   const weightRangleSlider = $('.js-filter-engines-weight-slider');
 
   weightRangleSlider.slider({
-    min: 0,
-    max: 180,
-    values: [20, 145],
+    min: weightRangleSlider.data('range-min'),
+    max: weightRangleSlider.data('range-max'),
+    values: [weightRangleSlider.data('value-min'), weightRangleSlider.data('value-max')],
     range: true,
     slide(e, ui) {
       weightSliderTextMin.text(`${ui.values[0]} л.с.`);

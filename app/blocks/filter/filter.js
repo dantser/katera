@@ -28,9 +28,9 @@ export default () => {
   const lengthRangleSlider = $('.js-filter-slider-range');
 
   lengthRangleSlider.slider({
-    min: 0,
-    max: 100,
-    values: [20, 45],
+    min: lengthRangleSlider.data('range-min'),
+    max: lengthRangleSlider.data('range-max'),
+    values: [lengthRangleSlider.data('value-min'), lengthRangleSlider.data('value-max')],
     range: true,
     slide(e, ui) {
       lengthSliderTextMin.text(`${ui.values[0]} м`);

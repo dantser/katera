@@ -1,2 +1,12 @@
-mixin slider-range()
-  +b.slider-range&attributes(attributes)
+mixin slider-range(range, values)
+  unless range
+    - var range = [0, 100]
+  unless values
+    - var values = range;
+
+  +b.slider-range(
+    data-range-min=range[0],
+    data-range-max=range[1],
+    data-value-min=values[0],
+    data-value-max=values[1]
+  )&attributes(attributes)
