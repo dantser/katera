@@ -15,4 +15,6 @@ export default function yachtPage() {
   }
 }
 
-$(window).on('resize', yachtPage);
+$(() => {
+  $(window).on('resize', yachtPage);
+});

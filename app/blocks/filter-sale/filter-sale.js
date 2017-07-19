@@ -52,12 +52,14 @@ export default () => {
   lengthSliderValMax.val(lengthRangleSlider.slider('values', 1));
 };
 
-$(document).on('click', '.filter-sale__roll-down', (e) => {
-  e.preventDefault();
+$(() => {
+  $(document).on('click', '.filter-sale__roll-down', (e) => {
+    e.preventDefault();
 
-  const form = $(e.target).parents('form');
-  const extendedBlock = form.find('.filter-sale__extended-wrapper');
+    const form = $(e.target).parents('form');
+    const extendedBlock = form.find('.filter-sale__extended-wrapper');
 
-  form.addClass('filter_extended');
-  extendedBlock.slideDown();
+    form.addClass('filter_extended');
+    extendedBlock.slideDown();
+  });
 });

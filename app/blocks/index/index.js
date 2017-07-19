@@ -136,4 +136,6 @@ export default function index() {
   }
 };
 
-$(window).on('resize', index);
+$(() => {
+  $(window).on('resize', index);
+});

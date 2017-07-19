@@ -49,4 +49,6 @@ export default function stickyBlock(el, addOffset = false, stickOnMobile = true)
   w.scroll(initFixation);
 }
 
-$(window).resize(debounce(200, stickyBlock));
+$(() => {
+  $(window).resize(debounce(200, stickyBlock));
+});

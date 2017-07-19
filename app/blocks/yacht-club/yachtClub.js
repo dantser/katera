@@ -132,4 +132,6 @@ export default function yachtClub() {
   });
 };
 
-$(window).on('resize', yachtClub);
+$(() => {
+  $(window).on('resize', yachtClub);
+});

@@ -45,4 +45,6 @@ export default function upBtn() {
   });
 }
 
-$(window).resize(upBtn);
+$(() => {
+  $(window).resize(upBtn);
+});

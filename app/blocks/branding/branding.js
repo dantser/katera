@@ -61,4 +61,6 @@ export default function branding() {
   });
 };
 
-$(window).on('resize', branding);
+$(() => {
+  $(window).on('resize', branding);
+});

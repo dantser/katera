@@ -53,4 +53,6 @@ export default function magazineLongrid() {
   }));
 }
 
-$(window).on('resize', debounce(200, magazineLongrid));
+$(() => {
+  $(window).on('resize', debounce(200, magazineLongrid));
+});
