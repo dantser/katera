@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 $(() => {
-
   const ELEMENT_CLASS = '.text-field';
   const CONTROL_CLASS = '.text-field__control';
   const EYE_ICON_CLASS = '.text-field__eye-icon';
@@ -80,3 +79,4 @@ $(() => {
 export default () => {
 
 };
+
