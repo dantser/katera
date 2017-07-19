@@ -38,6 +38,8 @@ mixin filter()
               +e.range-info
                 +e('span').range-info-text.js-filter-length-min
                 +e('span').range-info-text.js-filter-length-max
+                input(type='hidden' name='filter-min').js-filter-length-min-val
+                input(type='hidden' name='filter-max').js-filter-length-max-val
             +e.field._type_range
               +slider-range().js-filter-slider-range
 
@@ -77,6 +79,8 @@ mixin filter()
               +e.range-info
                 +e('span').range-info-text.js-filter-length-min
                 +e('span').range-info-text.js-filter-length-max
+                input(type='hidden' name='filter-min').js-filter-length-min-val
+                input(type='hidden' name='filter-max').js-filter-length-max-val
             +e.field._type_range
               +slider-range().js-filter-length-slider
 

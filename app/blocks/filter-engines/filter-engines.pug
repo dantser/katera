@@ -54,7 +54,7 @@ mixin filter-engines()
         +e.item
           +e.field._type_switcher
             +checkbox({name: 'item12', value: '1'})._switcher
-          +e('span').label._right 
+          +e('span').label._right
             | Наличие электрооткидки <br/>
             | и трима
 
@@ -65,6 +65,8 @@ mixin filter-engines()
             +e.range-info
               +e('span').range-info-text.js-filter-engines-power-min
               +e('span').range-info-text.js-filter-engines-power-max
+              input(type='hidden' name='filter-min').js-filter-engines-power-min-val
+              input(type='hidden' name='filter-max').js-filter-engines-power-max-val
           +e.field._type_range
             +slider-range().js-filter-engines-power-slider
         +e.item._col
@@ -73,6 +75,8 @@ mixin filter-engines()
             +e.range-info
               +e('span').range-info-text.js-filter-engines-weight-min
               +e('span').range-info-text.js-filter-engines-weight-max
+              input(type='hidden' name='filter-min').js-filter-model-weight-min-val
+              input(type='hidden' name='filter-max').js-filter-model-weight-max-val
           +e.field._type_range
             +slider-range().js-filter-engines-weight-slider
 

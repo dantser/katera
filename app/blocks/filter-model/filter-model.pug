@@ -18,6 +18,8 @@ mixin filter-model()
           +e.item-text-block
             +e.item-text.js-filter-model-length-min
             +e.item-text.js-filter-model-length-max
+            input(type='hidden' name='filter-min').js-filter-model-length-min-val
+            input(type='hidden' name='filter-max').js-filter-model-length-max-val
         +slider-range().js-filter-model-slider-range
       +e.item._price
         +e('span').price__text Цена

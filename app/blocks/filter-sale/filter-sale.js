@@ -22,6 +22,8 @@ export default () => {
   // slider range
   const lengthSliderTextMin = $('.js-filter-sale-length-min');
   const lengthSliderTextMax = $('.js-filter-sale-length-max');
+  const lengthSliderValMin = $('.js-filter-sale-length-min-val');
+  const lengthSliderValMax = $('.js-filter-sale-length-max-val');
 
   const lengthRangleSlider = $('.js-filter-sale-length-slider');
 
@@ -33,15 +35,21 @@ export default () => {
     slide(e, ui) {
       lengthSliderTextMin.text(`${ui.values[0]} м`);
       lengthSliderTextMax.text(`${ui.values[1]} м`);
+      lengthSliderValMin.val(ui.values[0]);
+      lengthSliderValMax.val(ui.values[1]);
     },
     change(e, ui) {
       lengthSliderTextMin.text(`${ui.values[0]} м`);
       lengthSliderTextMax.text(`${ui.values[1]} м`);
+      lengthSliderValMin.val(ui.values[0]);
+      lengthSliderValMax.val(ui.values[1]);
     },
   });
 
   lengthSliderTextMin.text(`${lengthRangleSlider.slider('values', 0)} м`);
   lengthSliderTextMax.text(`${lengthRangleSlider.slider('values', 1)} м`);
+  lengthSliderValMin.val(lengthRangleSlider.slider('values', 0));
+  lengthSliderValMax.val(lengthRangleSlider.slider('values', 1));
 
   filter.find('.filter-sale__roll-down').on('click', (e) => {
     e.preventDefault();
