@@ -50,7 +50,12 @@ mixin account-profile-jur()
               +e.item
                 label= obj.label
                 +e.input-wrap
-                  +text-field(obj)
+                  if obj.name === 'phone'
+                    +text-field(obj).js-inputmask-phone
+                  else if obj.name === 'email'
+                    +text-field(obj).js-inputmask-email
+                  else
+                    +text-field(obj)
           +b.input-group._border-top._padded
             +text()
               h3 Сведения о руководителе, от имени которого заключается договор:

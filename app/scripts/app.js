@@ -63,6 +63,7 @@ import magazineVideos from '../blocks/magazine-videos/magazine-videos';
 import dottedDropdown from '../blocks/dotted-dropdown/dotted-dropdown';
 import uploadForm from '../blocks/upload-form/upload-form';
 import filterCategory from '../blocks/filter-category/filter-category';
+import accountShop2Page from '../blocks/account-shop-2-page/account-shop-2-page';
 
 window.filterCategory = filterCategory;
 
@@ -77,12 +78,15 @@ $(() => {
   index();
   scrollable();
   textField();
+  window.initTextField = textField;
   header();
   burger();
   select();
+  window.initSelect = select;
   searchBar();
   mainSlider();
   filter();
+  window.initFilter = filter();
   upBtn();
   timeline();
   models();
@@ -93,12 +97,15 @@ $(() => {
   scrollSlider();
   yachtSlider();
   commonInput();
+  window.initInputMask = commonInput;
   accountShop1();
   hint();
+  window.initHint = hint();
   truncate();
   eventsSlider();
   additionalFilterParams();
   filterSale();
+  window.initFilterSale = filterSale;
   resetFilter();
   filterModel();
   magazineLongrid();
@@ -108,6 +115,7 @@ $(() => {
   customSlider();
   catalogYacht();
   filterEngines();
+  window.initFilterEngines = filterEngines;
   yachtClub();
   accountSale();
   accountShop();
@@ -130,6 +138,7 @@ $(() => {
   gallerySliderPopup();
   magazineVideo();
   magazineVideos();
+  accountShop2Page();
   const mapElement = document.getElementById('map');
 
   if (!mapElement) {

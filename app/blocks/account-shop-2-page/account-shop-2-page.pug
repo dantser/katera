@@ -59,15 +59,15 @@ mixin account-shop-2-page()
                   .field
                     span.caption Телефон
                     .input
-                      +text-field({type: 'text', name: 'phone', value: ''})
+                      +text-field({type: 'text', name: 'phone', value: ''}).js-inputmask-phone
                   .field
                     span.caption Email
                     .input
-                      +text-field({type: 'text', name: 'email', value: ''})
+                      +text-field({type: 'text', name: 'email', value: ''}).js-inputmask-email
                   .field
                     span.caption Сайт
                     .input
-                      +text-field({type: 'text', name: 'site', value: ''})
+                      +text-field({type: 'text', name: 'site', value: ''}).js-inputmask-url
 
               +list-item()._tariffs
                 div.item-wrapper.item-wrapper_full
@@ -165,7 +165,7 @@ mixin account-shop-2-page()
 
               +list-item()._submit
                 div.item-wrapper.item-wrapper_button
-                  +button(true)._kind_red
+                  +button()._kind_red
                     | Создать магазин 1090 Р
                   span.note
                     | Магазин будет размещен на 60 дней
