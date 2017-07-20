@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default () => {
   const ELEMENT_CLASS = '.search-bar';
   const ACTIVE_ELEMENT_CLASS = 'search-bar_active';

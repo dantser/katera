@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 function setPositionClass() {
   const item = $(this);
   const l = 'dotted-dropdown_content_left';

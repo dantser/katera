@@ -22,17 +22,7 @@ module.exports = (watch = false) => ({
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
-      // {
-      //   test: require.resolve('jquery'),
-      //   loader: 'expose-loader?jQuery!expose-loader?$',
-      // },
     ],
-  },
-  resolve: {
-    alias: {
-      'inputmask.dependencyLib': path.join(__dirname, 'node_modules/jquery.inputmask/extra/dependencyLibs/inputmask.dependencyLib.js'),
-      'inputmask': path.join(__dirname, 'node_modules/jquery.inputmask/dist/inputmask/inputmask.js'),
-    },
   },
   plugins: [
     new webpack.DefinePlugin({

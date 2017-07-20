@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 $(() => {
   const ELEMENT_CLASS = '.text-field';
   const CONTROL_CLASS = '.text-field__control';

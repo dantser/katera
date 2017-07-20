@@ -1,5 +1,4 @@
 /* eslint-disable */
-import $ from 'jquery';
 import { debounce } from 'throttle-debounce';
 
 function ultraScroll(element) {

@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-import 'jquery-ui-bundle';
 import 'jquery-ui-touch-punch';
 
 export default () => {

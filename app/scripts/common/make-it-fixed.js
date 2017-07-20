@@ -1,4 +1,3 @@
-// import $ from 'jquery';
 import { throttle } from 'throttle-debounce';
 
 /* eslint-disable */

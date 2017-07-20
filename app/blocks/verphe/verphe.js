@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default () => {
   const CLOSE = $('.verphe-contacts__icon-close');
   const CONTACTS = $('.verphe__contacts');

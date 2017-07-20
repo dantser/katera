@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export default function upBtn() {
   const ELEMENT_CLASS = '.up-btn';
   const SHOW_ELEMENT_AT = 200;

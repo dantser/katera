@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 const generateCategory = data => `
   <div class="filter-category__category">
     <span class="filter-category__heading">${data.heading}</span>

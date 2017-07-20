@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default function accountProposePopup() {
   const popups = $('.account-propose');
 

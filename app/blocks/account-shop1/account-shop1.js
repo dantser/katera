@@ -1,5 +1,4 @@
 import Swiper from 'swiper';
-// import $ from 'jquery';
 
 export default () => {
   if (!$('.account-shop1').length) {

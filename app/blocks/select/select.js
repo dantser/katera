@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 function activate(select, list, activeClass) {
   list.fadeIn(() => {
     select.addClass(activeClass);

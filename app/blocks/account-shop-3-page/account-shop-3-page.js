@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export default () => {
   const CONTROL = $('.account-shop-3-page .button-slide');
   const SLIDE_EL = $('.types');

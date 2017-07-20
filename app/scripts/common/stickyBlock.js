@@ -1,4 +1,3 @@
-// import $ from 'jquery';
 import { debounce } from 'throttle-debounce';
 
 export default function stickyBlock(el, addOffset = false, stickOnMobile = true) {

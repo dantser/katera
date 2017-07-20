@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 /* eslint-disable */
 export default () => {
   if (!$('.account-sale3').length) {

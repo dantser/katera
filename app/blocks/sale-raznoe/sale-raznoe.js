@@ -1,5 +1,4 @@
 /* eslint-disable */
-// import $ from 'jquery';
 import makeItFixed from '../../scripts/common/make-it-fixed';
 import dScroll from '../../scripts/common/dScroll';
 

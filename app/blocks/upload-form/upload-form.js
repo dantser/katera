@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default () => {
   $(document).on('click', '.upload-form', function (e) { // eslint-disable-line func-names
     if ($(e.target).hasClass('upload-form__file')) {

@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import disableScroll from 'disable-scroll';
 
 export default class Dropdown {

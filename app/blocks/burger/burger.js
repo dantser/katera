@@ -1,4 +1,3 @@
-// import $ from 'jquery';
 import Dropdown from '../dropdown/dropdown';
 
 export default () => {

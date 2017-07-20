@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default () => {
   $(document).on('change', '.account-shop-2-page__form .control', function () {
     const checkbox = $(this);

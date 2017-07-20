@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 // controll all popups
 export default () => {
   const MODAL_CLASS = '.mobile-slide-popup';

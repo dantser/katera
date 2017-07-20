@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 /* eslint-disable */
 export default () => {
   const header = $('.header__container');

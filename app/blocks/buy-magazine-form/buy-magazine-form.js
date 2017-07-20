@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default () => {
   const checkboxes = $('.buy-magazine-form .checkbox__control');
 

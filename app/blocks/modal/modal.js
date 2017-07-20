@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 // controll all popups
 export default () => {
   const FADE_DURATION = 250;

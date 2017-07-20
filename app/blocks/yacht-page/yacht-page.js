@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default function yachtPage() {
   const p = document.querySelector('.yacht-page__description-text');
   const mqMobile = window.matchMedia('(max-width: 768px)');

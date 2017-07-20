@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 function getStep() { // eslint-disable-line consistent-return
   // initial step
   const initialStep = '#send-code';

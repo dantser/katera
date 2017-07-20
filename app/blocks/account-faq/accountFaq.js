@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default () => {
   if (!$('.account-faq').length) {
     return;

@@ -1,5 +1,3 @@
-// import $ from 'jquery';
-
 export default () => {
   const ITEM = $('.magazine-razdel__item');
 

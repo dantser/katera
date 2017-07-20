@@ -1,6 +1,3 @@
-// import $ from 'jquery';
-// import 'jquery-ui-bundle';
-
 export default () => {
   const shopTabs = $('#shopTabs');
   const DIVISION_CLASS = '.division';
